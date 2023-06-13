@@ -14,74 +14,11465 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgCreateFixedAmountPlanOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.MsgCreateFixedAmountPlan)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * name specifies the name for the plan
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * name specifies the name for the plan
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * creator defines the bech32-encoded address of the creator for the private plan, termination address is also set to
+     * this creator.
+     * </pre>
+     *
+     * <code>string creator = 2 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    java.lang.String getCreator();
+    /**
+     * <pre>
+     * creator defines the bech32-encoded address of the creator for the private plan, termination address is also set to
+     * this creator.
+     * </pre>
+     *
+     * <code>string creator = 2 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    com.google.protobuf.ByteString
+        getCreatorBytes();
+
+    /**
+     * <pre>
+     * staking_coin_weights specifies coins weight for the plan
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> 
+        getStakingCoinWeightsList();
+    /**
+     * <pre>
+     * staking_coin_weights specifies coins weight for the plan
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoin getStakingCoinWeights(int index);
+    /**
+     * <pre>
+     * staking_coin_weights specifies coins weight for the plan
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    int getStakingCoinWeightsCount();
+    /**
+     * <pre>
+     * staking_coin_weights specifies coins weight for the plan
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getStakingCoinWeightsOrBuilderList();
+    /**
+     * <pre>
+     * staking_coin_weights specifies coins weight for the plan
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getStakingCoinWeightsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * start_time specifies the start time of the plan
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the startTime field is set.
+     */
+    boolean hasStartTime();
+    /**
+     * <pre>
+     * start_time specifies the start time of the plan
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The startTime.
+     */
+    com.google.protobuf.Timestamp getStartTime();
+    /**
+     * <pre>
+     * start_time specifies the start time of the plan
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder();
+
+    /**
+     * <pre>
+     * end_time specifies the end time of the plan
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the endTime field is set.
+     */
+    boolean hasEndTime();
+    /**
+     * <pre>
+     * end_time specifies the end time of the plan
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The endTime.
+     */
+    com.google.protobuf.Timestamp getEndTime();
+    /**
+     * <pre>
+     * end_time specifies the end time of the plan
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder();
+
+    /**
+     * <pre>
+     * epoch_amount specifies the distributing amount for each epoch
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin epoch_amount = 6 [json_name = "epochAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getEpochAmountList();
+    /**
+     * <pre>
+     * epoch_amount specifies the distributing amount for each epoch
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin epoch_amount = 6 [json_name = "epochAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getEpochAmount(int index);
+    /**
+     * <pre>
+     * epoch_amount specifies the distributing amount for each epoch
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin epoch_amount = 6 [json_name = "epochAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getEpochAmountCount();
+    /**
+     * <pre>
+     * epoch_amount specifies the distributing amount for each epoch
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin epoch_amount = 6 [json_name = "epochAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getEpochAmountOrBuilderList();
+    /**
+     * <pre>
+     * epoch_amount specifies the distributing amount for each epoch
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin epoch_amount = 6 [json_name = "epochAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getEpochAmountOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * MsgCreateFixedAmountPlan defines a SDK message for creating a new fixed
+   * amount farming plan.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.farming.v1beta1.MsgCreateFixedAmountPlan}
+   */
+  public static final class MsgCreateFixedAmountPlan extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.MsgCreateFixedAmountPlan)
+      MsgCreateFixedAmountPlanOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateFixedAmountPlan.newBuilder() to construct.
+    private MsgCreateFixedAmountPlan(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateFixedAmountPlan() {
+      name_ = "";
+      creator_ = "";
+      stakingCoinWeights_ = java.util.Collections.emptyList();
+      epochAmount_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateFixedAmountPlan();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgCreateFixedAmountPlan_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgCreateFixedAmountPlan_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlan.class, com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlan.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <pre>
+     * name specifies the name for the plan
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * name specifies the name for the plan
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CREATOR_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object creator_ = "";
+    /**
+     * <pre>
+     * creator defines the bech32-encoded address of the creator for the private plan, termination address is also set to
+     * this creator.
+     * </pre>
+     *
+     * <code>string creator = 2 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    @java.lang.Override
+    public java.lang.String getCreator() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        creator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * creator defines the bech32-encoded address of the creator for the private plan, termination address is also set to
+     * this creator.
+     * </pre>
+     *
+     * <code>string creator = 2 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatorBytes() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        creator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STAKING_COIN_WEIGHTS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> stakingCoinWeights_;
+    /**
+     * <pre>
+     * staking_coin_weights specifies coins weight for the plan
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getStakingCoinWeightsList() {
+      return stakingCoinWeights_;
+    }
+    /**
+     * <pre>
+     * staking_coin_weights specifies coins weight for the plan
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getStakingCoinWeightsOrBuilderList() {
+      return stakingCoinWeights_;
+    }
+    /**
+     * <pre>
+     * staking_coin_weights specifies coins weight for the plan
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public int getStakingCoinWeightsCount() {
+      return stakingCoinWeights_.size();
+    }
+    /**
+     * <pre>
+     * staking_coin_weights specifies coins weight for the plan
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoin getStakingCoinWeights(int index) {
+      return stakingCoinWeights_.get(index);
+    }
+    /**
+     * <pre>
+     * staking_coin_weights specifies coins weight for the plan
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getStakingCoinWeightsOrBuilder(
+        int index) {
+      return stakingCoinWeights_.get(index);
+    }
+
+    public static final int START_TIME_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp startTime_;
+    /**
+     * <pre>
+     * start_time specifies the start time of the plan
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the startTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasStartTime() {
+      return startTime_ != null;
+    }
+    /**
+     * <pre>
+     * start_time specifies the start time of the plan
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The startTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getStartTime() {
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    }
+    /**
+     * <pre>
+     * start_time specifies the start time of the plan
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    }
+
+    public static final int END_TIME_FIELD_NUMBER = 5;
+    private com.google.protobuf.Timestamp endTime_;
+    /**
+     * <pre>
+     * end_time specifies the end time of the plan
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the endTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasEndTime() {
+      return endTime_ != null;
+    }
+    /**
+     * <pre>
+     * end_time specifies the end time of the plan
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The endTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getEndTime() {
+      return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+    }
+    /**
+     * <pre>
+     * end_time specifies the end time of the plan
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
+      return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+    }
+
+    public static final int EPOCH_AMOUNT_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> epochAmount_;
+    /**
+     * <pre>
+     * epoch_amount specifies the distributing amount for each epoch
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin epoch_amount = 6 [json_name = "epochAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getEpochAmountList() {
+      return epochAmount_;
+    }
+    /**
+     * <pre>
+     * epoch_amount specifies the distributing amount for each epoch
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin epoch_amount = 6 [json_name = "epochAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getEpochAmountOrBuilderList() {
+      return epochAmount_;
+    }
+    /**
+     * <pre>
+     * epoch_amount specifies the distributing amount for each epoch
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin epoch_amount = 6 [json_name = "epochAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getEpochAmountCount() {
+      return epochAmount_.size();
+    }
+    /**
+     * <pre>
+     * epoch_amount specifies the distributing amount for each epoch
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin epoch_amount = 6 [json_name = "epochAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getEpochAmount(int index) {
+      return epochAmount_.get(index);
+    }
+    /**
+     * <pre>
+     * epoch_amount specifies the distributing amount for each epoch
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin epoch_amount = 6 [json_name = "epochAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getEpochAmountOrBuilder(
+        int index) {
+      return epochAmount_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, creator_);
+      }
+      for (int i = 0; i < stakingCoinWeights_.size(); i++) {
+        output.writeMessage(3, stakingCoinWeights_.get(i));
+      }
+      if (startTime_ != null) {
+        output.writeMessage(4, getStartTime());
+      }
+      if (endTime_ != null) {
+        output.writeMessage(5, getEndTime());
+      }
+      for (int i = 0; i < epochAmount_.size(); i++) {
+        output.writeMessage(6, epochAmount_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, creator_);
+      }
+      for (int i = 0; i < stakingCoinWeights_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, stakingCoinWeights_.get(i));
+      }
+      if (startTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getStartTime());
+      }
+      if (endTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getEndTime());
+      }
+      for (int i = 0; i < epochAmount_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, epochAmount_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlan)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlan other = (com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlan) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getCreator()
+          .equals(other.getCreator())) return false;
+      if (!getStakingCoinWeightsList()
+          .equals(other.getStakingCoinWeightsList())) return false;
+      if (hasStartTime() != other.hasStartTime()) return false;
+      if (hasStartTime()) {
+        if (!getStartTime()
+            .equals(other.getStartTime())) return false;
+      }
+      if (hasEndTime() != other.hasEndTime()) return false;
+      if (hasEndTime()) {
+        if (!getEndTime()
+            .equals(other.getEndTime())) return false;
+      }
+      if (!getEpochAmountList()
+          .equals(other.getEpochAmountList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + CREATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCreator().hashCode();
+      if (getStakingCoinWeightsCount() > 0) {
+        hash = (37 * hash) + STAKING_COIN_WEIGHTS_FIELD_NUMBER;
+        hash = (53 * hash) + getStakingCoinWeightsList().hashCode();
+      }
+      if (hasStartTime()) {
+        hash = (37 * hash) + START_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getStartTime().hashCode();
+      }
+      if (hasEndTime()) {
+        hash = (37 * hash) + END_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getEndTime().hashCode();
+      }
+      if (getEpochAmountCount() > 0) {
+        hash = (37 * hash) + EPOCH_AMOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getEpochAmountList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlan parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlan parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlan parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlan parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlan parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlan parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlan parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlan parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlan parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlan parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlan parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlan parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlan prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCreateFixedAmountPlan defines a SDK message for creating a new fixed
+     * amount farming plan.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.farming.v1beta1.MsgCreateFixedAmountPlan}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.MsgCreateFixedAmountPlan)
+        com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlanOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgCreateFixedAmountPlan_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgCreateFixedAmountPlan_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlan.class, com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlan.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlan.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        name_ = "";
+        creator_ = "";
+        if (stakingCoinWeightsBuilder_ == null) {
+          stakingCoinWeights_ = java.util.Collections.emptyList();
+        } else {
+          stakingCoinWeights_ = null;
+          stakingCoinWeightsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        startTime_ = null;
+        if (startTimeBuilder_ != null) {
+          startTimeBuilder_.dispose();
+          startTimeBuilder_ = null;
+        }
+        endTime_ = null;
+        if (endTimeBuilder_ != null) {
+          endTimeBuilder_.dispose();
+          endTimeBuilder_ = null;
+        }
+        if (epochAmountBuilder_ == null) {
+          epochAmount_ = java.util.Collections.emptyList();
+        } else {
+          epochAmount_ = null;
+          epochAmountBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgCreateFixedAmountPlan_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlan getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlan.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlan build() {
+        com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlan result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlan buildPartial() {
+        com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlan result = new com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlan(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlan result) {
+        if (stakingCoinWeightsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            stakingCoinWeights_ = java.util.Collections.unmodifiableList(stakingCoinWeights_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.stakingCoinWeights_ = stakingCoinWeights_;
+        } else {
+          result.stakingCoinWeights_ = stakingCoinWeightsBuilder_.build();
+        }
+        if (epochAmountBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            epochAmount_ = java.util.Collections.unmodifiableList(epochAmount_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.epochAmount_ = epochAmount_;
+        } else {
+          result.epochAmount_ = epochAmountBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlan result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.creator_ = creator_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.startTime_ = startTimeBuilder_ == null
+              ? startTime_
+              : startTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.endTime_ = endTimeBuilder_ == null
+              ? endTime_
+              : endTimeBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlan) {
+          return mergeFrom((com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlan)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlan other) {
+        if (other == com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlan.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getCreator().isEmpty()) {
+          creator_ = other.creator_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (stakingCoinWeightsBuilder_ == null) {
+          if (!other.stakingCoinWeights_.isEmpty()) {
+            if (stakingCoinWeights_.isEmpty()) {
+              stakingCoinWeights_ = other.stakingCoinWeights_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureStakingCoinWeightsIsMutable();
+              stakingCoinWeights_.addAll(other.stakingCoinWeights_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.stakingCoinWeights_.isEmpty()) {
+            if (stakingCoinWeightsBuilder_.isEmpty()) {
+              stakingCoinWeightsBuilder_.dispose();
+              stakingCoinWeightsBuilder_ = null;
+              stakingCoinWeights_ = other.stakingCoinWeights_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              stakingCoinWeightsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getStakingCoinWeightsFieldBuilder() : null;
+            } else {
+              stakingCoinWeightsBuilder_.addAllMessages(other.stakingCoinWeights_);
+            }
+          }
+        }
+        if (other.hasStartTime()) {
+          mergeStartTime(other.getStartTime());
+        }
+        if (other.hasEndTime()) {
+          mergeEndTime(other.getEndTime());
+        }
+        if (epochAmountBuilder_ == null) {
+          if (!other.epochAmount_.isEmpty()) {
+            if (epochAmount_.isEmpty()) {
+              epochAmount_ = other.epochAmount_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureEpochAmountIsMutable();
+              epochAmount_.addAll(other.epochAmount_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.epochAmount_.isEmpty()) {
+            if (epochAmountBuilder_.isEmpty()) {
+              epochAmountBuilder_.dispose();
+              epochAmountBuilder_ = null;
+              epochAmount_ = other.epochAmount_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              epochAmountBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEpochAmountFieldBuilder() : null;
+            } else {
+              epochAmountBuilder_.addAllMessages(other.epochAmount_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                creator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                com.cosmos.base.v1beta1.CoinProto.DecCoin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.DecCoin.parser(),
+                        extensionRegistry);
+                if (stakingCoinWeightsBuilder_ == null) {
+                  ensureStakingCoinWeightsIsMutable();
+                  stakingCoinWeights_.add(m);
+                } else {
+                  stakingCoinWeightsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getStartTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getEndTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (epochAmountBuilder_ == null) {
+                  ensureEpochAmountIsMutable();
+                  epochAmount_.add(m);
+                } else {
+                  epochAmountBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * name specifies the name for the plan
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * name specifies the name for the plan
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * name specifies the name for the plan
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * name specifies the name for the plan
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * name specifies the name for the plan
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object creator_ = "";
+      /**
+       * <pre>
+       * creator defines the bech32-encoded address of the creator for the private plan, termination address is also set to
+       * this creator.
+       * </pre>
+       *
+       * <code>string creator = 2 [json_name = "creator"];</code>
+       * @return The creator.
+       */
+      public java.lang.String getCreator() {
+        java.lang.Object ref = creator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          creator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * creator defines the bech32-encoded address of the creator for the private plan, termination address is also set to
+       * this creator.
+       * </pre>
+       *
+       * <code>string creator = 2 [json_name = "creator"];</code>
+       * @return The bytes for creator.
+       */
+      public com.google.protobuf.ByteString
+          getCreatorBytes() {
+        java.lang.Object ref = creator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          creator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * creator defines the bech32-encoded address of the creator for the private plan, termination address is also set to
+       * this creator.
+       * </pre>
+       *
+       * <code>string creator = 2 [json_name = "creator"];</code>
+       * @param value The creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        creator_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * creator defines the bech32-encoded address of the creator for the private plan, termination address is also set to
+       * this creator.
+       * </pre>
+       *
+       * <code>string creator = 2 [json_name = "creator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreator() {
+        creator_ = getDefaultInstance().getCreator();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * creator defines the bech32-encoded address of the creator for the private plan, termination address is also set to
+       * this creator.
+       * </pre>
+       *
+       * <code>string creator = 2 [json_name = "creator"];</code>
+       * @param value The bytes for creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        creator_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> stakingCoinWeights_ =
+        java.util.Collections.emptyList();
+      private void ensureStakingCoinWeightsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          stakingCoinWeights_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.DecCoin>(stakingCoinWeights_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> stakingCoinWeightsBuilder_;
+
+      /**
+       * <pre>
+       * staking_coin_weights specifies coins weight for the plan
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getStakingCoinWeightsList() {
+        if (stakingCoinWeightsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(stakingCoinWeights_);
+        } else {
+          return stakingCoinWeightsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * staking_coin_weights specifies coins weight for the plan
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public int getStakingCoinWeightsCount() {
+        if (stakingCoinWeightsBuilder_ == null) {
+          return stakingCoinWeights_.size();
+        } else {
+          return stakingCoinWeightsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * staking_coin_weights specifies coins weight for the plan
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin getStakingCoinWeights(int index) {
+        if (stakingCoinWeightsBuilder_ == null) {
+          return stakingCoinWeights_.get(index);
+        } else {
+          return stakingCoinWeightsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * staking_coin_weights specifies coins weight for the plan
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setStakingCoinWeights(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (stakingCoinWeightsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStakingCoinWeightsIsMutable();
+          stakingCoinWeights_.set(index, value);
+          onChanged();
+        } else {
+          stakingCoinWeightsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_coin_weights specifies coins weight for the plan
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setStakingCoinWeights(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (stakingCoinWeightsBuilder_ == null) {
+          ensureStakingCoinWeightsIsMutable();
+          stakingCoinWeights_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          stakingCoinWeightsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_coin_weights specifies coins weight for the plan
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addStakingCoinWeights(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (stakingCoinWeightsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStakingCoinWeightsIsMutable();
+          stakingCoinWeights_.add(value);
+          onChanged();
+        } else {
+          stakingCoinWeightsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_coin_weights specifies coins weight for the plan
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addStakingCoinWeights(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (stakingCoinWeightsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStakingCoinWeightsIsMutable();
+          stakingCoinWeights_.add(index, value);
+          onChanged();
+        } else {
+          stakingCoinWeightsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_coin_weights specifies coins weight for the plan
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addStakingCoinWeights(
+          com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (stakingCoinWeightsBuilder_ == null) {
+          ensureStakingCoinWeightsIsMutable();
+          stakingCoinWeights_.add(builderForValue.build());
+          onChanged();
+        } else {
+          stakingCoinWeightsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_coin_weights specifies coins weight for the plan
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addStakingCoinWeights(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (stakingCoinWeightsBuilder_ == null) {
+          ensureStakingCoinWeightsIsMutable();
+          stakingCoinWeights_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          stakingCoinWeightsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_coin_weights specifies coins weight for the plan
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAllStakingCoinWeights(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.DecCoin> values) {
+        if (stakingCoinWeightsBuilder_ == null) {
+          ensureStakingCoinWeightsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, stakingCoinWeights_);
+          onChanged();
+        } else {
+          stakingCoinWeightsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_coin_weights specifies coins weight for the plan
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder clearStakingCoinWeights() {
+        if (stakingCoinWeightsBuilder_ == null) {
+          stakingCoinWeights_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          stakingCoinWeightsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_coin_weights specifies coins weight for the plan
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder removeStakingCoinWeights(int index) {
+        if (stakingCoinWeightsBuilder_ == null) {
+          ensureStakingCoinWeightsIsMutable();
+          stakingCoinWeights_.remove(index);
+          onChanged();
+        } else {
+          stakingCoinWeightsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_coin_weights specifies coins weight for the plan
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder getStakingCoinWeightsBuilder(
+          int index) {
+        return getStakingCoinWeightsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * staking_coin_weights specifies coins weight for the plan
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getStakingCoinWeightsOrBuilder(
+          int index) {
+        if (stakingCoinWeightsBuilder_ == null) {
+          return stakingCoinWeights_.get(index);  } else {
+          return stakingCoinWeightsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * staking_coin_weights specifies coins weight for the plan
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+           getStakingCoinWeightsOrBuilderList() {
+        if (stakingCoinWeightsBuilder_ != null) {
+          return stakingCoinWeightsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(stakingCoinWeights_);
+        }
+      }
+      /**
+       * <pre>
+       * staking_coin_weights specifies coins weight for the plan
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addStakingCoinWeightsBuilder() {
+        return getStakingCoinWeightsFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * staking_coin_weights specifies coins weight for the plan
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addStakingCoinWeightsBuilder(
+          int index) {
+        return getStakingCoinWeightsFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * staking_coin_weights specifies coins weight for the plan
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder> 
+           getStakingCoinWeightsBuilderList() {
+        return getStakingCoinWeightsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+          getStakingCoinWeightsFieldBuilder() {
+        if (stakingCoinWeightsBuilder_ == null) {
+          stakingCoinWeightsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder>(
+                  stakingCoinWeights_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          stakingCoinWeights_ = null;
+        }
+        return stakingCoinWeightsBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp startTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTimeBuilder_;
+      /**
+       * <pre>
+       * start_time specifies the start time of the plan
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the startTime field is set.
+       */
+      public boolean hasStartTime() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * start_time specifies the start time of the plan
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The startTime.
+       */
+      public com.google.protobuf.Timestamp getStartTime() {
+        if (startTimeBuilder_ == null) {
+          return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+        } else {
+          return startTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * start_time specifies the start time of the plan
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setStartTime(com.google.protobuf.Timestamp value) {
+        if (startTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          startTime_ = value;
+        } else {
+          startTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time specifies the start time of the plan
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setStartTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (startTimeBuilder_ == null) {
+          startTime_ = builderForValue.build();
+        } else {
+          startTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time specifies the start time of the plan
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
+        if (startTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            startTime_ != null &&
+            startTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getStartTimeBuilder().mergeFrom(value);
+          } else {
+            startTime_ = value;
+          }
+        } else {
+          startTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time specifies the start time of the plan
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearStartTime() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        startTime_ = null;
+        if (startTimeBuilder_ != null) {
+          startTimeBuilder_.dispose();
+          startTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time specifies the start time of the plan
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getStartTimeBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getStartTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * start_time specifies the start time of the plan
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+        if (startTimeBuilder_ != null) {
+          return startTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return startTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+        }
+      }
+      /**
+       * <pre>
+       * start_time specifies the start time of the plan
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getStartTimeFieldBuilder() {
+        if (startTimeBuilder_ == null) {
+          startTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getStartTime(),
+                  getParentForChildren(),
+                  isClean());
+          startTime_ = null;
+        }
+        return startTimeBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp endTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> endTimeBuilder_;
+      /**
+       * <pre>
+       * end_time specifies the end time of the plan
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the endTime field is set.
+       */
+      public boolean hasEndTime() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * end_time specifies the end time of the plan
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The endTime.
+       */
+      public com.google.protobuf.Timestamp getEndTime() {
+        if (endTimeBuilder_ == null) {
+          return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+        } else {
+          return endTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * end_time specifies the end time of the plan
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setEndTime(com.google.protobuf.Timestamp value) {
+        if (endTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          endTime_ = value;
+        } else {
+          endTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * end_time specifies the end time of the plan
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setEndTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (endTimeBuilder_ == null) {
+          endTime_ = builderForValue.build();
+        } else {
+          endTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * end_time specifies the end time of the plan
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeEndTime(com.google.protobuf.Timestamp value) {
+        if (endTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            endTime_ != null &&
+            endTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getEndTimeBuilder().mergeFrom(value);
+          } else {
+            endTime_ = value;
+          }
+        } else {
+          endTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * end_time specifies the end time of the plan
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearEndTime() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        endTime_ = null;
+        if (endTimeBuilder_ != null) {
+          endTimeBuilder_.dispose();
+          endTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * end_time specifies the end time of the plan
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getEndTimeBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getEndTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * end_time specifies the end time of the plan
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
+        if (endTimeBuilder_ != null) {
+          return endTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return endTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+        }
+      }
+      /**
+       * <pre>
+       * end_time specifies the end time of the plan
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getEndTimeFieldBuilder() {
+        if (endTimeBuilder_ == null) {
+          endTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getEndTime(),
+                  getParentForChildren(),
+                  isClean());
+          endTime_ = null;
+        }
+        return endTimeBuilder_;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> epochAmount_ =
+        java.util.Collections.emptyList();
+      private void ensureEpochAmountIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          epochAmount_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(epochAmount_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> epochAmountBuilder_;
+
+      /**
+       * <pre>
+       * epoch_amount specifies the distributing amount for each epoch
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin epoch_amount = 6 [json_name = "epochAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getEpochAmountList() {
+        if (epochAmountBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(epochAmount_);
+        } else {
+          return epochAmountBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * epoch_amount specifies the distributing amount for each epoch
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin epoch_amount = 6 [json_name = "epochAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getEpochAmountCount() {
+        if (epochAmountBuilder_ == null) {
+          return epochAmount_.size();
+        } else {
+          return epochAmountBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * epoch_amount specifies the distributing amount for each epoch
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin epoch_amount = 6 [json_name = "epochAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getEpochAmount(int index) {
+        if (epochAmountBuilder_ == null) {
+          return epochAmount_.get(index);
+        } else {
+          return epochAmountBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * epoch_amount specifies the distributing amount for each epoch
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin epoch_amount = 6 [json_name = "epochAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setEpochAmount(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (epochAmountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEpochAmountIsMutable();
+          epochAmount_.set(index, value);
+          onChanged();
+        } else {
+          epochAmountBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * epoch_amount specifies the distributing amount for each epoch
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin epoch_amount = 6 [json_name = "epochAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setEpochAmount(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (epochAmountBuilder_ == null) {
+          ensureEpochAmountIsMutable();
+          epochAmount_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          epochAmountBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * epoch_amount specifies the distributing amount for each epoch
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin epoch_amount = 6 [json_name = "epochAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addEpochAmount(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (epochAmountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEpochAmountIsMutable();
+          epochAmount_.add(value);
+          onChanged();
+        } else {
+          epochAmountBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * epoch_amount specifies the distributing amount for each epoch
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin epoch_amount = 6 [json_name = "epochAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addEpochAmount(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (epochAmountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEpochAmountIsMutable();
+          epochAmount_.add(index, value);
+          onChanged();
+        } else {
+          epochAmountBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * epoch_amount specifies the distributing amount for each epoch
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin epoch_amount = 6 [json_name = "epochAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addEpochAmount(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (epochAmountBuilder_ == null) {
+          ensureEpochAmountIsMutable();
+          epochAmount_.add(builderForValue.build());
+          onChanged();
+        } else {
+          epochAmountBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * epoch_amount specifies the distributing amount for each epoch
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin epoch_amount = 6 [json_name = "epochAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addEpochAmount(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (epochAmountBuilder_ == null) {
+          ensureEpochAmountIsMutable();
+          epochAmount_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          epochAmountBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * epoch_amount specifies the distributing amount for each epoch
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin epoch_amount = 6 [json_name = "epochAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllEpochAmount(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (epochAmountBuilder_ == null) {
+          ensureEpochAmountIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, epochAmount_);
+          onChanged();
+        } else {
+          epochAmountBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * epoch_amount specifies the distributing amount for each epoch
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin epoch_amount = 6 [json_name = "epochAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearEpochAmount() {
+        if (epochAmountBuilder_ == null) {
+          epochAmount_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          epochAmountBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * epoch_amount specifies the distributing amount for each epoch
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin epoch_amount = 6 [json_name = "epochAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeEpochAmount(int index) {
+        if (epochAmountBuilder_ == null) {
+          ensureEpochAmountIsMutable();
+          epochAmount_.remove(index);
+          onChanged();
+        } else {
+          epochAmountBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * epoch_amount specifies the distributing amount for each epoch
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin epoch_amount = 6 [json_name = "epochAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getEpochAmountBuilder(
+          int index) {
+        return getEpochAmountFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * epoch_amount specifies the distributing amount for each epoch
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin epoch_amount = 6 [json_name = "epochAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getEpochAmountOrBuilder(
+          int index) {
+        if (epochAmountBuilder_ == null) {
+          return epochAmount_.get(index);  } else {
+          return epochAmountBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * epoch_amount specifies the distributing amount for each epoch
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin epoch_amount = 6 [json_name = "epochAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getEpochAmountOrBuilderList() {
+        if (epochAmountBuilder_ != null) {
+          return epochAmountBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(epochAmount_);
+        }
+      }
+      /**
+       * <pre>
+       * epoch_amount specifies the distributing amount for each epoch
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin epoch_amount = 6 [json_name = "epochAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addEpochAmountBuilder() {
+        return getEpochAmountFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * epoch_amount specifies the distributing amount for each epoch
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin epoch_amount = 6 [json_name = "epochAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addEpochAmountBuilder(
+          int index) {
+        return getEpochAmountFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * epoch_amount specifies the distributing amount for each epoch
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin epoch_amount = 6 [json_name = "epochAmount", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"epoch_amount&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getEpochAmountBuilderList() {
+        return getEpochAmountFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getEpochAmountFieldBuilder() {
+        if (epochAmountBuilder_ == null) {
+          epochAmountBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  epochAmount_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          epochAmount_ = null;
+        }
+        return epochAmountBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.MsgCreateFixedAmountPlan)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.MsgCreateFixedAmountPlan)
+    private static final com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlan DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlan();
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlan getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateFixedAmountPlan>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateFixedAmountPlan>() {
+      @java.lang.Override
+      public MsgCreateFixedAmountPlan parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateFixedAmountPlan> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateFixedAmountPlan> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlan getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCreateFixedAmountPlanResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.MsgCreateFixedAmountPlanResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgCreateFixedAmountPlanResponse defines the MsgCreateFixedAmountPlanResponse response type.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.farming.v1beta1.MsgCreateFixedAmountPlanResponse}
+   */
+  public static final class MsgCreateFixedAmountPlanResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.MsgCreateFixedAmountPlanResponse)
+      MsgCreateFixedAmountPlanResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateFixedAmountPlanResponse.newBuilder() to construct.
+    private MsgCreateFixedAmountPlanResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateFixedAmountPlanResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateFixedAmountPlanResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgCreateFixedAmountPlanResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgCreateFixedAmountPlanResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlanResponse.class, com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlanResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlanResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlanResponse other = (com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlanResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlanResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlanResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlanResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlanResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlanResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlanResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlanResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlanResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlanResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlanResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlanResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlanResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlanResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCreateFixedAmountPlanResponse defines the MsgCreateFixedAmountPlanResponse response type.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.farming.v1beta1.MsgCreateFixedAmountPlanResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.MsgCreateFixedAmountPlanResponse)
+        com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlanResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgCreateFixedAmountPlanResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgCreateFixedAmountPlanResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlanResponse.class, com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlanResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlanResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgCreateFixedAmountPlanResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlanResponse getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlanResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlanResponse build() {
+        com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlanResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlanResponse buildPartial() {
+        com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlanResponse result = new com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlanResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlanResponse) {
+          return mergeFrom((com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlanResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlanResponse other) {
+        if (other == com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlanResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.MsgCreateFixedAmountPlanResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.MsgCreateFixedAmountPlanResponse)
+    private static final com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlanResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlanResponse();
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlanResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateFixedAmountPlanResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateFixedAmountPlanResponse>() {
+      @java.lang.Override
+      public MsgCreateFixedAmountPlanResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateFixedAmountPlanResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateFixedAmountPlanResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.TxProto.MsgCreateFixedAmountPlanResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCreateRatioPlanOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.MsgCreateRatioPlan)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * name specifies the name for the plan
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * name specifies the name for the plan
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * creator defines the bech32-encoded address of the creator for the private plan, termination address is also set to
+     * this creator.
+     * </pre>
+     *
+     * <code>string creator = 2 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    java.lang.String getCreator();
+    /**
+     * <pre>
+     * creator defines the bech32-encoded address of the creator for the private plan, termination address is also set to
+     * this creator.
+     * </pre>
+     *
+     * <code>string creator = 2 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    com.google.protobuf.ByteString
+        getCreatorBytes();
+
+    /**
+     * <pre>
+     * staking_coin_weights specifies coins weight for the plan
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> 
+        getStakingCoinWeightsList();
+    /**
+     * <pre>
+     * staking_coin_weights specifies coins weight for the plan
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoin getStakingCoinWeights(int index);
+    /**
+     * <pre>
+     * staking_coin_weights specifies coins weight for the plan
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    int getStakingCoinWeightsCount();
+    /**
+     * <pre>
+     * staking_coin_weights specifies coins weight for the plan
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getStakingCoinWeightsOrBuilderList();
+    /**
+     * <pre>
+     * staking_coin_weights specifies coins weight for the plan
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getStakingCoinWeightsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * start_time specifies the start time of the plan
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the startTime field is set.
+     */
+    boolean hasStartTime();
+    /**
+     * <pre>
+     * start_time specifies the start time of the plan
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The startTime.
+     */
+    com.google.protobuf.Timestamp getStartTime();
+    /**
+     * <pre>
+     * start_time specifies the start time of the plan
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder();
+
+    /**
+     * <pre>
+     * end_time specifies the end time of the plan
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the endTime field is set.
+     */
+    boolean hasEndTime();
+    /**
+     * <pre>
+     * end_time specifies the end time of the plan
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The endTime.
+     */
+    com.google.protobuf.Timestamp getEndTime();
+    /**
+     * <pre>
+     * end_time specifies the end time of the plan
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder();
+
+    /**
+     * <pre>
+     * epoch_ratio specifies the distributing amount by ratio
+     * </pre>
+     *
+     * <code>string epoch_ratio = 6 [json_name = "epochRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"epoch_ratio&#92;""];</code>
+     * @return The epochRatio.
+     */
+    java.lang.String getEpochRatio();
+    /**
+     * <pre>
+     * epoch_ratio specifies the distributing amount by ratio
+     * </pre>
+     *
+     * <code>string epoch_ratio = 6 [json_name = "epochRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"epoch_ratio&#92;""];</code>
+     * @return The bytes for epochRatio.
+     */
+    com.google.protobuf.ByteString
+        getEpochRatioBytes();
+  }
+  /**
+   * <pre>
+   * MsgCreateRatioPlan defines a SDK message for creating a new ratio farming
+   * plan.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.farming.v1beta1.MsgCreateRatioPlan}
+   */
+  public static final class MsgCreateRatioPlan extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.MsgCreateRatioPlan)
+      MsgCreateRatioPlanOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateRatioPlan.newBuilder() to construct.
+    private MsgCreateRatioPlan(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateRatioPlan() {
+      name_ = "";
+      creator_ = "";
+      stakingCoinWeights_ = java.util.Collections.emptyList();
+      epochRatio_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateRatioPlan();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgCreateRatioPlan_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgCreateRatioPlan_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlan.class, com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlan.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <pre>
+     * name specifies the name for the plan
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * name specifies the name for the plan
+     * </pre>
+     *
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CREATOR_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object creator_ = "";
+    /**
+     * <pre>
+     * creator defines the bech32-encoded address of the creator for the private plan, termination address is also set to
+     * this creator.
+     * </pre>
+     *
+     * <code>string creator = 2 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    @java.lang.Override
+    public java.lang.String getCreator() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        creator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * creator defines the bech32-encoded address of the creator for the private plan, termination address is also set to
+     * this creator.
+     * </pre>
+     *
+     * <code>string creator = 2 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatorBytes() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        creator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STAKING_COIN_WEIGHTS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> stakingCoinWeights_;
+    /**
+     * <pre>
+     * staking_coin_weights specifies coins weight for the plan
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getStakingCoinWeightsList() {
+      return stakingCoinWeights_;
+    }
+    /**
+     * <pre>
+     * staking_coin_weights specifies coins weight for the plan
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getStakingCoinWeightsOrBuilderList() {
+      return stakingCoinWeights_;
+    }
+    /**
+     * <pre>
+     * staking_coin_weights specifies coins weight for the plan
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public int getStakingCoinWeightsCount() {
+      return stakingCoinWeights_.size();
+    }
+    /**
+     * <pre>
+     * staking_coin_weights specifies coins weight for the plan
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoin getStakingCoinWeights(int index) {
+      return stakingCoinWeights_.get(index);
+    }
+    /**
+     * <pre>
+     * staking_coin_weights specifies coins weight for the plan
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getStakingCoinWeightsOrBuilder(
+        int index) {
+      return stakingCoinWeights_.get(index);
+    }
+
+    public static final int START_TIME_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp startTime_;
+    /**
+     * <pre>
+     * start_time specifies the start time of the plan
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the startTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasStartTime() {
+      return startTime_ != null;
+    }
+    /**
+     * <pre>
+     * start_time specifies the start time of the plan
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The startTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getStartTime() {
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    }
+    /**
+     * <pre>
+     * start_time specifies the start time of the plan
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    }
+
+    public static final int END_TIME_FIELD_NUMBER = 5;
+    private com.google.protobuf.Timestamp endTime_;
+    /**
+     * <pre>
+     * end_time specifies the end time of the plan
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the endTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasEndTime() {
+      return endTime_ != null;
+    }
+    /**
+     * <pre>
+     * end_time specifies the end time of the plan
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The endTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getEndTime() {
+      return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+    }
+    /**
+     * <pre>
+     * end_time specifies the end time of the plan
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
+      return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+    }
+
+    public static final int EPOCH_RATIO_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object epochRatio_ = "";
+    /**
+     * <pre>
+     * epoch_ratio specifies the distributing amount by ratio
+     * </pre>
+     *
+     * <code>string epoch_ratio = 6 [json_name = "epochRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"epoch_ratio&#92;""];</code>
+     * @return The epochRatio.
+     */
+    @java.lang.Override
+    public java.lang.String getEpochRatio() {
+      java.lang.Object ref = epochRatio_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        epochRatio_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * epoch_ratio specifies the distributing amount by ratio
+     * </pre>
+     *
+     * <code>string epoch_ratio = 6 [json_name = "epochRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"epoch_ratio&#92;""];</code>
+     * @return The bytes for epochRatio.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEpochRatioBytes() {
+      java.lang.Object ref = epochRatio_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        epochRatio_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, creator_);
+      }
+      for (int i = 0; i < stakingCoinWeights_.size(); i++) {
+        output.writeMessage(3, stakingCoinWeights_.get(i));
+      }
+      if (startTime_ != null) {
+        output.writeMessage(4, getStartTime());
+      }
+      if (endTime_ != null) {
+        output.writeMessage(5, getEndTime());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(epochRatio_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, epochRatio_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, creator_);
+      }
+      for (int i = 0; i < stakingCoinWeights_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, stakingCoinWeights_.get(i));
+      }
+      if (startTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getStartTime());
+      }
+      if (endTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getEndTime());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(epochRatio_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, epochRatio_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlan)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlan other = (com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlan) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getCreator()
+          .equals(other.getCreator())) return false;
+      if (!getStakingCoinWeightsList()
+          .equals(other.getStakingCoinWeightsList())) return false;
+      if (hasStartTime() != other.hasStartTime()) return false;
+      if (hasStartTime()) {
+        if (!getStartTime()
+            .equals(other.getStartTime())) return false;
+      }
+      if (hasEndTime() != other.hasEndTime()) return false;
+      if (hasEndTime()) {
+        if (!getEndTime()
+            .equals(other.getEndTime())) return false;
+      }
+      if (!getEpochRatio()
+          .equals(other.getEpochRatio())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + CREATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCreator().hashCode();
+      if (getStakingCoinWeightsCount() > 0) {
+        hash = (37 * hash) + STAKING_COIN_WEIGHTS_FIELD_NUMBER;
+        hash = (53 * hash) + getStakingCoinWeightsList().hashCode();
+      }
+      if (hasStartTime()) {
+        hash = (37 * hash) + START_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getStartTime().hashCode();
+      }
+      if (hasEndTime()) {
+        hash = (37 * hash) + END_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getEndTime().hashCode();
+      }
+      hash = (37 * hash) + EPOCH_RATIO_FIELD_NUMBER;
+      hash = (53 * hash) + getEpochRatio().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlan parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlan parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlan parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlan parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlan parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlan parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlan parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlan parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlan parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlan parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlan parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlan parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlan prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCreateRatioPlan defines a SDK message for creating a new ratio farming
+     * plan.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.farming.v1beta1.MsgCreateRatioPlan}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.MsgCreateRatioPlan)
+        com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlanOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgCreateRatioPlan_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgCreateRatioPlan_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlan.class, com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlan.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlan.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        name_ = "";
+        creator_ = "";
+        if (stakingCoinWeightsBuilder_ == null) {
+          stakingCoinWeights_ = java.util.Collections.emptyList();
+        } else {
+          stakingCoinWeights_ = null;
+          stakingCoinWeightsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        startTime_ = null;
+        if (startTimeBuilder_ != null) {
+          startTimeBuilder_.dispose();
+          startTimeBuilder_ = null;
+        }
+        endTime_ = null;
+        if (endTimeBuilder_ != null) {
+          endTimeBuilder_.dispose();
+          endTimeBuilder_ = null;
+        }
+        epochRatio_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgCreateRatioPlan_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlan getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlan.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlan build() {
+        com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlan result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlan buildPartial() {
+        com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlan result = new com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlan(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlan result) {
+        if (stakingCoinWeightsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            stakingCoinWeights_ = java.util.Collections.unmodifiableList(stakingCoinWeights_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.stakingCoinWeights_ = stakingCoinWeights_;
+        } else {
+          result.stakingCoinWeights_ = stakingCoinWeightsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlan result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.creator_ = creator_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.startTime_ = startTimeBuilder_ == null
+              ? startTime_
+              : startTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.endTime_ = endTimeBuilder_ == null
+              ? endTime_
+              : endTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.epochRatio_ = epochRatio_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlan) {
+          return mergeFrom((com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlan)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlan other) {
+        if (other == com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlan.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getCreator().isEmpty()) {
+          creator_ = other.creator_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (stakingCoinWeightsBuilder_ == null) {
+          if (!other.stakingCoinWeights_.isEmpty()) {
+            if (stakingCoinWeights_.isEmpty()) {
+              stakingCoinWeights_ = other.stakingCoinWeights_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureStakingCoinWeightsIsMutable();
+              stakingCoinWeights_.addAll(other.stakingCoinWeights_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.stakingCoinWeights_.isEmpty()) {
+            if (stakingCoinWeightsBuilder_.isEmpty()) {
+              stakingCoinWeightsBuilder_.dispose();
+              stakingCoinWeightsBuilder_ = null;
+              stakingCoinWeights_ = other.stakingCoinWeights_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              stakingCoinWeightsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getStakingCoinWeightsFieldBuilder() : null;
+            } else {
+              stakingCoinWeightsBuilder_.addAllMessages(other.stakingCoinWeights_);
+            }
+          }
+        }
+        if (other.hasStartTime()) {
+          mergeStartTime(other.getStartTime());
+        }
+        if (other.hasEndTime()) {
+          mergeEndTime(other.getEndTime());
+        }
+        if (!other.getEpochRatio().isEmpty()) {
+          epochRatio_ = other.epochRatio_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                creator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                com.cosmos.base.v1beta1.CoinProto.DecCoin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.DecCoin.parser(),
+                        extensionRegistry);
+                if (stakingCoinWeightsBuilder_ == null) {
+                  ensureStakingCoinWeightsIsMutable();
+                  stakingCoinWeights_.add(m);
+                } else {
+                  stakingCoinWeightsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getStartTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getEndTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                epochRatio_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * name specifies the name for the plan
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * name specifies the name for the plan
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * name specifies the name for the plan
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * name specifies the name for the plan
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * name specifies the name for the plan
+       * </pre>
+       *
+       * <code>string name = 1 [json_name = "name"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object creator_ = "";
+      /**
+       * <pre>
+       * creator defines the bech32-encoded address of the creator for the private plan, termination address is also set to
+       * this creator.
+       * </pre>
+       *
+       * <code>string creator = 2 [json_name = "creator"];</code>
+       * @return The creator.
+       */
+      public java.lang.String getCreator() {
+        java.lang.Object ref = creator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          creator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * creator defines the bech32-encoded address of the creator for the private plan, termination address is also set to
+       * this creator.
+       * </pre>
+       *
+       * <code>string creator = 2 [json_name = "creator"];</code>
+       * @return The bytes for creator.
+       */
+      public com.google.protobuf.ByteString
+          getCreatorBytes() {
+        java.lang.Object ref = creator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          creator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * creator defines the bech32-encoded address of the creator for the private plan, termination address is also set to
+       * this creator.
+       * </pre>
+       *
+       * <code>string creator = 2 [json_name = "creator"];</code>
+       * @param value The creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        creator_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * creator defines the bech32-encoded address of the creator for the private plan, termination address is also set to
+       * this creator.
+       * </pre>
+       *
+       * <code>string creator = 2 [json_name = "creator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreator() {
+        creator_ = getDefaultInstance().getCreator();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * creator defines the bech32-encoded address of the creator for the private plan, termination address is also set to
+       * this creator.
+       * </pre>
+       *
+       * <code>string creator = 2 [json_name = "creator"];</code>
+       * @param value The bytes for creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        creator_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> stakingCoinWeights_ =
+        java.util.Collections.emptyList();
+      private void ensureStakingCoinWeightsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          stakingCoinWeights_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.DecCoin>(stakingCoinWeights_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> stakingCoinWeightsBuilder_;
+
+      /**
+       * <pre>
+       * staking_coin_weights specifies coins weight for the plan
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getStakingCoinWeightsList() {
+        if (stakingCoinWeightsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(stakingCoinWeights_);
+        } else {
+          return stakingCoinWeightsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * staking_coin_weights specifies coins weight for the plan
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public int getStakingCoinWeightsCount() {
+        if (stakingCoinWeightsBuilder_ == null) {
+          return stakingCoinWeights_.size();
+        } else {
+          return stakingCoinWeightsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * staking_coin_weights specifies coins weight for the plan
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin getStakingCoinWeights(int index) {
+        if (stakingCoinWeightsBuilder_ == null) {
+          return stakingCoinWeights_.get(index);
+        } else {
+          return stakingCoinWeightsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * staking_coin_weights specifies coins weight for the plan
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setStakingCoinWeights(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (stakingCoinWeightsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStakingCoinWeightsIsMutable();
+          stakingCoinWeights_.set(index, value);
+          onChanged();
+        } else {
+          stakingCoinWeightsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_coin_weights specifies coins weight for the plan
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setStakingCoinWeights(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (stakingCoinWeightsBuilder_ == null) {
+          ensureStakingCoinWeightsIsMutable();
+          stakingCoinWeights_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          stakingCoinWeightsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_coin_weights specifies coins weight for the plan
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addStakingCoinWeights(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (stakingCoinWeightsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStakingCoinWeightsIsMutable();
+          stakingCoinWeights_.add(value);
+          onChanged();
+        } else {
+          stakingCoinWeightsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_coin_weights specifies coins weight for the plan
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addStakingCoinWeights(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (stakingCoinWeightsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStakingCoinWeightsIsMutable();
+          stakingCoinWeights_.add(index, value);
+          onChanged();
+        } else {
+          stakingCoinWeightsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_coin_weights specifies coins weight for the plan
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addStakingCoinWeights(
+          com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (stakingCoinWeightsBuilder_ == null) {
+          ensureStakingCoinWeightsIsMutable();
+          stakingCoinWeights_.add(builderForValue.build());
+          onChanged();
+        } else {
+          stakingCoinWeightsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_coin_weights specifies coins weight for the plan
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addStakingCoinWeights(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (stakingCoinWeightsBuilder_ == null) {
+          ensureStakingCoinWeightsIsMutable();
+          stakingCoinWeights_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          stakingCoinWeightsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_coin_weights specifies coins weight for the plan
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAllStakingCoinWeights(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.DecCoin> values) {
+        if (stakingCoinWeightsBuilder_ == null) {
+          ensureStakingCoinWeightsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, stakingCoinWeights_);
+          onChanged();
+        } else {
+          stakingCoinWeightsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_coin_weights specifies coins weight for the plan
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder clearStakingCoinWeights() {
+        if (stakingCoinWeightsBuilder_ == null) {
+          stakingCoinWeights_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          stakingCoinWeightsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_coin_weights specifies coins weight for the plan
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder removeStakingCoinWeights(int index) {
+        if (stakingCoinWeightsBuilder_ == null) {
+          ensureStakingCoinWeightsIsMutable();
+          stakingCoinWeights_.remove(index);
+          onChanged();
+        } else {
+          stakingCoinWeightsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_coin_weights specifies coins weight for the plan
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder getStakingCoinWeightsBuilder(
+          int index) {
+        return getStakingCoinWeightsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * staking_coin_weights specifies coins weight for the plan
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getStakingCoinWeightsOrBuilder(
+          int index) {
+        if (stakingCoinWeightsBuilder_ == null) {
+          return stakingCoinWeights_.get(index);  } else {
+          return stakingCoinWeightsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * staking_coin_weights specifies coins weight for the plan
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+           getStakingCoinWeightsOrBuilderList() {
+        if (stakingCoinWeightsBuilder_ != null) {
+          return stakingCoinWeightsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(stakingCoinWeights_);
+        }
+      }
+      /**
+       * <pre>
+       * staking_coin_weights specifies coins weight for the plan
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addStakingCoinWeightsBuilder() {
+        return getStakingCoinWeightsFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * staking_coin_weights specifies coins weight for the plan
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addStakingCoinWeightsBuilder(
+          int index) {
+        return getStakingCoinWeightsFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * staking_coin_weights specifies coins weight for the plan
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin staking_coin_weights = 3 [json_name = "stakingCoinWeights", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coin_weights&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder> 
+           getStakingCoinWeightsBuilderList() {
+        return getStakingCoinWeightsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+          getStakingCoinWeightsFieldBuilder() {
+        if (stakingCoinWeightsBuilder_ == null) {
+          stakingCoinWeightsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder>(
+                  stakingCoinWeights_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          stakingCoinWeights_ = null;
+        }
+        return stakingCoinWeightsBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp startTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTimeBuilder_;
+      /**
+       * <pre>
+       * start_time specifies the start time of the plan
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the startTime field is set.
+       */
+      public boolean hasStartTime() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * start_time specifies the start time of the plan
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The startTime.
+       */
+      public com.google.protobuf.Timestamp getStartTime() {
+        if (startTimeBuilder_ == null) {
+          return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+        } else {
+          return startTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * start_time specifies the start time of the plan
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setStartTime(com.google.protobuf.Timestamp value) {
+        if (startTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          startTime_ = value;
+        } else {
+          startTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time specifies the start time of the plan
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setStartTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (startTimeBuilder_ == null) {
+          startTime_ = builderForValue.build();
+        } else {
+          startTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time specifies the start time of the plan
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
+        if (startTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            startTime_ != null &&
+            startTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getStartTimeBuilder().mergeFrom(value);
+          } else {
+            startTime_ = value;
+          }
+        } else {
+          startTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time specifies the start time of the plan
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearStartTime() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        startTime_ = null;
+        if (startTimeBuilder_ != null) {
+          startTimeBuilder_.dispose();
+          startTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time specifies the start time of the plan
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getStartTimeBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getStartTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * start_time specifies the start time of the plan
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+        if (startTimeBuilder_ != null) {
+          return startTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return startTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+        }
+      }
+      /**
+       * <pre>
+       * start_time specifies the start time of the plan
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 4 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"start_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getStartTimeFieldBuilder() {
+        if (startTimeBuilder_ == null) {
+          startTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getStartTime(),
+                  getParentForChildren(),
+                  isClean());
+          startTime_ = null;
+        }
+        return startTimeBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp endTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> endTimeBuilder_;
+      /**
+       * <pre>
+       * end_time specifies the end time of the plan
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the endTime field is set.
+       */
+      public boolean hasEndTime() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * end_time specifies the end time of the plan
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The endTime.
+       */
+      public com.google.protobuf.Timestamp getEndTime() {
+        if (endTimeBuilder_ == null) {
+          return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+        } else {
+          return endTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * end_time specifies the end time of the plan
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setEndTime(com.google.protobuf.Timestamp value) {
+        if (endTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          endTime_ = value;
+        } else {
+          endTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * end_time specifies the end time of the plan
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setEndTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (endTimeBuilder_ == null) {
+          endTime_ = builderForValue.build();
+        } else {
+          endTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * end_time specifies the end time of the plan
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeEndTime(com.google.protobuf.Timestamp value) {
+        if (endTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            endTime_ != null &&
+            endTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getEndTimeBuilder().mergeFrom(value);
+          } else {
+            endTime_ = value;
+          }
+        } else {
+          endTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * end_time specifies the end time of the plan
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearEndTime() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        endTime_ = null;
+        if (endTimeBuilder_ != null) {
+          endTimeBuilder_.dispose();
+          endTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * end_time specifies the end time of the plan
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getEndTimeBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getEndTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * end_time specifies the end time of the plan
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
+        if (endTimeBuilder_ != null) {
+          return endTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return endTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+        }
+      }
+      /**
+       * <pre>
+       * end_time specifies the end time of the plan
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp end_time = 5 [json_name = "endTime", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"end_time&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getEndTimeFieldBuilder() {
+        if (endTimeBuilder_ == null) {
+          endTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getEndTime(),
+                  getParentForChildren(),
+                  isClean());
+          endTime_ = null;
+        }
+        return endTimeBuilder_;
+      }
+
+      private java.lang.Object epochRatio_ = "";
+      /**
+       * <pre>
+       * epoch_ratio specifies the distributing amount by ratio
+       * </pre>
+       *
+       * <code>string epoch_ratio = 6 [json_name = "epochRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"epoch_ratio&#92;""];</code>
+       * @return The epochRatio.
+       */
+      public java.lang.String getEpochRatio() {
+        java.lang.Object ref = epochRatio_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          epochRatio_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * epoch_ratio specifies the distributing amount by ratio
+       * </pre>
+       *
+       * <code>string epoch_ratio = 6 [json_name = "epochRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"epoch_ratio&#92;""];</code>
+       * @return The bytes for epochRatio.
+       */
+      public com.google.protobuf.ByteString
+          getEpochRatioBytes() {
+        java.lang.Object ref = epochRatio_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          epochRatio_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * epoch_ratio specifies the distributing amount by ratio
+       * </pre>
+       *
+       * <code>string epoch_ratio = 6 [json_name = "epochRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"epoch_ratio&#92;""];</code>
+       * @param value The epochRatio to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEpochRatio(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        epochRatio_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * epoch_ratio specifies the distributing amount by ratio
+       * </pre>
+       *
+       * <code>string epoch_ratio = 6 [json_name = "epochRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"epoch_ratio&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEpochRatio() {
+        epochRatio_ = getDefaultInstance().getEpochRatio();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * epoch_ratio specifies the distributing amount by ratio
+       * </pre>
+       *
+       * <code>string epoch_ratio = 6 [json_name = "epochRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"epoch_ratio&#92;""];</code>
+       * @param value The bytes for epochRatio to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEpochRatioBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        epochRatio_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.MsgCreateRatioPlan)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.MsgCreateRatioPlan)
+    private static final com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlan DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlan();
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlan getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateRatioPlan>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateRatioPlan>() {
+      @java.lang.Override
+      public MsgCreateRatioPlan parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateRatioPlan> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateRatioPlan> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlan getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCreateRatioPlanResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.MsgCreateRatioPlanResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgCreateRatioPlanResponse  defines the Msg/MsgCreateRatioPlanResponse
+   * response type.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.farming.v1beta1.MsgCreateRatioPlanResponse}
+   */
+  public static final class MsgCreateRatioPlanResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.MsgCreateRatioPlanResponse)
+      MsgCreateRatioPlanResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateRatioPlanResponse.newBuilder() to construct.
+    private MsgCreateRatioPlanResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateRatioPlanResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateRatioPlanResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgCreateRatioPlanResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgCreateRatioPlanResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlanResponse.class, com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlanResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlanResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlanResponse other = (com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlanResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlanResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlanResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlanResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlanResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlanResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlanResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlanResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlanResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlanResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlanResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlanResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlanResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlanResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCreateRatioPlanResponse  defines the Msg/MsgCreateRatioPlanResponse
+     * response type.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.farming.v1beta1.MsgCreateRatioPlanResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.MsgCreateRatioPlanResponse)
+        com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlanResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgCreateRatioPlanResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgCreateRatioPlanResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlanResponse.class, com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlanResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlanResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgCreateRatioPlanResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlanResponse getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlanResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlanResponse build() {
+        com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlanResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlanResponse buildPartial() {
+        com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlanResponse result = new com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlanResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlanResponse) {
+          return mergeFrom((com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlanResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlanResponse other) {
+        if (other == com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlanResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.MsgCreateRatioPlanResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.MsgCreateRatioPlanResponse)
+    private static final com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlanResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlanResponse();
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlanResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateRatioPlanResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateRatioPlanResponse>() {
+      @java.lang.Override
+      public MsgCreateRatioPlanResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateRatioPlanResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateRatioPlanResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.TxProto.MsgCreateRatioPlanResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgStakeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.MsgStake)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * farmer defines the bech32-encoded address of the farmer
+     * </pre>
+     *
+     * <code>string farmer = 1 [json_name = "farmer"];</code>
+     * @return The farmer.
+     */
+    java.lang.String getFarmer();
+    /**
+     * <pre>
+     * farmer defines the bech32-encoded address of the farmer
+     * </pre>
+     *
+     * <code>string farmer = 1 [json_name = "farmer"];</code>
+     * @return The bytes for farmer.
+     */
+    com.google.protobuf.ByteString
+        getFarmerBytes();
+
+    /**
+     * <pre>
+     * staking_coins specifies coins to stake
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin staking_coins = 2 [json_name = "stakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getStakingCoinsList();
+    /**
+     * <pre>
+     * staking_coins specifies coins to stake
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin staking_coins = 2 [json_name = "stakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getStakingCoins(int index);
+    /**
+     * <pre>
+     * staking_coins specifies coins to stake
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin staking_coins = 2 [json_name = "stakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getStakingCoinsCount();
+    /**
+     * <pre>
+     * staking_coins specifies coins to stake
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin staking_coins = 2 [json_name = "stakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getStakingCoinsOrBuilderList();
+    /**
+     * <pre>
+     * staking_coins specifies coins to stake
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin staking_coins = 2 [json_name = "stakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getStakingCoinsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * MsgStake defines a SDK message for staking coins into the farming plan.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.farming.v1beta1.MsgStake}
+   */
+  public static final class MsgStake extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.MsgStake)
+      MsgStakeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgStake.newBuilder() to construct.
+    private MsgStake(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgStake() {
+      farmer_ = "";
+      stakingCoins_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgStake();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgStake_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgStake_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.TxProto.MsgStake.class, com.crescent.farming.v1beta1.TxProto.MsgStake.Builder.class);
+    }
+
+    public static final int FARMER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object farmer_ = "";
+    /**
+     * <pre>
+     * farmer defines the bech32-encoded address of the farmer
+     * </pre>
+     *
+     * <code>string farmer = 1 [json_name = "farmer"];</code>
+     * @return The farmer.
+     */
+    @java.lang.Override
+    public java.lang.String getFarmer() {
+      java.lang.Object ref = farmer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        farmer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * farmer defines the bech32-encoded address of the farmer
+     * </pre>
+     *
+     * <code>string farmer = 1 [json_name = "farmer"];</code>
+     * @return The bytes for farmer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFarmerBytes() {
+      java.lang.Object ref = farmer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        farmer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STAKING_COINS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> stakingCoins_;
+    /**
+     * <pre>
+     * staking_coins specifies coins to stake
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin staking_coins = 2 [json_name = "stakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getStakingCoinsList() {
+      return stakingCoins_;
+    }
+    /**
+     * <pre>
+     * staking_coins specifies coins to stake
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin staking_coins = 2 [json_name = "stakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getStakingCoinsOrBuilderList() {
+      return stakingCoins_;
+    }
+    /**
+     * <pre>
+     * staking_coins specifies coins to stake
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin staking_coins = 2 [json_name = "stakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getStakingCoinsCount() {
+      return stakingCoins_.size();
+    }
+    /**
+     * <pre>
+     * staking_coins specifies coins to stake
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin staking_coins = 2 [json_name = "stakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getStakingCoins(int index) {
+      return stakingCoins_.get(index);
+    }
+    /**
+     * <pre>
+     * staking_coins specifies coins to stake
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin staking_coins = 2 [json_name = "stakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getStakingCoinsOrBuilder(
+        int index) {
+      return stakingCoins_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, farmer_);
+      }
+      for (int i = 0; i < stakingCoins_.size(); i++) {
+        output.writeMessage(2, stakingCoins_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, farmer_);
+      }
+      for (int i = 0; i < stakingCoins_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, stakingCoins_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.TxProto.MsgStake)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.TxProto.MsgStake other = (com.crescent.farming.v1beta1.TxProto.MsgStake) obj;
+
+      if (!getFarmer()
+          .equals(other.getFarmer())) return false;
+      if (!getStakingCoinsList()
+          .equals(other.getStakingCoinsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FARMER_FIELD_NUMBER;
+      hash = (53 * hash) + getFarmer().hashCode();
+      if (getStakingCoinsCount() > 0) {
+        hash = (37 * hash) + STAKING_COINS_FIELD_NUMBER;
+        hash = (53 * hash) + getStakingCoinsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgStake parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgStake parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgStake parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgStake parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgStake parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgStake parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgStake parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgStake parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgStake parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgStake parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgStake parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgStake parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.TxProto.MsgStake prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgStake defines a SDK message for staking coins into the farming plan.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.farming.v1beta1.MsgStake}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.MsgStake)
+        com.crescent.farming.v1beta1.TxProto.MsgStakeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgStake_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgStake_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.TxProto.MsgStake.class, com.crescent.farming.v1beta1.TxProto.MsgStake.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.TxProto.MsgStake.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        farmer_ = "";
+        if (stakingCoinsBuilder_ == null) {
+          stakingCoins_ = java.util.Collections.emptyList();
+        } else {
+          stakingCoins_ = null;
+          stakingCoinsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgStake_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgStake getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.TxProto.MsgStake.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgStake build() {
+        com.crescent.farming.v1beta1.TxProto.MsgStake result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgStake buildPartial() {
+        com.crescent.farming.v1beta1.TxProto.MsgStake result = new com.crescent.farming.v1beta1.TxProto.MsgStake(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.crescent.farming.v1beta1.TxProto.MsgStake result) {
+        if (stakingCoinsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            stakingCoins_ = java.util.Collections.unmodifiableList(stakingCoins_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.stakingCoins_ = stakingCoins_;
+        } else {
+          result.stakingCoins_ = stakingCoinsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.crescent.farming.v1beta1.TxProto.MsgStake result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.farmer_ = farmer_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.TxProto.MsgStake) {
+          return mergeFrom((com.crescent.farming.v1beta1.TxProto.MsgStake)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.TxProto.MsgStake other) {
+        if (other == com.crescent.farming.v1beta1.TxProto.MsgStake.getDefaultInstance()) return this;
+        if (!other.getFarmer().isEmpty()) {
+          farmer_ = other.farmer_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (stakingCoinsBuilder_ == null) {
+          if (!other.stakingCoins_.isEmpty()) {
+            if (stakingCoins_.isEmpty()) {
+              stakingCoins_ = other.stakingCoins_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureStakingCoinsIsMutable();
+              stakingCoins_.addAll(other.stakingCoins_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.stakingCoins_.isEmpty()) {
+            if (stakingCoinsBuilder_.isEmpty()) {
+              stakingCoinsBuilder_.dispose();
+              stakingCoinsBuilder_ = null;
+              stakingCoins_ = other.stakingCoins_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              stakingCoinsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getStakingCoinsFieldBuilder() : null;
+            } else {
+              stakingCoinsBuilder_.addAllMessages(other.stakingCoins_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                farmer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (stakingCoinsBuilder_ == null) {
+                  ensureStakingCoinsIsMutable();
+                  stakingCoins_.add(m);
+                } else {
+                  stakingCoinsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object farmer_ = "";
+      /**
+       * <pre>
+       * farmer defines the bech32-encoded address of the farmer
+       * </pre>
+       *
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @return The farmer.
+       */
+      public java.lang.String getFarmer() {
+        java.lang.Object ref = farmer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          farmer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * farmer defines the bech32-encoded address of the farmer
+       * </pre>
+       *
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @return The bytes for farmer.
+       */
+      public com.google.protobuf.ByteString
+          getFarmerBytes() {
+        java.lang.Object ref = farmer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          farmer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * farmer defines the bech32-encoded address of the farmer
+       * </pre>
+       *
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @param value The farmer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFarmer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        farmer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * farmer defines the bech32-encoded address of the farmer
+       * </pre>
+       *
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFarmer() {
+        farmer_ = getDefaultInstance().getFarmer();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * farmer defines the bech32-encoded address of the farmer
+       * </pre>
+       *
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @param value The bytes for farmer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFarmerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        farmer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> stakingCoins_ =
+        java.util.Collections.emptyList();
+      private void ensureStakingCoinsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          stakingCoins_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(stakingCoins_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> stakingCoinsBuilder_;
+
+      /**
+       * <pre>
+       * staking_coins specifies coins to stake
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin staking_coins = 2 [json_name = "stakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getStakingCoinsList() {
+        if (stakingCoinsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(stakingCoins_);
+        } else {
+          return stakingCoinsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * staking_coins specifies coins to stake
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin staking_coins = 2 [json_name = "stakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getStakingCoinsCount() {
+        if (stakingCoinsBuilder_ == null) {
+          return stakingCoins_.size();
+        } else {
+          return stakingCoinsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * staking_coins specifies coins to stake
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin staking_coins = 2 [json_name = "stakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getStakingCoins(int index) {
+        if (stakingCoinsBuilder_ == null) {
+          return stakingCoins_.get(index);
+        } else {
+          return stakingCoinsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * staking_coins specifies coins to stake
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin staking_coins = 2 [json_name = "stakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setStakingCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (stakingCoinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStakingCoinsIsMutable();
+          stakingCoins_.set(index, value);
+          onChanged();
+        } else {
+          stakingCoinsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_coins specifies coins to stake
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin staking_coins = 2 [json_name = "stakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setStakingCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (stakingCoinsBuilder_ == null) {
+          ensureStakingCoinsIsMutable();
+          stakingCoins_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          stakingCoinsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_coins specifies coins to stake
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin staking_coins = 2 [json_name = "stakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addStakingCoins(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (stakingCoinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStakingCoinsIsMutable();
+          stakingCoins_.add(value);
+          onChanged();
+        } else {
+          stakingCoinsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_coins specifies coins to stake
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin staking_coins = 2 [json_name = "stakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addStakingCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (stakingCoinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStakingCoinsIsMutable();
+          stakingCoins_.add(index, value);
+          onChanged();
+        } else {
+          stakingCoinsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_coins specifies coins to stake
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin staking_coins = 2 [json_name = "stakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addStakingCoins(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (stakingCoinsBuilder_ == null) {
+          ensureStakingCoinsIsMutable();
+          stakingCoins_.add(builderForValue.build());
+          onChanged();
+        } else {
+          stakingCoinsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_coins specifies coins to stake
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin staking_coins = 2 [json_name = "stakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addStakingCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (stakingCoinsBuilder_ == null) {
+          ensureStakingCoinsIsMutable();
+          stakingCoins_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          stakingCoinsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_coins specifies coins to stake
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin staking_coins = 2 [json_name = "stakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllStakingCoins(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (stakingCoinsBuilder_ == null) {
+          ensureStakingCoinsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, stakingCoins_);
+          onChanged();
+        } else {
+          stakingCoinsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_coins specifies coins to stake
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin staking_coins = 2 [json_name = "stakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearStakingCoins() {
+        if (stakingCoinsBuilder_ == null) {
+          stakingCoins_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          stakingCoinsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_coins specifies coins to stake
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin staking_coins = 2 [json_name = "stakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeStakingCoins(int index) {
+        if (stakingCoinsBuilder_ == null) {
+          ensureStakingCoinsIsMutable();
+          stakingCoins_.remove(index);
+          onChanged();
+        } else {
+          stakingCoinsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_coins specifies coins to stake
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin staking_coins = 2 [json_name = "stakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getStakingCoinsBuilder(
+          int index) {
+        return getStakingCoinsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * staking_coins specifies coins to stake
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin staking_coins = 2 [json_name = "stakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getStakingCoinsOrBuilder(
+          int index) {
+        if (stakingCoinsBuilder_ == null) {
+          return stakingCoins_.get(index);  } else {
+          return stakingCoinsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * staking_coins specifies coins to stake
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin staking_coins = 2 [json_name = "stakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getStakingCoinsOrBuilderList() {
+        if (stakingCoinsBuilder_ != null) {
+          return stakingCoinsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(stakingCoins_);
+        }
+      }
+      /**
+       * <pre>
+       * staking_coins specifies coins to stake
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin staking_coins = 2 [json_name = "stakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addStakingCoinsBuilder() {
+        return getStakingCoinsFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * staking_coins specifies coins to stake
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin staking_coins = 2 [json_name = "stakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addStakingCoinsBuilder(
+          int index) {
+        return getStakingCoinsFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * staking_coins specifies coins to stake
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin staking_coins = 2 [json_name = "stakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"staking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getStakingCoinsBuilderList() {
+        return getStakingCoinsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getStakingCoinsFieldBuilder() {
+        if (stakingCoinsBuilder_ == null) {
+          stakingCoinsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  stakingCoins_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          stakingCoins_ = null;
+        }
+        return stakingCoinsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.MsgStake)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.MsgStake)
+    private static final com.crescent.farming.v1beta1.TxProto.MsgStake DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.TxProto.MsgStake();
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgStake getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgStake>
+        PARSER = new com.google.protobuf.AbstractParser<MsgStake>() {
+      @java.lang.Override
+      public MsgStake parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgStake> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgStake> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.TxProto.MsgStake getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgStakeResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.MsgStakeResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgStakeResponse  defines the Msg/MsgStakeResponse response type.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.farming.v1beta1.MsgStakeResponse}
+   */
+  public static final class MsgStakeResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.MsgStakeResponse)
+      MsgStakeResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgStakeResponse.newBuilder() to construct.
+    private MsgStakeResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgStakeResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgStakeResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgStakeResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgStakeResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.TxProto.MsgStakeResponse.class, com.crescent.farming.v1beta1.TxProto.MsgStakeResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.TxProto.MsgStakeResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.TxProto.MsgStakeResponse other = (com.crescent.farming.v1beta1.TxProto.MsgStakeResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgStakeResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgStakeResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgStakeResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgStakeResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgStakeResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgStakeResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgStakeResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgStakeResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgStakeResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgStakeResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgStakeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgStakeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.TxProto.MsgStakeResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgStakeResponse  defines the Msg/MsgStakeResponse response type.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.farming.v1beta1.MsgStakeResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.MsgStakeResponse)
+        com.crescent.farming.v1beta1.TxProto.MsgStakeResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgStakeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgStakeResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.TxProto.MsgStakeResponse.class, com.crescent.farming.v1beta1.TxProto.MsgStakeResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.TxProto.MsgStakeResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgStakeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgStakeResponse getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.TxProto.MsgStakeResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgStakeResponse build() {
+        com.crescent.farming.v1beta1.TxProto.MsgStakeResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgStakeResponse buildPartial() {
+        com.crescent.farming.v1beta1.TxProto.MsgStakeResponse result = new com.crescent.farming.v1beta1.TxProto.MsgStakeResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.TxProto.MsgStakeResponse) {
+          return mergeFrom((com.crescent.farming.v1beta1.TxProto.MsgStakeResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.TxProto.MsgStakeResponse other) {
+        if (other == com.crescent.farming.v1beta1.TxProto.MsgStakeResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.MsgStakeResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.MsgStakeResponse)
+    private static final com.crescent.farming.v1beta1.TxProto.MsgStakeResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.TxProto.MsgStakeResponse();
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgStakeResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgStakeResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgStakeResponse>() {
+      @java.lang.Override
+      public MsgStakeResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgStakeResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgStakeResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.TxProto.MsgStakeResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUnstakeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.MsgUnstake)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * farmer defines the bech32-encoded address of the farmer
+     * </pre>
+     *
+     * <code>string farmer = 1 [json_name = "farmer"];</code>
+     * @return The farmer.
+     */
+    java.lang.String getFarmer();
+    /**
+     * <pre>
+     * farmer defines the bech32-encoded address of the farmer
+     * </pre>
+     *
+     * <code>string farmer = 1 [json_name = "farmer"];</code>
+     * @return The bytes for farmer.
+     */
+    com.google.protobuf.ByteString
+        getFarmerBytes();
+
+    /**
+     * <pre>
+     * unstaking_coins specifies coins to stake
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin unstaking_coins = 2 [json_name = "unstakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"unstaking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getUnstakingCoinsList();
+    /**
+     * <pre>
+     * unstaking_coins specifies coins to stake
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin unstaking_coins = 2 [json_name = "unstakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"unstaking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getUnstakingCoins(int index);
+    /**
+     * <pre>
+     * unstaking_coins specifies coins to stake
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin unstaking_coins = 2 [json_name = "unstakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"unstaking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getUnstakingCoinsCount();
+    /**
+     * <pre>
+     * unstaking_coins specifies coins to stake
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin unstaking_coins = 2 [json_name = "unstakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"unstaking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getUnstakingCoinsOrBuilderList();
+    /**
+     * <pre>
+     * unstaking_coins specifies coins to stake
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin unstaking_coins = 2 [json_name = "unstakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"unstaking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getUnstakingCoinsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * MsgUnstake defines a SDK message for performing unstaking of coins from the
+   * farming plan.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.farming.v1beta1.MsgUnstake}
+   */
+  public static final class MsgUnstake extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.MsgUnstake)
+      MsgUnstakeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUnstake.newBuilder() to construct.
+    private MsgUnstake(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUnstake() {
+      farmer_ = "";
+      unstakingCoins_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUnstake();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgUnstake_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgUnstake_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.TxProto.MsgUnstake.class, com.crescent.farming.v1beta1.TxProto.MsgUnstake.Builder.class);
+    }
+
+    public static final int FARMER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object farmer_ = "";
+    /**
+     * <pre>
+     * farmer defines the bech32-encoded address of the farmer
+     * </pre>
+     *
+     * <code>string farmer = 1 [json_name = "farmer"];</code>
+     * @return The farmer.
+     */
+    @java.lang.Override
+    public java.lang.String getFarmer() {
+      java.lang.Object ref = farmer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        farmer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * farmer defines the bech32-encoded address of the farmer
+     * </pre>
+     *
+     * <code>string farmer = 1 [json_name = "farmer"];</code>
+     * @return The bytes for farmer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFarmerBytes() {
+      java.lang.Object ref = farmer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        farmer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UNSTAKING_COINS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> unstakingCoins_;
+    /**
+     * <pre>
+     * unstaking_coins specifies coins to stake
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin unstaking_coins = 2 [json_name = "unstakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"unstaking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getUnstakingCoinsList() {
+      return unstakingCoins_;
+    }
+    /**
+     * <pre>
+     * unstaking_coins specifies coins to stake
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin unstaking_coins = 2 [json_name = "unstakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"unstaking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getUnstakingCoinsOrBuilderList() {
+      return unstakingCoins_;
+    }
+    /**
+     * <pre>
+     * unstaking_coins specifies coins to stake
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin unstaking_coins = 2 [json_name = "unstakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"unstaking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getUnstakingCoinsCount() {
+      return unstakingCoins_.size();
+    }
+    /**
+     * <pre>
+     * unstaking_coins specifies coins to stake
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin unstaking_coins = 2 [json_name = "unstakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"unstaking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getUnstakingCoins(int index) {
+      return unstakingCoins_.get(index);
+    }
+    /**
+     * <pre>
+     * unstaking_coins specifies coins to stake
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin unstaking_coins = 2 [json_name = "unstakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"unstaking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getUnstakingCoinsOrBuilder(
+        int index) {
+      return unstakingCoins_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, farmer_);
+      }
+      for (int i = 0; i < unstakingCoins_.size(); i++) {
+        output.writeMessage(2, unstakingCoins_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, farmer_);
+      }
+      for (int i = 0; i < unstakingCoins_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, unstakingCoins_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.TxProto.MsgUnstake)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.TxProto.MsgUnstake other = (com.crescent.farming.v1beta1.TxProto.MsgUnstake) obj;
+
+      if (!getFarmer()
+          .equals(other.getFarmer())) return false;
+      if (!getUnstakingCoinsList()
+          .equals(other.getUnstakingCoinsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FARMER_FIELD_NUMBER;
+      hash = (53 * hash) + getFarmer().hashCode();
+      if (getUnstakingCoinsCount() > 0) {
+        hash = (37 * hash) + UNSTAKING_COINS_FIELD_NUMBER;
+        hash = (53 * hash) + getUnstakingCoinsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgUnstake parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgUnstake parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgUnstake parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgUnstake parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgUnstake parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgUnstake parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgUnstake parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgUnstake parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgUnstake parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgUnstake parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgUnstake parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgUnstake parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.TxProto.MsgUnstake prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgUnstake defines a SDK message for performing unstaking of coins from the
+     * farming plan.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.farming.v1beta1.MsgUnstake}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.MsgUnstake)
+        com.crescent.farming.v1beta1.TxProto.MsgUnstakeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgUnstake_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgUnstake_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.TxProto.MsgUnstake.class, com.crescent.farming.v1beta1.TxProto.MsgUnstake.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.TxProto.MsgUnstake.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        farmer_ = "";
+        if (unstakingCoinsBuilder_ == null) {
+          unstakingCoins_ = java.util.Collections.emptyList();
+        } else {
+          unstakingCoins_ = null;
+          unstakingCoinsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgUnstake_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgUnstake getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.TxProto.MsgUnstake.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgUnstake build() {
+        com.crescent.farming.v1beta1.TxProto.MsgUnstake result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgUnstake buildPartial() {
+        com.crescent.farming.v1beta1.TxProto.MsgUnstake result = new com.crescent.farming.v1beta1.TxProto.MsgUnstake(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.crescent.farming.v1beta1.TxProto.MsgUnstake result) {
+        if (unstakingCoinsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            unstakingCoins_ = java.util.Collections.unmodifiableList(unstakingCoins_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.unstakingCoins_ = unstakingCoins_;
+        } else {
+          result.unstakingCoins_ = unstakingCoinsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.crescent.farming.v1beta1.TxProto.MsgUnstake result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.farmer_ = farmer_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.TxProto.MsgUnstake) {
+          return mergeFrom((com.crescent.farming.v1beta1.TxProto.MsgUnstake)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.TxProto.MsgUnstake other) {
+        if (other == com.crescent.farming.v1beta1.TxProto.MsgUnstake.getDefaultInstance()) return this;
+        if (!other.getFarmer().isEmpty()) {
+          farmer_ = other.farmer_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (unstakingCoinsBuilder_ == null) {
+          if (!other.unstakingCoins_.isEmpty()) {
+            if (unstakingCoins_.isEmpty()) {
+              unstakingCoins_ = other.unstakingCoins_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureUnstakingCoinsIsMutable();
+              unstakingCoins_.addAll(other.unstakingCoins_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.unstakingCoins_.isEmpty()) {
+            if (unstakingCoinsBuilder_.isEmpty()) {
+              unstakingCoinsBuilder_.dispose();
+              unstakingCoinsBuilder_ = null;
+              unstakingCoins_ = other.unstakingCoins_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              unstakingCoinsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getUnstakingCoinsFieldBuilder() : null;
+            } else {
+              unstakingCoinsBuilder_.addAllMessages(other.unstakingCoins_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                farmer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (unstakingCoinsBuilder_ == null) {
+                  ensureUnstakingCoinsIsMutable();
+                  unstakingCoins_.add(m);
+                } else {
+                  unstakingCoinsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object farmer_ = "";
+      /**
+       * <pre>
+       * farmer defines the bech32-encoded address of the farmer
+       * </pre>
+       *
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @return The farmer.
+       */
+      public java.lang.String getFarmer() {
+        java.lang.Object ref = farmer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          farmer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * farmer defines the bech32-encoded address of the farmer
+       * </pre>
+       *
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @return The bytes for farmer.
+       */
+      public com.google.protobuf.ByteString
+          getFarmerBytes() {
+        java.lang.Object ref = farmer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          farmer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * farmer defines the bech32-encoded address of the farmer
+       * </pre>
+       *
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @param value The farmer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFarmer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        farmer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * farmer defines the bech32-encoded address of the farmer
+       * </pre>
+       *
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFarmer() {
+        farmer_ = getDefaultInstance().getFarmer();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * farmer defines the bech32-encoded address of the farmer
+       * </pre>
+       *
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @param value The bytes for farmer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFarmerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        farmer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> unstakingCoins_ =
+        java.util.Collections.emptyList();
+      private void ensureUnstakingCoinsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          unstakingCoins_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(unstakingCoins_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> unstakingCoinsBuilder_;
+
+      /**
+       * <pre>
+       * unstaking_coins specifies coins to stake
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin unstaking_coins = 2 [json_name = "unstakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"unstaking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getUnstakingCoinsList() {
+        if (unstakingCoinsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(unstakingCoins_);
+        } else {
+          return unstakingCoinsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * unstaking_coins specifies coins to stake
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin unstaking_coins = 2 [json_name = "unstakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"unstaking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getUnstakingCoinsCount() {
+        if (unstakingCoinsBuilder_ == null) {
+          return unstakingCoins_.size();
+        } else {
+          return unstakingCoinsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * unstaking_coins specifies coins to stake
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin unstaking_coins = 2 [json_name = "unstakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"unstaking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getUnstakingCoins(int index) {
+        if (unstakingCoinsBuilder_ == null) {
+          return unstakingCoins_.get(index);
+        } else {
+          return unstakingCoinsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * unstaking_coins specifies coins to stake
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin unstaking_coins = 2 [json_name = "unstakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"unstaking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setUnstakingCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (unstakingCoinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUnstakingCoinsIsMutable();
+          unstakingCoins_.set(index, value);
+          onChanged();
+        } else {
+          unstakingCoinsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * unstaking_coins specifies coins to stake
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin unstaking_coins = 2 [json_name = "unstakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"unstaking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setUnstakingCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (unstakingCoinsBuilder_ == null) {
+          ensureUnstakingCoinsIsMutable();
+          unstakingCoins_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          unstakingCoinsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * unstaking_coins specifies coins to stake
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin unstaking_coins = 2 [json_name = "unstakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"unstaking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addUnstakingCoins(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (unstakingCoinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUnstakingCoinsIsMutable();
+          unstakingCoins_.add(value);
+          onChanged();
+        } else {
+          unstakingCoinsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * unstaking_coins specifies coins to stake
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin unstaking_coins = 2 [json_name = "unstakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"unstaking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addUnstakingCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (unstakingCoinsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUnstakingCoinsIsMutable();
+          unstakingCoins_.add(index, value);
+          onChanged();
+        } else {
+          unstakingCoinsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * unstaking_coins specifies coins to stake
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin unstaking_coins = 2 [json_name = "unstakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"unstaking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addUnstakingCoins(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (unstakingCoinsBuilder_ == null) {
+          ensureUnstakingCoinsIsMutable();
+          unstakingCoins_.add(builderForValue.build());
+          onChanged();
+        } else {
+          unstakingCoinsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * unstaking_coins specifies coins to stake
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin unstaking_coins = 2 [json_name = "unstakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"unstaking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addUnstakingCoins(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (unstakingCoinsBuilder_ == null) {
+          ensureUnstakingCoinsIsMutable();
+          unstakingCoins_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          unstakingCoinsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * unstaking_coins specifies coins to stake
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin unstaking_coins = 2 [json_name = "unstakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"unstaking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllUnstakingCoins(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (unstakingCoinsBuilder_ == null) {
+          ensureUnstakingCoinsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, unstakingCoins_);
+          onChanged();
+        } else {
+          unstakingCoinsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * unstaking_coins specifies coins to stake
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin unstaking_coins = 2 [json_name = "unstakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"unstaking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearUnstakingCoins() {
+        if (unstakingCoinsBuilder_ == null) {
+          unstakingCoins_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          unstakingCoinsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * unstaking_coins specifies coins to stake
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin unstaking_coins = 2 [json_name = "unstakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"unstaking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeUnstakingCoins(int index) {
+        if (unstakingCoinsBuilder_ == null) {
+          ensureUnstakingCoinsIsMutable();
+          unstakingCoins_.remove(index);
+          onChanged();
+        } else {
+          unstakingCoinsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * unstaking_coins specifies coins to stake
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin unstaking_coins = 2 [json_name = "unstakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"unstaking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getUnstakingCoinsBuilder(
+          int index) {
+        return getUnstakingCoinsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * unstaking_coins specifies coins to stake
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin unstaking_coins = 2 [json_name = "unstakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"unstaking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getUnstakingCoinsOrBuilder(
+          int index) {
+        if (unstakingCoinsBuilder_ == null) {
+          return unstakingCoins_.get(index);  } else {
+          return unstakingCoinsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * unstaking_coins specifies coins to stake
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin unstaking_coins = 2 [json_name = "unstakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"unstaking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getUnstakingCoinsOrBuilderList() {
+        if (unstakingCoinsBuilder_ != null) {
+          return unstakingCoinsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(unstakingCoins_);
+        }
+      }
+      /**
+       * <pre>
+       * unstaking_coins specifies coins to stake
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin unstaking_coins = 2 [json_name = "unstakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"unstaking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addUnstakingCoinsBuilder() {
+        return getUnstakingCoinsFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * unstaking_coins specifies coins to stake
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin unstaking_coins = 2 [json_name = "unstakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"unstaking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addUnstakingCoinsBuilder(
+          int index) {
+        return getUnstakingCoinsFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * unstaking_coins specifies coins to stake
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin unstaking_coins = 2 [json_name = "unstakingCoins", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"unstaking_coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getUnstakingCoinsBuilderList() {
+        return getUnstakingCoinsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getUnstakingCoinsFieldBuilder() {
+        if (unstakingCoinsBuilder_ == null) {
+          unstakingCoinsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  unstakingCoins_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          unstakingCoins_ = null;
+        }
+        return unstakingCoinsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.MsgUnstake)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.MsgUnstake)
+    private static final com.crescent.farming.v1beta1.TxProto.MsgUnstake DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.TxProto.MsgUnstake();
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgUnstake getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUnstake>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUnstake>() {
+      @java.lang.Override
+      public MsgUnstake parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUnstake> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUnstake> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.TxProto.MsgUnstake getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUnstakeResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.MsgUnstakeResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgUnstakeResponse defines the Msg/MsgUnstakeResponse response type.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.farming.v1beta1.MsgUnstakeResponse}
+   */
+  public static final class MsgUnstakeResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.MsgUnstakeResponse)
+      MsgUnstakeResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUnstakeResponse.newBuilder() to construct.
+    private MsgUnstakeResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUnstakeResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUnstakeResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgUnstakeResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgUnstakeResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.TxProto.MsgUnstakeResponse.class, com.crescent.farming.v1beta1.TxProto.MsgUnstakeResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.TxProto.MsgUnstakeResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.TxProto.MsgUnstakeResponse other = (com.crescent.farming.v1beta1.TxProto.MsgUnstakeResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgUnstakeResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgUnstakeResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgUnstakeResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgUnstakeResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgUnstakeResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgUnstakeResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgUnstakeResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgUnstakeResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgUnstakeResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgUnstakeResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgUnstakeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgUnstakeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.TxProto.MsgUnstakeResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgUnstakeResponse defines the Msg/MsgUnstakeResponse response type.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.farming.v1beta1.MsgUnstakeResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.MsgUnstakeResponse)
+        com.crescent.farming.v1beta1.TxProto.MsgUnstakeResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgUnstakeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgUnstakeResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.TxProto.MsgUnstakeResponse.class, com.crescent.farming.v1beta1.TxProto.MsgUnstakeResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.TxProto.MsgUnstakeResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgUnstakeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgUnstakeResponse getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.TxProto.MsgUnstakeResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgUnstakeResponse build() {
+        com.crescent.farming.v1beta1.TxProto.MsgUnstakeResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgUnstakeResponse buildPartial() {
+        com.crescent.farming.v1beta1.TxProto.MsgUnstakeResponse result = new com.crescent.farming.v1beta1.TxProto.MsgUnstakeResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.TxProto.MsgUnstakeResponse) {
+          return mergeFrom((com.crescent.farming.v1beta1.TxProto.MsgUnstakeResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.TxProto.MsgUnstakeResponse other) {
+        if (other == com.crescent.farming.v1beta1.TxProto.MsgUnstakeResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.MsgUnstakeResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.MsgUnstakeResponse)
+    private static final com.crescent.farming.v1beta1.TxProto.MsgUnstakeResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.TxProto.MsgUnstakeResponse();
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgUnstakeResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUnstakeResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUnstakeResponse>() {
+      @java.lang.Override
+      public MsgUnstakeResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUnstakeResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUnstakeResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.TxProto.MsgUnstakeResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgHarvestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.MsgHarvest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * farmer defines the bech32-encoded address of the farmer
+     * </pre>
+     *
+     * <code>string farmer = 1 [json_name = "farmer"];</code>
+     * @return The farmer.
+     */
+    java.lang.String getFarmer();
+    /**
+     * <pre>
+     * farmer defines the bech32-encoded address of the farmer
+     * </pre>
+     *
+     * <code>string farmer = 1 [json_name = "farmer"];</code>
+     * @return The bytes for farmer.
+     */
+    com.google.protobuf.ByteString
+        getFarmerBytes();
+
+    /**
+     * <pre>
+     * staking_coin_denoms is the set of denoms of staked coins as a source of the reward for
+     * harvesting
+     * </pre>
+     *
+     * <code>repeated string staking_coin_denoms = 2 [json_name = "stakingCoinDenoms", (.gogoproto.moretags) = "yaml:&#92;"staking_coin_denoms&#92;""];</code>
+     * @return A list containing the stakingCoinDenoms.
+     */
+    java.util.List<java.lang.String>
+        getStakingCoinDenomsList();
+    /**
+     * <pre>
+     * staking_coin_denoms is the set of denoms of staked coins as a source of the reward for
+     * harvesting
+     * </pre>
+     *
+     * <code>repeated string staking_coin_denoms = 2 [json_name = "stakingCoinDenoms", (.gogoproto.moretags) = "yaml:&#92;"staking_coin_denoms&#92;""];</code>
+     * @return The count of stakingCoinDenoms.
+     */
+    int getStakingCoinDenomsCount();
+    /**
+     * <pre>
+     * staking_coin_denoms is the set of denoms of staked coins as a source of the reward for
+     * harvesting
+     * </pre>
+     *
+     * <code>repeated string staking_coin_denoms = 2 [json_name = "stakingCoinDenoms", (.gogoproto.moretags) = "yaml:&#92;"staking_coin_denoms&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The stakingCoinDenoms at the given index.
+     */
+    java.lang.String getStakingCoinDenoms(int index);
+    /**
+     * <pre>
+     * staking_coin_denoms is the set of denoms of staked coins as a source of the reward for
+     * harvesting
+     * </pre>
+     *
+     * <code>repeated string staking_coin_denoms = 2 [json_name = "stakingCoinDenoms", (.gogoproto.moretags) = "yaml:&#92;"staking_coin_denoms&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the stakingCoinDenoms at the given index.
+     */
+    com.google.protobuf.ByteString
+        getStakingCoinDenomsBytes(int index);
+  }
+  /**
+   * <pre>
+   * MsgHarvest defines a SDK message for claiming rewards from the farming plan.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.farming.v1beta1.MsgHarvest}
+   */
+  public static final class MsgHarvest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.MsgHarvest)
+      MsgHarvestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgHarvest.newBuilder() to construct.
+    private MsgHarvest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgHarvest() {
+      farmer_ = "";
+      stakingCoinDenoms_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgHarvest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgHarvest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgHarvest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.TxProto.MsgHarvest.class, com.crescent.farming.v1beta1.TxProto.MsgHarvest.Builder.class);
+    }
+
+    public static final int FARMER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object farmer_ = "";
+    /**
+     * <pre>
+     * farmer defines the bech32-encoded address of the farmer
+     * </pre>
+     *
+     * <code>string farmer = 1 [json_name = "farmer"];</code>
+     * @return The farmer.
+     */
+    @java.lang.Override
+    public java.lang.String getFarmer() {
+      java.lang.Object ref = farmer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        farmer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * farmer defines the bech32-encoded address of the farmer
+     * </pre>
+     *
+     * <code>string farmer = 1 [json_name = "farmer"];</code>
+     * @return The bytes for farmer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFarmerBytes() {
+      java.lang.Object ref = farmer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        farmer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STAKING_COIN_DENOMS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList stakingCoinDenoms_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * staking_coin_denoms is the set of denoms of staked coins as a source of the reward for
+     * harvesting
+     * </pre>
+     *
+     * <code>repeated string staking_coin_denoms = 2 [json_name = "stakingCoinDenoms", (.gogoproto.moretags) = "yaml:&#92;"staking_coin_denoms&#92;""];</code>
+     * @return A list containing the stakingCoinDenoms.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getStakingCoinDenomsList() {
+      return stakingCoinDenoms_;
+    }
+    /**
+     * <pre>
+     * staking_coin_denoms is the set of denoms of staked coins as a source of the reward for
+     * harvesting
+     * </pre>
+     *
+     * <code>repeated string staking_coin_denoms = 2 [json_name = "stakingCoinDenoms", (.gogoproto.moretags) = "yaml:&#92;"staking_coin_denoms&#92;""];</code>
+     * @return The count of stakingCoinDenoms.
+     */
+    public int getStakingCoinDenomsCount() {
+      return stakingCoinDenoms_.size();
+    }
+    /**
+     * <pre>
+     * staking_coin_denoms is the set of denoms of staked coins as a source of the reward for
+     * harvesting
+     * </pre>
+     *
+     * <code>repeated string staking_coin_denoms = 2 [json_name = "stakingCoinDenoms", (.gogoproto.moretags) = "yaml:&#92;"staking_coin_denoms&#92;""];</code>
+     * @param index The index of the element to return.
+     * @return The stakingCoinDenoms at the given index.
+     */
+    public java.lang.String getStakingCoinDenoms(int index) {
+      return stakingCoinDenoms_.get(index);
+    }
+    /**
+     * <pre>
+     * staking_coin_denoms is the set of denoms of staked coins as a source of the reward for
+     * harvesting
+     * </pre>
+     *
+     * <code>repeated string staking_coin_denoms = 2 [json_name = "stakingCoinDenoms", (.gogoproto.moretags) = "yaml:&#92;"staking_coin_denoms&#92;""];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the stakingCoinDenoms at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getStakingCoinDenomsBytes(int index) {
+      return stakingCoinDenoms_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, farmer_);
+      }
+      for (int i = 0; i < stakingCoinDenoms_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, stakingCoinDenoms_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(farmer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, farmer_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < stakingCoinDenoms_.size(); i++) {
+          dataSize += computeStringSizeNoTag(stakingCoinDenoms_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getStakingCoinDenomsList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.TxProto.MsgHarvest)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.TxProto.MsgHarvest other = (com.crescent.farming.v1beta1.TxProto.MsgHarvest) obj;
+
+      if (!getFarmer()
+          .equals(other.getFarmer())) return false;
+      if (!getStakingCoinDenomsList()
+          .equals(other.getStakingCoinDenomsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FARMER_FIELD_NUMBER;
+      hash = (53 * hash) + getFarmer().hashCode();
+      if (getStakingCoinDenomsCount() > 0) {
+        hash = (37 * hash) + STAKING_COIN_DENOMS_FIELD_NUMBER;
+        hash = (53 * hash) + getStakingCoinDenomsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgHarvest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgHarvest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgHarvest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgHarvest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgHarvest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgHarvest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgHarvest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgHarvest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgHarvest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgHarvest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgHarvest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgHarvest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.TxProto.MsgHarvest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgHarvest defines a SDK message for claiming rewards from the farming plan.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.farming.v1beta1.MsgHarvest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.MsgHarvest)
+        com.crescent.farming.v1beta1.TxProto.MsgHarvestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgHarvest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgHarvest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.TxProto.MsgHarvest.class, com.crescent.farming.v1beta1.TxProto.MsgHarvest.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.TxProto.MsgHarvest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        farmer_ = "";
+        stakingCoinDenoms_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgHarvest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgHarvest getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.TxProto.MsgHarvest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgHarvest build() {
+        com.crescent.farming.v1beta1.TxProto.MsgHarvest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgHarvest buildPartial() {
+        com.crescent.farming.v1beta1.TxProto.MsgHarvest result = new com.crescent.farming.v1beta1.TxProto.MsgHarvest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.farming.v1beta1.TxProto.MsgHarvest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.farmer_ = farmer_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          stakingCoinDenoms_.makeImmutable();
+          result.stakingCoinDenoms_ = stakingCoinDenoms_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.TxProto.MsgHarvest) {
+          return mergeFrom((com.crescent.farming.v1beta1.TxProto.MsgHarvest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.TxProto.MsgHarvest other) {
+        if (other == com.crescent.farming.v1beta1.TxProto.MsgHarvest.getDefaultInstance()) return this;
+        if (!other.getFarmer().isEmpty()) {
+          farmer_ = other.farmer_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.stakingCoinDenoms_.isEmpty()) {
+          if (stakingCoinDenoms_.isEmpty()) {
+            stakingCoinDenoms_ = other.stakingCoinDenoms_;
+            bitField0_ |= 0x00000002;
+          } else {
+            ensureStakingCoinDenomsIsMutable();
+            stakingCoinDenoms_.addAll(other.stakingCoinDenoms_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                farmer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureStakingCoinDenomsIsMutable();
+                stakingCoinDenoms_.add(s);
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object farmer_ = "";
+      /**
+       * <pre>
+       * farmer defines the bech32-encoded address of the farmer
+       * </pre>
+       *
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @return The farmer.
+       */
+      public java.lang.String getFarmer() {
+        java.lang.Object ref = farmer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          farmer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * farmer defines the bech32-encoded address of the farmer
+       * </pre>
+       *
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @return The bytes for farmer.
+       */
+      public com.google.protobuf.ByteString
+          getFarmerBytes() {
+        java.lang.Object ref = farmer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          farmer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * farmer defines the bech32-encoded address of the farmer
+       * </pre>
+       *
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @param value The farmer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFarmer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        farmer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * farmer defines the bech32-encoded address of the farmer
+       * </pre>
+       *
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFarmer() {
+        farmer_ = getDefaultInstance().getFarmer();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * farmer defines the bech32-encoded address of the farmer
+       * </pre>
+       *
+       * <code>string farmer = 1 [json_name = "farmer"];</code>
+       * @param value The bytes for farmer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFarmerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        farmer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList stakingCoinDenoms_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureStakingCoinDenomsIsMutable() {
+        if (!stakingCoinDenoms_.isModifiable()) {
+          stakingCoinDenoms_ = new com.google.protobuf.LazyStringArrayList(stakingCoinDenoms_);
+        }
+        bitField0_ |= 0x00000002;
+      }
+      /**
+       * <pre>
+       * staking_coin_denoms is the set of denoms of staked coins as a source of the reward for
+       * harvesting
+       * </pre>
+       *
+       * <code>repeated string staking_coin_denoms = 2 [json_name = "stakingCoinDenoms", (.gogoproto.moretags) = "yaml:&#92;"staking_coin_denoms&#92;""];</code>
+       * @return A list containing the stakingCoinDenoms.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getStakingCoinDenomsList() {
+        stakingCoinDenoms_.makeImmutable();
+        return stakingCoinDenoms_;
+      }
+      /**
+       * <pre>
+       * staking_coin_denoms is the set of denoms of staked coins as a source of the reward for
+       * harvesting
+       * </pre>
+       *
+       * <code>repeated string staking_coin_denoms = 2 [json_name = "stakingCoinDenoms", (.gogoproto.moretags) = "yaml:&#92;"staking_coin_denoms&#92;""];</code>
+       * @return The count of stakingCoinDenoms.
+       */
+      public int getStakingCoinDenomsCount() {
+        return stakingCoinDenoms_.size();
+      }
+      /**
+       * <pre>
+       * staking_coin_denoms is the set of denoms of staked coins as a source of the reward for
+       * harvesting
+       * </pre>
+       *
+       * <code>repeated string staking_coin_denoms = 2 [json_name = "stakingCoinDenoms", (.gogoproto.moretags) = "yaml:&#92;"staking_coin_denoms&#92;""];</code>
+       * @param index The index of the element to return.
+       * @return The stakingCoinDenoms at the given index.
+       */
+      public java.lang.String getStakingCoinDenoms(int index) {
+        return stakingCoinDenoms_.get(index);
+      }
+      /**
+       * <pre>
+       * staking_coin_denoms is the set of denoms of staked coins as a source of the reward for
+       * harvesting
+       * </pre>
+       *
+       * <code>repeated string staking_coin_denoms = 2 [json_name = "stakingCoinDenoms", (.gogoproto.moretags) = "yaml:&#92;"staking_coin_denoms&#92;""];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the stakingCoinDenoms at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getStakingCoinDenomsBytes(int index) {
+        return stakingCoinDenoms_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * staking_coin_denoms is the set of denoms of staked coins as a source of the reward for
+       * harvesting
+       * </pre>
+       *
+       * <code>repeated string staking_coin_denoms = 2 [json_name = "stakingCoinDenoms", (.gogoproto.moretags) = "yaml:&#92;"staking_coin_denoms&#92;""];</code>
+       * @param index The index to set the value at.
+       * @param value The stakingCoinDenoms to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingCoinDenoms(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureStakingCoinDenomsIsMutable();
+        stakingCoinDenoms_.set(index, value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_coin_denoms is the set of denoms of staked coins as a source of the reward for
+       * harvesting
+       * </pre>
+       *
+       * <code>repeated string staking_coin_denoms = 2 [json_name = "stakingCoinDenoms", (.gogoproto.moretags) = "yaml:&#92;"staking_coin_denoms&#92;""];</code>
+       * @param value The stakingCoinDenoms to add.
+       * @return This builder for chaining.
+       */
+      public Builder addStakingCoinDenoms(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureStakingCoinDenomsIsMutable();
+        stakingCoinDenoms_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_coin_denoms is the set of denoms of staked coins as a source of the reward for
+       * harvesting
+       * </pre>
+       *
+       * <code>repeated string staking_coin_denoms = 2 [json_name = "stakingCoinDenoms", (.gogoproto.moretags) = "yaml:&#92;"staking_coin_denoms&#92;""];</code>
+       * @param values The stakingCoinDenoms to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllStakingCoinDenoms(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureStakingCoinDenomsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, stakingCoinDenoms_);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_coin_denoms is the set of denoms of staked coins as a source of the reward for
+       * harvesting
+       * </pre>
+       *
+       * <code>repeated string staking_coin_denoms = 2 [json_name = "stakingCoinDenoms", (.gogoproto.moretags) = "yaml:&#92;"staking_coin_denoms&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakingCoinDenoms() {
+        stakingCoinDenoms_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_coin_denoms is the set of denoms of staked coins as a source of the reward for
+       * harvesting
+       * </pre>
+       *
+       * <code>repeated string staking_coin_denoms = 2 [json_name = "stakingCoinDenoms", (.gogoproto.moretags) = "yaml:&#92;"staking_coin_denoms&#92;""];</code>
+       * @param value The bytes of the stakingCoinDenoms to add.
+       * @return This builder for chaining.
+       */
+      public Builder addStakingCoinDenomsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureStakingCoinDenomsIsMutable();
+        stakingCoinDenoms_.add(value);
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.MsgHarvest)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.MsgHarvest)
+    private static final com.crescent.farming.v1beta1.TxProto.MsgHarvest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.TxProto.MsgHarvest();
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgHarvest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgHarvest>
+        PARSER = new com.google.protobuf.AbstractParser<MsgHarvest>() {
+      @java.lang.Override
+      public MsgHarvest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgHarvest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgHarvest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.TxProto.MsgHarvest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgHarvestResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.MsgHarvestResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgHarvestResponse defines the Msg/MsgHarvestResponse response type.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.farming.v1beta1.MsgHarvestResponse}
+   */
+  public static final class MsgHarvestResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.MsgHarvestResponse)
+      MsgHarvestResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgHarvestResponse.newBuilder() to construct.
+    private MsgHarvestResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgHarvestResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgHarvestResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgHarvestResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgHarvestResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.TxProto.MsgHarvestResponse.class, com.crescent.farming.v1beta1.TxProto.MsgHarvestResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.TxProto.MsgHarvestResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.TxProto.MsgHarvestResponse other = (com.crescent.farming.v1beta1.TxProto.MsgHarvestResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgHarvestResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgHarvestResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgHarvestResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgHarvestResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgHarvestResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgHarvestResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgHarvestResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgHarvestResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgHarvestResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgHarvestResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgHarvestResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgHarvestResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.TxProto.MsgHarvestResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgHarvestResponse defines the Msg/MsgHarvestResponse response type.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.farming.v1beta1.MsgHarvestResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.MsgHarvestResponse)
+        com.crescent.farming.v1beta1.TxProto.MsgHarvestResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgHarvestResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgHarvestResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.TxProto.MsgHarvestResponse.class, com.crescent.farming.v1beta1.TxProto.MsgHarvestResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.TxProto.MsgHarvestResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgHarvestResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgHarvestResponse getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.TxProto.MsgHarvestResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgHarvestResponse build() {
+        com.crescent.farming.v1beta1.TxProto.MsgHarvestResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgHarvestResponse buildPartial() {
+        com.crescent.farming.v1beta1.TxProto.MsgHarvestResponse result = new com.crescent.farming.v1beta1.TxProto.MsgHarvestResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.TxProto.MsgHarvestResponse) {
+          return mergeFrom((com.crescent.farming.v1beta1.TxProto.MsgHarvestResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.TxProto.MsgHarvestResponse other) {
+        if (other == com.crescent.farming.v1beta1.TxProto.MsgHarvestResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.MsgHarvestResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.MsgHarvestResponse)
+    private static final com.crescent.farming.v1beta1.TxProto.MsgHarvestResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.TxProto.MsgHarvestResponse();
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgHarvestResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgHarvestResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgHarvestResponse>() {
+      @java.lang.Override
+      public MsgHarvestResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgHarvestResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgHarvestResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.TxProto.MsgHarvestResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgRemovePlanOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.MsgRemovePlan)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    java.lang.String getCreator();
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    com.google.protobuf.ByteString
+        getCreatorBytes();
+
+    /**
+     * <code>uint64 plan_id = 2 [json_name = "planId", (.gogoproto.moretags) = "yaml:&#92;"plan_id&#92;""];</code>
+     * @return The planId.
+     */
+    long getPlanId();
+  }
+  /**
+   * <pre>
+   * MsgRemovePlan defines a message for removing a terminated plan.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.farming.v1beta1.MsgRemovePlan}
+   */
+  public static final class MsgRemovePlan extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.MsgRemovePlan)
+      MsgRemovePlanOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRemovePlan.newBuilder() to construct.
+    private MsgRemovePlan(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRemovePlan() {
+      creator_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRemovePlan();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgRemovePlan_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgRemovePlan_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.TxProto.MsgRemovePlan.class, com.crescent.farming.v1beta1.TxProto.MsgRemovePlan.Builder.class);
+    }
+
+    public static final int CREATOR_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object creator_ = "";
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    @java.lang.Override
+    public java.lang.String getCreator() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        creator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string creator = 1 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatorBytes() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        creator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PLAN_ID_FIELD_NUMBER = 2;
+    private long planId_ = 0L;
+    /**
+     * <code>uint64 plan_id = 2 [json_name = "planId", (.gogoproto.moretags) = "yaml:&#92;"plan_id&#92;""];</code>
+     * @return The planId.
+     */
+    @java.lang.Override
+    public long getPlanId() {
+      return planId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, creator_);
+      }
+      if (planId_ != 0L) {
+        output.writeUInt64(2, planId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, creator_);
+      }
+      if (planId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, planId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.TxProto.MsgRemovePlan)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.TxProto.MsgRemovePlan other = (com.crescent.farming.v1beta1.TxProto.MsgRemovePlan) obj;
+
+      if (!getCreator()
+          .equals(other.getCreator())) return false;
+      if (getPlanId()
+          != other.getPlanId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CREATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCreator().hashCode();
+      hash = (37 * hash) + PLAN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPlanId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgRemovePlan parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgRemovePlan parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgRemovePlan parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgRemovePlan parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgRemovePlan parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgRemovePlan parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgRemovePlan parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgRemovePlan parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgRemovePlan parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgRemovePlan parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgRemovePlan parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgRemovePlan parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.TxProto.MsgRemovePlan prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgRemovePlan defines a message for removing a terminated plan.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.farming.v1beta1.MsgRemovePlan}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.MsgRemovePlan)
+        com.crescent.farming.v1beta1.TxProto.MsgRemovePlanOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgRemovePlan_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgRemovePlan_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.TxProto.MsgRemovePlan.class, com.crescent.farming.v1beta1.TxProto.MsgRemovePlan.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.TxProto.MsgRemovePlan.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        creator_ = "";
+        planId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgRemovePlan_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgRemovePlan getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.TxProto.MsgRemovePlan.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgRemovePlan build() {
+        com.crescent.farming.v1beta1.TxProto.MsgRemovePlan result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgRemovePlan buildPartial() {
+        com.crescent.farming.v1beta1.TxProto.MsgRemovePlan result = new com.crescent.farming.v1beta1.TxProto.MsgRemovePlan(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.farming.v1beta1.TxProto.MsgRemovePlan result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.creator_ = creator_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.planId_ = planId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.TxProto.MsgRemovePlan) {
+          return mergeFrom((com.crescent.farming.v1beta1.TxProto.MsgRemovePlan)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.TxProto.MsgRemovePlan other) {
+        if (other == com.crescent.farming.v1beta1.TxProto.MsgRemovePlan.getDefaultInstance()) return this;
+        if (!other.getCreator().isEmpty()) {
+          creator_ = other.creator_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getPlanId() != 0L) {
+          setPlanId(other.getPlanId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                creator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                planId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object creator_ = "";
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The creator.
+       */
+      public java.lang.String getCreator() {
+        java.lang.Object ref = creator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          creator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return The bytes for creator.
+       */
+      public com.google.protobuf.ByteString
+          getCreatorBytes() {
+        java.lang.Object ref = creator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          creator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreator() {
+        creator_ = getDefaultInstance().getCreator();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 1 [json_name = "creator"];</code>
+       * @param value The bytes for creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        creator_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long planId_ ;
+      /**
+       * <code>uint64 plan_id = 2 [json_name = "planId", (.gogoproto.moretags) = "yaml:&#92;"plan_id&#92;""];</code>
+       * @return The planId.
+       */
+      @java.lang.Override
+      public long getPlanId() {
+        return planId_;
+      }
+      /**
+       * <code>uint64 plan_id = 2 [json_name = "planId", (.gogoproto.moretags) = "yaml:&#92;"plan_id&#92;""];</code>
+       * @param value The planId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPlanId(long value) {
+
+        planId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 plan_id = 2 [json_name = "planId", (.gogoproto.moretags) = "yaml:&#92;"plan_id&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPlanId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        planId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.MsgRemovePlan)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.MsgRemovePlan)
+    private static final com.crescent.farming.v1beta1.TxProto.MsgRemovePlan DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.TxProto.MsgRemovePlan();
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgRemovePlan getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRemovePlan>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRemovePlan>() {
+      @java.lang.Override
+      public MsgRemovePlan parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRemovePlan> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRemovePlan> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.TxProto.MsgRemovePlan getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgRemovePlanResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.MsgRemovePlanResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgRemovePlanResponse defines the Msg/RemovePlan response type.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.farming.v1beta1.MsgRemovePlanResponse}
+   */
+  public static final class MsgRemovePlanResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.MsgRemovePlanResponse)
+      MsgRemovePlanResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgRemovePlanResponse.newBuilder() to construct.
+    private MsgRemovePlanResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgRemovePlanResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgRemovePlanResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgRemovePlanResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgRemovePlanResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.TxProto.MsgRemovePlanResponse.class, com.crescent.farming.v1beta1.TxProto.MsgRemovePlanResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.TxProto.MsgRemovePlanResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.TxProto.MsgRemovePlanResponse other = (com.crescent.farming.v1beta1.TxProto.MsgRemovePlanResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgRemovePlanResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgRemovePlanResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgRemovePlanResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgRemovePlanResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgRemovePlanResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgRemovePlanResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgRemovePlanResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgRemovePlanResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgRemovePlanResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgRemovePlanResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgRemovePlanResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgRemovePlanResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.TxProto.MsgRemovePlanResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgRemovePlanResponse defines the Msg/RemovePlan response type.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.farming.v1beta1.MsgRemovePlanResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.MsgRemovePlanResponse)
+        com.crescent.farming.v1beta1.TxProto.MsgRemovePlanResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgRemovePlanResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgRemovePlanResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.TxProto.MsgRemovePlanResponse.class, com.crescent.farming.v1beta1.TxProto.MsgRemovePlanResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.TxProto.MsgRemovePlanResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgRemovePlanResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgRemovePlanResponse getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.TxProto.MsgRemovePlanResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgRemovePlanResponse build() {
+        com.crescent.farming.v1beta1.TxProto.MsgRemovePlanResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgRemovePlanResponse buildPartial() {
+        com.crescent.farming.v1beta1.TxProto.MsgRemovePlanResponse result = new com.crescent.farming.v1beta1.TxProto.MsgRemovePlanResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.TxProto.MsgRemovePlanResponse) {
+          return mergeFrom((com.crescent.farming.v1beta1.TxProto.MsgRemovePlanResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.TxProto.MsgRemovePlanResponse other) {
+        if (other == com.crescent.farming.v1beta1.TxProto.MsgRemovePlanResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.MsgRemovePlanResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.MsgRemovePlanResponse)
+    private static final com.crescent.farming.v1beta1.TxProto.MsgRemovePlanResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.TxProto.MsgRemovePlanResponse();
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgRemovePlanResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgRemovePlanResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgRemovePlanResponse>() {
+      @java.lang.Override
+      public MsgRemovePlanResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgRemovePlanResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgRemovePlanResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.TxProto.MsgRemovePlanResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgAdvanceEpochOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.MsgAdvanceEpoch)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * requester defines the bech32-encoded address of the requester
+     * </pre>
+     *
+     * <code>string requester = 1 [json_name = "requester"];</code>
+     * @return The requester.
+     */
+    java.lang.String getRequester();
+    /**
+     * <pre>
+     * requester defines the bech32-encoded address of the requester
+     * </pre>
+     *
+     * <code>string requester = 1 [json_name = "requester"];</code>
+     * @return The bytes for requester.
+     */
+    com.google.protobuf.ByteString
+        getRequesterBytes();
+  }
+  /**
+   * <pre>
+   * MsgAdvanceEpoch defines a message to advance epoch by one.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.farming.v1beta1.MsgAdvanceEpoch}
+   */
+  public static final class MsgAdvanceEpoch extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.MsgAdvanceEpoch)
+      MsgAdvanceEpochOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgAdvanceEpoch.newBuilder() to construct.
+    private MsgAdvanceEpoch(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgAdvanceEpoch() {
+      requester_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgAdvanceEpoch();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgAdvanceEpoch_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgAdvanceEpoch_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpoch.class, com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpoch.Builder.class);
+    }
+
+    public static final int REQUESTER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object requester_ = "";
+    /**
+     * <pre>
+     * requester defines the bech32-encoded address of the requester
+     * </pre>
+     *
+     * <code>string requester = 1 [json_name = "requester"];</code>
+     * @return The requester.
+     */
+    @java.lang.Override
+    public java.lang.String getRequester() {
+      java.lang.Object ref = requester_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        requester_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * requester defines the bech32-encoded address of the requester
+     * </pre>
+     *
+     * <code>string requester = 1 [json_name = "requester"];</code>
+     * @return The bytes for requester.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRequesterBytes() {
+      java.lang.Object ref = requester_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        requester_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requester_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, requester_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requester_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, requester_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpoch)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpoch other = (com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpoch) obj;
+
+      if (!getRequester()
+          .equals(other.getRequester())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REQUESTER_FIELD_NUMBER;
+      hash = (53 * hash) + getRequester().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpoch parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpoch parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpoch parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpoch parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpoch parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpoch parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpoch parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpoch parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpoch parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpoch parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpoch parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpoch parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpoch prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgAdvanceEpoch defines a message to advance epoch by one.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.farming.v1beta1.MsgAdvanceEpoch}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.MsgAdvanceEpoch)
+        com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpochOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgAdvanceEpoch_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgAdvanceEpoch_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpoch.class, com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpoch.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpoch.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        requester_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgAdvanceEpoch_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpoch getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpoch.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpoch build() {
+        com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpoch result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpoch buildPartial() {
+        com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpoch result = new com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpoch(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpoch result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.requester_ = requester_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpoch) {
+          return mergeFrom((com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpoch)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpoch other) {
+        if (other == com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpoch.getDefaultInstance()) return this;
+        if (!other.getRequester().isEmpty()) {
+          requester_ = other.requester_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                requester_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object requester_ = "";
+      /**
+       * <pre>
+       * requester defines the bech32-encoded address of the requester
+       * </pre>
+       *
+       * <code>string requester = 1 [json_name = "requester"];</code>
+       * @return The requester.
+       */
+      public java.lang.String getRequester() {
+        java.lang.Object ref = requester_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          requester_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * requester defines the bech32-encoded address of the requester
+       * </pre>
+       *
+       * <code>string requester = 1 [json_name = "requester"];</code>
+       * @return The bytes for requester.
+       */
+      public com.google.protobuf.ByteString
+          getRequesterBytes() {
+        java.lang.Object ref = requester_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          requester_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * requester defines the bech32-encoded address of the requester
+       * </pre>
+       *
+       * <code>string requester = 1 [json_name = "requester"];</code>
+       * @param value The requester to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequester(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        requester_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * requester defines the bech32-encoded address of the requester
+       * </pre>
+       *
+       * <code>string requester = 1 [json_name = "requester"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRequester() {
+        requester_ = getDefaultInstance().getRequester();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * requester defines the bech32-encoded address of the requester
+       * </pre>
+       *
+       * <code>string requester = 1 [json_name = "requester"];</code>
+       * @param value The bytes for requester to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequesterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        requester_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.MsgAdvanceEpoch)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.MsgAdvanceEpoch)
+    private static final com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpoch DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpoch();
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpoch getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgAdvanceEpoch>
+        PARSER = new com.google.protobuf.AbstractParser<MsgAdvanceEpoch>() {
+      @java.lang.Override
+      public MsgAdvanceEpoch parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgAdvanceEpoch> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgAdvanceEpoch> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpoch getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgAdvanceEpochResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.farming.v1beta1.MsgAdvanceEpochResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgAdvanceEpochResponse defines the Msg/AdvanceEpoch response type.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.farming.v1beta1.MsgAdvanceEpochResponse}
+   */
+  public static final class MsgAdvanceEpochResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.farming.v1beta1.MsgAdvanceEpochResponse)
+      MsgAdvanceEpochResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgAdvanceEpochResponse.newBuilder() to construct.
+    private MsgAdvanceEpochResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgAdvanceEpochResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgAdvanceEpochResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgAdvanceEpochResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgAdvanceEpochResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpochResponse.class, com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpochResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpochResponse)) {
+        return super.equals(obj);
+      }
+      com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpochResponse other = (com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpochResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpochResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpochResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpochResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpochResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpochResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpochResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpochResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpochResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpochResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpochResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpochResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpochResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpochResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgAdvanceEpochResponse defines the Msg/AdvanceEpoch response type.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.farming.v1beta1.MsgAdvanceEpochResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.farming.v1beta1.MsgAdvanceEpochResponse)
+        com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpochResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgAdvanceEpochResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgAdvanceEpochResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpochResponse.class, com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpochResponse.Builder.class);
+      }
+
+      // Construct using com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpochResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.farming.v1beta1.TxProto.internal_static_crescent_farming_v1beta1_MsgAdvanceEpochResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpochResponse getDefaultInstanceForType() {
+        return com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpochResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpochResponse build() {
+        com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpochResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpochResponse buildPartial() {
+        com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpochResponse result = new com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpochResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpochResponse) {
+          return mergeFrom((com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpochResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpochResponse other) {
+        if (other == com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpochResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.farming.v1beta1.MsgAdvanceEpochResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.farming.v1beta1.MsgAdvanceEpochResponse)
+    private static final com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpochResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpochResponse();
+    }
+
+    public static com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpochResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgAdvanceEpochResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgAdvanceEpochResponse>() {
+      @java.lang.Override
+      public MsgAdvanceEpochResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgAdvanceEpochResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgAdvanceEpochResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.farming.v1beta1.TxProto.MsgAdvanceEpochResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_MsgCreateFixedAmountPlan_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_MsgCreateFixedAmountPlan_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_MsgCreateFixedAmountPlanResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_MsgCreateFixedAmountPlanResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_MsgCreateRatioPlan_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_MsgCreateRatioPlan_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_MsgCreateRatioPlanResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_MsgCreateRatioPlanResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_MsgStake_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_MsgStake_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_MsgStakeResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_MsgStakeResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_MsgUnstake_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_MsgUnstake_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_MsgUnstakeResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_MsgUnstakeResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_MsgHarvest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_MsgHarvest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_MsgHarvestResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_MsgHarvestResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_MsgRemovePlan_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_MsgRemovePlan_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_MsgRemovePlanResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_MsgRemovePlanResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_MsgAdvanceEpoch_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_MsgAdvanceEpoch_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_farming_v1beta1_MsgAdvanceEpochResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_farming_v1beta1_MsgAdvanceEpochResponse_fieldAccessorTable;
 
@@ -163,13 +11554,13 @@ public final class TxProto {
       "scent.farming.v1beta1.MsgRemovePlanRespo" +
       "nse\022l\n\014AdvanceEpoch\022).crescent.farming.v" +
       "1beta1.MsgAdvanceEpoch\0321.crescent.farmin" +
-      "g.v1beta1.MsgAdvanceEpochResponseB\342\001\n\034co" +
-      "m.crescent.farming.v1beta1B\007TxProtoP\001Z7g" +
-      "ithub.com/crescent-network/crescent/v5/x" +
-      "/farming/types\242\002\003CFX\252\002\030Crescent.Farming." +
-      "V1beta1\312\002\030Crescent\\Farming\\V1beta1\342\002$Cre" +
-      "scent\\Farming\\V1beta1\\GPBMetadata\352\002\032Cres" +
-      "cent::Farming::V1beta1b\006proto3"
+      "g.v1beta1.MsgAdvanceEpochResponseB\340\001\n\034co" +
+      "m.crescent.farming.v1beta1B\007TxProtoZ7git" +
+      "hub.com/crescent-network/crescent/v5/x/f" +
+      "arming/types\242\002\003CFX\252\002\030Crescent.Farming.V1" +
+      "beta1\312\002\030Crescent\\Farming\\V1beta1\342\002$Cresc" +
+      "ent\\Farming\\V1beta1\\GPBMetadata\352\002\032Cresce" +
+      "nt::Farming::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

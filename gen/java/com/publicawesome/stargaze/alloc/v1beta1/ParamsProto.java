@@ -14,19 +14,2569 @@ public final class ParamsProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface WeightedAddressOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:publicawesome.stargaze.alloc.v1beta1.WeightedAddress)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+     * @return The weight.
+     */
+    java.lang.String getWeight();
+    /**
+     * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+     * @return The bytes for weight.
+     */
+    com.google.protobuf.ByteString
+        getWeightBytes();
+  }
+  /**
+   * Protobuf type {@code publicawesome.stargaze.alloc.v1beta1.WeightedAddress}
+   */
+  public static final class WeightedAddress extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:publicawesome.stargaze.alloc.v1beta1.WeightedAddress)
+      WeightedAddressOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use WeightedAddress.newBuilder() to construct.
+    private WeightedAddress(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private WeightedAddress() {
+      address_ = "";
+      weight_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new WeightedAddress();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.internal_static_publicawesome_stargaze_alloc_v1beta1_WeightedAddress_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.internal_static_publicawesome_stargaze_alloc_v1beta1_WeightedAddress_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress.class, com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WEIGHT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object weight_ = "";
+    /**
+     * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+     * @return The weight.
+     */
+    @java.lang.Override
+    public java.lang.String getWeight() {
+      java.lang.Object ref = weight_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        weight_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+     * @return The bytes for weight.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getWeightBytes() {
+      java.lang.Object ref = weight_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        weight_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(weight_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, weight_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(weight_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, weight_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress)) {
+        return super.equals(obj);
+      }
+      com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress other = (com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getWeight()
+          .equals(other.getWeight())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (37 * hash) + WEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + getWeight().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code publicawesome.stargaze.alloc.v1beta1.WeightedAddress}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:publicawesome.stargaze.alloc.v1beta1.WeightedAddress)
+        com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddressOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.internal_static_publicawesome_stargaze_alloc_v1beta1_WeightedAddress_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.internal_static_publicawesome_stargaze_alloc_v1beta1_WeightedAddress_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress.class, com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress.Builder.class);
+      }
+
+      // Construct using com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        weight_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.internal_static_publicawesome_stargaze_alloc_v1beta1_WeightedAddress_descriptor;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress getDefaultInstanceForType() {
+        return com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress build() {
+        com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress buildPartial() {
+        com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress result = new com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.weight_ = weight_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress) {
+          return mergeFrom((com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress other) {
+        if (other == com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getWeight().isEmpty()) {
+          weight_ = other.weight_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                weight_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address", (.gogoproto.moretags) = "yaml:&#92;"address&#92;""];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object weight_ = "";
+      /**
+       * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+       * @return The weight.
+       */
+      public java.lang.String getWeight() {
+        java.lang.Object ref = weight_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          weight_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+       * @return The bytes for weight.
+       */
+      public com.google.protobuf.ByteString
+          getWeightBytes() {
+        java.lang.Object ref = weight_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          weight_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+       * @param value The weight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWeight(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        weight_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWeight() {
+        weight_ = getDefaultInstance().getWeight();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string weight = 2 [json_name = "weight", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"weight&#92;""];</code>
+       * @param value The bytes for weight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWeightBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        weight_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:publicawesome.stargaze.alloc.v1beta1.WeightedAddress)
+    }
+
+    // @@protoc_insertion_point(class_scope:publicawesome.stargaze.alloc.v1beta1.WeightedAddress)
+    private static final com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress();
+    }
+
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<WeightedAddress>
+        PARSER = new com.google.protobuf.AbstractParser<WeightedAddress>() {
+      @java.lang.Override
+      public WeightedAddress parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<WeightedAddress> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<WeightedAddress> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DistributionProportionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:publicawesome.stargaze.alloc.v1beta1.DistributionProportions)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string nft_incentives = 1 [json_name = "nftIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"nft_incentives&#92;""];</code>
+     * @return The nftIncentives.
+     */
+    java.lang.String getNftIncentives();
+    /**
+     * <code>string nft_incentives = 1 [json_name = "nftIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"nft_incentives&#92;""];</code>
+     * @return The bytes for nftIncentives.
+     */
+    com.google.protobuf.ByteString
+        getNftIncentivesBytes();
+
+    /**
+     * <code>string developer_rewards = 2 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"developer_rewards&#92;""];</code>
+     * @return The developerRewards.
+     */
+    java.lang.String getDeveloperRewards();
+    /**
+     * <code>string developer_rewards = 2 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"developer_rewards&#92;""];</code>
+     * @return The bytes for developerRewards.
+     */
+    com.google.protobuf.ByteString
+        getDeveloperRewardsBytes();
+  }
+  /**
+   * Protobuf type {@code publicawesome.stargaze.alloc.v1beta1.DistributionProportions}
+   */
+  public static final class DistributionProportions extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:publicawesome.stargaze.alloc.v1beta1.DistributionProportions)
+      DistributionProportionsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DistributionProportions.newBuilder() to construct.
+    private DistributionProportions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DistributionProportions() {
+      nftIncentives_ = "";
+      developerRewards_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DistributionProportions();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.internal_static_publicawesome_stargaze_alloc_v1beta1_DistributionProportions_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.internal_static_publicawesome_stargaze_alloc_v1beta1_DistributionProportions_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions.class, com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions.Builder.class);
+    }
+
+    public static final int NFT_INCENTIVES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object nftIncentives_ = "";
+    /**
+     * <code>string nft_incentives = 1 [json_name = "nftIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"nft_incentives&#92;""];</code>
+     * @return The nftIncentives.
+     */
+    @java.lang.Override
+    public java.lang.String getNftIncentives() {
+      java.lang.Object ref = nftIncentives_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nftIncentives_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string nft_incentives = 1 [json_name = "nftIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"nft_incentives&#92;""];</code>
+     * @return The bytes for nftIncentives.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNftIncentivesBytes() {
+      java.lang.Object ref = nftIncentives_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nftIncentives_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEVELOPER_REWARDS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object developerRewards_ = "";
+    /**
+     * <code>string developer_rewards = 2 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"developer_rewards&#92;""];</code>
+     * @return The developerRewards.
+     */
+    @java.lang.Override
+    public java.lang.String getDeveloperRewards() {
+      java.lang.Object ref = developerRewards_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        developerRewards_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string developer_rewards = 2 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"developer_rewards&#92;""];</code>
+     * @return The bytes for developerRewards.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDeveloperRewardsBytes() {
+      java.lang.Object ref = developerRewards_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        developerRewards_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nftIncentives_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, nftIncentives_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(developerRewards_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, developerRewards_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nftIncentives_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, nftIncentives_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(developerRewards_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, developerRewards_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions)) {
+        return super.equals(obj);
+      }
+      com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions other = (com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions) obj;
+
+      if (!getNftIncentives()
+          .equals(other.getNftIncentives())) return false;
+      if (!getDeveloperRewards()
+          .equals(other.getDeveloperRewards())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NFT_INCENTIVES_FIELD_NUMBER;
+      hash = (53 * hash) + getNftIncentives().hashCode();
+      hash = (37 * hash) + DEVELOPER_REWARDS_FIELD_NUMBER;
+      hash = (53 * hash) + getDeveloperRewards().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code publicawesome.stargaze.alloc.v1beta1.DistributionProportions}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:publicawesome.stargaze.alloc.v1beta1.DistributionProportions)
+        com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportionsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.internal_static_publicawesome_stargaze_alloc_v1beta1_DistributionProportions_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.internal_static_publicawesome_stargaze_alloc_v1beta1_DistributionProportions_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions.class, com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions.Builder.class);
+      }
+
+      // Construct using com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        nftIncentives_ = "";
+        developerRewards_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.internal_static_publicawesome_stargaze_alloc_v1beta1_DistributionProportions_descriptor;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions getDefaultInstanceForType() {
+        return com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions build() {
+        com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions buildPartial() {
+        com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions result = new com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.nftIncentives_ = nftIncentives_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.developerRewards_ = developerRewards_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions) {
+          return mergeFrom((com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions other) {
+        if (other == com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions.getDefaultInstance()) return this;
+        if (!other.getNftIncentives().isEmpty()) {
+          nftIncentives_ = other.nftIncentives_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDeveloperRewards().isEmpty()) {
+          developerRewards_ = other.developerRewards_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                nftIncentives_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                developerRewards_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object nftIncentives_ = "";
+      /**
+       * <code>string nft_incentives = 1 [json_name = "nftIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"nft_incentives&#92;""];</code>
+       * @return The nftIncentives.
+       */
+      public java.lang.String getNftIncentives() {
+        java.lang.Object ref = nftIncentives_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nftIncentives_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string nft_incentives = 1 [json_name = "nftIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"nft_incentives&#92;""];</code>
+       * @return The bytes for nftIncentives.
+       */
+      public com.google.protobuf.ByteString
+          getNftIncentivesBytes() {
+        java.lang.Object ref = nftIncentives_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nftIncentives_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string nft_incentives = 1 [json_name = "nftIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"nft_incentives&#92;""];</code>
+       * @param value The nftIncentives to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNftIncentives(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        nftIncentives_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nft_incentives = 1 [json_name = "nftIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"nft_incentives&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNftIncentives() {
+        nftIncentives_ = getDefaultInstance().getNftIncentives();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nft_incentives = 1 [json_name = "nftIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"nft_incentives&#92;""];</code>
+       * @param value The bytes for nftIncentives to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNftIncentivesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        nftIncentives_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object developerRewards_ = "";
+      /**
+       * <code>string developer_rewards = 2 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"developer_rewards&#92;""];</code>
+       * @return The developerRewards.
+       */
+      public java.lang.String getDeveloperRewards() {
+        java.lang.Object ref = developerRewards_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          developerRewards_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string developer_rewards = 2 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"developer_rewards&#92;""];</code>
+       * @return The bytes for developerRewards.
+       */
+      public com.google.protobuf.ByteString
+          getDeveloperRewardsBytes() {
+        java.lang.Object ref = developerRewards_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          developerRewards_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string developer_rewards = 2 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"developer_rewards&#92;""];</code>
+       * @param value The developerRewards to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeveloperRewards(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        developerRewards_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string developer_rewards = 2 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"developer_rewards&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDeveloperRewards() {
+        developerRewards_ = getDefaultInstance().getDeveloperRewards();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string developer_rewards = 2 [json_name = "developerRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"developer_rewards&#92;""];</code>
+       * @param value The bytes for developerRewards to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDeveloperRewardsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        developerRewards_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:publicawesome.stargaze.alloc.v1beta1.DistributionProportions)
+    }
+
+    // @@protoc_insertion_point(class_scope:publicawesome.stargaze.alloc.v1beta1.DistributionProportions)
+    private static final com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions();
+    }
+
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DistributionProportions>
+        PARSER = new com.google.protobuf.AbstractParser<DistributionProportions>() {
+      @java.lang.Override
+      public DistributionProportions parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DistributionProportions> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DistributionProportions> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:publicawesome.stargaze.alloc.v1beta1.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * distribution_proportions defines the proportion of the minted denom
+     * </pre>
+     *
+     * <code>.publicawesome.stargaze.alloc.v1beta1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+     * @return Whether the distributionProportions field is set.
+     */
+    boolean hasDistributionProportions();
+    /**
+     * <pre>
+     * distribution_proportions defines the proportion of the minted denom
+     * </pre>
+     *
+     * <code>.publicawesome.stargaze.alloc.v1beta1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+     * @return The distributionProportions.
+     */
+    com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions getDistributionProportions();
+    /**
+     * <pre>
+     * distribution_proportions defines the proportion of the minted denom
+     * </pre>
+     *
+     * <code>.publicawesome.stargaze.alloc.v1beta1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+     */
+    com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportionsOrBuilder getDistributionProportionsOrBuilder();
+
+    /**
+     * <pre>
+     * address to receive developer rewards
+     * </pre>
+     *
+     * <code>repeated .publicawesome.stargaze.alloc.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 2 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+     */
+    java.util.List<com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress> 
+        getWeightedDeveloperRewardsReceiversList();
+    /**
+     * <pre>
+     * address to receive developer rewards
+     * </pre>
+     *
+     * <code>repeated .publicawesome.stargaze.alloc.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 2 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+     */
+    com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress getWeightedDeveloperRewardsReceivers(int index);
+    /**
+     * <pre>
+     * address to receive developer rewards
+     * </pre>
+     *
+     * <code>repeated .publicawesome.stargaze.alloc.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 2 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+     */
+    int getWeightedDeveloperRewardsReceiversCount();
+    /**
+     * <pre>
+     * address to receive developer rewards
+     * </pre>
+     *
+     * <code>repeated .publicawesome.stargaze.alloc.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 2 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+     */
+    java.util.List<? extends com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddressOrBuilder> 
+        getWeightedDeveloperRewardsReceiversOrBuilderList();
+    /**
+     * <pre>
+     * address to receive developer rewards
+     * </pre>
+     *
+     * <code>repeated .publicawesome.stargaze.alloc.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 2 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+     */
+    com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddressOrBuilder getWeightedDeveloperRewardsReceiversOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code publicawesome.stargaze.alloc.v1beta1.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:publicawesome.stargaze.alloc.v1beta1.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+      weightedDeveloperRewardsReceivers_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.internal_static_publicawesome_stargaze_alloc_v1beta1_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.internal_static_publicawesome_stargaze_alloc_v1beta1_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.Params.class, com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.Params.Builder.class);
+    }
+
+    public static final int DISTRIBUTION_PROPORTIONS_FIELD_NUMBER = 1;
+    private com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions distributionProportions_;
+    /**
+     * <pre>
+     * distribution_proportions defines the proportion of the minted denom
+     * </pre>
+     *
+     * <code>.publicawesome.stargaze.alloc.v1beta1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+     * @return Whether the distributionProportions field is set.
+     */
+    @java.lang.Override
+    public boolean hasDistributionProportions() {
+      return distributionProportions_ != null;
+    }
+    /**
+     * <pre>
+     * distribution_proportions defines the proportion of the minted denom
+     * </pre>
+     *
+     * <code>.publicawesome.stargaze.alloc.v1beta1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+     * @return The distributionProportions.
+     */
+    @java.lang.Override
+    public com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions getDistributionProportions() {
+      return distributionProportions_ == null ? com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions.getDefaultInstance() : distributionProportions_;
+    }
+    /**
+     * <pre>
+     * distribution_proportions defines the proportion of the minted denom
+     * </pre>
+     *
+     * <code>.publicawesome.stargaze.alloc.v1beta1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportionsOrBuilder getDistributionProportionsOrBuilder() {
+      return distributionProportions_ == null ? com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions.getDefaultInstance() : distributionProportions_;
+    }
+
+    public static final int WEIGHTED_DEVELOPER_REWARDS_RECEIVERS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress> weightedDeveloperRewardsReceivers_;
+    /**
+     * <pre>
+     * address to receive developer rewards
+     * </pre>
+     *
+     * <code>repeated .publicawesome.stargaze.alloc.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 2 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress> getWeightedDeveloperRewardsReceiversList() {
+      return weightedDeveloperRewardsReceivers_;
+    }
+    /**
+     * <pre>
+     * address to receive developer rewards
+     * </pre>
+     *
+     * <code>repeated .publicawesome.stargaze.alloc.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 2 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddressOrBuilder> 
+        getWeightedDeveloperRewardsReceiversOrBuilderList() {
+      return weightedDeveloperRewardsReceivers_;
+    }
+    /**
+     * <pre>
+     * address to receive developer rewards
+     * </pre>
+     *
+     * <code>repeated .publicawesome.stargaze.alloc.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 2 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getWeightedDeveloperRewardsReceiversCount() {
+      return weightedDeveloperRewardsReceivers_.size();
+    }
+    /**
+     * <pre>
+     * address to receive developer rewards
+     * </pre>
+     *
+     * <code>repeated .publicawesome.stargaze.alloc.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 2 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress getWeightedDeveloperRewardsReceivers(int index) {
+      return weightedDeveloperRewardsReceivers_.get(index);
+    }
+    /**
+     * <pre>
+     * address to receive developer rewards
+     * </pre>
+     *
+     * <code>repeated .publicawesome.stargaze.alloc.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 2 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddressOrBuilder getWeightedDeveloperRewardsReceiversOrBuilder(
+        int index) {
+      return weightedDeveloperRewardsReceivers_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (distributionProportions_ != null) {
+        output.writeMessage(1, getDistributionProportions());
+      }
+      for (int i = 0; i < weightedDeveloperRewardsReceivers_.size(); i++) {
+        output.writeMessage(2, weightedDeveloperRewardsReceivers_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (distributionProportions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getDistributionProportions());
+      }
+      for (int i = 0; i < weightedDeveloperRewardsReceivers_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, weightedDeveloperRewardsReceivers_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.Params)) {
+        return super.equals(obj);
+      }
+      com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.Params other = (com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.Params) obj;
+
+      if (hasDistributionProportions() != other.hasDistributionProportions()) return false;
+      if (hasDistributionProportions()) {
+        if (!getDistributionProportions()
+            .equals(other.getDistributionProportions())) return false;
+      }
+      if (!getWeightedDeveloperRewardsReceiversList()
+          .equals(other.getWeightedDeveloperRewardsReceiversList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasDistributionProportions()) {
+        hash = (37 * hash) + DISTRIBUTION_PROPORTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getDistributionProportions().hashCode();
+      }
+      if (getWeightedDeveloperRewardsReceiversCount() > 0) {
+        hash = (37 * hash) + WEIGHTED_DEVELOPER_REWARDS_RECEIVERS_FIELD_NUMBER;
+        hash = (53 * hash) + getWeightedDeveloperRewardsReceiversList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code publicawesome.stargaze.alloc.v1beta1.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:publicawesome.stargaze.alloc.v1beta1.Params)
+        com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.internal_static_publicawesome_stargaze_alloc_v1beta1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.internal_static_publicawesome_stargaze_alloc_v1beta1_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.Params.class, com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.Params.Builder.class);
+      }
+
+      // Construct using com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        distributionProportions_ = null;
+        if (distributionProportionsBuilder_ != null) {
+          distributionProportionsBuilder_.dispose();
+          distributionProportionsBuilder_ = null;
+        }
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          weightedDeveloperRewardsReceivers_ = java.util.Collections.emptyList();
+        } else {
+          weightedDeveloperRewardsReceivers_ = null;
+          weightedDeveloperRewardsReceiversBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.internal_static_publicawesome_stargaze_alloc_v1beta1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.Params getDefaultInstanceForType() {
+        return com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.Params build() {
+        com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.Params buildPartial() {
+        com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.Params result = new com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.Params(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.Params result) {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            weightedDeveloperRewardsReceivers_ = java.util.Collections.unmodifiableList(weightedDeveloperRewardsReceivers_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.weightedDeveloperRewardsReceivers_ = weightedDeveloperRewardsReceivers_;
+        } else {
+          result.weightedDeveloperRewardsReceivers_ = weightedDeveloperRewardsReceiversBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.distributionProportions_ = distributionProportionsBuilder_ == null
+              ? distributionProportions_
+              : distributionProportionsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.Params) {
+          return mergeFrom((com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.Params other) {
+        if (other == com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.Params.getDefaultInstance()) return this;
+        if (other.hasDistributionProportions()) {
+          mergeDistributionProportions(other.getDistributionProportions());
+        }
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          if (!other.weightedDeveloperRewardsReceivers_.isEmpty()) {
+            if (weightedDeveloperRewardsReceivers_.isEmpty()) {
+              weightedDeveloperRewardsReceivers_ = other.weightedDeveloperRewardsReceivers_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureWeightedDeveloperRewardsReceiversIsMutable();
+              weightedDeveloperRewardsReceivers_.addAll(other.weightedDeveloperRewardsReceivers_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.weightedDeveloperRewardsReceivers_.isEmpty()) {
+            if (weightedDeveloperRewardsReceiversBuilder_.isEmpty()) {
+              weightedDeveloperRewardsReceiversBuilder_.dispose();
+              weightedDeveloperRewardsReceiversBuilder_ = null;
+              weightedDeveloperRewardsReceivers_ = other.weightedDeveloperRewardsReceivers_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              weightedDeveloperRewardsReceiversBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getWeightedDeveloperRewardsReceiversFieldBuilder() : null;
+            } else {
+              weightedDeveloperRewardsReceiversBuilder_.addAllMessages(other.weightedDeveloperRewardsReceivers_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getDistributionProportionsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress m =
+                    input.readMessage(
+                        com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress.parser(),
+                        extensionRegistry);
+                if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+                  ensureWeightedDeveloperRewardsReceiversIsMutable();
+                  weightedDeveloperRewardsReceivers_.add(m);
+                } else {
+                  weightedDeveloperRewardsReceiversBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions distributionProportions_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions, com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions.Builder, com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportionsOrBuilder> distributionProportionsBuilder_;
+      /**
+       * <pre>
+       * distribution_proportions defines the proportion of the minted denom
+       * </pre>
+       *
+       * <code>.publicawesome.stargaze.alloc.v1beta1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       * @return Whether the distributionProportions field is set.
+       */
+      public boolean hasDistributionProportions() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the proportion of the minted denom
+       * </pre>
+       *
+       * <code>.publicawesome.stargaze.alloc.v1beta1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       * @return The distributionProportions.
+       */
+      public com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions getDistributionProportions() {
+        if (distributionProportionsBuilder_ == null) {
+          return distributionProportions_ == null ? com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions.getDefaultInstance() : distributionProportions_;
+        } else {
+          return distributionProportionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the proportion of the minted denom
+       * </pre>
+       *
+       * <code>.publicawesome.stargaze.alloc.v1beta1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDistributionProportions(com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions value) {
+        if (distributionProportionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          distributionProportions_ = value;
+        } else {
+          distributionProportionsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the proportion of the minted denom
+       * </pre>
+       *
+       * <code>.publicawesome.stargaze.alloc.v1beta1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDistributionProportions(
+          com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions.Builder builderForValue) {
+        if (distributionProportionsBuilder_ == null) {
+          distributionProportions_ = builderForValue.build();
+        } else {
+          distributionProportionsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the proportion of the minted denom
+       * </pre>
+       *
+       * <code>.publicawesome.stargaze.alloc.v1beta1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeDistributionProportions(com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions value) {
+        if (distributionProportionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            distributionProportions_ != null &&
+            distributionProportions_ != com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions.getDefaultInstance()) {
+            getDistributionProportionsBuilder().mergeFrom(value);
+          } else {
+            distributionProportions_ = value;
+          }
+        } else {
+          distributionProportionsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the proportion of the minted denom
+       * </pre>
+       *
+       * <code>.publicawesome.stargaze.alloc.v1beta1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearDistributionProportions() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        distributionProportions_ = null;
+        if (distributionProportionsBuilder_ != null) {
+          distributionProportionsBuilder_.dispose();
+          distributionProportionsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the proportion of the minted denom
+       * </pre>
+       *
+       * <code>.publicawesome.stargaze.alloc.v1beta1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions.Builder getDistributionProportionsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getDistributionProportionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the proportion of the minted denom
+       * </pre>
+       *
+       * <code>.publicawesome.stargaze.alloc.v1beta1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportionsOrBuilder getDistributionProportionsOrBuilder() {
+        if (distributionProportionsBuilder_ != null) {
+          return distributionProportionsBuilder_.getMessageOrBuilder();
+        } else {
+          return distributionProportions_ == null ?
+              com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions.getDefaultInstance() : distributionProportions_;
+        }
+      }
+      /**
+       * <pre>
+       * distribution_proportions defines the proportion of the minted denom
+       * </pre>
+       *
+       * <code>.publicawesome.stargaze.alloc.v1beta1.DistributionProportions distribution_proportions = 1 [json_name = "distributionProportions", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions, com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions.Builder, com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportionsOrBuilder> 
+          getDistributionProportionsFieldBuilder() {
+        if (distributionProportionsBuilder_ == null) {
+          distributionProportionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions, com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportions.Builder, com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.DistributionProportionsOrBuilder>(
+                  getDistributionProportions(),
+                  getParentForChildren(),
+                  isClean());
+          distributionProportions_ = null;
+        }
+        return distributionProportionsBuilder_;
+      }
+
+      private java.util.List<com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress> weightedDeveloperRewardsReceivers_ =
+        java.util.Collections.emptyList();
+      private void ensureWeightedDeveloperRewardsReceiversIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          weightedDeveloperRewardsReceivers_ = new java.util.ArrayList<com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress>(weightedDeveloperRewardsReceivers_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress, com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress.Builder, com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddressOrBuilder> weightedDeveloperRewardsReceiversBuilder_;
+
+      /**
+       * <pre>
+       * address to receive developer rewards
+       * </pre>
+       *
+       * <code>repeated .publicawesome.stargaze.alloc.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 2 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+       */
+      public java.util.List<com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress> getWeightedDeveloperRewardsReceiversList() {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(weightedDeveloperRewardsReceivers_);
+        } else {
+          return weightedDeveloperRewardsReceiversBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * address to receive developer rewards
+       * </pre>
+       *
+       * <code>repeated .publicawesome.stargaze.alloc.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 2 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+       */
+      public int getWeightedDeveloperRewardsReceiversCount() {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          return weightedDeveloperRewardsReceivers_.size();
+        } else {
+          return weightedDeveloperRewardsReceiversBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * address to receive developer rewards
+       * </pre>
+       *
+       * <code>repeated .publicawesome.stargaze.alloc.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 2 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+       */
+      public com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress getWeightedDeveloperRewardsReceivers(int index) {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          return weightedDeveloperRewardsReceivers_.get(index);
+        } else {
+          return weightedDeveloperRewardsReceiversBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * address to receive developer rewards
+       * </pre>
+       *
+       * <code>repeated .publicawesome.stargaze.alloc.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 2 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+       */
+      public Builder setWeightedDeveloperRewardsReceivers(
+          int index, com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress value) {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWeightedDeveloperRewardsReceiversIsMutable();
+          weightedDeveloperRewardsReceivers_.set(index, value);
+          onChanged();
+        } else {
+          weightedDeveloperRewardsReceiversBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * address to receive developer rewards
+       * </pre>
+       *
+       * <code>repeated .publicawesome.stargaze.alloc.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 2 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+       */
+      public Builder setWeightedDeveloperRewardsReceivers(
+          int index, com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress.Builder builderForValue) {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          ensureWeightedDeveloperRewardsReceiversIsMutable();
+          weightedDeveloperRewardsReceivers_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          weightedDeveloperRewardsReceiversBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * address to receive developer rewards
+       * </pre>
+       *
+       * <code>repeated .publicawesome.stargaze.alloc.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 2 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+       */
+      public Builder addWeightedDeveloperRewardsReceivers(com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress value) {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWeightedDeveloperRewardsReceiversIsMutable();
+          weightedDeveloperRewardsReceivers_.add(value);
+          onChanged();
+        } else {
+          weightedDeveloperRewardsReceiversBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * address to receive developer rewards
+       * </pre>
+       *
+       * <code>repeated .publicawesome.stargaze.alloc.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 2 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+       */
+      public Builder addWeightedDeveloperRewardsReceivers(
+          int index, com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress value) {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWeightedDeveloperRewardsReceiversIsMutable();
+          weightedDeveloperRewardsReceivers_.add(index, value);
+          onChanged();
+        } else {
+          weightedDeveloperRewardsReceiversBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * address to receive developer rewards
+       * </pre>
+       *
+       * <code>repeated .publicawesome.stargaze.alloc.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 2 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+       */
+      public Builder addWeightedDeveloperRewardsReceivers(
+          com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress.Builder builderForValue) {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          ensureWeightedDeveloperRewardsReceiversIsMutable();
+          weightedDeveloperRewardsReceivers_.add(builderForValue.build());
+          onChanged();
+        } else {
+          weightedDeveloperRewardsReceiversBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * address to receive developer rewards
+       * </pre>
+       *
+       * <code>repeated .publicawesome.stargaze.alloc.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 2 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+       */
+      public Builder addWeightedDeveloperRewardsReceivers(
+          int index, com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress.Builder builderForValue) {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          ensureWeightedDeveloperRewardsReceiversIsMutable();
+          weightedDeveloperRewardsReceivers_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          weightedDeveloperRewardsReceiversBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * address to receive developer rewards
+       * </pre>
+       *
+       * <code>repeated .publicawesome.stargaze.alloc.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 2 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+       */
+      public Builder addAllWeightedDeveloperRewardsReceivers(
+          java.lang.Iterable<? extends com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress> values) {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          ensureWeightedDeveloperRewardsReceiversIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, weightedDeveloperRewardsReceivers_);
+          onChanged();
+        } else {
+          weightedDeveloperRewardsReceiversBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * address to receive developer rewards
+       * </pre>
+       *
+       * <code>repeated .publicawesome.stargaze.alloc.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 2 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+       */
+      public Builder clearWeightedDeveloperRewardsReceivers() {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          weightedDeveloperRewardsReceivers_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          weightedDeveloperRewardsReceiversBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * address to receive developer rewards
+       * </pre>
+       *
+       * <code>repeated .publicawesome.stargaze.alloc.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 2 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+       */
+      public Builder removeWeightedDeveloperRewardsReceivers(int index) {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          ensureWeightedDeveloperRewardsReceiversIsMutable();
+          weightedDeveloperRewardsReceivers_.remove(index);
+          onChanged();
+        } else {
+          weightedDeveloperRewardsReceiversBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * address to receive developer rewards
+       * </pre>
+       *
+       * <code>repeated .publicawesome.stargaze.alloc.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 2 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+       */
+      public com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress.Builder getWeightedDeveloperRewardsReceiversBuilder(
+          int index) {
+        return getWeightedDeveloperRewardsReceiversFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * address to receive developer rewards
+       * </pre>
+       *
+       * <code>repeated .publicawesome.stargaze.alloc.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 2 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+       */
+      public com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddressOrBuilder getWeightedDeveloperRewardsReceiversOrBuilder(
+          int index) {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          return weightedDeveloperRewardsReceivers_.get(index);  } else {
+          return weightedDeveloperRewardsReceiversBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * address to receive developer rewards
+       * </pre>
+       *
+       * <code>repeated .publicawesome.stargaze.alloc.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 2 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+       */
+      public java.util.List<? extends com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddressOrBuilder> 
+           getWeightedDeveloperRewardsReceiversOrBuilderList() {
+        if (weightedDeveloperRewardsReceiversBuilder_ != null) {
+          return weightedDeveloperRewardsReceiversBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(weightedDeveloperRewardsReceivers_);
+        }
+      }
+      /**
+       * <pre>
+       * address to receive developer rewards
+       * </pre>
+       *
+       * <code>repeated .publicawesome.stargaze.alloc.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 2 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+       */
+      public com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress.Builder addWeightedDeveloperRewardsReceiversBuilder() {
+        return getWeightedDeveloperRewardsReceiversFieldBuilder().addBuilder(
+            com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * address to receive developer rewards
+       * </pre>
+       *
+       * <code>repeated .publicawesome.stargaze.alloc.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 2 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+       */
+      public com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress.Builder addWeightedDeveloperRewardsReceiversBuilder(
+          int index) {
+        return getWeightedDeveloperRewardsReceiversFieldBuilder().addBuilder(
+            index, com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * address to receive developer rewards
+       * </pre>
+       *
+       * <code>repeated .publicawesome.stargaze.alloc.v1beta1.WeightedAddress weighted_developer_rewards_receivers = 2 [json_name = "weightedDeveloperRewardsReceivers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"developer_rewards_receiver&#92;""];</code>
+       */
+      public java.util.List<com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress.Builder> 
+           getWeightedDeveloperRewardsReceiversBuilderList() {
+        return getWeightedDeveloperRewardsReceiversFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress, com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress.Builder, com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddressOrBuilder> 
+          getWeightedDeveloperRewardsReceiversFieldBuilder() {
+        if (weightedDeveloperRewardsReceiversBuilder_ == null) {
+          weightedDeveloperRewardsReceiversBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress, com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddress.Builder, com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.WeightedAddressOrBuilder>(
+                  weightedDeveloperRewardsReceivers_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          weightedDeveloperRewardsReceivers_ = null;
+        }
+        return weightedDeveloperRewardsReceiversBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:publicawesome.stargaze.alloc.v1beta1.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:publicawesome.stargaze.alloc.v1beta1.Params)
+    private static final com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.Params();
+    }
+
+    public static com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.publicawesome.stargaze.alloc.v1beta1.ParamsProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_publicawesome_stargaze_alloc_v1beta1_WeightedAddress_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_publicawesome_stargaze_alloc_v1beta1_WeightedAddress_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_publicawesome_stargaze_alloc_v1beta1_DistributionProportions_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_publicawesome_stargaze_alloc_v1beta1_DistributionProportions_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_publicawesome_stargaze_alloc_v1beta1_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_publicawesome_stargaze_alloc_v1beta1_Params_fieldAccessorTable;
 
@@ -58,15 +2608,15 @@ public final class ParamsProto {
       "rds_receivers\030\002 \003(\01325.publicawesome.star" +
       "gaze.alloc.v1beta1.WeightedAddressB)\310\336\037\000" +
       "\362\336\037!yaml:\"developer_rewards_receiver\"R!w" +
-      "eightedDeveloperRewardsReceiversB\240\002\n(com" +
+      "eightedDeveloperRewardsReceiversB\236\002\n(com" +
       ".publicawesome.stargaze.alloc.v1beta1B\013P" +
-      "aramsProtoP\001Z4github.com/public-awesome/" +
-      "stargaze/v11/x/alloc/types\242\002\003PSA\252\002$Publi" +
-      "cawesome.Stargaze.Alloc.V1beta1\312\002$Public" +
-      "awesome\\Stargaze\\Alloc\\V1beta1\342\0020Publica" +
-      "wesome\\Stargaze\\Alloc\\V1beta1\\GPBMetadat" +
-      "a\352\002\'Publicawesome::Stargaze::Alloc::V1be" +
-      "ta1b\006proto3"
+      "aramsProtoZ4github.com/public-awesome/st" +
+      "argaze/v11/x/alloc/types\242\002\003PSA\252\002$Publica" +
+      "wesome.Stargaze.Alloc.V1beta1\312\002$Publicaw" +
+      "esome\\Stargaze\\Alloc\\V1beta1\342\0020Publicawe" +
+      "some\\Stargaze\\Alloc\\V1beta1\\GPBMetadata\352" +
+      "\002\'Publicawesome::Stargaze::Alloc::V1beta" +
+      "1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

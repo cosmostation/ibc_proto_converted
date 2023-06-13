@@ -35,15 +35,15 @@ public final class ServiceProto {
       "nprovision.Message\032L.assetmantle.modules" +
       ".identities.transactions.unprovision.Tra" +
       "nsactionResponse\"&\202\323\344\223\002 \"\036/mantle/identi" +
-      "ties/unprovisionB\315\002\n;com.assetmantle.mod" +
+      "ties/unprovisionB\313\002\n;com.assetmantle.mod" +
       "ules.identities.transactions.unprovision" +
-      "B\014ServiceProtoP\001\242\002\005AMITU\252\0027Assetmantle.M" +
-      "odules.Identities.Transactions.Unprovisi" +
-      "on\312\0027Assetmantle\\Modules\\Identities\\Tran" +
-      "sactions\\Unprovision\342\002CAssetmantle\\Modul" +
-      "es\\Identities\\Transactions\\Unprovision\\G" +
-      "PBMetadata\352\002;Assetmantle::Modules::Ident" +
-      "ities::Transactions::Unprovisionb\006proto3"
+      "B\014ServiceProto\242\002\005AMITU\252\0027Assetmantle.Mod" +
+      "ules.Identities.Transactions.Unprovision" +
+      "\312\0027Assetmantle\\Modules\\Identities\\Transa" +
+      "ctions\\Unprovision\342\002CAssetmantle\\Modules" +
+      "\\Identities\\Transactions\\Unprovision\\GPB" +
+      "Metadata\352\002;Assetmantle::Modules::Identit" +
+      "ies::Transactions::Unprovisionb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

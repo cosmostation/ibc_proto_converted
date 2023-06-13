@@ -14,24 +14,2232 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryEpochsInfoRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:persistence.epochs.v1beta1.QueryEpochsInfoRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code persistence.epochs.v1beta1.QueryEpochsInfoRequest}
+   */
+  public static final class QueryEpochsInfoRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:persistence.epochs.v1beta1.QueryEpochsInfoRequest)
+      QueryEpochsInfoRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryEpochsInfoRequest.newBuilder() to construct.
+    private QueryEpochsInfoRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryEpochsInfoRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryEpochsInfoRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.persistence.epochs.v1beta1.QueryProto.internal_static_persistence_epochs_v1beta1_QueryEpochsInfoRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.persistence.epochs.v1beta1.QueryProto.internal_static_persistence_epochs_v1beta1_QueryEpochsInfoRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoRequest.class, com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoRequest)) {
+        return super.equals(obj);
+      }
+      com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoRequest other = (com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code persistence.epochs.v1beta1.QueryEpochsInfoRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:persistence.epochs.v1beta1.QueryEpochsInfoRequest)
+        com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.persistence.epochs.v1beta1.QueryProto.internal_static_persistence_epochs_v1beta1_QueryEpochsInfoRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.persistence.epochs.v1beta1.QueryProto.internal_static_persistence_epochs_v1beta1_QueryEpochsInfoRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoRequest.class, com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoRequest.Builder.class);
+      }
+
+      // Construct using com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.persistence.epochs.v1beta1.QueryProto.internal_static_persistence_epochs_v1beta1_QueryEpochsInfoRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoRequest getDefaultInstanceForType() {
+        return com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoRequest build() {
+        com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoRequest buildPartial() {
+        com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoRequest result = new com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoRequest) {
+          return mergeFrom((com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoRequest other) {
+        if (other == com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:persistence.epochs.v1beta1.QueryEpochsInfoRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:persistence.epochs.v1beta1.QueryEpochsInfoRequest)
+    private static final com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoRequest();
+    }
+
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryEpochsInfoRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryEpochsInfoRequest>() {
+      @java.lang.Override
+      public QueryEpochsInfoRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryEpochsInfoRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryEpochsInfoRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryEpochsInfoResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:persistence.epochs.v1beta1.QueryEpochsInfoResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .persistence.epochs.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.persistence.epochs.v1beta1.GenesisProto.EpochInfo> 
+        getEpochsList();
+    /**
+     * <code>repeated .persistence.epochs.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+     */
+    com.persistence.epochs.v1beta1.GenesisProto.EpochInfo getEpochs(int index);
+    /**
+     * <code>repeated .persistence.epochs.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+     */
+    int getEpochsCount();
+    /**
+     * <code>repeated .persistence.epochs.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.persistence.epochs.v1beta1.GenesisProto.EpochInfoOrBuilder> 
+        getEpochsOrBuilderList();
+    /**
+     * <code>repeated .persistence.epochs.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+     */
+    com.persistence.epochs.v1beta1.GenesisProto.EpochInfoOrBuilder getEpochsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code persistence.epochs.v1beta1.QueryEpochsInfoResponse}
+   */
+  public static final class QueryEpochsInfoResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:persistence.epochs.v1beta1.QueryEpochsInfoResponse)
+      QueryEpochsInfoResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryEpochsInfoResponse.newBuilder() to construct.
+    private QueryEpochsInfoResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryEpochsInfoResponse() {
+      epochs_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryEpochsInfoResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.persistence.epochs.v1beta1.QueryProto.internal_static_persistence_epochs_v1beta1_QueryEpochsInfoResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.persistence.epochs.v1beta1.QueryProto.internal_static_persistence_epochs_v1beta1_QueryEpochsInfoResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponse.class, com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponse.Builder.class);
+    }
+
+    public static final int EPOCHS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.persistence.epochs.v1beta1.GenesisProto.EpochInfo> epochs_;
+    /**
+     * <code>repeated .persistence.epochs.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.persistence.epochs.v1beta1.GenesisProto.EpochInfo> getEpochsList() {
+      return epochs_;
+    }
+    /**
+     * <code>repeated .persistence.epochs.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.persistence.epochs.v1beta1.GenesisProto.EpochInfoOrBuilder> 
+        getEpochsOrBuilderList() {
+      return epochs_;
+    }
+    /**
+     * <code>repeated .persistence.epochs.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getEpochsCount() {
+      return epochs_.size();
+    }
+    /**
+     * <code>repeated .persistence.epochs.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.persistence.epochs.v1beta1.GenesisProto.EpochInfo getEpochs(int index) {
+      return epochs_.get(index);
+    }
+    /**
+     * <code>repeated .persistence.epochs.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.persistence.epochs.v1beta1.GenesisProto.EpochInfoOrBuilder getEpochsOrBuilder(
+        int index) {
+      return epochs_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < epochs_.size(); i++) {
+        output.writeMessage(1, epochs_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < epochs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, epochs_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponse)) {
+        return super.equals(obj);
+      }
+      com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponse other = (com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponse) obj;
+
+      if (!getEpochsList()
+          .equals(other.getEpochsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getEpochsCount() > 0) {
+        hash = (37 * hash) + EPOCHS_FIELD_NUMBER;
+        hash = (53 * hash) + getEpochsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code persistence.epochs.v1beta1.QueryEpochsInfoResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:persistence.epochs.v1beta1.QueryEpochsInfoResponse)
+        com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.persistence.epochs.v1beta1.QueryProto.internal_static_persistence_epochs_v1beta1_QueryEpochsInfoResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.persistence.epochs.v1beta1.QueryProto.internal_static_persistence_epochs_v1beta1_QueryEpochsInfoResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponse.class, com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponse.Builder.class);
+      }
+
+      // Construct using com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (epochsBuilder_ == null) {
+          epochs_ = java.util.Collections.emptyList();
+        } else {
+          epochs_ = null;
+          epochsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.persistence.epochs.v1beta1.QueryProto.internal_static_persistence_epochs_v1beta1_QueryEpochsInfoResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponse getDefaultInstanceForType() {
+        return com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponse build() {
+        com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponse buildPartial() {
+        com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponse result = new com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponse result) {
+        if (epochsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            epochs_ = java.util.Collections.unmodifiableList(epochs_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.epochs_ = epochs_;
+        } else {
+          result.epochs_ = epochsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponse) {
+          return mergeFrom((com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponse other) {
+        if (other == com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponse.getDefaultInstance()) return this;
+        if (epochsBuilder_ == null) {
+          if (!other.epochs_.isEmpty()) {
+            if (epochs_.isEmpty()) {
+              epochs_ = other.epochs_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureEpochsIsMutable();
+              epochs_.addAll(other.epochs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.epochs_.isEmpty()) {
+            if (epochsBuilder_.isEmpty()) {
+              epochsBuilder_.dispose();
+              epochsBuilder_ = null;
+              epochs_ = other.epochs_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              epochsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEpochsFieldBuilder() : null;
+            } else {
+              epochsBuilder_.addAllMessages(other.epochs_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.persistence.epochs.v1beta1.GenesisProto.EpochInfo m =
+                    input.readMessage(
+                        com.persistence.epochs.v1beta1.GenesisProto.EpochInfo.parser(),
+                        extensionRegistry);
+                if (epochsBuilder_ == null) {
+                  ensureEpochsIsMutable();
+                  epochs_.add(m);
+                } else {
+                  epochsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.persistence.epochs.v1beta1.GenesisProto.EpochInfo> epochs_ =
+        java.util.Collections.emptyList();
+      private void ensureEpochsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          epochs_ = new java.util.ArrayList<com.persistence.epochs.v1beta1.GenesisProto.EpochInfo>(epochs_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.persistence.epochs.v1beta1.GenesisProto.EpochInfo, com.persistence.epochs.v1beta1.GenesisProto.EpochInfo.Builder, com.persistence.epochs.v1beta1.GenesisProto.EpochInfoOrBuilder> epochsBuilder_;
+
+      /**
+       * <code>repeated .persistence.epochs.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.persistence.epochs.v1beta1.GenesisProto.EpochInfo> getEpochsList() {
+        if (epochsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(epochs_);
+        } else {
+          return epochsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .persistence.epochs.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+       */
+      public int getEpochsCount() {
+        if (epochsBuilder_ == null) {
+          return epochs_.size();
+        } else {
+          return epochsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .persistence.epochs.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.persistence.epochs.v1beta1.GenesisProto.EpochInfo getEpochs(int index) {
+        if (epochsBuilder_ == null) {
+          return epochs_.get(index);
+        } else {
+          return epochsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .persistence.epochs.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setEpochs(
+          int index, com.persistence.epochs.v1beta1.GenesisProto.EpochInfo value) {
+        if (epochsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEpochsIsMutable();
+          epochs_.set(index, value);
+          onChanged();
+        } else {
+          epochsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .persistence.epochs.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setEpochs(
+          int index, com.persistence.epochs.v1beta1.GenesisProto.EpochInfo.Builder builderForValue) {
+        if (epochsBuilder_ == null) {
+          ensureEpochsIsMutable();
+          epochs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          epochsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .persistence.epochs.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addEpochs(com.persistence.epochs.v1beta1.GenesisProto.EpochInfo value) {
+        if (epochsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEpochsIsMutable();
+          epochs_.add(value);
+          onChanged();
+        } else {
+          epochsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .persistence.epochs.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addEpochs(
+          int index, com.persistence.epochs.v1beta1.GenesisProto.EpochInfo value) {
+        if (epochsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEpochsIsMutable();
+          epochs_.add(index, value);
+          onChanged();
+        } else {
+          epochsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .persistence.epochs.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addEpochs(
+          com.persistence.epochs.v1beta1.GenesisProto.EpochInfo.Builder builderForValue) {
+        if (epochsBuilder_ == null) {
+          ensureEpochsIsMutable();
+          epochs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          epochsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .persistence.epochs.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addEpochs(
+          int index, com.persistence.epochs.v1beta1.GenesisProto.EpochInfo.Builder builderForValue) {
+        if (epochsBuilder_ == null) {
+          ensureEpochsIsMutable();
+          epochs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          epochsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .persistence.epochs.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllEpochs(
+          java.lang.Iterable<? extends com.persistence.epochs.v1beta1.GenesisProto.EpochInfo> values) {
+        if (epochsBuilder_ == null) {
+          ensureEpochsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, epochs_);
+          onChanged();
+        } else {
+          epochsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .persistence.epochs.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearEpochs() {
+        if (epochsBuilder_ == null) {
+          epochs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          epochsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .persistence.epochs.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeEpochs(int index) {
+        if (epochsBuilder_ == null) {
+          ensureEpochsIsMutable();
+          epochs_.remove(index);
+          onChanged();
+        } else {
+          epochsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .persistence.epochs.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.persistence.epochs.v1beta1.GenesisProto.EpochInfo.Builder getEpochsBuilder(
+          int index) {
+        return getEpochsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .persistence.epochs.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.persistence.epochs.v1beta1.GenesisProto.EpochInfoOrBuilder getEpochsOrBuilder(
+          int index) {
+        if (epochsBuilder_ == null) {
+          return epochs_.get(index);  } else {
+          return epochsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .persistence.epochs.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.persistence.epochs.v1beta1.GenesisProto.EpochInfoOrBuilder> 
+           getEpochsOrBuilderList() {
+        if (epochsBuilder_ != null) {
+          return epochsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(epochs_);
+        }
+      }
+      /**
+       * <code>repeated .persistence.epochs.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.persistence.epochs.v1beta1.GenesisProto.EpochInfo.Builder addEpochsBuilder() {
+        return getEpochsFieldBuilder().addBuilder(
+            com.persistence.epochs.v1beta1.GenesisProto.EpochInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .persistence.epochs.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+       */
+      public com.persistence.epochs.v1beta1.GenesisProto.EpochInfo.Builder addEpochsBuilder(
+          int index) {
+        return getEpochsFieldBuilder().addBuilder(
+            index, com.persistence.epochs.v1beta1.GenesisProto.EpochInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .persistence.epochs.v1beta1.EpochInfo epochs = 1 [json_name = "epochs", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.persistence.epochs.v1beta1.GenesisProto.EpochInfo.Builder> 
+           getEpochsBuilderList() {
+        return getEpochsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.persistence.epochs.v1beta1.GenesisProto.EpochInfo, com.persistence.epochs.v1beta1.GenesisProto.EpochInfo.Builder, com.persistence.epochs.v1beta1.GenesisProto.EpochInfoOrBuilder> 
+          getEpochsFieldBuilder() {
+        if (epochsBuilder_ == null) {
+          epochsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.persistence.epochs.v1beta1.GenesisProto.EpochInfo, com.persistence.epochs.v1beta1.GenesisProto.EpochInfo.Builder, com.persistence.epochs.v1beta1.GenesisProto.EpochInfoOrBuilder>(
+                  epochs_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          epochs_ = null;
+        }
+        return epochsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:persistence.epochs.v1beta1.QueryEpochsInfoResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:persistence.epochs.v1beta1.QueryEpochsInfoResponse)
+    private static final com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponse();
+    }
+
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryEpochsInfoResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryEpochsInfoResponse>() {
+      @java.lang.Override
+      public QueryEpochsInfoResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryEpochsInfoResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryEpochsInfoResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.persistence.epochs.v1beta1.QueryProto.QueryEpochsInfoResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryCurrentEpochRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:persistence.epochs.v1beta1.QueryCurrentEpochRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string identifier = 1 [json_name = "identifier"];</code>
+     * @return The identifier.
+     */
+    java.lang.String getIdentifier();
+    /**
+     * <code>string identifier = 1 [json_name = "identifier"];</code>
+     * @return The bytes for identifier.
+     */
+    com.google.protobuf.ByteString
+        getIdentifierBytes();
+  }
+  /**
+   * Protobuf type {@code persistence.epochs.v1beta1.QueryCurrentEpochRequest}
+   */
+  public static final class QueryCurrentEpochRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:persistence.epochs.v1beta1.QueryCurrentEpochRequest)
+      QueryCurrentEpochRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryCurrentEpochRequest.newBuilder() to construct.
+    private QueryCurrentEpochRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryCurrentEpochRequest() {
+      identifier_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryCurrentEpochRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.persistence.epochs.v1beta1.QueryProto.internal_static_persistence_epochs_v1beta1_QueryCurrentEpochRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.persistence.epochs.v1beta1.QueryProto.internal_static_persistence_epochs_v1beta1_QueryCurrentEpochRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochRequest.class, com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochRequest.Builder.class);
+    }
+
+    public static final int IDENTIFIER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object identifier_ = "";
+    /**
+     * <code>string identifier = 1 [json_name = "identifier"];</code>
+     * @return The identifier.
+     */
+    @java.lang.Override
+    public java.lang.String getIdentifier() {
+      java.lang.Object ref = identifier_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        identifier_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string identifier = 1 [json_name = "identifier"];</code>
+     * @return The bytes for identifier.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdentifierBytes() {
+      java.lang.Object ref = identifier_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        identifier_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(identifier_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, identifier_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(identifier_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, identifier_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochRequest)) {
+        return super.equals(obj);
+      }
+      com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochRequest other = (com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochRequest) obj;
+
+      if (!getIdentifier()
+          .equals(other.getIdentifier())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + IDENTIFIER_FIELD_NUMBER;
+      hash = (53 * hash) + getIdentifier().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code persistence.epochs.v1beta1.QueryCurrentEpochRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:persistence.epochs.v1beta1.QueryCurrentEpochRequest)
+        com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.persistence.epochs.v1beta1.QueryProto.internal_static_persistence_epochs_v1beta1_QueryCurrentEpochRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.persistence.epochs.v1beta1.QueryProto.internal_static_persistence_epochs_v1beta1_QueryCurrentEpochRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochRequest.class, com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochRequest.Builder.class);
+      }
+
+      // Construct using com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        identifier_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.persistence.epochs.v1beta1.QueryProto.internal_static_persistence_epochs_v1beta1_QueryCurrentEpochRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochRequest getDefaultInstanceForType() {
+        return com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochRequest build() {
+        com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochRequest buildPartial() {
+        com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochRequest result = new com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.identifier_ = identifier_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochRequest) {
+          return mergeFrom((com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochRequest other) {
+        if (other == com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochRequest.getDefaultInstance()) return this;
+        if (!other.getIdentifier().isEmpty()) {
+          identifier_ = other.identifier_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                identifier_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object identifier_ = "";
+      /**
+       * <code>string identifier = 1 [json_name = "identifier"];</code>
+       * @return The identifier.
+       */
+      public java.lang.String getIdentifier() {
+        java.lang.Object ref = identifier_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          identifier_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string identifier = 1 [json_name = "identifier"];</code>
+       * @return The bytes for identifier.
+       */
+      public com.google.protobuf.ByteString
+          getIdentifierBytes() {
+        java.lang.Object ref = identifier_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          identifier_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string identifier = 1 [json_name = "identifier"];</code>
+       * @param value The identifier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdentifier(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        identifier_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string identifier = 1 [json_name = "identifier"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIdentifier() {
+        identifier_ = getDefaultInstance().getIdentifier();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string identifier = 1 [json_name = "identifier"];</code>
+       * @param value The bytes for identifier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdentifierBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        identifier_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:persistence.epochs.v1beta1.QueryCurrentEpochRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:persistence.epochs.v1beta1.QueryCurrentEpochRequest)
+    private static final com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochRequest();
+    }
+
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryCurrentEpochRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryCurrentEpochRequest>() {
+      @java.lang.Override
+      public QueryCurrentEpochRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryCurrentEpochRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryCurrentEpochRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryCurrentEpochResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:persistence.epochs.v1beta1.QueryCurrentEpochResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 current_epoch = 1 [json_name = "currentEpoch"];</code>
+     * @return The currentEpoch.
+     */
+    long getCurrentEpoch();
+  }
+  /**
+   * Protobuf type {@code persistence.epochs.v1beta1.QueryCurrentEpochResponse}
+   */
+  public static final class QueryCurrentEpochResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:persistence.epochs.v1beta1.QueryCurrentEpochResponse)
+      QueryCurrentEpochResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryCurrentEpochResponse.newBuilder() to construct.
+    private QueryCurrentEpochResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryCurrentEpochResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryCurrentEpochResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.persistence.epochs.v1beta1.QueryProto.internal_static_persistence_epochs_v1beta1_QueryCurrentEpochResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.persistence.epochs.v1beta1.QueryProto.internal_static_persistence_epochs_v1beta1_QueryCurrentEpochResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochResponse.class, com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochResponse.Builder.class);
+    }
+
+    public static final int CURRENT_EPOCH_FIELD_NUMBER = 1;
+    private long currentEpoch_ = 0L;
+    /**
+     * <code>int64 current_epoch = 1 [json_name = "currentEpoch"];</code>
+     * @return The currentEpoch.
+     */
+    @java.lang.Override
+    public long getCurrentEpoch() {
+      return currentEpoch_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (currentEpoch_ != 0L) {
+        output.writeInt64(1, currentEpoch_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (currentEpoch_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, currentEpoch_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochResponse)) {
+        return super.equals(obj);
+      }
+      com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochResponse other = (com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochResponse) obj;
+
+      if (getCurrentEpoch()
+          != other.getCurrentEpoch()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CURRENT_EPOCH_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCurrentEpoch());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code persistence.epochs.v1beta1.QueryCurrentEpochResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:persistence.epochs.v1beta1.QueryCurrentEpochResponse)
+        com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.persistence.epochs.v1beta1.QueryProto.internal_static_persistence_epochs_v1beta1_QueryCurrentEpochResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.persistence.epochs.v1beta1.QueryProto.internal_static_persistence_epochs_v1beta1_QueryCurrentEpochResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochResponse.class, com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochResponse.Builder.class);
+      }
+
+      // Construct using com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        currentEpoch_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.persistence.epochs.v1beta1.QueryProto.internal_static_persistence_epochs_v1beta1_QueryCurrentEpochResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochResponse getDefaultInstanceForType() {
+        return com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochResponse build() {
+        com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochResponse buildPartial() {
+        com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochResponse result = new com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.currentEpoch_ = currentEpoch_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochResponse) {
+          return mergeFrom((com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochResponse other) {
+        if (other == com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochResponse.getDefaultInstance()) return this;
+        if (other.getCurrentEpoch() != 0L) {
+          setCurrentEpoch(other.getCurrentEpoch());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                currentEpoch_ = input.readInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long currentEpoch_ ;
+      /**
+       * <code>int64 current_epoch = 1 [json_name = "currentEpoch"];</code>
+       * @return The currentEpoch.
+       */
+      @java.lang.Override
+      public long getCurrentEpoch() {
+        return currentEpoch_;
+      }
+      /**
+       * <code>int64 current_epoch = 1 [json_name = "currentEpoch"];</code>
+       * @param value The currentEpoch to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurrentEpoch(long value) {
+
+        currentEpoch_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 current_epoch = 1 [json_name = "currentEpoch"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCurrentEpoch() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        currentEpoch_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:persistence.epochs.v1beta1.QueryCurrentEpochResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:persistence.epochs.v1beta1.QueryCurrentEpochResponse)
+    private static final com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochResponse();
+    }
+
+    public static com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryCurrentEpochResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryCurrentEpochResponse>() {
+      @java.lang.Override
+      public QueryCurrentEpochResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryCurrentEpochResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryCurrentEpochResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.persistence.epochs.v1beta1.QueryProto.QueryCurrentEpochResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_persistence_epochs_v1beta1_QueryEpochsInfoRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_persistence_epochs_v1beta1_QueryEpochsInfoRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_persistence_epochs_v1beta1_QueryEpochsInfoResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_persistence_epochs_v1beta1_QueryEpochsInfoResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_persistence_epochs_v1beta1_QueryCurrentEpochRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_persistence_epochs_v1beta1_QueryCurrentEpochRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_persistence_epochs_v1beta1_QueryCurrentEpochResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_persistence_epochs_v1beta1_QueryCurrentEpochResponse_fieldAccessorTable;
 
@@ -62,13 +2270,13 @@ public final class QueryProto {
       "CurrentEpochRequest\0325.persistence.epochs" +
       ".v1beta1.QueryCurrentEpochResponse\"5\202\323\344\223" +
       "\002/\022-/persistence-sdk/epochs/v1beta1/curr" +
-      "ent_epochB\363\001\n\036com.persistence.epochs.v1b" +
-      "eta1B\nQueryProtoP\001Z;github.com/persisten" +
-      "ceOne/persistence-sdk/v2/x/epochs/types\242" +
-      "\002\003PEX\252\002\032Persistence.Epochs.V1beta1\312\002\032Per" +
-      "sistence\\Epochs\\V1beta1\342\002&Persistence\\Ep" +
-      "ochs\\V1beta1\\GPBMetadata\352\002\034Persistence::" +
-      "Epochs::V1beta1b\006proto3"
+      "ent_epochB\361\001\n\036com.persistence.epochs.v1b" +
+      "eta1B\nQueryProtoZ;github.com/persistence" +
+      "One/persistence-sdk/v2/x/epochs/types\242\002\003" +
+      "PEX\252\002\032Persistence.Epochs.V1beta1\312\002\032Persi" +
+      "stence\\Epochs\\V1beta1\342\002&Persistence\\Epoc" +
+      "hs\\V1beta1\\GPBMetadata\352\002\034Persistence::Ep" +
+      "ochs::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

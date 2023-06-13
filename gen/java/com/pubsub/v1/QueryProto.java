@@ -14,164 +14,19782 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryParamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.QueryParamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code pubsub.v1.QueryParamsRequest}
+   */
+  public static final class QueryParamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.QueryParamsRequest)
+      QueryParamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsRequest.newBuilder() to construct.
+    private QueryParamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryParamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryParamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.QueryProto.QueryParamsRequest.class, com.pubsub.v1.QueryProto.QueryParamsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.QueryProto.QueryParamsRequest)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.QueryProto.QueryParamsRequest other = (com.pubsub.v1.QueryProto.QueryParamsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryParamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryParamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryParamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QueryParamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryParamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryParamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.QueryProto.QueryParamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pubsub.v1.QueryParamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.QueryParamsRequest)
+        com.pubsub.v1.QueryProto.QueryParamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryParamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.QueryProto.QueryParamsRequest.class, com.pubsub.v1.QueryProto.QueryParamsRequest.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.QueryProto.QueryParamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+        return com.pubsub.v1.QueryProto.QueryParamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryParamsRequest build() {
+        com.pubsub.v1.QueryProto.QueryParamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryParamsRequest buildPartial() {
+        com.pubsub.v1.QueryProto.QueryParamsRequest result = new com.pubsub.v1.QueryProto.QueryParamsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.QueryProto.QueryParamsRequest) {
+          return mergeFrom((com.pubsub.v1.QueryProto.QueryParamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.QueryProto.QueryParamsRequest other) {
+        if (other == com.pubsub.v1.QueryProto.QueryParamsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.QueryParamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.QueryParamsRequest)
+    private static final com.pubsub.v1.QueryProto.QueryParamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.QueryProto.QueryParamsRequest();
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryParamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsRequest>() {
+      @java.lang.Override
+      public QueryParamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.QueryParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.pubsub.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.pubsub.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.pubsub.v1.ParamsProto.Params getParams();
+    /**
+     * <code>.pubsub.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.pubsub.v1.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code pubsub.v1.QueryParamsResponse}
+   */
+  public static final class QueryParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.QueryParamsResponse)
+      QueryParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsResponse.newBuilder() to construct.
+    private QueryParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.QueryProto.QueryParamsResponse.class, com.pubsub.v1.QueryProto.QueryParamsResponse.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.pubsub.v1.ParamsProto.Params params_;
+    /**
+     * <code>.pubsub.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.pubsub.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.pubsub.v1.ParamsProto.Params getParams() {
+      return params_ == null ? com.pubsub.v1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.pubsub.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.pubsub.v1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.pubsub.v1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.QueryProto.QueryParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.QueryProto.QueryParamsResponse other = (com.pubsub.v1.QueryProto.QueryParamsResponse) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QueryParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.QueryProto.QueryParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pubsub.v1.QueryParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.QueryParamsResponse)
+        com.pubsub.v1.QueryProto.QueryParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.QueryProto.QueryParamsResponse.class, com.pubsub.v1.QueryProto.QueryParamsResponse.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.QueryProto.QueryParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+        return com.pubsub.v1.QueryProto.QueryParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryParamsResponse build() {
+        com.pubsub.v1.QueryProto.QueryParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryParamsResponse buildPartial() {
+        com.pubsub.v1.QueryProto.QueryParamsResponse result = new com.pubsub.v1.QueryProto.QueryParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pubsub.v1.QueryProto.QueryParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.QueryProto.QueryParamsResponse) {
+          return mergeFrom((com.pubsub.v1.QueryProto.QueryParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.QueryProto.QueryParamsResponse other) {
+        if (other == com.pubsub.v1.QueryProto.QueryParamsResponse.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.pubsub.v1.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.pubsub.v1.ParamsProto.Params, com.pubsub.v1.ParamsProto.Params.Builder, com.pubsub.v1.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.pubsub.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.pubsub.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.pubsub.v1.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.pubsub.v1.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.pubsub.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.pubsub.v1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pubsub.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.pubsub.v1.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pubsub.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.pubsub.v1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.pubsub.v1.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pubsub.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pubsub.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pubsub.v1.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.pubsub.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pubsub.v1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.pubsub.v1.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.pubsub.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.pubsub.v1.ParamsProto.Params, com.pubsub.v1.ParamsProto.Params.Builder, com.pubsub.v1.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.pubsub.v1.ParamsProto.Params, com.pubsub.v1.ParamsProto.Params.Builder, com.pubsub.v1.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.QueryParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.QueryParamsResponse)
+    private static final com.pubsub.v1.QueryProto.QueryParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.QueryProto.QueryParamsResponse();
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsResponse>() {
+      @java.lang.Override
+      public QueryParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPublisherRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.QueryPublisherRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string publisher_domain = 1 [json_name = "publisherDomain"];</code>
+     * @return The publisherDomain.
+     */
+    java.lang.String getPublisherDomain();
+    /**
+     * <code>string publisher_domain = 1 [json_name = "publisherDomain"];</code>
+     * @return The bytes for publisherDomain.
+     */
+    com.google.protobuf.ByteString
+        getPublisherDomainBytes();
+  }
+  /**
+   * Protobuf type {@code pubsub.v1.QueryPublisherRequest}
+   */
+  public static final class QueryPublisherRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.QueryPublisherRequest)
+      QueryPublisherRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPublisherRequest.newBuilder() to construct.
+    private QueryPublisherRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPublisherRequest() {
+      publisherDomain_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPublisherRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.QueryProto.QueryPublisherRequest.class, com.pubsub.v1.QueryProto.QueryPublisherRequest.Builder.class);
+    }
+
+    public static final int PUBLISHER_DOMAIN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object publisherDomain_ = "";
+    /**
+     * <code>string publisher_domain = 1 [json_name = "publisherDomain"];</code>
+     * @return The publisherDomain.
+     */
+    @java.lang.Override
+    public java.lang.String getPublisherDomain() {
+      java.lang.Object ref = publisherDomain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        publisherDomain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string publisher_domain = 1 [json_name = "publisherDomain"];</code>
+     * @return The bytes for publisherDomain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPublisherDomainBytes() {
+      java.lang.Object ref = publisherDomain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        publisherDomain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publisherDomain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, publisherDomain_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publisherDomain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, publisherDomain_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.QueryProto.QueryPublisherRequest)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.QueryProto.QueryPublisherRequest other = (com.pubsub.v1.QueryProto.QueryPublisherRequest) obj;
+
+      if (!getPublisherDomain()
+          .equals(other.getPublisherDomain())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PUBLISHER_DOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getPublisherDomain().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.QueryProto.QueryPublisherRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pubsub.v1.QueryPublisherRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.QueryPublisherRequest)
+        com.pubsub.v1.QueryProto.QueryPublisherRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.QueryProto.QueryPublisherRequest.class, com.pubsub.v1.QueryProto.QueryPublisherRequest.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.QueryProto.QueryPublisherRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        publisherDomain_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryPublisherRequest getDefaultInstanceForType() {
+        return com.pubsub.v1.QueryProto.QueryPublisherRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryPublisherRequest build() {
+        com.pubsub.v1.QueryProto.QueryPublisherRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryPublisherRequest buildPartial() {
+        com.pubsub.v1.QueryProto.QueryPublisherRequest result = new com.pubsub.v1.QueryProto.QueryPublisherRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pubsub.v1.QueryProto.QueryPublisherRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.publisherDomain_ = publisherDomain_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.QueryProto.QueryPublisherRequest) {
+          return mergeFrom((com.pubsub.v1.QueryProto.QueryPublisherRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.QueryProto.QueryPublisherRequest other) {
+        if (other == com.pubsub.v1.QueryProto.QueryPublisherRequest.getDefaultInstance()) return this;
+        if (!other.getPublisherDomain().isEmpty()) {
+          publisherDomain_ = other.publisherDomain_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                publisherDomain_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object publisherDomain_ = "";
+      /**
+       * <code>string publisher_domain = 1 [json_name = "publisherDomain"];</code>
+       * @return The publisherDomain.
+       */
+      public java.lang.String getPublisherDomain() {
+        java.lang.Object ref = publisherDomain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          publisherDomain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string publisher_domain = 1 [json_name = "publisherDomain"];</code>
+       * @return The bytes for publisherDomain.
+       */
+      public com.google.protobuf.ByteString
+          getPublisherDomainBytes() {
+        java.lang.Object ref = publisherDomain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          publisherDomain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string publisher_domain = 1 [json_name = "publisherDomain"];</code>
+       * @param value The publisherDomain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublisherDomain(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        publisherDomain_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string publisher_domain = 1 [json_name = "publisherDomain"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPublisherDomain() {
+        publisherDomain_ = getDefaultInstance().getPublisherDomain();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string publisher_domain = 1 [json_name = "publisherDomain"];</code>
+       * @param value The bytes for publisherDomain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublisherDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        publisherDomain_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.QueryPublisherRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.QueryPublisherRequest)
+    private static final com.pubsub.v1.QueryProto.QueryPublisherRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.QueryProto.QueryPublisherRequest();
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPublisherRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPublisherRequest>() {
+      @java.lang.Override
+      public QueryPublisherRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPublisherRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPublisherRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.QueryProto.QueryPublisherRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPublisherResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.QueryPublisherResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.pubsub.v1.Publisher publisher = 1 [json_name = "publisher"];</code>
+     * @return Whether the publisher field is set.
+     */
+    boolean hasPublisher();
+    /**
+     * <code>.pubsub.v1.Publisher publisher = 1 [json_name = "publisher"];</code>
+     * @return The publisher.
+     */
+    com.pubsub.v1.PubsubProto.Publisher getPublisher();
+    /**
+     * <code>.pubsub.v1.Publisher publisher = 1 [json_name = "publisher"];</code>
+     */
+    com.pubsub.v1.PubsubProto.PublisherOrBuilder getPublisherOrBuilder();
+  }
+  /**
+   * Protobuf type {@code pubsub.v1.QueryPublisherResponse}
+   */
+  public static final class QueryPublisherResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.QueryPublisherResponse)
+      QueryPublisherResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPublisherResponse.newBuilder() to construct.
+    private QueryPublisherResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPublisherResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPublisherResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.QueryProto.QueryPublisherResponse.class, com.pubsub.v1.QueryProto.QueryPublisherResponse.Builder.class);
+    }
+
+    public static final int PUBLISHER_FIELD_NUMBER = 1;
+    private com.pubsub.v1.PubsubProto.Publisher publisher_;
+    /**
+     * <code>.pubsub.v1.Publisher publisher = 1 [json_name = "publisher"];</code>
+     * @return Whether the publisher field is set.
+     */
+    @java.lang.Override
+    public boolean hasPublisher() {
+      return publisher_ != null;
+    }
+    /**
+     * <code>.pubsub.v1.Publisher publisher = 1 [json_name = "publisher"];</code>
+     * @return The publisher.
+     */
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.Publisher getPublisher() {
+      return publisher_ == null ? com.pubsub.v1.PubsubProto.Publisher.getDefaultInstance() : publisher_;
+    }
+    /**
+     * <code>.pubsub.v1.Publisher publisher = 1 [json_name = "publisher"];</code>
+     */
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.PublisherOrBuilder getPublisherOrBuilder() {
+      return publisher_ == null ? com.pubsub.v1.PubsubProto.Publisher.getDefaultInstance() : publisher_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (publisher_ != null) {
+        output.writeMessage(1, getPublisher());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (publisher_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPublisher());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.QueryProto.QueryPublisherResponse)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.QueryProto.QueryPublisherResponse other = (com.pubsub.v1.QueryProto.QueryPublisherResponse) obj;
+
+      if (hasPublisher() != other.hasPublisher()) return false;
+      if (hasPublisher()) {
+        if (!getPublisher()
+            .equals(other.getPublisher())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPublisher()) {
+        hash = (37 * hash) + PUBLISHER_FIELD_NUMBER;
+        hash = (53 * hash) + getPublisher().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.QueryProto.QueryPublisherResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pubsub.v1.QueryPublisherResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.QueryPublisherResponse)
+        com.pubsub.v1.QueryProto.QueryPublisherResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.QueryProto.QueryPublisherResponse.class, com.pubsub.v1.QueryProto.QueryPublisherResponse.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.QueryProto.QueryPublisherResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        publisher_ = null;
+        if (publisherBuilder_ != null) {
+          publisherBuilder_.dispose();
+          publisherBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryPublisherResponse getDefaultInstanceForType() {
+        return com.pubsub.v1.QueryProto.QueryPublisherResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryPublisherResponse build() {
+        com.pubsub.v1.QueryProto.QueryPublisherResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryPublisherResponse buildPartial() {
+        com.pubsub.v1.QueryProto.QueryPublisherResponse result = new com.pubsub.v1.QueryProto.QueryPublisherResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pubsub.v1.QueryProto.QueryPublisherResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.publisher_ = publisherBuilder_ == null
+              ? publisher_
+              : publisherBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.QueryProto.QueryPublisherResponse) {
+          return mergeFrom((com.pubsub.v1.QueryProto.QueryPublisherResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.QueryProto.QueryPublisherResponse other) {
+        if (other == com.pubsub.v1.QueryProto.QueryPublisherResponse.getDefaultInstance()) return this;
+        if (other.hasPublisher()) {
+          mergePublisher(other.getPublisher());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPublisherFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.pubsub.v1.PubsubProto.Publisher publisher_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.pubsub.v1.PubsubProto.Publisher, com.pubsub.v1.PubsubProto.Publisher.Builder, com.pubsub.v1.PubsubProto.PublisherOrBuilder> publisherBuilder_;
+      /**
+       * <code>.pubsub.v1.Publisher publisher = 1 [json_name = "publisher"];</code>
+       * @return Whether the publisher field is set.
+       */
+      public boolean hasPublisher() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.pubsub.v1.Publisher publisher = 1 [json_name = "publisher"];</code>
+       * @return The publisher.
+       */
+      public com.pubsub.v1.PubsubProto.Publisher getPublisher() {
+        if (publisherBuilder_ == null) {
+          return publisher_ == null ? com.pubsub.v1.PubsubProto.Publisher.getDefaultInstance() : publisher_;
+        } else {
+          return publisherBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.pubsub.v1.Publisher publisher = 1 [json_name = "publisher"];</code>
+       */
+      public Builder setPublisher(com.pubsub.v1.PubsubProto.Publisher value) {
+        if (publisherBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          publisher_ = value;
+        } else {
+          publisherBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pubsub.v1.Publisher publisher = 1 [json_name = "publisher"];</code>
+       */
+      public Builder setPublisher(
+          com.pubsub.v1.PubsubProto.Publisher.Builder builderForValue) {
+        if (publisherBuilder_ == null) {
+          publisher_ = builderForValue.build();
+        } else {
+          publisherBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pubsub.v1.Publisher publisher = 1 [json_name = "publisher"];</code>
+       */
+      public Builder mergePublisher(com.pubsub.v1.PubsubProto.Publisher value) {
+        if (publisherBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            publisher_ != null &&
+            publisher_ != com.pubsub.v1.PubsubProto.Publisher.getDefaultInstance()) {
+            getPublisherBuilder().mergeFrom(value);
+          } else {
+            publisher_ = value;
+          }
+        } else {
+          publisherBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pubsub.v1.Publisher publisher = 1 [json_name = "publisher"];</code>
+       */
+      public Builder clearPublisher() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        publisher_ = null;
+        if (publisherBuilder_ != null) {
+          publisherBuilder_.dispose();
+          publisherBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pubsub.v1.Publisher publisher = 1 [json_name = "publisher"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.Publisher.Builder getPublisherBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPublisherFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.pubsub.v1.Publisher publisher = 1 [json_name = "publisher"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.PublisherOrBuilder getPublisherOrBuilder() {
+        if (publisherBuilder_ != null) {
+          return publisherBuilder_.getMessageOrBuilder();
+        } else {
+          return publisher_ == null ?
+              com.pubsub.v1.PubsubProto.Publisher.getDefaultInstance() : publisher_;
+        }
+      }
+      /**
+       * <code>.pubsub.v1.Publisher publisher = 1 [json_name = "publisher"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.pubsub.v1.PubsubProto.Publisher, com.pubsub.v1.PubsubProto.Publisher.Builder, com.pubsub.v1.PubsubProto.PublisherOrBuilder> 
+          getPublisherFieldBuilder() {
+        if (publisherBuilder_ == null) {
+          publisherBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.pubsub.v1.PubsubProto.Publisher, com.pubsub.v1.PubsubProto.Publisher.Builder, com.pubsub.v1.PubsubProto.PublisherOrBuilder>(
+                  getPublisher(),
+                  getParentForChildren(),
+                  isClean());
+          publisher_ = null;
+        }
+        return publisherBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.QueryPublisherResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.QueryPublisherResponse)
+    private static final com.pubsub.v1.QueryProto.QueryPublisherResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.QueryProto.QueryPublisherResponse();
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPublisherResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPublisherResponse>() {
+      @java.lang.Override
+      public QueryPublisherResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPublisherResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPublisherResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.QueryProto.QueryPublisherResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPublishersRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.QueryPublishersRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code pubsub.v1.QueryPublishersRequest}
+   */
+  public static final class QueryPublishersRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.QueryPublishersRequest)
+      QueryPublishersRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPublishersRequest.newBuilder() to construct.
+    private QueryPublishersRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPublishersRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPublishersRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublishersRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublishersRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.QueryProto.QueryPublishersRequest.class, com.pubsub.v1.QueryProto.QueryPublishersRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.QueryProto.QueryPublishersRequest)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.QueryProto.QueryPublishersRequest other = (com.pubsub.v1.QueryProto.QueryPublishersRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublishersRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublishersRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublishersRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublishersRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublishersRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublishersRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublishersRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublishersRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublishersRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublishersRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublishersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublishersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.QueryProto.QueryPublishersRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pubsub.v1.QueryPublishersRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.QueryPublishersRequest)
+        com.pubsub.v1.QueryProto.QueryPublishersRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublishersRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublishersRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.QueryProto.QueryPublishersRequest.class, com.pubsub.v1.QueryProto.QueryPublishersRequest.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.QueryProto.QueryPublishersRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublishersRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryPublishersRequest getDefaultInstanceForType() {
+        return com.pubsub.v1.QueryProto.QueryPublishersRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryPublishersRequest build() {
+        com.pubsub.v1.QueryProto.QueryPublishersRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryPublishersRequest buildPartial() {
+        com.pubsub.v1.QueryProto.QueryPublishersRequest result = new com.pubsub.v1.QueryProto.QueryPublishersRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.QueryProto.QueryPublishersRequest) {
+          return mergeFrom((com.pubsub.v1.QueryProto.QueryPublishersRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.QueryProto.QueryPublishersRequest other) {
+        if (other == com.pubsub.v1.QueryProto.QueryPublishersRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.QueryPublishersRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.QueryPublishersRequest)
+    private static final com.pubsub.v1.QueryProto.QueryPublishersRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.QueryProto.QueryPublishersRequest();
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublishersRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPublishersRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPublishersRequest>() {
+      @java.lang.Override
+      public QueryPublishersRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPublishersRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPublishersRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.QueryProto.QueryPublishersRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPublishersResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.QueryPublishersResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .pubsub.v1.Publisher publishers = 1 [json_name = "publishers"];</code>
+     */
+    java.util.List<com.pubsub.v1.PubsubProto.Publisher> 
+        getPublishersList();
+    /**
+     * <code>repeated .pubsub.v1.Publisher publishers = 1 [json_name = "publishers"];</code>
+     */
+    com.pubsub.v1.PubsubProto.Publisher getPublishers(int index);
+    /**
+     * <code>repeated .pubsub.v1.Publisher publishers = 1 [json_name = "publishers"];</code>
+     */
+    int getPublishersCount();
+    /**
+     * <code>repeated .pubsub.v1.Publisher publishers = 1 [json_name = "publishers"];</code>
+     */
+    java.util.List<? extends com.pubsub.v1.PubsubProto.PublisherOrBuilder> 
+        getPublishersOrBuilderList();
+    /**
+     * <code>repeated .pubsub.v1.Publisher publishers = 1 [json_name = "publishers"];</code>
+     */
+    com.pubsub.v1.PubsubProto.PublisherOrBuilder getPublishersOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code pubsub.v1.QueryPublishersResponse}
+   */
+  public static final class QueryPublishersResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.QueryPublishersResponse)
+      QueryPublishersResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPublishersResponse.newBuilder() to construct.
+    private QueryPublishersResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPublishersResponse() {
+      publishers_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPublishersResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublishersResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublishersResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.QueryProto.QueryPublishersResponse.class, com.pubsub.v1.QueryProto.QueryPublishersResponse.Builder.class);
+    }
+
+    public static final int PUBLISHERS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.pubsub.v1.PubsubProto.Publisher> publishers_;
+    /**
+     * <code>repeated .pubsub.v1.Publisher publishers = 1 [json_name = "publishers"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.pubsub.v1.PubsubProto.Publisher> getPublishersList() {
+      return publishers_;
+    }
+    /**
+     * <code>repeated .pubsub.v1.Publisher publishers = 1 [json_name = "publishers"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.pubsub.v1.PubsubProto.PublisherOrBuilder> 
+        getPublishersOrBuilderList() {
+      return publishers_;
+    }
+    /**
+     * <code>repeated .pubsub.v1.Publisher publishers = 1 [json_name = "publishers"];</code>
+     */
+    @java.lang.Override
+    public int getPublishersCount() {
+      return publishers_.size();
+    }
+    /**
+     * <code>repeated .pubsub.v1.Publisher publishers = 1 [json_name = "publishers"];</code>
+     */
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.Publisher getPublishers(int index) {
+      return publishers_.get(index);
+    }
+    /**
+     * <code>repeated .pubsub.v1.Publisher publishers = 1 [json_name = "publishers"];</code>
+     */
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.PublisherOrBuilder getPublishersOrBuilder(
+        int index) {
+      return publishers_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < publishers_.size(); i++) {
+        output.writeMessage(1, publishers_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < publishers_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, publishers_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.QueryProto.QueryPublishersResponse)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.QueryProto.QueryPublishersResponse other = (com.pubsub.v1.QueryProto.QueryPublishersResponse) obj;
+
+      if (!getPublishersList()
+          .equals(other.getPublishersList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getPublishersCount() > 0) {
+        hash = (37 * hash) + PUBLISHERS_FIELD_NUMBER;
+        hash = (53 * hash) + getPublishersList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublishersResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublishersResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublishersResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublishersResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublishersResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublishersResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublishersResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublishersResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublishersResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublishersResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublishersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublishersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.QueryProto.QueryPublishersResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pubsub.v1.QueryPublishersResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.QueryPublishersResponse)
+        com.pubsub.v1.QueryProto.QueryPublishersResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublishersResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublishersResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.QueryProto.QueryPublishersResponse.class, com.pubsub.v1.QueryProto.QueryPublishersResponse.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.QueryProto.QueryPublishersResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (publishersBuilder_ == null) {
+          publishers_ = java.util.Collections.emptyList();
+        } else {
+          publishers_ = null;
+          publishersBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublishersResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryPublishersResponse getDefaultInstanceForType() {
+        return com.pubsub.v1.QueryProto.QueryPublishersResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryPublishersResponse build() {
+        com.pubsub.v1.QueryProto.QueryPublishersResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryPublishersResponse buildPartial() {
+        com.pubsub.v1.QueryProto.QueryPublishersResponse result = new com.pubsub.v1.QueryProto.QueryPublishersResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.pubsub.v1.QueryProto.QueryPublishersResponse result) {
+        if (publishersBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            publishers_ = java.util.Collections.unmodifiableList(publishers_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.publishers_ = publishers_;
+        } else {
+          result.publishers_ = publishersBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.pubsub.v1.QueryProto.QueryPublishersResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.QueryProto.QueryPublishersResponse) {
+          return mergeFrom((com.pubsub.v1.QueryProto.QueryPublishersResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.QueryProto.QueryPublishersResponse other) {
+        if (other == com.pubsub.v1.QueryProto.QueryPublishersResponse.getDefaultInstance()) return this;
+        if (publishersBuilder_ == null) {
+          if (!other.publishers_.isEmpty()) {
+            if (publishers_.isEmpty()) {
+              publishers_ = other.publishers_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensurePublishersIsMutable();
+              publishers_.addAll(other.publishers_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.publishers_.isEmpty()) {
+            if (publishersBuilder_.isEmpty()) {
+              publishersBuilder_.dispose();
+              publishersBuilder_ = null;
+              publishers_ = other.publishers_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              publishersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPublishersFieldBuilder() : null;
+            } else {
+              publishersBuilder_.addAllMessages(other.publishers_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.pubsub.v1.PubsubProto.Publisher m =
+                    input.readMessage(
+                        com.pubsub.v1.PubsubProto.Publisher.parser(),
+                        extensionRegistry);
+                if (publishersBuilder_ == null) {
+                  ensurePublishersIsMutable();
+                  publishers_.add(m);
+                } else {
+                  publishersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.pubsub.v1.PubsubProto.Publisher> publishers_ =
+        java.util.Collections.emptyList();
+      private void ensurePublishersIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          publishers_ = new java.util.ArrayList<com.pubsub.v1.PubsubProto.Publisher>(publishers_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.pubsub.v1.PubsubProto.Publisher, com.pubsub.v1.PubsubProto.Publisher.Builder, com.pubsub.v1.PubsubProto.PublisherOrBuilder> publishersBuilder_;
+
+      /**
+       * <code>repeated .pubsub.v1.Publisher publishers = 1 [json_name = "publishers"];</code>
+       */
+      public java.util.List<com.pubsub.v1.PubsubProto.Publisher> getPublishersList() {
+        if (publishersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(publishers_);
+        } else {
+          return publishersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.Publisher publishers = 1 [json_name = "publishers"];</code>
+       */
+      public int getPublishersCount() {
+        if (publishersBuilder_ == null) {
+          return publishers_.size();
+        } else {
+          return publishersBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.Publisher publishers = 1 [json_name = "publishers"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.Publisher getPublishers(int index) {
+        if (publishersBuilder_ == null) {
+          return publishers_.get(index);
+        } else {
+          return publishersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.Publisher publishers = 1 [json_name = "publishers"];</code>
+       */
+      public Builder setPublishers(
+          int index, com.pubsub.v1.PubsubProto.Publisher value) {
+        if (publishersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePublishersIsMutable();
+          publishers_.set(index, value);
+          onChanged();
+        } else {
+          publishersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.Publisher publishers = 1 [json_name = "publishers"];</code>
+       */
+      public Builder setPublishers(
+          int index, com.pubsub.v1.PubsubProto.Publisher.Builder builderForValue) {
+        if (publishersBuilder_ == null) {
+          ensurePublishersIsMutable();
+          publishers_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          publishersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.Publisher publishers = 1 [json_name = "publishers"];</code>
+       */
+      public Builder addPublishers(com.pubsub.v1.PubsubProto.Publisher value) {
+        if (publishersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePublishersIsMutable();
+          publishers_.add(value);
+          onChanged();
+        } else {
+          publishersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.Publisher publishers = 1 [json_name = "publishers"];</code>
+       */
+      public Builder addPublishers(
+          int index, com.pubsub.v1.PubsubProto.Publisher value) {
+        if (publishersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePublishersIsMutable();
+          publishers_.add(index, value);
+          onChanged();
+        } else {
+          publishersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.Publisher publishers = 1 [json_name = "publishers"];</code>
+       */
+      public Builder addPublishers(
+          com.pubsub.v1.PubsubProto.Publisher.Builder builderForValue) {
+        if (publishersBuilder_ == null) {
+          ensurePublishersIsMutable();
+          publishers_.add(builderForValue.build());
+          onChanged();
+        } else {
+          publishersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.Publisher publishers = 1 [json_name = "publishers"];</code>
+       */
+      public Builder addPublishers(
+          int index, com.pubsub.v1.PubsubProto.Publisher.Builder builderForValue) {
+        if (publishersBuilder_ == null) {
+          ensurePublishersIsMutable();
+          publishers_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          publishersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.Publisher publishers = 1 [json_name = "publishers"];</code>
+       */
+      public Builder addAllPublishers(
+          java.lang.Iterable<? extends com.pubsub.v1.PubsubProto.Publisher> values) {
+        if (publishersBuilder_ == null) {
+          ensurePublishersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, publishers_);
+          onChanged();
+        } else {
+          publishersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.Publisher publishers = 1 [json_name = "publishers"];</code>
+       */
+      public Builder clearPublishers() {
+        if (publishersBuilder_ == null) {
+          publishers_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          publishersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.Publisher publishers = 1 [json_name = "publishers"];</code>
+       */
+      public Builder removePublishers(int index) {
+        if (publishersBuilder_ == null) {
+          ensurePublishersIsMutable();
+          publishers_.remove(index);
+          onChanged();
+        } else {
+          publishersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.Publisher publishers = 1 [json_name = "publishers"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.Publisher.Builder getPublishersBuilder(
+          int index) {
+        return getPublishersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .pubsub.v1.Publisher publishers = 1 [json_name = "publishers"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.PublisherOrBuilder getPublishersOrBuilder(
+          int index) {
+        if (publishersBuilder_ == null) {
+          return publishers_.get(index);  } else {
+          return publishersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.Publisher publishers = 1 [json_name = "publishers"];</code>
+       */
+      public java.util.List<? extends com.pubsub.v1.PubsubProto.PublisherOrBuilder> 
+           getPublishersOrBuilderList() {
+        if (publishersBuilder_ != null) {
+          return publishersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(publishers_);
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.Publisher publishers = 1 [json_name = "publishers"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.Publisher.Builder addPublishersBuilder() {
+        return getPublishersFieldBuilder().addBuilder(
+            com.pubsub.v1.PubsubProto.Publisher.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .pubsub.v1.Publisher publishers = 1 [json_name = "publishers"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.Publisher.Builder addPublishersBuilder(
+          int index) {
+        return getPublishersFieldBuilder().addBuilder(
+            index, com.pubsub.v1.PubsubProto.Publisher.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .pubsub.v1.Publisher publishers = 1 [json_name = "publishers"];</code>
+       */
+      public java.util.List<com.pubsub.v1.PubsubProto.Publisher.Builder> 
+           getPublishersBuilderList() {
+        return getPublishersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.pubsub.v1.PubsubProto.Publisher, com.pubsub.v1.PubsubProto.Publisher.Builder, com.pubsub.v1.PubsubProto.PublisherOrBuilder> 
+          getPublishersFieldBuilder() {
+        if (publishersBuilder_ == null) {
+          publishersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.pubsub.v1.PubsubProto.Publisher, com.pubsub.v1.PubsubProto.Publisher.Builder, com.pubsub.v1.PubsubProto.PublisherOrBuilder>(
+                  publishers_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          publishers_ = null;
+        }
+        return publishersBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.QueryPublishersResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.QueryPublishersResponse)
+    private static final com.pubsub.v1.QueryProto.QueryPublishersResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.QueryProto.QueryPublishersResponse();
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublishersResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPublishersResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPublishersResponse>() {
+      @java.lang.Override
+      public QueryPublishersResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPublishersResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPublishersResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.QueryProto.QueryPublishersResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySubscriberRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.QuerySubscriberRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string subscriber_address = 1 [json_name = "subscriberAddress"];</code>
+     * @return The subscriberAddress.
+     */
+    java.lang.String getSubscriberAddress();
+    /**
+     * <code>string subscriber_address = 1 [json_name = "subscriberAddress"];</code>
+     * @return The bytes for subscriberAddress.
+     */
+    com.google.protobuf.ByteString
+        getSubscriberAddressBytes();
+  }
+  /**
+   * Protobuf type {@code pubsub.v1.QuerySubscriberRequest}
+   */
+  public static final class QuerySubscriberRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.QuerySubscriberRequest)
+      QuerySubscriberRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySubscriberRequest.newBuilder() to construct.
+    private QuerySubscriberRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySubscriberRequest() {
+      subscriberAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySubscriberRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.QueryProto.QuerySubscriberRequest.class, com.pubsub.v1.QueryProto.QuerySubscriberRequest.Builder.class);
+    }
+
+    public static final int SUBSCRIBER_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object subscriberAddress_ = "";
+    /**
+     * <code>string subscriber_address = 1 [json_name = "subscriberAddress"];</code>
+     * @return The subscriberAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getSubscriberAddress() {
+      java.lang.Object ref = subscriberAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subscriberAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string subscriber_address = 1 [json_name = "subscriberAddress"];</code>
+     * @return The bytes for subscriberAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubscriberAddressBytes() {
+      java.lang.Object ref = subscriberAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subscriberAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriberAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subscriberAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriberAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subscriberAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.QueryProto.QuerySubscriberRequest)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.QueryProto.QuerySubscriberRequest other = (com.pubsub.v1.QueryProto.QuerySubscriberRequest) obj;
+
+      if (!getSubscriberAddress()
+          .equals(other.getSubscriberAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SUBSCRIBER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getSubscriberAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.QueryProto.QuerySubscriberRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pubsub.v1.QuerySubscriberRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.QuerySubscriberRequest)
+        com.pubsub.v1.QueryProto.QuerySubscriberRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.QueryProto.QuerySubscriberRequest.class, com.pubsub.v1.QueryProto.QuerySubscriberRequest.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.QueryProto.QuerySubscriberRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        subscriberAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscriberRequest getDefaultInstanceForType() {
+        return com.pubsub.v1.QueryProto.QuerySubscriberRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscriberRequest build() {
+        com.pubsub.v1.QueryProto.QuerySubscriberRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscriberRequest buildPartial() {
+        com.pubsub.v1.QueryProto.QuerySubscriberRequest result = new com.pubsub.v1.QueryProto.QuerySubscriberRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pubsub.v1.QueryProto.QuerySubscriberRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.subscriberAddress_ = subscriberAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.QueryProto.QuerySubscriberRequest) {
+          return mergeFrom((com.pubsub.v1.QueryProto.QuerySubscriberRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.QueryProto.QuerySubscriberRequest other) {
+        if (other == com.pubsub.v1.QueryProto.QuerySubscriberRequest.getDefaultInstance()) return this;
+        if (!other.getSubscriberAddress().isEmpty()) {
+          subscriberAddress_ = other.subscriberAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                subscriberAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object subscriberAddress_ = "";
+      /**
+       * <code>string subscriber_address = 1 [json_name = "subscriberAddress"];</code>
+       * @return The subscriberAddress.
+       */
+      public java.lang.String getSubscriberAddress() {
+        java.lang.Object ref = subscriberAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subscriberAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string subscriber_address = 1 [json_name = "subscriberAddress"];</code>
+       * @return The bytes for subscriberAddress.
+       */
+      public com.google.protobuf.ByteString
+          getSubscriberAddressBytes() {
+        java.lang.Object ref = subscriberAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subscriberAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string subscriber_address = 1 [json_name = "subscriberAddress"];</code>
+       * @param value The subscriberAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriberAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        subscriberAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subscriber_address = 1 [json_name = "subscriberAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubscriberAddress() {
+        subscriberAddress_ = getDefaultInstance().getSubscriberAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subscriber_address = 1 [json_name = "subscriberAddress"];</code>
+       * @param value The bytes for subscriberAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriberAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        subscriberAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.QuerySubscriberRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.QuerySubscriberRequest)
+    private static final com.pubsub.v1.QueryProto.QuerySubscriberRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.QueryProto.QuerySubscriberRequest();
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySubscriberRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySubscriberRequest>() {
+      @java.lang.Override
+      public QuerySubscriberRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySubscriberRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySubscriberRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.QueryProto.QuerySubscriberRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySubscriberResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.QuerySubscriberResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.pubsub.v1.Subscriber subscriber = 1 [json_name = "subscriber"];</code>
+     * @return Whether the subscriber field is set.
+     */
+    boolean hasSubscriber();
+    /**
+     * <code>.pubsub.v1.Subscriber subscriber = 1 [json_name = "subscriber"];</code>
+     * @return The subscriber.
+     */
+    com.pubsub.v1.PubsubProto.Subscriber getSubscriber();
+    /**
+     * <code>.pubsub.v1.Subscriber subscriber = 1 [json_name = "subscriber"];</code>
+     */
+    com.pubsub.v1.PubsubProto.SubscriberOrBuilder getSubscriberOrBuilder();
+  }
+  /**
+   * Protobuf type {@code pubsub.v1.QuerySubscriberResponse}
+   */
+  public static final class QuerySubscriberResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.QuerySubscriberResponse)
+      QuerySubscriberResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySubscriberResponse.newBuilder() to construct.
+    private QuerySubscriberResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySubscriberResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySubscriberResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.QueryProto.QuerySubscriberResponse.class, com.pubsub.v1.QueryProto.QuerySubscriberResponse.Builder.class);
+    }
+
+    public static final int SUBSCRIBER_FIELD_NUMBER = 1;
+    private com.pubsub.v1.PubsubProto.Subscriber subscriber_;
+    /**
+     * <code>.pubsub.v1.Subscriber subscriber = 1 [json_name = "subscriber"];</code>
+     * @return Whether the subscriber field is set.
+     */
+    @java.lang.Override
+    public boolean hasSubscriber() {
+      return subscriber_ != null;
+    }
+    /**
+     * <code>.pubsub.v1.Subscriber subscriber = 1 [json_name = "subscriber"];</code>
+     * @return The subscriber.
+     */
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.Subscriber getSubscriber() {
+      return subscriber_ == null ? com.pubsub.v1.PubsubProto.Subscriber.getDefaultInstance() : subscriber_;
+    }
+    /**
+     * <code>.pubsub.v1.Subscriber subscriber = 1 [json_name = "subscriber"];</code>
+     */
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.SubscriberOrBuilder getSubscriberOrBuilder() {
+      return subscriber_ == null ? com.pubsub.v1.PubsubProto.Subscriber.getDefaultInstance() : subscriber_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (subscriber_ != null) {
+        output.writeMessage(1, getSubscriber());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (subscriber_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getSubscriber());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.QueryProto.QuerySubscriberResponse)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.QueryProto.QuerySubscriberResponse other = (com.pubsub.v1.QueryProto.QuerySubscriberResponse) obj;
+
+      if (hasSubscriber() != other.hasSubscriber()) return false;
+      if (hasSubscriber()) {
+        if (!getSubscriber()
+            .equals(other.getSubscriber())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasSubscriber()) {
+        hash = (37 * hash) + SUBSCRIBER_FIELD_NUMBER;
+        hash = (53 * hash) + getSubscriber().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.QueryProto.QuerySubscriberResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pubsub.v1.QuerySubscriberResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.QuerySubscriberResponse)
+        com.pubsub.v1.QueryProto.QuerySubscriberResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.QueryProto.QuerySubscriberResponse.class, com.pubsub.v1.QueryProto.QuerySubscriberResponse.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.QueryProto.QuerySubscriberResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        subscriber_ = null;
+        if (subscriberBuilder_ != null) {
+          subscriberBuilder_.dispose();
+          subscriberBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscriberResponse getDefaultInstanceForType() {
+        return com.pubsub.v1.QueryProto.QuerySubscriberResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscriberResponse build() {
+        com.pubsub.v1.QueryProto.QuerySubscriberResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscriberResponse buildPartial() {
+        com.pubsub.v1.QueryProto.QuerySubscriberResponse result = new com.pubsub.v1.QueryProto.QuerySubscriberResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pubsub.v1.QueryProto.QuerySubscriberResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.subscriber_ = subscriberBuilder_ == null
+              ? subscriber_
+              : subscriberBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.QueryProto.QuerySubscriberResponse) {
+          return mergeFrom((com.pubsub.v1.QueryProto.QuerySubscriberResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.QueryProto.QuerySubscriberResponse other) {
+        if (other == com.pubsub.v1.QueryProto.QuerySubscriberResponse.getDefaultInstance()) return this;
+        if (other.hasSubscriber()) {
+          mergeSubscriber(other.getSubscriber());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getSubscriberFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.pubsub.v1.PubsubProto.Subscriber subscriber_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.pubsub.v1.PubsubProto.Subscriber, com.pubsub.v1.PubsubProto.Subscriber.Builder, com.pubsub.v1.PubsubProto.SubscriberOrBuilder> subscriberBuilder_;
+      /**
+       * <code>.pubsub.v1.Subscriber subscriber = 1 [json_name = "subscriber"];</code>
+       * @return Whether the subscriber field is set.
+       */
+      public boolean hasSubscriber() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.pubsub.v1.Subscriber subscriber = 1 [json_name = "subscriber"];</code>
+       * @return The subscriber.
+       */
+      public com.pubsub.v1.PubsubProto.Subscriber getSubscriber() {
+        if (subscriberBuilder_ == null) {
+          return subscriber_ == null ? com.pubsub.v1.PubsubProto.Subscriber.getDefaultInstance() : subscriber_;
+        } else {
+          return subscriberBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.pubsub.v1.Subscriber subscriber = 1 [json_name = "subscriber"];</code>
+       */
+      public Builder setSubscriber(com.pubsub.v1.PubsubProto.Subscriber value) {
+        if (subscriberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          subscriber_ = value;
+        } else {
+          subscriberBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pubsub.v1.Subscriber subscriber = 1 [json_name = "subscriber"];</code>
+       */
+      public Builder setSubscriber(
+          com.pubsub.v1.PubsubProto.Subscriber.Builder builderForValue) {
+        if (subscriberBuilder_ == null) {
+          subscriber_ = builderForValue.build();
+        } else {
+          subscriberBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pubsub.v1.Subscriber subscriber = 1 [json_name = "subscriber"];</code>
+       */
+      public Builder mergeSubscriber(com.pubsub.v1.PubsubProto.Subscriber value) {
+        if (subscriberBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            subscriber_ != null &&
+            subscriber_ != com.pubsub.v1.PubsubProto.Subscriber.getDefaultInstance()) {
+            getSubscriberBuilder().mergeFrom(value);
+          } else {
+            subscriber_ = value;
+          }
+        } else {
+          subscriberBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pubsub.v1.Subscriber subscriber = 1 [json_name = "subscriber"];</code>
+       */
+      public Builder clearSubscriber() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        subscriber_ = null;
+        if (subscriberBuilder_ != null) {
+          subscriberBuilder_.dispose();
+          subscriberBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pubsub.v1.Subscriber subscriber = 1 [json_name = "subscriber"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.Subscriber.Builder getSubscriberBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getSubscriberFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.pubsub.v1.Subscriber subscriber = 1 [json_name = "subscriber"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.SubscriberOrBuilder getSubscriberOrBuilder() {
+        if (subscriberBuilder_ != null) {
+          return subscriberBuilder_.getMessageOrBuilder();
+        } else {
+          return subscriber_ == null ?
+              com.pubsub.v1.PubsubProto.Subscriber.getDefaultInstance() : subscriber_;
+        }
+      }
+      /**
+       * <code>.pubsub.v1.Subscriber subscriber = 1 [json_name = "subscriber"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.pubsub.v1.PubsubProto.Subscriber, com.pubsub.v1.PubsubProto.Subscriber.Builder, com.pubsub.v1.PubsubProto.SubscriberOrBuilder> 
+          getSubscriberFieldBuilder() {
+        if (subscriberBuilder_ == null) {
+          subscriberBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.pubsub.v1.PubsubProto.Subscriber, com.pubsub.v1.PubsubProto.Subscriber.Builder, com.pubsub.v1.PubsubProto.SubscriberOrBuilder>(
+                  getSubscriber(),
+                  getParentForChildren(),
+                  isClean());
+          subscriber_ = null;
+        }
+        return subscriberBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.QuerySubscriberResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.QuerySubscriberResponse)
+    private static final com.pubsub.v1.QueryProto.QuerySubscriberResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.QueryProto.QuerySubscriberResponse();
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySubscriberResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySubscriberResponse>() {
+      @java.lang.Override
+      public QuerySubscriberResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySubscriberResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySubscriberResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.QueryProto.QuerySubscriberResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySubscribersRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.QuerySubscribersRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code pubsub.v1.QuerySubscribersRequest}
+   */
+  public static final class QuerySubscribersRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.QuerySubscribersRequest)
+      QuerySubscribersRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySubscribersRequest.newBuilder() to construct.
+    private QuerySubscribersRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySubscribersRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySubscribersRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscribersRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscribersRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.QueryProto.QuerySubscribersRequest.class, com.pubsub.v1.QueryProto.QuerySubscribersRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.QueryProto.QuerySubscribersRequest)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.QueryProto.QuerySubscribersRequest other = (com.pubsub.v1.QueryProto.QuerySubscribersRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscribersRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscribersRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscribersRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscribersRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscribersRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscribersRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscribersRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscribersRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscribersRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscribersRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscribersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscribersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.QueryProto.QuerySubscribersRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pubsub.v1.QuerySubscribersRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.QuerySubscribersRequest)
+        com.pubsub.v1.QueryProto.QuerySubscribersRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscribersRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscribersRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.QueryProto.QuerySubscribersRequest.class, com.pubsub.v1.QueryProto.QuerySubscribersRequest.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.QueryProto.QuerySubscribersRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscribersRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscribersRequest getDefaultInstanceForType() {
+        return com.pubsub.v1.QueryProto.QuerySubscribersRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscribersRequest build() {
+        com.pubsub.v1.QueryProto.QuerySubscribersRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscribersRequest buildPartial() {
+        com.pubsub.v1.QueryProto.QuerySubscribersRequest result = new com.pubsub.v1.QueryProto.QuerySubscribersRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.QueryProto.QuerySubscribersRequest) {
+          return mergeFrom((com.pubsub.v1.QueryProto.QuerySubscribersRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.QueryProto.QuerySubscribersRequest other) {
+        if (other == com.pubsub.v1.QueryProto.QuerySubscribersRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.QuerySubscribersRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.QuerySubscribersRequest)
+    private static final com.pubsub.v1.QueryProto.QuerySubscribersRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.QueryProto.QuerySubscribersRequest();
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscribersRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySubscribersRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySubscribersRequest>() {
+      @java.lang.Override
+      public QuerySubscribersRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySubscribersRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySubscribersRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.QueryProto.QuerySubscribersRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySubscribersResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.QuerySubscribersResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .pubsub.v1.Subscriber subscribers = 1 [json_name = "subscribers"];</code>
+     */
+    java.util.List<com.pubsub.v1.PubsubProto.Subscriber> 
+        getSubscribersList();
+    /**
+     * <code>repeated .pubsub.v1.Subscriber subscribers = 1 [json_name = "subscribers"];</code>
+     */
+    com.pubsub.v1.PubsubProto.Subscriber getSubscribers(int index);
+    /**
+     * <code>repeated .pubsub.v1.Subscriber subscribers = 1 [json_name = "subscribers"];</code>
+     */
+    int getSubscribersCount();
+    /**
+     * <code>repeated .pubsub.v1.Subscriber subscribers = 1 [json_name = "subscribers"];</code>
+     */
+    java.util.List<? extends com.pubsub.v1.PubsubProto.SubscriberOrBuilder> 
+        getSubscribersOrBuilderList();
+    /**
+     * <code>repeated .pubsub.v1.Subscriber subscribers = 1 [json_name = "subscribers"];</code>
+     */
+    com.pubsub.v1.PubsubProto.SubscriberOrBuilder getSubscribersOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code pubsub.v1.QuerySubscribersResponse}
+   */
+  public static final class QuerySubscribersResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.QuerySubscribersResponse)
+      QuerySubscribersResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySubscribersResponse.newBuilder() to construct.
+    private QuerySubscribersResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySubscribersResponse() {
+      subscribers_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySubscribersResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscribersResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscribersResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.QueryProto.QuerySubscribersResponse.class, com.pubsub.v1.QueryProto.QuerySubscribersResponse.Builder.class);
+    }
+
+    public static final int SUBSCRIBERS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.pubsub.v1.PubsubProto.Subscriber> subscribers_;
+    /**
+     * <code>repeated .pubsub.v1.Subscriber subscribers = 1 [json_name = "subscribers"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.pubsub.v1.PubsubProto.Subscriber> getSubscribersList() {
+      return subscribers_;
+    }
+    /**
+     * <code>repeated .pubsub.v1.Subscriber subscribers = 1 [json_name = "subscribers"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.pubsub.v1.PubsubProto.SubscriberOrBuilder> 
+        getSubscribersOrBuilderList() {
+      return subscribers_;
+    }
+    /**
+     * <code>repeated .pubsub.v1.Subscriber subscribers = 1 [json_name = "subscribers"];</code>
+     */
+    @java.lang.Override
+    public int getSubscribersCount() {
+      return subscribers_.size();
+    }
+    /**
+     * <code>repeated .pubsub.v1.Subscriber subscribers = 1 [json_name = "subscribers"];</code>
+     */
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.Subscriber getSubscribers(int index) {
+      return subscribers_.get(index);
+    }
+    /**
+     * <code>repeated .pubsub.v1.Subscriber subscribers = 1 [json_name = "subscribers"];</code>
+     */
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.SubscriberOrBuilder getSubscribersOrBuilder(
+        int index) {
+      return subscribers_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < subscribers_.size(); i++) {
+        output.writeMessage(1, subscribers_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < subscribers_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, subscribers_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.QueryProto.QuerySubscribersResponse)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.QueryProto.QuerySubscribersResponse other = (com.pubsub.v1.QueryProto.QuerySubscribersResponse) obj;
+
+      if (!getSubscribersList()
+          .equals(other.getSubscribersList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getSubscribersCount() > 0) {
+        hash = (37 * hash) + SUBSCRIBERS_FIELD_NUMBER;
+        hash = (53 * hash) + getSubscribersList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscribersResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscribersResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscribersResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscribersResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscribersResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscribersResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscribersResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscribersResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscribersResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscribersResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscribersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscribersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.QueryProto.QuerySubscribersResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pubsub.v1.QuerySubscribersResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.QuerySubscribersResponse)
+        com.pubsub.v1.QueryProto.QuerySubscribersResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscribersResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscribersResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.QueryProto.QuerySubscribersResponse.class, com.pubsub.v1.QueryProto.QuerySubscribersResponse.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.QueryProto.QuerySubscribersResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (subscribersBuilder_ == null) {
+          subscribers_ = java.util.Collections.emptyList();
+        } else {
+          subscribers_ = null;
+          subscribersBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscribersResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscribersResponse getDefaultInstanceForType() {
+        return com.pubsub.v1.QueryProto.QuerySubscribersResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscribersResponse build() {
+        com.pubsub.v1.QueryProto.QuerySubscribersResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscribersResponse buildPartial() {
+        com.pubsub.v1.QueryProto.QuerySubscribersResponse result = new com.pubsub.v1.QueryProto.QuerySubscribersResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.pubsub.v1.QueryProto.QuerySubscribersResponse result) {
+        if (subscribersBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            subscribers_ = java.util.Collections.unmodifiableList(subscribers_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.subscribers_ = subscribers_;
+        } else {
+          result.subscribers_ = subscribersBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.pubsub.v1.QueryProto.QuerySubscribersResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.QueryProto.QuerySubscribersResponse) {
+          return mergeFrom((com.pubsub.v1.QueryProto.QuerySubscribersResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.QueryProto.QuerySubscribersResponse other) {
+        if (other == com.pubsub.v1.QueryProto.QuerySubscribersResponse.getDefaultInstance()) return this;
+        if (subscribersBuilder_ == null) {
+          if (!other.subscribers_.isEmpty()) {
+            if (subscribers_.isEmpty()) {
+              subscribers_ = other.subscribers_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureSubscribersIsMutable();
+              subscribers_.addAll(other.subscribers_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.subscribers_.isEmpty()) {
+            if (subscribersBuilder_.isEmpty()) {
+              subscribersBuilder_.dispose();
+              subscribersBuilder_ = null;
+              subscribers_ = other.subscribers_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              subscribersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSubscribersFieldBuilder() : null;
+            } else {
+              subscribersBuilder_.addAllMessages(other.subscribers_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.pubsub.v1.PubsubProto.Subscriber m =
+                    input.readMessage(
+                        com.pubsub.v1.PubsubProto.Subscriber.parser(),
+                        extensionRegistry);
+                if (subscribersBuilder_ == null) {
+                  ensureSubscribersIsMutable();
+                  subscribers_.add(m);
+                } else {
+                  subscribersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.pubsub.v1.PubsubProto.Subscriber> subscribers_ =
+        java.util.Collections.emptyList();
+      private void ensureSubscribersIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          subscribers_ = new java.util.ArrayList<com.pubsub.v1.PubsubProto.Subscriber>(subscribers_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.pubsub.v1.PubsubProto.Subscriber, com.pubsub.v1.PubsubProto.Subscriber.Builder, com.pubsub.v1.PubsubProto.SubscriberOrBuilder> subscribersBuilder_;
+
+      /**
+       * <code>repeated .pubsub.v1.Subscriber subscribers = 1 [json_name = "subscribers"];</code>
+       */
+      public java.util.List<com.pubsub.v1.PubsubProto.Subscriber> getSubscribersList() {
+        if (subscribersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(subscribers_);
+        } else {
+          return subscribersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.Subscriber subscribers = 1 [json_name = "subscribers"];</code>
+       */
+      public int getSubscribersCount() {
+        if (subscribersBuilder_ == null) {
+          return subscribers_.size();
+        } else {
+          return subscribersBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.Subscriber subscribers = 1 [json_name = "subscribers"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.Subscriber getSubscribers(int index) {
+        if (subscribersBuilder_ == null) {
+          return subscribers_.get(index);
+        } else {
+          return subscribersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.Subscriber subscribers = 1 [json_name = "subscribers"];</code>
+       */
+      public Builder setSubscribers(
+          int index, com.pubsub.v1.PubsubProto.Subscriber value) {
+        if (subscribersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSubscribersIsMutable();
+          subscribers_.set(index, value);
+          onChanged();
+        } else {
+          subscribersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.Subscriber subscribers = 1 [json_name = "subscribers"];</code>
+       */
+      public Builder setSubscribers(
+          int index, com.pubsub.v1.PubsubProto.Subscriber.Builder builderForValue) {
+        if (subscribersBuilder_ == null) {
+          ensureSubscribersIsMutable();
+          subscribers_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          subscribersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.Subscriber subscribers = 1 [json_name = "subscribers"];</code>
+       */
+      public Builder addSubscribers(com.pubsub.v1.PubsubProto.Subscriber value) {
+        if (subscribersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSubscribersIsMutable();
+          subscribers_.add(value);
+          onChanged();
+        } else {
+          subscribersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.Subscriber subscribers = 1 [json_name = "subscribers"];</code>
+       */
+      public Builder addSubscribers(
+          int index, com.pubsub.v1.PubsubProto.Subscriber value) {
+        if (subscribersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSubscribersIsMutable();
+          subscribers_.add(index, value);
+          onChanged();
+        } else {
+          subscribersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.Subscriber subscribers = 1 [json_name = "subscribers"];</code>
+       */
+      public Builder addSubscribers(
+          com.pubsub.v1.PubsubProto.Subscriber.Builder builderForValue) {
+        if (subscribersBuilder_ == null) {
+          ensureSubscribersIsMutable();
+          subscribers_.add(builderForValue.build());
+          onChanged();
+        } else {
+          subscribersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.Subscriber subscribers = 1 [json_name = "subscribers"];</code>
+       */
+      public Builder addSubscribers(
+          int index, com.pubsub.v1.PubsubProto.Subscriber.Builder builderForValue) {
+        if (subscribersBuilder_ == null) {
+          ensureSubscribersIsMutable();
+          subscribers_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          subscribersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.Subscriber subscribers = 1 [json_name = "subscribers"];</code>
+       */
+      public Builder addAllSubscribers(
+          java.lang.Iterable<? extends com.pubsub.v1.PubsubProto.Subscriber> values) {
+        if (subscribersBuilder_ == null) {
+          ensureSubscribersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, subscribers_);
+          onChanged();
+        } else {
+          subscribersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.Subscriber subscribers = 1 [json_name = "subscribers"];</code>
+       */
+      public Builder clearSubscribers() {
+        if (subscribersBuilder_ == null) {
+          subscribers_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          subscribersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.Subscriber subscribers = 1 [json_name = "subscribers"];</code>
+       */
+      public Builder removeSubscribers(int index) {
+        if (subscribersBuilder_ == null) {
+          ensureSubscribersIsMutable();
+          subscribers_.remove(index);
+          onChanged();
+        } else {
+          subscribersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.Subscriber subscribers = 1 [json_name = "subscribers"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.Subscriber.Builder getSubscribersBuilder(
+          int index) {
+        return getSubscribersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .pubsub.v1.Subscriber subscribers = 1 [json_name = "subscribers"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.SubscriberOrBuilder getSubscribersOrBuilder(
+          int index) {
+        if (subscribersBuilder_ == null) {
+          return subscribers_.get(index);  } else {
+          return subscribersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.Subscriber subscribers = 1 [json_name = "subscribers"];</code>
+       */
+      public java.util.List<? extends com.pubsub.v1.PubsubProto.SubscriberOrBuilder> 
+           getSubscribersOrBuilderList() {
+        if (subscribersBuilder_ != null) {
+          return subscribersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(subscribers_);
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.Subscriber subscribers = 1 [json_name = "subscribers"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.Subscriber.Builder addSubscribersBuilder() {
+        return getSubscribersFieldBuilder().addBuilder(
+            com.pubsub.v1.PubsubProto.Subscriber.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .pubsub.v1.Subscriber subscribers = 1 [json_name = "subscribers"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.Subscriber.Builder addSubscribersBuilder(
+          int index) {
+        return getSubscribersFieldBuilder().addBuilder(
+            index, com.pubsub.v1.PubsubProto.Subscriber.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .pubsub.v1.Subscriber subscribers = 1 [json_name = "subscribers"];</code>
+       */
+      public java.util.List<com.pubsub.v1.PubsubProto.Subscriber.Builder> 
+           getSubscribersBuilderList() {
+        return getSubscribersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.pubsub.v1.PubsubProto.Subscriber, com.pubsub.v1.PubsubProto.Subscriber.Builder, com.pubsub.v1.PubsubProto.SubscriberOrBuilder> 
+          getSubscribersFieldBuilder() {
+        if (subscribersBuilder_ == null) {
+          subscribersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.pubsub.v1.PubsubProto.Subscriber, com.pubsub.v1.PubsubProto.Subscriber.Builder, com.pubsub.v1.PubsubProto.SubscriberOrBuilder>(
+                  subscribers_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          subscribers_ = null;
+        }
+        return subscribersBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.QuerySubscribersResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.QuerySubscribersResponse)
+    private static final com.pubsub.v1.QueryProto.QuerySubscribersResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.QueryProto.QuerySubscribersResponse();
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscribersResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySubscribersResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySubscribersResponse>() {
+      @java.lang.Override
+      public QuerySubscribersResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySubscribersResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySubscribersResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.QueryProto.QuerySubscribersResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPublisherIntentRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.QueryPublisherIntentRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string publisher_domain = 1 [json_name = "publisherDomain"];</code>
+     * @return The publisherDomain.
+     */
+    java.lang.String getPublisherDomain();
+    /**
+     * <code>string publisher_domain = 1 [json_name = "publisherDomain"];</code>
+     * @return The bytes for publisherDomain.
+     */
+    com.google.protobuf.ByteString
+        getPublisherDomainBytes();
+
+    /**
+     * <code>string subscription_id = 2 [json_name = "subscriptionId"];</code>
+     * @return The subscriptionId.
+     */
+    java.lang.String getSubscriptionId();
+    /**
+     * <code>string subscription_id = 2 [json_name = "subscriptionId"];</code>
+     * @return The bytes for subscriptionId.
+     */
+    com.google.protobuf.ByteString
+        getSubscriptionIdBytes();
+  }
+  /**
+   * Protobuf type {@code pubsub.v1.QueryPublisherIntentRequest}
+   */
+  public static final class QueryPublisherIntentRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.QueryPublisherIntentRequest)
+      QueryPublisherIntentRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPublisherIntentRequest.newBuilder() to construct.
+    private QueryPublisherIntentRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPublisherIntentRequest() {
+      publisherDomain_ = "";
+      subscriptionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPublisherIntentRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.QueryProto.QueryPublisherIntentRequest.class, com.pubsub.v1.QueryProto.QueryPublisherIntentRequest.Builder.class);
+    }
+
+    public static final int PUBLISHER_DOMAIN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object publisherDomain_ = "";
+    /**
+     * <code>string publisher_domain = 1 [json_name = "publisherDomain"];</code>
+     * @return The publisherDomain.
+     */
+    @java.lang.Override
+    public java.lang.String getPublisherDomain() {
+      java.lang.Object ref = publisherDomain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        publisherDomain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string publisher_domain = 1 [json_name = "publisherDomain"];</code>
+     * @return The bytes for publisherDomain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPublisherDomainBytes() {
+      java.lang.Object ref = publisherDomain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        publisherDomain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUBSCRIPTION_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object subscriptionId_ = "";
+    /**
+     * <code>string subscription_id = 2 [json_name = "subscriptionId"];</code>
+     * @return The subscriptionId.
+     */
+    @java.lang.Override
+    public java.lang.String getSubscriptionId() {
+      java.lang.Object ref = subscriptionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subscriptionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string subscription_id = 2 [json_name = "subscriptionId"];</code>
+     * @return The bytes for subscriptionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubscriptionIdBytes() {
+      java.lang.Object ref = subscriptionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subscriptionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publisherDomain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, publisherDomain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriptionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, subscriptionId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publisherDomain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, publisherDomain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriptionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, subscriptionId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.QueryProto.QueryPublisherIntentRequest)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.QueryProto.QueryPublisherIntentRequest other = (com.pubsub.v1.QueryProto.QueryPublisherIntentRequest) obj;
+
+      if (!getPublisherDomain()
+          .equals(other.getPublisherDomain())) return false;
+      if (!getSubscriptionId()
+          .equals(other.getSubscriptionId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PUBLISHER_DOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getPublisherDomain().hashCode();
+      hash = (37 * hash) + SUBSCRIPTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubscriptionId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.QueryProto.QueryPublisherIntentRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pubsub.v1.QueryPublisherIntentRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.QueryPublisherIntentRequest)
+        com.pubsub.v1.QueryProto.QueryPublisherIntentRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.QueryProto.QueryPublisherIntentRequest.class, com.pubsub.v1.QueryProto.QueryPublisherIntentRequest.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.QueryProto.QueryPublisherIntentRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        publisherDomain_ = "";
+        subscriptionId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryPublisherIntentRequest getDefaultInstanceForType() {
+        return com.pubsub.v1.QueryProto.QueryPublisherIntentRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryPublisherIntentRequest build() {
+        com.pubsub.v1.QueryProto.QueryPublisherIntentRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryPublisherIntentRequest buildPartial() {
+        com.pubsub.v1.QueryProto.QueryPublisherIntentRequest result = new com.pubsub.v1.QueryProto.QueryPublisherIntentRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pubsub.v1.QueryProto.QueryPublisherIntentRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.publisherDomain_ = publisherDomain_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.subscriptionId_ = subscriptionId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.QueryProto.QueryPublisherIntentRequest) {
+          return mergeFrom((com.pubsub.v1.QueryProto.QueryPublisherIntentRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.QueryProto.QueryPublisherIntentRequest other) {
+        if (other == com.pubsub.v1.QueryProto.QueryPublisherIntentRequest.getDefaultInstance()) return this;
+        if (!other.getPublisherDomain().isEmpty()) {
+          publisherDomain_ = other.publisherDomain_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getSubscriptionId().isEmpty()) {
+          subscriptionId_ = other.subscriptionId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                publisherDomain_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                subscriptionId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object publisherDomain_ = "";
+      /**
+       * <code>string publisher_domain = 1 [json_name = "publisherDomain"];</code>
+       * @return The publisherDomain.
+       */
+      public java.lang.String getPublisherDomain() {
+        java.lang.Object ref = publisherDomain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          publisherDomain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string publisher_domain = 1 [json_name = "publisherDomain"];</code>
+       * @return The bytes for publisherDomain.
+       */
+      public com.google.protobuf.ByteString
+          getPublisherDomainBytes() {
+        java.lang.Object ref = publisherDomain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          publisherDomain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string publisher_domain = 1 [json_name = "publisherDomain"];</code>
+       * @param value The publisherDomain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublisherDomain(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        publisherDomain_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string publisher_domain = 1 [json_name = "publisherDomain"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPublisherDomain() {
+        publisherDomain_ = getDefaultInstance().getPublisherDomain();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string publisher_domain = 1 [json_name = "publisherDomain"];</code>
+       * @param value The bytes for publisherDomain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublisherDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        publisherDomain_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object subscriptionId_ = "";
+      /**
+       * <code>string subscription_id = 2 [json_name = "subscriptionId"];</code>
+       * @return The subscriptionId.
+       */
+      public java.lang.String getSubscriptionId() {
+        java.lang.Object ref = subscriptionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subscriptionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string subscription_id = 2 [json_name = "subscriptionId"];</code>
+       * @return The bytes for subscriptionId.
+       */
+      public com.google.protobuf.ByteString
+          getSubscriptionIdBytes() {
+        java.lang.Object ref = subscriptionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subscriptionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string subscription_id = 2 [json_name = "subscriptionId"];</code>
+       * @param value The subscriptionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriptionId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        subscriptionId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subscription_id = 2 [json_name = "subscriptionId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubscriptionId() {
+        subscriptionId_ = getDefaultInstance().getSubscriptionId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subscription_id = 2 [json_name = "subscriptionId"];</code>
+       * @param value The bytes for subscriptionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriptionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        subscriptionId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.QueryPublisherIntentRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.QueryPublisherIntentRequest)
+    private static final com.pubsub.v1.QueryProto.QueryPublisherIntentRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.QueryProto.QueryPublisherIntentRequest();
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPublisherIntentRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPublisherIntentRequest>() {
+      @java.lang.Override
+      public QueryPublisherIntentRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPublisherIntentRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPublisherIntentRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.QueryProto.QueryPublisherIntentRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPublisherIntentResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.QueryPublisherIntentResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.pubsub.v1.PublisherIntent publisher_intent = 1 [json_name = "publisherIntent"];</code>
+     * @return Whether the publisherIntent field is set.
+     */
+    boolean hasPublisherIntent();
+    /**
+     * <code>.pubsub.v1.PublisherIntent publisher_intent = 1 [json_name = "publisherIntent"];</code>
+     * @return The publisherIntent.
+     */
+    com.pubsub.v1.PubsubProto.PublisherIntent getPublisherIntent();
+    /**
+     * <code>.pubsub.v1.PublisherIntent publisher_intent = 1 [json_name = "publisherIntent"];</code>
+     */
+    com.pubsub.v1.PubsubProto.PublisherIntentOrBuilder getPublisherIntentOrBuilder();
+  }
+  /**
+   * Protobuf type {@code pubsub.v1.QueryPublisherIntentResponse}
+   */
+  public static final class QueryPublisherIntentResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.QueryPublisherIntentResponse)
+      QueryPublisherIntentResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPublisherIntentResponse.newBuilder() to construct.
+    private QueryPublisherIntentResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPublisherIntentResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPublisherIntentResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.QueryProto.QueryPublisherIntentResponse.class, com.pubsub.v1.QueryProto.QueryPublisherIntentResponse.Builder.class);
+    }
+
+    public static final int PUBLISHER_INTENT_FIELD_NUMBER = 1;
+    private com.pubsub.v1.PubsubProto.PublisherIntent publisherIntent_;
+    /**
+     * <code>.pubsub.v1.PublisherIntent publisher_intent = 1 [json_name = "publisherIntent"];</code>
+     * @return Whether the publisherIntent field is set.
+     */
+    @java.lang.Override
+    public boolean hasPublisherIntent() {
+      return publisherIntent_ != null;
+    }
+    /**
+     * <code>.pubsub.v1.PublisherIntent publisher_intent = 1 [json_name = "publisherIntent"];</code>
+     * @return The publisherIntent.
+     */
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.PublisherIntent getPublisherIntent() {
+      return publisherIntent_ == null ? com.pubsub.v1.PubsubProto.PublisherIntent.getDefaultInstance() : publisherIntent_;
+    }
+    /**
+     * <code>.pubsub.v1.PublisherIntent publisher_intent = 1 [json_name = "publisherIntent"];</code>
+     */
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.PublisherIntentOrBuilder getPublisherIntentOrBuilder() {
+      return publisherIntent_ == null ? com.pubsub.v1.PubsubProto.PublisherIntent.getDefaultInstance() : publisherIntent_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (publisherIntent_ != null) {
+        output.writeMessage(1, getPublisherIntent());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (publisherIntent_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPublisherIntent());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.QueryProto.QueryPublisherIntentResponse)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.QueryProto.QueryPublisherIntentResponse other = (com.pubsub.v1.QueryProto.QueryPublisherIntentResponse) obj;
+
+      if (hasPublisherIntent() != other.hasPublisherIntent()) return false;
+      if (hasPublisherIntent()) {
+        if (!getPublisherIntent()
+            .equals(other.getPublisherIntent())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPublisherIntent()) {
+        hash = (37 * hash) + PUBLISHER_INTENT_FIELD_NUMBER;
+        hash = (53 * hash) + getPublisherIntent().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.QueryProto.QueryPublisherIntentResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pubsub.v1.QueryPublisherIntentResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.QueryPublisherIntentResponse)
+        com.pubsub.v1.QueryProto.QueryPublisherIntentResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.QueryProto.QueryPublisherIntentResponse.class, com.pubsub.v1.QueryProto.QueryPublisherIntentResponse.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.QueryProto.QueryPublisherIntentResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        publisherIntent_ = null;
+        if (publisherIntentBuilder_ != null) {
+          publisherIntentBuilder_.dispose();
+          publisherIntentBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryPublisherIntentResponse getDefaultInstanceForType() {
+        return com.pubsub.v1.QueryProto.QueryPublisherIntentResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryPublisherIntentResponse build() {
+        com.pubsub.v1.QueryProto.QueryPublisherIntentResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryPublisherIntentResponse buildPartial() {
+        com.pubsub.v1.QueryProto.QueryPublisherIntentResponse result = new com.pubsub.v1.QueryProto.QueryPublisherIntentResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pubsub.v1.QueryProto.QueryPublisherIntentResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.publisherIntent_ = publisherIntentBuilder_ == null
+              ? publisherIntent_
+              : publisherIntentBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.QueryProto.QueryPublisherIntentResponse) {
+          return mergeFrom((com.pubsub.v1.QueryProto.QueryPublisherIntentResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.QueryProto.QueryPublisherIntentResponse other) {
+        if (other == com.pubsub.v1.QueryProto.QueryPublisherIntentResponse.getDefaultInstance()) return this;
+        if (other.hasPublisherIntent()) {
+          mergePublisherIntent(other.getPublisherIntent());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPublisherIntentFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.pubsub.v1.PubsubProto.PublisherIntent publisherIntent_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.pubsub.v1.PubsubProto.PublisherIntent, com.pubsub.v1.PubsubProto.PublisherIntent.Builder, com.pubsub.v1.PubsubProto.PublisherIntentOrBuilder> publisherIntentBuilder_;
+      /**
+       * <code>.pubsub.v1.PublisherIntent publisher_intent = 1 [json_name = "publisherIntent"];</code>
+       * @return Whether the publisherIntent field is set.
+       */
+      public boolean hasPublisherIntent() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.pubsub.v1.PublisherIntent publisher_intent = 1 [json_name = "publisherIntent"];</code>
+       * @return The publisherIntent.
+       */
+      public com.pubsub.v1.PubsubProto.PublisherIntent getPublisherIntent() {
+        if (publisherIntentBuilder_ == null) {
+          return publisherIntent_ == null ? com.pubsub.v1.PubsubProto.PublisherIntent.getDefaultInstance() : publisherIntent_;
+        } else {
+          return publisherIntentBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.pubsub.v1.PublisherIntent publisher_intent = 1 [json_name = "publisherIntent"];</code>
+       */
+      public Builder setPublisherIntent(com.pubsub.v1.PubsubProto.PublisherIntent value) {
+        if (publisherIntentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          publisherIntent_ = value;
+        } else {
+          publisherIntentBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pubsub.v1.PublisherIntent publisher_intent = 1 [json_name = "publisherIntent"];</code>
+       */
+      public Builder setPublisherIntent(
+          com.pubsub.v1.PubsubProto.PublisherIntent.Builder builderForValue) {
+        if (publisherIntentBuilder_ == null) {
+          publisherIntent_ = builderForValue.build();
+        } else {
+          publisherIntentBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pubsub.v1.PublisherIntent publisher_intent = 1 [json_name = "publisherIntent"];</code>
+       */
+      public Builder mergePublisherIntent(com.pubsub.v1.PubsubProto.PublisherIntent value) {
+        if (publisherIntentBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            publisherIntent_ != null &&
+            publisherIntent_ != com.pubsub.v1.PubsubProto.PublisherIntent.getDefaultInstance()) {
+            getPublisherIntentBuilder().mergeFrom(value);
+          } else {
+            publisherIntent_ = value;
+          }
+        } else {
+          publisherIntentBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pubsub.v1.PublisherIntent publisher_intent = 1 [json_name = "publisherIntent"];</code>
+       */
+      public Builder clearPublisherIntent() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        publisherIntent_ = null;
+        if (publisherIntentBuilder_ != null) {
+          publisherIntentBuilder_.dispose();
+          publisherIntentBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pubsub.v1.PublisherIntent publisher_intent = 1 [json_name = "publisherIntent"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.PublisherIntent.Builder getPublisherIntentBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPublisherIntentFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.pubsub.v1.PublisherIntent publisher_intent = 1 [json_name = "publisherIntent"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.PublisherIntentOrBuilder getPublisherIntentOrBuilder() {
+        if (publisherIntentBuilder_ != null) {
+          return publisherIntentBuilder_.getMessageOrBuilder();
+        } else {
+          return publisherIntent_ == null ?
+              com.pubsub.v1.PubsubProto.PublisherIntent.getDefaultInstance() : publisherIntent_;
+        }
+      }
+      /**
+       * <code>.pubsub.v1.PublisherIntent publisher_intent = 1 [json_name = "publisherIntent"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.pubsub.v1.PubsubProto.PublisherIntent, com.pubsub.v1.PubsubProto.PublisherIntent.Builder, com.pubsub.v1.PubsubProto.PublisherIntentOrBuilder> 
+          getPublisherIntentFieldBuilder() {
+        if (publisherIntentBuilder_ == null) {
+          publisherIntentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.pubsub.v1.PubsubProto.PublisherIntent, com.pubsub.v1.PubsubProto.PublisherIntent.Builder, com.pubsub.v1.PubsubProto.PublisherIntentOrBuilder>(
+                  getPublisherIntent(),
+                  getParentForChildren(),
+                  isClean());
+          publisherIntent_ = null;
+        }
+        return publisherIntentBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.QueryPublisherIntentResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.QueryPublisherIntentResponse)
+    private static final com.pubsub.v1.QueryProto.QueryPublisherIntentResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.QueryProto.QueryPublisherIntentResponse();
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPublisherIntentResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPublisherIntentResponse>() {
+      @java.lang.Override
+      public QueryPublisherIntentResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPublisherIntentResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPublisherIntentResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.QueryProto.QueryPublisherIntentResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPublisherIntentsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.QueryPublisherIntentsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code pubsub.v1.QueryPublisherIntentsRequest}
+   */
+  public static final class QueryPublisherIntentsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.QueryPublisherIntentsRequest)
+      QueryPublisherIntentsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPublisherIntentsRequest.newBuilder() to construct.
+    private QueryPublisherIntentsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPublisherIntentsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPublisherIntentsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.QueryProto.QueryPublisherIntentsRequest.class, com.pubsub.v1.QueryProto.QueryPublisherIntentsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.QueryProto.QueryPublisherIntentsRequest)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.QueryProto.QueryPublisherIntentsRequest other = (com.pubsub.v1.QueryProto.QueryPublisherIntentsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.QueryProto.QueryPublisherIntentsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pubsub.v1.QueryPublisherIntentsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.QueryPublisherIntentsRequest)
+        com.pubsub.v1.QueryProto.QueryPublisherIntentsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.QueryProto.QueryPublisherIntentsRequest.class, com.pubsub.v1.QueryProto.QueryPublisherIntentsRequest.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.QueryProto.QueryPublisherIntentsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryPublisherIntentsRequest getDefaultInstanceForType() {
+        return com.pubsub.v1.QueryProto.QueryPublisherIntentsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryPublisherIntentsRequest build() {
+        com.pubsub.v1.QueryProto.QueryPublisherIntentsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryPublisherIntentsRequest buildPartial() {
+        com.pubsub.v1.QueryProto.QueryPublisherIntentsRequest result = new com.pubsub.v1.QueryProto.QueryPublisherIntentsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.QueryProto.QueryPublisherIntentsRequest) {
+          return mergeFrom((com.pubsub.v1.QueryProto.QueryPublisherIntentsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.QueryProto.QueryPublisherIntentsRequest other) {
+        if (other == com.pubsub.v1.QueryProto.QueryPublisherIntentsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.QueryPublisherIntentsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.QueryPublisherIntentsRequest)
+    private static final com.pubsub.v1.QueryProto.QueryPublisherIntentsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.QueryProto.QueryPublisherIntentsRequest();
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPublisherIntentsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPublisherIntentsRequest>() {
+      @java.lang.Override
+      public QueryPublisherIntentsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPublisherIntentsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPublisherIntentsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.QueryProto.QueryPublisherIntentsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPublisherIntentsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.QueryPublisherIntentsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+     */
+    java.util.List<com.pubsub.v1.PubsubProto.PublisherIntent> 
+        getPublisherIntentsList();
+    /**
+     * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+     */
+    com.pubsub.v1.PubsubProto.PublisherIntent getPublisherIntents(int index);
+    /**
+     * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+     */
+    int getPublisherIntentsCount();
+    /**
+     * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+     */
+    java.util.List<? extends com.pubsub.v1.PubsubProto.PublisherIntentOrBuilder> 
+        getPublisherIntentsOrBuilderList();
+    /**
+     * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+     */
+    com.pubsub.v1.PubsubProto.PublisherIntentOrBuilder getPublisherIntentsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code pubsub.v1.QueryPublisherIntentsResponse}
+   */
+  public static final class QueryPublisherIntentsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.QueryPublisherIntentsResponse)
+      QueryPublisherIntentsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPublisherIntentsResponse.newBuilder() to construct.
+    private QueryPublisherIntentsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPublisherIntentsResponse() {
+      publisherIntents_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPublisherIntentsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.QueryProto.QueryPublisherIntentsResponse.class, com.pubsub.v1.QueryProto.QueryPublisherIntentsResponse.Builder.class);
+    }
+
+    public static final int PUBLISHER_INTENTS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.pubsub.v1.PubsubProto.PublisherIntent> publisherIntents_;
+    /**
+     * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.pubsub.v1.PubsubProto.PublisherIntent> getPublisherIntentsList() {
+      return publisherIntents_;
+    }
+    /**
+     * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.pubsub.v1.PubsubProto.PublisherIntentOrBuilder> 
+        getPublisherIntentsOrBuilderList() {
+      return publisherIntents_;
+    }
+    /**
+     * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+     */
+    @java.lang.Override
+    public int getPublisherIntentsCount() {
+      return publisherIntents_.size();
+    }
+    /**
+     * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+     */
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.PublisherIntent getPublisherIntents(int index) {
+      return publisherIntents_.get(index);
+    }
+    /**
+     * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+     */
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.PublisherIntentOrBuilder getPublisherIntentsOrBuilder(
+        int index) {
+      return publisherIntents_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < publisherIntents_.size(); i++) {
+        output.writeMessage(1, publisherIntents_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < publisherIntents_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, publisherIntents_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.QueryProto.QueryPublisherIntentsResponse)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.QueryProto.QueryPublisherIntentsResponse other = (com.pubsub.v1.QueryProto.QueryPublisherIntentsResponse) obj;
+
+      if (!getPublisherIntentsList()
+          .equals(other.getPublisherIntentsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getPublisherIntentsCount() > 0) {
+        hash = (37 * hash) + PUBLISHER_INTENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getPublisherIntentsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.QueryProto.QueryPublisherIntentsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pubsub.v1.QueryPublisherIntentsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.QueryPublisherIntentsResponse)
+        com.pubsub.v1.QueryProto.QueryPublisherIntentsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.QueryProto.QueryPublisherIntentsResponse.class, com.pubsub.v1.QueryProto.QueryPublisherIntentsResponse.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.QueryProto.QueryPublisherIntentsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (publisherIntentsBuilder_ == null) {
+          publisherIntents_ = java.util.Collections.emptyList();
+        } else {
+          publisherIntents_ = null;
+          publisherIntentsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryPublisherIntentsResponse getDefaultInstanceForType() {
+        return com.pubsub.v1.QueryProto.QueryPublisherIntentsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryPublisherIntentsResponse build() {
+        com.pubsub.v1.QueryProto.QueryPublisherIntentsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryPublisherIntentsResponse buildPartial() {
+        com.pubsub.v1.QueryProto.QueryPublisherIntentsResponse result = new com.pubsub.v1.QueryProto.QueryPublisherIntentsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.pubsub.v1.QueryProto.QueryPublisherIntentsResponse result) {
+        if (publisherIntentsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            publisherIntents_ = java.util.Collections.unmodifiableList(publisherIntents_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.publisherIntents_ = publisherIntents_;
+        } else {
+          result.publisherIntents_ = publisherIntentsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.pubsub.v1.QueryProto.QueryPublisherIntentsResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.QueryProto.QueryPublisherIntentsResponse) {
+          return mergeFrom((com.pubsub.v1.QueryProto.QueryPublisherIntentsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.QueryProto.QueryPublisherIntentsResponse other) {
+        if (other == com.pubsub.v1.QueryProto.QueryPublisherIntentsResponse.getDefaultInstance()) return this;
+        if (publisherIntentsBuilder_ == null) {
+          if (!other.publisherIntents_.isEmpty()) {
+            if (publisherIntents_.isEmpty()) {
+              publisherIntents_ = other.publisherIntents_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensurePublisherIntentsIsMutable();
+              publisherIntents_.addAll(other.publisherIntents_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.publisherIntents_.isEmpty()) {
+            if (publisherIntentsBuilder_.isEmpty()) {
+              publisherIntentsBuilder_.dispose();
+              publisherIntentsBuilder_ = null;
+              publisherIntents_ = other.publisherIntents_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              publisherIntentsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPublisherIntentsFieldBuilder() : null;
+            } else {
+              publisherIntentsBuilder_.addAllMessages(other.publisherIntents_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.pubsub.v1.PubsubProto.PublisherIntent m =
+                    input.readMessage(
+                        com.pubsub.v1.PubsubProto.PublisherIntent.parser(),
+                        extensionRegistry);
+                if (publisherIntentsBuilder_ == null) {
+                  ensurePublisherIntentsIsMutable();
+                  publisherIntents_.add(m);
+                } else {
+                  publisherIntentsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.pubsub.v1.PubsubProto.PublisherIntent> publisherIntents_ =
+        java.util.Collections.emptyList();
+      private void ensurePublisherIntentsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          publisherIntents_ = new java.util.ArrayList<com.pubsub.v1.PubsubProto.PublisherIntent>(publisherIntents_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.pubsub.v1.PubsubProto.PublisherIntent, com.pubsub.v1.PubsubProto.PublisherIntent.Builder, com.pubsub.v1.PubsubProto.PublisherIntentOrBuilder> publisherIntentsBuilder_;
+
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public java.util.List<com.pubsub.v1.PubsubProto.PublisherIntent> getPublisherIntentsList() {
+        if (publisherIntentsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(publisherIntents_);
+        } else {
+          return publisherIntentsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public int getPublisherIntentsCount() {
+        if (publisherIntentsBuilder_ == null) {
+          return publisherIntents_.size();
+        } else {
+          return publisherIntentsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.PublisherIntent getPublisherIntents(int index) {
+        if (publisherIntentsBuilder_ == null) {
+          return publisherIntents_.get(index);
+        } else {
+          return publisherIntentsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public Builder setPublisherIntents(
+          int index, com.pubsub.v1.PubsubProto.PublisherIntent value) {
+        if (publisherIntentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePublisherIntentsIsMutable();
+          publisherIntents_.set(index, value);
+          onChanged();
+        } else {
+          publisherIntentsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public Builder setPublisherIntents(
+          int index, com.pubsub.v1.PubsubProto.PublisherIntent.Builder builderForValue) {
+        if (publisherIntentsBuilder_ == null) {
+          ensurePublisherIntentsIsMutable();
+          publisherIntents_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          publisherIntentsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public Builder addPublisherIntents(com.pubsub.v1.PubsubProto.PublisherIntent value) {
+        if (publisherIntentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePublisherIntentsIsMutable();
+          publisherIntents_.add(value);
+          onChanged();
+        } else {
+          publisherIntentsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public Builder addPublisherIntents(
+          int index, com.pubsub.v1.PubsubProto.PublisherIntent value) {
+        if (publisherIntentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePublisherIntentsIsMutable();
+          publisherIntents_.add(index, value);
+          onChanged();
+        } else {
+          publisherIntentsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public Builder addPublisherIntents(
+          com.pubsub.v1.PubsubProto.PublisherIntent.Builder builderForValue) {
+        if (publisherIntentsBuilder_ == null) {
+          ensurePublisherIntentsIsMutable();
+          publisherIntents_.add(builderForValue.build());
+          onChanged();
+        } else {
+          publisherIntentsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public Builder addPublisherIntents(
+          int index, com.pubsub.v1.PubsubProto.PublisherIntent.Builder builderForValue) {
+        if (publisherIntentsBuilder_ == null) {
+          ensurePublisherIntentsIsMutable();
+          publisherIntents_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          publisherIntentsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public Builder addAllPublisherIntents(
+          java.lang.Iterable<? extends com.pubsub.v1.PubsubProto.PublisherIntent> values) {
+        if (publisherIntentsBuilder_ == null) {
+          ensurePublisherIntentsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, publisherIntents_);
+          onChanged();
+        } else {
+          publisherIntentsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public Builder clearPublisherIntents() {
+        if (publisherIntentsBuilder_ == null) {
+          publisherIntents_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          publisherIntentsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public Builder removePublisherIntents(int index) {
+        if (publisherIntentsBuilder_ == null) {
+          ensurePublisherIntentsIsMutable();
+          publisherIntents_.remove(index);
+          onChanged();
+        } else {
+          publisherIntentsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.PublisherIntent.Builder getPublisherIntentsBuilder(
+          int index) {
+        return getPublisherIntentsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.PublisherIntentOrBuilder getPublisherIntentsOrBuilder(
+          int index) {
+        if (publisherIntentsBuilder_ == null) {
+          return publisherIntents_.get(index);  } else {
+          return publisherIntentsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public java.util.List<? extends com.pubsub.v1.PubsubProto.PublisherIntentOrBuilder> 
+           getPublisherIntentsOrBuilderList() {
+        if (publisherIntentsBuilder_ != null) {
+          return publisherIntentsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(publisherIntents_);
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.PublisherIntent.Builder addPublisherIntentsBuilder() {
+        return getPublisherIntentsFieldBuilder().addBuilder(
+            com.pubsub.v1.PubsubProto.PublisherIntent.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.PublisherIntent.Builder addPublisherIntentsBuilder(
+          int index) {
+        return getPublisherIntentsFieldBuilder().addBuilder(
+            index, com.pubsub.v1.PubsubProto.PublisherIntent.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public java.util.List<com.pubsub.v1.PubsubProto.PublisherIntent.Builder> 
+           getPublisherIntentsBuilderList() {
+        return getPublisherIntentsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.pubsub.v1.PubsubProto.PublisherIntent, com.pubsub.v1.PubsubProto.PublisherIntent.Builder, com.pubsub.v1.PubsubProto.PublisherIntentOrBuilder> 
+          getPublisherIntentsFieldBuilder() {
+        if (publisherIntentsBuilder_ == null) {
+          publisherIntentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.pubsub.v1.PubsubProto.PublisherIntent, com.pubsub.v1.PubsubProto.PublisherIntent.Builder, com.pubsub.v1.PubsubProto.PublisherIntentOrBuilder>(
+                  publisherIntents_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          publisherIntents_ = null;
+        }
+        return publisherIntentsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.QueryPublisherIntentsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.QueryPublisherIntentsResponse)
+    private static final com.pubsub.v1.QueryProto.QueryPublisherIntentsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.QueryProto.QueryPublisherIntentsResponse();
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPublisherIntentsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPublisherIntentsResponse>() {
+      @java.lang.Override
+      public QueryPublisherIntentsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPublisherIntentsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPublisherIntentsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.QueryProto.QueryPublisherIntentsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPublisherIntentsByPublisherDomainRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.QueryPublisherIntentsByPublisherDomainRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string publisher_domain = 1 [json_name = "publisherDomain"];</code>
+     * @return The publisherDomain.
+     */
+    java.lang.String getPublisherDomain();
+    /**
+     * <code>string publisher_domain = 1 [json_name = "publisherDomain"];</code>
+     * @return The bytes for publisherDomain.
+     */
+    com.google.protobuf.ByteString
+        getPublisherDomainBytes();
+  }
+  /**
+   * Protobuf type {@code pubsub.v1.QueryPublisherIntentsByPublisherDomainRequest}
+   */
+  public static final class QueryPublisherIntentsByPublisherDomainRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.QueryPublisherIntentsByPublisherDomainRequest)
+      QueryPublisherIntentsByPublisherDomainRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPublisherIntentsByPublisherDomainRequest.newBuilder() to construct.
+    private QueryPublisherIntentsByPublisherDomainRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPublisherIntentsByPublisherDomainRequest() {
+      publisherDomain_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPublisherIntentsByPublisherDomainRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentsByPublisherDomainRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentsByPublisherDomainRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainRequest.class, com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainRequest.Builder.class);
+    }
+
+    public static final int PUBLISHER_DOMAIN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object publisherDomain_ = "";
+    /**
+     * <code>string publisher_domain = 1 [json_name = "publisherDomain"];</code>
+     * @return The publisherDomain.
+     */
+    @java.lang.Override
+    public java.lang.String getPublisherDomain() {
+      java.lang.Object ref = publisherDomain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        publisherDomain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string publisher_domain = 1 [json_name = "publisherDomain"];</code>
+     * @return The bytes for publisherDomain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPublisherDomainBytes() {
+      java.lang.Object ref = publisherDomain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        publisherDomain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publisherDomain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, publisherDomain_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publisherDomain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, publisherDomain_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainRequest)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainRequest other = (com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainRequest) obj;
+
+      if (!getPublisherDomain()
+          .equals(other.getPublisherDomain())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PUBLISHER_DOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getPublisherDomain().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pubsub.v1.QueryPublisherIntentsByPublisherDomainRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.QueryPublisherIntentsByPublisherDomainRequest)
+        com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentsByPublisherDomainRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentsByPublisherDomainRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainRequest.class, com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainRequest.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        publisherDomain_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentsByPublisherDomainRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainRequest getDefaultInstanceForType() {
+        return com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainRequest build() {
+        com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainRequest buildPartial() {
+        com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainRequest result = new com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.publisherDomain_ = publisherDomain_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainRequest) {
+          return mergeFrom((com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainRequest other) {
+        if (other == com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainRequest.getDefaultInstance()) return this;
+        if (!other.getPublisherDomain().isEmpty()) {
+          publisherDomain_ = other.publisherDomain_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                publisherDomain_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object publisherDomain_ = "";
+      /**
+       * <code>string publisher_domain = 1 [json_name = "publisherDomain"];</code>
+       * @return The publisherDomain.
+       */
+      public java.lang.String getPublisherDomain() {
+        java.lang.Object ref = publisherDomain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          publisherDomain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string publisher_domain = 1 [json_name = "publisherDomain"];</code>
+       * @return The bytes for publisherDomain.
+       */
+      public com.google.protobuf.ByteString
+          getPublisherDomainBytes() {
+        java.lang.Object ref = publisherDomain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          publisherDomain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string publisher_domain = 1 [json_name = "publisherDomain"];</code>
+       * @param value The publisherDomain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublisherDomain(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        publisherDomain_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string publisher_domain = 1 [json_name = "publisherDomain"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPublisherDomain() {
+        publisherDomain_ = getDefaultInstance().getPublisherDomain();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string publisher_domain = 1 [json_name = "publisherDomain"];</code>
+       * @param value The bytes for publisherDomain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublisherDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        publisherDomain_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.QueryPublisherIntentsByPublisherDomainRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.QueryPublisherIntentsByPublisherDomainRequest)
+    private static final com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainRequest();
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPublisherIntentsByPublisherDomainRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPublisherIntentsByPublisherDomainRequest>() {
+      @java.lang.Override
+      public QueryPublisherIntentsByPublisherDomainRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPublisherIntentsByPublisherDomainRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPublisherIntentsByPublisherDomainRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPublisherIntentsByPublisherDomainResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.QueryPublisherIntentsByPublisherDomainResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+     */
+    java.util.List<com.pubsub.v1.PubsubProto.PublisherIntent> 
+        getPublisherIntentsList();
+    /**
+     * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+     */
+    com.pubsub.v1.PubsubProto.PublisherIntent getPublisherIntents(int index);
+    /**
+     * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+     */
+    int getPublisherIntentsCount();
+    /**
+     * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+     */
+    java.util.List<? extends com.pubsub.v1.PubsubProto.PublisherIntentOrBuilder> 
+        getPublisherIntentsOrBuilderList();
+    /**
+     * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+     */
+    com.pubsub.v1.PubsubProto.PublisherIntentOrBuilder getPublisherIntentsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code pubsub.v1.QueryPublisherIntentsByPublisherDomainResponse}
+   */
+  public static final class QueryPublisherIntentsByPublisherDomainResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.QueryPublisherIntentsByPublisherDomainResponse)
+      QueryPublisherIntentsByPublisherDomainResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPublisherIntentsByPublisherDomainResponse.newBuilder() to construct.
+    private QueryPublisherIntentsByPublisherDomainResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPublisherIntentsByPublisherDomainResponse() {
+      publisherIntents_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPublisherIntentsByPublisherDomainResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentsByPublisherDomainResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentsByPublisherDomainResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponse.class, com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponse.Builder.class);
+    }
+
+    public static final int PUBLISHER_INTENTS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.pubsub.v1.PubsubProto.PublisherIntent> publisherIntents_;
+    /**
+     * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.pubsub.v1.PubsubProto.PublisherIntent> getPublisherIntentsList() {
+      return publisherIntents_;
+    }
+    /**
+     * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.pubsub.v1.PubsubProto.PublisherIntentOrBuilder> 
+        getPublisherIntentsOrBuilderList() {
+      return publisherIntents_;
+    }
+    /**
+     * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+     */
+    @java.lang.Override
+    public int getPublisherIntentsCount() {
+      return publisherIntents_.size();
+    }
+    /**
+     * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+     */
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.PublisherIntent getPublisherIntents(int index) {
+      return publisherIntents_.get(index);
+    }
+    /**
+     * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+     */
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.PublisherIntentOrBuilder getPublisherIntentsOrBuilder(
+        int index) {
+      return publisherIntents_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < publisherIntents_.size(); i++) {
+        output.writeMessage(1, publisherIntents_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < publisherIntents_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, publisherIntents_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponse)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponse other = (com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponse) obj;
+
+      if (!getPublisherIntentsList()
+          .equals(other.getPublisherIntentsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getPublisherIntentsCount() > 0) {
+        hash = (37 * hash) + PUBLISHER_INTENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getPublisherIntentsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pubsub.v1.QueryPublisherIntentsByPublisherDomainResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.QueryPublisherIntentsByPublisherDomainResponse)
+        com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentsByPublisherDomainResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentsByPublisherDomainResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponse.class, com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponse.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (publisherIntentsBuilder_ == null) {
+          publisherIntents_ = java.util.Collections.emptyList();
+        } else {
+          publisherIntents_ = null;
+          publisherIntentsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentsByPublisherDomainResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponse getDefaultInstanceForType() {
+        return com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponse build() {
+        com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponse buildPartial() {
+        com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponse result = new com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponse result) {
+        if (publisherIntentsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            publisherIntents_ = java.util.Collections.unmodifiableList(publisherIntents_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.publisherIntents_ = publisherIntents_;
+        } else {
+          result.publisherIntents_ = publisherIntentsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponse) {
+          return mergeFrom((com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponse other) {
+        if (other == com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponse.getDefaultInstance()) return this;
+        if (publisherIntentsBuilder_ == null) {
+          if (!other.publisherIntents_.isEmpty()) {
+            if (publisherIntents_.isEmpty()) {
+              publisherIntents_ = other.publisherIntents_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensurePublisherIntentsIsMutable();
+              publisherIntents_.addAll(other.publisherIntents_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.publisherIntents_.isEmpty()) {
+            if (publisherIntentsBuilder_.isEmpty()) {
+              publisherIntentsBuilder_.dispose();
+              publisherIntentsBuilder_ = null;
+              publisherIntents_ = other.publisherIntents_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              publisherIntentsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPublisherIntentsFieldBuilder() : null;
+            } else {
+              publisherIntentsBuilder_.addAllMessages(other.publisherIntents_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.pubsub.v1.PubsubProto.PublisherIntent m =
+                    input.readMessage(
+                        com.pubsub.v1.PubsubProto.PublisherIntent.parser(),
+                        extensionRegistry);
+                if (publisherIntentsBuilder_ == null) {
+                  ensurePublisherIntentsIsMutable();
+                  publisherIntents_.add(m);
+                } else {
+                  publisherIntentsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.pubsub.v1.PubsubProto.PublisherIntent> publisherIntents_ =
+        java.util.Collections.emptyList();
+      private void ensurePublisherIntentsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          publisherIntents_ = new java.util.ArrayList<com.pubsub.v1.PubsubProto.PublisherIntent>(publisherIntents_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.pubsub.v1.PubsubProto.PublisherIntent, com.pubsub.v1.PubsubProto.PublisherIntent.Builder, com.pubsub.v1.PubsubProto.PublisherIntentOrBuilder> publisherIntentsBuilder_;
+
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public java.util.List<com.pubsub.v1.PubsubProto.PublisherIntent> getPublisherIntentsList() {
+        if (publisherIntentsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(publisherIntents_);
+        } else {
+          return publisherIntentsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public int getPublisherIntentsCount() {
+        if (publisherIntentsBuilder_ == null) {
+          return publisherIntents_.size();
+        } else {
+          return publisherIntentsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.PublisherIntent getPublisherIntents(int index) {
+        if (publisherIntentsBuilder_ == null) {
+          return publisherIntents_.get(index);
+        } else {
+          return publisherIntentsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public Builder setPublisherIntents(
+          int index, com.pubsub.v1.PubsubProto.PublisherIntent value) {
+        if (publisherIntentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePublisherIntentsIsMutable();
+          publisherIntents_.set(index, value);
+          onChanged();
+        } else {
+          publisherIntentsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public Builder setPublisherIntents(
+          int index, com.pubsub.v1.PubsubProto.PublisherIntent.Builder builderForValue) {
+        if (publisherIntentsBuilder_ == null) {
+          ensurePublisherIntentsIsMutable();
+          publisherIntents_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          publisherIntentsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public Builder addPublisherIntents(com.pubsub.v1.PubsubProto.PublisherIntent value) {
+        if (publisherIntentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePublisherIntentsIsMutable();
+          publisherIntents_.add(value);
+          onChanged();
+        } else {
+          publisherIntentsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public Builder addPublisherIntents(
+          int index, com.pubsub.v1.PubsubProto.PublisherIntent value) {
+        if (publisherIntentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePublisherIntentsIsMutable();
+          publisherIntents_.add(index, value);
+          onChanged();
+        } else {
+          publisherIntentsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public Builder addPublisherIntents(
+          com.pubsub.v1.PubsubProto.PublisherIntent.Builder builderForValue) {
+        if (publisherIntentsBuilder_ == null) {
+          ensurePublisherIntentsIsMutable();
+          publisherIntents_.add(builderForValue.build());
+          onChanged();
+        } else {
+          publisherIntentsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public Builder addPublisherIntents(
+          int index, com.pubsub.v1.PubsubProto.PublisherIntent.Builder builderForValue) {
+        if (publisherIntentsBuilder_ == null) {
+          ensurePublisherIntentsIsMutable();
+          publisherIntents_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          publisherIntentsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public Builder addAllPublisherIntents(
+          java.lang.Iterable<? extends com.pubsub.v1.PubsubProto.PublisherIntent> values) {
+        if (publisherIntentsBuilder_ == null) {
+          ensurePublisherIntentsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, publisherIntents_);
+          onChanged();
+        } else {
+          publisherIntentsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public Builder clearPublisherIntents() {
+        if (publisherIntentsBuilder_ == null) {
+          publisherIntents_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          publisherIntentsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public Builder removePublisherIntents(int index) {
+        if (publisherIntentsBuilder_ == null) {
+          ensurePublisherIntentsIsMutable();
+          publisherIntents_.remove(index);
+          onChanged();
+        } else {
+          publisherIntentsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.PublisherIntent.Builder getPublisherIntentsBuilder(
+          int index) {
+        return getPublisherIntentsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.PublisherIntentOrBuilder getPublisherIntentsOrBuilder(
+          int index) {
+        if (publisherIntentsBuilder_ == null) {
+          return publisherIntents_.get(index);  } else {
+          return publisherIntentsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public java.util.List<? extends com.pubsub.v1.PubsubProto.PublisherIntentOrBuilder> 
+           getPublisherIntentsOrBuilderList() {
+        if (publisherIntentsBuilder_ != null) {
+          return publisherIntentsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(publisherIntents_);
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.PublisherIntent.Builder addPublisherIntentsBuilder() {
+        return getPublisherIntentsFieldBuilder().addBuilder(
+            com.pubsub.v1.PubsubProto.PublisherIntent.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.PublisherIntent.Builder addPublisherIntentsBuilder(
+          int index) {
+        return getPublisherIntentsFieldBuilder().addBuilder(
+            index, com.pubsub.v1.PubsubProto.PublisherIntent.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public java.util.List<com.pubsub.v1.PubsubProto.PublisherIntent.Builder> 
+           getPublisherIntentsBuilderList() {
+        return getPublisherIntentsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.pubsub.v1.PubsubProto.PublisherIntent, com.pubsub.v1.PubsubProto.PublisherIntent.Builder, com.pubsub.v1.PubsubProto.PublisherIntentOrBuilder> 
+          getPublisherIntentsFieldBuilder() {
+        if (publisherIntentsBuilder_ == null) {
+          publisherIntentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.pubsub.v1.PubsubProto.PublisherIntent, com.pubsub.v1.PubsubProto.PublisherIntent.Builder, com.pubsub.v1.PubsubProto.PublisherIntentOrBuilder>(
+                  publisherIntents_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          publisherIntents_ = null;
+        }
+        return publisherIntentsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.QueryPublisherIntentsByPublisherDomainResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.QueryPublisherIntentsByPublisherDomainResponse)
+    private static final com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponse();
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPublisherIntentsByPublisherDomainResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPublisherIntentsByPublisherDomainResponse>() {
+      @java.lang.Override
+      public QueryPublisherIntentsByPublisherDomainResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPublisherIntentsByPublisherDomainResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPublisherIntentsByPublisherDomainResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.QueryProto.QueryPublisherIntentsByPublisherDomainResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPublisherIntentsBySubscriptionIDRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.QueryPublisherIntentsBySubscriptionIDRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+     * @return The subscriptionId.
+     */
+    java.lang.String getSubscriptionId();
+    /**
+     * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+     * @return The bytes for subscriptionId.
+     */
+    com.google.protobuf.ByteString
+        getSubscriptionIdBytes();
+  }
+  /**
+   * Protobuf type {@code pubsub.v1.QueryPublisherIntentsBySubscriptionIDRequest}
+   */
+  public static final class QueryPublisherIntentsBySubscriptionIDRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.QueryPublisherIntentsBySubscriptionIDRequest)
+      QueryPublisherIntentsBySubscriptionIDRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPublisherIntentsBySubscriptionIDRequest.newBuilder() to construct.
+    private QueryPublisherIntentsBySubscriptionIDRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPublisherIntentsBySubscriptionIDRequest() {
+      subscriptionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPublisherIntentsBySubscriptionIDRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentsBySubscriptionIDRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentsBySubscriptionIDRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDRequest.class, com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDRequest.Builder.class);
+    }
+
+    public static final int SUBSCRIPTION_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object subscriptionId_ = "";
+    /**
+     * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+     * @return The subscriptionId.
+     */
+    @java.lang.Override
+    public java.lang.String getSubscriptionId() {
+      java.lang.Object ref = subscriptionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subscriptionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+     * @return The bytes for subscriptionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubscriptionIdBytes() {
+      java.lang.Object ref = subscriptionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subscriptionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriptionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subscriptionId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriptionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subscriptionId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDRequest)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDRequest other = (com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDRequest) obj;
+
+      if (!getSubscriptionId()
+          .equals(other.getSubscriptionId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SUBSCRIPTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubscriptionId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pubsub.v1.QueryPublisherIntentsBySubscriptionIDRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.QueryPublisherIntentsBySubscriptionIDRequest)
+        com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentsBySubscriptionIDRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentsBySubscriptionIDRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDRequest.class, com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDRequest.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        subscriptionId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentsBySubscriptionIDRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDRequest getDefaultInstanceForType() {
+        return com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDRequest build() {
+        com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDRequest buildPartial() {
+        com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDRequest result = new com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.subscriptionId_ = subscriptionId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDRequest) {
+          return mergeFrom((com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDRequest other) {
+        if (other == com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDRequest.getDefaultInstance()) return this;
+        if (!other.getSubscriptionId().isEmpty()) {
+          subscriptionId_ = other.subscriptionId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                subscriptionId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object subscriptionId_ = "";
+      /**
+       * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+       * @return The subscriptionId.
+       */
+      public java.lang.String getSubscriptionId() {
+        java.lang.Object ref = subscriptionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subscriptionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+       * @return The bytes for subscriptionId.
+       */
+      public com.google.protobuf.ByteString
+          getSubscriptionIdBytes() {
+        java.lang.Object ref = subscriptionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subscriptionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+       * @param value The subscriptionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriptionId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        subscriptionId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubscriptionId() {
+        subscriptionId_ = getDefaultInstance().getSubscriptionId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+       * @param value The bytes for subscriptionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriptionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        subscriptionId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.QueryPublisherIntentsBySubscriptionIDRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.QueryPublisherIntentsBySubscriptionIDRequest)
+    private static final com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDRequest();
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPublisherIntentsBySubscriptionIDRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPublisherIntentsBySubscriptionIDRequest>() {
+      @java.lang.Override
+      public QueryPublisherIntentsBySubscriptionIDRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPublisherIntentsBySubscriptionIDRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPublisherIntentsBySubscriptionIDRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryPublisherIntentsBySubscriptionIDResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.QueryPublisherIntentsBySubscriptionIDResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+     */
+    java.util.List<com.pubsub.v1.PubsubProto.PublisherIntent> 
+        getPublisherIntentsList();
+    /**
+     * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+     */
+    com.pubsub.v1.PubsubProto.PublisherIntent getPublisherIntents(int index);
+    /**
+     * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+     */
+    int getPublisherIntentsCount();
+    /**
+     * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+     */
+    java.util.List<? extends com.pubsub.v1.PubsubProto.PublisherIntentOrBuilder> 
+        getPublisherIntentsOrBuilderList();
+    /**
+     * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+     */
+    com.pubsub.v1.PubsubProto.PublisherIntentOrBuilder getPublisherIntentsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code pubsub.v1.QueryPublisherIntentsBySubscriptionIDResponse}
+   */
+  public static final class QueryPublisherIntentsBySubscriptionIDResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.QueryPublisherIntentsBySubscriptionIDResponse)
+      QueryPublisherIntentsBySubscriptionIDResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryPublisherIntentsBySubscriptionIDResponse.newBuilder() to construct.
+    private QueryPublisherIntentsBySubscriptionIDResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryPublisherIntentsBySubscriptionIDResponse() {
+      publisherIntents_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryPublisherIntentsBySubscriptionIDResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentsBySubscriptionIDResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentsBySubscriptionIDResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponse.class, com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponse.Builder.class);
+    }
+
+    public static final int PUBLISHER_INTENTS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.pubsub.v1.PubsubProto.PublisherIntent> publisherIntents_;
+    /**
+     * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.pubsub.v1.PubsubProto.PublisherIntent> getPublisherIntentsList() {
+      return publisherIntents_;
+    }
+    /**
+     * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.pubsub.v1.PubsubProto.PublisherIntentOrBuilder> 
+        getPublisherIntentsOrBuilderList() {
+      return publisherIntents_;
+    }
+    /**
+     * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+     */
+    @java.lang.Override
+    public int getPublisherIntentsCount() {
+      return publisherIntents_.size();
+    }
+    /**
+     * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+     */
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.PublisherIntent getPublisherIntents(int index) {
+      return publisherIntents_.get(index);
+    }
+    /**
+     * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+     */
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.PublisherIntentOrBuilder getPublisherIntentsOrBuilder(
+        int index) {
+      return publisherIntents_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < publisherIntents_.size(); i++) {
+        output.writeMessage(1, publisherIntents_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < publisherIntents_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, publisherIntents_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponse)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponse other = (com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponse) obj;
+
+      if (!getPublisherIntentsList()
+          .equals(other.getPublisherIntentsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getPublisherIntentsCount() > 0) {
+        hash = (37 * hash) + PUBLISHER_INTENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getPublisherIntentsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pubsub.v1.QueryPublisherIntentsBySubscriptionIDResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.QueryPublisherIntentsBySubscriptionIDResponse)
+        com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentsBySubscriptionIDResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentsBySubscriptionIDResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponse.class, com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponse.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (publisherIntentsBuilder_ == null) {
+          publisherIntents_ = java.util.Collections.emptyList();
+        } else {
+          publisherIntents_ = null;
+          publisherIntentsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryPublisherIntentsBySubscriptionIDResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponse getDefaultInstanceForType() {
+        return com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponse build() {
+        com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponse buildPartial() {
+        com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponse result = new com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponse result) {
+        if (publisherIntentsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            publisherIntents_ = java.util.Collections.unmodifiableList(publisherIntents_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.publisherIntents_ = publisherIntents_;
+        } else {
+          result.publisherIntents_ = publisherIntentsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponse) {
+          return mergeFrom((com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponse other) {
+        if (other == com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponse.getDefaultInstance()) return this;
+        if (publisherIntentsBuilder_ == null) {
+          if (!other.publisherIntents_.isEmpty()) {
+            if (publisherIntents_.isEmpty()) {
+              publisherIntents_ = other.publisherIntents_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensurePublisherIntentsIsMutable();
+              publisherIntents_.addAll(other.publisherIntents_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.publisherIntents_.isEmpty()) {
+            if (publisherIntentsBuilder_.isEmpty()) {
+              publisherIntentsBuilder_.dispose();
+              publisherIntentsBuilder_ = null;
+              publisherIntents_ = other.publisherIntents_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              publisherIntentsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPublisherIntentsFieldBuilder() : null;
+            } else {
+              publisherIntentsBuilder_.addAllMessages(other.publisherIntents_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.pubsub.v1.PubsubProto.PublisherIntent m =
+                    input.readMessage(
+                        com.pubsub.v1.PubsubProto.PublisherIntent.parser(),
+                        extensionRegistry);
+                if (publisherIntentsBuilder_ == null) {
+                  ensurePublisherIntentsIsMutable();
+                  publisherIntents_.add(m);
+                } else {
+                  publisherIntentsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.pubsub.v1.PubsubProto.PublisherIntent> publisherIntents_ =
+        java.util.Collections.emptyList();
+      private void ensurePublisherIntentsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          publisherIntents_ = new java.util.ArrayList<com.pubsub.v1.PubsubProto.PublisherIntent>(publisherIntents_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.pubsub.v1.PubsubProto.PublisherIntent, com.pubsub.v1.PubsubProto.PublisherIntent.Builder, com.pubsub.v1.PubsubProto.PublisherIntentOrBuilder> publisherIntentsBuilder_;
+
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public java.util.List<com.pubsub.v1.PubsubProto.PublisherIntent> getPublisherIntentsList() {
+        if (publisherIntentsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(publisherIntents_);
+        } else {
+          return publisherIntentsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public int getPublisherIntentsCount() {
+        if (publisherIntentsBuilder_ == null) {
+          return publisherIntents_.size();
+        } else {
+          return publisherIntentsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.PublisherIntent getPublisherIntents(int index) {
+        if (publisherIntentsBuilder_ == null) {
+          return publisherIntents_.get(index);
+        } else {
+          return publisherIntentsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public Builder setPublisherIntents(
+          int index, com.pubsub.v1.PubsubProto.PublisherIntent value) {
+        if (publisherIntentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePublisherIntentsIsMutable();
+          publisherIntents_.set(index, value);
+          onChanged();
+        } else {
+          publisherIntentsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public Builder setPublisherIntents(
+          int index, com.pubsub.v1.PubsubProto.PublisherIntent.Builder builderForValue) {
+        if (publisherIntentsBuilder_ == null) {
+          ensurePublisherIntentsIsMutable();
+          publisherIntents_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          publisherIntentsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public Builder addPublisherIntents(com.pubsub.v1.PubsubProto.PublisherIntent value) {
+        if (publisherIntentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePublisherIntentsIsMutable();
+          publisherIntents_.add(value);
+          onChanged();
+        } else {
+          publisherIntentsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public Builder addPublisherIntents(
+          int index, com.pubsub.v1.PubsubProto.PublisherIntent value) {
+        if (publisherIntentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePublisherIntentsIsMutable();
+          publisherIntents_.add(index, value);
+          onChanged();
+        } else {
+          publisherIntentsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public Builder addPublisherIntents(
+          com.pubsub.v1.PubsubProto.PublisherIntent.Builder builderForValue) {
+        if (publisherIntentsBuilder_ == null) {
+          ensurePublisherIntentsIsMutable();
+          publisherIntents_.add(builderForValue.build());
+          onChanged();
+        } else {
+          publisherIntentsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public Builder addPublisherIntents(
+          int index, com.pubsub.v1.PubsubProto.PublisherIntent.Builder builderForValue) {
+        if (publisherIntentsBuilder_ == null) {
+          ensurePublisherIntentsIsMutable();
+          publisherIntents_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          publisherIntentsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public Builder addAllPublisherIntents(
+          java.lang.Iterable<? extends com.pubsub.v1.PubsubProto.PublisherIntent> values) {
+        if (publisherIntentsBuilder_ == null) {
+          ensurePublisherIntentsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, publisherIntents_);
+          onChanged();
+        } else {
+          publisherIntentsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public Builder clearPublisherIntents() {
+        if (publisherIntentsBuilder_ == null) {
+          publisherIntents_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          publisherIntentsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public Builder removePublisherIntents(int index) {
+        if (publisherIntentsBuilder_ == null) {
+          ensurePublisherIntentsIsMutable();
+          publisherIntents_.remove(index);
+          onChanged();
+        } else {
+          publisherIntentsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.PublisherIntent.Builder getPublisherIntentsBuilder(
+          int index) {
+        return getPublisherIntentsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.PublisherIntentOrBuilder getPublisherIntentsOrBuilder(
+          int index) {
+        if (publisherIntentsBuilder_ == null) {
+          return publisherIntents_.get(index);  } else {
+          return publisherIntentsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public java.util.List<? extends com.pubsub.v1.PubsubProto.PublisherIntentOrBuilder> 
+           getPublisherIntentsOrBuilderList() {
+        if (publisherIntentsBuilder_ != null) {
+          return publisherIntentsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(publisherIntents_);
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.PublisherIntent.Builder addPublisherIntentsBuilder() {
+        return getPublisherIntentsFieldBuilder().addBuilder(
+            com.pubsub.v1.PubsubProto.PublisherIntent.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.PublisherIntent.Builder addPublisherIntentsBuilder(
+          int index) {
+        return getPublisherIntentsFieldBuilder().addBuilder(
+            index, com.pubsub.v1.PubsubProto.PublisherIntent.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .pubsub.v1.PublisherIntent publisher_intents = 1 [json_name = "publisherIntents"];</code>
+       */
+      public java.util.List<com.pubsub.v1.PubsubProto.PublisherIntent.Builder> 
+           getPublisherIntentsBuilderList() {
+        return getPublisherIntentsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.pubsub.v1.PubsubProto.PublisherIntent, com.pubsub.v1.PubsubProto.PublisherIntent.Builder, com.pubsub.v1.PubsubProto.PublisherIntentOrBuilder> 
+          getPublisherIntentsFieldBuilder() {
+        if (publisherIntentsBuilder_ == null) {
+          publisherIntentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.pubsub.v1.PubsubProto.PublisherIntent, com.pubsub.v1.PubsubProto.PublisherIntent.Builder, com.pubsub.v1.PubsubProto.PublisherIntentOrBuilder>(
+                  publisherIntents_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          publisherIntents_ = null;
+        }
+        return publisherIntentsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.QueryPublisherIntentsBySubscriptionIDResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.QueryPublisherIntentsBySubscriptionIDResponse)
+    private static final com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponse();
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryPublisherIntentsBySubscriptionIDResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryPublisherIntentsBySubscriptionIDResponse>() {
+      @java.lang.Override
+      public QueryPublisherIntentsBySubscriptionIDResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryPublisherIntentsBySubscriptionIDResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryPublisherIntentsBySubscriptionIDResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.QueryProto.QueryPublisherIntentsBySubscriptionIDResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySubscriberIntentRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.QuerySubscriberIntentRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string subscriber_address = 1 [json_name = "subscriberAddress"];</code>
+     * @return The subscriberAddress.
+     */
+    java.lang.String getSubscriberAddress();
+    /**
+     * <code>string subscriber_address = 1 [json_name = "subscriberAddress"];</code>
+     * @return The bytes for subscriberAddress.
+     */
+    com.google.protobuf.ByteString
+        getSubscriberAddressBytes();
+
+    /**
+     * <code>string subscription_id = 2 [json_name = "subscriptionId"];</code>
+     * @return The subscriptionId.
+     */
+    java.lang.String getSubscriptionId();
+    /**
+     * <code>string subscription_id = 2 [json_name = "subscriptionId"];</code>
+     * @return The bytes for subscriptionId.
+     */
+    com.google.protobuf.ByteString
+        getSubscriptionIdBytes();
+  }
+  /**
+   * Protobuf type {@code pubsub.v1.QuerySubscriberIntentRequest}
+   */
+  public static final class QuerySubscriberIntentRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.QuerySubscriberIntentRequest)
+      QuerySubscriberIntentRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySubscriberIntentRequest.newBuilder() to construct.
+    private QuerySubscriberIntentRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySubscriberIntentRequest() {
+      subscriberAddress_ = "";
+      subscriptionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySubscriberIntentRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.QueryProto.QuerySubscriberIntentRequest.class, com.pubsub.v1.QueryProto.QuerySubscriberIntentRequest.Builder.class);
+    }
+
+    public static final int SUBSCRIBER_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object subscriberAddress_ = "";
+    /**
+     * <code>string subscriber_address = 1 [json_name = "subscriberAddress"];</code>
+     * @return The subscriberAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getSubscriberAddress() {
+      java.lang.Object ref = subscriberAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subscriberAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string subscriber_address = 1 [json_name = "subscriberAddress"];</code>
+     * @return The bytes for subscriberAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubscriberAddressBytes() {
+      java.lang.Object ref = subscriberAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subscriberAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUBSCRIPTION_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object subscriptionId_ = "";
+    /**
+     * <code>string subscription_id = 2 [json_name = "subscriptionId"];</code>
+     * @return The subscriptionId.
+     */
+    @java.lang.Override
+    public java.lang.String getSubscriptionId() {
+      java.lang.Object ref = subscriptionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subscriptionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string subscription_id = 2 [json_name = "subscriptionId"];</code>
+     * @return The bytes for subscriptionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubscriptionIdBytes() {
+      java.lang.Object ref = subscriptionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subscriptionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriberAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subscriberAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriptionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, subscriptionId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriberAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subscriberAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriptionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, subscriptionId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.QueryProto.QuerySubscriberIntentRequest)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.QueryProto.QuerySubscriberIntentRequest other = (com.pubsub.v1.QueryProto.QuerySubscriberIntentRequest) obj;
+
+      if (!getSubscriberAddress()
+          .equals(other.getSubscriberAddress())) return false;
+      if (!getSubscriptionId()
+          .equals(other.getSubscriptionId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SUBSCRIBER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getSubscriberAddress().hashCode();
+      hash = (37 * hash) + SUBSCRIPTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubscriptionId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.QueryProto.QuerySubscriberIntentRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pubsub.v1.QuerySubscriberIntentRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.QuerySubscriberIntentRequest)
+        com.pubsub.v1.QueryProto.QuerySubscriberIntentRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.QueryProto.QuerySubscriberIntentRequest.class, com.pubsub.v1.QueryProto.QuerySubscriberIntentRequest.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.QueryProto.QuerySubscriberIntentRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        subscriberAddress_ = "";
+        subscriptionId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscriberIntentRequest getDefaultInstanceForType() {
+        return com.pubsub.v1.QueryProto.QuerySubscriberIntentRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscriberIntentRequest build() {
+        com.pubsub.v1.QueryProto.QuerySubscriberIntentRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscriberIntentRequest buildPartial() {
+        com.pubsub.v1.QueryProto.QuerySubscriberIntentRequest result = new com.pubsub.v1.QueryProto.QuerySubscriberIntentRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pubsub.v1.QueryProto.QuerySubscriberIntentRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.subscriberAddress_ = subscriberAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.subscriptionId_ = subscriptionId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.QueryProto.QuerySubscriberIntentRequest) {
+          return mergeFrom((com.pubsub.v1.QueryProto.QuerySubscriberIntentRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.QueryProto.QuerySubscriberIntentRequest other) {
+        if (other == com.pubsub.v1.QueryProto.QuerySubscriberIntentRequest.getDefaultInstance()) return this;
+        if (!other.getSubscriberAddress().isEmpty()) {
+          subscriberAddress_ = other.subscriberAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getSubscriptionId().isEmpty()) {
+          subscriptionId_ = other.subscriptionId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                subscriberAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                subscriptionId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object subscriberAddress_ = "";
+      /**
+       * <code>string subscriber_address = 1 [json_name = "subscriberAddress"];</code>
+       * @return The subscriberAddress.
+       */
+      public java.lang.String getSubscriberAddress() {
+        java.lang.Object ref = subscriberAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subscriberAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string subscriber_address = 1 [json_name = "subscriberAddress"];</code>
+       * @return The bytes for subscriberAddress.
+       */
+      public com.google.protobuf.ByteString
+          getSubscriberAddressBytes() {
+        java.lang.Object ref = subscriberAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subscriberAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string subscriber_address = 1 [json_name = "subscriberAddress"];</code>
+       * @param value The subscriberAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriberAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        subscriberAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subscriber_address = 1 [json_name = "subscriberAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubscriberAddress() {
+        subscriberAddress_ = getDefaultInstance().getSubscriberAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subscriber_address = 1 [json_name = "subscriberAddress"];</code>
+       * @param value The bytes for subscriberAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriberAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        subscriberAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object subscriptionId_ = "";
+      /**
+       * <code>string subscription_id = 2 [json_name = "subscriptionId"];</code>
+       * @return The subscriptionId.
+       */
+      public java.lang.String getSubscriptionId() {
+        java.lang.Object ref = subscriptionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subscriptionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string subscription_id = 2 [json_name = "subscriptionId"];</code>
+       * @return The bytes for subscriptionId.
+       */
+      public com.google.protobuf.ByteString
+          getSubscriptionIdBytes() {
+        java.lang.Object ref = subscriptionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subscriptionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string subscription_id = 2 [json_name = "subscriptionId"];</code>
+       * @param value The subscriptionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriptionId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        subscriptionId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subscription_id = 2 [json_name = "subscriptionId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubscriptionId() {
+        subscriptionId_ = getDefaultInstance().getSubscriptionId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subscription_id = 2 [json_name = "subscriptionId"];</code>
+       * @param value The bytes for subscriptionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriptionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        subscriptionId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.QuerySubscriberIntentRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.QuerySubscriberIntentRequest)
+    private static final com.pubsub.v1.QueryProto.QuerySubscriberIntentRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.QueryProto.QuerySubscriberIntentRequest();
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySubscriberIntentRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySubscriberIntentRequest>() {
+      @java.lang.Override
+      public QuerySubscriberIntentRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySubscriberIntentRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySubscriberIntentRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.QueryProto.QuerySubscriberIntentRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySubscriberIntentResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.QuerySubscriberIntentResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.pubsub.v1.SubscriberIntent subscriber_intent = 1 [json_name = "subscriberIntent"];</code>
+     * @return Whether the subscriberIntent field is set.
+     */
+    boolean hasSubscriberIntent();
+    /**
+     * <code>.pubsub.v1.SubscriberIntent subscriber_intent = 1 [json_name = "subscriberIntent"];</code>
+     * @return The subscriberIntent.
+     */
+    com.pubsub.v1.PubsubProto.SubscriberIntent getSubscriberIntent();
+    /**
+     * <code>.pubsub.v1.SubscriberIntent subscriber_intent = 1 [json_name = "subscriberIntent"];</code>
+     */
+    com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder getSubscriberIntentOrBuilder();
+  }
+  /**
+   * Protobuf type {@code pubsub.v1.QuerySubscriberIntentResponse}
+   */
+  public static final class QuerySubscriberIntentResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.QuerySubscriberIntentResponse)
+      QuerySubscriberIntentResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySubscriberIntentResponse.newBuilder() to construct.
+    private QuerySubscriberIntentResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySubscriberIntentResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySubscriberIntentResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse.class, com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse.Builder.class);
+    }
+
+    public static final int SUBSCRIBER_INTENT_FIELD_NUMBER = 1;
+    private com.pubsub.v1.PubsubProto.SubscriberIntent subscriberIntent_;
+    /**
+     * <code>.pubsub.v1.SubscriberIntent subscriber_intent = 1 [json_name = "subscriberIntent"];</code>
+     * @return Whether the subscriberIntent field is set.
+     */
+    @java.lang.Override
+    public boolean hasSubscriberIntent() {
+      return subscriberIntent_ != null;
+    }
+    /**
+     * <code>.pubsub.v1.SubscriberIntent subscriber_intent = 1 [json_name = "subscriberIntent"];</code>
+     * @return The subscriberIntent.
+     */
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.SubscriberIntent getSubscriberIntent() {
+      return subscriberIntent_ == null ? com.pubsub.v1.PubsubProto.SubscriberIntent.getDefaultInstance() : subscriberIntent_;
+    }
+    /**
+     * <code>.pubsub.v1.SubscriberIntent subscriber_intent = 1 [json_name = "subscriberIntent"];</code>
+     */
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder getSubscriberIntentOrBuilder() {
+      return subscriberIntent_ == null ? com.pubsub.v1.PubsubProto.SubscriberIntent.getDefaultInstance() : subscriberIntent_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (subscriberIntent_ != null) {
+        output.writeMessage(1, getSubscriberIntent());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (subscriberIntent_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getSubscriberIntent());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse other = (com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse) obj;
+
+      if (hasSubscriberIntent() != other.hasSubscriberIntent()) return false;
+      if (hasSubscriberIntent()) {
+        if (!getSubscriberIntent()
+            .equals(other.getSubscriberIntent())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasSubscriberIntent()) {
+        hash = (37 * hash) + SUBSCRIBER_INTENT_FIELD_NUMBER;
+        hash = (53 * hash) + getSubscriberIntent().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pubsub.v1.QuerySubscriberIntentResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.QuerySubscriberIntentResponse)
+        com.pubsub.v1.QueryProto.QuerySubscriberIntentResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse.class, com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        subscriberIntent_ = null;
+        if (subscriberIntentBuilder_ != null) {
+          subscriberIntentBuilder_.dispose();
+          subscriberIntentBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse getDefaultInstanceForType() {
+        return com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse build() {
+        com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse buildPartial() {
+        com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse result = new com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.subscriberIntent_ = subscriberIntentBuilder_ == null
+              ? subscriberIntent_
+              : subscriberIntentBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse) {
+          return mergeFrom((com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse other) {
+        if (other == com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse.getDefaultInstance()) return this;
+        if (other.hasSubscriberIntent()) {
+          mergeSubscriberIntent(other.getSubscriberIntent());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getSubscriberIntentFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.pubsub.v1.PubsubProto.SubscriberIntent subscriberIntent_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.pubsub.v1.PubsubProto.SubscriberIntent, com.pubsub.v1.PubsubProto.SubscriberIntent.Builder, com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder> subscriberIntentBuilder_;
+      /**
+       * <code>.pubsub.v1.SubscriberIntent subscriber_intent = 1 [json_name = "subscriberIntent"];</code>
+       * @return Whether the subscriberIntent field is set.
+       */
+      public boolean hasSubscriberIntent() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.pubsub.v1.SubscriberIntent subscriber_intent = 1 [json_name = "subscriberIntent"];</code>
+       * @return The subscriberIntent.
+       */
+      public com.pubsub.v1.PubsubProto.SubscriberIntent getSubscriberIntent() {
+        if (subscriberIntentBuilder_ == null) {
+          return subscriberIntent_ == null ? com.pubsub.v1.PubsubProto.SubscriberIntent.getDefaultInstance() : subscriberIntent_;
+        } else {
+          return subscriberIntentBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.pubsub.v1.SubscriberIntent subscriber_intent = 1 [json_name = "subscriberIntent"];</code>
+       */
+      public Builder setSubscriberIntent(com.pubsub.v1.PubsubProto.SubscriberIntent value) {
+        if (subscriberIntentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          subscriberIntent_ = value;
+        } else {
+          subscriberIntentBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pubsub.v1.SubscriberIntent subscriber_intent = 1 [json_name = "subscriberIntent"];</code>
+       */
+      public Builder setSubscriberIntent(
+          com.pubsub.v1.PubsubProto.SubscriberIntent.Builder builderForValue) {
+        if (subscriberIntentBuilder_ == null) {
+          subscriberIntent_ = builderForValue.build();
+        } else {
+          subscriberIntentBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pubsub.v1.SubscriberIntent subscriber_intent = 1 [json_name = "subscriberIntent"];</code>
+       */
+      public Builder mergeSubscriberIntent(com.pubsub.v1.PubsubProto.SubscriberIntent value) {
+        if (subscriberIntentBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            subscriberIntent_ != null &&
+            subscriberIntent_ != com.pubsub.v1.PubsubProto.SubscriberIntent.getDefaultInstance()) {
+            getSubscriberIntentBuilder().mergeFrom(value);
+          } else {
+            subscriberIntent_ = value;
+          }
+        } else {
+          subscriberIntentBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pubsub.v1.SubscriberIntent subscriber_intent = 1 [json_name = "subscriberIntent"];</code>
+       */
+      public Builder clearSubscriberIntent() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        subscriberIntent_ = null;
+        if (subscriberIntentBuilder_ != null) {
+          subscriberIntentBuilder_.dispose();
+          subscriberIntentBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pubsub.v1.SubscriberIntent subscriber_intent = 1 [json_name = "subscriberIntent"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.SubscriberIntent.Builder getSubscriberIntentBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getSubscriberIntentFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.pubsub.v1.SubscriberIntent subscriber_intent = 1 [json_name = "subscriberIntent"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder getSubscriberIntentOrBuilder() {
+        if (subscriberIntentBuilder_ != null) {
+          return subscriberIntentBuilder_.getMessageOrBuilder();
+        } else {
+          return subscriberIntent_ == null ?
+              com.pubsub.v1.PubsubProto.SubscriberIntent.getDefaultInstance() : subscriberIntent_;
+        }
+      }
+      /**
+       * <code>.pubsub.v1.SubscriberIntent subscriber_intent = 1 [json_name = "subscriberIntent"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.pubsub.v1.PubsubProto.SubscriberIntent, com.pubsub.v1.PubsubProto.SubscriberIntent.Builder, com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder> 
+          getSubscriberIntentFieldBuilder() {
+        if (subscriberIntentBuilder_ == null) {
+          subscriberIntentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.pubsub.v1.PubsubProto.SubscriberIntent, com.pubsub.v1.PubsubProto.SubscriberIntent.Builder, com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder>(
+                  getSubscriberIntent(),
+                  getParentForChildren(),
+                  isClean());
+          subscriberIntent_ = null;
+        }
+        return subscriberIntentBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.QuerySubscriberIntentResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.QuerySubscriberIntentResponse)
+    private static final com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse();
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySubscriberIntentResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySubscriberIntentResponse>() {
+      @java.lang.Override
+      public QuerySubscriberIntentResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySubscriberIntentResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySubscriberIntentResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.QueryProto.QuerySubscriberIntentResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySubscriberIntentsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.QuerySubscriberIntentsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code pubsub.v1.QuerySubscriberIntentsRequest}
+   */
+  public static final class QuerySubscriberIntentsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.QuerySubscriberIntentsRequest)
+      QuerySubscriberIntentsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySubscriberIntentsRequest.newBuilder() to construct.
+    private QuerySubscriberIntentsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySubscriberIntentsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySubscriberIntentsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.QueryProto.QuerySubscriberIntentsRequest.class, com.pubsub.v1.QueryProto.QuerySubscriberIntentsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.QueryProto.QuerySubscriberIntentsRequest)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.QueryProto.QuerySubscriberIntentsRequest other = (com.pubsub.v1.QueryProto.QuerySubscriberIntentsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.QueryProto.QuerySubscriberIntentsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pubsub.v1.QuerySubscriberIntentsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.QuerySubscriberIntentsRequest)
+        com.pubsub.v1.QueryProto.QuerySubscriberIntentsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.QueryProto.QuerySubscriberIntentsRequest.class, com.pubsub.v1.QueryProto.QuerySubscriberIntentsRequest.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.QueryProto.QuerySubscriberIntentsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscriberIntentsRequest getDefaultInstanceForType() {
+        return com.pubsub.v1.QueryProto.QuerySubscriberIntentsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscriberIntentsRequest build() {
+        com.pubsub.v1.QueryProto.QuerySubscriberIntentsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscriberIntentsRequest buildPartial() {
+        com.pubsub.v1.QueryProto.QuerySubscriberIntentsRequest result = new com.pubsub.v1.QueryProto.QuerySubscriberIntentsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.QueryProto.QuerySubscriberIntentsRequest) {
+          return mergeFrom((com.pubsub.v1.QueryProto.QuerySubscriberIntentsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.QueryProto.QuerySubscriberIntentsRequest other) {
+        if (other == com.pubsub.v1.QueryProto.QuerySubscriberIntentsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.QuerySubscriberIntentsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.QuerySubscriberIntentsRequest)
+    private static final com.pubsub.v1.QueryProto.QuerySubscriberIntentsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.QueryProto.QuerySubscriberIntentsRequest();
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySubscriberIntentsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySubscriberIntentsRequest>() {
+      @java.lang.Override
+      public QuerySubscriberIntentsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySubscriberIntentsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySubscriberIntentsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.QueryProto.QuerySubscriberIntentsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySubscriberIntentsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.QuerySubscriberIntentsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    java.util.List<com.pubsub.v1.PubsubProto.SubscriberIntent> 
+        getSubscriberIntentsList();
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    com.pubsub.v1.PubsubProto.SubscriberIntent getSubscriberIntents(int index);
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    int getSubscriberIntentsCount();
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    java.util.List<? extends com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder> 
+        getSubscriberIntentsOrBuilderList();
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder getSubscriberIntentsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code pubsub.v1.QuerySubscriberIntentsResponse}
+   */
+  public static final class QuerySubscriberIntentsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.QuerySubscriberIntentsResponse)
+      QuerySubscriberIntentsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySubscriberIntentsResponse.newBuilder() to construct.
+    private QuerySubscriberIntentsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySubscriberIntentsResponse() {
+      subscriberIntents_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySubscriberIntentsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponse.class, com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponse.Builder.class);
+    }
+
+    public static final int SUBSCRIBER_INTENTS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.pubsub.v1.PubsubProto.SubscriberIntent> subscriberIntents_;
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.pubsub.v1.PubsubProto.SubscriberIntent> getSubscriberIntentsList() {
+      return subscriberIntents_;
+    }
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder> 
+        getSubscriberIntentsOrBuilderList() {
+      return subscriberIntents_;
+    }
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    @java.lang.Override
+    public int getSubscriberIntentsCount() {
+      return subscriberIntents_.size();
+    }
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.SubscriberIntent getSubscriberIntents(int index) {
+      return subscriberIntents_.get(index);
+    }
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder getSubscriberIntentsOrBuilder(
+        int index) {
+      return subscriberIntents_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < subscriberIntents_.size(); i++) {
+        output.writeMessage(1, subscriberIntents_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < subscriberIntents_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, subscriberIntents_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponse)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponse other = (com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponse) obj;
+
+      if (!getSubscriberIntentsList()
+          .equals(other.getSubscriberIntentsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getSubscriberIntentsCount() > 0) {
+        hash = (37 * hash) + SUBSCRIBER_INTENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getSubscriberIntentsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pubsub.v1.QuerySubscriberIntentsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.QuerySubscriberIntentsResponse)
+        com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponse.class, com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponse.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (subscriberIntentsBuilder_ == null) {
+          subscriberIntents_ = java.util.Collections.emptyList();
+        } else {
+          subscriberIntents_ = null;
+          subscriberIntentsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponse getDefaultInstanceForType() {
+        return com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponse build() {
+        com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponse buildPartial() {
+        com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponse result = new com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponse result) {
+        if (subscriberIntentsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            subscriberIntents_ = java.util.Collections.unmodifiableList(subscriberIntents_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.subscriberIntents_ = subscriberIntents_;
+        } else {
+          result.subscriberIntents_ = subscriberIntentsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponse) {
+          return mergeFrom((com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponse other) {
+        if (other == com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponse.getDefaultInstance()) return this;
+        if (subscriberIntentsBuilder_ == null) {
+          if (!other.subscriberIntents_.isEmpty()) {
+            if (subscriberIntents_.isEmpty()) {
+              subscriberIntents_ = other.subscriberIntents_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureSubscriberIntentsIsMutable();
+              subscriberIntents_.addAll(other.subscriberIntents_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.subscriberIntents_.isEmpty()) {
+            if (subscriberIntentsBuilder_.isEmpty()) {
+              subscriberIntentsBuilder_.dispose();
+              subscriberIntentsBuilder_ = null;
+              subscriberIntents_ = other.subscriberIntents_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              subscriberIntentsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSubscriberIntentsFieldBuilder() : null;
+            } else {
+              subscriberIntentsBuilder_.addAllMessages(other.subscriberIntents_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.pubsub.v1.PubsubProto.SubscriberIntent m =
+                    input.readMessage(
+                        com.pubsub.v1.PubsubProto.SubscriberIntent.parser(),
+                        extensionRegistry);
+                if (subscriberIntentsBuilder_ == null) {
+                  ensureSubscriberIntentsIsMutable();
+                  subscriberIntents_.add(m);
+                } else {
+                  subscriberIntentsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.pubsub.v1.PubsubProto.SubscriberIntent> subscriberIntents_ =
+        java.util.Collections.emptyList();
+      private void ensureSubscriberIntentsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          subscriberIntents_ = new java.util.ArrayList<com.pubsub.v1.PubsubProto.SubscriberIntent>(subscriberIntents_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.pubsub.v1.PubsubProto.SubscriberIntent, com.pubsub.v1.PubsubProto.SubscriberIntent.Builder, com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder> subscriberIntentsBuilder_;
+
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public java.util.List<com.pubsub.v1.PubsubProto.SubscriberIntent> getSubscriberIntentsList() {
+        if (subscriberIntentsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(subscriberIntents_);
+        } else {
+          return subscriberIntentsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public int getSubscriberIntentsCount() {
+        if (subscriberIntentsBuilder_ == null) {
+          return subscriberIntents_.size();
+        } else {
+          return subscriberIntentsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.SubscriberIntent getSubscriberIntents(int index) {
+        if (subscriberIntentsBuilder_ == null) {
+          return subscriberIntents_.get(index);
+        } else {
+          return subscriberIntentsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public Builder setSubscriberIntents(
+          int index, com.pubsub.v1.PubsubProto.SubscriberIntent value) {
+        if (subscriberIntentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSubscriberIntentsIsMutable();
+          subscriberIntents_.set(index, value);
+          onChanged();
+        } else {
+          subscriberIntentsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public Builder setSubscriberIntents(
+          int index, com.pubsub.v1.PubsubProto.SubscriberIntent.Builder builderForValue) {
+        if (subscriberIntentsBuilder_ == null) {
+          ensureSubscriberIntentsIsMutable();
+          subscriberIntents_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          subscriberIntentsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public Builder addSubscriberIntents(com.pubsub.v1.PubsubProto.SubscriberIntent value) {
+        if (subscriberIntentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSubscriberIntentsIsMutable();
+          subscriberIntents_.add(value);
+          onChanged();
+        } else {
+          subscriberIntentsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public Builder addSubscriberIntents(
+          int index, com.pubsub.v1.PubsubProto.SubscriberIntent value) {
+        if (subscriberIntentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSubscriberIntentsIsMutable();
+          subscriberIntents_.add(index, value);
+          onChanged();
+        } else {
+          subscriberIntentsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public Builder addSubscriberIntents(
+          com.pubsub.v1.PubsubProto.SubscriberIntent.Builder builderForValue) {
+        if (subscriberIntentsBuilder_ == null) {
+          ensureSubscriberIntentsIsMutable();
+          subscriberIntents_.add(builderForValue.build());
+          onChanged();
+        } else {
+          subscriberIntentsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public Builder addSubscriberIntents(
+          int index, com.pubsub.v1.PubsubProto.SubscriberIntent.Builder builderForValue) {
+        if (subscriberIntentsBuilder_ == null) {
+          ensureSubscriberIntentsIsMutable();
+          subscriberIntents_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          subscriberIntentsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public Builder addAllSubscriberIntents(
+          java.lang.Iterable<? extends com.pubsub.v1.PubsubProto.SubscriberIntent> values) {
+        if (subscriberIntentsBuilder_ == null) {
+          ensureSubscriberIntentsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, subscriberIntents_);
+          onChanged();
+        } else {
+          subscriberIntentsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public Builder clearSubscriberIntents() {
+        if (subscriberIntentsBuilder_ == null) {
+          subscriberIntents_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          subscriberIntentsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public Builder removeSubscriberIntents(int index) {
+        if (subscriberIntentsBuilder_ == null) {
+          ensureSubscriberIntentsIsMutable();
+          subscriberIntents_.remove(index);
+          onChanged();
+        } else {
+          subscriberIntentsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.SubscriberIntent.Builder getSubscriberIntentsBuilder(
+          int index) {
+        return getSubscriberIntentsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder getSubscriberIntentsOrBuilder(
+          int index) {
+        if (subscriberIntentsBuilder_ == null) {
+          return subscriberIntents_.get(index);  } else {
+          return subscriberIntentsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public java.util.List<? extends com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder> 
+           getSubscriberIntentsOrBuilderList() {
+        if (subscriberIntentsBuilder_ != null) {
+          return subscriberIntentsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(subscriberIntents_);
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.SubscriberIntent.Builder addSubscriberIntentsBuilder() {
+        return getSubscriberIntentsFieldBuilder().addBuilder(
+            com.pubsub.v1.PubsubProto.SubscriberIntent.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.SubscriberIntent.Builder addSubscriberIntentsBuilder(
+          int index) {
+        return getSubscriberIntentsFieldBuilder().addBuilder(
+            index, com.pubsub.v1.PubsubProto.SubscriberIntent.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public java.util.List<com.pubsub.v1.PubsubProto.SubscriberIntent.Builder> 
+           getSubscriberIntentsBuilderList() {
+        return getSubscriberIntentsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.pubsub.v1.PubsubProto.SubscriberIntent, com.pubsub.v1.PubsubProto.SubscriberIntent.Builder, com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder> 
+          getSubscriberIntentsFieldBuilder() {
+        if (subscriberIntentsBuilder_ == null) {
+          subscriberIntentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.pubsub.v1.PubsubProto.SubscriberIntent, com.pubsub.v1.PubsubProto.SubscriberIntent.Builder, com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder>(
+                  subscriberIntents_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          subscriberIntents_ = null;
+        }
+        return subscriberIntentsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.QuerySubscriberIntentsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.QuerySubscriberIntentsResponse)
+    private static final com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponse();
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySubscriberIntentsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySubscriberIntentsResponse>() {
+      @java.lang.Override
+      public QuerySubscriberIntentsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySubscriberIntentsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySubscriberIntentsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.QueryProto.QuerySubscriberIntentsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySubscriberIntentsBySubscriberAddressRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.QuerySubscriberIntentsBySubscriberAddressRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string subscriber_address = 1 [json_name = "subscriberAddress"];</code>
+     * @return The subscriberAddress.
+     */
+    java.lang.String getSubscriberAddress();
+    /**
+     * <code>string subscriber_address = 1 [json_name = "subscriberAddress"];</code>
+     * @return The bytes for subscriberAddress.
+     */
+    com.google.protobuf.ByteString
+        getSubscriberAddressBytes();
+  }
+  /**
+   * Protobuf type {@code pubsub.v1.QuerySubscriberIntentsBySubscriberAddressRequest}
+   */
+  public static final class QuerySubscriberIntentsBySubscriberAddressRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.QuerySubscriberIntentsBySubscriberAddressRequest)
+      QuerySubscriberIntentsBySubscriberAddressRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySubscriberIntentsBySubscriberAddressRequest.newBuilder() to construct.
+    private QuerySubscriberIntentsBySubscriberAddressRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySubscriberIntentsBySubscriberAddressRequest() {
+      subscriberAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySubscriberIntentsBySubscriberAddressRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsBySubscriberAddressRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsBySubscriberAddressRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressRequest.class, com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressRequest.Builder.class);
+    }
+
+    public static final int SUBSCRIBER_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object subscriberAddress_ = "";
+    /**
+     * <code>string subscriber_address = 1 [json_name = "subscriberAddress"];</code>
+     * @return The subscriberAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getSubscriberAddress() {
+      java.lang.Object ref = subscriberAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subscriberAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string subscriber_address = 1 [json_name = "subscriberAddress"];</code>
+     * @return The bytes for subscriberAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubscriberAddressBytes() {
+      java.lang.Object ref = subscriberAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subscriberAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriberAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subscriberAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriberAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subscriberAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressRequest)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressRequest other = (com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressRequest) obj;
+
+      if (!getSubscriberAddress()
+          .equals(other.getSubscriberAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SUBSCRIBER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getSubscriberAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pubsub.v1.QuerySubscriberIntentsBySubscriberAddressRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.QuerySubscriberIntentsBySubscriberAddressRequest)
+        com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsBySubscriberAddressRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsBySubscriberAddressRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressRequest.class, com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressRequest.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        subscriberAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsBySubscriberAddressRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressRequest getDefaultInstanceForType() {
+        return com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressRequest build() {
+        com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressRequest buildPartial() {
+        com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressRequest result = new com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.subscriberAddress_ = subscriberAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressRequest) {
+          return mergeFrom((com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressRequest other) {
+        if (other == com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressRequest.getDefaultInstance()) return this;
+        if (!other.getSubscriberAddress().isEmpty()) {
+          subscriberAddress_ = other.subscriberAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                subscriberAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object subscriberAddress_ = "";
+      /**
+       * <code>string subscriber_address = 1 [json_name = "subscriberAddress"];</code>
+       * @return The subscriberAddress.
+       */
+      public java.lang.String getSubscriberAddress() {
+        java.lang.Object ref = subscriberAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subscriberAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string subscriber_address = 1 [json_name = "subscriberAddress"];</code>
+       * @return The bytes for subscriberAddress.
+       */
+      public com.google.protobuf.ByteString
+          getSubscriberAddressBytes() {
+        java.lang.Object ref = subscriberAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subscriberAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string subscriber_address = 1 [json_name = "subscriberAddress"];</code>
+       * @param value The subscriberAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriberAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        subscriberAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subscriber_address = 1 [json_name = "subscriberAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubscriberAddress() {
+        subscriberAddress_ = getDefaultInstance().getSubscriberAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subscriber_address = 1 [json_name = "subscriberAddress"];</code>
+       * @param value The bytes for subscriberAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriberAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        subscriberAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.QuerySubscriberIntentsBySubscriberAddressRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.QuerySubscriberIntentsBySubscriberAddressRequest)
+    private static final com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressRequest();
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySubscriberIntentsBySubscriberAddressRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySubscriberIntentsBySubscriberAddressRequest>() {
+      @java.lang.Override
+      public QuerySubscriberIntentsBySubscriberAddressRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySubscriberIntentsBySubscriberAddressRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySubscriberIntentsBySubscriberAddressRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySubscriberIntentsBySubscriberAddressResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.QuerySubscriberIntentsBySubscriberAddressResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    java.util.List<com.pubsub.v1.PubsubProto.SubscriberIntent> 
+        getSubscriberIntentsList();
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    com.pubsub.v1.PubsubProto.SubscriberIntent getSubscriberIntents(int index);
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    int getSubscriberIntentsCount();
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    java.util.List<? extends com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder> 
+        getSubscriberIntentsOrBuilderList();
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder getSubscriberIntentsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code pubsub.v1.QuerySubscriberIntentsBySubscriberAddressResponse}
+   */
+  public static final class QuerySubscriberIntentsBySubscriberAddressResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.QuerySubscriberIntentsBySubscriberAddressResponse)
+      QuerySubscriberIntentsBySubscriberAddressResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySubscriberIntentsBySubscriberAddressResponse.newBuilder() to construct.
+    private QuerySubscriberIntentsBySubscriberAddressResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySubscriberIntentsBySubscriberAddressResponse() {
+      subscriberIntents_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySubscriberIntentsBySubscriberAddressResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsBySubscriberAddressResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsBySubscriberAddressResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponse.class, com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponse.Builder.class);
+    }
+
+    public static final int SUBSCRIBER_INTENTS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.pubsub.v1.PubsubProto.SubscriberIntent> subscriberIntents_;
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.pubsub.v1.PubsubProto.SubscriberIntent> getSubscriberIntentsList() {
+      return subscriberIntents_;
+    }
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder> 
+        getSubscriberIntentsOrBuilderList() {
+      return subscriberIntents_;
+    }
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    @java.lang.Override
+    public int getSubscriberIntentsCount() {
+      return subscriberIntents_.size();
+    }
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.SubscriberIntent getSubscriberIntents(int index) {
+      return subscriberIntents_.get(index);
+    }
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder getSubscriberIntentsOrBuilder(
+        int index) {
+      return subscriberIntents_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < subscriberIntents_.size(); i++) {
+        output.writeMessage(1, subscriberIntents_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < subscriberIntents_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, subscriberIntents_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponse)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponse other = (com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponse) obj;
+
+      if (!getSubscriberIntentsList()
+          .equals(other.getSubscriberIntentsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getSubscriberIntentsCount() > 0) {
+        hash = (37 * hash) + SUBSCRIBER_INTENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getSubscriberIntentsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pubsub.v1.QuerySubscriberIntentsBySubscriberAddressResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.QuerySubscriberIntentsBySubscriberAddressResponse)
+        com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsBySubscriberAddressResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsBySubscriberAddressResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponse.class, com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponse.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (subscriberIntentsBuilder_ == null) {
+          subscriberIntents_ = java.util.Collections.emptyList();
+        } else {
+          subscriberIntents_ = null;
+          subscriberIntentsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsBySubscriberAddressResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponse getDefaultInstanceForType() {
+        return com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponse build() {
+        com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponse buildPartial() {
+        com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponse result = new com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponse result) {
+        if (subscriberIntentsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            subscriberIntents_ = java.util.Collections.unmodifiableList(subscriberIntents_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.subscriberIntents_ = subscriberIntents_;
+        } else {
+          result.subscriberIntents_ = subscriberIntentsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponse) {
+          return mergeFrom((com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponse other) {
+        if (other == com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponse.getDefaultInstance()) return this;
+        if (subscriberIntentsBuilder_ == null) {
+          if (!other.subscriberIntents_.isEmpty()) {
+            if (subscriberIntents_.isEmpty()) {
+              subscriberIntents_ = other.subscriberIntents_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureSubscriberIntentsIsMutable();
+              subscriberIntents_.addAll(other.subscriberIntents_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.subscriberIntents_.isEmpty()) {
+            if (subscriberIntentsBuilder_.isEmpty()) {
+              subscriberIntentsBuilder_.dispose();
+              subscriberIntentsBuilder_ = null;
+              subscriberIntents_ = other.subscriberIntents_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              subscriberIntentsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSubscriberIntentsFieldBuilder() : null;
+            } else {
+              subscriberIntentsBuilder_.addAllMessages(other.subscriberIntents_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.pubsub.v1.PubsubProto.SubscriberIntent m =
+                    input.readMessage(
+                        com.pubsub.v1.PubsubProto.SubscriberIntent.parser(),
+                        extensionRegistry);
+                if (subscriberIntentsBuilder_ == null) {
+                  ensureSubscriberIntentsIsMutable();
+                  subscriberIntents_.add(m);
+                } else {
+                  subscriberIntentsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.pubsub.v1.PubsubProto.SubscriberIntent> subscriberIntents_ =
+        java.util.Collections.emptyList();
+      private void ensureSubscriberIntentsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          subscriberIntents_ = new java.util.ArrayList<com.pubsub.v1.PubsubProto.SubscriberIntent>(subscriberIntents_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.pubsub.v1.PubsubProto.SubscriberIntent, com.pubsub.v1.PubsubProto.SubscriberIntent.Builder, com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder> subscriberIntentsBuilder_;
+
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public java.util.List<com.pubsub.v1.PubsubProto.SubscriberIntent> getSubscriberIntentsList() {
+        if (subscriberIntentsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(subscriberIntents_);
+        } else {
+          return subscriberIntentsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public int getSubscriberIntentsCount() {
+        if (subscriberIntentsBuilder_ == null) {
+          return subscriberIntents_.size();
+        } else {
+          return subscriberIntentsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.SubscriberIntent getSubscriberIntents(int index) {
+        if (subscriberIntentsBuilder_ == null) {
+          return subscriberIntents_.get(index);
+        } else {
+          return subscriberIntentsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public Builder setSubscriberIntents(
+          int index, com.pubsub.v1.PubsubProto.SubscriberIntent value) {
+        if (subscriberIntentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSubscriberIntentsIsMutable();
+          subscriberIntents_.set(index, value);
+          onChanged();
+        } else {
+          subscriberIntentsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public Builder setSubscriberIntents(
+          int index, com.pubsub.v1.PubsubProto.SubscriberIntent.Builder builderForValue) {
+        if (subscriberIntentsBuilder_ == null) {
+          ensureSubscriberIntentsIsMutable();
+          subscriberIntents_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          subscriberIntentsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public Builder addSubscriberIntents(com.pubsub.v1.PubsubProto.SubscriberIntent value) {
+        if (subscriberIntentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSubscriberIntentsIsMutable();
+          subscriberIntents_.add(value);
+          onChanged();
+        } else {
+          subscriberIntentsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public Builder addSubscriberIntents(
+          int index, com.pubsub.v1.PubsubProto.SubscriberIntent value) {
+        if (subscriberIntentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSubscriberIntentsIsMutable();
+          subscriberIntents_.add(index, value);
+          onChanged();
+        } else {
+          subscriberIntentsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public Builder addSubscriberIntents(
+          com.pubsub.v1.PubsubProto.SubscriberIntent.Builder builderForValue) {
+        if (subscriberIntentsBuilder_ == null) {
+          ensureSubscriberIntentsIsMutable();
+          subscriberIntents_.add(builderForValue.build());
+          onChanged();
+        } else {
+          subscriberIntentsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public Builder addSubscriberIntents(
+          int index, com.pubsub.v1.PubsubProto.SubscriberIntent.Builder builderForValue) {
+        if (subscriberIntentsBuilder_ == null) {
+          ensureSubscriberIntentsIsMutable();
+          subscriberIntents_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          subscriberIntentsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public Builder addAllSubscriberIntents(
+          java.lang.Iterable<? extends com.pubsub.v1.PubsubProto.SubscriberIntent> values) {
+        if (subscriberIntentsBuilder_ == null) {
+          ensureSubscriberIntentsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, subscriberIntents_);
+          onChanged();
+        } else {
+          subscriberIntentsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public Builder clearSubscriberIntents() {
+        if (subscriberIntentsBuilder_ == null) {
+          subscriberIntents_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          subscriberIntentsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public Builder removeSubscriberIntents(int index) {
+        if (subscriberIntentsBuilder_ == null) {
+          ensureSubscriberIntentsIsMutable();
+          subscriberIntents_.remove(index);
+          onChanged();
+        } else {
+          subscriberIntentsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.SubscriberIntent.Builder getSubscriberIntentsBuilder(
+          int index) {
+        return getSubscriberIntentsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder getSubscriberIntentsOrBuilder(
+          int index) {
+        if (subscriberIntentsBuilder_ == null) {
+          return subscriberIntents_.get(index);  } else {
+          return subscriberIntentsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public java.util.List<? extends com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder> 
+           getSubscriberIntentsOrBuilderList() {
+        if (subscriberIntentsBuilder_ != null) {
+          return subscriberIntentsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(subscriberIntents_);
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.SubscriberIntent.Builder addSubscriberIntentsBuilder() {
+        return getSubscriberIntentsFieldBuilder().addBuilder(
+            com.pubsub.v1.PubsubProto.SubscriberIntent.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.SubscriberIntent.Builder addSubscriberIntentsBuilder(
+          int index) {
+        return getSubscriberIntentsFieldBuilder().addBuilder(
+            index, com.pubsub.v1.PubsubProto.SubscriberIntent.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public java.util.List<com.pubsub.v1.PubsubProto.SubscriberIntent.Builder> 
+           getSubscriberIntentsBuilderList() {
+        return getSubscriberIntentsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.pubsub.v1.PubsubProto.SubscriberIntent, com.pubsub.v1.PubsubProto.SubscriberIntent.Builder, com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder> 
+          getSubscriberIntentsFieldBuilder() {
+        if (subscriberIntentsBuilder_ == null) {
+          subscriberIntentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.pubsub.v1.PubsubProto.SubscriberIntent, com.pubsub.v1.PubsubProto.SubscriberIntent.Builder, com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder>(
+                  subscriberIntents_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          subscriberIntents_ = null;
+        }
+        return subscriberIntentsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.QuerySubscriberIntentsBySubscriberAddressResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.QuerySubscriberIntentsBySubscriberAddressResponse)
+    private static final com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponse();
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySubscriberIntentsBySubscriberAddressResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySubscriberIntentsBySubscriberAddressResponse>() {
+      @java.lang.Override
+      public QuerySubscriberIntentsBySubscriberAddressResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySubscriberIntentsBySubscriberAddressResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySubscriberIntentsBySubscriberAddressResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriberAddressResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySubscriberIntentsBySubscriptionIDRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.QuerySubscriberIntentsBySubscriptionIDRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+     * @return The subscriptionId.
+     */
+    java.lang.String getSubscriptionId();
+    /**
+     * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+     * @return The bytes for subscriptionId.
+     */
+    com.google.protobuf.ByteString
+        getSubscriptionIdBytes();
+  }
+  /**
+   * Protobuf type {@code pubsub.v1.QuerySubscriberIntentsBySubscriptionIDRequest}
+   */
+  public static final class QuerySubscriberIntentsBySubscriptionIDRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.QuerySubscriberIntentsBySubscriptionIDRequest)
+      QuerySubscriberIntentsBySubscriptionIDRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySubscriberIntentsBySubscriptionIDRequest.newBuilder() to construct.
+    private QuerySubscriberIntentsBySubscriptionIDRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySubscriberIntentsBySubscriptionIDRequest() {
+      subscriptionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySubscriberIntentsBySubscriptionIDRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsBySubscriptionIDRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsBySubscriptionIDRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDRequest.class, com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDRequest.Builder.class);
+    }
+
+    public static final int SUBSCRIPTION_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object subscriptionId_ = "";
+    /**
+     * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+     * @return The subscriptionId.
+     */
+    @java.lang.Override
+    public java.lang.String getSubscriptionId() {
+      java.lang.Object ref = subscriptionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subscriptionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+     * @return The bytes for subscriptionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubscriptionIdBytes() {
+      java.lang.Object ref = subscriptionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subscriptionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriptionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subscriptionId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriptionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subscriptionId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDRequest)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDRequest other = (com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDRequest) obj;
+
+      if (!getSubscriptionId()
+          .equals(other.getSubscriptionId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SUBSCRIPTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubscriptionId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pubsub.v1.QuerySubscriberIntentsBySubscriptionIDRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.QuerySubscriberIntentsBySubscriptionIDRequest)
+        com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsBySubscriptionIDRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsBySubscriptionIDRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDRequest.class, com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDRequest.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        subscriptionId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsBySubscriptionIDRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDRequest getDefaultInstanceForType() {
+        return com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDRequest build() {
+        com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDRequest buildPartial() {
+        com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDRequest result = new com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.subscriptionId_ = subscriptionId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDRequest) {
+          return mergeFrom((com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDRequest other) {
+        if (other == com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDRequest.getDefaultInstance()) return this;
+        if (!other.getSubscriptionId().isEmpty()) {
+          subscriptionId_ = other.subscriptionId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                subscriptionId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object subscriptionId_ = "";
+      /**
+       * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+       * @return The subscriptionId.
+       */
+      public java.lang.String getSubscriptionId() {
+        java.lang.Object ref = subscriptionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subscriptionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+       * @return The bytes for subscriptionId.
+       */
+      public com.google.protobuf.ByteString
+          getSubscriptionIdBytes() {
+        java.lang.Object ref = subscriptionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subscriptionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+       * @param value The subscriptionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriptionId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        subscriptionId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubscriptionId() {
+        subscriptionId_ = getDefaultInstance().getSubscriptionId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+       * @param value The bytes for subscriptionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriptionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        subscriptionId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.QuerySubscriberIntentsBySubscriptionIDRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.QuerySubscriberIntentsBySubscriptionIDRequest)
+    private static final com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDRequest();
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySubscriberIntentsBySubscriptionIDRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySubscriberIntentsBySubscriptionIDRequest>() {
+      @java.lang.Override
+      public QuerySubscriberIntentsBySubscriptionIDRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySubscriberIntentsBySubscriptionIDRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySubscriberIntentsBySubscriptionIDRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySubscriberIntentsBySubscriptionIDResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.QuerySubscriberIntentsBySubscriptionIDResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    java.util.List<com.pubsub.v1.PubsubProto.SubscriberIntent> 
+        getSubscriberIntentsList();
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    com.pubsub.v1.PubsubProto.SubscriberIntent getSubscriberIntents(int index);
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    int getSubscriberIntentsCount();
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    java.util.List<? extends com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder> 
+        getSubscriberIntentsOrBuilderList();
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder getSubscriberIntentsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code pubsub.v1.QuerySubscriberIntentsBySubscriptionIDResponse}
+   */
+  public static final class QuerySubscriberIntentsBySubscriptionIDResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.QuerySubscriberIntentsBySubscriptionIDResponse)
+      QuerySubscriberIntentsBySubscriptionIDResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySubscriberIntentsBySubscriptionIDResponse.newBuilder() to construct.
+    private QuerySubscriberIntentsBySubscriptionIDResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySubscriberIntentsBySubscriptionIDResponse() {
+      subscriberIntents_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySubscriberIntentsBySubscriptionIDResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsBySubscriptionIDResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsBySubscriptionIDResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponse.class, com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponse.Builder.class);
+    }
+
+    public static final int SUBSCRIBER_INTENTS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.pubsub.v1.PubsubProto.SubscriberIntent> subscriberIntents_;
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.pubsub.v1.PubsubProto.SubscriberIntent> getSubscriberIntentsList() {
+      return subscriberIntents_;
+    }
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder> 
+        getSubscriberIntentsOrBuilderList() {
+      return subscriberIntents_;
+    }
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    @java.lang.Override
+    public int getSubscriberIntentsCount() {
+      return subscriberIntents_.size();
+    }
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.SubscriberIntent getSubscriberIntents(int index) {
+      return subscriberIntents_.get(index);
+    }
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder getSubscriberIntentsOrBuilder(
+        int index) {
+      return subscriberIntents_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < subscriberIntents_.size(); i++) {
+        output.writeMessage(1, subscriberIntents_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < subscriberIntents_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, subscriberIntents_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponse)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponse other = (com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponse) obj;
+
+      if (!getSubscriberIntentsList()
+          .equals(other.getSubscriberIntentsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getSubscriberIntentsCount() > 0) {
+        hash = (37 * hash) + SUBSCRIBER_INTENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getSubscriberIntentsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pubsub.v1.QuerySubscriberIntentsBySubscriptionIDResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.QuerySubscriberIntentsBySubscriptionIDResponse)
+        com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsBySubscriptionIDResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsBySubscriptionIDResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponse.class, com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponse.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (subscriberIntentsBuilder_ == null) {
+          subscriberIntents_ = java.util.Collections.emptyList();
+        } else {
+          subscriberIntents_ = null;
+          subscriberIntentsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsBySubscriptionIDResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponse getDefaultInstanceForType() {
+        return com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponse build() {
+        com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponse buildPartial() {
+        com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponse result = new com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponse result) {
+        if (subscriberIntentsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            subscriberIntents_ = java.util.Collections.unmodifiableList(subscriberIntents_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.subscriberIntents_ = subscriberIntents_;
+        } else {
+          result.subscriberIntents_ = subscriberIntentsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponse) {
+          return mergeFrom((com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponse other) {
+        if (other == com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponse.getDefaultInstance()) return this;
+        if (subscriberIntentsBuilder_ == null) {
+          if (!other.subscriberIntents_.isEmpty()) {
+            if (subscriberIntents_.isEmpty()) {
+              subscriberIntents_ = other.subscriberIntents_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureSubscriberIntentsIsMutable();
+              subscriberIntents_.addAll(other.subscriberIntents_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.subscriberIntents_.isEmpty()) {
+            if (subscriberIntentsBuilder_.isEmpty()) {
+              subscriberIntentsBuilder_.dispose();
+              subscriberIntentsBuilder_ = null;
+              subscriberIntents_ = other.subscriberIntents_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              subscriberIntentsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSubscriberIntentsFieldBuilder() : null;
+            } else {
+              subscriberIntentsBuilder_.addAllMessages(other.subscriberIntents_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.pubsub.v1.PubsubProto.SubscriberIntent m =
+                    input.readMessage(
+                        com.pubsub.v1.PubsubProto.SubscriberIntent.parser(),
+                        extensionRegistry);
+                if (subscriberIntentsBuilder_ == null) {
+                  ensureSubscriberIntentsIsMutable();
+                  subscriberIntents_.add(m);
+                } else {
+                  subscriberIntentsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.pubsub.v1.PubsubProto.SubscriberIntent> subscriberIntents_ =
+        java.util.Collections.emptyList();
+      private void ensureSubscriberIntentsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          subscriberIntents_ = new java.util.ArrayList<com.pubsub.v1.PubsubProto.SubscriberIntent>(subscriberIntents_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.pubsub.v1.PubsubProto.SubscriberIntent, com.pubsub.v1.PubsubProto.SubscriberIntent.Builder, com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder> subscriberIntentsBuilder_;
+
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public java.util.List<com.pubsub.v1.PubsubProto.SubscriberIntent> getSubscriberIntentsList() {
+        if (subscriberIntentsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(subscriberIntents_);
+        } else {
+          return subscriberIntentsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public int getSubscriberIntentsCount() {
+        if (subscriberIntentsBuilder_ == null) {
+          return subscriberIntents_.size();
+        } else {
+          return subscriberIntentsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.SubscriberIntent getSubscriberIntents(int index) {
+        if (subscriberIntentsBuilder_ == null) {
+          return subscriberIntents_.get(index);
+        } else {
+          return subscriberIntentsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public Builder setSubscriberIntents(
+          int index, com.pubsub.v1.PubsubProto.SubscriberIntent value) {
+        if (subscriberIntentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSubscriberIntentsIsMutable();
+          subscriberIntents_.set(index, value);
+          onChanged();
+        } else {
+          subscriberIntentsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public Builder setSubscriberIntents(
+          int index, com.pubsub.v1.PubsubProto.SubscriberIntent.Builder builderForValue) {
+        if (subscriberIntentsBuilder_ == null) {
+          ensureSubscriberIntentsIsMutable();
+          subscriberIntents_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          subscriberIntentsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public Builder addSubscriberIntents(com.pubsub.v1.PubsubProto.SubscriberIntent value) {
+        if (subscriberIntentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSubscriberIntentsIsMutable();
+          subscriberIntents_.add(value);
+          onChanged();
+        } else {
+          subscriberIntentsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public Builder addSubscriberIntents(
+          int index, com.pubsub.v1.PubsubProto.SubscriberIntent value) {
+        if (subscriberIntentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSubscriberIntentsIsMutable();
+          subscriberIntents_.add(index, value);
+          onChanged();
+        } else {
+          subscriberIntentsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public Builder addSubscriberIntents(
+          com.pubsub.v1.PubsubProto.SubscriberIntent.Builder builderForValue) {
+        if (subscriberIntentsBuilder_ == null) {
+          ensureSubscriberIntentsIsMutable();
+          subscriberIntents_.add(builderForValue.build());
+          onChanged();
+        } else {
+          subscriberIntentsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public Builder addSubscriberIntents(
+          int index, com.pubsub.v1.PubsubProto.SubscriberIntent.Builder builderForValue) {
+        if (subscriberIntentsBuilder_ == null) {
+          ensureSubscriberIntentsIsMutable();
+          subscriberIntents_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          subscriberIntentsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public Builder addAllSubscriberIntents(
+          java.lang.Iterable<? extends com.pubsub.v1.PubsubProto.SubscriberIntent> values) {
+        if (subscriberIntentsBuilder_ == null) {
+          ensureSubscriberIntentsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, subscriberIntents_);
+          onChanged();
+        } else {
+          subscriberIntentsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public Builder clearSubscriberIntents() {
+        if (subscriberIntentsBuilder_ == null) {
+          subscriberIntents_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          subscriberIntentsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public Builder removeSubscriberIntents(int index) {
+        if (subscriberIntentsBuilder_ == null) {
+          ensureSubscriberIntentsIsMutable();
+          subscriberIntents_.remove(index);
+          onChanged();
+        } else {
+          subscriberIntentsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.SubscriberIntent.Builder getSubscriberIntentsBuilder(
+          int index) {
+        return getSubscriberIntentsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder getSubscriberIntentsOrBuilder(
+          int index) {
+        if (subscriberIntentsBuilder_ == null) {
+          return subscriberIntents_.get(index);  } else {
+          return subscriberIntentsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public java.util.List<? extends com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder> 
+           getSubscriberIntentsOrBuilderList() {
+        if (subscriberIntentsBuilder_ != null) {
+          return subscriberIntentsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(subscriberIntents_);
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.SubscriberIntent.Builder addSubscriberIntentsBuilder() {
+        return getSubscriberIntentsFieldBuilder().addBuilder(
+            com.pubsub.v1.PubsubProto.SubscriberIntent.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.SubscriberIntent.Builder addSubscriberIntentsBuilder(
+          int index) {
+        return getSubscriberIntentsFieldBuilder().addBuilder(
+            index, com.pubsub.v1.PubsubProto.SubscriberIntent.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public java.util.List<com.pubsub.v1.PubsubProto.SubscriberIntent.Builder> 
+           getSubscriberIntentsBuilderList() {
+        return getSubscriberIntentsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.pubsub.v1.PubsubProto.SubscriberIntent, com.pubsub.v1.PubsubProto.SubscriberIntent.Builder, com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder> 
+          getSubscriberIntentsFieldBuilder() {
+        if (subscriberIntentsBuilder_ == null) {
+          subscriberIntentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.pubsub.v1.PubsubProto.SubscriberIntent, com.pubsub.v1.PubsubProto.SubscriberIntent.Builder, com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder>(
+                  subscriberIntents_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          subscriberIntents_ = null;
+        }
+        return subscriberIntentsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.QuerySubscriberIntentsBySubscriptionIDResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.QuerySubscriberIntentsBySubscriptionIDResponse)
+    private static final com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponse();
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySubscriberIntentsBySubscriptionIDResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySubscriberIntentsBySubscriptionIDResponse>() {
+      @java.lang.Override
+      public QuerySubscriberIntentsBySubscriptionIDResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySubscriberIntentsBySubscriptionIDResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySubscriberIntentsBySubscriptionIDResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.QueryProto.QuerySubscriberIntentsBySubscriptionIDResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySubscriberIntentsByPublisherDomainRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.QuerySubscriberIntentsByPublisherDomainRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string publisher_domain = 1 [json_name = "publisherDomain"];</code>
+     * @return The publisherDomain.
+     */
+    java.lang.String getPublisherDomain();
+    /**
+     * <code>string publisher_domain = 1 [json_name = "publisherDomain"];</code>
+     * @return The bytes for publisherDomain.
+     */
+    com.google.protobuf.ByteString
+        getPublisherDomainBytes();
+  }
+  /**
+   * Protobuf type {@code pubsub.v1.QuerySubscriberIntentsByPublisherDomainRequest}
+   */
+  public static final class QuerySubscriberIntentsByPublisherDomainRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.QuerySubscriberIntentsByPublisherDomainRequest)
+      QuerySubscriberIntentsByPublisherDomainRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySubscriberIntentsByPublisherDomainRequest.newBuilder() to construct.
+    private QuerySubscriberIntentsByPublisherDomainRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySubscriberIntentsByPublisherDomainRequest() {
+      publisherDomain_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySubscriberIntentsByPublisherDomainRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsByPublisherDomainRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsByPublisherDomainRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainRequest.class, com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainRequest.Builder.class);
+    }
+
+    public static final int PUBLISHER_DOMAIN_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object publisherDomain_ = "";
+    /**
+     * <code>string publisher_domain = 1 [json_name = "publisherDomain"];</code>
+     * @return The publisherDomain.
+     */
+    @java.lang.Override
+    public java.lang.String getPublisherDomain() {
+      java.lang.Object ref = publisherDomain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        publisherDomain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string publisher_domain = 1 [json_name = "publisherDomain"];</code>
+     * @return The bytes for publisherDomain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPublisherDomainBytes() {
+      java.lang.Object ref = publisherDomain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        publisherDomain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publisherDomain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, publisherDomain_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(publisherDomain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, publisherDomain_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainRequest)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainRequest other = (com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainRequest) obj;
+
+      if (!getPublisherDomain()
+          .equals(other.getPublisherDomain())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PUBLISHER_DOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getPublisherDomain().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pubsub.v1.QuerySubscriberIntentsByPublisherDomainRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.QuerySubscriberIntentsByPublisherDomainRequest)
+        com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsByPublisherDomainRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsByPublisherDomainRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainRequest.class, com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainRequest.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        publisherDomain_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsByPublisherDomainRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainRequest getDefaultInstanceForType() {
+        return com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainRequest build() {
+        com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainRequest buildPartial() {
+        com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainRequest result = new com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.publisherDomain_ = publisherDomain_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainRequest) {
+          return mergeFrom((com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainRequest other) {
+        if (other == com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainRequest.getDefaultInstance()) return this;
+        if (!other.getPublisherDomain().isEmpty()) {
+          publisherDomain_ = other.publisherDomain_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                publisherDomain_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object publisherDomain_ = "";
+      /**
+       * <code>string publisher_domain = 1 [json_name = "publisherDomain"];</code>
+       * @return The publisherDomain.
+       */
+      public java.lang.String getPublisherDomain() {
+        java.lang.Object ref = publisherDomain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          publisherDomain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string publisher_domain = 1 [json_name = "publisherDomain"];</code>
+       * @return The bytes for publisherDomain.
+       */
+      public com.google.protobuf.ByteString
+          getPublisherDomainBytes() {
+        java.lang.Object ref = publisherDomain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          publisherDomain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string publisher_domain = 1 [json_name = "publisherDomain"];</code>
+       * @param value The publisherDomain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublisherDomain(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        publisherDomain_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string publisher_domain = 1 [json_name = "publisherDomain"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPublisherDomain() {
+        publisherDomain_ = getDefaultInstance().getPublisherDomain();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string publisher_domain = 1 [json_name = "publisherDomain"];</code>
+       * @param value The bytes for publisherDomain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPublisherDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        publisherDomain_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.QuerySubscriberIntentsByPublisherDomainRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.QuerySubscriberIntentsByPublisherDomainRequest)
+    private static final com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainRequest();
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySubscriberIntentsByPublisherDomainRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySubscriberIntentsByPublisherDomainRequest>() {
+      @java.lang.Override
+      public QuerySubscriberIntentsByPublisherDomainRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySubscriberIntentsByPublisherDomainRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySubscriberIntentsByPublisherDomainRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QuerySubscriberIntentsByPublisherDomainResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.QuerySubscriberIntentsByPublisherDomainResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    java.util.List<com.pubsub.v1.PubsubProto.SubscriberIntent> 
+        getSubscriberIntentsList();
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    com.pubsub.v1.PubsubProto.SubscriberIntent getSubscriberIntents(int index);
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    int getSubscriberIntentsCount();
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    java.util.List<? extends com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder> 
+        getSubscriberIntentsOrBuilderList();
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder getSubscriberIntentsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code pubsub.v1.QuerySubscriberIntentsByPublisherDomainResponse}
+   */
+  public static final class QuerySubscriberIntentsByPublisherDomainResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.QuerySubscriberIntentsByPublisherDomainResponse)
+      QuerySubscriberIntentsByPublisherDomainResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QuerySubscriberIntentsByPublisherDomainResponse.newBuilder() to construct.
+    private QuerySubscriberIntentsByPublisherDomainResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QuerySubscriberIntentsByPublisherDomainResponse() {
+      subscriberIntents_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QuerySubscriberIntentsByPublisherDomainResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsByPublisherDomainResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsByPublisherDomainResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponse.class, com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponse.Builder.class);
+    }
+
+    public static final int SUBSCRIBER_INTENTS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.pubsub.v1.PubsubProto.SubscriberIntent> subscriberIntents_;
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.pubsub.v1.PubsubProto.SubscriberIntent> getSubscriberIntentsList() {
+      return subscriberIntents_;
+    }
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder> 
+        getSubscriberIntentsOrBuilderList() {
+      return subscriberIntents_;
+    }
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    @java.lang.Override
+    public int getSubscriberIntentsCount() {
+      return subscriberIntents_.size();
+    }
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.SubscriberIntent getSubscriberIntents(int index) {
+      return subscriberIntents_.get(index);
+    }
+    /**
+     * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+     */
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder getSubscriberIntentsOrBuilder(
+        int index) {
+      return subscriberIntents_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < subscriberIntents_.size(); i++) {
+        output.writeMessage(1, subscriberIntents_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < subscriberIntents_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, subscriberIntents_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponse)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponse other = (com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponse) obj;
+
+      if (!getSubscriberIntentsList()
+          .equals(other.getSubscriberIntentsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getSubscriberIntentsCount() > 0) {
+        hash = (37 * hash) + SUBSCRIBER_INTENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getSubscriberIntentsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pubsub.v1.QuerySubscriberIntentsByPublisherDomainResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.QuerySubscriberIntentsByPublisherDomainResponse)
+        com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsByPublisherDomainResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsByPublisherDomainResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponse.class, com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponse.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (subscriberIntentsBuilder_ == null) {
+          subscriberIntents_ = java.util.Collections.emptyList();
+        } else {
+          subscriberIntents_ = null;
+          subscriberIntentsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QuerySubscriberIntentsByPublisherDomainResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponse getDefaultInstanceForType() {
+        return com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponse build() {
+        com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponse buildPartial() {
+        com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponse result = new com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponse result) {
+        if (subscriberIntentsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            subscriberIntents_ = java.util.Collections.unmodifiableList(subscriberIntents_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.subscriberIntents_ = subscriberIntents_;
+        } else {
+          result.subscriberIntents_ = subscriberIntentsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponse) {
+          return mergeFrom((com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponse other) {
+        if (other == com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponse.getDefaultInstance()) return this;
+        if (subscriberIntentsBuilder_ == null) {
+          if (!other.subscriberIntents_.isEmpty()) {
+            if (subscriberIntents_.isEmpty()) {
+              subscriberIntents_ = other.subscriberIntents_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureSubscriberIntentsIsMutable();
+              subscriberIntents_.addAll(other.subscriberIntents_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.subscriberIntents_.isEmpty()) {
+            if (subscriberIntentsBuilder_.isEmpty()) {
+              subscriberIntentsBuilder_.dispose();
+              subscriberIntentsBuilder_ = null;
+              subscriberIntents_ = other.subscriberIntents_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              subscriberIntentsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSubscriberIntentsFieldBuilder() : null;
+            } else {
+              subscriberIntentsBuilder_.addAllMessages(other.subscriberIntents_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.pubsub.v1.PubsubProto.SubscriberIntent m =
+                    input.readMessage(
+                        com.pubsub.v1.PubsubProto.SubscriberIntent.parser(),
+                        extensionRegistry);
+                if (subscriberIntentsBuilder_ == null) {
+                  ensureSubscriberIntentsIsMutable();
+                  subscriberIntents_.add(m);
+                } else {
+                  subscriberIntentsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.pubsub.v1.PubsubProto.SubscriberIntent> subscriberIntents_ =
+        java.util.Collections.emptyList();
+      private void ensureSubscriberIntentsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          subscriberIntents_ = new java.util.ArrayList<com.pubsub.v1.PubsubProto.SubscriberIntent>(subscriberIntents_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.pubsub.v1.PubsubProto.SubscriberIntent, com.pubsub.v1.PubsubProto.SubscriberIntent.Builder, com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder> subscriberIntentsBuilder_;
+
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public java.util.List<com.pubsub.v1.PubsubProto.SubscriberIntent> getSubscriberIntentsList() {
+        if (subscriberIntentsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(subscriberIntents_);
+        } else {
+          return subscriberIntentsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public int getSubscriberIntentsCount() {
+        if (subscriberIntentsBuilder_ == null) {
+          return subscriberIntents_.size();
+        } else {
+          return subscriberIntentsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.SubscriberIntent getSubscriberIntents(int index) {
+        if (subscriberIntentsBuilder_ == null) {
+          return subscriberIntents_.get(index);
+        } else {
+          return subscriberIntentsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public Builder setSubscriberIntents(
+          int index, com.pubsub.v1.PubsubProto.SubscriberIntent value) {
+        if (subscriberIntentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSubscriberIntentsIsMutable();
+          subscriberIntents_.set(index, value);
+          onChanged();
+        } else {
+          subscriberIntentsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public Builder setSubscriberIntents(
+          int index, com.pubsub.v1.PubsubProto.SubscriberIntent.Builder builderForValue) {
+        if (subscriberIntentsBuilder_ == null) {
+          ensureSubscriberIntentsIsMutable();
+          subscriberIntents_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          subscriberIntentsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public Builder addSubscriberIntents(com.pubsub.v1.PubsubProto.SubscriberIntent value) {
+        if (subscriberIntentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSubscriberIntentsIsMutable();
+          subscriberIntents_.add(value);
+          onChanged();
+        } else {
+          subscriberIntentsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public Builder addSubscriberIntents(
+          int index, com.pubsub.v1.PubsubProto.SubscriberIntent value) {
+        if (subscriberIntentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSubscriberIntentsIsMutable();
+          subscriberIntents_.add(index, value);
+          onChanged();
+        } else {
+          subscriberIntentsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public Builder addSubscriberIntents(
+          com.pubsub.v1.PubsubProto.SubscriberIntent.Builder builderForValue) {
+        if (subscriberIntentsBuilder_ == null) {
+          ensureSubscriberIntentsIsMutable();
+          subscriberIntents_.add(builderForValue.build());
+          onChanged();
+        } else {
+          subscriberIntentsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public Builder addSubscriberIntents(
+          int index, com.pubsub.v1.PubsubProto.SubscriberIntent.Builder builderForValue) {
+        if (subscriberIntentsBuilder_ == null) {
+          ensureSubscriberIntentsIsMutable();
+          subscriberIntents_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          subscriberIntentsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public Builder addAllSubscriberIntents(
+          java.lang.Iterable<? extends com.pubsub.v1.PubsubProto.SubscriberIntent> values) {
+        if (subscriberIntentsBuilder_ == null) {
+          ensureSubscriberIntentsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, subscriberIntents_);
+          onChanged();
+        } else {
+          subscriberIntentsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public Builder clearSubscriberIntents() {
+        if (subscriberIntentsBuilder_ == null) {
+          subscriberIntents_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          subscriberIntentsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public Builder removeSubscriberIntents(int index) {
+        if (subscriberIntentsBuilder_ == null) {
+          ensureSubscriberIntentsIsMutable();
+          subscriberIntents_.remove(index);
+          onChanged();
+        } else {
+          subscriberIntentsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.SubscriberIntent.Builder getSubscriberIntentsBuilder(
+          int index) {
+        return getSubscriberIntentsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder getSubscriberIntentsOrBuilder(
+          int index) {
+        if (subscriberIntentsBuilder_ == null) {
+          return subscriberIntents_.get(index);  } else {
+          return subscriberIntentsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public java.util.List<? extends com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder> 
+           getSubscriberIntentsOrBuilderList() {
+        if (subscriberIntentsBuilder_ != null) {
+          return subscriberIntentsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(subscriberIntents_);
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.SubscriberIntent.Builder addSubscriberIntentsBuilder() {
+        return getSubscriberIntentsFieldBuilder().addBuilder(
+            com.pubsub.v1.PubsubProto.SubscriberIntent.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.SubscriberIntent.Builder addSubscriberIntentsBuilder(
+          int index) {
+        return getSubscriberIntentsFieldBuilder().addBuilder(
+            index, com.pubsub.v1.PubsubProto.SubscriberIntent.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .pubsub.v1.SubscriberIntent subscriber_intents = 1 [json_name = "subscriberIntents"];</code>
+       */
+      public java.util.List<com.pubsub.v1.PubsubProto.SubscriberIntent.Builder> 
+           getSubscriberIntentsBuilderList() {
+        return getSubscriberIntentsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.pubsub.v1.PubsubProto.SubscriberIntent, com.pubsub.v1.PubsubProto.SubscriberIntent.Builder, com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder> 
+          getSubscriberIntentsFieldBuilder() {
+        if (subscriberIntentsBuilder_ == null) {
+          subscriberIntentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.pubsub.v1.PubsubProto.SubscriberIntent, com.pubsub.v1.PubsubProto.SubscriberIntent.Builder, com.pubsub.v1.PubsubProto.SubscriberIntentOrBuilder>(
+                  subscriberIntents_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          subscriberIntents_ = null;
+        }
+        return subscriberIntentsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.QuerySubscriberIntentsByPublisherDomainResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.QuerySubscriberIntentsByPublisherDomainResponse)
+    private static final com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponse();
+    }
+
+    public static com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QuerySubscriberIntentsByPublisherDomainResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QuerySubscriberIntentsByPublisherDomainResponse>() {
+      @java.lang.Override
+      public QuerySubscriberIntentsByPublisherDomainResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QuerySubscriberIntentsByPublisherDomainResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QuerySubscriberIntentsByPublisherDomainResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.QueryProto.QuerySubscriberIntentsByPublisherDomainResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryDefaultSubscriptionRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.QueryDefaultSubscriptionRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+     * @return The subscriptionId.
+     */
+    java.lang.String getSubscriptionId();
+    /**
+     * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+     * @return The bytes for subscriptionId.
+     */
+    com.google.protobuf.ByteString
+        getSubscriptionIdBytes();
+  }
+  /**
+   * Protobuf type {@code pubsub.v1.QueryDefaultSubscriptionRequest}
+   */
+  public static final class QueryDefaultSubscriptionRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.QueryDefaultSubscriptionRequest)
+      QueryDefaultSubscriptionRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryDefaultSubscriptionRequest.newBuilder() to construct.
+    private QueryDefaultSubscriptionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryDefaultSubscriptionRequest() {
+      subscriptionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryDefaultSubscriptionRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryDefaultSubscriptionRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryDefaultSubscriptionRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.QueryProto.QueryDefaultSubscriptionRequest.class, com.pubsub.v1.QueryProto.QueryDefaultSubscriptionRequest.Builder.class);
+    }
+
+    public static final int SUBSCRIPTION_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object subscriptionId_ = "";
+    /**
+     * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+     * @return The subscriptionId.
+     */
+    @java.lang.Override
+    public java.lang.String getSubscriptionId() {
+      java.lang.Object ref = subscriptionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subscriptionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+     * @return The bytes for subscriptionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubscriptionIdBytes() {
+      java.lang.Object ref = subscriptionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subscriptionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriptionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subscriptionId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subscriptionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subscriptionId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.QueryProto.QueryDefaultSubscriptionRequest)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.QueryProto.QueryDefaultSubscriptionRequest other = (com.pubsub.v1.QueryProto.QueryDefaultSubscriptionRequest) obj;
+
+      if (!getSubscriptionId()
+          .equals(other.getSubscriptionId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SUBSCRIPTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubscriptionId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.QueryProto.QueryDefaultSubscriptionRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pubsub.v1.QueryDefaultSubscriptionRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.QueryDefaultSubscriptionRequest)
+        com.pubsub.v1.QueryProto.QueryDefaultSubscriptionRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryDefaultSubscriptionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryDefaultSubscriptionRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.QueryProto.QueryDefaultSubscriptionRequest.class, com.pubsub.v1.QueryProto.QueryDefaultSubscriptionRequest.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.QueryProto.QueryDefaultSubscriptionRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        subscriptionId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryDefaultSubscriptionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryDefaultSubscriptionRequest getDefaultInstanceForType() {
+        return com.pubsub.v1.QueryProto.QueryDefaultSubscriptionRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryDefaultSubscriptionRequest build() {
+        com.pubsub.v1.QueryProto.QueryDefaultSubscriptionRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryDefaultSubscriptionRequest buildPartial() {
+        com.pubsub.v1.QueryProto.QueryDefaultSubscriptionRequest result = new com.pubsub.v1.QueryProto.QueryDefaultSubscriptionRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pubsub.v1.QueryProto.QueryDefaultSubscriptionRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.subscriptionId_ = subscriptionId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.QueryProto.QueryDefaultSubscriptionRequest) {
+          return mergeFrom((com.pubsub.v1.QueryProto.QueryDefaultSubscriptionRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.QueryProto.QueryDefaultSubscriptionRequest other) {
+        if (other == com.pubsub.v1.QueryProto.QueryDefaultSubscriptionRequest.getDefaultInstance()) return this;
+        if (!other.getSubscriptionId().isEmpty()) {
+          subscriptionId_ = other.subscriptionId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                subscriptionId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object subscriptionId_ = "";
+      /**
+       * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+       * @return The subscriptionId.
+       */
+      public java.lang.String getSubscriptionId() {
+        java.lang.Object ref = subscriptionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subscriptionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+       * @return The bytes for subscriptionId.
+       */
+      public com.google.protobuf.ByteString
+          getSubscriptionIdBytes() {
+        java.lang.Object ref = subscriptionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subscriptionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+       * @param value The subscriptionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriptionId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        subscriptionId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubscriptionId() {
+        subscriptionId_ = getDefaultInstance().getSubscriptionId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subscription_id = 1 [json_name = "subscriptionId"];</code>
+       * @param value The bytes for subscriptionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubscriptionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        subscriptionId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.QueryDefaultSubscriptionRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.QueryDefaultSubscriptionRequest)
+    private static final com.pubsub.v1.QueryProto.QueryDefaultSubscriptionRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.QueryProto.QueryDefaultSubscriptionRequest();
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryDefaultSubscriptionRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryDefaultSubscriptionRequest>() {
+      @java.lang.Override
+      public QueryDefaultSubscriptionRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryDefaultSubscriptionRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryDefaultSubscriptionRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.QueryProto.QueryDefaultSubscriptionRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryDefaultSubscriptionResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.QueryDefaultSubscriptionResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.pubsub.v1.DefaultSubscription default_subscription = 1 [json_name = "defaultSubscription"];</code>
+     * @return Whether the defaultSubscription field is set.
+     */
+    boolean hasDefaultSubscription();
+    /**
+     * <code>.pubsub.v1.DefaultSubscription default_subscription = 1 [json_name = "defaultSubscription"];</code>
+     * @return The defaultSubscription.
+     */
+    com.pubsub.v1.PubsubProto.DefaultSubscription getDefaultSubscription();
+    /**
+     * <code>.pubsub.v1.DefaultSubscription default_subscription = 1 [json_name = "defaultSubscription"];</code>
+     */
+    com.pubsub.v1.PubsubProto.DefaultSubscriptionOrBuilder getDefaultSubscriptionOrBuilder();
+  }
+  /**
+   * Protobuf type {@code pubsub.v1.QueryDefaultSubscriptionResponse}
+   */
+  public static final class QueryDefaultSubscriptionResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.QueryDefaultSubscriptionResponse)
+      QueryDefaultSubscriptionResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryDefaultSubscriptionResponse.newBuilder() to construct.
+    private QueryDefaultSubscriptionResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryDefaultSubscriptionResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryDefaultSubscriptionResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryDefaultSubscriptionResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryDefaultSubscriptionResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse.class, com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse.Builder.class);
+    }
+
+    public static final int DEFAULT_SUBSCRIPTION_FIELD_NUMBER = 1;
+    private com.pubsub.v1.PubsubProto.DefaultSubscription defaultSubscription_;
+    /**
+     * <code>.pubsub.v1.DefaultSubscription default_subscription = 1 [json_name = "defaultSubscription"];</code>
+     * @return Whether the defaultSubscription field is set.
+     */
+    @java.lang.Override
+    public boolean hasDefaultSubscription() {
+      return defaultSubscription_ != null;
+    }
+    /**
+     * <code>.pubsub.v1.DefaultSubscription default_subscription = 1 [json_name = "defaultSubscription"];</code>
+     * @return The defaultSubscription.
+     */
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.DefaultSubscription getDefaultSubscription() {
+      return defaultSubscription_ == null ? com.pubsub.v1.PubsubProto.DefaultSubscription.getDefaultInstance() : defaultSubscription_;
+    }
+    /**
+     * <code>.pubsub.v1.DefaultSubscription default_subscription = 1 [json_name = "defaultSubscription"];</code>
+     */
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.DefaultSubscriptionOrBuilder getDefaultSubscriptionOrBuilder() {
+      return defaultSubscription_ == null ? com.pubsub.v1.PubsubProto.DefaultSubscription.getDefaultInstance() : defaultSubscription_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (defaultSubscription_ != null) {
+        output.writeMessage(1, getDefaultSubscription());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (defaultSubscription_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getDefaultSubscription());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse other = (com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse) obj;
+
+      if (hasDefaultSubscription() != other.hasDefaultSubscription()) return false;
+      if (hasDefaultSubscription()) {
+        if (!getDefaultSubscription()
+            .equals(other.getDefaultSubscription())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasDefaultSubscription()) {
+        hash = (37 * hash) + DEFAULT_SUBSCRIPTION_FIELD_NUMBER;
+        hash = (53 * hash) + getDefaultSubscription().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pubsub.v1.QueryDefaultSubscriptionResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.QueryDefaultSubscriptionResponse)
+        com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryDefaultSubscriptionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryDefaultSubscriptionResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse.class, com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        defaultSubscription_ = null;
+        if (defaultSubscriptionBuilder_ != null) {
+          defaultSubscriptionBuilder_.dispose();
+          defaultSubscriptionBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryDefaultSubscriptionResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse getDefaultInstanceForType() {
+        return com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse build() {
+        com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse buildPartial() {
+        com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse result = new com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.defaultSubscription_ = defaultSubscriptionBuilder_ == null
+              ? defaultSubscription_
+              : defaultSubscriptionBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse) {
+          return mergeFrom((com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse other) {
+        if (other == com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse.getDefaultInstance()) return this;
+        if (other.hasDefaultSubscription()) {
+          mergeDefaultSubscription(other.getDefaultSubscription());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getDefaultSubscriptionFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.pubsub.v1.PubsubProto.DefaultSubscription defaultSubscription_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.pubsub.v1.PubsubProto.DefaultSubscription, com.pubsub.v1.PubsubProto.DefaultSubscription.Builder, com.pubsub.v1.PubsubProto.DefaultSubscriptionOrBuilder> defaultSubscriptionBuilder_;
+      /**
+       * <code>.pubsub.v1.DefaultSubscription default_subscription = 1 [json_name = "defaultSubscription"];</code>
+       * @return Whether the defaultSubscription field is set.
+       */
+      public boolean hasDefaultSubscription() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.pubsub.v1.DefaultSubscription default_subscription = 1 [json_name = "defaultSubscription"];</code>
+       * @return The defaultSubscription.
+       */
+      public com.pubsub.v1.PubsubProto.DefaultSubscription getDefaultSubscription() {
+        if (defaultSubscriptionBuilder_ == null) {
+          return defaultSubscription_ == null ? com.pubsub.v1.PubsubProto.DefaultSubscription.getDefaultInstance() : defaultSubscription_;
+        } else {
+          return defaultSubscriptionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.pubsub.v1.DefaultSubscription default_subscription = 1 [json_name = "defaultSubscription"];</code>
+       */
+      public Builder setDefaultSubscription(com.pubsub.v1.PubsubProto.DefaultSubscription value) {
+        if (defaultSubscriptionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          defaultSubscription_ = value;
+        } else {
+          defaultSubscriptionBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pubsub.v1.DefaultSubscription default_subscription = 1 [json_name = "defaultSubscription"];</code>
+       */
+      public Builder setDefaultSubscription(
+          com.pubsub.v1.PubsubProto.DefaultSubscription.Builder builderForValue) {
+        if (defaultSubscriptionBuilder_ == null) {
+          defaultSubscription_ = builderForValue.build();
+        } else {
+          defaultSubscriptionBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pubsub.v1.DefaultSubscription default_subscription = 1 [json_name = "defaultSubscription"];</code>
+       */
+      public Builder mergeDefaultSubscription(com.pubsub.v1.PubsubProto.DefaultSubscription value) {
+        if (defaultSubscriptionBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            defaultSubscription_ != null &&
+            defaultSubscription_ != com.pubsub.v1.PubsubProto.DefaultSubscription.getDefaultInstance()) {
+            getDefaultSubscriptionBuilder().mergeFrom(value);
+          } else {
+            defaultSubscription_ = value;
+          }
+        } else {
+          defaultSubscriptionBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pubsub.v1.DefaultSubscription default_subscription = 1 [json_name = "defaultSubscription"];</code>
+       */
+      public Builder clearDefaultSubscription() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        defaultSubscription_ = null;
+        if (defaultSubscriptionBuilder_ != null) {
+          defaultSubscriptionBuilder_.dispose();
+          defaultSubscriptionBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pubsub.v1.DefaultSubscription default_subscription = 1 [json_name = "defaultSubscription"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.DefaultSubscription.Builder getDefaultSubscriptionBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getDefaultSubscriptionFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.pubsub.v1.DefaultSubscription default_subscription = 1 [json_name = "defaultSubscription"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.DefaultSubscriptionOrBuilder getDefaultSubscriptionOrBuilder() {
+        if (defaultSubscriptionBuilder_ != null) {
+          return defaultSubscriptionBuilder_.getMessageOrBuilder();
+        } else {
+          return defaultSubscription_ == null ?
+              com.pubsub.v1.PubsubProto.DefaultSubscription.getDefaultInstance() : defaultSubscription_;
+        }
+      }
+      /**
+       * <code>.pubsub.v1.DefaultSubscription default_subscription = 1 [json_name = "defaultSubscription"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.pubsub.v1.PubsubProto.DefaultSubscription, com.pubsub.v1.PubsubProto.DefaultSubscription.Builder, com.pubsub.v1.PubsubProto.DefaultSubscriptionOrBuilder> 
+          getDefaultSubscriptionFieldBuilder() {
+        if (defaultSubscriptionBuilder_ == null) {
+          defaultSubscriptionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.pubsub.v1.PubsubProto.DefaultSubscription, com.pubsub.v1.PubsubProto.DefaultSubscription.Builder, com.pubsub.v1.PubsubProto.DefaultSubscriptionOrBuilder>(
+                  getDefaultSubscription(),
+                  getParentForChildren(),
+                  isClean());
+          defaultSubscription_ = null;
+        }
+        return defaultSubscriptionBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.QueryDefaultSubscriptionResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.QueryDefaultSubscriptionResponse)
+    private static final com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse();
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryDefaultSubscriptionResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryDefaultSubscriptionResponse>() {
+      @java.lang.Override
+      public QueryDefaultSubscriptionResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryDefaultSubscriptionResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryDefaultSubscriptionResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.QueryProto.QueryDefaultSubscriptionResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryDefaultSubscriptionsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.QueryDefaultSubscriptionsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code pubsub.v1.QueryDefaultSubscriptionsRequest}
+   */
+  public static final class QueryDefaultSubscriptionsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.QueryDefaultSubscriptionsRequest)
+      QueryDefaultSubscriptionsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryDefaultSubscriptionsRequest.newBuilder() to construct.
+    private QueryDefaultSubscriptionsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryDefaultSubscriptionsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryDefaultSubscriptionsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryDefaultSubscriptionsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryDefaultSubscriptionsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsRequest.class, com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsRequest)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsRequest other = (com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pubsub.v1.QueryDefaultSubscriptionsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.QueryDefaultSubscriptionsRequest)
+        com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryDefaultSubscriptionsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryDefaultSubscriptionsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsRequest.class, com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsRequest.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryDefaultSubscriptionsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsRequest getDefaultInstanceForType() {
+        return com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsRequest build() {
+        com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsRequest buildPartial() {
+        com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsRequest result = new com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsRequest) {
+          return mergeFrom((com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsRequest other) {
+        if (other == com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.QueryDefaultSubscriptionsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.QueryDefaultSubscriptionsRequest)
+    private static final com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsRequest();
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryDefaultSubscriptionsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryDefaultSubscriptionsRequest>() {
+      @java.lang.Override
+      public QueryDefaultSubscriptionsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryDefaultSubscriptionsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryDefaultSubscriptionsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryDefaultSubscriptionsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pubsub.v1.QueryDefaultSubscriptionsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .pubsub.v1.DefaultSubscription default_subscriptions = 1 [json_name = "defaultSubscriptions"];</code>
+     */
+    java.util.List<com.pubsub.v1.PubsubProto.DefaultSubscription> 
+        getDefaultSubscriptionsList();
+    /**
+     * <code>repeated .pubsub.v1.DefaultSubscription default_subscriptions = 1 [json_name = "defaultSubscriptions"];</code>
+     */
+    com.pubsub.v1.PubsubProto.DefaultSubscription getDefaultSubscriptions(int index);
+    /**
+     * <code>repeated .pubsub.v1.DefaultSubscription default_subscriptions = 1 [json_name = "defaultSubscriptions"];</code>
+     */
+    int getDefaultSubscriptionsCount();
+    /**
+     * <code>repeated .pubsub.v1.DefaultSubscription default_subscriptions = 1 [json_name = "defaultSubscriptions"];</code>
+     */
+    java.util.List<? extends com.pubsub.v1.PubsubProto.DefaultSubscriptionOrBuilder> 
+        getDefaultSubscriptionsOrBuilderList();
+    /**
+     * <code>repeated .pubsub.v1.DefaultSubscription default_subscriptions = 1 [json_name = "defaultSubscriptions"];</code>
+     */
+    com.pubsub.v1.PubsubProto.DefaultSubscriptionOrBuilder getDefaultSubscriptionsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code pubsub.v1.QueryDefaultSubscriptionsResponse}
+   */
+  public static final class QueryDefaultSubscriptionsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pubsub.v1.QueryDefaultSubscriptionsResponse)
+      QueryDefaultSubscriptionsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryDefaultSubscriptionsResponse.newBuilder() to construct.
+    private QueryDefaultSubscriptionsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryDefaultSubscriptionsResponse() {
+      defaultSubscriptions_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryDefaultSubscriptionsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryDefaultSubscriptionsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryDefaultSubscriptionsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponse.class, com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponse.Builder.class);
+    }
+
+    public static final int DEFAULT_SUBSCRIPTIONS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.pubsub.v1.PubsubProto.DefaultSubscription> defaultSubscriptions_;
+    /**
+     * <code>repeated .pubsub.v1.DefaultSubscription default_subscriptions = 1 [json_name = "defaultSubscriptions"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.pubsub.v1.PubsubProto.DefaultSubscription> getDefaultSubscriptionsList() {
+      return defaultSubscriptions_;
+    }
+    /**
+     * <code>repeated .pubsub.v1.DefaultSubscription default_subscriptions = 1 [json_name = "defaultSubscriptions"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.pubsub.v1.PubsubProto.DefaultSubscriptionOrBuilder> 
+        getDefaultSubscriptionsOrBuilderList() {
+      return defaultSubscriptions_;
+    }
+    /**
+     * <code>repeated .pubsub.v1.DefaultSubscription default_subscriptions = 1 [json_name = "defaultSubscriptions"];</code>
+     */
+    @java.lang.Override
+    public int getDefaultSubscriptionsCount() {
+      return defaultSubscriptions_.size();
+    }
+    /**
+     * <code>repeated .pubsub.v1.DefaultSubscription default_subscriptions = 1 [json_name = "defaultSubscriptions"];</code>
+     */
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.DefaultSubscription getDefaultSubscriptions(int index) {
+      return defaultSubscriptions_.get(index);
+    }
+    /**
+     * <code>repeated .pubsub.v1.DefaultSubscription default_subscriptions = 1 [json_name = "defaultSubscriptions"];</code>
+     */
+    @java.lang.Override
+    public com.pubsub.v1.PubsubProto.DefaultSubscriptionOrBuilder getDefaultSubscriptionsOrBuilder(
+        int index) {
+      return defaultSubscriptions_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < defaultSubscriptions_.size(); i++) {
+        output.writeMessage(1, defaultSubscriptions_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < defaultSubscriptions_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, defaultSubscriptions_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponse)) {
+        return super.equals(obj);
+      }
+      com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponse other = (com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponse) obj;
+
+      if (!getDefaultSubscriptionsList()
+          .equals(other.getDefaultSubscriptionsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getDefaultSubscriptionsCount() > 0) {
+        hash = (37 * hash) + DEFAULT_SUBSCRIPTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getDefaultSubscriptionsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code pubsub.v1.QueryDefaultSubscriptionsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pubsub.v1.QueryDefaultSubscriptionsResponse)
+        com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryDefaultSubscriptionsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryDefaultSubscriptionsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponse.class, com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponse.Builder.class);
+      }
+
+      // Construct using com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (defaultSubscriptionsBuilder_ == null) {
+          defaultSubscriptions_ = java.util.Collections.emptyList();
+        } else {
+          defaultSubscriptions_ = null;
+          defaultSubscriptionsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pubsub.v1.QueryProto.internal_static_pubsub_v1_QueryDefaultSubscriptionsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponse getDefaultInstanceForType() {
+        return com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponse build() {
+        com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponse buildPartial() {
+        com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponse result = new com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponse result) {
+        if (defaultSubscriptionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            defaultSubscriptions_ = java.util.Collections.unmodifiableList(defaultSubscriptions_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.defaultSubscriptions_ = defaultSubscriptions_;
+        } else {
+          result.defaultSubscriptions_ = defaultSubscriptionsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponse) {
+          return mergeFrom((com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponse other) {
+        if (other == com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponse.getDefaultInstance()) return this;
+        if (defaultSubscriptionsBuilder_ == null) {
+          if (!other.defaultSubscriptions_.isEmpty()) {
+            if (defaultSubscriptions_.isEmpty()) {
+              defaultSubscriptions_ = other.defaultSubscriptions_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureDefaultSubscriptionsIsMutable();
+              defaultSubscriptions_.addAll(other.defaultSubscriptions_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.defaultSubscriptions_.isEmpty()) {
+            if (defaultSubscriptionsBuilder_.isEmpty()) {
+              defaultSubscriptionsBuilder_.dispose();
+              defaultSubscriptionsBuilder_ = null;
+              defaultSubscriptions_ = other.defaultSubscriptions_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              defaultSubscriptionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDefaultSubscriptionsFieldBuilder() : null;
+            } else {
+              defaultSubscriptionsBuilder_.addAllMessages(other.defaultSubscriptions_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.pubsub.v1.PubsubProto.DefaultSubscription m =
+                    input.readMessage(
+                        com.pubsub.v1.PubsubProto.DefaultSubscription.parser(),
+                        extensionRegistry);
+                if (defaultSubscriptionsBuilder_ == null) {
+                  ensureDefaultSubscriptionsIsMutable();
+                  defaultSubscriptions_.add(m);
+                } else {
+                  defaultSubscriptionsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.pubsub.v1.PubsubProto.DefaultSubscription> defaultSubscriptions_ =
+        java.util.Collections.emptyList();
+      private void ensureDefaultSubscriptionsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          defaultSubscriptions_ = new java.util.ArrayList<com.pubsub.v1.PubsubProto.DefaultSubscription>(defaultSubscriptions_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.pubsub.v1.PubsubProto.DefaultSubscription, com.pubsub.v1.PubsubProto.DefaultSubscription.Builder, com.pubsub.v1.PubsubProto.DefaultSubscriptionOrBuilder> defaultSubscriptionsBuilder_;
+
+      /**
+       * <code>repeated .pubsub.v1.DefaultSubscription default_subscriptions = 1 [json_name = "defaultSubscriptions"];</code>
+       */
+      public java.util.List<com.pubsub.v1.PubsubProto.DefaultSubscription> getDefaultSubscriptionsList() {
+        if (defaultSubscriptionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(defaultSubscriptions_);
+        } else {
+          return defaultSubscriptionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.DefaultSubscription default_subscriptions = 1 [json_name = "defaultSubscriptions"];</code>
+       */
+      public int getDefaultSubscriptionsCount() {
+        if (defaultSubscriptionsBuilder_ == null) {
+          return defaultSubscriptions_.size();
+        } else {
+          return defaultSubscriptionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.DefaultSubscription default_subscriptions = 1 [json_name = "defaultSubscriptions"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.DefaultSubscription getDefaultSubscriptions(int index) {
+        if (defaultSubscriptionsBuilder_ == null) {
+          return defaultSubscriptions_.get(index);
+        } else {
+          return defaultSubscriptionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.DefaultSubscription default_subscriptions = 1 [json_name = "defaultSubscriptions"];</code>
+       */
+      public Builder setDefaultSubscriptions(
+          int index, com.pubsub.v1.PubsubProto.DefaultSubscription value) {
+        if (defaultSubscriptionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDefaultSubscriptionsIsMutable();
+          defaultSubscriptions_.set(index, value);
+          onChanged();
+        } else {
+          defaultSubscriptionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.DefaultSubscription default_subscriptions = 1 [json_name = "defaultSubscriptions"];</code>
+       */
+      public Builder setDefaultSubscriptions(
+          int index, com.pubsub.v1.PubsubProto.DefaultSubscription.Builder builderForValue) {
+        if (defaultSubscriptionsBuilder_ == null) {
+          ensureDefaultSubscriptionsIsMutable();
+          defaultSubscriptions_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          defaultSubscriptionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.DefaultSubscription default_subscriptions = 1 [json_name = "defaultSubscriptions"];</code>
+       */
+      public Builder addDefaultSubscriptions(com.pubsub.v1.PubsubProto.DefaultSubscription value) {
+        if (defaultSubscriptionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDefaultSubscriptionsIsMutable();
+          defaultSubscriptions_.add(value);
+          onChanged();
+        } else {
+          defaultSubscriptionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.DefaultSubscription default_subscriptions = 1 [json_name = "defaultSubscriptions"];</code>
+       */
+      public Builder addDefaultSubscriptions(
+          int index, com.pubsub.v1.PubsubProto.DefaultSubscription value) {
+        if (defaultSubscriptionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDefaultSubscriptionsIsMutable();
+          defaultSubscriptions_.add(index, value);
+          onChanged();
+        } else {
+          defaultSubscriptionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.DefaultSubscription default_subscriptions = 1 [json_name = "defaultSubscriptions"];</code>
+       */
+      public Builder addDefaultSubscriptions(
+          com.pubsub.v1.PubsubProto.DefaultSubscription.Builder builderForValue) {
+        if (defaultSubscriptionsBuilder_ == null) {
+          ensureDefaultSubscriptionsIsMutable();
+          defaultSubscriptions_.add(builderForValue.build());
+          onChanged();
+        } else {
+          defaultSubscriptionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.DefaultSubscription default_subscriptions = 1 [json_name = "defaultSubscriptions"];</code>
+       */
+      public Builder addDefaultSubscriptions(
+          int index, com.pubsub.v1.PubsubProto.DefaultSubscription.Builder builderForValue) {
+        if (defaultSubscriptionsBuilder_ == null) {
+          ensureDefaultSubscriptionsIsMutable();
+          defaultSubscriptions_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          defaultSubscriptionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.DefaultSubscription default_subscriptions = 1 [json_name = "defaultSubscriptions"];</code>
+       */
+      public Builder addAllDefaultSubscriptions(
+          java.lang.Iterable<? extends com.pubsub.v1.PubsubProto.DefaultSubscription> values) {
+        if (defaultSubscriptionsBuilder_ == null) {
+          ensureDefaultSubscriptionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, defaultSubscriptions_);
+          onChanged();
+        } else {
+          defaultSubscriptionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.DefaultSubscription default_subscriptions = 1 [json_name = "defaultSubscriptions"];</code>
+       */
+      public Builder clearDefaultSubscriptions() {
+        if (defaultSubscriptionsBuilder_ == null) {
+          defaultSubscriptions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          defaultSubscriptionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.DefaultSubscription default_subscriptions = 1 [json_name = "defaultSubscriptions"];</code>
+       */
+      public Builder removeDefaultSubscriptions(int index) {
+        if (defaultSubscriptionsBuilder_ == null) {
+          ensureDefaultSubscriptionsIsMutable();
+          defaultSubscriptions_.remove(index);
+          onChanged();
+        } else {
+          defaultSubscriptionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pubsub.v1.DefaultSubscription default_subscriptions = 1 [json_name = "defaultSubscriptions"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.DefaultSubscription.Builder getDefaultSubscriptionsBuilder(
+          int index) {
+        return getDefaultSubscriptionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .pubsub.v1.DefaultSubscription default_subscriptions = 1 [json_name = "defaultSubscriptions"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.DefaultSubscriptionOrBuilder getDefaultSubscriptionsOrBuilder(
+          int index) {
+        if (defaultSubscriptionsBuilder_ == null) {
+          return defaultSubscriptions_.get(index);  } else {
+          return defaultSubscriptionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.DefaultSubscription default_subscriptions = 1 [json_name = "defaultSubscriptions"];</code>
+       */
+      public java.util.List<? extends com.pubsub.v1.PubsubProto.DefaultSubscriptionOrBuilder> 
+           getDefaultSubscriptionsOrBuilderList() {
+        if (defaultSubscriptionsBuilder_ != null) {
+          return defaultSubscriptionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(defaultSubscriptions_);
+        }
+      }
+      /**
+       * <code>repeated .pubsub.v1.DefaultSubscription default_subscriptions = 1 [json_name = "defaultSubscriptions"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.DefaultSubscription.Builder addDefaultSubscriptionsBuilder() {
+        return getDefaultSubscriptionsFieldBuilder().addBuilder(
+            com.pubsub.v1.PubsubProto.DefaultSubscription.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .pubsub.v1.DefaultSubscription default_subscriptions = 1 [json_name = "defaultSubscriptions"];</code>
+       */
+      public com.pubsub.v1.PubsubProto.DefaultSubscription.Builder addDefaultSubscriptionsBuilder(
+          int index) {
+        return getDefaultSubscriptionsFieldBuilder().addBuilder(
+            index, com.pubsub.v1.PubsubProto.DefaultSubscription.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .pubsub.v1.DefaultSubscription default_subscriptions = 1 [json_name = "defaultSubscriptions"];</code>
+       */
+      public java.util.List<com.pubsub.v1.PubsubProto.DefaultSubscription.Builder> 
+           getDefaultSubscriptionsBuilderList() {
+        return getDefaultSubscriptionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.pubsub.v1.PubsubProto.DefaultSubscription, com.pubsub.v1.PubsubProto.DefaultSubscription.Builder, com.pubsub.v1.PubsubProto.DefaultSubscriptionOrBuilder> 
+          getDefaultSubscriptionsFieldBuilder() {
+        if (defaultSubscriptionsBuilder_ == null) {
+          defaultSubscriptionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.pubsub.v1.PubsubProto.DefaultSubscription, com.pubsub.v1.PubsubProto.DefaultSubscription.Builder, com.pubsub.v1.PubsubProto.DefaultSubscriptionOrBuilder>(
+                  defaultSubscriptions_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          defaultSubscriptions_ = null;
+        }
+        return defaultSubscriptionsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pubsub.v1.QueryDefaultSubscriptionsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pubsub.v1.QueryDefaultSubscriptionsResponse)
+    private static final com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponse();
+    }
+
+    public static com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryDefaultSubscriptionsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryDefaultSubscriptionsResponse>() {
+      @java.lang.Override
+      public QueryDefaultSubscriptionsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryDefaultSubscriptionsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryDefaultSubscriptionsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pubsub.v1.QueryProto.QueryDefaultSubscriptionsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_QueryParamsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_QueryParamsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_QueryParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_QueryParamsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_QueryPublisherRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_QueryPublisherRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_QueryPublisherResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_QueryPublisherResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_QueryPublishersRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_QueryPublishersRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_QueryPublishersResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_QueryPublishersResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_QuerySubscriberRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_QuerySubscriberRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_QuerySubscriberResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_QuerySubscriberResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_QuerySubscribersRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_QuerySubscribersRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_QuerySubscribersResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_QuerySubscribersResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_QueryPublisherIntentRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_QueryPublisherIntentRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_QueryPublisherIntentResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_QueryPublisherIntentResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_QueryPublisherIntentsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_QueryPublisherIntentsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_QueryPublisherIntentsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_QueryPublisherIntentsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_QueryPublisherIntentsByPublisherDomainRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_QueryPublisherIntentsByPublisherDomainRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_QueryPublisherIntentsByPublisherDomainResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_QueryPublisherIntentsByPublisherDomainResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_QueryPublisherIntentsBySubscriptionIDRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_QueryPublisherIntentsBySubscriptionIDRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_QueryPublisherIntentsBySubscriptionIDResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_QueryPublisherIntentsBySubscriptionIDResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_QuerySubscriberIntentRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_QuerySubscriberIntentRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_QuerySubscriberIntentResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_QuerySubscriberIntentResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_QuerySubscriberIntentsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_QuerySubscriberIntentsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_QuerySubscriberIntentsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_QuerySubscriberIntentsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_QuerySubscriberIntentsBySubscriberAddressRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_QuerySubscriberIntentsBySubscriberAddressRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_QuerySubscriberIntentsBySubscriberAddressResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_QuerySubscriberIntentsBySubscriberAddressResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_QuerySubscriberIntentsBySubscriptionIDRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_QuerySubscriberIntentsBySubscriptionIDRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_QuerySubscriberIntentsBySubscriptionIDResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_QuerySubscriberIntentsBySubscriptionIDResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_QuerySubscriberIntentsByPublisherDomainRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_QuerySubscriberIntentsByPublisherDomainRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_QuerySubscriberIntentsByPublisherDomainResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_QuerySubscriberIntentsByPublisherDomainResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_QueryDefaultSubscriptionRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_QueryDefaultSubscriptionRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_QueryDefaultSubscriptionResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_QueryDefaultSubscriptionResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_QueryDefaultSubscriptionsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_QueryDefaultSubscriptionsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pubsub_v1_QueryDefaultSubscriptionsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pubsub_v1_QueryDefaultSubscriptionsResponse_fieldAccessorTable;
 
@@ -331,11 +19949,11 @@ public final class QueryProto {
       "scriptions\022+.pubsub.v1.QueryDefaultSubsc" +
       "riptionsRequest\032,.pubsub.v1.QueryDefault" +
       "SubscriptionsResponse\"2\202\323\344\223\002,\022*/sommelie" +
-      "r/pubsub/v1/default_subscriptionsB\220\001\n\rco" +
-      "m.pubsub.v1B\nQueryProtoP\001Z.github.com/pe" +
-      "ggyjv/sommelier/v4/x/pubsub/types\242\002\003PXX\252" +
-      "\002\tPubsub.V1\312\002\tPubsub\\V1\342\002\025Pubsub\\V1\\GPBM" +
-      "etadata\352\002\nPubsub::V1b\006proto3"
+      "r/pubsub/v1/default_subscriptionsB\216\001\n\rco" +
+      "m.pubsub.v1B\nQueryProtoZ.github.com/pegg" +
+      "yjv/sommelier/v4/x/pubsub/types\242\002\003PXX\252\002\t" +
+      "Pubsub.V1\312\002\tPubsub\\V1\342\002\025Pubsub\\V1\\GPBMet" +
+      "adata\352\002\nPubsub::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

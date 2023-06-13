@@ -14,14 +14,1206 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface RecoveredSinceDowntimeOfLengthRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.osmosis.downtimedetector.v1beta1.Downtime downtime = 1 [json_name = "downtime", (.gogoproto.moretags) = "yaml:&#92;"downtime&#92;""];</code>
+     * @return The enum numeric value on the wire for downtime.
+     */
+    int getDowntimeValue();
+    /**
+     * <code>.osmosis.downtimedetector.v1beta1.Downtime downtime = 1 [json_name = "downtime", (.gogoproto.moretags) = "yaml:&#92;"downtime&#92;""];</code>
+     * @return The downtime.
+     */
+    com.osmosis.downtimedetector.v1beta1.DowntimeDurationProto.Downtime getDowntime();
+
+    /**
+     * <code>.google.protobuf.Duration recovery = 2 [json_name = "recovery", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"recovery_duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the recovery field is set.
+     */
+    boolean hasRecovery();
+    /**
+     * <code>.google.protobuf.Duration recovery = 2 [json_name = "recovery", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"recovery_duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The recovery.
+     */
+    com.google.protobuf.Duration getRecovery();
+    /**
+     * <code>.google.protobuf.Duration recovery = 2 [json_name = "recovery", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"recovery_duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getRecoveryOrBuilder();
+  }
+  /**
+   * <pre>
+   * Query for has it been at least $RECOVERY_DURATION units of time,
+   * since the chain has been down for $DOWNTIME_DURATION.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthRequest}
+   */
+  public static final class RecoveredSinceDowntimeOfLengthRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthRequest)
+      RecoveredSinceDowntimeOfLengthRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RecoveredSinceDowntimeOfLengthRequest.newBuilder() to construct.
+    private RecoveredSinceDowntimeOfLengthRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RecoveredSinceDowntimeOfLengthRequest() {
+      downtime_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RecoveredSinceDowntimeOfLengthRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.downtimedetector.v1beta1.QueryProto.internal_static_osmosis_downtimedetector_v1beta1_RecoveredSinceDowntimeOfLengthRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.downtimedetector.v1beta1.QueryProto.internal_static_osmosis_downtimedetector_v1beta1_RecoveredSinceDowntimeOfLengthRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest.class, com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest.Builder.class);
+    }
+
+    public static final int DOWNTIME_FIELD_NUMBER = 1;
+    private int downtime_ = 0;
+    /**
+     * <code>.osmosis.downtimedetector.v1beta1.Downtime downtime = 1 [json_name = "downtime", (.gogoproto.moretags) = "yaml:&#92;"downtime&#92;""];</code>
+     * @return The enum numeric value on the wire for downtime.
+     */
+    @java.lang.Override public int getDowntimeValue() {
+      return downtime_;
+    }
+    /**
+     * <code>.osmosis.downtimedetector.v1beta1.Downtime downtime = 1 [json_name = "downtime", (.gogoproto.moretags) = "yaml:&#92;"downtime&#92;""];</code>
+     * @return The downtime.
+     */
+    @java.lang.Override public com.osmosis.downtimedetector.v1beta1.DowntimeDurationProto.Downtime getDowntime() {
+      com.osmosis.downtimedetector.v1beta1.DowntimeDurationProto.Downtime result = com.osmosis.downtimedetector.v1beta1.DowntimeDurationProto.Downtime.forNumber(downtime_);
+      return result == null ? com.osmosis.downtimedetector.v1beta1.DowntimeDurationProto.Downtime.UNRECOGNIZED : result;
+    }
+
+    public static final int RECOVERY_FIELD_NUMBER = 2;
+    private com.google.protobuf.Duration recovery_;
+    /**
+     * <code>.google.protobuf.Duration recovery = 2 [json_name = "recovery", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"recovery_duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return Whether the recovery field is set.
+     */
+    @java.lang.Override
+    public boolean hasRecovery() {
+      return recovery_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Duration recovery = 2 [json_name = "recovery", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"recovery_duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     * @return The recovery.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getRecovery() {
+      return recovery_ == null ? com.google.protobuf.Duration.getDefaultInstance() : recovery_;
+    }
+    /**
+     * <code>.google.protobuf.Duration recovery = 2 [json_name = "recovery", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"recovery_duration&#92;"", (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getRecoveryOrBuilder() {
+      return recovery_ == null ? com.google.protobuf.Duration.getDefaultInstance() : recovery_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (downtime_ != com.osmosis.downtimedetector.v1beta1.DowntimeDurationProto.Downtime.DURATION_30S.getNumber()) {
+        output.writeEnum(1, downtime_);
+      }
+      if (recovery_ != null) {
+        output.writeMessage(2, getRecovery());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (downtime_ != com.osmosis.downtimedetector.v1beta1.DowntimeDurationProto.Downtime.DURATION_30S.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, downtime_);
+      }
+      if (recovery_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getRecovery());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest)) {
+        return super.equals(obj);
+      }
+      com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest other = (com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest) obj;
+
+      if (downtime_ != other.downtime_) return false;
+      if (hasRecovery() != other.hasRecovery()) return false;
+      if (hasRecovery()) {
+        if (!getRecovery()
+            .equals(other.getRecovery())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DOWNTIME_FIELD_NUMBER;
+      hash = (53 * hash) + downtime_;
+      if (hasRecovery()) {
+        hash = (37 * hash) + RECOVERY_FIELD_NUMBER;
+        hash = (53 * hash) + getRecovery().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Query for has it been at least $RECOVERY_DURATION units of time,
+     * since the chain has been down for $DOWNTIME_DURATION.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthRequest)
+        com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.downtimedetector.v1beta1.QueryProto.internal_static_osmosis_downtimedetector_v1beta1_RecoveredSinceDowntimeOfLengthRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.downtimedetector.v1beta1.QueryProto.internal_static_osmosis_downtimedetector_v1beta1_RecoveredSinceDowntimeOfLengthRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest.class, com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest.Builder.class);
+      }
+
+      // Construct using com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        downtime_ = 0;
+        recovery_ = null;
+        if (recoveryBuilder_ != null) {
+          recoveryBuilder_.dispose();
+          recoveryBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.downtimedetector.v1beta1.QueryProto.internal_static_osmosis_downtimedetector_v1beta1_RecoveredSinceDowntimeOfLengthRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest getDefaultInstanceForType() {
+        return com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest build() {
+        com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest buildPartial() {
+        com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest result = new com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.downtime_ = downtime_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.recovery_ = recoveryBuilder_ == null
+              ? recovery_
+              : recoveryBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest) {
+          return mergeFrom((com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest other) {
+        if (other == com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest.getDefaultInstance()) return this;
+        if (other.downtime_ != 0) {
+          setDowntimeValue(other.getDowntimeValue());
+        }
+        if (other.hasRecovery()) {
+          mergeRecovery(other.getRecovery());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                downtime_ = input.readEnum();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getRecoveryFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int downtime_ = 0;
+      /**
+       * <code>.osmosis.downtimedetector.v1beta1.Downtime downtime = 1 [json_name = "downtime", (.gogoproto.moretags) = "yaml:&#92;"downtime&#92;""];</code>
+       * @return The enum numeric value on the wire for downtime.
+       */
+      @java.lang.Override public int getDowntimeValue() {
+        return downtime_;
+      }
+      /**
+       * <code>.osmosis.downtimedetector.v1beta1.Downtime downtime = 1 [json_name = "downtime", (.gogoproto.moretags) = "yaml:&#92;"downtime&#92;""];</code>
+       * @param value The enum numeric value on the wire for downtime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDowntimeValue(int value) {
+        downtime_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.downtimedetector.v1beta1.Downtime downtime = 1 [json_name = "downtime", (.gogoproto.moretags) = "yaml:&#92;"downtime&#92;""];</code>
+       * @return The downtime.
+       */
+      @java.lang.Override
+      public com.osmosis.downtimedetector.v1beta1.DowntimeDurationProto.Downtime getDowntime() {
+        com.osmosis.downtimedetector.v1beta1.DowntimeDurationProto.Downtime result = com.osmosis.downtimedetector.v1beta1.DowntimeDurationProto.Downtime.forNumber(downtime_);
+        return result == null ? com.osmosis.downtimedetector.v1beta1.DowntimeDurationProto.Downtime.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.osmosis.downtimedetector.v1beta1.Downtime downtime = 1 [json_name = "downtime", (.gogoproto.moretags) = "yaml:&#92;"downtime&#92;""];</code>
+       * @param value The downtime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDowntime(com.osmosis.downtimedetector.v1beta1.DowntimeDurationProto.Downtime value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        downtime_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.osmosis.downtimedetector.v1beta1.Downtime downtime = 1 [json_name = "downtime", (.gogoproto.moretags) = "yaml:&#92;"downtime&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDowntime() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        downtime_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Duration recovery_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> recoveryBuilder_;
+      /**
+       * <code>.google.protobuf.Duration recovery = 2 [json_name = "recovery", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"recovery_duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return Whether the recovery field is set.
+       */
+      public boolean hasRecovery() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Duration recovery = 2 [json_name = "recovery", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"recovery_duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       * @return The recovery.
+       */
+      public com.google.protobuf.Duration getRecovery() {
+        if (recoveryBuilder_ == null) {
+          return recovery_ == null ? com.google.protobuf.Duration.getDefaultInstance() : recovery_;
+        } else {
+          return recoveryBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration recovery = 2 [json_name = "recovery", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"recovery_duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setRecovery(com.google.protobuf.Duration value) {
+        if (recoveryBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          recovery_ = value;
+        } else {
+          recoveryBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration recovery = 2 [json_name = "recovery", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"recovery_duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setRecovery(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (recoveryBuilder_ == null) {
+          recovery_ = builderForValue.build();
+        } else {
+          recoveryBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration recovery = 2 [json_name = "recovery", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"recovery_duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeRecovery(com.google.protobuf.Duration value) {
+        if (recoveryBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            recovery_ != null &&
+            recovery_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getRecoveryBuilder().mergeFrom(value);
+          } else {
+            recovery_ = value;
+          }
+        } else {
+          recoveryBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration recovery = 2 [json_name = "recovery", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"recovery_duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearRecovery() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        recovery_ = null;
+        if (recoveryBuilder_ != null) {
+          recoveryBuilder_.dispose();
+          recoveryBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration recovery = 2 [json_name = "recovery", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"recovery_duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getRecoveryBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getRecoveryFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Duration recovery = 2 [json_name = "recovery", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"recovery_duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getRecoveryOrBuilder() {
+        if (recoveryBuilder_ != null) {
+          return recoveryBuilder_.getMessageOrBuilder();
+        } else {
+          return recovery_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : recovery_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration recovery = 2 [json_name = "recovery", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"recovery_duration&#92;"", (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getRecoveryFieldBuilder() {
+        if (recoveryBuilder_ == null) {
+          recoveryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getRecovery(),
+                  getParentForChildren(),
+                  isClean());
+          recovery_ = null;
+        }
+        return recoveryBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthRequest)
+    private static final com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest();
+    }
+
+    public static com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RecoveredSinceDowntimeOfLengthRequest>
+        PARSER = new com.google.protobuf.AbstractParser<RecoveredSinceDowntimeOfLengthRequest>() {
+      @java.lang.Override
+      public RecoveredSinceDowntimeOfLengthRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RecoveredSinceDowntimeOfLengthRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RecoveredSinceDowntimeOfLengthRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RecoveredSinceDowntimeOfLengthResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bool succesfully_recovered = 1 [json_name = "succesfullyRecovered"];</code>
+     * @return The succesfullyRecovered.
+     */
+    boolean getSuccesfullyRecovered();
+  }
+  /**
+   * Protobuf type {@code osmosis.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthResponse}
+   */
+  public static final class RecoveredSinceDowntimeOfLengthResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthResponse)
+      RecoveredSinceDowntimeOfLengthResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RecoveredSinceDowntimeOfLengthResponse.newBuilder() to construct.
+    private RecoveredSinceDowntimeOfLengthResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RecoveredSinceDowntimeOfLengthResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RecoveredSinceDowntimeOfLengthResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.downtimedetector.v1beta1.QueryProto.internal_static_osmosis_downtimedetector_v1beta1_RecoveredSinceDowntimeOfLengthResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.downtimedetector.v1beta1.QueryProto.internal_static_osmosis_downtimedetector_v1beta1_RecoveredSinceDowntimeOfLengthResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthResponse.class, com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthResponse.Builder.class);
+    }
+
+    public static final int SUCCESFULLY_RECOVERED_FIELD_NUMBER = 1;
+    private boolean succesfullyRecovered_ = false;
+    /**
+     * <code>bool succesfully_recovered = 1 [json_name = "succesfullyRecovered"];</code>
+     * @return The succesfullyRecovered.
+     */
+    @java.lang.Override
+    public boolean getSuccesfullyRecovered() {
+      return succesfullyRecovered_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (succesfullyRecovered_ != false) {
+        output.writeBool(1, succesfullyRecovered_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (succesfullyRecovered_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, succesfullyRecovered_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthResponse)) {
+        return super.equals(obj);
+      }
+      com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthResponse other = (com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthResponse) obj;
+
+      if (getSuccesfullyRecovered()
+          != other.getSuccesfullyRecovered()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SUCCESFULLY_RECOVERED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getSuccesfullyRecovered());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthResponse)
+        com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.downtimedetector.v1beta1.QueryProto.internal_static_osmosis_downtimedetector_v1beta1_RecoveredSinceDowntimeOfLengthResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.downtimedetector.v1beta1.QueryProto.internal_static_osmosis_downtimedetector_v1beta1_RecoveredSinceDowntimeOfLengthResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthResponse.class, com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthResponse.Builder.class);
+      }
+
+      // Construct using com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        succesfullyRecovered_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.downtimedetector.v1beta1.QueryProto.internal_static_osmosis_downtimedetector_v1beta1_RecoveredSinceDowntimeOfLengthResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthResponse getDefaultInstanceForType() {
+        return com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthResponse build() {
+        com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthResponse buildPartial() {
+        com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthResponse result = new com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.succesfullyRecovered_ = succesfullyRecovered_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthResponse) {
+          return mergeFrom((com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthResponse other) {
+        if (other == com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthResponse.getDefaultInstance()) return this;
+        if (other.getSuccesfullyRecovered() != false) {
+          setSuccesfullyRecovered(other.getSuccesfullyRecovered());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                succesfullyRecovered_ = input.readBool();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean succesfullyRecovered_ ;
+      /**
+       * <code>bool succesfully_recovered = 1 [json_name = "succesfullyRecovered"];</code>
+       * @return The succesfullyRecovered.
+       */
+      @java.lang.Override
+      public boolean getSuccesfullyRecovered() {
+        return succesfullyRecovered_;
+      }
+      /**
+       * <code>bool succesfully_recovered = 1 [json_name = "succesfullyRecovered"];</code>
+       * @param value The succesfullyRecovered to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSuccesfullyRecovered(boolean value) {
+
+        succesfullyRecovered_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool succesfully_recovered = 1 [json_name = "succesfullyRecovered"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSuccesfullyRecovered() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        succesfullyRecovered_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.downtimedetector.v1beta1.RecoveredSinceDowntimeOfLengthResponse)
+    private static final com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthResponse();
+    }
+
+    public static com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RecoveredSinceDowntimeOfLengthResponse>
+        PARSER = new com.google.protobuf.AbstractParser<RecoveredSinceDowntimeOfLengthResponse>() {
+      @java.lang.Override
+      public RecoveredSinceDowntimeOfLengthResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RecoveredSinceDowntimeOfLengthResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RecoveredSinceDowntimeOfLengthResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.downtimedetector.v1beta1.QueryProto.RecoveredSinceDowntimeOfLengthResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_downtimedetector_v1beta1_RecoveredSinceDowntimeOfLengthRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_downtimedetector_v1beta1_RecoveredSinceDowntimeOfLengthRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_downtimedetector_v1beta1_RecoveredSinceDowntimeOfLengthResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_downtimedetector_v1beta1_RecoveredSinceDowntimeOfLengthResponse_fieldAccessorTable;
 
@@ -58,15 +1250,15 @@ public final class QueryProto {
       "osmosis.downtimedetector.v1beta1.Recover" +
       "edSinceDowntimeOfLengthResponse\"I\202\323\344\223\002C\022" +
       "A/osmosis/downtime-detector/v1beta1/Reco" +
-      "veredSinceDowntimeOfLengthB\237\002\n$com.osmos" +
-      "is.downtimedetector.v1beta1B\nQueryProtoP" +
-      "\001ZIgithub.com/osmosis-labs/osmosis/v15/x" +
-      "/downtime-detector/client/queryproto\242\002\003O" +
-      "DX\252\002 Osmosis.Downtimedetector.V1beta1\312\002 " +
-      "Osmosis\\Downtimedetector\\V1beta1\342\002,Osmos" +
-      "is\\Downtimedetector\\V1beta1\\GPBMetadata\352" +
-      "\002\"Osmosis::Downtimedetector::V1beta1b\006pr" +
-      "oto3"
+      "veredSinceDowntimeOfLengthB\235\002\n$com.osmos" +
+      "is.downtimedetector.v1beta1B\nQueryProtoZ" +
+      "Igithub.com/osmosis-labs/osmosis/v15/x/d" +
+      "owntime-detector/client/queryproto\242\002\003ODX" +
+      "\252\002 Osmosis.Downtimedetector.V1beta1\312\002 Os" +
+      "mosis\\Downtimedetector\\V1beta1\342\002,Osmosis" +
+      "\\Downtimedetector\\V1beta1\\GPBMetadata\352\002\"" +
+      "Osmosis::Downtimedetector::V1beta1b\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,29 +14,4527 @@ public final class GovshuttleProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.govshuttle.v1.Params)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * Params defines the parameters for the module.
+   * </pre>
+   *
+   * Protobuf type {@code canto.govshuttle.v1.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.govshuttle.v1.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.govshuttle.v1.GovshuttleProto.internal_static_canto_govshuttle_v1_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.govshuttle.v1.GovshuttleProto.internal_static_canto_govshuttle_v1_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.govshuttle.v1.GovshuttleProto.Params.class, com.canto.govshuttle.v1.GovshuttleProto.Params.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.govshuttle.v1.GovshuttleProto.Params)) {
+        return super.equals(obj);
+      }
+      com.canto.govshuttle.v1.GovshuttleProto.Params other = (com.canto.govshuttle.v1.GovshuttleProto.Params) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.govshuttle.v1.GovshuttleProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.govshuttle.v1.GovshuttleProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.govshuttle.v1.GovshuttleProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.govshuttle.v1.GovshuttleProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params defines the parameters for the module.
+     * </pre>
+     *
+     * Protobuf type {@code canto.govshuttle.v1.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.govshuttle.v1.Params)
+        com.canto.govshuttle.v1.GovshuttleProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.govshuttle.v1.GovshuttleProto.internal_static_canto_govshuttle_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.govshuttle.v1.GovshuttleProto.internal_static_canto_govshuttle_v1_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.govshuttle.v1.GovshuttleProto.Params.class, com.canto.govshuttle.v1.GovshuttleProto.Params.Builder.class);
+      }
+
+      // Construct using com.canto.govshuttle.v1.GovshuttleProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.govshuttle.v1.GovshuttleProto.internal_static_canto_govshuttle_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.govshuttle.v1.GovshuttleProto.Params getDefaultInstanceForType() {
+        return com.canto.govshuttle.v1.GovshuttleProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.govshuttle.v1.GovshuttleProto.Params build() {
+        com.canto.govshuttle.v1.GovshuttleProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.govshuttle.v1.GovshuttleProto.Params buildPartial() {
+        com.canto.govshuttle.v1.GovshuttleProto.Params result = new com.canto.govshuttle.v1.GovshuttleProto.Params(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.govshuttle.v1.GovshuttleProto.Params) {
+          return mergeFrom((com.canto.govshuttle.v1.GovshuttleProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.govshuttle.v1.GovshuttleProto.Params other) {
+        if (other == com.canto.govshuttle.v1.GovshuttleProto.Params.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.govshuttle.v1.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.govshuttle.v1.Params)
+    private static final com.canto.govshuttle.v1.GovshuttleProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.govshuttle.v1.GovshuttleProto.Params();
+    }
+
+    public static com.canto.govshuttle.v1.GovshuttleProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.govshuttle.v1.GovshuttleProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface LendingMarketProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.govshuttle.v1.LendingMarketProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     *title
+     * </pre>
+     *
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <pre>
+     *title
+     * </pre>
+     *
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>.canto.govshuttle.v1.LendingMarketMetadata metadata = 3 [json_name = "metadata"];</code>
+     * @return Whether the metadata field is set.
+     */
+    boolean hasMetadata();
+    /**
+     * <code>.canto.govshuttle.v1.LendingMarketMetadata metadata = 3 [json_name = "metadata"];</code>
+     * @return The metadata.
+     */
+    com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata getMetadata();
+    /**
+     * <code>.canto.govshuttle.v1.LendingMarketMetadata metadata = 3 [json_name = "metadata"];</code>
+     */
+    com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadataOrBuilder getMetadataOrBuilder();
+  }
+  /**
+   * <pre>
+   *Define this object so that the govshuttle.pb.go file is generate, implements govtypes.Content
+   * </pre>
+   *
+   * Protobuf type {@code canto.govshuttle.v1.LendingMarketProposal}
+   */
+  public static final class LendingMarketProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.govshuttle.v1.LendingMarketProposal)
+      LendingMarketProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use LendingMarketProposal.newBuilder() to construct.
+    private LendingMarketProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private LendingMarketProposal() {
+      title_ = "";
+      description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LendingMarketProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.govshuttle.v1.GovshuttleProto.internal_static_canto_govshuttle_v1_LendingMarketProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.govshuttle.v1.GovshuttleProto.internal_static_canto_govshuttle_v1_LendingMarketProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal.class, com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <pre>
+     *title
+     * </pre>
+     *
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     *title
+     * </pre>
+     *
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int METADATA_FIELD_NUMBER = 3;
+    private com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata metadata_;
+    /**
+     * <code>.canto.govshuttle.v1.LendingMarketMetadata metadata = 3 [json_name = "metadata"];</code>
+     * @return Whether the metadata field is set.
+     */
+    @java.lang.Override
+    public boolean hasMetadata() {
+      return metadata_ != null;
+    }
+    /**
+     * <code>.canto.govshuttle.v1.LendingMarketMetadata metadata = 3 [json_name = "metadata"];</code>
+     * @return The metadata.
+     */
+    @java.lang.Override
+    public com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata getMetadata() {
+      return metadata_ == null ? com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata.getDefaultInstance() : metadata_;
+    }
+    /**
+     * <code>.canto.govshuttle.v1.LendingMarketMetadata metadata = 3 [json_name = "metadata"];</code>
+     */
+    @java.lang.Override
+    public com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadataOrBuilder getMetadataOrBuilder() {
+      return metadata_ == null ? com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata.getDefaultInstance() : metadata_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (metadata_ != null) {
+        output.writeMessage(3, getMetadata());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (metadata_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getMetadata());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal)) {
+        return super.equals(obj);
+      }
+      com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal other = (com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (hasMetadata() != other.hasMetadata()) return false;
+      if (hasMetadata()) {
+        if (!getMetadata()
+            .equals(other.getMetadata())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (hasMetadata()) {
+        hash = (37 * hash) + METADATA_FIELD_NUMBER;
+        hash = (53 * hash) + getMetadata().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     *Define this object so that the govshuttle.pb.go file is generate, implements govtypes.Content
+     * </pre>
+     *
+     * Protobuf type {@code canto.govshuttle.v1.LendingMarketProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.govshuttle.v1.LendingMarketProposal)
+        com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.govshuttle.v1.GovshuttleProto.internal_static_canto_govshuttle_v1_LendingMarketProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.govshuttle.v1.GovshuttleProto.internal_static_canto_govshuttle_v1_LendingMarketProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal.class, com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal.Builder.class);
+      }
+
+      // Construct using com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        metadata_ = null;
+        if (metadataBuilder_ != null) {
+          metadataBuilder_.dispose();
+          metadataBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.govshuttle.v1.GovshuttleProto.internal_static_canto_govshuttle_v1_LendingMarketProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal getDefaultInstanceForType() {
+        return com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal build() {
+        com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal buildPartial() {
+        com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal result = new com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.metadata_ = metadataBuilder_ == null
+              ? metadata_
+              : metadataBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal) {
+          return mergeFrom((com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal other) {
+        if (other == com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasMetadata()) {
+          mergeMetadata(other.getMetadata());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getMetadataFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <pre>
+       *title
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       *title
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       *title
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *title
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *title
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata metadata_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata, com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata.Builder, com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadataOrBuilder> metadataBuilder_;
+      /**
+       * <code>.canto.govshuttle.v1.LendingMarketMetadata metadata = 3 [json_name = "metadata"];</code>
+       * @return Whether the metadata field is set.
+       */
+      public boolean hasMetadata() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.canto.govshuttle.v1.LendingMarketMetadata metadata = 3 [json_name = "metadata"];</code>
+       * @return The metadata.
+       */
+      public com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata getMetadata() {
+        if (metadataBuilder_ == null) {
+          return metadata_ == null ? com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata.getDefaultInstance() : metadata_;
+        } else {
+          return metadataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.canto.govshuttle.v1.LendingMarketMetadata metadata = 3 [json_name = "metadata"];</code>
+       */
+      public Builder setMetadata(com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata value) {
+        if (metadataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          metadata_ = value;
+        } else {
+          metadataBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.canto.govshuttle.v1.LendingMarketMetadata metadata = 3 [json_name = "metadata"];</code>
+       */
+      public Builder setMetadata(
+          com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata.Builder builderForValue) {
+        if (metadataBuilder_ == null) {
+          metadata_ = builderForValue.build();
+        } else {
+          metadataBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.canto.govshuttle.v1.LendingMarketMetadata metadata = 3 [json_name = "metadata"];</code>
+       */
+      public Builder mergeMetadata(com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata value) {
+        if (metadataBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            metadata_ != null &&
+            metadata_ != com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata.getDefaultInstance()) {
+            getMetadataBuilder().mergeFrom(value);
+          } else {
+            metadata_ = value;
+          }
+        } else {
+          metadataBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.canto.govshuttle.v1.LendingMarketMetadata metadata = 3 [json_name = "metadata"];</code>
+       */
+      public Builder clearMetadata() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        metadata_ = null;
+        if (metadataBuilder_ != null) {
+          metadataBuilder_.dispose();
+          metadataBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.canto.govshuttle.v1.LendingMarketMetadata metadata = 3 [json_name = "metadata"];</code>
+       */
+      public com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata.Builder getMetadataBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getMetadataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.canto.govshuttle.v1.LendingMarketMetadata metadata = 3 [json_name = "metadata"];</code>
+       */
+      public com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadataOrBuilder getMetadataOrBuilder() {
+        if (metadataBuilder_ != null) {
+          return metadataBuilder_.getMessageOrBuilder();
+        } else {
+          return metadata_ == null ?
+              com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata.getDefaultInstance() : metadata_;
+        }
+      }
+      /**
+       * <code>.canto.govshuttle.v1.LendingMarketMetadata metadata = 3 [json_name = "metadata"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata, com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata.Builder, com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadataOrBuilder> 
+          getMetadataFieldBuilder() {
+        if (metadataBuilder_ == null) {
+          metadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata, com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata.Builder, com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadataOrBuilder>(
+                  getMetadata(),
+                  getParentForChildren(),
+                  isClean());
+          metadata_ = null;
+        }
+        return metadataBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.govshuttle.v1.LendingMarketProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.govshuttle.v1.LendingMarketProposal)
+    private static final com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal();
+    }
+
+    public static com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<LendingMarketProposal>
+        PARSER = new com.google.protobuf.AbstractParser<LendingMarketProposal>() {
+      @java.lang.Override
+      public LendingMarketProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<LendingMarketProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LendingMarketProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.govshuttle.v1.GovshuttleProto.LendingMarketProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TreasuryProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.govshuttle.v1.TreasuryProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>.canto.govshuttle.v1.TreasuryProposalMetadata metadata = 3 [json_name = "metadata"];</code>
+     * @return Whether the metadata field is set.
+     */
+    boolean hasMetadata();
+    /**
+     * <code>.canto.govshuttle.v1.TreasuryProposalMetadata metadata = 3 [json_name = "metadata"];</code>
+     * @return The metadata.
+     */
+    com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata getMetadata();
+    /**
+     * <code>.canto.govshuttle.v1.TreasuryProposalMetadata metadata = 3 [json_name = "metadata"];</code>
+     */
+    com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadataOrBuilder getMetadataOrBuilder();
+  }
+  /**
+   * <pre>
+   *treasury proposal type,
+   * </pre>
+   *
+   * Protobuf type {@code canto.govshuttle.v1.TreasuryProposal}
+   */
+  public static final class TreasuryProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.govshuttle.v1.TreasuryProposal)
+      TreasuryProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TreasuryProposal.newBuilder() to construct.
+    private TreasuryProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TreasuryProposal() {
+      title_ = "";
+      description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TreasuryProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.govshuttle.v1.GovshuttleProto.internal_static_canto_govshuttle_v1_TreasuryProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.govshuttle.v1.GovshuttleProto.internal_static_canto_govshuttle_v1_TreasuryProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal.class, com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int METADATA_FIELD_NUMBER = 3;
+    private com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata metadata_;
+    /**
+     * <code>.canto.govshuttle.v1.TreasuryProposalMetadata metadata = 3 [json_name = "metadata"];</code>
+     * @return Whether the metadata field is set.
+     */
+    @java.lang.Override
+    public boolean hasMetadata() {
+      return metadata_ != null;
+    }
+    /**
+     * <code>.canto.govshuttle.v1.TreasuryProposalMetadata metadata = 3 [json_name = "metadata"];</code>
+     * @return The metadata.
+     */
+    @java.lang.Override
+    public com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata getMetadata() {
+      return metadata_ == null ? com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata.getDefaultInstance() : metadata_;
+    }
+    /**
+     * <code>.canto.govshuttle.v1.TreasuryProposalMetadata metadata = 3 [json_name = "metadata"];</code>
+     */
+    @java.lang.Override
+    public com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadataOrBuilder getMetadataOrBuilder() {
+      return metadata_ == null ? com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata.getDefaultInstance() : metadata_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (metadata_ != null) {
+        output.writeMessage(3, getMetadata());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (metadata_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getMetadata());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal)) {
+        return super.equals(obj);
+      }
+      com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal other = (com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (hasMetadata() != other.hasMetadata()) return false;
+      if (hasMetadata()) {
+        if (!getMetadata()
+            .equals(other.getMetadata())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (hasMetadata()) {
+        hash = (37 * hash) + METADATA_FIELD_NUMBER;
+        hash = (53 * hash) + getMetadata().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     *treasury proposal type,
+     * </pre>
+     *
+     * Protobuf type {@code canto.govshuttle.v1.TreasuryProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.govshuttle.v1.TreasuryProposal)
+        com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.govshuttle.v1.GovshuttleProto.internal_static_canto_govshuttle_v1_TreasuryProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.govshuttle.v1.GovshuttleProto.internal_static_canto_govshuttle_v1_TreasuryProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal.class, com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal.Builder.class);
+      }
+
+      // Construct using com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        metadata_ = null;
+        if (metadataBuilder_ != null) {
+          metadataBuilder_.dispose();
+          metadataBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.govshuttle.v1.GovshuttleProto.internal_static_canto_govshuttle_v1_TreasuryProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal getDefaultInstanceForType() {
+        return com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal build() {
+        com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal buildPartial() {
+        com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal result = new com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.metadata_ = metadataBuilder_ == null
+              ? metadata_
+              : metadataBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal) {
+          return mergeFrom((com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal other) {
+        if (other == com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasMetadata()) {
+          mergeMetadata(other.getMetadata());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getMetadataFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata metadata_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata, com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata.Builder, com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadataOrBuilder> metadataBuilder_;
+      /**
+       * <code>.canto.govshuttle.v1.TreasuryProposalMetadata metadata = 3 [json_name = "metadata"];</code>
+       * @return Whether the metadata field is set.
+       */
+      public boolean hasMetadata() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.canto.govshuttle.v1.TreasuryProposalMetadata metadata = 3 [json_name = "metadata"];</code>
+       * @return The metadata.
+       */
+      public com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata getMetadata() {
+        if (metadataBuilder_ == null) {
+          return metadata_ == null ? com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata.getDefaultInstance() : metadata_;
+        } else {
+          return metadataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.canto.govshuttle.v1.TreasuryProposalMetadata metadata = 3 [json_name = "metadata"];</code>
+       */
+      public Builder setMetadata(com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata value) {
+        if (metadataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          metadata_ = value;
+        } else {
+          metadataBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.canto.govshuttle.v1.TreasuryProposalMetadata metadata = 3 [json_name = "metadata"];</code>
+       */
+      public Builder setMetadata(
+          com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata.Builder builderForValue) {
+        if (metadataBuilder_ == null) {
+          metadata_ = builderForValue.build();
+        } else {
+          metadataBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.canto.govshuttle.v1.TreasuryProposalMetadata metadata = 3 [json_name = "metadata"];</code>
+       */
+      public Builder mergeMetadata(com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata value) {
+        if (metadataBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            metadata_ != null &&
+            metadata_ != com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata.getDefaultInstance()) {
+            getMetadataBuilder().mergeFrom(value);
+          } else {
+            metadata_ = value;
+          }
+        } else {
+          metadataBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.canto.govshuttle.v1.TreasuryProposalMetadata metadata = 3 [json_name = "metadata"];</code>
+       */
+      public Builder clearMetadata() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        metadata_ = null;
+        if (metadataBuilder_ != null) {
+          metadataBuilder_.dispose();
+          metadataBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.canto.govshuttle.v1.TreasuryProposalMetadata metadata = 3 [json_name = "metadata"];</code>
+       */
+      public com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata.Builder getMetadataBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getMetadataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.canto.govshuttle.v1.TreasuryProposalMetadata metadata = 3 [json_name = "metadata"];</code>
+       */
+      public com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadataOrBuilder getMetadataOrBuilder() {
+        if (metadataBuilder_ != null) {
+          return metadataBuilder_.getMessageOrBuilder();
+        } else {
+          return metadata_ == null ?
+              com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata.getDefaultInstance() : metadata_;
+        }
+      }
+      /**
+       * <code>.canto.govshuttle.v1.TreasuryProposalMetadata metadata = 3 [json_name = "metadata"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata, com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata.Builder, com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadataOrBuilder> 
+          getMetadataFieldBuilder() {
+        if (metadataBuilder_ == null) {
+          metadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata, com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata.Builder, com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadataOrBuilder>(
+                  getMetadata(),
+                  getParentForChildren(),
+                  isClean());
+          metadata_ = null;
+        }
+        return metadataBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.govshuttle.v1.TreasuryProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.govshuttle.v1.TreasuryProposal)
+    private static final com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal();
+    }
+
+    public static com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TreasuryProposal>
+        PARSER = new com.google.protobuf.AbstractParser<TreasuryProposal>() {
+      @java.lang.Override
+      public TreasuryProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TreasuryProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TreasuryProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TreasuryProposalMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.govshuttle.v1.TreasuryProposalMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     *proposalID, for querying proposals in EVM side, determined by order in gov propsal queue
+     * </pre>
+     *
+     * <code>uint64 PropID = 1 [json_name = "PropID"];</code>
+     * @return The propID.
+     */
+    long getPropID();
+
+    /**
+     * <pre>
+     *bytestring representing account addresses 
+     * </pre>
+     *
+     * <code>string recipient = 2 [json_name = "recipient"];</code>
+     * @return The recipient.
+     */
+    java.lang.String getRecipient();
+    /**
+     * <pre>
+     *bytestring representing account addresses 
+     * </pre>
+     *
+     * <code>string recipient = 2 [json_name = "recipient"];</code>
+     * @return The bytes for recipient.
+     */
+    com.google.protobuf.ByteString
+        getRecipientBytes();
+
+    /**
+     * <code>uint64 amount = 3 [json_name = "amount"];</code>
+     * @return The amount.
+     */
+    long getAmount();
+
+    /**
+     * <pre>
+     *canto or note
+     * </pre>
+     *
+     * <code>string denom = 4 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <pre>
+     *canto or note
+     * </pre>
+     *
+     * <code>string denom = 4 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+  }
+  /**
+   * Protobuf type {@code canto.govshuttle.v1.TreasuryProposalMetadata}
+   */
+  public static final class TreasuryProposalMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.govshuttle.v1.TreasuryProposalMetadata)
+      TreasuryProposalMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TreasuryProposalMetadata.newBuilder() to construct.
+    private TreasuryProposalMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TreasuryProposalMetadata() {
+      recipient_ = "";
+      denom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TreasuryProposalMetadata();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.govshuttle.v1.GovshuttleProto.internal_static_canto_govshuttle_v1_TreasuryProposalMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.govshuttle.v1.GovshuttleProto.internal_static_canto_govshuttle_v1_TreasuryProposalMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata.class, com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata.Builder.class);
+    }
+
+    public static final int PROPID_FIELD_NUMBER = 1;
+    private long propID_ = 0L;
+    /**
+     * <pre>
+     *proposalID, for querying proposals in EVM side, determined by order in gov propsal queue
+     * </pre>
+     *
+     * <code>uint64 PropID = 1 [json_name = "PropID"];</code>
+     * @return The propID.
+     */
+    @java.lang.Override
+    public long getPropID() {
+      return propID_;
+    }
+
+    public static final int RECIPIENT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object recipient_ = "";
+    /**
+     * <pre>
+     *bytestring representing account addresses 
+     * </pre>
+     *
+     * <code>string recipient = 2 [json_name = "recipient"];</code>
+     * @return The recipient.
+     */
+    @java.lang.Override
+    public java.lang.String getRecipient() {
+      java.lang.Object ref = recipient_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        recipient_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     *bytestring representing account addresses 
+     * </pre>
+     *
+     * <code>string recipient = 2 [json_name = "recipient"];</code>
+     * @return The bytes for recipient.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRecipientBytes() {
+      java.lang.Object ref = recipient_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        recipient_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 3;
+    private long amount_ = 0L;
+    /**
+     * <code>uint64 amount = 3 [json_name = "amount"];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public long getAmount() {
+      return amount_;
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <pre>
+     *canto or note
+     * </pre>
+     *
+     * <code>string denom = 4 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     *canto or note
+     * </pre>
+     *
+     * <code>string denom = 4 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (propID_ != 0L) {
+        output.writeUInt64(1, propID_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recipient_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, recipient_);
+      }
+      if (amount_ != 0L) {
+        output.writeUInt64(3, amount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, denom_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (propID_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, propID_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(recipient_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, recipient_);
+      }
+      if (amount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, amount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, denom_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata)) {
+        return super.equals(obj);
+      }
+      com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata other = (com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata) obj;
+
+      if (getPropID()
+          != other.getPropID()) return false;
+      if (!getRecipient()
+          .equals(other.getRecipient())) return false;
+      if (getAmount()
+          != other.getAmount()) return false;
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROPID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPropID());
+      hash = (37 * hash) + RECIPIENT_FIELD_NUMBER;
+      hash = (53 * hash) + getRecipient().hashCode();
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAmount());
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code canto.govshuttle.v1.TreasuryProposalMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.govshuttle.v1.TreasuryProposalMetadata)
+        com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.govshuttle.v1.GovshuttleProto.internal_static_canto_govshuttle_v1_TreasuryProposalMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.govshuttle.v1.GovshuttleProto.internal_static_canto_govshuttle_v1_TreasuryProposalMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata.class, com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata.Builder.class);
+      }
+
+      // Construct using com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        propID_ = 0L;
+        recipient_ = "";
+        amount_ = 0L;
+        denom_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.govshuttle.v1.GovshuttleProto.internal_static_canto_govshuttle_v1_TreasuryProposalMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata getDefaultInstanceForType() {
+        return com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata build() {
+        com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata buildPartial() {
+        com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata result = new com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.propID_ = propID_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.recipient_ = recipient_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.amount_ = amount_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.denom_ = denom_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata) {
+          return mergeFrom((com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata other) {
+        if (other == com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata.getDefaultInstance()) return this;
+        if (other.getPropID() != 0L) {
+          setPropID(other.getPropID());
+        }
+        if (!other.getRecipient().isEmpty()) {
+          recipient_ = other.recipient_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getAmount() != 0L) {
+          setAmount(other.getAmount());
+        }
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                propID_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                recipient_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                amount_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long propID_ ;
+      /**
+       * <pre>
+       *proposalID, for querying proposals in EVM side, determined by order in gov propsal queue
+       * </pre>
+       *
+       * <code>uint64 PropID = 1 [json_name = "PropID"];</code>
+       * @return The propID.
+       */
+      @java.lang.Override
+      public long getPropID() {
+        return propID_;
+      }
+      /**
+       * <pre>
+       *proposalID, for querying proposals in EVM side, determined by order in gov propsal queue
+       * </pre>
+       *
+       * <code>uint64 PropID = 1 [json_name = "PropID"];</code>
+       * @param value The propID to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPropID(long value) {
+
+        propID_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *proposalID, for querying proposals in EVM side, determined by order in gov propsal queue
+       * </pre>
+       *
+       * <code>uint64 PropID = 1 [json_name = "PropID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPropID() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        propID_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object recipient_ = "";
+      /**
+       * <pre>
+       *bytestring representing account addresses 
+       * </pre>
+       *
+       * <code>string recipient = 2 [json_name = "recipient"];</code>
+       * @return The recipient.
+       */
+      public java.lang.String getRecipient() {
+        java.lang.Object ref = recipient_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          recipient_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       *bytestring representing account addresses 
+       * </pre>
+       *
+       * <code>string recipient = 2 [json_name = "recipient"];</code>
+       * @return The bytes for recipient.
+       */
+      public com.google.protobuf.ByteString
+          getRecipientBytes() {
+        java.lang.Object ref = recipient_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          recipient_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       *bytestring representing account addresses 
+       * </pre>
+       *
+       * <code>string recipient = 2 [json_name = "recipient"];</code>
+       * @param value The recipient to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecipient(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        recipient_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *bytestring representing account addresses 
+       * </pre>
+       *
+       * <code>string recipient = 2 [json_name = "recipient"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecipient() {
+        recipient_ = getDefaultInstance().getRecipient();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *bytestring representing account addresses 
+       * </pre>
+       *
+       * <code>string recipient = 2 [json_name = "recipient"];</code>
+       * @param value The bytes for recipient to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecipientBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        recipient_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private long amount_ ;
+      /**
+       * <code>uint64 amount = 3 [json_name = "amount"];</code>
+       * @return The amount.
+       */
+      @java.lang.Override
+      public long getAmount() {
+        return amount_;
+      }
+      /**
+       * <code>uint64 amount = 3 [json_name = "amount"];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(long value) {
+
+        amount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 amount = 3 [json_name = "amount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        amount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <pre>
+       *canto or note
+       * </pre>
+       *
+       * <code>string denom = 4 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       *canto or note
+       * </pre>
+       *
+       * <code>string denom = 4 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       *canto or note
+       * </pre>
+       *
+       * <code>string denom = 4 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *canto or note
+       * </pre>
+       *
+       * <code>string denom = 4 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *canto or note
+       * </pre>
+       *
+       * <code>string denom = 4 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.govshuttle.v1.TreasuryProposalMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.govshuttle.v1.TreasuryProposalMetadata)
+    private static final com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata();
+    }
+
+    public static com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TreasuryProposalMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<TreasuryProposalMetadata>() {
+      @java.lang.Override
+      public TreasuryProposalMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TreasuryProposalMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TreasuryProposalMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.govshuttle.v1.GovshuttleProto.TreasuryProposalMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface LendingMarketMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:canto.govshuttle.v1.LendingMarketMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string Account = 1 [json_name = "Account"];</code>
+     * @return A list containing the account.
+     */
+    java.util.List<java.lang.String>
+        getAccountList();
+    /**
+     * <code>repeated string Account = 1 [json_name = "Account"];</code>
+     * @return The count of account.
+     */
+    int getAccountCount();
+    /**
+     * <code>repeated string Account = 1 [json_name = "Account"];</code>
+     * @param index The index of the element to return.
+     * @return The account at the given index.
+     */
+    java.lang.String getAccount(int index);
+    /**
+     * <code>repeated string Account = 1 [json_name = "Account"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the account at the given index.
+     */
+    com.google.protobuf.ByteString
+        getAccountBytes(int index);
+
+    /**
+     * <code>uint64 PropId = 2 [json_name = "PropId"];</code>
+     * @return The propId.
+     */
+    long getPropId();
+
+    /**
+     * <code>repeated uint64 values = 3 [json_name = "values"];</code>
+     * @return A list containing the values.
+     */
+    java.util.List<java.lang.Long> getValuesList();
+    /**
+     * <code>repeated uint64 values = 3 [json_name = "values"];</code>
+     * @return The count of values.
+     */
+    int getValuesCount();
+    /**
+     * <code>repeated uint64 values = 3 [json_name = "values"];</code>
+     * @param index The index of the element to return.
+     * @return The values at the given index.
+     */
+    long getValues(int index);
+
+    /**
+     * <code>repeated string calldatas = 4 [json_name = "calldatas"];</code>
+     * @return A list containing the calldatas.
+     */
+    java.util.List<java.lang.String>
+        getCalldatasList();
+    /**
+     * <code>repeated string calldatas = 4 [json_name = "calldatas"];</code>
+     * @return The count of calldatas.
+     */
+    int getCalldatasCount();
+    /**
+     * <code>repeated string calldatas = 4 [json_name = "calldatas"];</code>
+     * @param index The index of the element to return.
+     * @return The calldatas at the given index.
+     */
+    java.lang.String getCalldatas(int index);
+    /**
+     * <code>repeated string calldatas = 4 [json_name = "calldatas"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the calldatas at the given index.
+     */
+    com.google.protobuf.ByteString
+        getCalldatasBytes(int index);
+
+    /**
+     * <code>repeated string signatures = 5 [json_name = "signatures"];</code>
+     * @return A list containing the signatures.
+     */
+    java.util.List<java.lang.String>
+        getSignaturesList();
+    /**
+     * <code>repeated string signatures = 5 [json_name = "signatures"];</code>
+     * @return The count of signatures.
+     */
+    int getSignaturesCount();
+    /**
+     * <code>repeated string signatures = 5 [json_name = "signatures"];</code>
+     * @param index The index of the element to return.
+     * @return The signatures at the given index.
+     */
+    java.lang.String getSignatures(int index);
+    /**
+     * <code>repeated string signatures = 5 [json_name = "signatures"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the signatures at the given index.
+     */
+    com.google.protobuf.ByteString
+        getSignaturesBytes(int index);
+  }
+  /**
+   * Protobuf type {@code canto.govshuttle.v1.LendingMarketMetadata}
+   */
+  public static final class LendingMarketMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:canto.govshuttle.v1.LendingMarketMetadata)
+      LendingMarketMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use LendingMarketMetadata.newBuilder() to construct.
+    private LendingMarketMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private LendingMarketMetadata() {
+      account_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      values_ = emptyLongList();
+      calldatas_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      signatures_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LendingMarketMetadata();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.canto.govshuttle.v1.GovshuttleProto.internal_static_canto_govshuttle_v1_LendingMarketMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.canto.govshuttle.v1.GovshuttleProto.internal_static_canto_govshuttle_v1_LendingMarketMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata.class, com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata.Builder.class);
+    }
+
+    public static final int ACCOUNT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList account_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string Account = 1 [json_name = "Account"];</code>
+     * @return A list containing the account.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getAccountList() {
+      return account_;
+    }
+    /**
+     * <code>repeated string Account = 1 [json_name = "Account"];</code>
+     * @return The count of account.
+     */
+    public int getAccountCount() {
+      return account_.size();
+    }
+    /**
+     * <code>repeated string Account = 1 [json_name = "Account"];</code>
+     * @param index The index of the element to return.
+     * @return The account at the given index.
+     */
+    public java.lang.String getAccount(int index) {
+      return account_.get(index);
+    }
+    /**
+     * <code>repeated string Account = 1 [json_name = "Account"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the account at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getAccountBytes(int index) {
+      return account_.getByteString(index);
+    }
+
+    public static final int PROPID_FIELD_NUMBER = 2;
+    private long propId_ = 0L;
+    /**
+     * <code>uint64 PropId = 2 [json_name = "PropId"];</code>
+     * @return The propId.
+     */
+    @java.lang.Override
+    public long getPropId() {
+      return propId_;
+    }
+
+    public static final int VALUES_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.LongList values_;
+    /**
+     * <code>repeated uint64 values = 3 [json_name = "values"];</code>
+     * @return A list containing the values.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Long>
+        getValuesList() {
+      return values_;
+    }
+    /**
+     * <code>repeated uint64 values = 3 [json_name = "values"];</code>
+     * @return The count of values.
+     */
+    public int getValuesCount() {
+      return values_.size();
+    }
+    /**
+     * <code>repeated uint64 values = 3 [json_name = "values"];</code>
+     * @param index The index of the element to return.
+     * @return The values at the given index.
+     */
+    public long getValues(int index) {
+      return values_.getLong(index);
+    }
+    private int valuesMemoizedSerializedSize = -1;
+
+    public static final int CALLDATAS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList calldatas_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string calldatas = 4 [json_name = "calldatas"];</code>
+     * @return A list containing the calldatas.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getCalldatasList() {
+      return calldatas_;
+    }
+    /**
+     * <code>repeated string calldatas = 4 [json_name = "calldatas"];</code>
+     * @return The count of calldatas.
+     */
+    public int getCalldatasCount() {
+      return calldatas_.size();
+    }
+    /**
+     * <code>repeated string calldatas = 4 [json_name = "calldatas"];</code>
+     * @param index The index of the element to return.
+     * @return The calldatas at the given index.
+     */
+    public java.lang.String getCalldatas(int index) {
+      return calldatas_.get(index);
+    }
+    /**
+     * <code>repeated string calldatas = 4 [json_name = "calldatas"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the calldatas at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getCalldatasBytes(int index) {
+      return calldatas_.getByteString(index);
+    }
+
+    public static final int SIGNATURES_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList signatures_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string signatures = 5 [json_name = "signatures"];</code>
+     * @return A list containing the signatures.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSignaturesList() {
+      return signatures_;
+    }
+    /**
+     * <code>repeated string signatures = 5 [json_name = "signatures"];</code>
+     * @return The count of signatures.
+     */
+    public int getSignaturesCount() {
+      return signatures_.size();
+    }
+    /**
+     * <code>repeated string signatures = 5 [json_name = "signatures"];</code>
+     * @param index The index of the element to return.
+     * @return The signatures at the given index.
+     */
+    public java.lang.String getSignatures(int index) {
+      return signatures_.get(index);
+    }
+    /**
+     * <code>repeated string signatures = 5 [json_name = "signatures"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the signatures at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getSignaturesBytes(int index) {
+      return signatures_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      for (int i = 0; i < account_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, account_.getRaw(i));
+      }
+      if (propId_ != 0L) {
+        output.writeUInt64(2, propId_);
+      }
+      if (getValuesList().size() > 0) {
+        output.writeUInt32NoTag(26);
+        output.writeUInt32NoTag(valuesMemoizedSerializedSize);
+      }
+      for (int i = 0; i < values_.size(); i++) {
+        output.writeUInt64NoTag(values_.getLong(i));
+      }
+      for (int i = 0; i < calldatas_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, calldatas_.getRaw(i));
+      }
+      for (int i = 0; i < signatures_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, signatures_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < account_.size(); i++) {
+          dataSize += computeStringSizeNoTag(account_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getAccountList().size();
+      }
+      if (propId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, propId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < values_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt64SizeNoTag(values_.getLong(i));
+        }
+        size += dataSize;
+        if (!getValuesList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        valuesMemoizedSerializedSize = dataSize;
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < calldatas_.size(); i++) {
+          dataSize += computeStringSizeNoTag(calldatas_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getCalldatasList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < signatures_.size(); i++) {
+          dataSize += computeStringSizeNoTag(signatures_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getSignaturesList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata)) {
+        return super.equals(obj);
+      }
+      com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata other = (com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata) obj;
+
+      if (!getAccountList()
+          .equals(other.getAccountList())) return false;
+      if (getPropId()
+          != other.getPropId()) return false;
+      if (!getValuesList()
+          .equals(other.getValuesList())) return false;
+      if (!getCalldatasList()
+          .equals(other.getCalldatasList())) return false;
+      if (!getSignaturesList()
+          .equals(other.getSignaturesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getAccountCount() > 0) {
+        hash = (37 * hash) + ACCOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getAccountList().hashCode();
+      }
+      hash = (37 * hash) + PROPID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPropId());
+      if (getValuesCount() > 0) {
+        hash = (37 * hash) + VALUES_FIELD_NUMBER;
+        hash = (53 * hash) + getValuesList().hashCode();
+      }
+      if (getCalldatasCount() > 0) {
+        hash = (37 * hash) + CALLDATAS_FIELD_NUMBER;
+        hash = (53 * hash) + getCalldatasList().hashCode();
+      }
+      if (getSignaturesCount() > 0) {
+        hash = (37 * hash) + SIGNATURES_FIELD_NUMBER;
+        hash = (53 * hash) + getSignaturesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code canto.govshuttle.v1.LendingMarketMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:canto.govshuttle.v1.LendingMarketMetadata)
+        com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.canto.govshuttle.v1.GovshuttleProto.internal_static_canto_govshuttle_v1_LendingMarketMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.canto.govshuttle.v1.GovshuttleProto.internal_static_canto_govshuttle_v1_LendingMarketMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata.class, com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata.Builder.class);
+      }
+
+      // Construct using com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        account_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        propId_ = 0L;
+        values_ = emptyLongList();
+        calldatas_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        signatures_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.canto.govshuttle.v1.GovshuttleProto.internal_static_canto_govshuttle_v1_LendingMarketMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata getDefaultInstanceForType() {
+        return com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata build() {
+        com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata buildPartial() {
+        com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata result = new com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata result) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          values_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.values_ = values_;
+      }
+
+      private void buildPartial0(com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          account_.makeImmutable();
+          result.account_ = account_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.propId_ = propId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          calldatas_.makeImmutable();
+          result.calldatas_ = calldatas_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          signatures_.makeImmutable();
+          result.signatures_ = signatures_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata) {
+          return mergeFrom((com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata other) {
+        if (other == com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata.getDefaultInstance()) return this;
+        if (!other.account_.isEmpty()) {
+          if (account_.isEmpty()) {
+            account_ = other.account_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureAccountIsMutable();
+            account_.addAll(other.account_);
+          }
+          onChanged();
+        }
+        if (other.getPropId() != 0L) {
+          setPropId(other.getPropId());
+        }
+        if (!other.values_.isEmpty()) {
+          if (values_.isEmpty()) {
+            values_ = other.values_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureValuesIsMutable();
+            values_.addAll(other.values_);
+          }
+          onChanged();
+        }
+        if (!other.calldatas_.isEmpty()) {
+          if (calldatas_.isEmpty()) {
+            calldatas_ = other.calldatas_;
+            bitField0_ |= 0x00000008;
+          } else {
+            ensureCalldatasIsMutable();
+            calldatas_.addAll(other.calldatas_);
+          }
+          onChanged();
+        }
+        if (!other.signatures_.isEmpty()) {
+          if (signatures_.isEmpty()) {
+            signatures_ = other.signatures_;
+            bitField0_ |= 0x00000010;
+          } else {
+            ensureSignaturesIsMutable();
+            signatures_.addAll(other.signatures_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureAccountIsMutable();
+                account_.add(s);
+                break;
+              } // case 10
+              case 16: {
+                propId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                long v = input.readUInt64();
+                ensureValuesIsMutable();
+                values_.addLong(v);
+                break;
+              } // case 24
+              case 26: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureValuesIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  values_.addLong(input.readUInt64());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 26
+              case 34: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureCalldatasIsMutable();
+                calldatas_.add(s);
+                break;
+              } // case 34
+              case 42: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureSignaturesIsMutable();
+                signatures_.add(s);
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList account_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureAccountIsMutable() {
+        if (!account_.isModifiable()) {
+          account_ = new com.google.protobuf.LazyStringArrayList(account_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <code>repeated string Account = 1 [json_name = "Account"];</code>
+       * @return A list containing the account.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getAccountList() {
+        account_.makeImmutable();
+        return account_;
+      }
+      /**
+       * <code>repeated string Account = 1 [json_name = "Account"];</code>
+       * @return The count of account.
+       */
+      public int getAccountCount() {
+        return account_.size();
+      }
+      /**
+       * <code>repeated string Account = 1 [json_name = "Account"];</code>
+       * @param index The index of the element to return.
+       * @return The account at the given index.
+       */
+      public java.lang.String getAccount(int index) {
+        return account_.get(index);
+      }
+      /**
+       * <code>repeated string Account = 1 [json_name = "Account"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the account at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getAccountBytes(int index) {
+        return account_.getByteString(index);
+      }
+      /**
+       * <code>repeated string Account = 1 [json_name = "Account"];</code>
+       * @param index The index to set the value at.
+       * @param value The account to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccount(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureAccountIsMutable();
+        account_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string Account = 1 [json_name = "Account"];</code>
+       * @param value The account to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAccount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureAccountIsMutable();
+        account_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string Account = 1 [json_name = "Account"];</code>
+       * @param values The account to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllAccount(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureAccountIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, account_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string Account = 1 [json_name = "Account"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccount() {
+        account_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string Account = 1 [json_name = "Account"];</code>
+       * @param value The bytes of the account to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAccountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureAccountIsMutable();
+        account_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long propId_ ;
+      /**
+       * <code>uint64 PropId = 2 [json_name = "PropId"];</code>
+       * @return The propId.
+       */
+      @java.lang.Override
+      public long getPropId() {
+        return propId_;
+      }
+      /**
+       * <code>uint64 PropId = 2 [json_name = "PropId"];</code>
+       * @param value The propId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPropId(long value) {
+
+        propId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 PropId = 2 [json_name = "PropId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPropId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        propId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.LongList values_ = emptyLongList();
+      private void ensureValuesIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          values_ = mutableCopy(values_);
+          bitField0_ |= 0x00000004;
+        }
+      }
+      /**
+       * <code>repeated uint64 values = 3 [json_name = "values"];</code>
+       * @return A list containing the values.
+       */
+      public java.util.List<java.lang.Long>
+          getValuesList() {
+        return ((bitField0_ & 0x00000004) != 0) ?
+                 java.util.Collections.unmodifiableList(values_) : values_;
+      }
+      /**
+       * <code>repeated uint64 values = 3 [json_name = "values"];</code>
+       * @return The count of values.
+       */
+      public int getValuesCount() {
+        return values_.size();
+      }
+      /**
+       * <code>repeated uint64 values = 3 [json_name = "values"];</code>
+       * @param index The index of the element to return.
+       * @return The values at the given index.
+       */
+      public long getValues(int index) {
+        return values_.getLong(index);
+      }
+      /**
+       * <code>repeated uint64 values = 3 [json_name = "values"];</code>
+       * @param index The index to set the value at.
+       * @param value The values to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValues(
+          int index, long value) {
+
+        ensureValuesIsMutable();
+        values_.setLong(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 values = 3 [json_name = "values"];</code>
+       * @param value The values to add.
+       * @return This builder for chaining.
+       */
+      public Builder addValues(long value) {
+
+        ensureValuesIsMutable();
+        values_.addLong(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 values = 3 [json_name = "values"];</code>
+       * @param values The values to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllValues(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureValuesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, values_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 values = 3 [json_name = "values"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValues() {
+        values_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList calldatas_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureCalldatasIsMutable() {
+        if (!calldatas_.isModifiable()) {
+          calldatas_ = new com.google.protobuf.LazyStringArrayList(calldatas_);
+        }
+        bitField0_ |= 0x00000008;
+      }
+      /**
+       * <code>repeated string calldatas = 4 [json_name = "calldatas"];</code>
+       * @return A list containing the calldatas.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getCalldatasList() {
+        calldatas_.makeImmutable();
+        return calldatas_;
+      }
+      /**
+       * <code>repeated string calldatas = 4 [json_name = "calldatas"];</code>
+       * @return The count of calldatas.
+       */
+      public int getCalldatasCount() {
+        return calldatas_.size();
+      }
+      /**
+       * <code>repeated string calldatas = 4 [json_name = "calldatas"];</code>
+       * @param index The index of the element to return.
+       * @return The calldatas at the given index.
+       */
+      public java.lang.String getCalldatas(int index) {
+        return calldatas_.get(index);
+      }
+      /**
+       * <code>repeated string calldatas = 4 [json_name = "calldatas"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the calldatas at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getCalldatasBytes(int index) {
+        return calldatas_.getByteString(index);
+      }
+      /**
+       * <code>repeated string calldatas = 4 [json_name = "calldatas"];</code>
+       * @param index The index to set the value at.
+       * @param value The calldatas to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCalldatas(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureCalldatasIsMutable();
+        calldatas_.set(index, value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string calldatas = 4 [json_name = "calldatas"];</code>
+       * @param value The calldatas to add.
+       * @return This builder for chaining.
+       */
+      public Builder addCalldatas(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureCalldatasIsMutable();
+        calldatas_.add(value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string calldatas = 4 [json_name = "calldatas"];</code>
+       * @param values The calldatas to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllCalldatas(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureCalldatasIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, calldatas_);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string calldatas = 4 [json_name = "calldatas"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCalldatas() {
+        calldatas_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string calldatas = 4 [json_name = "calldatas"];</code>
+       * @param value The bytes of the calldatas to add.
+       * @return This builder for chaining.
+       */
+      public Builder addCalldatasBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureCalldatasIsMutable();
+        calldatas_.add(value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList signatures_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureSignaturesIsMutable() {
+        if (!signatures_.isModifiable()) {
+          signatures_ = new com.google.protobuf.LazyStringArrayList(signatures_);
+        }
+        bitField0_ |= 0x00000010;
+      }
+      /**
+       * <code>repeated string signatures = 5 [json_name = "signatures"];</code>
+       * @return A list containing the signatures.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSignaturesList() {
+        signatures_.makeImmutable();
+        return signatures_;
+      }
+      /**
+       * <code>repeated string signatures = 5 [json_name = "signatures"];</code>
+       * @return The count of signatures.
+       */
+      public int getSignaturesCount() {
+        return signatures_.size();
+      }
+      /**
+       * <code>repeated string signatures = 5 [json_name = "signatures"];</code>
+       * @param index The index of the element to return.
+       * @return The signatures at the given index.
+       */
+      public java.lang.String getSignatures(int index) {
+        return signatures_.get(index);
+      }
+      /**
+       * <code>repeated string signatures = 5 [json_name = "signatures"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the signatures at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getSignaturesBytes(int index) {
+        return signatures_.getByteString(index);
+      }
+      /**
+       * <code>repeated string signatures = 5 [json_name = "signatures"];</code>
+       * @param index The index to set the value at.
+       * @param value The signatures to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignatures(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureSignaturesIsMutable();
+        signatures_.set(index, value);
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string signatures = 5 [json_name = "signatures"];</code>
+       * @param value The signatures to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSignatures(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureSignaturesIsMutable();
+        signatures_.add(value);
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string signatures = 5 [json_name = "signatures"];</code>
+       * @param values The signatures to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSignatures(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSignaturesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, signatures_);
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string signatures = 5 [json_name = "signatures"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSignatures() {
+        signatures_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string signatures = 5 [json_name = "signatures"];</code>
+       * @param value The bytes of the signatures to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSignaturesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureSignaturesIsMutable();
+        signatures_.add(value);
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:canto.govshuttle.v1.LendingMarketMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:canto.govshuttle.v1.LendingMarketMetadata)
+    private static final com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata();
+    }
+
+    public static com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<LendingMarketMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<LendingMarketMetadata>() {
+      @java.lang.Override
+      public LendingMarketMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<LendingMarketMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LendingMarketMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.canto.govshuttle.v1.GovshuttleProto.LendingMarketMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_govshuttle_v1_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_govshuttle_v1_Params_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_govshuttle_v1_LendingMarketProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_govshuttle_v1_LendingMarketProposal_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_govshuttle_v1_TreasuryProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_govshuttle_v1_TreasuryProposal_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_govshuttle_v1_TreasuryProposalMetadata_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_govshuttle_v1_TreasuryProposalMetadata_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_canto_govshuttle_v1_LendingMarketMetadata_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_canto_govshuttle_v1_LendingMarketMetadata_fieldAccessorTable;
 
@@ -69,12 +4567,12 @@ public final class GovshuttleProto {
       "ata\022\030\n\007Account\030\001 \003(\tR\007Account\022\026\n\006PropId\030" +
       "\002 \001(\004R\006PropId\022\026\n\006values\030\003 \003(\004R\006values\022\034\n" +
       "\tcalldatas\030\004 \003(\tR\tcalldatas\022\036\n\nsignature" +
-      "s\030\005 \003(\tR\nsignaturesB\316\001\n\027com.canto.govshu" +
-      "ttle.v1B\017GovshuttleProtoP\001Z4github.com/C" +
-      "anto-Network/Canto/v6/x/govshuttle/types" +
-      "\242\002\003CGX\252\002\023Canto.Govshuttle.V1\312\002\023Canto\\Gov" +
-      "shuttle\\V1\342\002\037Canto\\Govshuttle\\V1\\GPBMeta" +
-      "data\352\002\025Canto::Govshuttle::V1b\006proto3"
+      "s\030\005 \003(\tR\nsignaturesB\314\001\n\027com.canto.govshu" +
+      "ttle.v1B\017GovshuttleProtoZ4github.com/Can" +
+      "to-Network/Canto/v6/x/govshuttle/types\242\002" +
+      "\003CGX\252\002\023Canto.Govshuttle.V1\312\002\023Canto\\Govsh" +
+      "uttle\\V1\342\002\037Canto\\Govshuttle\\V1\\GPBMetada" +
+      "ta\352\002\025Canto::Govshuttle::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

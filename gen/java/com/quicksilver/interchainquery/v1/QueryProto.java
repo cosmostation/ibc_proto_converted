@@ -14,19 +14,3309 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryRequestsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quicksilver.interchainquery.v1.QueryRequestsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+
+    /**
+     * <code>string chain_id = 2 [json_name = "chainId"];</code>
+     * @return The chainId.
+     */
+    java.lang.String getChainId();
+    /**
+     * <code>string chain_id = 2 [json_name = "chainId"];</code>
+     * @return The bytes for chainId.
+     */
+    com.google.protobuf.ByteString
+        getChainIdBytes();
+  }
+  /**
+   * <pre>
+   * QueryParamsRequest is the request type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code quicksilver.interchainquery.v1.QueryRequestsRequest}
+   */
+  public static final class QueryRequestsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quicksilver.interchainquery.v1.QueryRequestsRequest)
+      QueryRequestsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRequestsRequest.newBuilder() to construct.
+    private QueryRequestsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRequestsRequest() {
+      chainId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRequestsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quicksilver.interchainquery.v1.QueryProto.internal_static_quicksilver_interchainquery_v1_QueryRequestsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quicksilver.interchainquery.v1.QueryProto.internal_static_quicksilver_interchainquery_v1_QueryRequestsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequest.class, com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequest.Builder.class);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 1;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    public static final int CHAIN_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object chainId_ = "";
+    /**
+     * <code>string chain_id = 2 [json_name = "chainId"];</code>
+     * @return The chainId.
+     */
+    @java.lang.Override
+    public java.lang.String getChainId() {
+      java.lang.Object ref = chainId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        chainId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string chain_id = 2 [json_name = "chainId"];</code>
+     * @return The bytes for chainId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getChainIdBytes() {
+      java.lang.Object ref = chainId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        chainId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pagination_ != null) {
+        output.writeMessage(1, getPagination());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, chainId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPagination());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, chainId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequest)) {
+        return super.equals(obj);
+      }
+      com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequest other = (com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequest) obj;
+
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getChainId()
+          .equals(other.getChainId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (37 * hash) + CHAIN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getChainId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsRequest is the request type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code quicksilver.interchainquery.v1.QueryRequestsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quicksilver.interchainquery.v1.QueryRequestsRequest)
+        com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quicksilver.interchainquery.v1.QueryProto.internal_static_quicksilver_interchainquery_v1_QueryRequestsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quicksilver.interchainquery.v1.QueryProto.internal_static_quicksilver_interchainquery_v1_QueryRequestsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequest.class, com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequest.Builder.class);
+      }
+
+      // Construct using com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        chainId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quicksilver.interchainquery.v1.QueryProto.internal_static_quicksilver_interchainquery_v1_QueryRequestsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequest getDefaultInstanceForType() {
+        return com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequest build() {
+        com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequest buildPartial() {
+        com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequest result = new com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.chainId_ = chainId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequest) {
+          return mergeFrom((com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequest other) {
+        if (other == com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequest.getDefaultInstance()) return this;
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        if (!other.getChainId().isEmpty()) {
+          chainId_ = other.chainId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                chainId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+
+      private java.lang.Object chainId_ = "";
+      /**
+       * <code>string chain_id = 2 [json_name = "chainId"];</code>
+       * @return The chainId.
+       */
+      public java.lang.String getChainId() {
+        java.lang.Object ref = chainId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          chainId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string chain_id = 2 [json_name = "chainId"];</code>
+       * @return The bytes for chainId.
+       */
+      public com.google.protobuf.ByteString
+          getChainIdBytes() {
+        java.lang.Object ref = chainId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          chainId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string chain_id = 2 [json_name = "chainId"];</code>
+       * @param value The chainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        chainId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain_id = 2 [json_name = "chainId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChainId() {
+        chainId_ = getDefaultInstance().getChainId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain_id = 2 [json_name = "chainId"];</code>
+       * @param value The bytes for chainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        chainId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quicksilver.interchainquery.v1.QueryRequestsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:quicksilver.interchainquery.v1.QueryRequestsRequest)
+    private static final com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequest();
+    }
+
+    public static com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRequestsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRequestsRequest>() {
+      @java.lang.Override
+      public QueryRequestsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRequestsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRequestsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRequestsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quicksilver.interchainquery.v1.QueryRequestsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>repeated .quicksilver.interchainquery.v1.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.quicksilver.interchainquery.v1.InterchainqueryProto.Query> 
+        getQueriesList();
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>repeated .quicksilver.interchainquery.v1.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+     */
+    com.quicksilver.interchainquery.v1.InterchainqueryProto.Query getQueries(int index);
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>repeated .quicksilver.interchainquery.v1.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+     */
+    int getQueriesCount();
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>repeated .quicksilver.interchainquery.v1.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.quicksilver.interchainquery.v1.InterchainqueryProto.QueryOrBuilder> 
+        getQueriesOrBuilderList();
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>repeated .quicksilver.interchainquery.v1.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+     */
+    com.quicksilver.interchainquery.v1.InterchainqueryProto.QueryOrBuilder getQueriesOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryParamsResponse is the response type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code quicksilver.interchainquery.v1.QueryRequestsResponse}
+   */
+  public static final class QueryRequestsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quicksilver.interchainquery.v1.QueryRequestsResponse)
+      QueryRequestsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRequestsResponse.newBuilder() to construct.
+    private QueryRequestsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRequestsResponse() {
+      queries_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRequestsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quicksilver.interchainquery.v1.QueryProto.internal_static_quicksilver_interchainquery_v1_QueryRequestsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quicksilver.interchainquery.v1.QueryProto.internal_static_quicksilver_interchainquery_v1_QueryRequestsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponse.class, com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponse.Builder.class);
+    }
+
+    public static final int QUERIES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.quicksilver.interchainquery.v1.InterchainqueryProto.Query> queries_;
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>repeated .quicksilver.interchainquery.v1.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.quicksilver.interchainquery.v1.InterchainqueryProto.Query> getQueriesList() {
+      return queries_;
+    }
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>repeated .quicksilver.interchainquery.v1.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.quicksilver.interchainquery.v1.InterchainqueryProto.QueryOrBuilder> 
+        getQueriesOrBuilderList() {
+      return queries_;
+    }
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>repeated .quicksilver.interchainquery.v1.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getQueriesCount() {
+      return queries_.size();
+    }
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>repeated .quicksilver.interchainquery.v1.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.quicksilver.interchainquery.v1.InterchainqueryProto.Query getQueries(int index) {
+      return queries_.get(index);
+    }
+    /**
+     * <pre>
+     * params defines the parameters of the module.
+     * </pre>
+     *
+     * <code>repeated .quicksilver.interchainquery.v1.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.quicksilver.interchainquery.v1.InterchainqueryProto.QueryOrBuilder getQueriesOrBuilder(
+        int index) {
+      return queries_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < queries_.size(); i++) {
+        output.writeMessage(1, queries_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < queries_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, queries_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponse)) {
+        return super.equals(obj);
+      }
+      com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponse other = (com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponse) obj;
+
+      if (!getQueriesList()
+          .equals(other.getQueriesList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getQueriesCount() > 0) {
+        hash = (37 * hash) + QUERIES_FIELD_NUMBER;
+        hash = (53 * hash) + getQueriesList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsResponse is the response type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code quicksilver.interchainquery.v1.QueryRequestsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quicksilver.interchainquery.v1.QueryRequestsResponse)
+        com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quicksilver.interchainquery.v1.QueryProto.internal_static_quicksilver_interchainquery_v1_QueryRequestsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quicksilver.interchainquery.v1.QueryProto.internal_static_quicksilver_interchainquery_v1_QueryRequestsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponse.class, com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponse.Builder.class);
+      }
+
+      // Construct using com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (queriesBuilder_ == null) {
+          queries_ = java.util.Collections.emptyList();
+        } else {
+          queries_ = null;
+          queriesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quicksilver.interchainquery.v1.QueryProto.internal_static_quicksilver_interchainquery_v1_QueryRequestsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponse getDefaultInstanceForType() {
+        return com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponse build() {
+        com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponse buildPartial() {
+        com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponse result = new com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponse result) {
+        if (queriesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            queries_ = java.util.Collections.unmodifiableList(queries_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.queries_ = queries_;
+        } else {
+          result.queries_ = queriesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponse) {
+          return mergeFrom((com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponse other) {
+        if (other == com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponse.getDefaultInstance()) return this;
+        if (queriesBuilder_ == null) {
+          if (!other.queries_.isEmpty()) {
+            if (queries_.isEmpty()) {
+              queries_ = other.queries_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureQueriesIsMutable();
+              queries_.addAll(other.queries_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.queries_.isEmpty()) {
+            if (queriesBuilder_.isEmpty()) {
+              queriesBuilder_.dispose();
+              queriesBuilder_ = null;
+              queries_ = other.queries_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              queriesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getQueriesFieldBuilder() : null;
+            } else {
+              queriesBuilder_.addAllMessages(other.queries_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.quicksilver.interchainquery.v1.InterchainqueryProto.Query m =
+                    input.readMessage(
+                        com.quicksilver.interchainquery.v1.InterchainqueryProto.Query.parser(),
+                        extensionRegistry);
+                if (queriesBuilder_ == null) {
+                  ensureQueriesIsMutable();
+                  queries_.add(m);
+                } else {
+                  queriesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.quicksilver.interchainquery.v1.InterchainqueryProto.Query> queries_ =
+        java.util.Collections.emptyList();
+      private void ensureQueriesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          queries_ = new java.util.ArrayList<com.quicksilver.interchainquery.v1.InterchainqueryProto.Query>(queries_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.quicksilver.interchainquery.v1.InterchainqueryProto.Query, com.quicksilver.interchainquery.v1.InterchainqueryProto.Query.Builder, com.quicksilver.interchainquery.v1.InterchainqueryProto.QueryOrBuilder> queriesBuilder_;
+
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>repeated .quicksilver.interchainquery.v1.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.quicksilver.interchainquery.v1.InterchainqueryProto.Query> getQueriesList() {
+        if (queriesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(queries_);
+        } else {
+          return queriesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>repeated .quicksilver.interchainquery.v1.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public int getQueriesCount() {
+        if (queriesBuilder_ == null) {
+          return queries_.size();
+        } else {
+          return queriesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>repeated .quicksilver.interchainquery.v1.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.quicksilver.interchainquery.v1.InterchainqueryProto.Query getQueries(int index) {
+        if (queriesBuilder_ == null) {
+          return queries_.get(index);
+        } else {
+          return queriesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>repeated .quicksilver.interchainquery.v1.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setQueries(
+          int index, com.quicksilver.interchainquery.v1.InterchainqueryProto.Query value) {
+        if (queriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQueriesIsMutable();
+          queries_.set(index, value);
+          onChanged();
+        } else {
+          queriesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>repeated .quicksilver.interchainquery.v1.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setQueries(
+          int index, com.quicksilver.interchainquery.v1.InterchainqueryProto.Query.Builder builderForValue) {
+        if (queriesBuilder_ == null) {
+          ensureQueriesIsMutable();
+          queries_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          queriesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>repeated .quicksilver.interchainquery.v1.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addQueries(com.quicksilver.interchainquery.v1.InterchainqueryProto.Query value) {
+        if (queriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQueriesIsMutable();
+          queries_.add(value);
+          onChanged();
+        } else {
+          queriesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>repeated .quicksilver.interchainquery.v1.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addQueries(
+          int index, com.quicksilver.interchainquery.v1.InterchainqueryProto.Query value) {
+        if (queriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQueriesIsMutable();
+          queries_.add(index, value);
+          onChanged();
+        } else {
+          queriesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>repeated .quicksilver.interchainquery.v1.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addQueries(
+          com.quicksilver.interchainquery.v1.InterchainqueryProto.Query.Builder builderForValue) {
+        if (queriesBuilder_ == null) {
+          ensureQueriesIsMutable();
+          queries_.add(builderForValue.build());
+          onChanged();
+        } else {
+          queriesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>repeated .quicksilver.interchainquery.v1.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addQueries(
+          int index, com.quicksilver.interchainquery.v1.InterchainqueryProto.Query.Builder builderForValue) {
+        if (queriesBuilder_ == null) {
+          ensureQueriesIsMutable();
+          queries_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          queriesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>repeated .quicksilver.interchainquery.v1.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllQueries(
+          java.lang.Iterable<? extends com.quicksilver.interchainquery.v1.InterchainqueryProto.Query> values) {
+        if (queriesBuilder_ == null) {
+          ensureQueriesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, queries_);
+          onChanged();
+        } else {
+          queriesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>repeated .quicksilver.interchainquery.v1.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearQueries() {
+        if (queriesBuilder_ == null) {
+          queries_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          queriesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>repeated .quicksilver.interchainquery.v1.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeQueries(int index) {
+        if (queriesBuilder_ == null) {
+          ensureQueriesIsMutable();
+          queries_.remove(index);
+          onChanged();
+        } else {
+          queriesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>repeated .quicksilver.interchainquery.v1.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.quicksilver.interchainquery.v1.InterchainqueryProto.Query.Builder getQueriesBuilder(
+          int index) {
+        return getQueriesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>repeated .quicksilver.interchainquery.v1.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.quicksilver.interchainquery.v1.InterchainqueryProto.QueryOrBuilder getQueriesOrBuilder(
+          int index) {
+        if (queriesBuilder_ == null) {
+          return queries_.get(index);  } else {
+          return queriesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>repeated .quicksilver.interchainquery.v1.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.quicksilver.interchainquery.v1.InterchainqueryProto.QueryOrBuilder> 
+           getQueriesOrBuilderList() {
+        if (queriesBuilder_ != null) {
+          return queriesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(queries_);
+        }
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>repeated .quicksilver.interchainquery.v1.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.quicksilver.interchainquery.v1.InterchainqueryProto.Query.Builder addQueriesBuilder() {
+        return getQueriesFieldBuilder().addBuilder(
+            com.quicksilver.interchainquery.v1.InterchainqueryProto.Query.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>repeated .quicksilver.interchainquery.v1.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.quicksilver.interchainquery.v1.InterchainqueryProto.Query.Builder addQueriesBuilder(
+          int index) {
+        return getQueriesFieldBuilder().addBuilder(
+            index, com.quicksilver.interchainquery.v1.InterchainqueryProto.Query.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * params defines the parameters of the module.
+       * </pre>
+       *
+       * <code>repeated .quicksilver.interchainquery.v1.Query queries = 1 [json_name = "queries", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.quicksilver.interchainquery.v1.InterchainqueryProto.Query.Builder> 
+           getQueriesBuilderList() {
+        return getQueriesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.quicksilver.interchainquery.v1.InterchainqueryProto.Query, com.quicksilver.interchainquery.v1.InterchainqueryProto.Query.Builder, com.quicksilver.interchainquery.v1.InterchainqueryProto.QueryOrBuilder> 
+          getQueriesFieldBuilder() {
+        if (queriesBuilder_ == null) {
+          queriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.quicksilver.interchainquery.v1.InterchainqueryProto.Query, com.quicksilver.interchainquery.v1.InterchainqueryProto.Query.Builder, com.quicksilver.interchainquery.v1.InterchainqueryProto.QueryOrBuilder>(
+                  queries_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          queries_ = null;
+        }
+        return queriesBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quicksilver.interchainquery.v1.QueryRequestsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:quicksilver.interchainquery.v1.QueryRequestsResponse)
+    private static final com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponse();
+    }
+
+    public static com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRequestsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRequestsResponse>() {
+      @java.lang.Override
+      public QueryRequestsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRequestsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRequestsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quicksilver.interchainquery.v1.QueryProto.QueryRequestsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetTxWithProofResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:quicksilver.interchainquery.v1.GetTxWithProofResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * tx is the queried transaction; deprecated.
+     * </pre>
+     *
+     * <code>.cosmos.tx.v1beta1.Tx tx = 1 [json_name = "tx"];</code>
+     * @return Whether the tx field is set.
+     */
+    boolean hasTx();
+    /**
+     * <pre>
+     * tx is the queried transaction; deprecated.
+     * </pre>
+     *
+     * <code>.cosmos.tx.v1beta1.Tx tx = 1 [json_name = "tx"];</code>
+     * @return The tx.
+     */
+    com.cosmos.tx.v1beta1.TxProto.Tx getTx();
+    /**
+     * <pre>
+     * tx is the queried transaction; deprecated.
+     * </pre>
+     *
+     * <code>.cosmos.tx.v1beta1.Tx tx = 1 [json_name = "tx"];</code>
+     */
+    com.cosmos.tx.v1beta1.TxProto.TxOrBuilder getTxOrBuilder();
+
+    /**
+     * <pre>
+     * tx_response is the queried TxResponses.
+     * </pre>
+     *
+     * <code>.cosmos.base.abci.v1beta1.TxResponse tx_response = 2 [json_name = "txResponse"];</code>
+     * @return Whether the txResponse field is set.
+     */
+    boolean hasTxResponse();
+    /**
+     * <pre>
+     * tx_response is the queried TxResponses.
+     * </pre>
+     *
+     * <code>.cosmos.base.abci.v1beta1.TxResponse tx_response = 2 [json_name = "txResponse"];</code>
+     * @return The txResponse.
+     */
+    com.cosmos.base.abci.v1beta1.AbciProto.TxResponse getTxResponse();
+    /**
+     * <pre>
+     * tx_response is the queried TxResponses.
+     * </pre>
+     *
+     * <code>.cosmos.base.abci.v1beta1.TxResponse tx_response = 2 [json_name = "txResponse"];</code>
+     */
+    com.cosmos.base.abci.v1beta1.AbciProto.TxResponseOrBuilder getTxResponseOrBuilder();
+
+    /**
+     * <pre>
+     * proof is the tmproto.TxProof for the queried tx
+     * </pre>
+     *
+     * <code>.tendermint.types.TxProof proof = 3 [json_name = "proof"];</code>
+     * @return Whether the proof field is set.
+     */
+    boolean hasProof();
+    /**
+     * <pre>
+     * proof is the tmproto.TxProof for the queried tx
+     * </pre>
+     *
+     * <code>.tendermint.types.TxProof proof = 3 [json_name = "proof"];</code>
+     * @return The proof.
+     */
+    com.tendermint.types.TypesProto.TxProof getProof();
+    /**
+     * <pre>
+     * proof is the tmproto.TxProof for the queried tx
+     * </pre>
+     *
+     * <code>.tendermint.types.TxProof proof = 3 [json_name = "proof"];</code>
+     */
+    com.tendermint.types.TypesProto.TxProofOrBuilder getProofOrBuilder();
+
+    /**
+     * <pre>
+     * ibc-go header to validate txs
+     * </pre>
+     *
+     * <code>.ibc.lightclients.tendermint.v1.Header header = 4 [json_name = "header"];</code>
+     * @return Whether the header field is set.
+     */
+    boolean hasHeader();
+    /**
+     * <pre>
+     * ibc-go header to validate txs
+     * </pre>
+     *
+     * <code>.ibc.lightclients.tendermint.v1.Header header = 4 [json_name = "header"];</code>
+     * @return The header.
+     */
+    com.ibc.lightclients.tendermint.v1.TendermintProto.Header getHeader();
+    /**
+     * <pre>
+     * ibc-go header to validate txs
+     * </pre>
+     *
+     * <code>.ibc.lightclients.tendermint.v1.Header header = 4 [json_name = "header"];</code>
+     */
+    com.ibc.lightclients.tendermint.v1.TendermintProto.HeaderOrBuilder getHeaderOrBuilder();
+  }
+  /**
+   * <pre>
+   * GetTxResponse is the response type for the Service.GetTx method.
+   * </pre>
+   *
+   * Protobuf type {@code quicksilver.interchainquery.v1.GetTxWithProofResponse}
+   */
+  public static final class GetTxWithProofResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:quicksilver.interchainquery.v1.GetTxWithProofResponse)
+      GetTxWithProofResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetTxWithProofResponse.newBuilder() to construct.
+    private GetTxWithProofResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetTxWithProofResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetTxWithProofResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.quicksilver.interchainquery.v1.QueryProto.internal_static_quicksilver_interchainquery_v1_GetTxWithProofResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.quicksilver.interchainquery.v1.QueryProto.internal_static_quicksilver_interchainquery_v1_GetTxWithProofResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.quicksilver.interchainquery.v1.QueryProto.GetTxWithProofResponse.class, com.quicksilver.interchainquery.v1.QueryProto.GetTxWithProofResponse.Builder.class);
+    }
+
+    public static final int TX_FIELD_NUMBER = 1;
+    private com.cosmos.tx.v1beta1.TxProto.Tx tx_;
+    /**
+     * <pre>
+     * tx is the queried transaction; deprecated.
+     * </pre>
+     *
+     * <code>.cosmos.tx.v1beta1.Tx tx = 1 [json_name = "tx"];</code>
+     * @return Whether the tx field is set.
+     */
+    @java.lang.Override
+    public boolean hasTx() {
+      return tx_ != null;
+    }
+    /**
+     * <pre>
+     * tx is the queried transaction; deprecated.
+     * </pre>
+     *
+     * <code>.cosmos.tx.v1beta1.Tx tx = 1 [json_name = "tx"];</code>
+     * @return The tx.
+     */
+    @java.lang.Override
+    public com.cosmos.tx.v1beta1.TxProto.Tx getTx() {
+      return tx_ == null ? com.cosmos.tx.v1beta1.TxProto.Tx.getDefaultInstance() : tx_;
+    }
+    /**
+     * <pre>
+     * tx is the queried transaction; deprecated.
+     * </pre>
+     *
+     * <code>.cosmos.tx.v1beta1.Tx tx = 1 [json_name = "tx"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.tx.v1beta1.TxProto.TxOrBuilder getTxOrBuilder() {
+      return tx_ == null ? com.cosmos.tx.v1beta1.TxProto.Tx.getDefaultInstance() : tx_;
+    }
+
+    public static final int TX_RESPONSE_FIELD_NUMBER = 2;
+    private com.cosmos.base.abci.v1beta1.AbciProto.TxResponse txResponse_;
+    /**
+     * <pre>
+     * tx_response is the queried TxResponses.
+     * </pre>
+     *
+     * <code>.cosmos.base.abci.v1beta1.TxResponse tx_response = 2 [json_name = "txResponse"];</code>
+     * @return Whether the txResponse field is set.
+     */
+    @java.lang.Override
+    public boolean hasTxResponse() {
+      return txResponse_ != null;
+    }
+    /**
+     * <pre>
+     * tx_response is the queried TxResponses.
+     * </pre>
+     *
+     * <code>.cosmos.base.abci.v1beta1.TxResponse tx_response = 2 [json_name = "txResponse"];</code>
+     * @return The txResponse.
+     */
+    @java.lang.Override
+    public com.cosmos.base.abci.v1beta1.AbciProto.TxResponse getTxResponse() {
+      return txResponse_ == null ? com.cosmos.base.abci.v1beta1.AbciProto.TxResponse.getDefaultInstance() : txResponse_;
+    }
+    /**
+     * <pre>
+     * tx_response is the queried TxResponses.
+     * </pre>
+     *
+     * <code>.cosmos.base.abci.v1beta1.TxResponse tx_response = 2 [json_name = "txResponse"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.abci.v1beta1.AbciProto.TxResponseOrBuilder getTxResponseOrBuilder() {
+      return txResponse_ == null ? com.cosmos.base.abci.v1beta1.AbciProto.TxResponse.getDefaultInstance() : txResponse_;
+    }
+
+    public static final int PROOF_FIELD_NUMBER = 3;
+    private com.tendermint.types.TypesProto.TxProof proof_;
+    /**
+     * <pre>
+     * proof is the tmproto.TxProof for the queried tx
+     * </pre>
+     *
+     * <code>.tendermint.types.TxProof proof = 3 [json_name = "proof"];</code>
+     * @return Whether the proof field is set.
+     */
+    @java.lang.Override
+    public boolean hasProof() {
+      return proof_ != null;
+    }
+    /**
+     * <pre>
+     * proof is the tmproto.TxProof for the queried tx
+     * </pre>
+     *
+     * <code>.tendermint.types.TxProof proof = 3 [json_name = "proof"];</code>
+     * @return The proof.
+     */
+    @java.lang.Override
+    public com.tendermint.types.TypesProto.TxProof getProof() {
+      return proof_ == null ? com.tendermint.types.TypesProto.TxProof.getDefaultInstance() : proof_;
+    }
+    /**
+     * <pre>
+     * proof is the tmproto.TxProof for the queried tx
+     * </pre>
+     *
+     * <code>.tendermint.types.TxProof proof = 3 [json_name = "proof"];</code>
+     */
+    @java.lang.Override
+    public com.tendermint.types.TypesProto.TxProofOrBuilder getProofOrBuilder() {
+      return proof_ == null ? com.tendermint.types.TypesProto.TxProof.getDefaultInstance() : proof_;
+    }
+
+    public static final int HEADER_FIELD_NUMBER = 4;
+    private com.ibc.lightclients.tendermint.v1.TendermintProto.Header header_;
+    /**
+     * <pre>
+     * ibc-go header to validate txs
+     * </pre>
+     *
+     * <code>.ibc.lightclients.tendermint.v1.Header header = 4 [json_name = "header"];</code>
+     * @return Whether the header field is set.
+     */
+    @java.lang.Override
+    public boolean hasHeader() {
+      return header_ != null;
+    }
+    /**
+     * <pre>
+     * ibc-go header to validate txs
+     * </pre>
+     *
+     * <code>.ibc.lightclients.tendermint.v1.Header header = 4 [json_name = "header"];</code>
+     * @return The header.
+     */
+    @java.lang.Override
+    public com.ibc.lightclients.tendermint.v1.TendermintProto.Header getHeader() {
+      return header_ == null ? com.ibc.lightclients.tendermint.v1.TendermintProto.Header.getDefaultInstance() : header_;
+    }
+    /**
+     * <pre>
+     * ibc-go header to validate txs
+     * </pre>
+     *
+     * <code>.ibc.lightclients.tendermint.v1.Header header = 4 [json_name = "header"];</code>
+     */
+    @java.lang.Override
+    public com.ibc.lightclients.tendermint.v1.TendermintProto.HeaderOrBuilder getHeaderOrBuilder() {
+      return header_ == null ? com.ibc.lightclients.tendermint.v1.TendermintProto.Header.getDefaultInstance() : header_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (tx_ != null) {
+        output.writeMessage(1, getTx());
+      }
+      if (txResponse_ != null) {
+        output.writeMessage(2, getTxResponse());
+      }
+      if (proof_ != null) {
+        output.writeMessage(3, getProof());
+      }
+      if (header_ != null) {
+        output.writeMessage(4, getHeader());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (tx_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getTx());
+      }
+      if (txResponse_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getTxResponse());
+      }
+      if (proof_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getProof());
+      }
+      if (header_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getHeader());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.quicksilver.interchainquery.v1.QueryProto.GetTxWithProofResponse)) {
+        return super.equals(obj);
+      }
+      com.quicksilver.interchainquery.v1.QueryProto.GetTxWithProofResponse other = (com.quicksilver.interchainquery.v1.QueryProto.GetTxWithProofResponse) obj;
+
+      if (hasTx() != other.hasTx()) return false;
+      if (hasTx()) {
+        if (!getTx()
+            .equals(other.getTx())) return false;
+      }
+      if (hasTxResponse() != other.hasTxResponse()) return false;
+      if (hasTxResponse()) {
+        if (!getTxResponse()
+            .equals(other.getTxResponse())) return false;
+      }
+      if (hasProof() != other.hasProof()) return false;
+      if (hasProof()) {
+        if (!getProof()
+            .equals(other.getProof())) return false;
+      }
+      if (hasHeader() != other.hasHeader()) return false;
+      if (hasHeader()) {
+        if (!getHeader()
+            .equals(other.getHeader())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTx()) {
+        hash = (37 * hash) + TX_FIELD_NUMBER;
+        hash = (53 * hash) + getTx().hashCode();
+      }
+      if (hasTxResponse()) {
+        hash = (37 * hash) + TX_RESPONSE_FIELD_NUMBER;
+        hash = (53 * hash) + getTxResponse().hashCode();
+      }
+      if (hasProof()) {
+        hash = (37 * hash) + PROOF_FIELD_NUMBER;
+        hash = (53 * hash) + getProof().hashCode();
+      }
+      if (hasHeader()) {
+        hash = (37 * hash) + HEADER_FIELD_NUMBER;
+        hash = (53 * hash) + getHeader().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.quicksilver.interchainquery.v1.QueryProto.GetTxWithProofResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainquery.v1.QueryProto.GetTxWithProofResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainquery.v1.QueryProto.GetTxWithProofResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainquery.v1.QueryProto.GetTxWithProofResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainquery.v1.QueryProto.GetTxWithProofResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.quicksilver.interchainquery.v1.QueryProto.GetTxWithProofResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.quicksilver.interchainquery.v1.QueryProto.GetTxWithProofResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.interchainquery.v1.QueryProto.GetTxWithProofResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.quicksilver.interchainquery.v1.QueryProto.GetTxWithProofResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.quicksilver.interchainquery.v1.QueryProto.GetTxWithProofResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.quicksilver.interchainquery.v1.QueryProto.GetTxWithProofResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.quicksilver.interchainquery.v1.QueryProto.GetTxWithProofResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.quicksilver.interchainquery.v1.QueryProto.GetTxWithProofResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GetTxResponse is the response type for the Service.GetTx method.
+     * </pre>
+     *
+     * Protobuf type {@code quicksilver.interchainquery.v1.GetTxWithProofResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:quicksilver.interchainquery.v1.GetTxWithProofResponse)
+        com.quicksilver.interchainquery.v1.QueryProto.GetTxWithProofResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.quicksilver.interchainquery.v1.QueryProto.internal_static_quicksilver_interchainquery_v1_GetTxWithProofResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.quicksilver.interchainquery.v1.QueryProto.internal_static_quicksilver_interchainquery_v1_GetTxWithProofResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.quicksilver.interchainquery.v1.QueryProto.GetTxWithProofResponse.class, com.quicksilver.interchainquery.v1.QueryProto.GetTxWithProofResponse.Builder.class);
+      }
+
+      // Construct using com.quicksilver.interchainquery.v1.QueryProto.GetTxWithProofResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        tx_ = null;
+        if (txBuilder_ != null) {
+          txBuilder_.dispose();
+          txBuilder_ = null;
+        }
+        txResponse_ = null;
+        if (txResponseBuilder_ != null) {
+          txResponseBuilder_.dispose();
+          txResponseBuilder_ = null;
+        }
+        proof_ = null;
+        if (proofBuilder_ != null) {
+          proofBuilder_.dispose();
+          proofBuilder_ = null;
+        }
+        header_ = null;
+        if (headerBuilder_ != null) {
+          headerBuilder_.dispose();
+          headerBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.quicksilver.interchainquery.v1.QueryProto.internal_static_quicksilver_interchainquery_v1_GetTxWithProofResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainquery.v1.QueryProto.GetTxWithProofResponse getDefaultInstanceForType() {
+        return com.quicksilver.interchainquery.v1.QueryProto.GetTxWithProofResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainquery.v1.QueryProto.GetTxWithProofResponse build() {
+        com.quicksilver.interchainquery.v1.QueryProto.GetTxWithProofResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.quicksilver.interchainquery.v1.QueryProto.GetTxWithProofResponse buildPartial() {
+        com.quicksilver.interchainquery.v1.QueryProto.GetTxWithProofResponse result = new com.quicksilver.interchainquery.v1.QueryProto.GetTxWithProofResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.quicksilver.interchainquery.v1.QueryProto.GetTxWithProofResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.tx_ = txBuilder_ == null
+              ? tx_
+              : txBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.txResponse_ = txResponseBuilder_ == null
+              ? txResponse_
+              : txResponseBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.proof_ = proofBuilder_ == null
+              ? proof_
+              : proofBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.header_ = headerBuilder_ == null
+              ? header_
+              : headerBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.quicksilver.interchainquery.v1.QueryProto.GetTxWithProofResponse) {
+          return mergeFrom((com.quicksilver.interchainquery.v1.QueryProto.GetTxWithProofResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.quicksilver.interchainquery.v1.QueryProto.GetTxWithProofResponse other) {
+        if (other == com.quicksilver.interchainquery.v1.QueryProto.GetTxWithProofResponse.getDefaultInstance()) return this;
+        if (other.hasTx()) {
+          mergeTx(other.getTx());
+        }
+        if (other.hasTxResponse()) {
+          mergeTxResponse(other.getTxResponse());
+        }
+        if (other.hasProof()) {
+          mergeProof(other.getProof());
+        }
+        if (other.hasHeader()) {
+          mergeHeader(other.getHeader());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getTxFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getTxResponseFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getProofFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getHeaderFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.tx.v1beta1.TxProto.Tx tx_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.tx.v1beta1.TxProto.Tx, com.cosmos.tx.v1beta1.TxProto.Tx.Builder, com.cosmos.tx.v1beta1.TxProto.TxOrBuilder> txBuilder_;
+      /**
+       * <pre>
+       * tx is the queried transaction; deprecated.
+       * </pre>
+       *
+       * <code>.cosmos.tx.v1beta1.Tx tx = 1 [json_name = "tx"];</code>
+       * @return Whether the tx field is set.
+       */
+      public boolean hasTx() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * tx is the queried transaction; deprecated.
+       * </pre>
+       *
+       * <code>.cosmos.tx.v1beta1.Tx tx = 1 [json_name = "tx"];</code>
+       * @return The tx.
+       */
+      public com.cosmos.tx.v1beta1.TxProto.Tx getTx() {
+        if (txBuilder_ == null) {
+          return tx_ == null ? com.cosmos.tx.v1beta1.TxProto.Tx.getDefaultInstance() : tx_;
+        } else {
+          return txBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * tx is the queried transaction; deprecated.
+       * </pre>
+       *
+       * <code>.cosmos.tx.v1beta1.Tx tx = 1 [json_name = "tx"];</code>
+       */
+      public Builder setTx(com.cosmos.tx.v1beta1.TxProto.Tx value) {
+        if (txBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tx_ = value;
+        } else {
+          txBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * tx is the queried transaction; deprecated.
+       * </pre>
+       *
+       * <code>.cosmos.tx.v1beta1.Tx tx = 1 [json_name = "tx"];</code>
+       */
+      public Builder setTx(
+          com.cosmos.tx.v1beta1.TxProto.Tx.Builder builderForValue) {
+        if (txBuilder_ == null) {
+          tx_ = builderForValue.build();
+        } else {
+          txBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * tx is the queried transaction; deprecated.
+       * </pre>
+       *
+       * <code>.cosmos.tx.v1beta1.Tx tx = 1 [json_name = "tx"];</code>
+       */
+      public Builder mergeTx(com.cosmos.tx.v1beta1.TxProto.Tx value) {
+        if (txBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            tx_ != null &&
+            tx_ != com.cosmos.tx.v1beta1.TxProto.Tx.getDefaultInstance()) {
+            getTxBuilder().mergeFrom(value);
+          } else {
+            tx_ = value;
+          }
+        } else {
+          txBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * tx is the queried transaction; deprecated.
+       * </pre>
+       *
+       * <code>.cosmos.tx.v1beta1.Tx tx = 1 [json_name = "tx"];</code>
+       */
+      public Builder clearTx() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        tx_ = null;
+        if (txBuilder_ != null) {
+          txBuilder_.dispose();
+          txBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * tx is the queried transaction; deprecated.
+       * </pre>
+       *
+       * <code>.cosmos.tx.v1beta1.Tx tx = 1 [json_name = "tx"];</code>
+       */
+      public com.cosmos.tx.v1beta1.TxProto.Tx.Builder getTxBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getTxFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * tx is the queried transaction; deprecated.
+       * </pre>
+       *
+       * <code>.cosmos.tx.v1beta1.Tx tx = 1 [json_name = "tx"];</code>
+       */
+      public com.cosmos.tx.v1beta1.TxProto.TxOrBuilder getTxOrBuilder() {
+        if (txBuilder_ != null) {
+          return txBuilder_.getMessageOrBuilder();
+        } else {
+          return tx_ == null ?
+              com.cosmos.tx.v1beta1.TxProto.Tx.getDefaultInstance() : tx_;
+        }
+      }
+      /**
+       * <pre>
+       * tx is the queried transaction; deprecated.
+       * </pre>
+       *
+       * <code>.cosmos.tx.v1beta1.Tx tx = 1 [json_name = "tx"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.tx.v1beta1.TxProto.Tx, com.cosmos.tx.v1beta1.TxProto.Tx.Builder, com.cosmos.tx.v1beta1.TxProto.TxOrBuilder> 
+          getTxFieldBuilder() {
+        if (txBuilder_ == null) {
+          txBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.tx.v1beta1.TxProto.Tx, com.cosmos.tx.v1beta1.TxProto.Tx.Builder, com.cosmos.tx.v1beta1.TxProto.TxOrBuilder>(
+                  getTx(),
+                  getParentForChildren(),
+                  isClean());
+          tx_ = null;
+        }
+        return txBuilder_;
+      }
+
+      private com.cosmos.base.abci.v1beta1.AbciProto.TxResponse txResponse_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.abci.v1beta1.AbciProto.TxResponse, com.cosmos.base.abci.v1beta1.AbciProto.TxResponse.Builder, com.cosmos.base.abci.v1beta1.AbciProto.TxResponseOrBuilder> txResponseBuilder_;
+      /**
+       * <pre>
+       * tx_response is the queried TxResponses.
+       * </pre>
+       *
+       * <code>.cosmos.base.abci.v1beta1.TxResponse tx_response = 2 [json_name = "txResponse"];</code>
+       * @return Whether the txResponse field is set.
+       */
+      public boolean hasTxResponse() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * tx_response is the queried TxResponses.
+       * </pre>
+       *
+       * <code>.cosmos.base.abci.v1beta1.TxResponse tx_response = 2 [json_name = "txResponse"];</code>
+       * @return The txResponse.
+       */
+      public com.cosmos.base.abci.v1beta1.AbciProto.TxResponse getTxResponse() {
+        if (txResponseBuilder_ == null) {
+          return txResponse_ == null ? com.cosmos.base.abci.v1beta1.AbciProto.TxResponse.getDefaultInstance() : txResponse_;
+        } else {
+          return txResponseBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * tx_response is the queried TxResponses.
+       * </pre>
+       *
+       * <code>.cosmos.base.abci.v1beta1.TxResponse tx_response = 2 [json_name = "txResponse"];</code>
+       */
+      public Builder setTxResponse(com.cosmos.base.abci.v1beta1.AbciProto.TxResponse value) {
+        if (txResponseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          txResponse_ = value;
+        } else {
+          txResponseBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * tx_response is the queried TxResponses.
+       * </pre>
+       *
+       * <code>.cosmos.base.abci.v1beta1.TxResponse tx_response = 2 [json_name = "txResponse"];</code>
+       */
+      public Builder setTxResponse(
+          com.cosmos.base.abci.v1beta1.AbciProto.TxResponse.Builder builderForValue) {
+        if (txResponseBuilder_ == null) {
+          txResponse_ = builderForValue.build();
+        } else {
+          txResponseBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * tx_response is the queried TxResponses.
+       * </pre>
+       *
+       * <code>.cosmos.base.abci.v1beta1.TxResponse tx_response = 2 [json_name = "txResponse"];</code>
+       */
+      public Builder mergeTxResponse(com.cosmos.base.abci.v1beta1.AbciProto.TxResponse value) {
+        if (txResponseBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            txResponse_ != null &&
+            txResponse_ != com.cosmos.base.abci.v1beta1.AbciProto.TxResponse.getDefaultInstance()) {
+            getTxResponseBuilder().mergeFrom(value);
+          } else {
+            txResponse_ = value;
+          }
+        } else {
+          txResponseBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * tx_response is the queried TxResponses.
+       * </pre>
+       *
+       * <code>.cosmos.base.abci.v1beta1.TxResponse tx_response = 2 [json_name = "txResponse"];</code>
+       */
+      public Builder clearTxResponse() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        txResponse_ = null;
+        if (txResponseBuilder_ != null) {
+          txResponseBuilder_.dispose();
+          txResponseBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * tx_response is the queried TxResponses.
+       * </pre>
+       *
+       * <code>.cosmos.base.abci.v1beta1.TxResponse tx_response = 2 [json_name = "txResponse"];</code>
+       */
+      public com.cosmos.base.abci.v1beta1.AbciProto.TxResponse.Builder getTxResponseBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getTxResponseFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * tx_response is the queried TxResponses.
+       * </pre>
+       *
+       * <code>.cosmos.base.abci.v1beta1.TxResponse tx_response = 2 [json_name = "txResponse"];</code>
+       */
+      public com.cosmos.base.abci.v1beta1.AbciProto.TxResponseOrBuilder getTxResponseOrBuilder() {
+        if (txResponseBuilder_ != null) {
+          return txResponseBuilder_.getMessageOrBuilder();
+        } else {
+          return txResponse_ == null ?
+              com.cosmos.base.abci.v1beta1.AbciProto.TxResponse.getDefaultInstance() : txResponse_;
+        }
+      }
+      /**
+       * <pre>
+       * tx_response is the queried TxResponses.
+       * </pre>
+       *
+       * <code>.cosmos.base.abci.v1beta1.TxResponse tx_response = 2 [json_name = "txResponse"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.abci.v1beta1.AbciProto.TxResponse, com.cosmos.base.abci.v1beta1.AbciProto.TxResponse.Builder, com.cosmos.base.abci.v1beta1.AbciProto.TxResponseOrBuilder> 
+          getTxResponseFieldBuilder() {
+        if (txResponseBuilder_ == null) {
+          txResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.abci.v1beta1.AbciProto.TxResponse, com.cosmos.base.abci.v1beta1.AbciProto.TxResponse.Builder, com.cosmos.base.abci.v1beta1.AbciProto.TxResponseOrBuilder>(
+                  getTxResponse(),
+                  getParentForChildren(),
+                  isClean());
+          txResponse_ = null;
+        }
+        return txResponseBuilder_;
+      }
+
+      private com.tendermint.types.TypesProto.TxProof proof_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tendermint.types.TypesProto.TxProof, com.tendermint.types.TypesProto.TxProof.Builder, com.tendermint.types.TypesProto.TxProofOrBuilder> proofBuilder_;
+      /**
+       * <pre>
+       * proof is the tmproto.TxProof for the queried tx
+       * </pre>
+       *
+       * <code>.tendermint.types.TxProof proof = 3 [json_name = "proof"];</code>
+       * @return Whether the proof field is set.
+       */
+      public boolean hasProof() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * proof is the tmproto.TxProof for the queried tx
+       * </pre>
+       *
+       * <code>.tendermint.types.TxProof proof = 3 [json_name = "proof"];</code>
+       * @return The proof.
+       */
+      public com.tendermint.types.TypesProto.TxProof getProof() {
+        if (proofBuilder_ == null) {
+          return proof_ == null ? com.tendermint.types.TypesProto.TxProof.getDefaultInstance() : proof_;
+        } else {
+          return proofBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * proof is the tmproto.TxProof for the queried tx
+       * </pre>
+       *
+       * <code>.tendermint.types.TxProof proof = 3 [json_name = "proof"];</code>
+       */
+      public Builder setProof(com.tendermint.types.TypesProto.TxProof value) {
+        if (proofBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          proof_ = value;
+        } else {
+          proofBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * proof is the tmproto.TxProof for the queried tx
+       * </pre>
+       *
+       * <code>.tendermint.types.TxProof proof = 3 [json_name = "proof"];</code>
+       */
+      public Builder setProof(
+          com.tendermint.types.TypesProto.TxProof.Builder builderForValue) {
+        if (proofBuilder_ == null) {
+          proof_ = builderForValue.build();
+        } else {
+          proofBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * proof is the tmproto.TxProof for the queried tx
+       * </pre>
+       *
+       * <code>.tendermint.types.TxProof proof = 3 [json_name = "proof"];</code>
+       */
+      public Builder mergeProof(com.tendermint.types.TypesProto.TxProof value) {
+        if (proofBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            proof_ != null &&
+            proof_ != com.tendermint.types.TypesProto.TxProof.getDefaultInstance()) {
+            getProofBuilder().mergeFrom(value);
+          } else {
+            proof_ = value;
+          }
+        } else {
+          proofBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * proof is the tmproto.TxProof for the queried tx
+       * </pre>
+       *
+       * <code>.tendermint.types.TxProof proof = 3 [json_name = "proof"];</code>
+       */
+      public Builder clearProof() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        proof_ = null;
+        if (proofBuilder_ != null) {
+          proofBuilder_.dispose();
+          proofBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * proof is the tmproto.TxProof for the queried tx
+       * </pre>
+       *
+       * <code>.tendermint.types.TxProof proof = 3 [json_name = "proof"];</code>
+       */
+      public com.tendermint.types.TypesProto.TxProof.Builder getProofBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getProofFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * proof is the tmproto.TxProof for the queried tx
+       * </pre>
+       *
+       * <code>.tendermint.types.TxProof proof = 3 [json_name = "proof"];</code>
+       */
+      public com.tendermint.types.TypesProto.TxProofOrBuilder getProofOrBuilder() {
+        if (proofBuilder_ != null) {
+          return proofBuilder_.getMessageOrBuilder();
+        } else {
+          return proof_ == null ?
+              com.tendermint.types.TypesProto.TxProof.getDefaultInstance() : proof_;
+        }
+      }
+      /**
+       * <pre>
+       * proof is the tmproto.TxProof for the queried tx
+       * </pre>
+       *
+       * <code>.tendermint.types.TxProof proof = 3 [json_name = "proof"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.tendermint.types.TypesProto.TxProof, com.tendermint.types.TypesProto.TxProof.Builder, com.tendermint.types.TypesProto.TxProofOrBuilder> 
+          getProofFieldBuilder() {
+        if (proofBuilder_ == null) {
+          proofBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.tendermint.types.TypesProto.TxProof, com.tendermint.types.TypesProto.TxProof.Builder, com.tendermint.types.TypesProto.TxProofOrBuilder>(
+                  getProof(),
+                  getParentForChildren(),
+                  isClean());
+          proof_ = null;
+        }
+        return proofBuilder_;
+      }
+
+      private com.ibc.lightclients.tendermint.v1.TendermintProto.Header header_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.ibc.lightclients.tendermint.v1.TendermintProto.Header, com.ibc.lightclients.tendermint.v1.TendermintProto.Header.Builder, com.ibc.lightclients.tendermint.v1.TendermintProto.HeaderOrBuilder> headerBuilder_;
+      /**
+       * <pre>
+       * ibc-go header to validate txs
+       * </pre>
+       *
+       * <code>.ibc.lightclients.tendermint.v1.Header header = 4 [json_name = "header"];</code>
+       * @return Whether the header field is set.
+       */
+      public boolean hasHeader() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * ibc-go header to validate txs
+       * </pre>
+       *
+       * <code>.ibc.lightclients.tendermint.v1.Header header = 4 [json_name = "header"];</code>
+       * @return The header.
+       */
+      public com.ibc.lightclients.tendermint.v1.TendermintProto.Header getHeader() {
+        if (headerBuilder_ == null) {
+          return header_ == null ? com.ibc.lightclients.tendermint.v1.TendermintProto.Header.getDefaultInstance() : header_;
+        } else {
+          return headerBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * ibc-go header to validate txs
+       * </pre>
+       *
+       * <code>.ibc.lightclients.tendermint.v1.Header header = 4 [json_name = "header"];</code>
+       */
+      public Builder setHeader(com.ibc.lightclients.tendermint.v1.TendermintProto.Header value) {
+        if (headerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          header_ = value;
+        } else {
+          headerBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ibc-go header to validate txs
+       * </pre>
+       *
+       * <code>.ibc.lightclients.tendermint.v1.Header header = 4 [json_name = "header"];</code>
+       */
+      public Builder setHeader(
+          com.ibc.lightclients.tendermint.v1.TendermintProto.Header.Builder builderForValue) {
+        if (headerBuilder_ == null) {
+          header_ = builderForValue.build();
+        } else {
+          headerBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ibc-go header to validate txs
+       * </pre>
+       *
+       * <code>.ibc.lightclients.tendermint.v1.Header header = 4 [json_name = "header"];</code>
+       */
+      public Builder mergeHeader(com.ibc.lightclients.tendermint.v1.TendermintProto.Header value) {
+        if (headerBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            header_ != null &&
+            header_ != com.ibc.lightclients.tendermint.v1.TendermintProto.Header.getDefaultInstance()) {
+            getHeaderBuilder().mergeFrom(value);
+          } else {
+            header_ = value;
+          }
+        } else {
+          headerBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ibc-go header to validate txs
+       * </pre>
+       *
+       * <code>.ibc.lightclients.tendermint.v1.Header header = 4 [json_name = "header"];</code>
+       */
+      public Builder clearHeader() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        header_ = null;
+        if (headerBuilder_ != null) {
+          headerBuilder_.dispose();
+          headerBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ibc-go header to validate txs
+       * </pre>
+       *
+       * <code>.ibc.lightclients.tendermint.v1.Header header = 4 [json_name = "header"];</code>
+       */
+      public com.ibc.lightclients.tendermint.v1.TendermintProto.Header.Builder getHeaderBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getHeaderFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * ibc-go header to validate txs
+       * </pre>
+       *
+       * <code>.ibc.lightclients.tendermint.v1.Header header = 4 [json_name = "header"];</code>
+       */
+      public com.ibc.lightclients.tendermint.v1.TendermintProto.HeaderOrBuilder getHeaderOrBuilder() {
+        if (headerBuilder_ != null) {
+          return headerBuilder_.getMessageOrBuilder();
+        } else {
+          return header_ == null ?
+              com.ibc.lightclients.tendermint.v1.TendermintProto.Header.getDefaultInstance() : header_;
+        }
+      }
+      /**
+       * <pre>
+       * ibc-go header to validate txs
+       * </pre>
+       *
+       * <code>.ibc.lightclients.tendermint.v1.Header header = 4 [json_name = "header"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.ibc.lightclients.tendermint.v1.TendermintProto.Header, com.ibc.lightclients.tendermint.v1.TendermintProto.Header.Builder, com.ibc.lightclients.tendermint.v1.TendermintProto.HeaderOrBuilder> 
+          getHeaderFieldBuilder() {
+        if (headerBuilder_ == null) {
+          headerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.ibc.lightclients.tendermint.v1.TendermintProto.Header, com.ibc.lightclients.tendermint.v1.TendermintProto.Header.Builder, com.ibc.lightclients.tendermint.v1.TendermintProto.HeaderOrBuilder>(
+                  getHeader(),
+                  getParentForChildren(),
+                  isClean());
+          header_ = null;
+        }
+        return headerBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:quicksilver.interchainquery.v1.GetTxWithProofResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:quicksilver.interchainquery.v1.GetTxWithProofResponse)
+    private static final com.quicksilver.interchainquery.v1.QueryProto.GetTxWithProofResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.quicksilver.interchainquery.v1.QueryProto.GetTxWithProofResponse();
+    }
+
+    public static com.quicksilver.interchainquery.v1.QueryProto.GetTxWithProofResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetTxWithProofResponse>
+        PARSER = new com.google.protobuf.AbstractParser<GetTxWithProofResponse>() {
+      @java.lang.Override
+      public GetTxWithProofResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetTxWithProofResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetTxWithProofResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.quicksilver.interchainquery.v1.QueryProto.GetTxWithProofResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_interchainquery_v1_QueryRequestsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_interchainquery_v1_QueryRequestsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_interchainquery_v1_QueryRequestsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_interchainquery_v1_QueryRequestsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_quicksilver_interchainquery_v1_GetTxWithProofResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_quicksilver_interchainquery_v1_GetTxWithProofResponse_fieldAccessorTable;
 
@@ -65,14 +3355,14 @@ public final class QueryProto {
       "hainquery.v1.QueryRequestsRequest\0325.quic" +
       "ksilver.interchainquery.v1.QueryRequests" +
       "Response\":\202\323\344\223\0024\0222/quicksilver/interchai" +
-      "nquery/v1/queries/{chain_id}B\212\002\n\"com.qui" +
-      "cksilver.interchainquery.v1B\nQueryProtoP" +
-      "\001Z>github.com/ingenuity-build/quicksilve" +
-      "r/x/interchainquery/types\242\002\003QIX\252\002\036Quicks" +
-      "ilver.Interchainquery.V1\312\002\036Quicksilver\\I" +
-      "nterchainquery\\V1\342\002*Quicksilver\\Intercha" +
-      "inquery\\V1\\GPBMetadata\352\002 Quicksilver::In" +
-      "terchainquery::V1b\006proto3"
+      "nquery/v1/queries/{chain_id}B\210\002\n\"com.qui" +
+      "cksilver.interchainquery.v1B\nQueryProtoZ" +
+      ">github.com/ingenuity-build/quicksilver/" +
+      "x/interchainquery/types\242\002\003QIX\252\002\036Quicksil" +
+      "ver.Interchainquery.V1\312\002\036Quicksilver\\Int" +
+      "erchainquery\\V1\342\002*Quicksilver\\Interchain" +
+      "query\\V1\\GPBMetadata\352\002 Quicksilver::Inte" +
+      "rchainquery::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

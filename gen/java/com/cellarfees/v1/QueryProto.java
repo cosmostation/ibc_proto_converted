@@ -14,54 +14,4895 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryParamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cellarfees.v1.QueryParamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code cellarfees.v1.QueryParamsRequest}
+   */
+  public static final class QueryParamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cellarfees.v1.QueryParamsRequest)
+      QueryParamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsRequest.newBuilder() to construct.
+    private QueryParamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryParamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryParamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cellarfees.v1.QueryProto.QueryParamsRequest.class, com.cellarfees.v1.QueryProto.QueryParamsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cellarfees.v1.QueryProto.QueryParamsRequest)) {
+        return super.equals(obj);
+      }
+      com.cellarfees.v1.QueryProto.QueryParamsRequest other = (com.cellarfees.v1.QueryProto.QueryParamsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryParamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryParamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryParamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryParamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryParamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryParamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cellarfees.v1.QueryProto.QueryParamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cellarfees.v1.QueryParamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cellarfees.v1.QueryParamsRequest)
+        com.cellarfees.v1.QueryProto.QueryParamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryParamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cellarfees.v1.QueryProto.QueryParamsRequest.class, com.cellarfees.v1.QueryProto.QueryParamsRequest.Builder.class);
+      }
+
+      // Construct using com.cellarfees.v1.QueryProto.QueryParamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+        return com.cellarfees.v1.QueryProto.QueryParamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.QueryProto.QueryParamsRequest build() {
+        com.cellarfees.v1.QueryProto.QueryParamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.QueryProto.QueryParamsRequest buildPartial() {
+        com.cellarfees.v1.QueryProto.QueryParamsRequest result = new com.cellarfees.v1.QueryProto.QueryParamsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cellarfees.v1.QueryProto.QueryParamsRequest) {
+          return mergeFrom((com.cellarfees.v1.QueryProto.QueryParamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cellarfees.v1.QueryProto.QueryParamsRequest other) {
+        if (other == com.cellarfees.v1.QueryProto.QueryParamsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cellarfees.v1.QueryParamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:cellarfees.v1.QueryParamsRequest)
+    private static final com.cellarfees.v1.QueryProto.QueryParamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cellarfees.v1.QueryProto.QueryParamsRequest();
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryParamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsRequest>() {
+      @java.lang.Override
+      public QueryParamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cellarfees.v1.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cellarfees.v1.QueryParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cellarfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.cellarfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.cellarfees.v1.ParamsProto.Params getParams();
+    /**
+     * <code>.cellarfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.cellarfees.v1.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code cellarfees.v1.QueryParamsResponse}
+   */
+  public static final class QueryParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cellarfees.v1.QueryParamsResponse)
+      QueryParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsResponse.newBuilder() to construct.
+    private QueryParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cellarfees.v1.QueryProto.QueryParamsResponse.class, com.cellarfees.v1.QueryProto.QueryParamsResponse.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.cellarfees.v1.ParamsProto.Params params_;
+    /**
+     * <code>.cellarfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.cellarfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.cellarfees.v1.ParamsProto.Params getParams() {
+      return params_ == null ? com.cellarfees.v1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.cellarfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cellarfees.v1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.cellarfees.v1.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cellarfees.v1.QueryProto.QueryParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.cellarfees.v1.QueryProto.QueryParamsResponse other = (com.cellarfees.v1.QueryProto.QueryParamsResponse) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cellarfees.v1.QueryProto.QueryParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cellarfees.v1.QueryParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cellarfees.v1.QueryParamsResponse)
+        com.cellarfees.v1.QueryProto.QueryParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cellarfees.v1.QueryProto.QueryParamsResponse.class, com.cellarfees.v1.QueryProto.QueryParamsResponse.Builder.class);
+      }
+
+      // Construct using com.cellarfees.v1.QueryProto.QueryParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+        return com.cellarfees.v1.QueryProto.QueryParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.QueryProto.QueryParamsResponse build() {
+        com.cellarfees.v1.QueryProto.QueryParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.QueryProto.QueryParamsResponse buildPartial() {
+        com.cellarfees.v1.QueryProto.QueryParamsResponse result = new com.cellarfees.v1.QueryProto.QueryParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cellarfees.v1.QueryProto.QueryParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cellarfees.v1.QueryProto.QueryParamsResponse) {
+          return mergeFrom((com.cellarfees.v1.QueryProto.QueryParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cellarfees.v1.QueryProto.QueryParamsResponse other) {
+        if (other == com.cellarfees.v1.QueryProto.QueryParamsResponse.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cellarfees.v1.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cellarfees.v1.ParamsProto.Params, com.cellarfees.v1.ParamsProto.Params.Builder, com.cellarfees.v1.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.cellarfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cellarfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.cellarfees.v1.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.cellarfees.v1.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cellarfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.cellarfees.v1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cellarfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.cellarfees.v1.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cellarfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.cellarfees.v1.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.cellarfees.v1.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cellarfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cellarfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cellarfees.v1.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cellarfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cellarfees.v1.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.cellarfees.v1.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.cellarfees.v1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cellarfees.v1.ParamsProto.Params, com.cellarfees.v1.ParamsProto.Params.Builder, com.cellarfees.v1.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cellarfees.v1.ParamsProto.Params, com.cellarfees.v1.ParamsProto.Params.Builder, com.cellarfees.v1.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cellarfees.v1.QueryParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:cellarfees.v1.QueryParamsResponse)
+    private static final com.cellarfees.v1.QueryProto.QueryParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cellarfees.v1.QueryProto.QueryParamsResponse();
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsResponse>() {
+      @java.lang.Override
+      public QueryParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cellarfees.v1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryModuleAccountsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cellarfees.v1.QueryModuleAccountsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code cellarfees.v1.QueryModuleAccountsRequest}
+   */
+  public static final class QueryModuleAccountsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cellarfees.v1.QueryModuleAccountsRequest)
+      QueryModuleAccountsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryModuleAccountsRequest.newBuilder() to construct.
+    private QueryModuleAccountsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryModuleAccountsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryModuleAccountsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryModuleAccountsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryModuleAccountsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cellarfees.v1.QueryProto.QueryModuleAccountsRequest.class, com.cellarfees.v1.QueryProto.QueryModuleAccountsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cellarfees.v1.QueryProto.QueryModuleAccountsRequest)) {
+        return super.equals(obj);
+      }
+      com.cellarfees.v1.QueryProto.QueryModuleAccountsRequest other = (com.cellarfees.v1.QueryProto.QueryModuleAccountsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryModuleAccountsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryModuleAccountsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryModuleAccountsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryModuleAccountsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryModuleAccountsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryModuleAccountsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryModuleAccountsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryModuleAccountsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryModuleAccountsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryModuleAccountsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryModuleAccountsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryModuleAccountsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cellarfees.v1.QueryProto.QueryModuleAccountsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cellarfees.v1.QueryModuleAccountsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cellarfees.v1.QueryModuleAccountsRequest)
+        com.cellarfees.v1.QueryProto.QueryModuleAccountsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryModuleAccountsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryModuleAccountsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cellarfees.v1.QueryProto.QueryModuleAccountsRequest.class, com.cellarfees.v1.QueryProto.QueryModuleAccountsRequest.Builder.class);
+      }
+
+      // Construct using com.cellarfees.v1.QueryProto.QueryModuleAccountsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryModuleAccountsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.QueryProto.QueryModuleAccountsRequest getDefaultInstanceForType() {
+        return com.cellarfees.v1.QueryProto.QueryModuleAccountsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.QueryProto.QueryModuleAccountsRequest build() {
+        com.cellarfees.v1.QueryProto.QueryModuleAccountsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.QueryProto.QueryModuleAccountsRequest buildPartial() {
+        com.cellarfees.v1.QueryProto.QueryModuleAccountsRequest result = new com.cellarfees.v1.QueryProto.QueryModuleAccountsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cellarfees.v1.QueryProto.QueryModuleAccountsRequest) {
+          return mergeFrom((com.cellarfees.v1.QueryProto.QueryModuleAccountsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cellarfees.v1.QueryProto.QueryModuleAccountsRequest other) {
+        if (other == com.cellarfees.v1.QueryProto.QueryModuleAccountsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cellarfees.v1.QueryModuleAccountsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:cellarfees.v1.QueryModuleAccountsRequest)
+    private static final com.cellarfees.v1.QueryProto.QueryModuleAccountsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cellarfees.v1.QueryProto.QueryModuleAccountsRequest();
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryModuleAccountsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryModuleAccountsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryModuleAccountsRequest>() {
+      @java.lang.Override
+      public QueryModuleAccountsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryModuleAccountsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryModuleAccountsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cellarfees.v1.QueryProto.QueryModuleAccountsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryModuleAccountsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cellarfees.v1.QueryModuleAccountsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string fees_address = 1 [json_name = "feesAddress"];</code>
+     * @return The feesAddress.
+     */
+    java.lang.String getFeesAddress();
+    /**
+     * <code>string fees_address = 1 [json_name = "feesAddress"];</code>
+     * @return The bytes for feesAddress.
+     */
+    com.google.protobuf.ByteString
+        getFeesAddressBytes();
+  }
+  /**
+   * Protobuf type {@code cellarfees.v1.QueryModuleAccountsResponse}
+   */
+  public static final class QueryModuleAccountsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cellarfees.v1.QueryModuleAccountsResponse)
+      QueryModuleAccountsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryModuleAccountsResponse.newBuilder() to construct.
+    private QueryModuleAccountsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryModuleAccountsResponse() {
+      feesAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryModuleAccountsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryModuleAccountsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryModuleAccountsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cellarfees.v1.QueryProto.QueryModuleAccountsResponse.class, com.cellarfees.v1.QueryProto.QueryModuleAccountsResponse.Builder.class);
+    }
+
+    public static final int FEES_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object feesAddress_ = "";
+    /**
+     * <code>string fees_address = 1 [json_name = "feesAddress"];</code>
+     * @return The feesAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getFeesAddress() {
+      java.lang.Object ref = feesAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        feesAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string fees_address = 1 [json_name = "feesAddress"];</code>
+     * @return The bytes for feesAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFeesAddressBytes() {
+      java.lang.Object ref = feesAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        feesAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feesAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, feesAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feesAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, feesAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cellarfees.v1.QueryProto.QueryModuleAccountsResponse)) {
+        return super.equals(obj);
+      }
+      com.cellarfees.v1.QueryProto.QueryModuleAccountsResponse other = (com.cellarfees.v1.QueryProto.QueryModuleAccountsResponse) obj;
+
+      if (!getFeesAddress()
+          .equals(other.getFeesAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FEES_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getFeesAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryModuleAccountsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryModuleAccountsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryModuleAccountsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryModuleAccountsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryModuleAccountsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryModuleAccountsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryModuleAccountsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryModuleAccountsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryModuleAccountsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryModuleAccountsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryModuleAccountsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryModuleAccountsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cellarfees.v1.QueryProto.QueryModuleAccountsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cellarfees.v1.QueryModuleAccountsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cellarfees.v1.QueryModuleAccountsResponse)
+        com.cellarfees.v1.QueryProto.QueryModuleAccountsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryModuleAccountsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryModuleAccountsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cellarfees.v1.QueryProto.QueryModuleAccountsResponse.class, com.cellarfees.v1.QueryProto.QueryModuleAccountsResponse.Builder.class);
+      }
+
+      // Construct using com.cellarfees.v1.QueryProto.QueryModuleAccountsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        feesAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryModuleAccountsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.QueryProto.QueryModuleAccountsResponse getDefaultInstanceForType() {
+        return com.cellarfees.v1.QueryProto.QueryModuleAccountsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.QueryProto.QueryModuleAccountsResponse build() {
+        com.cellarfees.v1.QueryProto.QueryModuleAccountsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.QueryProto.QueryModuleAccountsResponse buildPartial() {
+        com.cellarfees.v1.QueryProto.QueryModuleAccountsResponse result = new com.cellarfees.v1.QueryProto.QueryModuleAccountsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cellarfees.v1.QueryProto.QueryModuleAccountsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.feesAddress_ = feesAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cellarfees.v1.QueryProto.QueryModuleAccountsResponse) {
+          return mergeFrom((com.cellarfees.v1.QueryProto.QueryModuleAccountsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cellarfees.v1.QueryProto.QueryModuleAccountsResponse other) {
+        if (other == com.cellarfees.v1.QueryProto.QueryModuleAccountsResponse.getDefaultInstance()) return this;
+        if (!other.getFeesAddress().isEmpty()) {
+          feesAddress_ = other.feesAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                feesAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object feesAddress_ = "";
+      /**
+       * <code>string fees_address = 1 [json_name = "feesAddress"];</code>
+       * @return The feesAddress.
+       */
+      public java.lang.String getFeesAddress() {
+        java.lang.Object ref = feesAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          feesAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string fees_address = 1 [json_name = "feesAddress"];</code>
+       * @return The bytes for feesAddress.
+       */
+      public com.google.protobuf.ByteString
+          getFeesAddressBytes() {
+        java.lang.Object ref = feesAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          feesAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string fees_address = 1 [json_name = "feesAddress"];</code>
+       * @param value The feesAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeesAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        feesAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string fees_address = 1 [json_name = "feesAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFeesAddress() {
+        feesAddress_ = getDefaultInstance().getFeesAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string fees_address = 1 [json_name = "feesAddress"];</code>
+       * @param value The bytes for feesAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeesAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        feesAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cellarfees.v1.QueryModuleAccountsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:cellarfees.v1.QueryModuleAccountsResponse)
+    private static final com.cellarfees.v1.QueryProto.QueryModuleAccountsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cellarfees.v1.QueryProto.QueryModuleAccountsResponse();
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryModuleAccountsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryModuleAccountsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryModuleAccountsResponse>() {
+      @java.lang.Override
+      public QueryModuleAccountsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryModuleAccountsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryModuleAccountsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cellarfees.v1.QueryProto.QueryModuleAccountsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryLastRewardSupplyPeakRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cellarfees.v1.QueryLastRewardSupplyPeakRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code cellarfees.v1.QueryLastRewardSupplyPeakRequest}
+   */
+  public static final class QueryLastRewardSupplyPeakRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cellarfees.v1.QueryLastRewardSupplyPeakRequest)
+      QueryLastRewardSupplyPeakRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryLastRewardSupplyPeakRequest.newBuilder() to construct.
+    private QueryLastRewardSupplyPeakRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryLastRewardSupplyPeakRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryLastRewardSupplyPeakRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryLastRewardSupplyPeakRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryLastRewardSupplyPeakRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakRequest.class, com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakRequest)) {
+        return super.equals(obj);
+      }
+      com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakRequest other = (com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cellarfees.v1.QueryLastRewardSupplyPeakRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cellarfees.v1.QueryLastRewardSupplyPeakRequest)
+        com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryLastRewardSupplyPeakRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryLastRewardSupplyPeakRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakRequest.class, com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakRequest.Builder.class);
+      }
+
+      // Construct using com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryLastRewardSupplyPeakRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakRequest getDefaultInstanceForType() {
+        return com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakRequest build() {
+        com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakRequest buildPartial() {
+        com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakRequest result = new com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakRequest) {
+          return mergeFrom((com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakRequest other) {
+        if (other == com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cellarfees.v1.QueryLastRewardSupplyPeakRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:cellarfees.v1.QueryLastRewardSupplyPeakRequest)
+    private static final com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakRequest();
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryLastRewardSupplyPeakRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryLastRewardSupplyPeakRequest>() {
+      @java.lang.Override
+      public QueryLastRewardSupplyPeakRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryLastRewardSupplyPeakRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryLastRewardSupplyPeakRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryLastRewardSupplyPeakResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cellarfees.v1.QueryLastRewardSupplyPeakResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string last_reward_supply_peak = 1 [json_name = "lastRewardSupplyPeak", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The lastRewardSupplyPeak.
+     */
+    java.lang.String getLastRewardSupplyPeak();
+    /**
+     * <code>string last_reward_supply_peak = 1 [json_name = "lastRewardSupplyPeak", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for lastRewardSupplyPeak.
+     */
+    com.google.protobuf.ByteString
+        getLastRewardSupplyPeakBytes();
+  }
+  /**
+   * Protobuf type {@code cellarfees.v1.QueryLastRewardSupplyPeakResponse}
+   */
+  public static final class QueryLastRewardSupplyPeakResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cellarfees.v1.QueryLastRewardSupplyPeakResponse)
+      QueryLastRewardSupplyPeakResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryLastRewardSupplyPeakResponse.newBuilder() to construct.
+    private QueryLastRewardSupplyPeakResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryLastRewardSupplyPeakResponse() {
+      lastRewardSupplyPeak_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryLastRewardSupplyPeakResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryLastRewardSupplyPeakResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryLastRewardSupplyPeakResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakResponse.class, com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakResponse.Builder.class);
+    }
+
+    public static final int LAST_REWARD_SUPPLY_PEAK_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object lastRewardSupplyPeak_ = "";
+    /**
+     * <code>string last_reward_supply_peak = 1 [json_name = "lastRewardSupplyPeak", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The lastRewardSupplyPeak.
+     */
+    @java.lang.Override
+    public java.lang.String getLastRewardSupplyPeak() {
+      java.lang.Object ref = lastRewardSupplyPeak_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        lastRewardSupplyPeak_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string last_reward_supply_peak = 1 [json_name = "lastRewardSupplyPeak", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for lastRewardSupplyPeak.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLastRewardSupplyPeakBytes() {
+      java.lang.Object ref = lastRewardSupplyPeak_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        lastRewardSupplyPeak_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastRewardSupplyPeak_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, lastRewardSupplyPeak_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastRewardSupplyPeak_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, lastRewardSupplyPeak_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakResponse)) {
+        return super.equals(obj);
+      }
+      com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakResponse other = (com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakResponse) obj;
+
+      if (!getLastRewardSupplyPeak()
+          .equals(other.getLastRewardSupplyPeak())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + LAST_REWARD_SUPPLY_PEAK_FIELD_NUMBER;
+      hash = (53 * hash) + getLastRewardSupplyPeak().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cellarfees.v1.QueryLastRewardSupplyPeakResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cellarfees.v1.QueryLastRewardSupplyPeakResponse)
+        com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryLastRewardSupplyPeakResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryLastRewardSupplyPeakResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakResponse.class, com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakResponse.Builder.class);
+      }
+
+      // Construct using com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        lastRewardSupplyPeak_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryLastRewardSupplyPeakResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakResponse getDefaultInstanceForType() {
+        return com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakResponse build() {
+        com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakResponse buildPartial() {
+        com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakResponse result = new com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.lastRewardSupplyPeak_ = lastRewardSupplyPeak_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakResponse) {
+          return mergeFrom((com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakResponse other) {
+        if (other == com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakResponse.getDefaultInstance()) return this;
+        if (!other.getLastRewardSupplyPeak().isEmpty()) {
+          lastRewardSupplyPeak_ = other.lastRewardSupplyPeak_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                lastRewardSupplyPeak_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object lastRewardSupplyPeak_ = "";
+      /**
+       * <code>string last_reward_supply_peak = 1 [json_name = "lastRewardSupplyPeak", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The lastRewardSupplyPeak.
+       */
+      public java.lang.String getLastRewardSupplyPeak() {
+        java.lang.Object ref = lastRewardSupplyPeak_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          lastRewardSupplyPeak_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string last_reward_supply_peak = 1 [json_name = "lastRewardSupplyPeak", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for lastRewardSupplyPeak.
+       */
+      public com.google.protobuf.ByteString
+          getLastRewardSupplyPeakBytes() {
+        java.lang.Object ref = lastRewardSupplyPeak_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          lastRewardSupplyPeak_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string last_reward_supply_peak = 1 [json_name = "lastRewardSupplyPeak", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The lastRewardSupplyPeak to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastRewardSupplyPeak(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        lastRewardSupplyPeak_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string last_reward_supply_peak = 1 [json_name = "lastRewardSupplyPeak", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLastRewardSupplyPeak() {
+        lastRewardSupplyPeak_ = getDefaultInstance().getLastRewardSupplyPeak();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string last_reward_supply_peak = 1 [json_name = "lastRewardSupplyPeak", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for lastRewardSupplyPeak to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLastRewardSupplyPeakBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        lastRewardSupplyPeak_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cellarfees.v1.QueryLastRewardSupplyPeakResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:cellarfees.v1.QueryLastRewardSupplyPeakResponse)
+    private static final com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakResponse();
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryLastRewardSupplyPeakResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryLastRewardSupplyPeakResponse>() {
+      @java.lang.Override
+      public QueryLastRewardSupplyPeakResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryLastRewardSupplyPeakResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryLastRewardSupplyPeakResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cellarfees.v1.QueryProto.QueryLastRewardSupplyPeakResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryFeeAccrualCountersRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cellarfees.v1.QueryFeeAccrualCountersRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code cellarfees.v1.QueryFeeAccrualCountersRequest}
+   */
+  public static final class QueryFeeAccrualCountersRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cellarfees.v1.QueryFeeAccrualCountersRequest)
+      QueryFeeAccrualCountersRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryFeeAccrualCountersRequest.newBuilder() to construct.
+    private QueryFeeAccrualCountersRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryFeeAccrualCountersRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryFeeAccrualCountersRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryFeeAccrualCountersRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryFeeAccrualCountersRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersRequest.class, com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersRequest)) {
+        return super.equals(obj);
+      }
+      com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersRequest other = (com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cellarfees.v1.QueryFeeAccrualCountersRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cellarfees.v1.QueryFeeAccrualCountersRequest)
+        com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryFeeAccrualCountersRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryFeeAccrualCountersRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersRequest.class, com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersRequest.Builder.class);
+      }
+
+      // Construct using com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryFeeAccrualCountersRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersRequest getDefaultInstanceForType() {
+        return com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersRequest build() {
+        com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersRequest buildPartial() {
+        com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersRequest result = new com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersRequest) {
+          return mergeFrom((com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersRequest other) {
+        if (other == com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cellarfees.v1.QueryFeeAccrualCountersRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:cellarfees.v1.QueryFeeAccrualCountersRequest)
+    private static final com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersRequest();
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryFeeAccrualCountersRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryFeeAccrualCountersRequest>() {
+      @java.lang.Override
+      public QueryFeeAccrualCountersRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryFeeAccrualCountersRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryFeeAccrualCountersRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryFeeAccrualCountersResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cellarfees.v1.QueryFeeAccrualCountersResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cellarfees.v1.FeeAccrualCounters fee_accrual_counters = 1 [json_name = "feeAccrualCounters", (.gogoproto.nullable) = false];</code>
+     * @return Whether the feeAccrualCounters field is set.
+     */
+    boolean hasFeeAccrualCounters();
+    /**
+     * <code>.cellarfees.v1.FeeAccrualCounters fee_accrual_counters = 1 [json_name = "feeAccrualCounters", (.gogoproto.nullable) = false];</code>
+     * @return The feeAccrualCounters.
+     */
+    com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters getFeeAccrualCounters();
+    /**
+     * <code>.cellarfees.v1.FeeAccrualCounters fee_accrual_counters = 1 [json_name = "feeAccrualCounters", (.gogoproto.nullable) = false];</code>
+     */
+    com.cellarfees.v1.CellarfeesProto.FeeAccrualCountersOrBuilder getFeeAccrualCountersOrBuilder();
+  }
+  /**
+   * Protobuf type {@code cellarfees.v1.QueryFeeAccrualCountersResponse}
+   */
+  public static final class QueryFeeAccrualCountersResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cellarfees.v1.QueryFeeAccrualCountersResponse)
+      QueryFeeAccrualCountersResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryFeeAccrualCountersResponse.newBuilder() to construct.
+    private QueryFeeAccrualCountersResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryFeeAccrualCountersResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryFeeAccrualCountersResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryFeeAccrualCountersResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryFeeAccrualCountersResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersResponse.class, com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersResponse.Builder.class);
+    }
+
+    public static final int FEE_ACCRUAL_COUNTERS_FIELD_NUMBER = 1;
+    private com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters feeAccrualCounters_;
+    /**
+     * <code>.cellarfees.v1.FeeAccrualCounters fee_accrual_counters = 1 [json_name = "feeAccrualCounters", (.gogoproto.nullable) = false];</code>
+     * @return Whether the feeAccrualCounters field is set.
+     */
+    @java.lang.Override
+    public boolean hasFeeAccrualCounters() {
+      return feeAccrualCounters_ != null;
+    }
+    /**
+     * <code>.cellarfees.v1.FeeAccrualCounters fee_accrual_counters = 1 [json_name = "feeAccrualCounters", (.gogoproto.nullable) = false];</code>
+     * @return The feeAccrualCounters.
+     */
+    @java.lang.Override
+    public com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters getFeeAccrualCounters() {
+      return feeAccrualCounters_ == null ? com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters.getDefaultInstance() : feeAccrualCounters_;
+    }
+    /**
+     * <code>.cellarfees.v1.FeeAccrualCounters fee_accrual_counters = 1 [json_name = "feeAccrualCounters", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cellarfees.v1.CellarfeesProto.FeeAccrualCountersOrBuilder getFeeAccrualCountersOrBuilder() {
+      return feeAccrualCounters_ == null ? com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters.getDefaultInstance() : feeAccrualCounters_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (feeAccrualCounters_ != null) {
+        output.writeMessage(1, getFeeAccrualCounters());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (feeAccrualCounters_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getFeeAccrualCounters());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersResponse)) {
+        return super.equals(obj);
+      }
+      com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersResponse other = (com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersResponse) obj;
+
+      if (hasFeeAccrualCounters() != other.hasFeeAccrualCounters()) return false;
+      if (hasFeeAccrualCounters()) {
+        if (!getFeeAccrualCounters()
+            .equals(other.getFeeAccrualCounters())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasFeeAccrualCounters()) {
+        hash = (37 * hash) + FEE_ACCRUAL_COUNTERS_FIELD_NUMBER;
+        hash = (53 * hash) + getFeeAccrualCounters().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cellarfees.v1.QueryFeeAccrualCountersResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cellarfees.v1.QueryFeeAccrualCountersResponse)
+        com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryFeeAccrualCountersResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryFeeAccrualCountersResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersResponse.class, com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersResponse.Builder.class);
+      }
+
+      // Construct using com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        feeAccrualCounters_ = null;
+        if (feeAccrualCountersBuilder_ != null) {
+          feeAccrualCountersBuilder_.dispose();
+          feeAccrualCountersBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryFeeAccrualCountersResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersResponse getDefaultInstanceForType() {
+        return com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersResponse build() {
+        com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersResponse buildPartial() {
+        com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersResponse result = new com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.feeAccrualCounters_ = feeAccrualCountersBuilder_ == null
+              ? feeAccrualCounters_
+              : feeAccrualCountersBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersResponse) {
+          return mergeFrom((com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersResponse other) {
+        if (other == com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersResponse.getDefaultInstance()) return this;
+        if (other.hasFeeAccrualCounters()) {
+          mergeFeeAccrualCounters(other.getFeeAccrualCounters());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getFeeAccrualCountersFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters feeAccrualCounters_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters, com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters.Builder, com.cellarfees.v1.CellarfeesProto.FeeAccrualCountersOrBuilder> feeAccrualCountersBuilder_;
+      /**
+       * <code>.cellarfees.v1.FeeAccrualCounters fee_accrual_counters = 1 [json_name = "feeAccrualCounters", (.gogoproto.nullable) = false];</code>
+       * @return Whether the feeAccrualCounters field is set.
+       */
+      public boolean hasFeeAccrualCounters() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cellarfees.v1.FeeAccrualCounters fee_accrual_counters = 1 [json_name = "feeAccrualCounters", (.gogoproto.nullable) = false];</code>
+       * @return The feeAccrualCounters.
+       */
+      public com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters getFeeAccrualCounters() {
+        if (feeAccrualCountersBuilder_ == null) {
+          return feeAccrualCounters_ == null ? com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters.getDefaultInstance() : feeAccrualCounters_;
+        } else {
+          return feeAccrualCountersBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cellarfees.v1.FeeAccrualCounters fee_accrual_counters = 1 [json_name = "feeAccrualCounters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFeeAccrualCounters(com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters value) {
+        if (feeAccrualCountersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          feeAccrualCounters_ = value;
+        } else {
+          feeAccrualCountersBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cellarfees.v1.FeeAccrualCounters fee_accrual_counters = 1 [json_name = "feeAccrualCounters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFeeAccrualCounters(
+          com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters.Builder builderForValue) {
+        if (feeAccrualCountersBuilder_ == null) {
+          feeAccrualCounters_ = builderForValue.build();
+        } else {
+          feeAccrualCountersBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cellarfees.v1.FeeAccrualCounters fee_accrual_counters = 1 [json_name = "feeAccrualCounters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeFeeAccrualCounters(com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters value) {
+        if (feeAccrualCountersBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            feeAccrualCounters_ != null &&
+            feeAccrualCounters_ != com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters.getDefaultInstance()) {
+            getFeeAccrualCountersBuilder().mergeFrom(value);
+          } else {
+            feeAccrualCounters_ = value;
+          }
+        } else {
+          feeAccrualCountersBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cellarfees.v1.FeeAccrualCounters fee_accrual_counters = 1 [json_name = "feeAccrualCounters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearFeeAccrualCounters() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        feeAccrualCounters_ = null;
+        if (feeAccrualCountersBuilder_ != null) {
+          feeAccrualCountersBuilder_.dispose();
+          feeAccrualCountersBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cellarfees.v1.FeeAccrualCounters fee_accrual_counters = 1 [json_name = "feeAccrualCounters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters.Builder getFeeAccrualCountersBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getFeeAccrualCountersFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cellarfees.v1.FeeAccrualCounters fee_accrual_counters = 1 [json_name = "feeAccrualCounters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cellarfees.v1.CellarfeesProto.FeeAccrualCountersOrBuilder getFeeAccrualCountersOrBuilder() {
+        if (feeAccrualCountersBuilder_ != null) {
+          return feeAccrualCountersBuilder_.getMessageOrBuilder();
+        } else {
+          return feeAccrualCounters_ == null ?
+              com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters.getDefaultInstance() : feeAccrualCounters_;
+        }
+      }
+      /**
+       * <code>.cellarfees.v1.FeeAccrualCounters fee_accrual_counters = 1 [json_name = "feeAccrualCounters", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters, com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters.Builder, com.cellarfees.v1.CellarfeesProto.FeeAccrualCountersOrBuilder> 
+          getFeeAccrualCountersFieldBuilder() {
+        if (feeAccrualCountersBuilder_ == null) {
+          feeAccrualCountersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters, com.cellarfees.v1.CellarfeesProto.FeeAccrualCounters.Builder, com.cellarfees.v1.CellarfeesProto.FeeAccrualCountersOrBuilder>(
+                  getFeeAccrualCounters(),
+                  getParentForChildren(),
+                  isClean());
+          feeAccrualCounters_ = null;
+        }
+        return feeAccrualCountersBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cellarfees.v1.QueryFeeAccrualCountersResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:cellarfees.v1.QueryFeeAccrualCountersResponse)
+    private static final com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersResponse();
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryFeeAccrualCountersResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryFeeAccrualCountersResponse>() {
+      @java.lang.Override
+      public QueryFeeAccrualCountersResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryFeeAccrualCountersResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryFeeAccrualCountersResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cellarfees.v1.QueryProto.QueryFeeAccrualCountersResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAPYRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cellarfees.v1.QueryAPYRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code cellarfees.v1.QueryAPYRequest}
+   */
+  public static final class QueryAPYRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cellarfees.v1.QueryAPYRequest)
+      QueryAPYRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAPYRequest.newBuilder() to construct.
+    private QueryAPYRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAPYRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAPYRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryAPYRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryAPYRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cellarfees.v1.QueryProto.QueryAPYRequest.class, com.cellarfees.v1.QueryProto.QueryAPYRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cellarfees.v1.QueryProto.QueryAPYRequest)) {
+        return super.equals(obj);
+      }
+      com.cellarfees.v1.QueryProto.QueryAPYRequest other = (com.cellarfees.v1.QueryProto.QueryAPYRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryAPYRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryAPYRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryAPYRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryAPYRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryAPYRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryAPYRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryAPYRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryAPYRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryAPYRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryAPYRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryAPYRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryAPYRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cellarfees.v1.QueryProto.QueryAPYRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cellarfees.v1.QueryAPYRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cellarfees.v1.QueryAPYRequest)
+        com.cellarfees.v1.QueryProto.QueryAPYRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryAPYRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryAPYRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cellarfees.v1.QueryProto.QueryAPYRequest.class, com.cellarfees.v1.QueryProto.QueryAPYRequest.Builder.class);
+      }
+
+      // Construct using com.cellarfees.v1.QueryProto.QueryAPYRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryAPYRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.QueryProto.QueryAPYRequest getDefaultInstanceForType() {
+        return com.cellarfees.v1.QueryProto.QueryAPYRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.QueryProto.QueryAPYRequest build() {
+        com.cellarfees.v1.QueryProto.QueryAPYRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.QueryProto.QueryAPYRequest buildPartial() {
+        com.cellarfees.v1.QueryProto.QueryAPYRequest result = new com.cellarfees.v1.QueryProto.QueryAPYRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cellarfees.v1.QueryProto.QueryAPYRequest) {
+          return mergeFrom((com.cellarfees.v1.QueryProto.QueryAPYRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cellarfees.v1.QueryProto.QueryAPYRequest other) {
+        if (other == com.cellarfees.v1.QueryProto.QueryAPYRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cellarfees.v1.QueryAPYRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:cellarfees.v1.QueryAPYRequest)
+    private static final com.cellarfees.v1.QueryProto.QueryAPYRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cellarfees.v1.QueryProto.QueryAPYRequest();
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryAPYRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAPYRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAPYRequest>() {
+      @java.lang.Override
+      public QueryAPYRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAPYRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAPYRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cellarfees.v1.QueryProto.QueryAPYRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryAPYResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cellarfees.v1.QueryAPYResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string apy = 1 [json_name = "apy"];</code>
+     * @return The apy.
+     */
+    java.lang.String getApy();
+    /**
+     * <code>string apy = 1 [json_name = "apy"];</code>
+     * @return The bytes for apy.
+     */
+    com.google.protobuf.ByteString
+        getApyBytes();
+  }
+  /**
+   * Protobuf type {@code cellarfees.v1.QueryAPYResponse}
+   */
+  public static final class QueryAPYResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cellarfees.v1.QueryAPYResponse)
+      QueryAPYResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryAPYResponse.newBuilder() to construct.
+    private QueryAPYResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryAPYResponse() {
+      apy_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryAPYResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryAPYResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryAPYResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.cellarfees.v1.QueryProto.QueryAPYResponse.class, com.cellarfees.v1.QueryProto.QueryAPYResponse.Builder.class);
+    }
+
+    public static final int APY_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object apy_ = "";
+    /**
+     * <code>string apy = 1 [json_name = "apy"];</code>
+     * @return The apy.
+     */
+    @java.lang.Override
+    public java.lang.String getApy() {
+      java.lang.Object ref = apy_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        apy_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string apy = 1 [json_name = "apy"];</code>
+     * @return The bytes for apy.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getApyBytes() {
+      java.lang.Object ref = apy_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        apy_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(apy_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, apy_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(apy_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, apy_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.cellarfees.v1.QueryProto.QueryAPYResponse)) {
+        return super.equals(obj);
+      }
+      com.cellarfees.v1.QueryProto.QueryAPYResponse other = (com.cellarfees.v1.QueryProto.QueryAPYResponse) obj;
+
+      if (!getApy()
+          .equals(other.getApy())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + APY_FIELD_NUMBER;
+      hash = (53 * hash) + getApy().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryAPYResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryAPYResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryAPYResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryAPYResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryAPYResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryAPYResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryAPYResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryAPYResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryAPYResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryAPYResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryAPYResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.cellarfees.v1.QueryProto.QueryAPYResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.cellarfees.v1.QueryProto.QueryAPYResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cellarfees.v1.QueryAPYResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cellarfees.v1.QueryAPYResponse)
+        com.cellarfees.v1.QueryProto.QueryAPYResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryAPYResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryAPYResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.cellarfees.v1.QueryProto.QueryAPYResponse.class, com.cellarfees.v1.QueryProto.QueryAPYResponse.Builder.class);
+      }
+
+      // Construct using com.cellarfees.v1.QueryProto.QueryAPYResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        apy_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.cellarfees.v1.QueryProto.internal_static_cellarfees_v1_QueryAPYResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.QueryProto.QueryAPYResponse getDefaultInstanceForType() {
+        return com.cellarfees.v1.QueryProto.QueryAPYResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.QueryProto.QueryAPYResponse build() {
+        com.cellarfees.v1.QueryProto.QueryAPYResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.cellarfees.v1.QueryProto.QueryAPYResponse buildPartial() {
+        com.cellarfees.v1.QueryProto.QueryAPYResponse result = new com.cellarfees.v1.QueryProto.QueryAPYResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.cellarfees.v1.QueryProto.QueryAPYResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.apy_ = apy_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.cellarfees.v1.QueryProto.QueryAPYResponse) {
+          return mergeFrom((com.cellarfees.v1.QueryProto.QueryAPYResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.cellarfees.v1.QueryProto.QueryAPYResponse other) {
+        if (other == com.cellarfees.v1.QueryProto.QueryAPYResponse.getDefaultInstance()) return this;
+        if (!other.getApy().isEmpty()) {
+          apy_ = other.apy_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                apy_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object apy_ = "";
+      /**
+       * <code>string apy = 1 [json_name = "apy"];</code>
+       * @return The apy.
+       */
+      public java.lang.String getApy() {
+        java.lang.Object ref = apy_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          apy_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string apy = 1 [json_name = "apy"];</code>
+       * @return The bytes for apy.
+       */
+      public com.google.protobuf.ByteString
+          getApyBytes() {
+        java.lang.Object ref = apy_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          apy_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string apy = 1 [json_name = "apy"];</code>
+       * @param value The apy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setApy(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        apy_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string apy = 1 [json_name = "apy"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearApy() {
+        apy_ = getDefaultInstance().getApy();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string apy = 1 [json_name = "apy"];</code>
+       * @param value The bytes for apy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setApyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        apy_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cellarfees.v1.QueryAPYResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:cellarfees.v1.QueryAPYResponse)
+    private static final com.cellarfees.v1.QueryProto.QueryAPYResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.cellarfees.v1.QueryProto.QueryAPYResponse();
+    }
+
+    public static com.cellarfees.v1.QueryProto.QueryAPYResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryAPYResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryAPYResponse>() {
+      @java.lang.Override
+      public QueryAPYResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryAPYResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryAPYResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.cellarfees.v1.QueryProto.QueryAPYResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cellarfees_v1_QueryParamsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cellarfees_v1_QueryParamsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cellarfees_v1_QueryParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cellarfees_v1_QueryParamsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cellarfees_v1_QueryModuleAccountsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cellarfees_v1_QueryModuleAccountsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cellarfees_v1_QueryModuleAccountsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cellarfees_v1_QueryModuleAccountsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cellarfees_v1_QueryLastRewardSupplyPeakRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cellarfees_v1_QueryLastRewardSupplyPeakRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cellarfees_v1_QueryLastRewardSupplyPeakResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cellarfees_v1_QueryLastRewardSupplyPeakResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cellarfees_v1_QueryFeeAccrualCountersRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cellarfees_v1_QueryFeeAccrualCountersRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cellarfees_v1_QueryFeeAccrualCountersResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cellarfees_v1_QueryFeeAccrualCountersResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cellarfees_v1_QueryAPYRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cellarfees_v1_QueryAPYRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cellarfees_v1_QueryAPYResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cellarfees_v1_QueryAPYResponse_fieldAccessorTable;
 
@@ -111,12 +4952,12 @@ public final class QueryProto {
       "/cellarfees/v1/fee_accrual_counters\022q\n\010Q" +
       "ueryAPY\022\036.cellarfees.v1.QueryAPYRequest\032" +
       "\037.cellarfees.v1.QueryAPYResponse\"$\202\323\344\223\002\036" +
-      "\022\034/sommelier/cellarfees/v1/apyB\250\001\n\021com.c" +
-      "ellarfees.v1B\nQueryProtoP\001Z2github.com/p" +
-      "eggyjv/sommelier/v4/x/cellarfees/types\242\002" +
-      "\003CXX\252\002\rCellarfees.V1\312\002\rCellarfees\\V1\342\002\031C" +
-      "ellarfees\\V1\\GPBMetadata\352\002\016Cellarfees::V" +
-      "1b\006proto3"
+      "\022\034/sommelier/cellarfees/v1/apyB\246\001\n\021com.c" +
+      "ellarfees.v1B\nQueryProtoZ2github.com/peg" +
+      "gyjv/sommelier/v4/x/cellarfees/types\242\002\003C" +
+      "XX\252\002\rCellarfees.V1\312\002\rCellarfees\\V1\342\002\031Cel" +
+      "larfees\\V1\\GPBMetadata\352\002\016Cellarfees::V1b" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

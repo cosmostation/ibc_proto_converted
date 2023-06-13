@@ -14,19 +14,3125 @@ public final class ResourceProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface CPUOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.base.v1beta2.CPU)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.akash.base.v1beta2.ResourceValue units = 1 [json_name = "units", (.gogoproto.nullable) = false];</code>
+     * @return Whether the units field is set.
+     */
+    boolean hasUnits();
+    /**
+     * <code>.akash.base.v1beta2.ResourceValue units = 1 [json_name = "units", (.gogoproto.nullable) = false];</code>
+     * @return The units.
+     */
+    com.akash.base.v1beta2.ResourcevalueProto.ResourceValue getUnits();
+    /**
+     * <code>.akash.base.v1beta2.ResourceValue units = 1 [json_name = "units", (.gogoproto.nullable) = false];</code>
+     */
+    com.akash.base.v1beta2.ResourcevalueProto.ResourceValueOrBuilder getUnitsOrBuilder();
+
+    /**
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+     */
+    java.util.List<com.akash.base.v1beta2.AttributeProto.Attribute> 
+        getAttributesList();
+    /**
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+     */
+    com.akash.base.v1beta2.AttributeProto.Attribute getAttributes(int index);
+    /**
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+     */
+    int getAttributesCount();
+    /**
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+     */
+    java.util.List<? extends com.akash.base.v1beta2.AttributeProto.AttributeOrBuilder> 
+        getAttributesOrBuilderList();
+    /**
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+     */
+    com.akash.base.v1beta2.AttributeProto.AttributeOrBuilder getAttributesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * CPU stores resource units and cpu config attributes
+   * </pre>
+   *
+   * Protobuf type {@code akash.base.v1beta2.CPU}
+   */
+  public static final class CPU extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.base.v1beta2.CPU)
+      CPUOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CPU.newBuilder() to construct.
+    private CPU(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CPU() {
+      attributes_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CPU();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.base.v1beta2.ResourceProto.internal_static_akash_base_v1beta2_CPU_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.base.v1beta2.ResourceProto.internal_static_akash_base_v1beta2_CPU_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.base.v1beta2.ResourceProto.CPU.class, com.akash.base.v1beta2.ResourceProto.CPU.Builder.class);
+    }
+
+    public static final int UNITS_FIELD_NUMBER = 1;
+    private com.akash.base.v1beta2.ResourcevalueProto.ResourceValue units_;
+    /**
+     * <code>.akash.base.v1beta2.ResourceValue units = 1 [json_name = "units", (.gogoproto.nullable) = false];</code>
+     * @return Whether the units field is set.
+     */
+    @java.lang.Override
+    public boolean hasUnits() {
+      return units_ != null;
+    }
+    /**
+     * <code>.akash.base.v1beta2.ResourceValue units = 1 [json_name = "units", (.gogoproto.nullable) = false];</code>
+     * @return The units.
+     */
+    @java.lang.Override
+    public com.akash.base.v1beta2.ResourcevalueProto.ResourceValue getUnits() {
+      return units_ == null ? com.akash.base.v1beta2.ResourcevalueProto.ResourceValue.getDefaultInstance() : units_;
+    }
+    /**
+     * <code>.akash.base.v1beta2.ResourceValue units = 1 [json_name = "units", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.akash.base.v1beta2.ResourcevalueProto.ResourceValueOrBuilder getUnitsOrBuilder() {
+      return units_ == null ? com.akash.base.v1beta2.ResourcevalueProto.ResourceValue.getDefaultInstance() : units_;
+    }
+
+    public static final int ATTRIBUTES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.akash.base.v1beta2.AttributeProto.Attribute> attributes_;
+    /**
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.akash.base.v1beta2.AttributeProto.Attribute> getAttributesList() {
+      return attributes_;
+    }
+    /**
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.akash.base.v1beta2.AttributeProto.AttributeOrBuilder> 
+        getAttributesOrBuilderList() {
+      return attributes_;
+    }
+    /**
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+     */
+    @java.lang.Override
+    public int getAttributesCount() {
+      return attributes_.size();
+    }
+    /**
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+     */
+    @java.lang.Override
+    public com.akash.base.v1beta2.AttributeProto.Attribute getAttributes(int index) {
+      return attributes_.get(index);
+    }
+    /**
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+     */
+    @java.lang.Override
+    public com.akash.base.v1beta2.AttributeProto.AttributeOrBuilder getAttributesOrBuilder(
+        int index) {
+      return attributes_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (units_ != null) {
+        output.writeMessage(1, getUnits());
+      }
+      for (int i = 0; i < attributes_.size(); i++) {
+        output.writeMessage(2, attributes_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (units_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getUnits());
+      }
+      for (int i = 0; i < attributes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, attributes_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.base.v1beta2.ResourceProto.CPU)) {
+        return super.equals(obj);
+      }
+      com.akash.base.v1beta2.ResourceProto.CPU other = (com.akash.base.v1beta2.ResourceProto.CPU) obj;
+
+      if (hasUnits() != other.hasUnits()) return false;
+      if (hasUnits()) {
+        if (!getUnits()
+            .equals(other.getUnits())) return false;
+      }
+      if (!getAttributesList()
+          .equals(other.getAttributesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasUnits()) {
+        hash = (37 * hash) + UNITS_FIELD_NUMBER;
+        hash = (53 * hash) + getUnits().hashCode();
+      }
+      if (getAttributesCount() > 0) {
+        hash = (37 * hash) + ATTRIBUTES_FIELD_NUMBER;
+        hash = (53 * hash) + getAttributesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.base.v1beta2.ResourceProto.CPU parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.base.v1beta2.ResourceProto.CPU parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.base.v1beta2.ResourceProto.CPU parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.base.v1beta2.ResourceProto.CPU parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.base.v1beta2.ResourceProto.CPU parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.base.v1beta2.ResourceProto.CPU parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.base.v1beta2.ResourceProto.CPU parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.base.v1beta2.ResourceProto.CPU parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.base.v1beta2.ResourceProto.CPU parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.base.v1beta2.ResourceProto.CPU parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.base.v1beta2.ResourceProto.CPU parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.base.v1beta2.ResourceProto.CPU parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.base.v1beta2.ResourceProto.CPU prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * CPU stores resource units and cpu config attributes
+     * </pre>
+     *
+     * Protobuf type {@code akash.base.v1beta2.CPU}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.base.v1beta2.CPU)
+        com.akash.base.v1beta2.ResourceProto.CPUOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.base.v1beta2.ResourceProto.internal_static_akash_base_v1beta2_CPU_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.base.v1beta2.ResourceProto.internal_static_akash_base_v1beta2_CPU_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.base.v1beta2.ResourceProto.CPU.class, com.akash.base.v1beta2.ResourceProto.CPU.Builder.class);
+      }
+
+      // Construct using com.akash.base.v1beta2.ResourceProto.CPU.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        units_ = null;
+        if (unitsBuilder_ != null) {
+          unitsBuilder_.dispose();
+          unitsBuilder_ = null;
+        }
+        if (attributesBuilder_ == null) {
+          attributes_ = java.util.Collections.emptyList();
+        } else {
+          attributes_ = null;
+          attributesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.base.v1beta2.ResourceProto.internal_static_akash_base_v1beta2_CPU_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.base.v1beta2.ResourceProto.CPU getDefaultInstanceForType() {
+        return com.akash.base.v1beta2.ResourceProto.CPU.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.base.v1beta2.ResourceProto.CPU build() {
+        com.akash.base.v1beta2.ResourceProto.CPU result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.base.v1beta2.ResourceProto.CPU buildPartial() {
+        com.akash.base.v1beta2.ResourceProto.CPU result = new com.akash.base.v1beta2.ResourceProto.CPU(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.akash.base.v1beta2.ResourceProto.CPU result) {
+        if (attributesBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            attributes_ = java.util.Collections.unmodifiableList(attributes_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.attributes_ = attributes_;
+        } else {
+          result.attributes_ = attributesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.akash.base.v1beta2.ResourceProto.CPU result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.units_ = unitsBuilder_ == null
+              ? units_
+              : unitsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.base.v1beta2.ResourceProto.CPU) {
+          return mergeFrom((com.akash.base.v1beta2.ResourceProto.CPU)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.base.v1beta2.ResourceProto.CPU other) {
+        if (other == com.akash.base.v1beta2.ResourceProto.CPU.getDefaultInstance()) return this;
+        if (other.hasUnits()) {
+          mergeUnits(other.getUnits());
+        }
+        if (attributesBuilder_ == null) {
+          if (!other.attributes_.isEmpty()) {
+            if (attributes_.isEmpty()) {
+              attributes_ = other.attributes_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureAttributesIsMutable();
+              attributes_.addAll(other.attributes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.attributes_.isEmpty()) {
+            if (attributesBuilder_.isEmpty()) {
+              attributesBuilder_.dispose();
+              attributesBuilder_ = null;
+              attributes_ = other.attributes_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              attributesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAttributesFieldBuilder() : null;
+            } else {
+              attributesBuilder_.addAllMessages(other.attributes_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getUnitsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.akash.base.v1beta2.AttributeProto.Attribute m =
+                    input.readMessage(
+                        com.akash.base.v1beta2.AttributeProto.Attribute.parser(),
+                        extensionRegistry);
+                if (attributesBuilder_ == null) {
+                  ensureAttributesIsMutable();
+                  attributes_.add(m);
+                } else {
+                  attributesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.akash.base.v1beta2.ResourcevalueProto.ResourceValue units_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.base.v1beta2.ResourcevalueProto.ResourceValue, com.akash.base.v1beta2.ResourcevalueProto.ResourceValue.Builder, com.akash.base.v1beta2.ResourcevalueProto.ResourceValueOrBuilder> unitsBuilder_;
+      /**
+       * <code>.akash.base.v1beta2.ResourceValue units = 1 [json_name = "units", (.gogoproto.nullable) = false];</code>
+       * @return Whether the units field is set.
+       */
+      public boolean hasUnits() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.akash.base.v1beta2.ResourceValue units = 1 [json_name = "units", (.gogoproto.nullable) = false];</code>
+       * @return The units.
+       */
+      public com.akash.base.v1beta2.ResourcevalueProto.ResourceValue getUnits() {
+        if (unitsBuilder_ == null) {
+          return units_ == null ? com.akash.base.v1beta2.ResourcevalueProto.ResourceValue.getDefaultInstance() : units_;
+        } else {
+          return unitsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.akash.base.v1beta2.ResourceValue units = 1 [json_name = "units", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setUnits(com.akash.base.v1beta2.ResourcevalueProto.ResourceValue value) {
+        if (unitsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          units_ = value;
+        } else {
+          unitsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.base.v1beta2.ResourceValue units = 1 [json_name = "units", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setUnits(
+          com.akash.base.v1beta2.ResourcevalueProto.ResourceValue.Builder builderForValue) {
+        if (unitsBuilder_ == null) {
+          units_ = builderForValue.build();
+        } else {
+          unitsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.base.v1beta2.ResourceValue units = 1 [json_name = "units", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeUnits(com.akash.base.v1beta2.ResourcevalueProto.ResourceValue value) {
+        if (unitsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            units_ != null &&
+            units_ != com.akash.base.v1beta2.ResourcevalueProto.ResourceValue.getDefaultInstance()) {
+            getUnitsBuilder().mergeFrom(value);
+          } else {
+            units_ = value;
+          }
+        } else {
+          unitsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.base.v1beta2.ResourceValue units = 1 [json_name = "units", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearUnits() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        units_ = null;
+        if (unitsBuilder_ != null) {
+          unitsBuilder_.dispose();
+          unitsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.base.v1beta2.ResourceValue units = 1 [json_name = "units", (.gogoproto.nullable) = false];</code>
+       */
+      public com.akash.base.v1beta2.ResourcevalueProto.ResourceValue.Builder getUnitsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getUnitsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.akash.base.v1beta2.ResourceValue units = 1 [json_name = "units", (.gogoproto.nullable) = false];</code>
+       */
+      public com.akash.base.v1beta2.ResourcevalueProto.ResourceValueOrBuilder getUnitsOrBuilder() {
+        if (unitsBuilder_ != null) {
+          return unitsBuilder_.getMessageOrBuilder();
+        } else {
+          return units_ == null ?
+              com.akash.base.v1beta2.ResourcevalueProto.ResourceValue.getDefaultInstance() : units_;
+        }
+      }
+      /**
+       * <code>.akash.base.v1beta2.ResourceValue units = 1 [json_name = "units", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.base.v1beta2.ResourcevalueProto.ResourceValue, com.akash.base.v1beta2.ResourcevalueProto.ResourceValue.Builder, com.akash.base.v1beta2.ResourcevalueProto.ResourceValueOrBuilder> 
+          getUnitsFieldBuilder() {
+        if (unitsBuilder_ == null) {
+          unitsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.akash.base.v1beta2.ResourcevalueProto.ResourceValue, com.akash.base.v1beta2.ResourcevalueProto.ResourceValue.Builder, com.akash.base.v1beta2.ResourcevalueProto.ResourceValueOrBuilder>(
+                  getUnits(),
+                  getParentForChildren(),
+                  isClean());
+          units_ = null;
+        }
+        return unitsBuilder_;
+      }
+
+      private java.util.List<com.akash.base.v1beta2.AttributeProto.Attribute> attributes_ =
+        java.util.Collections.emptyList();
+      private void ensureAttributesIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          attributes_ = new java.util.ArrayList<com.akash.base.v1beta2.AttributeProto.Attribute>(attributes_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.akash.base.v1beta2.AttributeProto.Attribute, com.akash.base.v1beta2.AttributeProto.Attribute.Builder, com.akash.base.v1beta2.AttributeProto.AttributeOrBuilder> attributesBuilder_;
+
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public java.util.List<com.akash.base.v1beta2.AttributeProto.Attribute> getAttributesList() {
+        if (attributesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(attributes_);
+        } else {
+          return attributesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public int getAttributesCount() {
+        if (attributesBuilder_ == null) {
+          return attributes_.size();
+        } else {
+          return attributesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public com.akash.base.v1beta2.AttributeProto.Attribute getAttributes(int index) {
+        if (attributesBuilder_ == null) {
+          return attributes_.get(index);
+        } else {
+          return attributesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public Builder setAttributes(
+          int index, com.akash.base.v1beta2.AttributeProto.Attribute value) {
+        if (attributesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAttributesIsMutable();
+          attributes_.set(index, value);
+          onChanged();
+        } else {
+          attributesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public Builder setAttributes(
+          int index, com.akash.base.v1beta2.AttributeProto.Attribute.Builder builderForValue) {
+        if (attributesBuilder_ == null) {
+          ensureAttributesIsMutable();
+          attributes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          attributesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public Builder addAttributes(com.akash.base.v1beta2.AttributeProto.Attribute value) {
+        if (attributesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAttributesIsMutable();
+          attributes_.add(value);
+          onChanged();
+        } else {
+          attributesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public Builder addAttributes(
+          int index, com.akash.base.v1beta2.AttributeProto.Attribute value) {
+        if (attributesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAttributesIsMutable();
+          attributes_.add(index, value);
+          onChanged();
+        } else {
+          attributesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public Builder addAttributes(
+          com.akash.base.v1beta2.AttributeProto.Attribute.Builder builderForValue) {
+        if (attributesBuilder_ == null) {
+          ensureAttributesIsMutable();
+          attributes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          attributesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public Builder addAttributes(
+          int index, com.akash.base.v1beta2.AttributeProto.Attribute.Builder builderForValue) {
+        if (attributesBuilder_ == null) {
+          ensureAttributesIsMutable();
+          attributes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          attributesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public Builder addAllAttributes(
+          java.lang.Iterable<? extends com.akash.base.v1beta2.AttributeProto.Attribute> values) {
+        if (attributesBuilder_ == null) {
+          ensureAttributesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, attributes_);
+          onChanged();
+        } else {
+          attributesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public Builder clearAttributes() {
+        if (attributesBuilder_ == null) {
+          attributes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          attributesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public Builder removeAttributes(int index) {
+        if (attributesBuilder_ == null) {
+          ensureAttributesIsMutable();
+          attributes_.remove(index);
+          onChanged();
+        } else {
+          attributesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public com.akash.base.v1beta2.AttributeProto.Attribute.Builder getAttributesBuilder(
+          int index) {
+        return getAttributesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public com.akash.base.v1beta2.AttributeProto.AttributeOrBuilder getAttributesOrBuilder(
+          int index) {
+        if (attributesBuilder_ == null) {
+          return attributes_.get(index);  } else {
+          return attributesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public java.util.List<? extends com.akash.base.v1beta2.AttributeProto.AttributeOrBuilder> 
+           getAttributesOrBuilderList() {
+        if (attributesBuilder_ != null) {
+          return attributesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(attributes_);
+        }
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public com.akash.base.v1beta2.AttributeProto.Attribute.Builder addAttributesBuilder() {
+        return getAttributesFieldBuilder().addBuilder(
+            com.akash.base.v1beta2.AttributeProto.Attribute.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public com.akash.base.v1beta2.AttributeProto.Attribute.Builder addAttributesBuilder(
+          int index) {
+        return getAttributesFieldBuilder().addBuilder(
+            index, com.akash.base.v1beta2.AttributeProto.Attribute.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public java.util.List<com.akash.base.v1beta2.AttributeProto.Attribute.Builder> 
+           getAttributesBuilderList() {
+        return getAttributesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.akash.base.v1beta2.AttributeProto.Attribute, com.akash.base.v1beta2.AttributeProto.Attribute.Builder, com.akash.base.v1beta2.AttributeProto.AttributeOrBuilder> 
+          getAttributesFieldBuilder() {
+        if (attributesBuilder_ == null) {
+          attributesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.akash.base.v1beta2.AttributeProto.Attribute, com.akash.base.v1beta2.AttributeProto.Attribute.Builder, com.akash.base.v1beta2.AttributeProto.AttributeOrBuilder>(
+                  attributes_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          attributes_ = null;
+        }
+        return attributesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.base.v1beta2.CPU)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.base.v1beta2.CPU)
+    private static final com.akash.base.v1beta2.ResourceProto.CPU DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.base.v1beta2.ResourceProto.CPU();
+    }
+
+    public static com.akash.base.v1beta2.ResourceProto.CPU getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CPU>
+        PARSER = new com.google.protobuf.AbstractParser<CPU>() {
+      @java.lang.Override
+      public CPU parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CPU> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CPU> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.base.v1beta2.ResourceProto.CPU getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MemoryOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.base.v1beta2.Memory)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.akash.base.v1beta2.ResourceValue quantity = 1 [json_name = "quantity", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "size", (.gogoproto.moretags) = "yaml:&#92;"size&#92;""];</code>
+     * @return Whether the quantity field is set.
+     */
+    boolean hasQuantity();
+    /**
+     * <code>.akash.base.v1beta2.ResourceValue quantity = 1 [json_name = "quantity", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "size", (.gogoproto.moretags) = "yaml:&#92;"size&#92;""];</code>
+     * @return The quantity.
+     */
+    com.akash.base.v1beta2.ResourcevalueProto.ResourceValue getQuantity();
+    /**
+     * <code>.akash.base.v1beta2.ResourceValue quantity = 1 [json_name = "quantity", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "size", (.gogoproto.moretags) = "yaml:&#92;"size&#92;""];</code>
+     */
+    com.akash.base.v1beta2.ResourcevalueProto.ResourceValueOrBuilder getQuantityOrBuilder();
+
+    /**
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+     */
+    java.util.List<com.akash.base.v1beta2.AttributeProto.Attribute> 
+        getAttributesList();
+    /**
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+     */
+    com.akash.base.v1beta2.AttributeProto.Attribute getAttributes(int index);
+    /**
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+     */
+    int getAttributesCount();
+    /**
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+     */
+    java.util.List<? extends com.akash.base.v1beta2.AttributeProto.AttributeOrBuilder> 
+        getAttributesOrBuilderList();
+    /**
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+     */
+    com.akash.base.v1beta2.AttributeProto.AttributeOrBuilder getAttributesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Memory stores resource quantity and memory attributes
+   * </pre>
+   *
+   * Protobuf type {@code akash.base.v1beta2.Memory}
+   */
+  public static final class Memory extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.base.v1beta2.Memory)
+      MemoryOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Memory.newBuilder() to construct.
+    private Memory(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Memory() {
+      attributes_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Memory();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.base.v1beta2.ResourceProto.internal_static_akash_base_v1beta2_Memory_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.base.v1beta2.ResourceProto.internal_static_akash_base_v1beta2_Memory_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.base.v1beta2.ResourceProto.Memory.class, com.akash.base.v1beta2.ResourceProto.Memory.Builder.class);
+    }
+
+    public static final int QUANTITY_FIELD_NUMBER = 1;
+    private com.akash.base.v1beta2.ResourcevalueProto.ResourceValue quantity_;
+    /**
+     * <code>.akash.base.v1beta2.ResourceValue quantity = 1 [json_name = "quantity", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "size", (.gogoproto.moretags) = "yaml:&#92;"size&#92;""];</code>
+     * @return Whether the quantity field is set.
+     */
+    @java.lang.Override
+    public boolean hasQuantity() {
+      return quantity_ != null;
+    }
+    /**
+     * <code>.akash.base.v1beta2.ResourceValue quantity = 1 [json_name = "quantity", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "size", (.gogoproto.moretags) = "yaml:&#92;"size&#92;""];</code>
+     * @return The quantity.
+     */
+    @java.lang.Override
+    public com.akash.base.v1beta2.ResourcevalueProto.ResourceValue getQuantity() {
+      return quantity_ == null ? com.akash.base.v1beta2.ResourcevalueProto.ResourceValue.getDefaultInstance() : quantity_;
+    }
+    /**
+     * <code>.akash.base.v1beta2.ResourceValue quantity = 1 [json_name = "quantity", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "size", (.gogoproto.moretags) = "yaml:&#92;"size&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.akash.base.v1beta2.ResourcevalueProto.ResourceValueOrBuilder getQuantityOrBuilder() {
+      return quantity_ == null ? com.akash.base.v1beta2.ResourcevalueProto.ResourceValue.getDefaultInstance() : quantity_;
+    }
+
+    public static final int ATTRIBUTES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.akash.base.v1beta2.AttributeProto.Attribute> attributes_;
+    /**
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.akash.base.v1beta2.AttributeProto.Attribute> getAttributesList() {
+      return attributes_;
+    }
+    /**
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.akash.base.v1beta2.AttributeProto.AttributeOrBuilder> 
+        getAttributesOrBuilderList() {
+      return attributes_;
+    }
+    /**
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+     */
+    @java.lang.Override
+    public int getAttributesCount() {
+      return attributes_.size();
+    }
+    /**
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+     */
+    @java.lang.Override
+    public com.akash.base.v1beta2.AttributeProto.Attribute getAttributes(int index) {
+      return attributes_.get(index);
+    }
+    /**
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+     */
+    @java.lang.Override
+    public com.akash.base.v1beta2.AttributeProto.AttributeOrBuilder getAttributesOrBuilder(
+        int index) {
+      return attributes_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (quantity_ != null) {
+        output.writeMessage(1, getQuantity());
+      }
+      for (int i = 0; i < attributes_.size(); i++) {
+        output.writeMessage(2, attributes_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (quantity_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getQuantity());
+      }
+      for (int i = 0; i < attributes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, attributes_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.base.v1beta2.ResourceProto.Memory)) {
+        return super.equals(obj);
+      }
+      com.akash.base.v1beta2.ResourceProto.Memory other = (com.akash.base.v1beta2.ResourceProto.Memory) obj;
+
+      if (hasQuantity() != other.hasQuantity()) return false;
+      if (hasQuantity()) {
+        if (!getQuantity()
+            .equals(other.getQuantity())) return false;
+      }
+      if (!getAttributesList()
+          .equals(other.getAttributesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasQuantity()) {
+        hash = (37 * hash) + QUANTITY_FIELD_NUMBER;
+        hash = (53 * hash) + getQuantity().hashCode();
+      }
+      if (getAttributesCount() > 0) {
+        hash = (37 * hash) + ATTRIBUTES_FIELD_NUMBER;
+        hash = (53 * hash) + getAttributesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.base.v1beta2.ResourceProto.Memory parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.base.v1beta2.ResourceProto.Memory parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.base.v1beta2.ResourceProto.Memory parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.base.v1beta2.ResourceProto.Memory parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.base.v1beta2.ResourceProto.Memory parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.base.v1beta2.ResourceProto.Memory parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.base.v1beta2.ResourceProto.Memory parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.base.v1beta2.ResourceProto.Memory parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.base.v1beta2.ResourceProto.Memory parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.base.v1beta2.ResourceProto.Memory parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.base.v1beta2.ResourceProto.Memory parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.base.v1beta2.ResourceProto.Memory parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.base.v1beta2.ResourceProto.Memory prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Memory stores resource quantity and memory attributes
+     * </pre>
+     *
+     * Protobuf type {@code akash.base.v1beta2.Memory}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.base.v1beta2.Memory)
+        com.akash.base.v1beta2.ResourceProto.MemoryOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.base.v1beta2.ResourceProto.internal_static_akash_base_v1beta2_Memory_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.base.v1beta2.ResourceProto.internal_static_akash_base_v1beta2_Memory_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.base.v1beta2.ResourceProto.Memory.class, com.akash.base.v1beta2.ResourceProto.Memory.Builder.class);
+      }
+
+      // Construct using com.akash.base.v1beta2.ResourceProto.Memory.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        quantity_ = null;
+        if (quantityBuilder_ != null) {
+          quantityBuilder_.dispose();
+          quantityBuilder_ = null;
+        }
+        if (attributesBuilder_ == null) {
+          attributes_ = java.util.Collections.emptyList();
+        } else {
+          attributes_ = null;
+          attributesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.base.v1beta2.ResourceProto.internal_static_akash_base_v1beta2_Memory_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.base.v1beta2.ResourceProto.Memory getDefaultInstanceForType() {
+        return com.akash.base.v1beta2.ResourceProto.Memory.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.base.v1beta2.ResourceProto.Memory build() {
+        com.akash.base.v1beta2.ResourceProto.Memory result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.base.v1beta2.ResourceProto.Memory buildPartial() {
+        com.akash.base.v1beta2.ResourceProto.Memory result = new com.akash.base.v1beta2.ResourceProto.Memory(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.akash.base.v1beta2.ResourceProto.Memory result) {
+        if (attributesBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            attributes_ = java.util.Collections.unmodifiableList(attributes_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.attributes_ = attributes_;
+        } else {
+          result.attributes_ = attributesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.akash.base.v1beta2.ResourceProto.Memory result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.quantity_ = quantityBuilder_ == null
+              ? quantity_
+              : quantityBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.base.v1beta2.ResourceProto.Memory) {
+          return mergeFrom((com.akash.base.v1beta2.ResourceProto.Memory)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.base.v1beta2.ResourceProto.Memory other) {
+        if (other == com.akash.base.v1beta2.ResourceProto.Memory.getDefaultInstance()) return this;
+        if (other.hasQuantity()) {
+          mergeQuantity(other.getQuantity());
+        }
+        if (attributesBuilder_ == null) {
+          if (!other.attributes_.isEmpty()) {
+            if (attributes_.isEmpty()) {
+              attributes_ = other.attributes_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureAttributesIsMutable();
+              attributes_.addAll(other.attributes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.attributes_.isEmpty()) {
+            if (attributesBuilder_.isEmpty()) {
+              attributesBuilder_.dispose();
+              attributesBuilder_ = null;
+              attributes_ = other.attributes_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              attributesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAttributesFieldBuilder() : null;
+            } else {
+              attributesBuilder_.addAllMessages(other.attributes_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getQuantityFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.akash.base.v1beta2.AttributeProto.Attribute m =
+                    input.readMessage(
+                        com.akash.base.v1beta2.AttributeProto.Attribute.parser(),
+                        extensionRegistry);
+                if (attributesBuilder_ == null) {
+                  ensureAttributesIsMutable();
+                  attributes_.add(m);
+                } else {
+                  attributesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.akash.base.v1beta2.ResourcevalueProto.ResourceValue quantity_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.base.v1beta2.ResourcevalueProto.ResourceValue, com.akash.base.v1beta2.ResourcevalueProto.ResourceValue.Builder, com.akash.base.v1beta2.ResourcevalueProto.ResourceValueOrBuilder> quantityBuilder_;
+      /**
+       * <code>.akash.base.v1beta2.ResourceValue quantity = 1 [json_name = "quantity", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "size", (.gogoproto.moretags) = "yaml:&#92;"size&#92;""];</code>
+       * @return Whether the quantity field is set.
+       */
+      public boolean hasQuantity() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.akash.base.v1beta2.ResourceValue quantity = 1 [json_name = "quantity", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "size", (.gogoproto.moretags) = "yaml:&#92;"size&#92;""];</code>
+       * @return The quantity.
+       */
+      public com.akash.base.v1beta2.ResourcevalueProto.ResourceValue getQuantity() {
+        if (quantityBuilder_ == null) {
+          return quantity_ == null ? com.akash.base.v1beta2.ResourcevalueProto.ResourceValue.getDefaultInstance() : quantity_;
+        } else {
+          return quantityBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.akash.base.v1beta2.ResourceValue quantity = 1 [json_name = "quantity", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "size", (.gogoproto.moretags) = "yaml:&#92;"size&#92;""];</code>
+       */
+      public Builder setQuantity(com.akash.base.v1beta2.ResourcevalueProto.ResourceValue value) {
+        if (quantityBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          quantity_ = value;
+        } else {
+          quantityBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.base.v1beta2.ResourceValue quantity = 1 [json_name = "quantity", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "size", (.gogoproto.moretags) = "yaml:&#92;"size&#92;""];</code>
+       */
+      public Builder setQuantity(
+          com.akash.base.v1beta2.ResourcevalueProto.ResourceValue.Builder builderForValue) {
+        if (quantityBuilder_ == null) {
+          quantity_ = builderForValue.build();
+        } else {
+          quantityBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.base.v1beta2.ResourceValue quantity = 1 [json_name = "quantity", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "size", (.gogoproto.moretags) = "yaml:&#92;"size&#92;""];</code>
+       */
+      public Builder mergeQuantity(com.akash.base.v1beta2.ResourcevalueProto.ResourceValue value) {
+        if (quantityBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            quantity_ != null &&
+            quantity_ != com.akash.base.v1beta2.ResourcevalueProto.ResourceValue.getDefaultInstance()) {
+            getQuantityBuilder().mergeFrom(value);
+          } else {
+            quantity_ = value;
+          }
+        } else {
+          quantityBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.base.v1beta2.ResourceValue quantity = 1 [json_name = "quantity", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "size", (.gogoproto.moretags) = "yaml:&#92;"size&#92;""];</code>
+       */
+      public Builder clearQuantity() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        quantity_ = null;
+        if (quantityBuilder_ != null) {
+          quantityBuilder_.dispose();
+          quantityBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.base.v1beta2.ResourceValue quantity = 1 [json_name = "quantity", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "size", (.gogoproto.moretags) = "yaml:&#92;"size&#92;""];</code>
+       */
+      public com.akash.base.v1beta2.ResourcevalueProto.ResourceValue.Builder getQuantityBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getQuantityFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.akash.base.v1beta2.ResourceValue quantity = 1 [json_name = "quantity", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "size", (.gogoproto.moretags) = "yaml:&#92;"size&#92;""];</code>
+       */
+      public com.akash.base.v1beta2.ResourcevalueProto.ResourceValueOrBuilder getQuantityOrBuilder() {
+        if (quantityBuilder_ != null) {
+          return quantityBuilder_.getMessageOrBuilder();
+        } else {
+          return quantity_ == null ?
+              com.akash.base.v1beta2.ResourcevalueProto.ResourceValue.getDefaultInstance() : quantity_;
+        }
+      }
+      /**
+       * <code>.akash.base.v1beta2.ResourceValue quantity = 1 [json_name = "quantity", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "size", (.gogoproto.moretags) = "yaml:&#92;"size&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.base.v1beta2.ResourcevalueProto.ResourceValue, com.akash.base.v1beta2.ResourcevalueProto.ResourceValue.Builder, com.akash.base.v1beta2.ResourcevalueProto.ResourceValueOrBuilder> 
+          getQuantityFieldBuilder() {
+        if (quantityBuilder_ == null) {
+          quantityBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.akash.base.v1beta2.ResourcevalueProto.ResourceValue, com.akash.base.v1beta2.ResourcevalueProto.ResourceValue.Builder, com.akash.base.v1beta2.ResourcevalueProto.ResourceValueOrBuilder>(
+                  getQuantity(),
+                  getParentForChildren(),
+                  isClean());
+          quantity_ = null;
+        }
+        return quantityBuilder_;
+      }
+
+      private java.util.List<com.akash.base.v1beta2.AttributeProto.Attribute> attributes_ =
+        java.util.Collections.emptyList();
+      private void ensureAttributesIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          attributes_ = new java.util.ArrayList<com.akash.base.v1beta2.AttributeProto.Attribute>(attributes_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.akash.base.v1beta2.AttributeProto.Attribute, com.akash.base.v1beta2.AttributeProto.Attribute.Builder, com.akash.base.v1beta2.AttributeProto.AttributeOrBuilder> attributesBuilder_;
+
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public java.util.List<com.akash.base.v1beta2.AttributeProto.Attribute> getAttributesList() {
+        if (attributesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(attributes_);
+        } else {
+          return attributesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public int getAttributesCount() {
+        if (attributesBuilder_ == null) {
+          return attributes_.size();
+        } else {
+          return attributesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public com.akash.base.v1beta2.AttributeProto.Attribute getAttributes(int index) {
+        if (attributesBuilder_ == null) {
+          return attributes_.get(index);
+        } else {
+          return attributesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public Builder setAttributes(
+          int index, com.akash.base.v1beta2.AttributeProto.Attribute value) {
+        if (attributesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAttributesIsMutable();
+          attributes_.set(index, value);
+          onChanged();
+        } else {
+          attributesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public Builder setAttributes(
+          int index, com.akash.base.v1beta2.AttributeProto.Attribute.Builder builderForValue) {
+        if (attributesBuilder_ == null) {
+          ensureAttributesIsMutable();
+          attributes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          attributesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public Builder addAttributes(com.akash.base.v1beta2.AttributeProto.Attribute value) {
+        if (attributesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAttributesIsMutable();
+          attributes_.add(value);
+          onChanged();
+        } else {
+          attributesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public Builder addAttributes(
+          int index, com.akash.base.v1beta2.AttributeProto.Attribute value) {
+        if (attributesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAttributesIsMutable();
+          attributes_.add(index, value);
+          onChanged();
+        } else {
+          attributesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public Builder addAttributes(
+          com.akash.base.v1beta2.AttributeProto.Attribute.Builder builderForValue) {
+        if (attributesBuilder_ == null) {
+          ensureAttributesIsMutable();
+          attributes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          attributesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public Builder addAttributes(
+          int index, com.akash.base.v1beta2.AttributeProto.Attribute.Builder builderForValue) {
+        if (attributesBuilder_ == null) {
+          ensureAttributesIsMutable();
+          attributes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          attributesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public Builder addAllAttributes(
+          java.lang.Iterable<? extends com.akash.base.v1beta2.AttributeProto.Attribute> values) {
+        if (attributesBuilder_ == null) {
+          ensureAttributesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, attributes_);
+          onChanged();
+        } else {
+          attributesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public Builder clearAttributes() {
+        if (attributesBuilder_ == null) {
+          attributes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          attributesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public Builder removeAttributes(int index) {
+        if (attributesBuilder_ == null) {
+          ensureAttributesIsMutable();
+          attributes_.remove(index);
+          onChanged();
+        } else {
+          attributesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public com.akash.base.v1beta2.AttributeProto.Attribute.Builder getAttributesBuilder(
+          int index) {
+        return getAttributesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public com.akash.base.v1beta2.AttributeProto.AttributeOrBuilder getAttributesOrBuilder(
+          int index) {
+        if (attributesBuilder_ == null) {
+          return attributes_.get(index);  } else {
+          return attributesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public java.util.List<? extends com.akash.base.v1beta2.AttributeProto.AttributeOrBuilder> 
+           getAttributesOrBuilderList() {
+        if (attributesBuilder_ != null) {
+          return attributesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(attributes_);
+        }
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public com.akash.base.v1beta2.AttributeProto.Attribute.Builder addAttributesBuilder() {
+        return getAttributesFieldBuilder().addBuilder(
+            com.akash.base.v1beta2.AttributeProto.Attribute.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public com.akash.base.v1beta2.AttributeProto.Attribute.Builder addAttributesBuilder(
+          int index) {
+        return getAttributesFieldBuilder().addBuilder(
+            index, com.akash.base.v1beta2.AttributeProto.Attribute.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 2 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public java.util.List<com.akash.base.v1beta2.AttributeProto.Attribute.Builder> 
+           getAttributesBuilderList() {
+        return getAttributesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.akash.base.v1beta2.AttributeProto.Attribute, com.akash.base.v1beta2.AttributeProto.Attribute.Builder, com.akash.base.v1beta2.AttributeProto.AttributeOrBuilder> 
+          getAttributesFieldBuilder() {
+        if (attributesBuilder_ == null) {
+          attributesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.akash.base.v1beta2.AttributeProto.Attribute, com.akash.base.v1beta2.AttributeProto.Attribute.Builder, com.akash.base.v1beta2.AttributeProto.AttributeOrBuilder>(
+                  attributes_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          attributes_ = null;
+        }
+        return attributesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.base.v1beta2.Memory)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.base.v1beta2.Memory)
+    private static final com.akash.base.v1beta2.ResourceProto.Memory DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.base.v1beta2.ResourceProto.Memory();
+    }
+
+    public static com.akash.base.v1beta2.ResourceProto.Memory getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Memory>
+        PARSER = new com.google.protobuf.AbstractParser<Memory>() {
+      @java.lang.Override
+      public Memory parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Memory> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Memory> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.base.v1beta2.ResourceProto.Memory getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface StorageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.base.v1beta2.Storage)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string name = 1 [json_name = "name", (.gogoproto.jsontag) = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 1 [json_name = "name", (.gogoproto.jsontag) = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>.akash.base.v1beta2.ResourceValue quantity = 2 [json_name = "quantity", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "size", (.gogoproto.moretags) = "yaml:&#92;"size&#92;""];</code>
+     * @return Whether the quantity field is set.
+     */
+    boolean hasQuantity();
+    /**
+     * <code>.akash.base.v1beta2.ResourceValue quantity = 2 [json_name = "quantity", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "size", (.gogoproto.moretags) = "yaml:&#92;"size&#92;""];</code>
+     * @return The quantity.
+     */
+    com.akash.base.v1beta2.ResourcevalueProto.ResourceValue getQuantity();
+    /**
+     * <code>.akash.base.v1beta2.ResourceValue quantity = 2 [json_name = "quantity", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "size", (.gogoproto.moretags) = "yaml:&#92;"size&#92;""];</code>
+     */
+    com.akash.base.v1beta2.ResourcevalueProto.ResourceValueOrBuilder getQuantityOrBuilder();
+
+    /**
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 3 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+     */
+    java.util.List<com.akash.base.v1beta2.AttributeProto.Attribute> 
+        getAttributesList();
+    /**
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 3 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+     */
+    com.akash.base.v1beta2.AttributeProto.Attribute getAttributes(int index);
+    /**
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 3 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+     */
+    int getAttributesCount();
+    /**
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 3 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+     */
+    java.util.List<? extends com.akash.base.v1beta2.AttributeProto.AttributeOrBuilder> 
+        getAttributesOrBuilderList();
+    /**
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 3 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+     */
+    com.akash.base.v1beta2.AttributeProto.AttributeOrBuilder getAttributesOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * Storage stores resource quantity and storage attributes
+   * </pre>
+   *
+   * Protobuf type {@code akash.base.v1beta2.Storage}
+   */
+  public static final class Storage extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.base.v1beta2.Storage)
+      StorageOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Storage.newBuilder() to construct.
+    private Storage(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Storage() {
+      name_ = "";
+      attributes_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Storage();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.base.v1beta2.ResourceProto.internal_static_akash_base_v1beta2_Storage_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.base.v1beta2.ResourceProto.internal_static_akash_base_v1beta2_Storage_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.base.v1beta2.ResourceProto.Storage.class, com.akash.base.v1beta2.ResourceProto.Storage.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
+    /**
+     * <code>string name = 1 [json_name = "name", (.gogoproto.jsontag) = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 1 [json_name = "name", (.gogoproto.jsontag) = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int QUANTITY_FIELD_NUMBER = 2;
+    private com.akash.base.v1beta2.ResourcevalueProto.ResourceValue quantity_;
+    /**
+     * <code>.akash.base.v1beta2.ResourceValue quantity = 2 [json_name = "quantity", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "size", (.gogoproto.moretags) = "yaml:&#92;"size&#92;""];</code>
+     * @return Whether the quantity field is set.
+     */
+    @java.lang.Override
+    public boolean hasQuantity() {
+      return quantity_ != null;
+    }
+    /**
+     * <code>.akash.base.v1beta2.ResourceValue quantity = 2 [json_name = "quantity", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "size", (.gogoproto.moretags) = "yaml:&#92;"size&#92;""];</code>
+     * @return The quantity.
+     */
+    @java.lang.Override
+    public com.akash.base.v1beta2.ResourcevalueProto.ResourceValue getQuantity() {
+      return quantity_ == null ? com.akash.base.v1beta2.ResourcevalueProto.ResourceValue.getDefaultInstance() : quantity_;
+    }
+    /**
+     * <code>.akash.base.v1beta2.ResourceValue quantity = 2 [json_name = "quantity", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "size", (.gogoproto.moretags) = "yaml:&#92;"size&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.akash.base.v1beta2.ResourcevalueProto.ResourceValueOrBuilder getQuantityOrBuilder() {
+      return quantity_ == null ? com.akash.base.v1beta2.ResourcevalueProto.ResourceValue.getDefaultInstance() : quantity_;
+    }
+
+    public static final int ATTRIBUTES_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.akash.base.v1beta2.AttributeProto.Attribute> attributes_;
+    /**
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 3 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.akash.base.v1beta2.AttributeProto.Attribute> getAttributesList() {
+      return attributes_;
+    }
+    /**
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 3 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.akash.base.v1beta2.AttributeProto.AttributeOrBuilder> 
+        getAttributesOrBuilderList() {
+      return attributes_;
+    }
+    /**
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 3 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+     */
+    @java.lang.Override
+    public int getAttributesCount() {
+      return attributes_.size();
+    }
+    /**
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 3 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+     */
+    @java.lang.Override
+    public com.akash.base.v1beta2.AttributeProto.Attribute getAttributes(int index) {
+      return attributes_.get(index);
+    }
+    /**
+     * <code>repeated .akash.base.v1beta2.Attribute attributes = 3 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+     */
+    @java.lang.Override
+    public com.akash.base.v1beta2.AttributeProto.AttributeOrBuilder getAttributesOrBuilder(
+        int index) {
+      return attributes_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (quantity_ != null) {
+        output.writeMessage(2, getQuantity());
+      }
+      for (int i = 0; i < attributes_.size(); i++) {
+        output.writeMessage(3, attributes_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (quantity_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getQuantity());
+      }
+      for (int i = 0; i < attributes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, attributes_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.base.v1beta2.ResourceProto.Storage)) {
+        return super.equals(obj);
+      }
+      com.akash.base.v1beta2.ResourceProto.Storage other = (com.akash.base.v1beta2.ResourceProto.Storage) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (hasQuantity() != other.hasQuantity()) return false;
+      if (hasQuantity()) {
+        if (!getQuantity()
+            .equals(other.getQuantity())) return false;
+      }
+      if (!getAttributesList()
+          .equals(other.getAttributesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      if (hasQuantity()) {
+        hash = (37 * hash) + QUANTITY_FIELD_NUMBER;
+        hash = (53 * hash) + getQuantity().hashCode();
+      }
+      if (getAttributesCount() > 0) {
+        hash = (37 * hash) + ATTRIBUTES_FIELD_NUMBER;
+        hash = (53 * hash) + getAttributesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.base.v1beta2.ResourceProto.Storage parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.base.v1beta2.ResourceProto.Storage parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.base.v1beta2.ResourceProto.Storage parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.base.v1beta2.ResourceProto.Storage parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.base.v1beta2.ResourceProto.Storage parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.base.v1beta2.ResourceProto.Storage parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.base.v1beta2.ResourceProto.Storage parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.base.v1beta2.ResourceProto.Storage parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.base.v1beta2.ResourceProto.Storage parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.base.v1beta2.ResourceProto.Storage parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.base.v1beta2.ResourceProto.Storage parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.base.v1beta2.ResourceProto.Storage parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.base.v1beta2.ResourceProto.Storage prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Storage stores resource quantity and storage attributes
+     * </pre>
+     *
+     * Protobuf type {@code akash.base.v1beta2.Storage}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.base.v1beta2.Storage)
+        com.akash.base.v1beta2.ResourceProto.StorageOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.base.v1beta2.ResourceProto.internal_static_akash_base_v1beta2_Storage_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.base.v1beta2.ResourceProto.internal_static_akash_base_v1beta2_Storage_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.base.v1beta2.ResourceProto.Storage.class, com.akash.base.v1beta2.ResourceProto.Storage.Builder.class);
+      }
+
+      // Construct using com.akash.base.v1beta2.ResourceProto.Storage.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        name_ = "";
+        quantity_ = null;
+        if (quantityBuilder_ != null) {
+          quantityBuilder_.dispose();
+          quantityBuilder_ = null;
+        }
+        if (attributesBuilder_ == null) {
+          attributes_ = java.util.Collections.emptyList();
+        } else {
+          attributes_ = null;
+          attributesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.base.v1beta2.ResourceProto.internal_static_akash_base_v1beta2_Storage_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.base.v1beta2.ResourceProto.Storage getDefaultInstanceForType() {
+        return com.akash.base.v1beta2.ResourceProto.Storage.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.base.v1beta2.ResourceProto.Storage build() {
+        com.akash.base.v1beta2.ResourceProto.Storage result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.base.v1beta2.ResourceProto.Storage buildPartial() {
+        com.akash.base.v1beta2.ResourceProto.Storage result = new com.akash.base.v1beta2.ResourceProto.Storage(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.akash.base.v1beta2.ResourceProto.Storage result) {
+        if (attributesBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            attributes_ = java.util.Collections.unmodifiableList(attributes_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.attributes_ = attributes_;
+        } else {
+          result.attributes_ = attributesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.akash.base.v1beta2.ResourceProto.Storage result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.quantity_ = quantityBuilder_ == null
+              ? quantity_
+              : quantityBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.base.v1beta2.ResourceProto.Storage) {
+          return mergeFrom((com.akash.base.v1beta2.ResourceProto.Storage)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.base.v1beta2.ResourceProto.Storage other) {
+        if (other == com.akash.base.v1beta2.ResourceProto.Storage.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasQuantity()) {
+          mergeQuantity(other.getQuantity());
+        }
+        if (attributesBuilder_ == null) {
+          if (!other.attributes_.isEmpty()) {
+            if (attributes_.isEmpty()) {
+              attributes_ = other.attributes_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureAttributesIsMutable();
+              attributes_.addAll(other.attributes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.attributes_.isEmpty()) {
+            if (attributesBuilder_.isEmpty()) {
+              attributesBuilder_.dispose();
+              attributesBuilder_ = null;
+              attributes_ = other.attributes_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              attributesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAttributesFieldBuilder() : null;
+            } else {
+              attributesBuilder_.addAllMessages(other.attributes_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getQuantityFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                com.akash.base.v1beta2.AttributeProto.Attribute m =
+                    input.readMessage(
+                        com.akash.base.v1beta2.AttributeProto.Attribute.parser(),
+                        extensionRegistry);
+                if (attributesBuilder_ == null) {
+                  ensureAttributesIsMutable();
+                  attributes_.add(m);
+                } else {
+                  attributesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 1 [json_name = "name", (.gogoproto.jsontag) = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 1 [json_name = "name", (.gogoproto.jsontag) = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 1 [json_name = "name", (.gogoproto.jsontag) = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1 [json_name = "name", (.gogoproto.jsontag) = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1 [json_name = "name", (.gogoproto.jsontag) = "name", (.gogoproto.moretags) = "yaml:&#92;"name&#92;""];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        name_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.akash.base.v1beta2.ResourcevalueProto.ResourceValue quantity_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.base.v1beta2.ResourcevalueProto.ResourceValue, com.akash.base.v1beta2.ResourcevalueProto.ResourceValue.Builder, com.akash.base.v1beta2.ResourcevalueProto.ResourceValueOrBuilder> quantityBuilder_;
+      /**
+       * <code>.akash.base.v1beta2.ResourceValue quantity = 2 [json_name = "quantity", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "size", (.gogoproto.moretags) = "yaml:&#92;"size&#92;""];</code>
+       * @return Whether the quantity field is set.
+       */
+      public boolean hasQuantity() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.akash.base.v1beta2.ResourceValue quantity = 2 [json_name = "quantity", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "size", (.gogoproto.moretags) = "yaml:&#92;"size&#92;""];</code>
+       * @return The quantity.
+       */
+      public com.akash.base.v1beta2.ResourcevalueProto.ResourceValue getQuantity() {
+        if (quantityBuilder_ == null) {
+          return quantity_ == null ? com.akash.base.v1beta2.ResourcevalueProto.ResourceValue.getDefaultInstance() : quantity_;
+        } else {
+          return quantityBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.akash.base.v1beta2.ResourceValue quantity = 2 [json_name = "quantity", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "size", (.gogoproto.moretags) = "yaml:&#92;"size&#92;""];</code>
+       */
+      public Builder setQuantity(com.akash.base.v1beta2.ResourcevalueProto.ResourceValue value) {
+        if (quantityBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          quantity_ = value;
+        } else {
+          quantityBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.base.v1beta2.ResourceValue quantity = 2 [json_name = "quantity", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "size", (.gogoproto.moretags) = "yaml:&#92;"size&#92;""];</code>
+       */
+      public Builder setQuantity(
+          com.akash.base.v1beta2.ResourcevalueProto.ResourceValue.Builder builderForValue) {
+        if (quantityBuilder_ == null) {
+          quantity_ = builderForValue.build();
+        } else {
+          quantityBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.base.v1beta2.ResourceValue quantity = 2 [json_name = "quantity", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "size", (.gogoproto.moretags) = "yaml:&#92;"size&#92;""];</code>
+       */
+      public Builder mergeQuantity(com.akash.base.v1beta2.ResourcevalueProto.ResourceValue value) {
+        if (quantityBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            quantity_ != null &&
+            quantity_ != com.akash.base.v1beta2.ResourcevalueProto.ResourceValue.getDefaultInstance()) {
+            getQuantityBuilder().mergeFrom(value);
+          } else {
+            quantity_ = value;
+          }
+        } else {
+          quantityBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.base.v1beta2.ResourceValue quantity = 2 [json_name = "quantity", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "size", (.gogoproto.moretags) = "yaml:&#92;"size&#92;""];</code>
+       */
+      public Builder clearQuantity() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        quantity_ = null;
+        if (quantityBuilder_ != null) {
+          quantityBuilder_.dispose();
+          quantityBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.base.v1beta2.ResourceValue quantity = 2 [json_name = "quantity", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "size", (.gogoproto.moretags) = "yaml:&#92;"size&#92;""];</code>
+       */
+      public com.akash.base.v1beta2.ResourcevalueProto.ResourceValue.Builder getQuantityBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getQuantityFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.akash.base.v1beta2.ResourceValue quantity = 2 [json_name = "quantity", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "size", (.gogoproto.moretags) = "yaml:&#92;"size&#92;""];</code>
+       */
+      public com.akash.base.v1beta2.ResourcevalueProto.ResourceValueOrBuilder getQuantityOrBuilder() {
+        if (quantityBuilder_ != null) {
+          return quantityBuilder_.getMessageOrBuilder();
+        } else {
+          return quantity_ == null ?
+              com.akash.base.v1beta2.ResourcevalueProto.ResourceValue.getDefaultInstance() : quantity_;
+        }
+      }
+      /**
+       * <code>.akash.base.v1beta2.ResourceValue quantity = 2 [json_name = "quantity", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "size", (.gogoproto.moretags) = "yaml:&#92;"size&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.base.v1beta2.ResourcevalueProto.ResourceValue, com.akash.base.v1beta2.ResourcevalueProto.ResourceValue.Builder, com.akash.base.v1beta2.ResourcevalueProto.ResourceValueOrBuilder> 
+          getQuantityFieldBuilder() {
+        if (quantityBuilder_ == null) {
+          quantityBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.akash.base.v1beta2.ResourcevalueProto.ResourceValue, com.akash.base.v1beta2.ResourcevalueProto.ResourceValue.Builder, com.akash.base.v1beta2.ResourcevalueProto.ResourceValueOrBuilder>(
+                  getQuantity(),
+                  getParentForChildren(),
+                  isClean());
+          quantity_ = null;
+        }
+        return quantityBuilder_;
+      }
+
+      private java.util.List<com.akash.base.v1beta2.AttributeProto.Attribute> attributes_ =
+        java.util.Collections.emptyList();
+      private void ensureAttributesIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          attributes_ = new java.util.ArrayList<com.akash.base.v1beta2.AttributeProto.Attribute>(attributes_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.akash.base.v1beta2.AttributeProto.Attribute, com.akash.base.v1beta2.AttributeProto.Attribute.Builder, com.akash.base.v1beta2.AttributeProto.AttributeOrBuilder> attributesBuilder_;
+
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 3 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public java.util.List<com.akash.base.v1beta2.AttributeProto.Attribute> getAttributesList() {
+        if (attributesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(attributes_);
+        } else {
+          return attributesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 3 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public int getAttributesCount() {
+        if (attributesBuilder_ == null) {
+          return attributes_.size();
+        } else {
+          return attributesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 3 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public com.akash.base.v1beta2.AttributeProto.Attribute getAttributes(int index) {
+        if (attributesBuilder_ == null) {
+          return attributes_.get(index);
+        } else {
+          return attributesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 3 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public Builder setAttributes(
+          int index, com.akash.base.v1beta2.AttributeProto.Attribute value) {
+        if (attributesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAttributesIsMutable();
+          attributes_.set(index, value);
+          onChanged();
+        } else {
+          attributesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 3 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public Builder setAttributes(
+          int index, com.akash.base.v1beta2.AttributeProto.Attribute.Builder builderForValue) {
+        if (attributesBuilder_ == null) {
+          ensureAttributesIsMutable();
+          attributes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          attributesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 3 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public Builder addAttributes(com.akash.base.v1beta2.AttributeProto.Attribute value) {
+        if (attributesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAttributesIsMutable();
+          attributes_.add(value);
+          onChanged();
+        } else {
+          attributesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 3 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public Builder addAttributes(
+          int index, com.akash.base.v1beta2.AttributeProto.Attribute value) {
+        if (attributesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAttributesIsMutable();
+          attributes_.add(index, value);
+          onChanged();
+        } else {
+          attributesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 3 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public Builder addAttributes(
+          com.akash.base.v1beta2.AttributeProto.Attribute.Builder builderForValue) {
+        if (attributesBuilder_ == null) {
+          ensureAttributesIsMutable();
+          attributes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          attributesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 3 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public Builder addAttributes(
+          int index, com.akash.base.v1beta2.AttributeProto.Attribute.Builder builderForValue) {
+        if (attributesBuilder_ == null) {
+          ensureAttributesIsMutable();
+          attributes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          attributesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 3 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public Builder addAllAttributes(
+          java.lang.Iterable<? extends com.akash.base.v1beta2.AttributeProto.Attribute> values) {
+        if (attributesBuilder_ == null) {
+          ensureAttributesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, attributes_);
+          onChanged();
+        } else {
+          attributesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 3 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public Builder clearAttributes() {
+        if (attributesBuilder_ == null) {
+          attributes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          attributesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 3 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public Builder removeAttributes(int index) {
+        if (attributesBuilder_ == null) {
+          ensureAttributesIsMutable();
+          attributes_.remove(index);
+          onChanged();
+        } else {
+          attributesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 3 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public com.akash.base.v1beta2.AttributeProto.Attribute.Builder getAttributesBuilder(
+          int index) {
+        return getAttributesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 3 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public com.akash.base.v1beta2.AttributeProto.AttributeOrBuilder getAttributesOrBuilder(
+          int index) {
+        if (attributesBuilder_ == null) {
+          return attributes_.get(index);  } else {
+          return attributesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 3 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public java.util.List<? extends com.akash.base.v1beta2.AttributeProto.AttributeOrBuilder> 
+           getAttributesOrBuilderList() {
+        if (attributesBuilder_ != null) {
+          return attributesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(attributes_);
+        }
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 3 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public com.akash.base.v1beta2.AttributeProto.Attribute.Builder addAttributesBuilder() {
+        return getAttributesFieldBuilder().addBuilder(
+            com.akash.base.v1beta2.AttributeProto.Attribute.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 3 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public com.akash.base.v1beta2.AttributeProto.Attribute.Builder addAttributesBuilder(
+          int index) {
+        return getAttributesFieldBuilder().addBuilder(
+            index, com.akash.base.v1beta2.AttributeProto.Attribute.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .akash.base.v1beta2.Attribute attributes = 3 [json_name = "attributes", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "attributes,omitempty", (.gogoproto.moretags) = "yaml:&#92;"attributes,omitempty&#92;"", (.gogoproto.castrepeated) = "Attributes"];</code>
+       */
+      public java.util.List<com.akash.base.v1beta2.AttributeProto.Attribute.Builder> 
+           getAttributesBuilderList() {
+        return getAttributesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.akash.base.v1beta2.AttributeProto.Attribute, com.akash.base.v1beta2.AttributeProto.Attribute.Builder, com.akash.base.v1beta2.AttributeProto.AttributeOrBuilder> 
+          getAttributesFieldBuilder() {
+        if (attributesBuilder_ == null) {
+          attributesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.akash.base.v1beta2.AttributeProto.Attribute, com.akash.base.v1beta2.AttributeProto.Attribute.Builder, com.akash.base.v1beta2.AttributeProto.AttributeOrBuilder>(
+                  attributes_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          attributes_ = null;
+        }
+        return attributesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.base.v1beta2.Storage)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.base.v1beta2.Storage)
+    private static final com.akash.base.v1beta2.ResourceProto.Storage DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.base.v1beta2.ResourceProto.Storage();
+    }
+
+    public static com.akash.base.v1beta2.ResourceProto.Storage getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Storage>
+        PARSER = new com.google.protobuf.AbstractParser<Storage>() {
+      @java.lang.Override
+      public Storage parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Storage> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Storage> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.base.v1beta2.ResourceProto.Storage getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_base_v1beta2_CPU_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_base_v1beta2_CPU_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_base_v1beta2_Memory_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_base_v1beta2_Memory_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_base_v1beta2_Storage_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_base_v1beta2_Storage_fieldAccessorTable;
 
@@ -60,13 +3166,13 @@ public final class ResourceProto {
       "antity\022\210\001\n\nattributes\030\003 \003(\0132\035.akash.base" +
       ".v1beta2.AttributeBI\310\336\037\000\352\336\037\024attributes,o" +
       "mitempty\362\336\037\033yaml:\"attributes,omitempty\"\252" +
-      "\337\037\nAttributesR\nattributes:\004\350\240\037\001B\313\001\n\026com." +
-      "akash.base.v1beta2B\rResourceProtoP\001Z8git" +
-      "hub.com/akash-network/akash-api/go/node/" +
-      "types/v1beta2\242\002\003ABX\252\002\022Akash.Base.V1beta2" +
-      "\312\002\022Akash\\Base\\V1beta2\342\002\036Akash\\Base\\V1bet" +
-      "a2\\GPBMetadata\352\002\024Akash::Base::V1beta2b\006p" +
-      "roto3"
+      "\337\037\nAttributesR\nattributes:\004\350\240\037\001B\311\001\n\026com." +
+      "akash.base.v1beta2B\rResourceProtoZ8githu" +
+      "b.com/akash-network/akash-api/go/node/ty" +
+      "pes/v1beta2\242\002\003ABX\252\002\022Akash.Base.V1beta2\312\002" +
+      "\022Akash\\Base\\V1beta2\342\002\036Akash\\Base\\V1beta2" +
+      "\\GPBMetadata\352\002\024Akash::Base::V1beta2b\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -26,11 +26,11 @@ public final class QueryProto {
       "\n\032cudos/cudoMint/query.proto\022\016cudos.cudo" +
       "Mint\032\034google/api/annotations.proto\032*cosm" +
       "os/base/query/v1beta1/pagination.proto2\007" +
-      "\n\005QueryB\256\001\n\022com.cudos.cudoMintB\nQueryPro" +
-      "toP\001Z3github.com/CudoVentures/cudos-node" +
-      "/x/cudoMint/types\242\002\003CCX\252\002\016Cudos.CudoMint" +
-      "\312\002\016Cudos\\CudoMint\342\002\032Cudos\\CudoMint\\GPBMe" +
-      "tadata\352\002\017Cudos::CudoMintb\006proto3"
+      "\n\005QueryB\254\001\n\022com.cudos.cudoMintB\nQueryPro" +
+      "toZ3github.com/CudoVentures/cudos-node/x" +
+      "/cudoMint/types\242\002\003CCX\252\002\016Cudos.CudoMint\312\002" +
+      "\016Cudos\\CudoMint\342\002\032Cudos\\CudoMint\\GPBMeta" +
+      "data\352\002\017Cudos::CudoMintb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

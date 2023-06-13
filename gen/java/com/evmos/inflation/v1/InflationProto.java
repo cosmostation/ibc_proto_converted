@@ -14,14 +14,2357 @@ public final class InflationProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface InflationDistributionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.inflation.v1.InflationDistribution)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * staking_rewards defines the proportion of the minted minted_denom that is
+     * to be allocated as staking rewards
+     * </pre>
+     *
+     * <code>string staking_rewards = 1 [json_name = "stakingRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The stakingRewards.
+     */
+    java.lang.String getStakingRewards();
+    /**
+     * <pre>
+     * staking_rewards defines the proportion of the minted minted_denom that is
+     * to be allocated as staking rewards
+     * </pre>
+     *
+     * <code>string staking_rewards = 1 [json_name = "stakingRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for stakingRewards.
+     */
+    com.google.protobuf.ByteString
+        getStakingRewardsBytes();
+
+    /**
+     * <pre>
+     * usage_incentives defines the proportion of the minted minted_denom that is
+     * to be allocated to the incentives module address
+     * </pre>
+     *
+     * <code>string usage_incentives = 2 [json_name = "usageIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The usageIncentives.
+     */
+    java.lang.String getUsageIncentives();
+    /**
+     * <pre>
+     * usage_incentives defines the proportion of the minted minted_denom that is
+     * to be allocated to the incentives module address
+     * </pre>
+     *
+     * <code>string usage_incentives = 2 [json_name = "usageIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for usageIncentives.
+     */
+    com.google.protobuf.ByteString
+        getUsageIncentivesBytes();
+
+    /**
+     * <pre>
+     * community_pool defines the proportion of the minted minted_denom that is to
+     * be allocated to the community pool
+     * </pre>
+     *
+     * <code>string community_pool = 3 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The communityPool.
+     */
+    java.lang.String getCommunityPool();
+    /**
+     * <pre>
+     * community_pool defines the proportion of the minted minted_denom that is to
+     * be allocated to the community pool
+     * </pre>
+     *
+     * <code>string community_pool = 3 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for communityPool.
+     */
+    com.google.protobuf.ByteString
+        getCommunityPoolBytes();
+  }
+  /**
+   * <pre>
+   * InflationDistribution defines the distribution in which inflation is
+   * allocated through minting on each epoch (staking, incentives, community). It
+   * excludes the team vesting distribution, as this is minted once at genesis.
+   * The initial InflationDistribution can be calculated from the Evmos Token
+   * Model like this:
+   * mintDistribution1 = distribution1 / (1 - teamVestingDistribution)
+   * 0.5333333         = 40%           / (1 - 25%)
+   * </pre>
+   *
+   * Protobuf type {@code evmos.inflation.v1.InflationDistribution}
+   */
+  public static final class InflationDistribution extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.inflation.v1.InflationDistribution)
+      InflationDistributionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use InflationDistribution.newBuilder() to construct.
+    private InflationDistribution(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private InflationDistribution() {
+      stakingRewards_ = "";
+      usageIncentives_ = "";
+      communityPool_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new InflationDistribution();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.inflation.v1.InflationProto.internal_static_evmos_inflation_v1_InflationDistribution_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.inflation.v1.InflationProto.internal_static_evmos_inflation_v1_InflationDistribution_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.inflation.v1.InflationProto.InflationDistribution.class, com.evmos.inflation.v1.InflationProto.InflationDistribution.Builder.class);
+    }
+
+    public static final int STAKING_REWARDS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stakingRewards_ = "";
+    /**
+     * <pre>
+     * staking_rewards defines the proportion of the minted minted_denom that is
+     * to be allocated as staking rewards
+     * </pre>
+     *
+     * <code>string staking_rewards = 1 [json_name = "stakingRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The stakingRewards.
+     */
+    @java.lang.Override
+    public java.lang.String getStakingRewards() {
+      java.lang.Object ref = stakingRewards_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        stakingRewards_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * staking_rewards defines the proportion of the minted minted_denom that is
+     * to be allocated as staking rewards
+     * </pre>
+     *
+     * <code>string staking_rewards = 1 [json_name = "stakingRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for stakingRewards.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStakingRewardsBytes() {
+      java.lang.Object ref = stakingRewards_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        stakingRewards_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int USAGE_INCENTIVES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object usageIncentives_ = "";
+    /**
+     * <pre>
+     * usage_incentives defines the proportion of the minted minted_denom that is
+     * to be allocated to the incentives module address
+     * </pre>
+     *
+     * <code>string usage_incentives = 2 [json_name = "usageIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The usageIncentives.
+     */
+    @java.lang.Override
+    public java.lang.String getUsageIncentives() {
+      java.lang.Object ref = usageIncentives_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        usageIncentives_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * usage_incentives defines the proportion of the minted minted_denom that is
+     * to be allocated to the incentives module address
+     * </pre>
+     *
+     * <code>string usage_incentives = 2 [json_name = "usageIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for usageIncentives.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUsageIncentivesBytes() {
+      java.lang.Object ref = usageIncentives_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        usageIncentives_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COMMUNITY_POOL_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object communityPool_ = "";
+    /**
+     * <pre>
+     * community_pool defines the proportion of the minted minted_denom that is to
+     * be allocated to the community pool
+     * </pre>
+     *
+     * <code>string community_pool = 3 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The communityPool.
+     */
+    @java.lang.Override
+    public java.lang.String getCommunityPool() {
+      java.lang.Object ref = communityPool_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        communityPool_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * community_pool defines the proportion of the minted minted_denom that is to
+     * be allocated to the community pool
+     * </pre>
+     *
+     * <code>string community_pool = 3 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for communityPool.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCommunityPoolBytes() {
+      java.lang.Object ref = communityPool_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        communityPool_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingRewards_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, stakingRewards_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(usageIncentives_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, usageIncentives_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(communityPool_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, communityPool_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(stakingRewards_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, stakingRewards_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(usageIncentives_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, usageIncentives_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(communityPool_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, communityPool_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.inflation.v1.InflationProto.InflationDistribution)) {
+        return super.equals(obj);
+      }
+      com.evmos.inflation.v1.InflationProto.InflationDistribution other = (com.evmos.inflation.v1.InflationProto.InflationDistribution) obj;
+
+      if (!getStakingRewards()
+          .equals(other.getStakingRewards())) return false;
+      if (!getUsageIncentives()
+          .equals(other.getUsageIncentives())) return false;
+      if (!getCommunityPool()
+          .equals(other.getCommunityPool())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STAKING_REWARDS_FIELD_NUMBER;
+      hash = (53 * hash) + getStakingRewards().hashCode();
+      hash = (37 * hash) + USAGE_INCENTIVES_FIELD_NUMBER;
+      hash = (53 * hash) + getUsageIncentives().hashCode();
+      hash = (37 * hash) + COMMUNITY_POOL_FIELD_NUMBER;
+      hash = (53 * hash) + getCommunityPool().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.inflation.v1.InflationProto.InflationDistribution parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.inflation.v1.InflationProto.InflationDistribution parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.inflation.v1.InflationProto.InflationDistribution parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.inflation.v1.InflationProto.InflationDistribution parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.inflation.v1.InflationProto.InflationDistribution parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.inflation.v1.InflationProto.InflationDistribution parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.inflation.v1.InflationProto.InflationDistribution parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.inflation.v1.InflationProto.InflationDistribution parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.inflation.v1.InflationProto.InflationDistribution parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.inflation.v1.InflationProto.InflationDistribution parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.inflation.v1.InflationProto.InflationDistribution parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.inflation.v1.InflationProto.InflationDistribution parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.inflation.v1.InflationProto.InflationDistribution prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * InflationDistribution defines the distribution in which inflation is
+     * allocated through minting on each epoch (staking, incentives, community). It
+     * excludes the team vesting distribution, as this is minted once at genesis.
+     * The initial InflationDistribution can be calculated from the Evmos Token
+     * Model like this:
+     * mintDistribution1 = distribution1 / (1 - teamVestingDistribution)
+     * 0.5333333         = 40%           / (1 - 25%)
+     * </pre>
+     *
+     * Protobuf type {@code evmos.inflation.v1.InflationDistribution}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.inflation.v1.InflationDistribution)
+        com.evmos.inflation.v1.InflationProto.InflationDistributionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.inflation.v1.InflationProto.internal_static_evmos_inflation_v1_InflationDistribution_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.inflation.v1.InflationProto.internal_static_evmos_inflation_v1_InflationDistribution_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.inflation.v1.InflationProto.InflationDistribution.class, com.evmos.inflation.v1.InflationProto.InflationDistribution.Builder.class);
+      }
+
+      // Construct using com.evmos.inflation.v1.InflationProto.InflationDistribution.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        stakingRewards_ = "";
+        usageIncentives_ = "";
+        communityPool_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.inflation.v1.InflationProto.internal_static_evmos_inflation_v1_InflationDistribution_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.inflation.v1.InflationProto.InflationDistribution getDefaultInstanceForType() {
+        return com.evmos.inflation.v1.InflationProto.InflationDistribution.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.inflation.v1.InflationProto.InflationDistribution build() {
+        com.evmos.inflation.v1.InflationProto.InflationDistribution result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.inflation.v1.InflationProto.InflationDistribution buildPartial() {
+        com.evmos.inflation.v1.InflationProto.InflationDistribution result = new com.evmos.inflation.v1.InflationProto.InflationDistribution(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.evmos.inflation.v1.InflationProto.InflationDistribution result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.stakingRewards_ = stakingRewards_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.usageIncentives_ = usageIncentives_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.communityPool_ = communityPool_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.inflation.v1.InflationProto.InflationDistribution) {
+          return mergeFrom((com.evmos.inflation.v1.InflationProto.InflationDistribution)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.inflation.v1.InflationProto.InflationDistribution other) {
+        if (other == com.evmos.inflation.v1.InflationProto.InflationDistribution.getDefaultInstance()) return this;
+        if (!other.getStakingRewards().isEmpty()) {
+          stakingRewards_ = other.stakingRewards_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getUsageIncentives().isEmpty()) {
+          usageIncentives_ = other.usageIncentives_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getCommunityPool().isEmpty()) {
+          communityPool_ = other.communityPool_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                stakingRewards_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                usageIncentives_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                communityPool_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object stakingRewards_ = "";
+      /**
+       * <pre>
+       * staking_rewards defines the proportion of the minted minted_denom that is
+       * to be allocated as staking rewards
+       * </pre>
+       *
+       * <code>string staking_rewards = 1 [json_name = "stakingRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The stakingRewards.
+       */
+      public java.lang.String getStakingRewards() {
+        java.lang.Object ref = stakingRewards_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          stakingRewards_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staking_rewards defines the proportion of the minted minted_denom that is
+       * to be allocated as staking rewards
+       * </pre>
+       *
+       * <code>string staking_rewards = 1 [json_name = "stakingRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for stakingRewards.
+       */
+      public com.google.protobuf.ByteString
+          getStakingRewardsBytes() {
+        java.lang.Object ref = stakingRewards_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          stakingRewards_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * staking_rewards defines the proportion of the minted minted_denom that is
+       * to be allocated as staking rewards
+       * </pre>
+       *
+       * <code>string staking_rewards = 1 [json_name = "stakingRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The stakingRewards to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingRewards(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        stakingRewards_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_rewards defines the proportion of the minted minted_denom that is
+       * to be allocated as staking rewards
+       * </pre>
+       *
+       * <code>string staking_rewards = 1 [json_name = "stakingRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStakingRewards() {
+        stakingRewards_ = getDefaultInstance().getStakingRewards();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * staking_rewards defines the proportion of the minted minted_denom that is
+       * to be allocated as staking rewards
+       * </pre>
+       *
+       * <code>string staking_rewards = 1 [json_name = "stakingRewards", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for stakingRewards to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStakingRewardsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        stakingRewards_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object usageIncentives_ = "";
+      /**
+       * <pre>
+       * usage_incentives defines the proportion of the minted minted_denom that is
+       * to be allocated to the incentives module address
+       * </pre>
+       *
+       * <code>string usage_incentives = 2 [json_name = "usageIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The usageIncentives.
+       */
+      public java.lang.String getUsageIncentives() {
+        java.lang.Object ref = usageIncentives_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          usageIncentives_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * usage_incentives defines the proportion of the minted minted_denom that is
+       * to be allocated to the incentives module address
+       * </pre>
+       *
+       * <code>string usage_incentives = 2 [json_name = "usageIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for usageIncentives.
+       */
+      public com.google.protobuf.ByteString
+          getUsageIncentivesBytes() {
+        java.lang.Object ref = usageIncentives_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          usageIncentives_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * usage_incentives defines the proportion of the minted minted_denom that is
+       * to be allocated to the incentives module address
+       * </pre>
+       *
+       * <code>string usage_incentives = 2 [json_name = "usageIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The usageIncentives to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUsageIncentives(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        usageIncentives_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * usage_incentives defines the proportion of the minted minted_denom that is
+       * to be allocated to the incentives module address
+       * </pre>
+       *
+       * <code>string usage_incentives = 2 [json_name = "usageIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUsageIncentives() {
+        usageIncentives_ = getDefaultInstance().getUsageIncentives();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * usage_incentives defines the proportion of the minted minted_denom that is
+       * to be allocated to the incentives module address
+       * </pre>
+       *
+       * <code>string usage_incentives = 2 [json_name = "usageIncentives", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for usageIncentives to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUsageIncentivesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        usageIncentives_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object communityPool_ = "";
+      /**
+       * <pre>
+       * community_pool defines the proportion of the minted minted_denom that is to
+       * be allocated to the community pool
+       * </pre>
+       *
+       * <code>string community_pool = 3 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The communityPool.
+       */
+      public java.lang.String getCommunityPool() {
+        java.lang.Object ref = communityPool_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          communityPool_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * community_pool defines the proportion of the minted minted_denom that is to
+       * be allocated to the community pool
+       * </pre>
+       *
+       * <code>string community_pool = 3 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for communityPool.
+       */
+      public com.google.protobuf.ByteString
+          getCommunityPoolBytes() {
+        java.lang.Object ref = communityPool_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          communityPool_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * community_pool defines the proportion of the minted minted_denom that is to
+       * be allocated to the community pool
+       * </pre>
+       *
+       * <code>string community_pool = 3 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The communityPool to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCommunityPool(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        communityPool_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * community_pool defines the proportion of the minted minted_denom that is to
+       * be allocated to the community pool
+       * </pre>
+       *
+       * <code>string community_pool = 3 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCommunityPool() {
+        communityPool_ = getDefaultInstance().getCommunityPool();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * community_pool defines the proportion of the minted minted_denom that is to
+       * be allocated to the community pool
+       * </pre>
+       *
+       * <code>string community_pool = 3 [json_name = "communityPool", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for communityPool to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCommunityPoolBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        communityPool_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.inflation.v1.InflationDistribution)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.inflation.v1.InflationDistribution)
+    private static final com.evmos.inflation.v1.InflationProto.InflationDistribution DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.inflation.v1.InflationProto.InflationDistribution();
+    }
+
+    public static com.evmos.inflation.v1.InflationProto.InflationDistribution getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<InflationDistribution>
+        PARSER = new com.google.protobuf.AbstractParser<InflationDistribution>() {
+      @java.lang.Override
+      public InflationDistribution parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<InflationDistribution> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<InflationDistribution> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.inflation.v1.InflationProto.InflationDistribution getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ExponentialCalculationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.inflation.v1.ExponentialCalculation)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * a defines the initial value
+     * </pre>
+     *
+     * <code>string a = 1 [json_name = "a", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The a.
+     */
+    java.lang.String getA();
+    /**
+     * <pre>
+     * a defines the initial value
+     * </pre>
+     *
+     * <code>string a = 1 [json_name = "a", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for a.
+     */
+    com.google.protobuf.ByteString
+        getABytes();
+
+    /**
+     * <pre>
+     * r defines the reduction factor
+     * </pre>
+     *
+     * <code>string r = 2 [json_name = "r", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The r.
+     */
+    java.lang.String getR();
+    /**
+     * <pre>
+     * r defines the reduction factor
+     * </pre>
+     *
+     * <code>string r = 2 [json_name = "r", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for r.
+     */
+    com.google.protobuf.ByteString
+        getRBytes();
+
+    /**
+     * <pre>
+     * c defines the parameter for long term inflation
+     * </pre>
+     *
+     * <code>string c = 3 [json_name = "c", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The c.
+     */
+    java.lang.String getC();
+    /**
+     * <pre>
+     * c defines the parameter for long term inflation
+     * </pre>
+     *
+     * <code>string c = 3 [json_name = "c", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for c.
+     */
+    com.google.protobuf.ByteString
+        getCBytes();
+
+    /**
+     * <pre>
+     * bonding_target
+     * </pre>
+     *
+     * <code>string bonding_target = 4 [json_name = "bondingTarget", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bondingTarget.
+     */
+    java.lang.String getBondingTarget();
+    /**
+     * <pre>
+     * bonding_target
+     * </pre>
+     *
+     * <code>string bonding_target = 4 [json_name = "bondingTarget", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for bondingTarget.
+     */
+    com.google.protobuf.ByteString
+        getBondingTargetBytes();
+
+    /**
+     * <pre>
+     * max_variance
+     * </pre>
+     *
+     * <code>string max_variance = 5 [json_name = "maxVariance", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The maxVariance.
+     */
+    java.lang.String getMaxVariance();
+    /**
+     * <pre>
+     * max_variance
+     * </pre>
+     *
+     * <code>string max_variance = 5 [json_name = "maxVariance", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for maxVariance.
+     */
+    com.google.protobuf.ByteString
+        getMaxVarianceBytes();
+  }
+  /**
+   * <pre>
+   * ExponentialCalculation holds factors to calculate exponential inflation on
+   * each period. Calculation reference:
+   * periodProvision = exponentialDecay       *  bondingIncentive
+   * f(x)            = (a * (1 - r) ^ x + c)  *  (1 + max_variance - bondedRatio *
+   * (max_variance / bonding_target))
+   * </pre>
+   *
+   * Protobuf type {@code evmos.inflation.v1.ExponentialCalculation}
+   */
+  public static final class ExponentialCalculation extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.inflation.v1.ExponentialCalculation)
+      ExponentialCalculationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ExponentialCalculation.newBuilder() to construct.
+    private ExponentialCalculation(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ExponentialCalculation() {
+      a_ = "";
+      r_ = "";
+      c_ = "";
+      bondingTarget_ = "";
+      maxVariance_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ExponentialCalculation();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.inflation.v1.InflationProto.internal_static_evmos_inflation_v1_ExponentialCalculation_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.inflation.v1.InflationProto.internal_static_evmos_inflation_v1_ExponentialCalculation_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.inflation.v1.InflationProto.ExponentialCalculation.class, com.evmos.inflation.v1.InflationProto.ExponentialCalculation.Builder.class);
+    }
+
+    public static final int A_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object a_ = "";
+    /**
+     * <pre>
+     * a defines the initial value
+     * </pre>
+     *
+     * <code>string a = 1 [json_name = "a", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The a.
+     */
+    @java.lang.Override
+    public java.lang.String getA() {
+      java.lang.Object ref = a_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        a_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * a defines the initial value
+     * </pre>
+     *
+     * <code>string a = 1 [json_name = "a", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for a.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getABytes() {
+      java.lang.Object ref = a_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        a_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int R_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object r_ = "";
+    /**
+     * <pre>
+     * r defines the reduction factor
+     * </pre>
+     *
+     * <code>string r = 2 [json_name = "r", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The r.
+     */
+    @java.lang.Override
+    public java.lang.String getR() {
+      java.lang.Object ref = r_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        r_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * r defines the reduction factor
+     * </pre>
+     *
+     * <code>string r = 2 [json_name = "r", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for r.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRBytes() {
+      java.lang.Object ref = r_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        r_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int C_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object c_ = "";
+    /**
+     * <pre>
+     * c defines the parameter for long term inflation
+     * </pre>
+     *
+     * <code>string c = 3 [json_name = "c", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The c.
+     */
+    @java.lang.Override
+    public java.lang.String getC() {
+      java.lang.Object ref = c_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        c_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * c defines the parameter for long term inflation
+     * </pre>
+     *
+     * <code>string c = 3 [json_name = "c", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for c.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCBytes() {
+      java.lang.Object ref = c_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        c_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BONDING_TARGET_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object bondingTarget_ = "";
+    /**
+     * <pre>
+     * bonding_target
+     * </pre>
+     *
+     * <code>string bonding_target = 4 [json_name = "bondingTarget", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bondingTarget.
+     */
+    @java.lang.Override
+    public java.lang.String getBondingTarget() {
+      java.lang.Object ref = bondingTarget_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bondingTarget_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * bonding_target
+     * </pre>
+     *
+     * <code>string bonding_target = 4 [json_name = "bondingTarget", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for bondingTarget.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBondingTargetBytes() {
+      java.lang.Object ref = bondingTarget_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bondingTarget_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MAX_VARIANCE_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object maxVariance_ = "";
+    /**
+     * <pre>
+     * max_variance
+     * </pre>
+     *
+     * <code>string max_variance = 5 [json_name = "maxVariance", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The maxVariance.
+     */
+    @java.lang.Override
+    public java.lang.String getMaxVariance() {
+      java.lang.Object ref = maxVariance_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        maxVariance_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * max_variance
+     * </pre>
+     *
+     * <code>string max_variance = 5 [json_name = "maxVariance", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for maxVariance.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMaxVarianceBytes() {
+      java.lang.Object ref = maxVariance_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        maxVariance_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(a_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, a_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(r_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, r_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(c_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, c_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bondingTarget_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, bondingTarget_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maxVariance_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, maxVariance_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(a_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, a_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(r_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, r_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(c_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, c_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bondingTarget_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, bondingTarget_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maxVariance_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, maxVariance_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.inflation.v1.InflationProto.ExponentialCalculation)) {
+        return super.equals(obj);
+      }
+      com.evmos.inflation.v1.InflationProto.ExponentialCalculation other = (com.evmos.inflation.v1.InflationProto.ExponentialCalculation) obj;
+
+      if (!getA()
+          .equals(other.getA())) return false;
+      if (!getR()
+          .equals(other.getR())) return false;
+      if (!getC()
+          .equals(other.getC())) return false;
+      if (!getBondingTarget()
+          .equals(other.getBondingTarget())) return false;
+      if (!getMaxVariance()
+          .equals(other.getMaxVariance())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + A_FIELD_NUMBER;
+      hash = (53 * hash) + getA().hashCode();
+      hash = (37 * hash) + R_FIELD_NUMBER;
+      hash = (53 * hash) + getR().hashCode();
+      hash = (37 * hash) + C_FIELD_NUMBER;
+      hash = (53 * hash) + getC().hashCode();
+      hash = (37 * hash) + BONDING_TARGET_FIELD_NUMBER;
+      hash = (53 * hash) + getBondingTarget().hashCode();
+      hash = (37 * hash) + MAX_VARIANCE_FIELD_NUMBER;
+      hash = (53 * hash) + getMaxVariance().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.inflation.v1.InflationProto.ExponentialCalculation parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.inflation.v1.InflationProto.ExponentialCalculation parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.inflation.v1.InflationProto.ExponentialCalculation parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.inflation.v1.InflationProto.ExponentialCalculation parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.inflation.v1.InflationProto.ExponentialCalculation parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.inflation.v1.InflationProto.ExponentialCalculation parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.inflation.v1.InflationProto.ExponentialCalculation parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.inflation.v1.InflationProto.ExponentialCalculation parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.inflation.v1.InflationProto.ExponentialCalculation parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.inflation.v1.InflationProto.ExponentialCalculation parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.inflation.v1.InflationProto.ExponentialCalculation parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.inflation.v1.InflationProto.ExponentialCalculation parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.inflation.v1.InflationProto.ExponentialCalculation prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ExponentialCalculation holds factors to calculate exponential inflation on
+     * each period. Calculation reference:
+     * periodProvision = exponentialDecay       *  bondingIncentive
+     * f(x)            = (a * (1 - r) ^ x + c)  *  (1 + max_variance - bondedRatio *
+     * (max_variance / bonding_target))
+     * </pre>
+     *
+     * Protobuf type {@code evmos.inflation.v1.ExponentialCalculation}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.inflation.v1.ExponentialCalculation)
+        com.evmos.inflation.v1.InflationProto.ExponentialCalculationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.inflation.v1.InflationProto.internal_static_evmos_inflation_v1_ExponentialCalculation_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.inflation.v1.InflationProto.internal_static_evmos_inflation_v1_ExponentialCalculation_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.inflation.v1.InflationProto.ExponentialCalculation.class, com.evmos.inflation.v1.InflationProto.ExponentialCalculation.Builder.class);
+      }
+
+      // Construct using com.evmos.inflation.v1.InflationProto.ExponentialCalculation.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        a_ = "";
+        r_ = "";
+        c_ = "";
+        bondingTarget_ = "";
+        maxVariance_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.inflation.v1.InflationProto.internal_static_evmos_inflation_v1_ExponentialCalculation_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.inflation.v1.InflationProto.ExponentialCalculation getDefaultInstanceForType() {
+        return com.evmos.inflation.v1.InflationProto.ExponentialCalculation.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.inflation.v1.InflationProto.ExponentialCalculation build() {
+        com.evmos.inflation.v1.InflationProto.ExponentialCalculation result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.inflation.v1.InflationProto.ExponentialCalculation buildPartial() {
+        com.evmos.inflation.v1.InflationProto.ExponentialCalculation result = new com.evmos.inflation.v1.InflationProto.ExponentialCalculation(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.evmos.inflation.v1.InflationProto.ExponentialCalculation result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.a_ = a_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.r_ = r_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.c_ = c_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.bondingTarget_ = bondingTarget_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.maxVariance_ = maxVariance_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.inflation.v1.InflationProto.ExponentialCalculation) {
+          return mergeFrom((com.evmos.inflation.v1.InflationProto.ExponentialCalculation)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.inflation.v1.InflationProto.ExponentialCalculation other) {
+        if (other == com.evmos.inflation.v1.InflationProto.ExponentialCalculation.getDefaultInstance()) return this;
+        if (!other.getA().isEmpty()) {
+          a_ = other.a_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getR().isEmpty()) {
+          r_ = other.r_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getC().isEmpty()) {
+          c_ = other.c_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getBondingTarget().isEmpty()) {
+          bondingTarget_ = other.bondingTarget_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getMaxVariance().isEmpty()) {
+          maxVariance_ = other.maxVariance_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                a_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                r_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                c_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                bondingTarget_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                maxVariance_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object a_ = "";
+      /**
+       * <pre>
+       * a defines the initial value
+       * </pre>
+       *
+       * <code>string a = 1 [json_name = "a", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The a.
+       */
+      public java.lang.String getA() {
+        java.lang.Object ref = a_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          a_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * a defines the initial value
+       * </pre>
+       *
+       * <code>string a = 1 [json_name = "a", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for a.
+       */
+      public com.google.protobuf.ByteString
+          getABytes() {
+        java.lang.Object ref = a_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          a_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * a defines the initial value
+       * </pre>
+       *
+       * <code>string a = 1 [json_name = "a", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The a to set.
+       * @return This builder for chaining.
+       */
+      public Builder setA(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        a_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * a defines the initial value
+       * </pre>
+       *
+       * <code>string a = 1 [json_name = "a", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearA() {
+        a_ = getDefaultInstance().getA();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * a defines the initial value
+       * </pre>
+       *
+       * <code>string a = 1 [json_name = "a", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for a to set.
+       * @return This builder for chaining.
+       */
+      public Builder setABytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        a_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object r_ = "";
+      /**
+       * <pre>
+       * r defines the reduction factor
+       * </pre>
+       *
+       * <code>string r = 2 [json_name = "r", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The r.
+       */
+      public java.lang.String getR() {
+        java.lang.Object ref = r_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          r_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * r defines the reduction factor
+       * </pre>
+       *
+       * <code>string r = 2 [json_name = "r", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for r.
+       */
+      public com.google.protobuf.ByteString
+          getRBytes() {
+        java.lang.Object ref = r_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          r_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * r defines the reduction factor
+       * </pre>
+       *
+       * <code>string r = 2 [json_name = "r", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The r to set.
+       * @return This builder for chaining.
+       */
+      public Builder setR(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        r_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * r defines the reduction factor
+       * </pre>
+       *
+       * <code>string r = 2 [json_name = "r", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearR() {
+        r_ = getDefaultInstance().getR();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * r defines the reduction factor
+       * </pre>
+       *
+       * <code>string r = 2 [json_name = "r", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for r to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        r_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object c_ = "";
+      /**
+       * <pre>
+       * c defines the parameter for long term inflation
+       * </pre>
+       *
+       * <code>string c = 3 [json_name = "c", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The c.
+       */
+      public java.lang.String getC() {
+        java.lang.Object ref = c_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          c_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * c defines the parameter for long term inflation
+       * </pre>
+       *
+       * <code>string c = 3 [json_name = "c", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for c.
+       */
+      public com.google.protobuf.ByteString
+          getCBytes() {
+        java.lang.Object ref = c_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          c_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * c defines the parameter for long term inflation
+       * </pre>
+       *
+       * <code>string c = 3 [json_name = "c", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The c to set.
+       * @return This builder for chaining.
+       */
+      public Builder setC(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        c_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * c defines the parameter for long term inflation
+       * </pre>
+       *
+       * <code>string c = 3 [json_name = "c", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearC() {
+        c_ = getDefaultInstance().getC();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * c defines the parameter for long term inflation
+       * </pre>
+       *
+       * <code>string c = 3 [json_name = "c", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for c to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        c_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object bondingTarget_ = "";
+      /**
+       * <pre>
+       * bonding_target
+       * </pre>
+       *
+       * <code>string bonding_target = 4 [json_name = "bondingTarget", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bondingTarget.
+       */
+      public java.lang.String getBondingTarget() {
+        java.lang.Object ref = bondingTarget_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bondingTarget_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * bonding_target
+       * </pre>
+       *
+       * <code>string bonding_target = 4 [json_name = "bondingTarget", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for bondingTarget.
+       */
+      public com.google.protobuf.ByteString
+          getBondingTargetBytes() {
+        java.lang.Object ref = bondingTarget_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bondingTarget_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * bonding_target
+       * </pre>
+       *
+       * <code>string bonding_target = 4 [json_name = "bondingTarget", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bondingTarget to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBondingTarget(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        bondingTarget_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * bonding_target
+       * </pre>
+       *
+       * <code>string bonding_target = 4 [json_name = "bondingTarget", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBondingTarget() {
+        bondingTarget_ = getDefaultInstance().getBondingTarget();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * bonding_target
+       * </pre>
+       *
+       * <code>string bonding_target = 4 [json_name = "bondingTarget", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for bondingTarget to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBondingTargetBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        bondingTarget_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object maxVariance_ = "";
+      /**
+       * <pre>
+       * max_variance
+       * </pre>
+       *
+       * <code>string max_variance = 5 [json_name = "maxVariance", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The maxVariance.
+       */
+      public java.lang.String getMaxVariance() {
+        java.lang.Object ref = maxVariance_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          maxVariance_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * max_variance
+       * </pre>
+       *
+       * <code>string max_variance = 5 [json_name = "maxVariance", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for maxVariance.
+       */
+      public com.google.protobuf.ByteString
+          getMaxVarianceBytes() {
+        java.lang.Object ref = maxVariance_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          maxVariance_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * max_variance
+       * </pre>
+       *
+       * <code>string max_variance = 5 [json_name = "maxVariance", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The maxVariance to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxVariance(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        maxVariance_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * max_variance
+       * </pre>
+       *
+       * <code>string max_variance = 5 [json_name = "maxVariance", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxVariance() {
+        maxVariance_ = getDefaultInstance().getMaxVariance();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * max_variance
+       * </pre>
+       *
+       * <code>string max_variance = 5 [json_name = "maxVariance", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for maxVariance to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxVarianceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        maxVariance_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.inflation.v1.ExponentialCalculation)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.inflation.v1.ExponentialCalculation)
+    private static final com.evmos.inflation.v1.InflationProto.ExponentialCalculation DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.inflation.v1.InflationProto.ExponentialCalculation();
+    }
+
+    public static com.evmos.inflation.v1.InflationProto.ExponentialCalculation getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ExponentialCalculation>
+        PARSER = new com.google.protobuf.AbstractParser<ExponentialCalculation>() {
+      @java.lang.Override
+      public ExponentialCalculation parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ExponentialCalculation> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ExponentialCalculation> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.inflation.v1.InflationProto.ExponentialCalculation getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_inflation_v1_InflationDistribution_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_inflation_v1_InflationDistribution_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_inflation_v1_ExponentialCalculation_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_inflation_v1_ExponentialCalculation_fieldAccessorTable;
 
@@ -51,12 +2394,12 @@ public final class InflationProto {
       "et\030\004 \001(\tB.\310\336\037\000\332\336\037&github.com/cosmos/cosm" +
       "os-sdk/types.DecR\rbondingTarget\022Q\n\014max_v" +
       "ariance\030\005 \001(\tB.\310\336\037\000\332\336\037&github.com/cosmos" +
-      "/cosmos-sdk/types.DecR\013maxVarianceB\300\001\n\026c" +
-      "om.evmos.inflation.v1B\016InflationProtoP\001Z" +
-      ",github.com/evmos/evmos/v13/x/inflation/" +
-      "types\242\002\003EIX\252\002\022Evmos.Inflation.V1\312\002\022Evmos" +
-      "\\Inflation\\V1\342\002\036Evmos\\Inflation\\V1\\GPBMe" +
-      "tadata\352\002\024Evmos::Inflation::V1b\006proto3"
+      "/cosmos-sdk/types.DecR\013maxVarianceB\276\001\n\026c" +
+      "om.evmos.inflation.v1B\016InflationProtoZ,g" +
+      "ithub.com/evmos/evmos/v13/x/inflation/ty" +
+      "pes\242\002\003EIX\252\002\022Evmos.Inflation.V1\312\002\022Evmos\\I" +
+      "nflation\\V1\342\002\036Evmos\\Inflation\\V1\\GPBMeta" +
+      "data\352\002\024Evmos::Inflation::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

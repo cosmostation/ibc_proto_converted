@@ -14,19 +14,6112 @@ public final class GovProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ProposalRegisterPoolOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lum.network.millions.ProposalRegisterPool)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>string chain_id = 3 [json_name = "chainId"];</code>
+     * @return The chainId.
+     */
+    java.lang.String getChainId();
+    /**
+     * <code>string chain_id = 3 [json_name = "chainId"];</code>
+     * @return The bytes for chainId.
+     */
+    com.google.protobuf.ByteString
+        getChainIdBytes();
+
+    /**
+     * <code>string denom = 4 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 4 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <code>string native_denom = 5 [json_name = "nativeDenom"];</code>
+     * @return The nativeDenom.
+     */
+    java.lang.String getNativeDenom();
+    /**
+     * <code>string native_denom = 5 [json_name = "nativeDenom"];</code>
+     * @return The bytes for nativeDenom.
+     */
+    com.google.protobuf.ByteString
+        getNativeDenomBytes();
+
+    /**
+     * <code>string connection_id = 6 [json_name = "connectionId"];</code>
+     * @return The connectionId.
+     */
+    java.lang.String getConnectionId();
+    /**
+     * <code>string connection_id = 6 [json_name = "connectionId"];</code>
+     * @return The bytes for connectionId.
+     */
+    com.google.protobuf.ByteString
+        getConnectionIdBytes();
+
+    /**
+     * <code>repeated string validators = 7 [json_name = "validators"];</code>
+     * @return A list containing the validators.
+     */
+    java.util.List<java.lang.String>
+        getValidatorsList();
+    /**
+     * <code>repeated string validators = 7 [json_name = "validators"];</code>
+     * @return The count of validators.
+     */
+    int getValidatorsCount();
+    /**
+     * <code>repeated string validators = 7 [json_name = "validators"];</code>
+     * @param index The index of the element to return.
+     * @return The validators at the given index.
+     */
+    java.lang.String getValidators(int index);
+    /**
+     * <code>repeated string validators = 7 [json_name = "validators"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the validators at the given index.
+     */
+    com.google.protobuf.ByteString
+        getValidatorsBytes(int index);
+
+    /**
+     * <code>string min_deposit_amount = 8 [json_name = "minDepositAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The minDepositAmount.
+     */
+    java.lang.String getMinDepositAmount();
+    /**
+     * <code>string min_deposit_amount = 8 [json_name = "minDepositAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for minDepositAmount.
+     */
+    com.google.protobuf.ByteString
+        getMinDepositAmountBytes();
+
+    /**
+     * <code>.lum.network.millions.DrawSchedule draw_schedule = 9 [json_name = "drawSchedule", (.gogoproto.nullable) = false];</code>
+     * @return Whether the drawSchedule field is set.
+     */
+    boolean hasDrawSchedule();
+    /**
+     * <code>.lum.network.millions.DrawSchedule draw_schedule = 9 [json_name = "drawSchedule", (.gogoproto.nullable) = false];</code>
+     * @return The drawSchedule.
+     */
+    com.lum.network.millions.DrawScheduleProto.DrawSchedule getDrawSchedule();
+    /**
+     * <code>.lum.network.millions.DrawSchedule draw_schedule = 9 [json_name = "drawSchedule", (.gogoproto.nullable) = false];</code>
+     */
+    com.lum.network.millions.DrawScheduleProto.DrawScheduleOrBuilder getDrawScheduleOrBuilder();
+
+    /**
+     * <code>.lum.network.millions.PrizeStrategy prize_strategy = 10 [json_name = "prizeStrategy", (.gogoproto.nullable) = false];</code>
+     * @return Whether the prizeStrategy field is set.
+     */
+    boolean hasPrizeStrategy();
+    /**
+     * <code>.lum.network.millions.PrizeStrategy prize_strategy = 10 [json_name = "prizeStrategy", (.gogoproto.nullable) = false];</code>
+     * @return The prizeStrategy.
+     */
+    com.lum.network.millions.PrizeStrategyProto.PrizeStrategy getPrizeStrategy();
+    /**
+     * <code>.lum.network.millions.PrizeStrategy prize_strategy = 10 [json_name = "prizeStrategy", (.gogoproto.nullable) = false];</code>
+     */
+    com.lum.network.millions.PrizeStrategyProto.PrizeStrategyOrBuilder getPrizeStrategyOrBuilder();
+
+    /**
+     * <code>string bech32_prefix_acc_addr = 11 [json_name = "bech32PrefixAccAddr"];</code>
+     * @return The bech32PrefixAccAddr.
+     */
+    java.lang.String getBech32PrefixAccAddr();
+    /**
+     * <code>string bech32_prefix_acc_addr = 11 [json_name = "bech32PrefixAccAddr"];</code>
+     * @return The bytes for bech32PrefixAccAddr.
+     */
+    com.google.protobuf.ByteString
+        getBech32PrefixAccAddrBytes();
+
+    /**
+     * <code>string bech32_prefix_val_addr = 12 [json_name = "bech32PrefixValAddr"];</code>
+     * @return The bech32PrefixValAddr.
+     */
+    java.lang.String getBech32PrefixValAddr();
+    /**
+     * <code>string bech32_prefix_val_addr = 12 [json_name = "bech32PrefixValAddr"];</code>
+     * @return The bytes for bech32PrefixValAddr.
+     */
+    com.google.protobuf.ByteString
+        getBech32PrefixValAddrBytes();
+
+    /**
+     * <code>string transfer_channel_id = 13 [json_name = "transferChannelId"];</code>
+     * @return The transferChannelId.
+     */
+    java.lang.String getTransferChannelId();
+    /**
+     * <code>string transfer_channel_id = 13 [json_name = "transferChannelId"];</code>
+     * @return The bytes for transferChannelId.
+     */
+    com.google.protobuf.ByteString
+        getTransferChannelIdBytes();
+  }
+  /**
+   * Protobuf type {@code lum.network.millions.ProposalRegisterPool}
+   */
+  public static final class ProposalRegisterPool extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lum.network.millions.ProposalRegisterPool)
+      ProposalRegisterPoolOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ProposalRegisterPool.newBuilder() to construct.
+    private ProposalRegisterPool(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ProposalRegisterPool() {
+      title_ = "";
+      description_ = "";
+      chainId_ = "";
+      denom_ = "";
+      nativeDenom_ = "";
+      connectionId_ = "";
+      validators_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      minDepositAmount_ = "";
+      bech32PrefixAccAddr_ = "";
+      bech32PrefixValAddr_ = "";
+      transferChannelId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ProposalRegisterPool();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lum.network.millions.GovProto.internal_static_lum_network_millions_ProposalRegisterPool_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lum.network.millions.GovProto.internal_static_lum_network_millions_ProposalRegisterPool_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lum.network.millions.GovProto.ProposalRegisterPool.class, com.lum.network.millions.GovProto.ProposalRegisterPool.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CHAIN_ID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object chainId_ = "";
+    /**
+     * <code>string chain_id = 3 [json_name = "chainId"];</code>
+     * @return The chainId.
+     */
+    @java.lang.Override
+    public java.lang.String getChainId() {
+      java.lang.Object ref = chainId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        chainId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string chain_id = 3 [json_name = "chainId"];</code>
+     * @return The bytes for chainId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getChainIdBytes() {
+      java.lang.Object ref = chainId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        chainId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 4 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 4 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NATIVE_DENOM_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object nativeDenom_ = "";
+    /**
+     * <code>string native_denom = 5 [json_name = "nativeDenom"];</code>
+     * @return The nativeDenom.
+     */
+    @java.lang.Override
+    public java.lang.String getNativeDenom() {
+      java.lang.Object ref = nativeDenom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nativeDenom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string native_denom = 5 [json_name = "nativeDenom"];</code>
+     * @return The bytes for nativeDenom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNativeDenomBytes() {
+      java.lang.Object ref = nativeDenom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nativeDenom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONNECTION_ID_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object connectionId_ = "";
+    /**
+     * <code>string connection_id = 6 [json_name = "connectionId"];</code>
+     * @return The connectionId.
+     */
+    @java.lang.Override
+    public java.lang.String getConnectionId() {
+      java.lang.Object ref = connectionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        connectionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string connection_id = 6 [json_name = "connectionId"];</code>
+     * @return The bytes for connectionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConnectionIdBytes() {
+      java.lang.Object ref = connectionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        connectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALIDATORS_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList validators_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string validators = 7 [json_name = "validators"];</code>
+     * @return A list containing the validators.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getValidatorsList() {
+      return validators_;
+    }
+    /**
+     * <code>repeated string validators = 7 [json_name = "validators"];</code>
+     * @return The count of validators.
+     */
+    public int getValidatorsCount() {
+      return validators_.size();
+    }
+    /**
+     * <code>repeated string validators = 7 [json_name = "validators"];</code>
+     * @param index The index of the element to return.
+     * @return The validators at the given index.
+     */
+    public java.lang.String getValidators(int index) {
+      return validators_.get(index);
+    }
+    /**
+     * <code>repeated string validators = 7 [json_name = "validators"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the validators at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getValidatorsBytes(int index) {
+      return validators_.getByteString(index);
+    }
+
+    public static final int MIN_DEPOSIT_AMOUNT_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object minDepositAmount_ = "";
+    /**
+     * <code>string min_deposit_amount = 8 [json_name = "minDepositAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The minDepositAmount.
+     */
+    @java.lang.Override
+    public java.lang.String getMinDepositAmount() {
+      java.lang.Object ref = minDepositAmount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        minDepositAmount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string min_deposit_amount = 8 [json_name = "minDepositAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for minDepositAmount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMinDepositAmountBytes() {
+      java.lang.Object ref = minDepositAmount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        minDepositAmount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DRAW_SCHEDULE_FIELD_NUMBER = 9;
+    private com.lum.network.millions.DrawScheduleProto.DrawSchedule drawSchedule_;
+    /**
+     * <code>.lum.network.millions.DrawSchedule draw_schedule = 9 [json_name = "drawSchedule", (.gogoproto.nullable) = false];</code>
+     * @return Whether the drawSchedule field is set.
+     */
+    @java.lang.Override
+    public boolean hasDrawSchedule() {
+      return drawSchedule_ != null;
+    }
+    /**
+     * <code>.lum.network.millions.DrawSchedule draw_schedule = 9 [json_name = "drawSchedule", (.gogoproto.nullable) = false];</code>
+     * @return The drawSchedule.
+     */
+    @java.lang.Override
+    public com.lum.network.millions.DrawScheduleProto.DrawSchedule getDrawSchedule() {
+      return drawSchedule_ == null ? com.lum.network.millions.DrawScheduleProto.DrawSchedule.getDefaultInstance() : drawSchedule_;
+    }
+    /**
+     * <code>.lum.network.millions.DrawSchedule draw_schedule = 9 [json_name = "drawSchedule", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.lum.network.millions.DrawScheduleProto.DrawScheduleOrBuilder getDrawScheduleOrBuilder() {
+      return drawSchedule_ == null ? com.lum.network.millions.DrawScheduleProto.DrawSchedule.getDefaultInstance() : drawSchedule_;
+    }
+
+    public static final int PRIZE_STRATEGY_FIELD_NUMBER = 10;
+    private com.lum.network.millions.PrizeStrategyProto.PrizeStrategy prizeStrategy_;
+    /**
+     * <code>.lum.network.millions.PrizeStrategy prize_strategy = 10 [json_name = "prizeStrategy", (.gogoproto.nullable) = false];</code>
+     * @return Whether the prizeStrategy field is set.
+     */
+    @java.lang.Override
+    public boolean hasPrizeStrategy() {
+      return prizeStrategy_ != null;
+    }
+    /**
+     * <code>.lum.network.millions.PrizeStrategy prize_strategy = 10 [json_name = "prizeStrategy", (.gogoproto.nullable) = false];</code>
+     * @return The prizeStrategy.
+     */
+    @java.lang.Override
+    public com.lum.network.millions.PrizeStrategyProto.PrizeStrategy getPrizeStrategy() {
+      return prizeStrategy_ == null ? com.lum.network.millions.PrizeStrategyProto.PrizeStrategy.getDefaultInstance() : prizeStrategy_;
+    }
+    /**
+     * <code>.lum.network.millions.PrizeStrategy prize_strategy = 10 [json_name = "prizeStrategy", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.lum.network.millions.PrizeStrategyProto.PrizeStrategyOrBuilder getPrizeStrategyOrBuilder() {
+      return prizeStrategy_ == null ? com.lum.network.millions.PrizeStrategyProto.PrizeStrategy.getDefaultInstance() : prizeStrategy_;
+    }
+
+    public static final int BECH32_PREFIX_ACC_ADDR_FIELD_NUMBER = 11;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object bech32PrefixAccAddr_ = "";
+    /**
+     * <code>string bech32_prefix_acc_addr = 11 [json_name = "bech32PrefixAccAddr"];</code>
+     * @return The bech32PrefixAccAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getBech32PrefixAccAddr() {
+      java.lang.Object ref = bech32PrefixAccAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bech32PrefixAccAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string bech32_prefix_acc_addr = 11 [json_name = "bech32PrefixAccAddr"];</code>
+     * @return The bytes for bech32PrefixAccAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBech32PrefixAccAddrBytes() {
+      java.lang.Object ref = bech32PrefixAccAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bech32PrefixAccAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BECH32_PREFIX_VAL_ADDR_FIELD_NUMBER = 12;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object bech32PrefixValAddr_ = "";
+    /**
+     * <code>string bech32_prefix_val_addr = 12 [json_name = "bech32PrefixValAddr"];</code>
+     * @return The bech32PrefixValAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getBech32PrefixValAddr() {
+      java.lang.Object ref = bech32PrefixValAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bech32PrefixValAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string bech32_prefix_val_addr = 12 [json_name = "bech32PrefixValAddr"];</code>
+     * @return The bytes for bech32PrefixValAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBech32PrefixValAddrBytes() {
+      java.lang.Object ref = bech32PrefixValAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bech32PrefixValAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TRANSFER_CHANNEL_ID_FIELD_NUMBER = 13;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object transferChannelId_ = "";
+    /**
+     * <code>string transfer_channel_id = 13 [json_name = "transferChannelId"];</code>
+     * @return The transferChannelId.
+     */
+    @java.lang.Override
+    public java.lang.String getTransferChannelId() {
+      java.lang.Object ref = transferChannelId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        transferChannelId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string transfer_channel_id = 13 [json_name = "transferChannelId"];</code>
+     * @return The bytes for transferChannelId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTransferChannelIdBytes() {
+      java.lang.Object ref = transferChannelId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        transferChannelId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, chainId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, denom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nativeDenom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, nativeDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, connectionId_);
+      }
+      for (int i = 0; i < validators_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, validators_.getRaw(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minDepositAmount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, minDepositAmount_);
+      }
+      if (drawSchedule_ != null) {
+        output.writeMessage(9, getDrawSchedule());
+      }
+      if (prizeStrategy_ != null) {
+        output.writeMessage(10, getPrizeStrategy());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bech32PrefixAccAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, bech32PrefixAccAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bech32PrefixValAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, bech32PrefixValAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transferChannelId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, transferChannelId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chainId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, chainId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, denom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nativeDenom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, nativeDenom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, connectionId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < validators_.size(); i++) {
+          dataSize += computeStringSizeNoTag(validators_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getValidatorsList().size();
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minDepositAmount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, minDepositAmount_);
+      }
+      if (drawSchedule_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getDrawSchedule());
+      }
+      if (prizeStrategy_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getPrizeStrategy());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bech32PrefixAccAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, bech32PrefixAccAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bech32PrefixValAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, bech32PrefixValAddr_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(transferChannelId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, transferChannelId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lum.network.millions.GovProto.ProposalRegisterPool)) {
+        return super.equals(obj);
+      }
+      com.lum.network.millions.GovProto.ProposalRegisterPool other = (com.lum.network.millions.GovProto.ProposalRegisterPool) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getChainId()
+          .equals(other.getChainId())) return false;
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (!getNativeDenom()
+          .equals(other.getNativeDenom())) return false;
+      if (!getConnectionId()
+          .equals(other.getConnectionId())) return false;
+      if (!getValidatorsList()
+          .equals(other.getValidatorsList())) return false;
+      if (!getMinDepositAmount()
+          .equals(other.getMinDepositAmount())) return false;
+      if (hasDrawSchedule() != other.hasDrawSchedule()) return false;
+      if (hasDrawSchedule()) {
+        if (!getDrawSchedule()
+            .equals(other.getDrawSchedule())) return false;
+      }
+      if (hasPrizeStrategy() != other.hasPrizeStrategy()) return false;
+      if (hasPrizeStrategy()) {
+        if (!getPrizeStrategy()
+            .equals(other.getPrizeStrategy())) return false;
+      }
+      if (!getBech32PrefixAccAddr()
+          .equals(other.getBech32PrefixAccAddr())) return false;
+      if (!getBech32PrefixValAddr()
+          .equals(other.getBech32PrefixValAddr())) return false;
+      if (!getTransferChannelId()
+          .equals(other.getTransferChannelId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + CHAIN_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getChainId().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (37 * hash) + NATIVE_DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getNativeDenom().hashCode();
+      hash = (37 * hash) + CONNECTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getConnectionId().hashCode();
+      if (getValidatorsCount() > 0) {
+        hash = (37 * hash) + VALIDATORS_FIELD_NUMBER;
+        hash = (53 * hash) + getValidatorsList().hashCode();
+      }
+      hash = (37 * hash) + MIN_DEPOSIT_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getMinDepositAmount().hashCode();
+      if (hasDrawSchedule()) {
+        hash = (37 * hash) + DRAW_SCHEDULE_FIELD_NUMBER;
+        hash = (53 * hash) + getDrawSchedule().hashCode();
+      }
+      if (hasPrizeStrategy()) {
+        hash = (37 * hash) + PRIZE_STRATEGY_FIELD_NUMBER;
+        hash = (53 * hash) + getPrizeStrategy().hashCode();
+      }
+      hash = (37 * hash) + BECH32_PREFIX_ACC_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getBech32PrefixAccAddr().hashCode();
+      hash = (37 * hash) + BECH32_PREFIX_VAL_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getBech32PrefixValAddr().hashCode();
+      hash = (37 * hash) + TRANSFER_CHANNEL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTransferChannelId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lum.network.millions.GovProto.ProposalRegisterPool parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.GovProto.ProposalRegisterPool parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.GovProto.ProposalRegisterPool parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.GovProto.ProposalRegisterPool parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.GovProto.ProposalRegisterPool parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.GovProto.ProposalRegisterPool parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.GovProto.ProposalRegisterPool parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.millions.GovProto.ProposalRegisterPool parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lum.network.millions.GovProto.ProposalRegisterPool parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lum.network.millions.GovProto.ProposalRegisterPool parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lum.network.millions.GovProto.ProposalRegisterPool parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.millions.GovProto.ProposalRegisterPool parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lum.network.millions.GovProto.ProposalRegisterPool prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lum.network.millions.ProposalRegisterPool}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lum.network.millions.ProposalRegisterPool)
+        com.lum.network.millions.GovProto.ProposalRegisterPoolOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lum.network.millions.GovProto.internal_static_lum_network_millions_ProposalRegisterPool_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lum.network.millions.GovProto.internal_static_lum_network_millions_ProposalRegisterPool_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lum.network.millions.GovProto.ProposalRegisterPool.class, com.lum.network.millions.GovProto.ProposalRegisterPool.Builder.class);
+      }
+
+      // Construct using com.lum.network.millions.GovProto.ProposalRegisterPool.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        chainId_ = "";
+        denom_ = "";
+        nativeDenom_ = "";
+        connectionId_ = "";
+        validators_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        minDepositAmount_ = "";
+        drawSchedule_ = null;
+        if (drawScheduleBuilder_ != null) {
+          drawScheduleBuilder_.dispose();
+          drawScheduleBuilder_ = null;
+        }
+        prizeStrategy_ = null;
+        if (prizeStrategyBuilder_ != null) {
+          prizeStrategyBuilder_.dispose();
+          prizeStrategyBuilder_ = null;
+        }
+        bech32PrefixAccAddr_ = "";
+        bech32PrefixValAddr_ = "";
+        transferChannelId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lum.network.millions.GovProto.internal_static_lum_network_millions_ProposalRegisterPool_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.GovProto.ProposalRegisterPool getDefaultInstanceForType() {
+        return com.lum.network.millions.GovProto.ProposalRegisterPool.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.GovProto.ProposalRegisterPool build() {
+        com.lum.network.millions.GovProto.ProposalRegisterPool result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.GovProto.ProposalRegisterPool buildPartial() {
+        com.lum.network.millions.GovProto.ProposalRegisterPool result = new com.lum.network.millions.GovProto.ProposalRegisterPool(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.lum.network.millions.GovProto.ProposalRegisterPool result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.chainId_ = chainId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.nativeDenom_ = nativeDenom_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.connectionId_ = connectionId_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          validators_.makeImmutable();
+          result.validators_ = validators_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.minDepositAmount_ = minDepositAmount_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.drawSchedule_ = drawScheduleBuilder_ == null
+              ? drawSchedule_
+              : drawScheduleBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.prizeStrategy_ = prizeStrategyBuilder_ == null
+              ? prizeStrategy_
+              : prizeStrategyBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.bech32PrefixAccAddr_ = bech32PrefixAccAddr_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.bech32PrefixValAddr_ = bech32PrefixValAddr_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.transferChannelId_ = transferChannelId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lum.network.millions.GovProto.ProposalRegisterPool) {
+          return mergeFrom((com.lum.network.millions.GovProto.ProposalRegisterPool)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lum.network.millions.GovProto.ProposalRegisterPool other) {
+        if (other == com.lum.network.millions.GovProto.ProposalRegisterPool.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getChainId().isEmpty()) {
+          chainId_ = other.chainId_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getNativeDenom().isEmpty()) {
+          nativeDenom_ = other.nativeDenom_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getConnectionId().isEmpty()) {
+          connectionId_ = other.connectionId_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (!other.validators_.isEmpty()) {
+          if (validators_.isEmpty()) {
+            validators_ = other.validators_;
+            bitField0_ |= 0x00000040;
+          } else {
+            ensureValidatorsIsMutable();
+            validators_.addAll(other.validators_);
+          }
+          onChanged();
+        }
+        if (!other.getMinDepositAmount().isEmpty()) {
+          minDepositAmount_ = other.minDepositAmount_;
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
+        if (other.hasDrawSchedule()) {
+          mergeDrawSchedule(other.getDrawSchedule());
+        }
+        if (other.hasPrizeStrategy()) {
+          mergePrizeStrategy(other.getPrizeStrategy());
+        }
+        if (!other.getBech32PrefixAccAddr().isEmpty()) {
+          bech32PrefixAccAddr_ = other.bech32PrefixAccAddr_;
+          bitField0_ |= 0x00000400;
+          onChanged();
+        }
+        if (!other.getBech32PrefixValAddr().isEmpty()) {
+          bech32PrefixValAddr_ = other.bech32PrefixValAddr_;
+          bitField0_ |= 0x00000800;
+          onChanged();
+        }
+        if (!other.getTransferChannelId().isEmpty()) {
+          transferChannelId_ = other.transferChannelId_;
+          bitField0_ |= 0x00001000;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                chainId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                nativeDenom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                connectionId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureValidatorsIsMutable();
+                validators_.add(s);
+                break;
+              } // case 58
+              case 66: {
+                minDepositAmount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 74: {
+                input.readMessage(
+                    getDrawScheduleFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              case 82: {
+                input.readMessage(
+                    getPrizeStrategyFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 82
+              case 90: {
+                bech32PrefixAccAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 90
+              case 98: {
+                bech32PrefixValAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 98
+              case 106: {
+                transferChannelId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 106
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object chainId_ = "";
+      /**
+       * <code>string chain_id = 3 [json_name = "chainId"];</code>
+       * @return The chainId.
+       */
+      public java.lang.String getChainId() {
+        java.lang.Object ref = chainId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          chainId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string chain_id = 3 [json_name = "chainId"];</code>
+       * @return The bytes for chainId.
+       */
+      public com.google.protobuf.ByteString
+          getChainIdBytes() {
+        java.lang.Object ref = chainId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          chainId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string chain_id = 3 [json_name = "chainId"];</code>
+       * @param value The chainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        chainId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain_id = 3 [json_name = "chainId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChainId() {
+        chainId_ = getDefaultInstance().getChainId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain_id = 3 [json_name = "chainId"];</code>
+       * @param value The bytes for chainId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        chainId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 4 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 4 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 4 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 4 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 4 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object nativeDenom_ = "";
+      /**
+       * <code>string native_denom = 5 [json_name = "nativeDenom"];</code>
+       * @return The nativeDenom.
+       */
+      public java.lang.String getNativeDenom() {
+        java.lang.Object ref = nativeDenom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nativeDenom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string native_denom = 5 [json_name = "nativeDenom"];</code>
+       * @return The bytes for nativeDenom.
+       */
+      public com.google.protobuf.ByteString
+          getNativeDenomBytes() {
+        java.lang.Object ref = nativeDenom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nativeDenom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string native_denom = 5 [json_name = "nativeDenom"];</code>
+       * @param value The nativeDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNativeDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        nativeDenom_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string native_denom = 5 [json_name = "nativeDenom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNativeDenom() {
+        nativeDenom_ = getDefaultInstance().getNativeDenom();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string native_denom = 5 [json_name = "nativeDenom"];</code>
+       * @param value The bytes for nativeDenom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNativeDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        nativeDenom_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object connectionId_ = "";
+      /**
+       * <code>string connection_id = 6 [json_name = "connectionId"];</code>
+       * @return The connectionId.
+       */
+      public java.lang.String getConnectionId() {
+        java.lang.Object ref = connectionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          connectionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string connection_id = 6 [json_name = "connectionId"];</code>
+       * @return The bytes for connectionId.
+       */
+      public com.google.protobuf.ByteString
+          getConnectionIdBytes() {
+        java.lang.Object ref = connectionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          connectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string connection_id = 6 [json_name = "connectionId"];</code>
+       * @param value The connectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectionId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        connectionId_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string connection_id = 6 [json_name = "connectionId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConnectionId() {
+        connectionId_ = getDefaultInstance().getConnectionId();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string connection_id = 6 [json_name = "connectionId"];</code>
+       * @param value The bytes for connectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        connectionId_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList validators_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureValidatorsIsMutable() {
+        if (!validators_.isModifiable()) {
+          validators_ = new com.google.protobuf.LazyStringArrayList(validators_);
+        }
+        bitField0_ |= 0x00000040;
+      }
+      /**
+       * <code>repeated string validators = 7 [json_name = "validators"];</code>
+       * @return A list containing the validators.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getValidatorsList() {
+        validators_.makeImmutable();
+        return validators_;
+      }
+      /**
+       * <code>repeated string validators = 7 [json_name = "validators"];</code>
+       * @return The count of validators.
+       */
+      public int getValidatorsCount() {
+        return validators_.size();
+      }
+      /**
+       * <code>repeated string validators = 7 [json_name = "validators"];</code>
+       * @param index The index of the element to return.
+       * @return The validators at the given index.
+       */
+      public java.lang.String getValidators(int index) {
+        return validators_.get(index);
+      }
+      /**
+       * <code>repeated string validators = 7 [json_name = "validators"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the validators at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getValidatorsBytes(int index) {
+        return validators_.getByteString(index);
+      }
+      /**
+       * <code>repeated string validators = 7 [json_name = "validators"];</code>
+       * @param index The index to set the value at.
+       * @param value The validators to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidators(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureValidatorsIsMutable();
+        validators_.set(index, value);
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string validators = 7 [json_name = "validators"];</code>
+       * @param value The validators to add.
+       * @return This builder for chaining.
+       */
+      public Builder addValidators(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureValidatorsIsMutable();
+        validators_.add(value);
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string validators = 7 [json_name = "validators"];</code>
+       * @param values The validators to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllValidators(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureValidatorsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, validators_);
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string validators = 7 [json_name = "validators"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValidators() {
+        validators_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000040);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string validators = 7 [json_name = "validators"];</code>
+       * @param value The bytes of the validators to add.
+       * @return This builder for chaining.
+       */
+      public Builder addValidatorsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureValidatorsIsMutable();
+        validators_.add(value);
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object minDepositAmount_ = "";
+      /**
+       * <code>string min_deposit_amount = 8 [json_name = "minDepositAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The minDepositAmount.
+       */
+      public java.lang.String getMinDepositAmount() {
+        java.lang.Object ref = minDepositAmount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          minDepositAmount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string min_deposit_amount = 8 [json_name = "minDepositAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for minDepositAmount.
+       */
+      public com.google.protobuf.ByteString
+          getMinDepositAmountBytes() {
+        java.lang.Object ref = minDepositAmount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          minDepositAmount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string min_deposit_amount = 8 [json_name = "minDepositAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The minDepositAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinDepositAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        minDepositAmount_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string min_deposit_amount = 8 [json_name = "minDepositAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinDepositAmount() {
+        minDepositAmount_ = getDefaultInstance().getMinDepositAmount();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string min_deposit_amount = 8 [json_name = "minDepositAmount", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for minDepositAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinDepositAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        minDepositAmount_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+
+      private com.lum.network.millions.DrawScheduleProto.DrawSchedule drawSchedule_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.lum.network.millions.DrawScheduleProto.DrawSchedule, com.lum.network.millions.DrawScheduleProto.DrawSchedule.Builder, com.lum.network.millions.DrawScheduleProto.DrawScheduleOrBuilder> drawScheduleBuilder_;
+      /**
+       * <code>.lum.network.millions.DrawSchedule draw_schedule = 9 [json_name = "drawSchedule", (.gogoproto.nullable) = false];</code>
+       * @return Whether the drawSchedule field is set.
+       */
+      public boolean hasDrawSchedule() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <code>.lum.network.millions.DrawSchedule draw_schedule = 9 [json_name = "drawSchedule", (.gogoproto.nullable) = false];</code>
+       * @return The drawSchedule.
+       */
+      public com.lum.network.millions.DrawScheduleProto.DrawSchedule getDrawSchedule() {
+        if (drawScheduleBuilder_ == null) {
+          return drawSchedule_ == null ? com.lum.network.millions.DrawScheduleProto.DrawSchedule.getDefaultInstance() : drawSchedule_;
+        } else {
+          return drawScheduleBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.lum.network.millions.DrawSchedule draw_schedule = 9 [json_name = "drawSchedule", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDrawSchedule(com.lum.network.millions.DrawScheduleProto.DrawSchedule value) {
+        if (drawScheduleBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          drawSchedule_ = value;
+        } else {
+          drawScheduleBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.millions.DrawSchedule draw_schedule = 9 [json_name = "drawSchedule", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDrawSchedule(
+          com.lum.network.millions.DrawScheduleProto.DrawSchedule.Builder builderForValue) {
+        if (drawScheduleBuilder_ == null) {
+          drawSchedule_ = builderForValue.build();
+        } else {
+          drawScheduleBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.millions.DrawSchedule draw_schedule = 9 [json_name = "drawSchedule", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeDrawSchedule(com.lum.network.millions.DrawScheduleProto.DrawSchedule value) {
+        if (drawScheduleBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) != 0) &&
+            drawSchedule_ != null &&
+            drawSchedule_ != com.lum.network.millions.DrawScheduleProto.DrawSchedule.getDefaultInstance()) {
+            getDrawScheduleBuilder().mergeFrom(value);
+          } else {
+            drawSchedule_ = value;
+          }
+        } else {
+          drawScheduleBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.millions.DrawSchedule draw_schedule = 9 [json_name = "drawSchedule", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearDrawSchedule() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        drawSchedule_ = null;
+        if (drawScheduleBuilder_ != null) {
+          drawScheduleBuilder_.dispose();
+          drawScheduleBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.millions.DrawSchedule draw_schedule = 9 [json_name = "drawSchedule", (.gogoproto.nullable) = false];</code>
+       */
+      public com.lum.network.millions.DrawScheduleProto.DrawSchedule.Builder getDrawScheduleBuilder() {
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return getDrawScheduleFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.lum.network.millions.DrawSchedule draw_schedule = 9 [json_name = "drawSchedule", (.gogoproto.nullable) = false];</code>
+       */
+      public com.lum.network.millions.DrawScheduleProto.DrawScheduleOrBuilder getDrawScheduleOrBuilder() {
+        if (drawScheduleBuilder_ != null) {
+          return drawScheduleBuilder_.getMessageOrBuilder();
+        } else {
+          return drawSchedule_ == null ?
+              com.lum.network.millions.DrawScheduleProto.DrawSchedule.getDefaultInstance() : drawSchedule_;
+        }
+      }
+      /**
+       * <code>.lum.network.millions.DrawSchedule draw_schedule = 9 [json_name = "drawSchedule", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.lum.network.millions.DrawScheduleProto.DrawSchedule, com.lum.network.millions.DrawScheduleProto.DrawSchedule.Builder, com.lum.network.millions.DrawScheduleProto.DrawScheduleOrBuilder> 
+          getDrawScheduleFieldBuilder() {
+        if (drawScheduleBuilder_ == null) {
+          drawScheduleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.lum.network.millions.DrawScheduleProto.DrawSchedule, com.lum.network.millions.DrawScheduleProto.DrawSchedule.Builder, com.lum.network.millions.DrawScheduleProto.DrawScheduleOrBuilder>(
+                  getDrawSchedule(),
+                  getParentForChildren(),
+                  isClean());
+          drawSchedule_ = null;
+        }
+        return drawScheduleBuilder_;
+      }
+
+      private com.lum.network.millions.PrizeStrategyProto.PrizeStrategy prizeStrategy_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.lum.network.millions.PrizeStrategyProto.PrizeStrategy, com.lum.network.millions.PrizeStrategyProto.PrizeStrategy.Builder, com.lum.network.millions.PrizeStrategyProto.PrizeStrategyOrBuilder> prizeStrategyBuilder_;
+      /**
+       * <code>.lum.network.millions.PrizeStrategy prize_strategy = 10 [json_name = "prizeStrategy", (.gogoproto.nullable) = false];</code>
+       * @return Whether the prizeStrategy field is set.
+       */
+      public boolean hasPrizeStrategy() {
+        return ((bitField0_ & 0x00000200) != 0);
+      }
+      /**
+       * <code>.lum.network.millions.PrizeStrategy prize_strategy = 10 [json_name = "prizeStrategy", (.gogoproto.nullable) = false];</code>
+       * @return The prizeStrategy.
+       */
+      public com.lum.network.millions.PrizeStrategyProto.PrizeStrategy getPrizeStrategy() {
+        if (prizeStrategyBuilder_ == null) {
+          return prizeStrategy_ == null ? com.lum.network.millions.PrizeStrategyProto.PrizeStrategy.getDefaultInstance() : prizeStrategy_;
+        } else {
+          return prizeStrategyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.lum.network.millions.PrizeStrategy prize_strategy = 10 [json_name = "prizeStrategy", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPrizeStrategy(com.lum.network.millions.PrizeStrategyProto.PrizeStrategy value) {
+        if (prizeStrategyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          prizeStrategy_ = value;
+        } else {
+          prizeStrategyBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.millions.PrizeStrategy prize_strategy = 10 [json_name = "prizeStrategy", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setPrizeStrategy(
+          com.lum.network.millions.PrizeStrategyProto.PrizeStrategy.Builder builderForValue) {
+        if (prizeStrategyBuilder_ == null) {
+          prizeStrategy_ = builderForValue.build();
+        } else {
+          prizeStrategyBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.millions.PrizeStrategy prize_strategy = 10 [json_name = "prizeStrategy", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergePrizeStrategy(com.lum.network.millions.PrizeStrategyProto.PrizeStrategy value) {
+        if (prizeStrategyBuilder_ == null) {
+          if (((bitField0_ & 0x00000200) != 0) &&
+            prizeStrategy_ != null &&
+            prizeStrategy_ != com.lum.network.millions.PrizeStrategyProto.PrizeStrategy.getDefaultInstance()) {
+            getPrizeStrategyBuilder().mergeFrom(value);
+          } else {
+            prizeStrategy_ = value;
+          }
+        } else {
+          prizeStrategyBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.millions.PrizeStrategy prize_strategy = 10 [json_name = "prizeStrategy", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearPrizeStrategy() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        prizeStrategy_ = null;
+        if (prizeStrategyBuilder_ != null) {
+          prizeStrategyBuilder_.dispose();
+          prizeStrategyBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.millions.PrizeStrategy prize_strategy = 10 [json_name = "prizeStrategy", (.gogoproto.nullable) = false];</code>
+       */
+      public com.lum.network.millions.PrizeStrategyProto.PrizeStrategy.Builder getPrizeStrategyBuilder() {
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return getPrizeStrategyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.lum.network.millions.PrizeStrategy prize_strategy = 10 [json_name = "prizeStrategy", (.gogoproto.nullable) = false];</code>
+       */
+      public com.lum.network.millions.PrizeStrategyProto.PrizeStrategyOrBuilder getPrizeStrategyOrBuilder() {
+        if (prizeStrategyBuilder_ != null) {
+          return prizeStrategyBuilder_.getMessageOrBuilder();
+        } else {
+          return prizeStrategy_ == null ?
+              com.lum.network.millions.PrizeStrategyProto.PrizeStrategy.getDefaultInstance() : prizeStrategy_;
+        }
+      }
+      /**
+       * <code>.lum.network.millions.PrizeStrategy prize_strategy = 10 [json_name = "prizeStrategy", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.lum.network.millions.PrizeStrategyProto.PrizeStrategy, com.lum.network.millions.PrizeStrategyProto.PrizeStrategy.Builder, com.lum.network.millions.PrizeStrategyProto.PrizeStrategyOrBuilder> 
+          getPrizeStrategyFieldBuilder() {
+        if (prizeStrategyBuilder_ == null) {
+          prizeStrategyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.lum.network.millions.PrizeStrategyProto.PrizeStrategy, com.lum.network.millions.PrizeStrategyProto.PrizeStrategy.Builder, com.lum.network.millions.PrizeStrategyProto.PrizeStrategyOrBuilder>(
+                  getPrizeStrategy(),
+                  getParentForChildren(),
+                  isClean());
+          prizeStrategy_ = null;
+        }
+        return prizeStrategyBuilder_;
+      }
+
+      private java.lang.Object bech32PrefixAccAddr_ = "";
+      /**
+       * <code>string bech32_prefix_acc_addr = 11 [json_name = "bech32PrefixAccAddr"];</code>
+       * @return The bech32PrefixAccAddr.
+       */
+      public java.lang.String getBech32PrefixAccAddr() {
+        java.lang.Object ref = bech32PrefixAccAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bech32PrefixAccAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string bech32_prefix_acc_addr = 11 [json_name = "bech32PrefixAccAddr"];</code>
+       * @return The bytes for bech32PrefixAccAddr.
+       */
+      public com.google.protobuf.ByteString
+          getBech32PrefixAccAddrBytes() {
+        java.lang.Object ref = bech32PrefixAccAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bech32PrefixAccAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string bech32_prefix_acc_addr = 11 [json_name = "bech32PrefixAccAddr"];</code>
+       * @param value The bech32PrefixAccAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBech32PrefixAccAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        bech32PrefixAccAddr_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bech32_prefix_acc_addr = 11 [json_name = "bech32PrefixAccAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBech32PrefixAccAddr() {
+        bech32PrefixAccAddr_ = getDefaultInstance().getBech32PrefixAccAddr();
+        bitField0_ = (bitField0_ & ~0x00000400);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bech32_prefix_acc_addr = 11 [json_name = "bech32PrefixAccAddr"];</code>
+       * @param value The bytes for bech32PrefixAccAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBech32PrefixAccAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        bech32PrefixAccAddr_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object bech32PrefixValAddr_ = "";
+      /**
+       * <code>string bech32_prefix_val_addr = 12 [json_name = "bech32PrefixValAddr"];</code>
+       * @return The bech32PrefixValAddr.
+       */
+      public java.lang.String getBech32PrefixValAddr() {
+        java.lang.Object ref = bech32PrefixValAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bech32PrefixValAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string bech32_prefix_val_addr = 12 [json_name = "bech32PrefixValAddr"];</code>
+       * @return The bytes for bech32PrefixValAddr.
+       */
+      public com.google.protobuf.ByteString
+          getBech32PrefixValAddrBytes() {
+        java.lang.Object ref = bech32PrefixValAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bech32PrefixValAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string bech32_prefix_val_addr = 12 [json_name = "bech32PrefixValAddr"];</code>
+       * @param value The bech32PrefixValAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBech32PrefixValAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        bech32PrefixValAddr_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bech32_prefix_val_addr = 12 [json_name = "bech32PrefixValAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBech32PrefixValAddr() {
+        bech32PrefixValAddr_ = getDefaultInstance().getBech32PrefixValAddr();
+        bitField0_ = (bitField0_ & ~0x00000800);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string bech32_prefix_val_addr = 12 [json_name = "bech32PrefixValAddr"];</code>
+       * @param value The bytes for bech32PrefixValAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBech32PrefixValAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        bech32PrefixValAddr_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object transferChannelId_ = "";
+      /**
+       * <code>string transfer_channel_id = 13 [json_name = "transferChannelId"];</code>
+       * @return The transferChannelId.
+       */
+      public java.lang.String getTransferChannelId() {
+        java.lang.Object ref = transferChannelId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          transferChannelId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string transfer_channel_id = 13 [json_name = "transferChannelId"];</code>
+       * @return The bytes for transferChannelId.
+       */
+      public com.google.protobuf.ByteString
+          getTransferChannelIdBytes() {
+        java.lang.Object ref = transferChannelId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          transferChannelId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string transfer_channel_id = 13 [json_name = "transferChannelId"];</code>
+       * @param value The transferChannelId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransferChannelId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        transferChannelId_ = value;
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string transfer_channel_id = 13 [json_name = "transferChannelId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTransferChannelId() {
+        transferChannelId_ = getDefaultInstance().getTransferChannelId();
+        bitField0_ = (bitField0_ & ~0x00001000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string transfer_channel_id = 13 [json_name = "transferChannelId"];</code>
+       * @param value The bytes for transferChannelId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransferChannelIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        transferChannelId_ = value;
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lum.network.millions.ProposalRegisterPool)
+    }
+
+    // @@protoc_insertion_point(class_scope:lum.network.millions.ProposalRegisterPool)
+    private static final com.lum.network.millions.GovProto.ProposalRegisterPool DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lum.network.millions.GovProto.ProposalRegisterPool();
+    }
+
+    public static com.lum.network.millions.GovProto.ProposalRegisterPool getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ProposalRegisterPool>
+        PARSER = new com.google.protobuf.AbstractParser<ProposalRegisterPool>() {
+      @java.lang.Override
+      public ProposalRegisterPool parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ProposalRegisterPool> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ProposalRegisterPool> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lum.network.millions.GovProto.ProposalRegisterPool getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ProposalUpdatePoolOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lum.network.millions.ProposalUpdatePool)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>uint64 pool_id = 3 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <code>repeated string validators = 4 [json_name = "validators", (.gogoproto.nullable) = true];</code>
+     * @return A list containing the validators.
+     */
+    java.util.List<java.lang.String>
+        getValidatorsList();
+    /**
+     * <code>repeated string validators = 4 [json_name = "validators", (.gogoproto.nullable) = true];</code>
+     * @return The count of validators.
+     */
+    int getValidatorsCount();
+    /**
+     * <code>repeated string validators = 4 [json_name = "validators", (.gogoproto.nullable) = true];</code>
+     * @param index The index of the element to return.
+     * @return The validators at the given index.
+     */
+    java.lang.String getValidators(int index);
+    /**
+     * <code>repeated string validators = 4 [json_name = "validators", (.gogoproto.nullable) = true];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the validators at the given index.
+     */
+    com.google.protobuf.ByteString
+        getValidatorsBytes(int index);
+
+    /**
+     * <code>string min_deposit_amount = 5 [json_name = "minDepositAmount", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The minDepositAmount.
+     */
+    java.lang.String getMinDepositAmount();
+    /**
+     * <code>string min_deposit_amount = 5 [json_name = "minDepositAmount", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for minDepositAmount.
+     */
+    com.google.protobuf.ByteString
+        getMinDepositAmountBytes();
+
+    /**
+     * <code>.lum.network.millions.DrawSchedule draw_schedule = 6 [json_name = "drawSchedule", (.gogoproto.nullable) = true];</code>
+     * @return Whether the drawSchedule field is set.
+     */
+    boolean hasDrawSchedule();
+    /**
+     * <code>.lum.network.millions.DrawSchedule draw_schedule = 6 [json_name = "drawSchedule", (.gogoproto.nullable) = true];</code>
+     * @return The drawSchedule.
+     */
+    com.lum.network.millions.DrawScheduleProto.DrawSchedule getDrawSchedule();
+    /**
+     * <code>.lum.network.millions.DrawSchedule draw_schedule = 6 [json_name = "drawSchedule", (.gogoproto.nullable) = true];</code>
+     */
+    com.lum.network.millions.DrawScheduleProto.DrawScheduleOrBuilder getDrawScheduleOrBuilder();
+
+    /**
+     * <code>.lum.network.millions.PrizeStrategy prize_strategy = 7 [json_name = "prizeStrategy", (.gogoproto.nullable) = true];</code>
+     * @return Whether the prizeStrategy field is set.
+     */
+    boolean hasPrizeStrategy();
+    /**
+     * <code>.lum.network.millions.PrizeStrategy prize_strategy = 7 [json_name = "prizeStrategy", (.gogoproto.nullable) = true];</code>
+     * @return The prizeStrategy.
+     */
+    com.lum.network.millions.PrizeStrategyProto.PrizeStrategy getPrizeStrategy();
+    /**
+     * <code>.lum.network.millions.PrizeStrategy prize_strategy = 7 [json_name = "prizeStrategy", (.gogoproto.nullable) = true];</code>
+     */
+    com.lum.network.millions.PrizeStrategyProto.PrizeStrategyOrBuilder getPrizeStrategyOrBuilder();
+  }
+  /**
+   * Protobuf type {@code lum.network.millions.ProposalUpdatePool}
+   */
+  public static final class ProposalUpdatePool extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lum.network.millions.ProposalUpdatePool)
+      ProposalUpdatePoolOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ProposalUpdatePool.newBuilder() to construct.
+    private ProposalUpdatePool(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ProposalUpdatePool() {
+      title_ = "";
+      description_ = "";
+      validators_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      minDepositAmount_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ProposalUpdatePool();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lum.network.millions.GovProto.internal_static_lum_network_millions_ProposalUpdatePool_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lum.network.millions.GovProto.internal_static_lum_network_millions_ProposalUpdatePool_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lum.network.millions.GovProto.ProposalUpdatePool.class, com.lum.network.millions.GovProto.ProposalUpdatePool.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 3;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 3 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int VALIDATORS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList validators_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string validators = 4 [json_name = "validators", (.gogoproto.nullable) = true];</code>
+     * @return A list containing the validators.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getValidatorsList() {
+      return validators_;
+    }
+    /**
+     * <code>repeated string validators = 4 [json_name = "validators", (.gogoproto.nullable) = true];</code>
+     * @return The count of validators.
+     */
+    public int getValidatorsCount() {
+      return validators_.size();
+    }
+    /**
+     * <code>repeated string validators = 4 [json_name = "validators", (.gogoproto.nullable) = true];</code>
+     * @param index The index of the element to return.
+     * @return The validators at the given index.
+     */
+    public java.lang.String getValidators(int index) {
+      return validators_.get(index);
+    }
+    /**
+     * <code>repeated string validators = 4 [json_name = "validators", (.gogoproto.nullable) = true];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the validators at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getValidatorsBytes(int index) {
+      return validators_.getByteString(index);
+    }
+
+    public static final int MIN_DEPOSIT_AMOUNT_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object minDepositAmount_ = "";
+    /**
+     * <code>string min_deposit_amount = 5 [json_name = "minDepositAmount", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The minDepositAmount.
+     */
+    @java.lang.Override
+    public java.lang.String getMinDepositAmount() {
+      java.lang.Object ref = minDepositAmount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        minDepositAmount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string min_deposit_amount = 5 [json_name = "minDepositAmount", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for minDepositAmount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMinDepositAmountBytes() {
+      java.lang.Object ref = minDepositAmount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        minDepositAmount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DRAW_SCHEDULE_FIELD_NUMBER = 6;
+    private com.lum.network.millions.DrawScheduleProto.DrawSchedule drawSchedule_;
+    /**
+     * <code>.lum.network.millions.DrawSchedule draw_schedule = 6 [json_name = "drawSchedule", (.gogoproto.nullable) = true];</code>
+     * @return Whether the drawSchedule field is set.
+     */
+    @java.lang.Override
+    public boolean hasDrawSchedule() {
+      return drawSchedule_ != null;
+    }
+    /**
+     * <code>.lum.network.millions.DrawSchedule draw_schedule = 6 [json_name = "drawSchedule", (.gogoproto.nullable) = true];</code>
+     * @return The drawSchedule.
+     */
+    @java.lang.Override
+    public com.lum.network.millions.DrawScheduleProto.DrawSchedule getDrawSchedule() {
+      return drawSchedule_ == null ? com.lum.network.millions.DrawScheduleProto.DrawSchedule.getDefaultInstance() : drawSchedule_;
+    }
+    /**
+     * <code>.lum.network.millions.DrawSchedule draw_schedule = 6 [json_name = "drawSchedule", (.gogoproto.nullable) = true];</code>
+     */
+    @java.lang.Override
+    public com.lum.network.millions.DrawScheduleProto.DrawScheduleOrBuilder getDrawScheduleOrBuilder() {
+      return drawSchedule_ == null ? com.lum.network.millions.DrawScheduleProto.DrawSchedule.getDefaultInstance() : drawSchedule_;
+    }
+
+    public static final int PRIZE_STRATEGY_FIELD_NUMBER = 7;
+    private com.lum.network.millions.PrizeStrategyProto.PrizeStrategy prizeStrategy_;
+    /**
+     * <code>.lum.network.millions.PrizeStrategy prize_strategy = 7 [json_name = "prizeStrategy", (.gogoproto.nullable) = true];</code>
+     * @return Whether the prizeStrategy field is set.
+     */
+    @java.lang.Override
+    public boolean hasPrizeStrategy() {
+      return prizeStrategy_ != null;
+    }
+    /**
+     * <code>.lum.network.millions.PrizeStrategy prize_strategy = 7 [json_name = "prizeStrategy", (.gogoproto.nullable) = true];</code>
+     * @return The prizeStrategy.
+     */
+    @java.lang.Override
+    public com.lum.network.millions.PrizeStrategyProto.PrizeStrategy getPrizeStrategy() {
+      return prizeStrategy_ == null ? com.lum.network.millions.PrizeStrategyProto.PrizeStrategy.getDefaultInstance() : prizeStrategy_;
+    }
+    /**
+     * <code>.lum.network.millions.PrizeStrategy prize_strategy = 7 [json_name = "prizeStrategy", (.gogoproto.nullable) = true];</code>
+     */
+    @java.lang.Override
+    public com.lum.network.millions.PrizeStrategyProto.PrizeStrategyOrBuilder getPrizeStrategyOrBuilder() {
+      return prizeStrategy_ == null ? com.lum.network.millions.PrizeStrategyProto.PrizeStrategy.getDefaultInstance() : prizeStrategy_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (poolId_ != 0L) {
+        output.writeUInt64(3, poolId_);
+      }
+      for (int i = 0; i < validators_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, validators_.getRaw(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minDepositAmount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, minDepositAmount_);
+      }
+      if (drawSchedule_ != null) {
+        output.writeMessage(6, getDrawSchedule());
+      }
+      if (prizeStrategy_ != null) {
+        output.writeMessage(7, getPrizeStrategy());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, poolId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < validators_.size(); i++) {
+          dataSize += computeStringSizeNoTag(validators_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getValidatorsList().size();
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minDepositAmount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, minDepositAmount_);
+      }
+      if (drawSchedule_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getDrawSchedule());
+      }
+      if (prizeStrategy_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getPrizeStrategy());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lum.network.millions.GovProto.ProposalUpdatePool)) {
+        return super.equals(obj);
+      }
+      com.lum.network.millions.GovProto.ProposalUpdatePool other = (com.lum.network.millions.GovProto.ProposalUpdatePool) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (!getValidatorsList()
+          .equals(other.getValidatorsList())) return false;
+      if (!getMinDepositAmount()
+          .equals(other.getMinDepositAmount())) return false;
+      if (hasDrawSchedule() != other.hasDrawSchedule()) return false;
+      if (hasDrawSchedule()) {
+        if (!getDrawSchedule()
+            .equals(other.getDrawSchedule())) return false;
+      }
+      if (hasPrizeStrategy() != other.hasPrizeStrategy()) return false;
+      if (hasPrizeStrategy()) {
+        if (!getPrizeStrategy()
+            .equals(other.getPrizeStrategy())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      if (getValidatorsCount() > 0) {
+        hash = (37 * hash) + VALIDATORS_FIELD_NUMBER;
+        hash = (53 * hash) + getValidatorsList().hashCode();
+      }
+      hash = (37 * hash) + MIN_DEPOSIT_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getMinDepositAmount().hashCode();
+      if (hasDrawSchedule()) {
+        hash = (37 * hash) + DRAW_SCHEDULE_FIELD_NUMBER;
+        hash = (53 * hash) + getDrawSchedule().hashCode();
+      }
+      if (hasPrizeStrategy()) {
+        hash = (37 * hash) + PRIZE_STRATEGY_FIELD_NUMBER;
+        hash = (53 * hash) + getPrizeStrategy().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lum.network.millions.GovProto.ProposalUpdatePool parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.GovProto.ProposalUpdatePool parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.GovProto.ProposalUpdatePool parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.GovProto.ProposalUpdatePool parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.GovProto.ProposalUpdatePool parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.GovProto.ProposalUpdatePool parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.GovProto.ProposalUpdatePool parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.millions.GovProto.ProposalUpdatePool parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lum.network.millions.GovProto.ProposalUpdatePool parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lum.network.millions.GovProto.ProposalUpdatePool parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lum.network.millions.GovProto.ProposalUpdatePool parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.millions.GovProto.ProposalUpdatePool parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lum.network.millions.GovProto.ProposalUpdatePool prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lum.network.millions.ProposalUpdatePool}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lum.network.millions.ProposalUpdatePool)
+        com.lum.network.millions.GovProto.ProposalUpdatePoolOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lum.network.millions.GovProto.internal_static_lum_network_millions_ProposalUpdatePool_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lum.network.millions.GovProto.internal_static_lum_network_millions_ProposalUpdatePool_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lum.network.millions.GovProto.ProposalUpdatePool.class, com.lum.network.millions.GovProto.ProposalUpdatePool.Builder.class);
+      }
+
+      // Construct using com.lum.network.millions.GovProto.ProposalUpdatePool.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        poolId_ = 0L;
+        validators_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        minDepositAmount_ = "";
+        drawSchedule_ = null;
+        if (drawScheduleBuilder_ != null) {
+          drawScheduleBuilder_.dispose();
+          drawScheduleBuilder_ = null;
+        }
+        prizeStrategy_ = null;
+        if (prizeStrategyBuilder_ != null) {
+          prizeStrategyBuilder_.dispose();
+          prizeStrategyBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lum.network.millions.GovProto.internal_static_lum_network_millions_ProposalUpdatePool_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.GovProto.ProposalUpdatePool getDefaultInstanceForType() {
+        return com.lum.network.millions.GovProto.ProposalUpdatePool.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.GovProto.ProposalUpdatePool build() {
+        com.lum.network.millions.GovProto.ProposalUpdatePool result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.GovProto.ProposalUpdatePool buildPartial() {
+        com.lum.network.millions.GovProto.ProposalUpdatePool result = new com.lum.network.millions.GovProto.ProposalUpdatePool(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.lum.network.millions.GovProto.ProposalUpdatePool result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          validators_.makeImmutable();
+          result.validators_ = validators_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.minDepositAmount_ = minDepositAmount_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.drawSchedule_ = drawScheduleBuilder_ == null
+              ? drawSchedule_
+              : drawScheduleBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.prizeStrategy_ = prizeStrategyBuilder_ == null
+              ? prizeStrategy_
+              : prizeStrategyBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lum.network.millions.GovProto.ProposalUpdatePool) {
+          return mergeFrom((com.lum.network.millions.GovProto.ProposalUpdatePool)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lum.network.millions.GovProto.ProposalUpdatePool other) {
+        if (other == com.lum.network.millions.GovProto.ProposalUpdatePool.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (!other.validators_.isEmpty()) {
+          if (validators_.isEmpty()) {
+            validators_ = other.validators_;
+            bitField0_ |= 0x00000008;
+          } else {
+            ensureValidatorsIsMutable();
+            validators_.addAll(other.validators_);
+          }
+          onChanged();
+        }
+        if (!other.getMinDepositAmount().isEmpty()) {
+          minDepositAmount_ = other.minDepositAmount_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (other.hasDrawSchedule()) {
+          mergeDrawSchedule(other.getDrawSchedule());
+        }
+        if (other.hasPrizeStrategy()) {
+          mergePrizeStrategy(other.getPrizeStrategy());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureValidatorsIsMutable();
+                validators_.add(s);
+                break;
+              } // case 34
+              case 42: {
+                minDepositAmount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getDrawScheduleFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                input.readMessage(
+                    getPrizeStrategyFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 3 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 3 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 3 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList validators_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureValidatorsIsMutable() {
+        if (!validators_.isModifiable()) {
+          validators_ = new com.google.protobuf.LazyStringArrayList(validators_);
+        }
+        bitField0_ |= 0x00000008;
+      }
+      /**
+       * <code>repeated string validators = 4 [json_name = "validators", (.gogoproto.nullable) = true];</code>
+       * @return A list containing the validators.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getValidatorsList() {
+        validators_.makeImmutable();
+        return validators_;
+      }
+      /**
+       * <code>repeated string validators = 4 [json_name = "validators", (.gogoproto.nullable) = true];</code>
+       * @return The count of validators.
+       */
+      public int getValidatorsCount() {
+        return validators_.size();
+      }
+      /**
+       * <code>repeated string validators = 4 [json_name = "validators", (.gogoproto.nullable) = true];</code>
+       * @param index The index of the element to return.
+       * @return The validators at the given index.
+       */
+      public java.lang.String getValidators(int index) {
+        return validators_.get(index);
+      }
+      /**
+       * <code>repeated string validators = 4 [json_name = "validators", (.gogoproto.nullable) = true];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the validators at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getValidatorsBytes(int index) {
+        return validators_.getByteString(index);
+      }
+      /**
+       * <code>repeated string validators = 4 [json_name = "validators", (.gogoproto.nullable) = true];</code>
+       * @param index The index to set the value at.
+       * @param value The validators to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValidators(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureValidatorsIsMutable();
+        validators_.set(index, value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string validators = 4 [json_name = "validators", (.gogoproto.nullable) = true];</code>
+       * @param value The validators to add.
+       * @return This builder for chaining.
+       */
+      public Builder addValidators(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureValidatorsIsMutable();
+        validators_.add(value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string validators = 4 [json_name = "validators", (.gogoproto.nullable) = true];</code>
+       * @param values The validators to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllValidators(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureValidatorsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, validators_);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string validators = 4 [json_name = "validators", (.gogoproto.nullable) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValidators() {
+        validators_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string validators = 4 [json_name = "validators", (.gogoproto.nullable) = true];</code>
+       * @param value The bytes of the validators to add.
+       * @return This builder for chaining.
+       */
+      public Builder addValidatorsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureValidatorsIsMutable();
+        validators_.add(value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object minDepositAmount_ = "";
+      /**
+       * <code>string min_deposit_amount = 5 [json_name = "minDepositAmount", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The minDepositAmount.
+       */
+      public java.lang.String getMinDepositAmount() {
+        java.lang.Object ref = minDepositAmount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          minDepositAmount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string min_deposit_amount = 5 [json_name = "minDepositAmount", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for minDepositAmount.
+       */
+      public com.google.protobuf.ByteString
+          getMinDepositAmountBytes() {
+        java.lang.Object ref = minDepositAmount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          minDepositAmount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string min_deposit_amount = 5 [json_name = "minDepositAmount", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The minDepositAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinDepositAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        minDepositAmount_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string min_deposit_amount = 5 [json_name = "minDepositAmount", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinDepositAmount() {
+        minDepositAmount_ = getDefaultInstance().getMinDepositAmount();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string min_deposit_amount = 5 [json_name = "minDepositAmount", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for minDepositAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinDepositAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        minDepositAmount_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private com.lum.network.millions.DrawScheduleProto.DrawSchedule drawSchedule_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.lum.network.millions.DrawScheduleProto.DrawSchedule, com.lum.network.millions.DrawScheduleProto.DrawSchedule.Builder, com.lum.network.millions.DrawScheduleProto.DrawScheduleOrBuilder> drawScheduleBuilder_;
+      /**
+       * <code>.lum.network.millions.DrawSchedule draw_schedule = 6 [json_name = "drawSchedule", (.gogoproto.nullable) = true];</code>
+       * @return Whether the drawSchedule field is set.
+       */
+      public boolean hasDrawSchedule() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>.lum.network.millions.DrawSchedule draw_schedule = 6 [json_name = "drawSchedule", (.gogoproto.nullable) = true];</code>
+       * @return The drawSchedule.
+       */
+      public com.lum.network.millions.DrawScheduleProto.DrawSchedule getDrawSchedule() {
+        if (drawScheduleBuilder_ == null) {
+          return drawSchedule_ == null ? com.lum.network.millions.DrawScheduleProto.DrawSchedule.getDefaultInstance() : drawSchedule_;
+        } else {
+          return drawScheduleBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.lum.network.millions.DrawSchedule draw_schedule = 6 [json_name = "drawSchedule", (.gogoproto.nullable) = true];</code>
+       */
+      public Builder setDrawSchedule(com.lum.network.millions.DrawScheduleProto.DrawSchedule value) {
+        if (drawScheduleBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          drawSchedule_ = value;
+        } else {
+          drawScheduleBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.millions.DrawSchedule draw_schedule = 6 [json_name = "drawSchedule", (.gogoproto.nullable) = true];</code>
+       */
+      public Builder setDrawSchedule(
+          com.lum.network.millions.DrawScheduleProto.DrawSchedule.Builder builderForValue) {
+        if (drawScheduleBuilder_ == null) {
+          drawSchedule_ = builderForValue.build();
+        } else {
+          drawScheduleBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.millions.DrawSchedule draw_schedule = 6 [json_name = "drawSchedule", (.gogoproto.nullable) = true];</code>
+       */
+      public Builder mergeDrawSchedule(com.lum.network.millions.DrawScheduleProto.DrawSchedule value) {
+        if (drawScheduleBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            drawSchedule_ != null &&
+            drawSchedule_ != com.lum.network.millions.DrawScheduleProto.DrawSchedule.getDefaultInstance()) {
+            getDrawScheduleBuilder().mergeFrom(value);
+          } else {
+            drawSchedule_ = value;
+          }
+        } else {
+          drawScheduleBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.millions.DrawSchedule draw_schedule = 6 [json_name = "drawSchedule", (.gogoproto.nullable) = true];</code>
+       */
+      public Builder clearDrawSchedule() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        drawSchedule_ = null;
+        if (drawScheduleBuilder_ != null) {
+          drawScheduleBuilder_.dispose();
+          drawScheduleBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.millions.DrawSchedule draw_schedule = 6 [json_name = "drawSchedule", (.gogoproto.nullable) = true];</code>
+       */
+      public com.lum.network.millions.DrawScheduleProto.DrawSchedule.Builder getDrawScheduleBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getDrawScheduleFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.lum.network.millions.DrawSchedule draw_schedule = 6 [json_name = "drawSchedule", (.gogoproto.nullable) = true];</code>
+       */
+      public com.lum.network.millions.DrawScheduleProto.DrawScheduleOrBuilder getDrawScheduleOrBuilder() {
+        if (drawScheduleBuilder_ != null) {
+          return drawScheduleBuilder_.getMessageOrBuilder();
+        } else {
+          return drawSchedule_ == null ?
+              com.lum.network.millions.DrawScheduleProto.DrawSchedule.getDefaultInstance() : drawSchedule_;
+        }
+      }
+      /**
+       * <code>.lum.network.millions.DrawSchedule draw_schedule = 6 [json_name = "drawSchedule", (.gogoproto.nullable) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.lum.network.millions.DrawScheduleProto.DrawSchedule, com.lum.network.millions.DrawScheduleProto.DrawSchedule.Builder, com.lum.network.millions.DrawScheduleProto.DrawScheduleOrBuilder> 
+          getDrawScheduleFieldBuilder() {
+        if (drawScheduleBuilder_ == null) {
+          drawScheduleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.lum.network.millions.DrawScheduleProto.DrawSchedule, com.lum.network.millions.DrawScheduleProto.DrawSchedule.Builder, com.lum.network.millions.DrawScheduleProto.DrawScheduleOrBuilder>(
+                  getDrawSchedule(),
+                  getParentForChildren(),
+                  isClean());
+          drawSchedule_ = null;
+        }
+        return drawScheduleBuilder_;
+      }
+
+      private com.lum.network.millions.PrizeStrategyProto.PrizeStrategy prizeStrategy_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.lum.network.millions.PrizeStrategyProto.PrizeStrategy, com.lum.network.millions.PrizeStrategyProto.PrizeStrategy.Builder, com.lum.network.millions.PrizeStrategyProto.PrizeStrategyOrBuilder> prizeStrategyBuilder_;
+      /**
+       * <code>.lum.network.millions.PrizeStrategy prize_strategy = 7 [json_name = "prizeStrategy", (.gogoproto.nullable) = true];</code>
+       * @return Whether the prizeStrategy field is set.
+       */
+      public boolean hasPrizeStrategy() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>.lum.network.millions.PrizeStrategy prize_strategy = 7 [json_name = "prizeStrategy", (.gogoproto.nullable) = true];</code>
+       * @return The prizeStrategy.
+       */
+      public com.lum.network.millions.PrizeStrategyProto.PrizeStrategy getPrizeStrategy() {
+        if (prizeStrategyBuilder_ == null) {
+          return prizeStrategy_ == null ? com.lum.network.millions.PrizeStrategyProto.PrizeStrategy.getDefaultInstance() : prizeStrategy_;
+        } else {
+          return prizeStrategyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.lum.network.millions.PrizeStrategy prize_strategy = 7 [json_name = "prizeStrategy", (.gogoproto.nullable) = true];</code>
+       */
+      public Builder setPrizeStrategy(com.lum.network.millions.PrizeStrategyProto.PrizeStrategy value) {
+        if (prizeStrategyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          prizeStrategy_ = value;
+        } else {
+          prizeStrategyBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.millions.PrizeStrategy prize_strategy = 7 [json_name = "prizeStrategy", (.gogoproto.nullable) = true];</code>
+       */
+      public Builder setPrizeStrategy(
+          com.lum.network.millions.PrizeStrategyProto.PrizeStrategy.Builder builderForValue) {
+        if (prizeStrategyBuilder_ == null) {
+          prizeStrategy_ = builderForValue.build();
+        } else {
+          prizeStrategyBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.millions.PrizeStrategy prize_strategy = 7 [json_name = "prizeStrategy", (.gogoproto.nullable) = true];</code>
+       */
+      public Builder mergePrizeStrategy(com.lum.network.millions.PrizeStrategyProto.PrizeStrategy value) {
+        if (prizeStrategyBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0) &&
+            prizeStrategy_ != null &&
+            prizeStrategy_ != com.lum.network.millions.PrizeStrategyProto.PrizeStrategy.getDefaultInstance()) {
+            getPrizeStrategyBuilder().mergeFrom(value);
+          } else {
+            prizeStrategy_ = value;
+          }
+        } else {
+          prizeStrategyBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.millions.PrizeStrategy prize_strategy = 7 [json_name = "prizeStrategy", (.gogoproto.nullable) = true];</code>
+       */
+      public Builder clearPrizeStrategy() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        prizeStrategy_ = null;
+        if (prizeStrategyBuilder_ != null) {
+          prizeStrategyBuilder_.dispose();
+          prizeStrategyBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.millions.PrizeStrategy prize_strategy = 7 [json_name = "prizeStrategy", (.gogoproto.nullable) = true];</code>
+       */
+      public com.lum.network.millions.PrizeStrategyProto.PrizeStrategy.Builder getPrizeStrategyBuilder() {
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return getPrizeStrategyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.lum.network.millions.PrizeStrategy prize_strategy = 7 [json_name = "prizeStrategy", (.gogoproto.nullable) = true];</code>
+       */
+      public com.lum.network.millions.PrizeStrategyProto.PrizeStrategyOrBuilder getPrizeStrategyOrBuilder() {
+        if (prizeStrategyBuilder_ != null) {
+          return prizeStrategyBuilder_.getMessageOrBuilder();
+        } else {
+          return prizeStrategy_ == null ?
+              com.lum.network.millions.PrizeStrategyProto.PrizeStrategy.getDefaultInstance() : prizeStrategy_;
+        }
+      }
+      /**
+       * <code>.lum.network.millions.PrizeStrategy prize_strategy = 7 [json_name = "prizeStrategy", (.gogoproto.nullable) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.lum.network.millions.PrizeStrategyProto.PrizeStrategy, com.lum.network.millions.PrizeStrategyProto.PrizeStrategy.Builder, com.lum.network.millions.PrizeStrategyProto.PrizeStrategyOrBuilder> 
+          getPrizeStrategyFieldBuilder() {
+        if (prizeStrategyBuilder_ == null) {
+          prizeStrategyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.lum.network.millions.PrizeStrategyProto.PrizeStrategy, com.lum.network.millions.PrizeStrategyProto.PrizeStrategy.Builder, com.lum.network.millions.PrizeStrategyProto.PrizeStrategyOrBuilder>(
+                  getPrizeStrategy(),
+                  getParentForChildren(),
+                  isClean());
+          prizeStrategy_ = null;
+        }
+        return prizeStrategyBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lum.network.millions.ProposalUpdatePool)
+    }
+
+    // @@protoc_insertion_point(class_scope:lum.network.millions.ProposalUpdatePool)
+    private static final com.lum.network.millions.GovProto.ProposalUpdatePool DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lum.network.millions.GovProto.ProposalUpdatePool();
+    }
+
+    public static com.lum.network.millions.GovProto.ProposalUpdatePool getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ProposalUpdatePool>
+        PARSER = new com.google.protobuf.AbstractParser<ProposalUpdatePool>() {
+      @java.lang.Override
+      public ProposalUpdatePool parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ProposalUpdatePool> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ProposalUpdatePool> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lum.network.millions.GovProto.ProposalUpdatePool getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ProposalUpdateParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lum.network.millions.ProposalUpdateParams)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>string min_deposit_amount = 3 [json_name = "minDepositAmount", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The minDepositAmount.
+     */
+    java.lang.String getMinDepositAmount();
+    /**
+     * <code>string min_deposit_amount = 3 [json_name = "minDepositAmount", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for minDepositAmount.
+     */
+    com.google.protobuf.ByteString
+        getMinDepositAmountBytes();
+
+    /**
+     * <code>string max_prize_strategy_batches = 4 [json_name = "maxPrizeStrategyBatches", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The maxPrizeStrategyBatches.
+     */
+    java.lang.String getMaxPrizeStrategyBatches();
+    /**
+     * <code>string max_prize_strategy_batches = 4 [json_name = "maxPrizeStrategyBatches", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for maxPrizeStrategyBatches.
+     */
+    com.google.protobuf.ByteString
+        getMaxPrizeStrategyBatchesBytes();
+
+    /**
+     * <code>string max_prize_batch_quantity = 5 [json_name = "maxPrizeBatchQuantity", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The maxPrizeBatchQuantity.
+     */
+    java.lang.String getMaxPrizeBatchQuantity();
+    /**
+     * <code>string max_prize_batch_quantity = 5 [json_name = "maxPrizeBatchQuantity", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for maxPrizeBatchQuantity.
+     */
+    com.google.protobuf.ByteString
+        getMaxPrizeBatchQuantityBytes();
+
+    /**
+     * <code>.google.protobuf.Duration min_draw_schedule_delta = 6 [json_name = "minDrawScheduleDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+     * @return Whether the minDrawScheduleDelta field is set.
+     */
+    boolean hasMinDrawScheduleDelta();
+    /**
+     * <code>.google.protobuf.Duration min_draw_schedule_delta = 6 [json_name = "minDrawScheduleDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+     * @return The minDrawScheduleDelta.
+     */
+    com.google.protobuf.Duration getMinDrawScheduleDelta();
+    /**
+     * <code>.google.protobuf.Duration min_draw_schedule_delta = 6 [json_name = "minDrawScheduleDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getMinDrawScheduleDeltaOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Duration max_draw_schedule_delta = 7 [json_name = "maxDrawScheduleDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+     * @return Whether the maxDrawScheduleDelta field is set.
+     */
+    boolean hasMaxDrawScheduleDelta();
+    /**
+     * <code>.google.protobuf.Duration max_draw_schedule_delta = 7 [json_name = "maxDrawScheduleDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+     * @return The maxDrawScheduleDelta.
+     */
+    com.google.protobuf.Duration getMaxDrawScheduleDelta();
+    /**
+     * <code>.google.protobuf.Duration max_draw_schedule_delta = 7 [json_name = "maxDrawScheduleDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getMaxDrawScheduleDeltaOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Duration prize_expiration_delta = 8 [json_name = "prizeExpirationDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+     * @return Whether the prizeExpirationDelta field is set.
+     */
+    boolean hasPrizeExpirationDelta();
+    /**
+     * <code>.google.protobuf.Duration prize_expiration_delta = 8 [json_name = "prizeExpirationDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+     * @return The prizeExpirationDelta.
+     */
+    com.google.protobuf.Duration getPrizeExpirationDelta();
+    /**
+     * <code>.google.protobuf.Duration prize_expiration_delta = 8 [json_name = "prizeExpirationDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getPrizeExpirationDeltaOrBuilder();
+
+    /**
+     * <code>string fees_stakers = 9 [json_name = "feesStakers", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The feesStakers.
+     */
+    java.lang.String getFeesStakers();
+    /**
+     * <code>string fees_stakers = 9 [json_name = "feesStakers", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for feesStakers.
+     */
+    com.google.protobuf.ByteString
+        getFeesStakersBytes();
+
+    /**
+     * <code>.google.protobuf.Duration min_deposit_draw_delta = 10 [json_name = "minDepositDrawDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+     * @return Whether the minDepositDrawDelta field is set.
+     */
+    boolean hasMinDepositDrawDelta();
+    /**
+     * <code>.google.protobuf.Duration min_deposit_draw_delta = 10 [json_name = "minDepositDrawDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+     * @return The minDepositDrawDelta.
+     */
+    com.google.protobuf.Duration getMinDepositDrawDelta();
+    /**
+     * <code>.google.protobuf.Duration min_deposit_draw_delta = 10 [json_name = "minDepositDrawDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getMinDepositDrawDeltaOrBuilder();
+  }
+  /**
+   * Protobuf type {@code lum.network.millions.ProposalUpdateParams}
+   */
+  public static final class ProposalUpdateParams extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lum.network.millions.ProposalUpdateParams)
+      ProposalUpdateParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ProposalUpdateParams.newBuilder() to construct.
+    private ProposalUpdateParams(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ProposalUpdateParams() {
+      title_ = "";
+      description_ = "";
+      minDepositAmount_ = "";
+      maxPrizeStrategyBatches_ = "";
+      maxPrizeBatchQuantity_ = "";
+      feesStakers_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ProposalUpdateParams();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lum.network.millions.GovProto.internal_static_lum_network_millions_ProposalUpdateParams_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lum.network.millions.GovProto.internal_static_lum_network_millions_ProposalUpdateParams_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lum.network.millions.GovProto.ProposalUpdateParams.class, com.lum.network.millions.GovProto.ProposalUpdateParams.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MIN_DEPOSIT_AMOUNT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object minDepositAmount_ = "";
+    /**
+     * <code>string min_deposit_amount = 3 [json_name = "minDepositAmount", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The minDepositAmount.
+     */
+    @java.lang.Override
+    public java.lang.String getMinDepositAmount() {
+      java.lang.Object ref = minDepositAmount_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        minDepositAmount_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string min_deposit_amount = 3 [json_name = "minDepositAmount", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for minDepositAmount.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMinDepositAmountBytes() {
+      java.lang.Object ref = minDepositAmount_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        minDepositAmount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MAX_PRIZE_STRATEGY_BATCHES_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object maxPrizeStrategyBatches_ = "";
+    /**
+     * <code>string max_prize_strategy_batches = 4 [json_name = "maxPrizeStrategyBatches", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The maxPrizeStrategyBatches.
+     */
+    @java.lang.Override
+    public java.lang.String getMaxPrizeStrategyBatches() {
+      java.lang.Object ref = maxPrizeStrategyBatches_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        maxPrizeStrategyBatches_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string max_prize_strategy_batches = 4 [json_name = "maxPrizeStrategyBatches", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for maxPrizeStrategyBatches.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMaxPrizeStrategyBatchesBytes() {
+      java.lang.Object ref = maxPrizeStrategyBatches_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        maxPrizeStrategyBatches_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MAX_PRIZE_BATCH_QUANTITY_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object maxPrizeBatchQuantity_ = "";
+    /**
+     * <code>string max_prize_batch_quantity = 5 [json_name = "maxPrizeBatchQuantity", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The maxPrizeBatchQuantity.
+     */
+    @java.lang.Override
+    public java.lang.String getMaxPrizeBatchQuantity() {
+      java.lang.Object ref = maxPrizeBatchQuantity_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        maxPrizeBatchQuantity_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string max_prize_batch_quantity = 5 [json_name = "maxPrizeBatchQuantity", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+     * @return The bytes for maxPrizeBatchQuantity.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMaxPrizeBatchQuantityBytes() {
+      java.lang.Object ref = maxPrizeBatchQuantity_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        maxPrizeBatchQuantity_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MIN_DRAW_SCHEDULE_DELTA_FIELD_NUMBER = 6;
+    private com.google.protobuf.Duration minDrawScheduleDelta_;
+    /**
+     * <code>.google.protobuf.Duration min_draw_schedule_delta = 6 [json_name = "minDrawScheduleDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+     * @return Whether the minDrawScheduleDelta field is set.
+     */
+    @java.lang.Override
+    public boolean hasMinDrawScheduleDelta() {
+      return minDrawScheduleDelta_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Duration min_draw_schedule_delta = 6 [json_name = "minDrawScheduleDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+     * @return The minDrawScheduleDelta.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getMinDrawScheduleDelta() {
+      return minDrawScheduleDelta_ == null ? com.google.protobuf.Duration.getDefaultInstance() : minDrawScheduleDelta_;
+    }
+    /**
+     * <code>.google.protobuf.Duration min_draw_schedule_delta = 6 [json_name = "minDrawScheduleDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getMinDrawScheduleDeltaOrBuilder() {
+      return minDrawScheduleDelta_ == null ? com.google.protobuf.Duration.getDefaultInstance() : minDrawScheduleDelta_;
+    }
+
+    public static final int MAX_DRAW_SCHEDULE_DELTA_FIELD_NUMBER = 7;
+    private com.google.protobuf.Duration maxDrawScheduleDelta_;
+    /**
+     * <code>.google.protobuf.Duration max_draw_schedule_delta = 7 [json_name = "maxDrawScheduleDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+     * @return Whether the maxDrawScheduleDelta field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaxDrawScheduleDelta() {
+      return maxDrawScheduleDelta_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Duration max_draw_schedule_delta = 7 [json_name = "maxDrawScheduleDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+     * @return The maxDrawScheduleDelta.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getMaxDrawScheduleDelta() {
+      return maxDrawScheduleDelta_ == null ? com.google.protobuf.Duration.getDefaultInstance() : maxDrawScheduleDelta_;
+    }
+    /**
+     * <code>.google.protobuf.Duration max_draw_schedule_delta = 7 [json_name = "maxDrawScheduleDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getMaxDrawScheduleDeltaOrBuilder() {
+      return maxDrawScheduleDelta_ == null ? com.google.protobuf.Duration.getDefaultInstance() : maxDrawScheduleDelta_;
+    }
+
+    public static final int PRIZE_EXPIRATION_DELTA_FIELD_NUMBER = 8;
+    private com.google.protobuf.Duration prizeExpirationDelta_;
+    /**
+     * <code>.google.protobuf.Duration prize_expiration_delta = 8 [json_name = "prizeExpirationDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+     * @return Whether the prizeExpirationDelta field is set.
+     */
+    @java.lang.Override
+    public boolean hasPrizeExpirationDelta() {
+      return prizeExpirationDelta_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Duration prize_expiration_delta = 8 [json_name = "prizeExpirationDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+     * @return The prizeExpirationDelta.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getPrizeExpirationDelta() {
+      return prizeExpirationDelta_ == null ? com.google.protobuf.Duration.getDefaultInstance() : prizeExpirationDelta_;
+    }
+    /**
+     * <code>.google.protobuf.Duration prize_expiration_delta = 8 [json_name = "prizeExpirationDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getPrizeExpirationDeltaOrBuilder() {
+      return prizeExpirationDelta_ == null ? com.google.protobuf.Duration.getDefaultInstance() : prizeExpirationDelta_;
+    }
+
+    public static final int FEES_STAKERS_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object feesStakers_ = "";
+    /**
+     * <code>string fees_stakers = 9 [json_name = "feesStakers", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The feesStakers.
+     */
+    @java.lang.Override
+    public java.lang.String getFeesStakers() {
+      java.lang.Object ref = feesStakers_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        feesStakers_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string fees_stakers = 9 [json_name = "feesStakers", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for feesStakers.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFeesStakersBytes() {
+      java.lang.Object ref = feesStakers_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        feesStakers_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MIN_DEPOSIT_DRAW_DELTA_FIELD_NUMBER = 10;
+    private com.google.protobuf.Duration minDepositDrawDelta_;
+    /**
+     * <code>.google.protobuf.Duration min_deposit_draw_delta = 10 [json_name = "minDepositDrawDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+     * @return Whether the minDepositDrawDelta field is set.
+     */
+    @java.lang.Override
+    public boolean hasMinDepositDrawDelta() {
+      return minDepositDrawDelta_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Duration min_deposit_draw_delta = 10 [json_name = "minDepositDrawDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+     * @return The minDepositDrawDelta.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getMinDepositDrawDelta() {
+      return minDepositDrawDelta_ == null ? com.google.protobuf.Duration.getDefaultInstance() : minDepositDrawDelta_;
+    }
+    /**
+     * <code>.google.protobuf.Duration min_deposit_draw_delta = 10 [json_name = "minDepositDrawDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getMinDepositDrawDeltaOrBuilder() {
+      return minDepositDrawDelta_ == null ? com.google.protobuf.Duration.getDefaultInstance() : minDepositDrawDelta_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minDepositAmount_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, minDepositAmount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maxPrizeStrategyBatches_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, maxPrizeStrategyBatches_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maxPrizeBatchQuantity_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, maxPrizeBatchQuantity_);
+      }
+      if (minDrawScheduleDelta_ != null) {
+        output.writeMessage(6, getMinDrawScheduleDelta());
+      }
+      if (maxDrawScheduleDelta_ != null) {
+        output.writeMessage(7, getMaxDrawScheduleDelta());
+      }
+      if (prizeExpirationDelta_ != null) {
+        output.writeMessage(8, getPrizeExpirationDelta());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feesStakers_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, feesStakers_);
+      }
+      if (minDepositDrawDelta_ != null) {
+        output.writeMessage(10, getMinDepositDrawDelta());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minDepositAmount_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, minDepositAmount_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maxPrizeStrategyBatches_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, maxPrizeStrategyBatches_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(maxPrizeBatchQuantity_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, maxPrizeBatchQuantity_);
+      }
+      if (minDrawScheduleDelta_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getMinDrawScheduleDelta());
+      }
+      if (maxDrawScheduleDelta_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getMaxDrawScheduleDelta());
+      }
+      if (prizeExpirationDelta_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getPrizeExpirationDelta());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feesStakers_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, feesStakers_);
+      }
+      if (minDepositDrawDelta_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getMinDepositDrawDelta());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lum.network.millions.GovProto.ProposalUpdateParams)) {
+        return super.equals(obj);
+      }
+      com.lum.network.millions.GovProto.ProposalUpdateParams other = (com.lum.network.millions.GovProto.ProposalUpdateParams) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getMinDepositAmount()
+          .equals(other.getMinDepositAmount())) return false;
+      if (!getMaxPrizeStrategyBatches()
+          .equals(other.getMaxPrizeStrategyBatches())) return false;
+      if (!getMaxPrizeBatchQuantity()
+          .equals(other.getMaxPrizeBatchQuantity())) return false;
+      if (hasMinDrawScheduleDelta() != other.hasMinDrawScheduleDelta()) return false;
+      if (hasMinDrawScheduleDelta()) {
+        if (!getMinDrawScheduleDelta()
+            .equals(other.getMinDrawScheduleDelta())) return false;
+      }
+      if (hasMaxDrawScheduleDelta() != other.hasMaxDrawScheduleDelta()) return false;
+      if (hasMaxDrawScheduleDelta()) {
+        if (!getMaxDrawScheduleDelta()
+            .equals(other.getMaxDrawScheduleDelta())) return false;
+      }
+      if (hasPrizeExpirationDelta() != other.hasPrizeExpirationDelta()) return false;
+      if (hasPrizeExpirationDelta()) {
+        if (!getPrizeExpirationDelta()
+            .equals(other.getPrizeExpirationDelta())) return false;
+      }
+      if (!getFeesStakers()
+          .equals(other.getFeesStakers())) return false;
+      if (hasMinDepositDrawDelta() != other.hasMinDepositDrawDelta()) return false;
+      if (hasMinDepositDrawDelta()) {
+        if (!getMinDepositDrawDelta()
+            .equals(other.getMinDepositDrawDelta())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + MIN_DEPOSIT_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getMinDepositAmount().hashCode();
+      hash = (37 * hash) + MAX_PRIZE_STRATEGY_BATCHES_FIELD_NUMBER;
+      hash = (53 * hash) + getMaxPrizeStrategyBatches().hashCode();
+      hash = (37 * hash) + MAX_PRIZE_BATCH_QUANTITY_FIELD_NUMBER;
+      hash = (53 * hash) + getMaxPrizeBatchQuantity().hashCode();
+      if (hasMinDrawScheduleDelta()) {
+        hash = (37 * hash) + MIN_DRAW_SCHEDULE_DELTA_FIELD_NUMBER;
+        hash = (53 * hash) + getMinDrawScheduleDelta().hashCode();
+      }
+      if (hasMaxDrawScheduleDelta()) {
+        hash = (37 * hash) + MAX_DRAW_SCHEDULE_DELTA_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxDrawScheduleDelta().hashCode();
+      }
+      if (hasPrizeExpirationDelta()) {
+        hash = (37 * hash) + PRIZE_EXPIRATION_DELTA_FIELD_NUMBER;
+        hash = (53 * hash) + getPrizeExpirationDelta().hashCode();
+      }
+      hash = (37 * hash) + FEES_STAKERS_FIELD_NUMBER;
+      hash = (53 * hash) + getFeesStakers().hashCode();
+      if (hasMinDepositDrawDelta()) {
+        hash = (37 * hash) + MIN_DEPOSIT_DRAW_DELTA_FIELD_NUMBER;
+        hash = (53 * hash) + getMinDepositDrawDelta().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lum.network.millions.GovProto.ProposalUpdateParams parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.GovProto.ProposalUpdateParams parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.GovProto.ProposalUpdateParams parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.GovProto.ProposalUpdateParams parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.GovProto.ProposalUpdateParams parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.millions.GovProto.ProposalUpdateParams parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.millions.GovProto.ProposalUpdateParams parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.millions.GovProto.ProposalUpdateParams parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lum.network.millions.GovProto.ProposalUpdateParams parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lum.network.millions.GovProto.ProposalUpdateParams parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lum.network.millions.GovProto.ProposalUpdateParams parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.millions.GovProto.ProposalUpdateParams parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lum.network.millions.GovProto.ProposalUpdateParams prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lum.network.millions.ProposalUpdateParams}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lum.network.millions.ProposalUpdateParams)
+        com.lum.network.millions.GovProto.ProposalUpdateParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lum.network.millions.GovProto.internal_static_lum_network_millions_ProposalUpdateParams_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lum.network.millions.GovProto.internal_static_lum_network_millions_ProposalUpdateParams_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lum.network.millions.GovProto.ProposalUpdateParams.class, com.lum.network.millions.GovProto.ProposalUpdateParams.Builder.class);
+      }
+
+      // Construct using com.lum.network.millions.GovProto.ProposalUpdateParams.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        minDepositAmount_ = "";
+        maxPrizeStrategyBatches_ = "";
+        maxPrizeBatchQuantity_ = "";
+        minDrawScheduleDelta_ = null;
+        if (minDrawScheduleDeltaBuilder_ != null) {
+          minDrawScheduleDeltaBuilder_.dispose();
+          minDrawScheduleDeltaBuilder_ = null;
+        }
+        maxDrawScheduleDelta_ = null;
+        if (maxDrawScheduleDeltaBuilder_ != null) {
+          maxDrawScheduleDeltaBuilder_.dispose();
+          maxDrawScheduleDeltaBuilder_ = null;
+        }
+        prizeExpirationDelta_ = null;
+        if (prizeExpirationDeltaBuilder_ != null) {
+          prizeExpirationDeltaBuilder_.dispose();
+          prizeExpirationDeltaBuilder_ = null;
+        }
+        feesStakers_ = "";
+        minDepositDrawDelta_ = null;
+        if (minDepositDrawDeltaBuilder_ != null) {
+          minDepositDrawDeltaBuilder_.dispose();
+          minDepositDrawDeltaBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lum.network.millions.GovProto.internal_static_lum_network_millions_ProposalUpdateParams_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.GovProto.ProposalUpdateParams getDefaultInstanceForType() {
+        return com.lum.network.millions.GovProto.ProposalUpdateParams.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.GovProto.ProposalUpdateParams build() {
+        com.lum.network.millions.GovProto.ProposalUpdateParams result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lum.network.millions.GovProto.ProposalUpdateParams buildPartial() {
+        com.lum.network.millions.GovProto.ProposalUpdateParams result = new com.lum.network.millions.GovProto.ProposalUpdateParams(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.lum.network.millions.GovProto.ProposalUpdateParams result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.minDepositAmount_ = minDepositAmount_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.maxPrizeStrategyBatches_ = maxPrizeStrategyBatches_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.maxPrizeBatchQuantity_ = maxPrizeBatchQuantity_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.minDrawScheduleDelta_ = minDrawScheduleDeltaBuilder_ == null
+              ? minDrawScheduleDelta_
+              : minDrawScheduleDeltaBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.maxDrawScheduleDelta_ = maxDrawScheduleDeltaBuilder_ == null
+              ? maxDrawScheduleDelta_
+              : maxDrawScheduleDeltaBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.prizeExpirationDelta_ = prizeExpirationDeltaBuilder_ == null
+              ? prizeExpirationDelta_
+              : prizeExpirationDeltaBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.feesStakers_ = feesStakers_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.minDepositDrawDelta_ = minDepositDrawDeltaBuilder_ == null
+              ? minDepositDrawDelta_
+              : minDepositDrawDeltaBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lum.network.millions.GovProto.ProposalUpdateParams) {
+          return mergeFrom((com.lum.network.millions.GovProto.ProposalUpdateParams)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lum.network.millions.GovProto.ProposalUpdateParams other) {
+        if (other == com.lum.network.millions.GovProto.ProposalUpdateParams.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getMinDepositAmount().isEmpty()) {
+          minDepositAmount_ = other.minDepositAmount_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getMaxPrizeStrategyBatches().isEmpty()) {
+          maxPrizeStrategyBatches_ = other.maxPrizeStrategyBatches_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getMaxPrizeBatchQuantity().isEmpty()) {
+          maxPrizeBatchQuantity_ = other.maxPrizeBatchQuantity_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (other.hasMinDrawScheduleDelta()) {
+          mergeMinDrawScheduleDelta(other.getMinDrawScheduleDelta());
+        }
+        if (other.hasMaxDrawScheduleDelta()) {
+          mergeMaxDrawScheduleDelta(other.getMaxDrawScheduleDelta());
+        }
+        if (other.hasPrizeExpirationDelta()) {
+          mergePrizeExpirationDelta(other.getPrizeExpirationDelta());
+        }
+        if (!other.getFeesStakers().isEmpty()) {
+          feesStakers_ = other.feesStakers_;
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
+        if (other.hasMinDepositDrawDelta()) {
+          mergeMinDepositDrawDelta(other.getMinDepositDrawDelta());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                minDepositAmount_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                maxPrizeStrategyBatches_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                maxPrizeBatchQuantity_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getMinDrawScheduleDeltaFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 58: {
+                input.readMessage(
+                    getMaxDrawScheduleDeltaFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                input.readMessage(
+                    getPrizeExpirationDeltaFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 74: {
+                feesStakers_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              case 82: {
+                input.readMessage(
+                    getMinDepositDrawDeltaFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 82
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object minDepositAmount_ = "";
+      /**
+       * <code>string min_deposit_amount = 3 [json_name = "minDepositAmount", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The minDepositAmount.
+       */
+      public java.lang.String getMinDepositAmount() {
+        java.lang.Object ref = minDepositAmount_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          minDepositAmount_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string min_deposit_amount = 3 [json_name = "minDepositAmount", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for minDepositAmount.
+       */
+      public com.google.protobuf.ByteString
+          getMinDepositAmountBytes() {
+        java.lang.Object ref = minDepositAmount_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          minDepositAmount_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string min_deposit_amount = 3 [json_name = "minDepositAmount", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The minDepositAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinDepositAmount(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        minDepositAmount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string min_deposit_amount = 3 [json_name = "minDepositAmount", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinDepositAmount() {
+        minDepositAmount_ = getDefaultInstance().getMinDepositAmount();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string min_deposit_amount = 3 [json_name = "minDepositAmount", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for minDepositAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinDepositAmountBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        minDepositAmount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object maxPrizeStrategyBatches_ = "";
+      /**
+       * <code>string max_prize_strategy_batches = 4 [json_name = "maxPrizeStrategyBatches", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The maxPrizeStrategyBatches.
+       */
+      public java.lang.String getMaxPrizeStrategyBatches() {
+        java.lang.Object ref = maxPrizeStrategyBatches_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          maxPrizeStrategyBatches_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string max_prize_strategy_batches = 4 [json_name = "maxPrizeStrategyBatches", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for maxPrizeStrategyBatches.
+       */
+      public com.google.protobuf.ByteString
+          getMaxPrizeStrategyBatchesBytes() {
+        java.lang.Object ref = maxPrizeStrategyBatches_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          maxPrizeStrategyBatches_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string max_prize_strategy_batches = 4 [json_name = "maxPrizeStrategyBatches", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The maxPrizeStrategyBatches to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxPrizeStrategyBatches(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        maxPrizeStrategyBatches_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string max_prize_strategy_batches = 4 [json_name = "maxPrizeStrategyBatches", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxPrizeStrategyBatches() {
+        maxPrizeStrategyBatches_ = getDefaultInstance().getMaxPrizeStrategyBatches();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string max_prize_strategy_batches = 4 [json_name = "maxPrizeStrategyBatches", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for maxPrizeStrategyBatches to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxPrizeStrategyBatchesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        maxPrizeStrategyBatches_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object maxPrizeBatchQuantity_ = "";
+      /**
+       * <code>string max_prize_batch_quantity = 5 [json_name = "maxPrizeBatchQuantity", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The maxPrizeBatchQuantity.
+       */
+      public java.lang.String getMaxPrizeBatchQuantity() {
+        java.lang.Object ref = maxPrizeBatchQuantity_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          maxPrizeBatchQuantity_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string max_prize_batch_quantity = 5 [json_name = "maxPrizeBatchQuantity", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return The bytes for maxPrizeBatchQuantity.
+       */
+      public com.google.protobuf.ByteString
+          getMaxPrizeBatchQuantityBytes() {
+        java.lang.Object ref = maxPrizeBatchQuantity_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          maxPrizeBatchQuantity_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string max_prize_batch_quantity = 5 [json_name = "maxPrizeBatchQuantity", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The maxPrizeBatchQuantity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxPrizeBatchQuantity(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        maxPrizeBatchQuantity_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string max_prize_batch_quantity = 5 [json_name = "maxPrizeBatchQuantity", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxPrizeBatchQuantity() {
+        maxPrizeBatchQuantity_ = getDefaultInstance().getMaxPrizeBatchQuantity();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string max_prize_batch_quantity = 5 [json_name = "maxPrizeBatchQuantity", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Int"];</code>
+       * @param value The bytes for maxPrizeBatchQuantity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxPrizeBatchQuantityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        maxPrizeBatchQuantity_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Duration minDrawScheduleDelta_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> minDrawScheduleDeltaBuilder_;
+      /**
+       * <code>.google.protobuf.Duration min_draw_schedule_delta = 6 [json_name = "minDrawScheduleDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+       * @return Whether the minDrawScheduleDelta field is set.
+       */
+      public boolean hasMinDrawScheduleDelta() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Duration min_draw_schedule_delta = 6 [json_name = "minDrawScheduleDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+       * @return The minDrawScheduleDelta.
+       */
+      public com.google.protobuf.Duration getMinDrawScheduleDelta() {
+        if (minDrawScheduleDeltaBuilder_ == null) {
+          return minDrawScheduleDelta_ == null ? com.google.protobuf.Duration.getDefaultInstance() : minDrawScheduleDelta_;
+        } else {
+          return minDrawScheduleDeltaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration min_draw_schedule_delta = 6 [json_name = "minDrawScheduleDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setMinDrawScheduleDelta(com.google.protobuf.Duration value) {
+        if (minDrawScheduleDeltaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          minDrawScheduleDelta_ = value;
+        } else {
+          minDrawScheduleDeltaBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration min_draw_schedule_delta = 6 [json_name = "minDrawScheduleDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setMinDrawScheduleDelta(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (minDrawScheduleDeltaBuilder_ == null) {
+          minDrawScheduleDelta_ = builderForValue.build();
+        } else {
+          minDrawScheduleDeltaBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration min_draw_schedule_delta = 6 [json_name = "minDrawScheduleDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeMinDrawScheduleDelta(com.google.protobuf.Duration value) {
+        if (minDrawScheduleDeltaBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            minDrawScheduleDelta_ != null &&
+            minDrawScheduleDelta_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getMinDrawScheduleDeltaBuilder().mergeFrom(value);
+          } else {
+            minDrawScheduleDelta_ = value;
+          }
+        } else {
+          minDrawScheduleDeltaBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration min_draw_schedule_delta = 6 [json_name = "minDrawScheduleDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearMinDrawScheduleDelta() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        minDrawScheduleDelta_ = null;
+        if (minDrawScheduleDeltaBuilder_ != null) {
+          minDrawScheduleDeltaBuilder_.dispose();
+          minDrawScheduleDeltaBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration min_draw_schedule_delta = 6 [json_name = "minDrawScheduleDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getMinDrawScheduleDeltaBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getMinDrawScheduleDeltaFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Duration min_draw_schedule_delta = 6 [json_name = "minDrawScheduleDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getMinDrawScheduleDeltaOrBuilder() {
+        if (minDrawScheduleDeltaBuilder_ != null) {
+          return minDrawScheduleDeltaBuilder_.getMessageOrBuilder();
+        } else {
+          return minDrawScheduleDelta_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : minDrawScheduleDelta_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration min_draw_schedule_delta = 6 [json_name = "minDrawScheduleDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getMinDrawScheduleDeltaFieldBuilder() {
+        if (minDrawScheduleDeltaBuilder_ == null) {
+          minDrawScheduleDeltaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getMinDrawScheduleDelta(),
+                  getParentForChildren(),
+                  isClean());
+          minDrawScheduleDelta_ = null;
+        }
+        return minDrawScheduleDeltaBuilder_;
+      }
+
+      private com.google.protobuf.Duration maxDrawScheduleDelta_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> maxDrawScheduleDeltaBuilder_;
+      /**
+       * <code>.google.protobuf.Duration max_draw_schedule_delta = 7 [json_name = "maxDrawScheduleDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+       * @return Whether the maxDrawScheduleDelta field is set.
+       */
+      public boolean hasMaxDrawScheduleDelta() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Duration max_draw_schedule_delta = 7 [json_name = "maxDrawScheduleDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+       * @return The maxDrawScheduleDelta.
+       */
+      public com.google.protobuf.Duration getMaxDrawScheduleDelta() {
+        if (maxDrawScheduleDeltaBuilder_ == null) {
+          return maxDrawScheduleDelta_ == null ? com.google.protobuf.Duration.getDefaultInstance() : maxDrawScheduleDelta_;
+        } else {
+          return maxDrawScheduleDeltaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration max_draw_schedule_delta = 7 [json_name = "maxDrawScheduleDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setMaxDrawScheduleDelta(com.google.protobuf.Duration value) {
+        if (maxDrawScheduleDeltaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxDrawScheduleDelta_ = value;
+        } else {
+          maxDrawScheduleDeltaBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration max_draw_schedule_delta = 7 [json_name = "maxDrawScheduleDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setMaxDrawScheduleDelta(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (maxDrawScheduleDeltaBuilder_ == null) {
+          maxDrawScheduleDelta_ = builderForValue.build();
+        } else {
+          maxDrawScheduleDeltaBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration max_draw_schedule_delta = 7 [json_name = "maxDrawScheduleDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeMaxDrawScheduleDelta(com.google.protobuf.Duration value) {
+        if (maxDrawScheduleDeltaBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0) &&
+            maxDrawScheduleDelta_ != null &&
+            maxDrawScheduleDelta_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getMaxDrawScheduleDeltaBuilder().mergeFrom(value);
+          } else {
+            maxDrawScheduleDelta_ = value;
+          }
+        } else {
+          maxDrawScheduleDeltaBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration max_draw_schedule_delta = 7 [json_name = "maxDrawScheduleDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearMaxDrawScheduleDelta() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        maxDrawScheduleDelta_ = null;
+        if (maxDrawScheduleDeltaBuilder_ != null) {
+          maxDrawScheduleDeltaBuilder_.dispose();
+          maxDrawScheduleDeltaBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration max_draw_schedule_delta = 7 [json_name = "maxDrawScheduleDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getMaxDrawScheduleDeltaBuilder() {
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return getMaxDrawScheduleDeltaFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Duration max_draw_schedule_delta = 7 [json_name = "maxDrawScheduleDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getMaxDrawScheduleDeltaOrBuilder() {
+        if (maxDrawScheduleDeltaBuilder_ != null) {
+          return maxDrawScheduleDeltaBuilder_.getMessageOrBuilder();
+        } else {
+          return maxDrawScheduleDelta_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : maxDrawScheduleDelta_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration max_draw_schedule_delta = 7 [json_name = "maxDrawScheduleDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getMaxDrawScheduleDeltaFieldBuilder() {
+        if (maxDrawScheduleDeltaBuilder_ == null) {
+          maxDrawScheduleDeltaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getMaxDrawScheduleDelta(),
+                  getParentForChildren(),
+                  isClean());
+          maxDrawScheduleDelta_ = null;
+        }
+        return maxDrawScheduleDeltaBuilder_;
+      }
+
+      private com.google.protobuf.Duration prizeExpirationDelta_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> prizeExpirationDeltaBuilder_;
+      /**
+       * <code>.google.protobuf.Duration prize_expiration_delta = 8 [json_name = "prizeExpirationDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+       * @return Whether the prizeExpirationDelta field is set.
+       */
+      public boolean hasPrizeExpirationDelta() {
+        return ((bitField0_ & 0x00000080) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Duration prize_expiration_delta = 8 [json_name = "prizeExpirationDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+       * @return The prizeExpirationDelta.
+       */
+      public com.google.protobuf.Duration getPrizeExpirationDelta() {
+        if (prizeExpirationDeltaBuilder_ == null) {
+          return prizeExpirationDelta_ == null ? com.google.protobuf.Duration.getDefaultInstance() : prizeExpirationDelta_;
+        } else {
+          return prizeExpirationDeltaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration prize_expiration_delta = 8 [json_name = "prizeExpirationDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setPrizeExpirationDelta(com.google.protobuf.Duration value) {
+        if (prizeExpirationDeltaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          prizeExpirationDelta_ = value;
+        } else {
+          prizeExpirationDeltaBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration prize_expiration_delta = 8 [json_name = "prizeExpirationDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setPrizeExpirationDelta(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (prizeExpirationDeltaBuilder_ == null) {
+          prizeExpirationDelta_ = builderForValue.build();
+        } else {
+          prizeExpirationDeltaBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration prize_expiration_delta = 8 [json_name = "prizeExpirationDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergePrizeExpirationDelta(com.google.protobuf.Duration value) {
+        if (prizeExpirationDeltaBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) != 0) &&
+            prizeExpirationDelta_ != null &&
+            prizeExpirationDelta_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getPrizeExpirationDeltaBuilder().mergeFrom(value);
+          } else {
+            prizeExpirationDelta_ = value;
+          }
+        } else {
+          prizeExpirationDeltaBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration prize_expiration_delta = 8 [json_name = "prizeExpirationDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearPrizeExpirationDelta() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        prizeExpirationDelta_ = null;
+        if (prizeExpirationDeltaBuilder_ != null) {
+          prizeExpirationDeltaBuilder_.dispose();
+          prizeExpirationDeltaBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration prize_expiration_delta = 8 [json_name = "prizeExpirationDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getPrizeExpirationDeltaBuilder() {
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return getPrizeExpirationDeltaFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Duration prize_expiration_delta = 8 [json_name = "prizeExpirationDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getPrizeExpirationDeltaOrBuilder() {
+        if (prizeExpirationDeltaBuilder_ != null) {
+          return prizeExpirationDeltaBuilder_.getMessageOrBuilder();
+        } else {
+          return prizeExpirationDelta_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : prizeExpirationDelta_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration prize_expiration_delta = 8 [json_name = "prizeExpirationDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getPrizeExpirationDeltaFieldBuilder() {
+        if (prizeExpirationDeltaBuilder_ == null) {
+          prizeExpirationDeltaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getPrizeExpirationDelta(),
+                  getParentForChildren(),
+                  isClean());
+          prizeExpirationDelta_ = null;
+        }
+        return prizeExpirationDeltaBuilder_;
+      }
+
+      private java.lang.Object feesStakers_ = "";
+      /**
+       * <code>string fees_stakers = 9 [json_name = "feesStakers", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The feesStakers.
+       */
+      public java.lang.String getFeesStakers() {
+        java.lang.Object ref = feesStakers_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          feesStakers_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string fees_stakers = 9 [json_name = "feesStakers", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for feesStakers.
+       */
+      public com.google.protobuf.ByteString
+          getFeesStakersBytes() {
+        java.lang.Object ref = feesStakers_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          feesStakers_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string fees_stakers = 9 [json_name = "feesStakers", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The feesStakers to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeesStakers(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        feesStakers_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string fees_stakers = 9 [json_name = "feesStakers", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFeesStakers() {
+        feesStakers_ = getDefaultInstance().getFeesStakers();
+        bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string fees_stakers = 9 [json_name = "feesStakers", (.gogoproto.nullable) = true, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for feesStakers to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeesStakersBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        feesStakers_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Duration minDepositDrawDelta_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> minDepositDrawDeltaBuilder_;
+      /**
+       * <code>.google.protobuf.Duration min_deposit_draw_delta = 10 [json_name = "minDepositDrawDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+       * @return Whether the minDepositDrawDelta field is set.
+       */
+      public boolean hasMinDepositDrawDelta() {
+        return ((bitField0_ & 0x00000200) != 0);
+      }
+      /**
+       * <code>.google.protobuf.Duration min_deposit_draw_delta = 10 [json_name = "minDepositDrawDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+       * @return The minDepositDrawDelta.
+       */
+      public com.google.protobuf.Duration getMinDepositDrawDelta() {
+        if (minDepositDrawDeltaBuilder_ == null) {
+          return minDepositDrawDelta_ == null ? com.google.protobuf.Duration.getDefaultInstance() : minDepositDrawDelta_;
+        } else {
+          return minDepositDrawDeltaBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration min_deposit_draw_delta = 10 [json_name = "minDepositDrawDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setMinDepositDrawDelta(com.google.protobuf.Duration value) {
+        if (minDepositDrawDeltaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          minDepositDrawDelta_ = value;
+        } else {
+          minDepositDrawDeltaBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration min_deposit_draw_delta = 10 [json_name = "minDepositDrawDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder setMinDepositDrawDelta(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (minDepositDrawDeltaBuilder_ == null) {
+          minDepositDrawDelta_ = builderForValue.build();
+        } else {
+          minDepositDrawDeltaBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration min_deposit_draw_delta = 10 [json_name = "minDepositDrawDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder mergeMinDepositDrawDelta(com.google.protobuf.Duration value) {
+        if (minDepositDrawDeltaBuilder_ == null) {
+          if (((bitField0_ & 0x00000200) != 0) &&
+            minDepositDrawDelta_ != null &&
+            minDepositDrawDelta_ != com.google.protobuf.Duration.getDefaultInstance()) {
+            getMinDepositDrawDeltaBuilder().mergeFrom(value);
+          } else {
+            minDepositDrawDelta_ = value;
+          }
+        } else {
+          minDepositDrawDeltaBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration min_deposit_draw_delta = 10 [json_name = "minDepositDrawDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+       */
+      public Builder clearMinDepositDrawDelta() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        minDepositDrawDelta_ = null;
+        if (minDepositDrawDeltaBuilder_ != null) {
+          minDepositDrawDeltaBuilder_.dispose();
+          minDepositDrawDeltaBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration min_deposit_draw_delta = 10 [json_name = "minDepositDrawDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.Duration.Builder getMinDepositDrawDeltaBuilder() {
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return getMinDepositDrawDeltaFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Duration min_deposit_draw_delta = 10 [json_name = "minDepositDrawDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getMinDepositDrawDeltaOrBuilder() {
+        if (minDepositDrawDeltaBuilder_ != null) {
+          return minDepositDrawDeltaBuilder_.getMessageOrBuilder();
+        } else {
+          return minDepositDrawDelta_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : minDepositDrawDelta_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration min_deposit_draw_delta = 10 [json_name = "minDepositDrawDelta", (.gogoproto.nullable) = true, (.gogoproto.stdduration) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getMinDepositDrawDeltaFieldBuilder() {
+        if (minDepositDrawDeltaBuilder_ == null) {
+          minDepositDrawDeltaBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getMinDepositDrawDelta(),
+                  getParentForChildren(),
+                  isClean());
+          minDepositDrawDelta_ = null;
+        }
+        return minDepositDrawDeltaBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lum.network.millions.ProposalUpdateParams)
+    }
+
+    // @@protoc_insertion_point(class_scope:lum.network.millions.ProposalUpdateParams)
+    private static final com.lum.network.millions.GovProto.ProposalUpdateParams DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lum.network.millions.GovProto.ProposalUpdateParams();
+    }
+
+    public static com.lum.network.millions.GovProto.ProposalUpdateParams getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ProposalUpdateParams>
+        PARSER = new com.google.protobuf.AbstractParser<ProposalUpdateParams>() {
+      @java.lang.Override
+      public ProposalUpdateParams parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ProposalUpdateParams> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ProposalUpdateParams> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lum.network.millions.GovProto.ProposalUpdateParams getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lum_network_millions_ProposalRegisterPool_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lum_network_millions_ProposalRegisterPool_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lum_network_millions_ProposalUpdatePool_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lum_network_millions_ProposalUpdatePool_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lum_network_millions_ProposalUpdateParams_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lum_network_millions_ProposalUpdateParams_fieldAccessorTable;
 
@@ -91,12 +6184,12 @@ public final class GovProto {
       "github.com/cosmos/cosmos-sdk/types.DecR\013" +
       "feesStakers\022X\n\026min_deposit_draw_delta\030\n " +
       "\001(\0132\031.google.protobuf.DurationB\010\310\336\037\001\230\337\037\001" +
-      "R\023minDepositDrawDelta:\004\230\240\037\000B\305\001\n\030com.lum." +
-      "network.millionsB\010GovProtoP\001Z-github.com" +
-      "/lum-network/chain/x/millions/types\242\002\003LN" +
-      "M\252\002\024Lum.Network.Millions\312\002\024Lum\\Network\\M" +
-      "illions\342\002 Lum\\Network\\Millions\\GPBMetada" +
-      "ta\352\002\026Lum::Network::Millionsb\006proto3"
+      "R\023minDepositDrawDelta:\004\230\240\037\000B\303\001\n\030com.lum." +
+      "network.millionsB\010GovProtoZ-github.com/l" +
+      "um-network/chain/x/millions/types\242\002\003LNM\252" +
+      "\002\024Lum.Network.Millions\312\002\024Lum\\Network\\Mil" +
+      "lions\342\002 Lum\\Network\\Millions\\GPBMetadata" +
+      "\352\002\026Lum::Network::Millionsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

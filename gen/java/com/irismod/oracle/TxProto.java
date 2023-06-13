@@ -14,44 +14,7150 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgCreateFeedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.oracle.MsgCreateFeed)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string feed_name = 1 [json_name = "feedName", (.gogoproto.moretags) = "yaml:&#92;"feed_name&#92;""];</code>
+     * @return The feedName.
+     */
+    java.lang.String getFeedName();
+    /**
+     * <code>string feed_name = 1 [json_name = "feedName", (.gogoproto.moretags) = "yaml:&#92;"feed_name&#92;""];</code>
+     * @return The bytes for feedName.
+     */
+    com.google.protobuf.ByteString
+        getFeedNameBytes();
+
+    /**
+     * <code>uint64 latest_history = 2 [json_name = "latestHistory", (.gogoproto.moretags) = "yaml:&#92;"latest_history&#92;""];</code>
+     * @return The latestHistory.
+     */
+    long getLatestHistory();
+
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>string creator = 4 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    java.lang.String getCreator();
+    /**
+     * <code>string creator = 4 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    com.google.protobuf.ByteString
+        getCreatorBytes();
+
+    /**
+     * <code>string service_name = 5 [json_name = "serviceName", (.gogoproto.moretags) = "yaml:&#92;"service_name&#92;""];</code>
+     * @return The serviceName.
+     */
+    java.lang.String getServiceName();
+    /**
+     * <code>string service_name = 5 [json_name = "serviceName", (.gogoproto.moretags) = "yaml:&#92;"service_name&#92;""];</code>
+     * @return The bytes for serviceName.
+     */
+    com.google.protobuf.ByteString
+        getServiceNameBytes();
+
+    /**
+     * <code>repeated string providers = 6 [json_name = "providers"];</code>
+     * @return A list containing the providers.
+     */
+    java.util.List<java.lang.String>
+        getProvidersList();
+    /**
+     * <code>repeated string providers = 6 [json_name = "providers"];</code>
+     * @return The count of providers.
+     */
+    int getProvidersCount();
+    /**
+     * <code>repeated string providers = 6 [json_name = "providers"];</code>
+     * @param index The index of the element to return.
+     * @return The providers at the given index.
+     */
+    java.lang.String getProviders(int index);
+    /**
+     * <code>repeated string providers = 6 [json_name = "providers"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the providers at the given index.
+     */
+    com.google.protobuf.ByteString
+        getProvidersBytes(int index);
+
+    /**
+     * <code>string input = 7 [json_name = "input"];</code>
+     * @return The input.
+     */
+    java.lang.String getInput();
+    /**
+     * <code>string input = 7 [json_name = "input"];</code>
+     * @return The bytes for input.
+     */
+    com.google.protobuf.ByteString
+        getInputBytes();
+
+    /**
+     * <code>int64 timeout = 8 [json_name = "timeout"];</code>
+     * @return The timeout.
+     */
+    long getTimeout();
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 9 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getServiceFeeCapList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 9 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getServiceFeeCap(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 9 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getServiceFeeCapCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 9 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getServiceFeeCapOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 9 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getServiceFeeCapOrBuilder(
+        int index);
+
+    /**
+     * <code>uint64 repeated_frequency = 10 [json_name = "repeatedFrequency", (.gogoproto.moretags) = "yaml:&#92;"repeated_frequency&#92;""];</code>
+     * @return The repeatedFrequency.
+     */
+    long getRepeatedFrequency();
+
+    /**
+     * <code>string aggregate_func = 11 [json_name = "aggregateFunc", (.gogoproto.moretags) = "yaml:&#92;"aggregate_func&#92;""];</code>
+     * @return The aggregateFunc.
+     */
+    java.lang.String getAggregateFunc();
+    /**
+     * <code>string aggregate_func = 11 [json_name = "aggregateFunc", (.gogoproto.moretags) = "yaml:&#92;"aggregate_func&#92;""];</code>
+     * @return The bytes for aggregateFunc.
+     */
+    com.google.protobuf.ByteString
+        getAggregateFuncBytes();
+
+    /**
+     * <code>string value_json_path = 12 [json_name = "valueJsonPath", (.gogoproto.moretags) = "yaml:&#92;"value_json_path&#92;""];</code>
+     * @return The valueJsonPath.
+     */
+    java.lang.String getValueJsonPath();
+    /**
+     * <code>string value_json_path = 12 [json_name = "valueJsonPath", (.gogoproto.moretags) = "yaml:&#92;"value_json_path&#92;""];</code>
+     * @return The bytes for valueJsonPath.
+     */
+    com.google.protobuf.ByteString
+        getValueJsonPathBytes();
+
+    /**
+     * <code>uint32 response_threshold = 13 [json_name = "responseThreshold", (.gogoproto.moretags) = "yaml:&#92;"response_threshold&#92;""];</code>
+     * @return The responseThreshold.
+     */
+    int getResponseThreshold();
+  }
+  /**
+   * <pre>
+   * MsgCreateFeed defines an sdk.Msg type that supports creating a feed
+   * </pre>
+   *
+   * Protobuf type {@code irismod.oracle.MsgCreateFeed}
+   */
+  public static final class MsgCreateFeed extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.oracle.MsgCreateFeed)
+      MsgCreateFeedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateFeed.newBuilder() to construct.
+    private MsgCreateFeed(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateFeed() {
+      feedName_ = "";
+      description_ = "";
+      creator_ = "";
+      serviceName_ = "";
+      providers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      input_ = "";
+      serviceFeeCap_ = java.util.Collections.emptyList();
+      aggregateFunc_ = "";
+      valueJsonPath_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateFeed();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgCreateFeed_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgCreateFeed_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.oracle.TxProto.MsgCreateFeed.class, com.irismod.oracle.TxProto.MsgCreateFeed.Builder.class);
+    }
+
+    public static final int FEED_NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object feedName_ = "";
+    /**
+     * <code>string feed_name = 1 [json_name = "feedName", (.gogoproto.moretags) = "yaml:&#92;"feed_name&#92;""];</code>
+     * @return The feedName.
+     */
+    @java.lang.Override
+    public java.lang.String getFeedName() {
+      java.lang.Object ref = feedName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        feedName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string feed_name = 1 [json_name = "feedName", (.gogoproto.moretags) = "yaml:&#92;"feed_name&#92;""];</code>
+     * @return The bytes for feedName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFeedNameBytes() {
+      java.lang.Object ref = feedName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        feedName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LATEST_HISTORY_FIELD_NUMBER = 2;
+    private long latestHistory_ = 0L;
+    /**
+     * <code>uint64 latest_history = 2 [json_name = "latestHistory", (.gogoproto.moretags) = "yaml:&#92;"latest_history&#92;""];</code>
+     * @return The latestHistory.
+     */
+    @java.lang.Override
+    public long getLatestHistory() {
+      return latestHistory_;
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 3 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CREATOR_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object creator_ = "";
+    /**
+     * <code>string creator = 4 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    @java.lang.Override
+    public java.lang.String getCreator() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        creator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string creator = 4 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatorBytes() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        creator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SERVICE_NAME_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object serviceName_ = "";
+    /**
+     * <code>string service_name = 5 [json_name = "serviceName", (.gogoproto.moretags) = "yaml:&#92;"service_name&#92;""];</code>
+     * @return The serviceName.
+     */
+    @java.lang.Override
+    public java.lang.String getServiceName() {
+      java.lang.Object ref = serviceName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string service_name = 5 [json_name = "serviceName", (.gogoproto.moretags) = "yaml:&#92;"service_name&#92;""];</code>
+     * @return The bytes for serviceName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServiceNameBytes() {
+      java.lang.Object ref = serviceName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROVIDERS_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList providers_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string providers = 6 [json_name = "providers"];</code>
+     * @return A list containing the providers.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getProvidersList() {
+      return providers_;
+    }
+    /**
+     * <code>repeated string providers = 6 [json_name = "providers"];</code>
+     * @return The count of providers.
+     */
+    public int getProvidersCount() {
+      return providers_.size();
+    }
+    /**
+     * <code>repeated string providers = 6 [json_name = "providers"];</code>
+     * @param index The index of the element to return.
+     * @return The providers at the given index.
+     */
+    public java.lang.String getProviders(int index) {
+      return providers_.get(index);
+    }
+    /**
+     * <code>repeated string providers = 6 [json_name = "providers"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the providers at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getProvidersBytes(int index) {
+      return providers_.getByteString(index);
+    }
+
+    public static final int INPUT_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object input_ = "";
+    /**
+     * <code>string input = 7 [json_name = "input"];</code>
+     * @return The input.
+     */
+    @java.lang.Override
+    public java.lang.String getInput() {
+      java.lang.Object ref = input_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        input_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string input = 7 [json_name = "input"];</code>
+     * @return The bytes for input.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInputBytes() {
+      java.lang.Object ref = input_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        input_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TIMEOUT_FIELD_NUMBER = 8;
+    private long timeout_ = 0L;
+    /**
+     * <code>int64 timeout = 8 [json_name = "timeout"];</code>
+     * @return The timeout.
+     */
+    @java.lang.Override
+    public long getTimeout() {
+      return timeout_;
+    }
+
+    public static final int SERVICE_FEE_CAP_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> serviceFeeCap_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 9 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getServiceFeeCapList() {
+      return serviceFeeCap_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 9 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getServiceFeeCapOrBuilderList() {
+      return serviceFeeCap_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 9 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getServiceFeeCapCount() {
+      return serviceFeeCap_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 9 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getServiceFeeCap(int index) {
+      return serviceFeeCap_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 9 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getServiceFeeCapOrBuilder(
+        int index) {
+      return serviceFeeCap_.get(index);
+    }
+
+    public static final int REPEATED_FREQUENCY_FIELD_NUMBER = 10;
+    private long repeatedFrequency_ = 0L;
+    /**
+     * <code>uint64 repeated_frequency = 10 [json_name = "repeatedFrequency", (.gogoproto.moretags) = "yaml:&#92;"repeated_frequency&#92;""];</code>
+     * @return The repeatedFrequency.
+     */
+    @java.lang.Override
+    public long getRepeatedFrequency() {
+      return repeatedFrequency_;
+    }
+
+    public static final int AGGREGATE_FUNC_FIELD_NUMBER = 11;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object aggregateFunc_ = "";
+    /**
+     * <code>string aggregate_func = 11 [json_name = "aggregateFunc", (.gogoproto.moretags) = "yaml:&#92;"aggregate_func&#92;""];</code>
+     * @return The aggregateFunc.
+     */
+    @java.lang.Override
+    public java.lang.String getAggregateFunc() {
+      java.lang.Object ref = aggregateFunc_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        aggregateFunc_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string aggregate_func = 11 [json_name = "aggregateFunc", (.gogoproto.moretags) = "yaml:&#92;"aggregate_func&#92;""];</code>
+     * @return The bytes for aggregateFunc.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAggregateFuncBytes() {
+      java.lang.Object ref = aggregateFunc_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        aggregateFunc_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALUE_JSON_PATH_FIELD_NUMBER = 12;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object valueJsonPath_ = "";
+    /**
+     * <code>string value_json_path = 12 [json_name = "valueJsonPath", (.gogoproto.moretags) = "yaml:&#92;"value_json_path&#92;""];</code>
+     * @return The valueJsonPath.
+     */
+    @java.lang.Override
+    public java.lang.String getValueJsonPath() {
+      java.lang.Object ref = valueJsonPath_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        valueJsonPath_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string value_json_path = 12 [json_name = "valueJsonPath", (.gogoproto.moretags) = "yaml:&#92;"value_json_path&#92;""];</code>
+     * @return The bytes for valueJsonPath.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValueJsonPathBytes() {
+      java.lang.Object ref = valueJsonPath_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        valueJsonPath_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RESPONSE_THRESHOLD_FIELD_NUMBER = 13;
+    private int responseThreshold_ = 0;
+    /**
+     * <code>uint32 response_threshold = 13 [json_name = "responseThreshold", (.gogoproto.moretags) = "yaml:&#92;"response_threshold&#92;""];</code>
+     * @return The responseThreshold.
+     */
+    @java.lang.Override
+    public int getResponseThreshold() {
+      return responseThreshold_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feedName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, feedName_);
+      }
+      if (latestHistory_ != 0L) {
+        output.writeUInt64(2, latestHistory_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, creator_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, serviceName_);
+      }
+      for (int i = 0; i < providers_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, providers_.getRaw(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(input_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, input_);
+      }
+      if (timeout_ != 0L) {
+        output.writeInt64(8, timeout_);
+      }
+      for (int i = 0; i < serviceFeeCap_.size(); i++) {
+        output.writeMessage(9, serviceFeeCap_.get(i));
+      }
+      if (repeatedFrequency_ != 0L) {
+        output.writeUInt64(10, repeatedFrequency_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(aggregateFunc_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, aggregateFunc_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(valueJsonPath_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, valueJsonPath_);
+      }
+      if (responseThreshold_ != 0) {
+        output.writeUInt32(13, responseThreshold_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feedName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, feedName_);
+      }
+      if (latestHistory_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, latestHistory_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, creator_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, serviceName_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < providers_.size(); i++) {
+          dataSize += computeStringSizeNoTag(providers_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getProvidersList().size();
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(input_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, input_);
+      }
+      if (timeout_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(8, timeout_);
+      }
+      for (int i = 0; i < serviceFeeCap_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, serviceFeeCap_.get(i));
+      }
+      if (repeatedFrequency_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(10, repeatedFrequency_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(aggregateFunc_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, aggregateFunc_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(valueJsonPath_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, valueJsonPath_);
+      }
+      if (responseThreshold_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(13, responseThreshold_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.oracle.TxProto.MsgCreateFeed)) {
+        return super.equals(obj);
+      }
+      com.irismod.oracle.TxProto.MsgCreateFeed other = (com.irismod.oracle.TxProto.MsgCreateFeed) obj;
+
+      if (!getFeedName()
+          .equals(other.getFeedName())) return false;
+      if (getLatestHistory()
+          != other.getLatestHistory()) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getCreator()
+          .equals(other.getCreator())) return false;
+      if (!getServiceName()
+          .equals(other.getServiceName())) return false;
+      if (!getProvidersList()
+          .equals(other.getProvidersList())) return false;
+      if (!getInput()
+          .equals(other.getInput())) return false;
+      if (getTimeout()
+          != other.getTimeout()) return false;
+      if (!getServiceFeeCapList()
+          .equals(other.getServiceFeeCapList())) return false;
+      if (getRepeatedFrequency()
+          != other.getRepeatedFrequency()) return false;
+      if (!getAggregateFunc()
+          .equals(other.getAggregateFunc())) return false;
+      if (!getValueJsonPath()
+          .equals(other.getValueJsonPath())) return false;
+      if (getResponseThreshold()
+          != other.getResponseThreshold()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FEED_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getFeedName().hashCode();
+      hash = (37 * hash) + LATEST_HISTORY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLatestHistory());
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + CREATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCreator().hashCode();
+      hash = (37 * hash) + SERVICE_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceName().hashCode();
+      if (getProvidersCount() > 0) {
+        hash = (37 * hash) + PROVIDERS_FIELD_NUMBER;
+        hash = (53 * hash) + getProvidersList().hashCode();
+      }
+      hash = (37 * hash) + INPUT_FIELD_NUMBER;
+      hash = (53 * hash) + getInput().hashCode();
+      hash = (37 * hash) + TIMEOUT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTimeout());
+      if (getServiceFeeCapCount() > 0) {
+        hash = (37 * hash) + SERVICE_FEE_CAP_FIELD_NUMBER;
+        hash = (53 * hash) + getServiceFeeCapList().hashCode();
+      }
+      hash = (37 * hash) + REPEATED_FREQUENCY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRepeatedFrequency());
+      hash = (37 * hash) + AGGREGATE_FUNC_FIELD_NUMBER;
+      hash = (53 * hash) + getAggregateFunc().hashCode();
+      hash = (37 * hash) + VALUE_JSON_PATH_FIELD_NUMBER;
+      hash = (53 * hash) + getValueJsonPath().hashCode();
+      hash = (37 * hash) + RESPONSE_THRESHOLD_FIELD_NUMBER;
+      hash = (53 * hash) + getResponseThreshold();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.oracle.TxProto.MsgCreateFeed parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.oracle.TxProto.MsgCreateFeed parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.oracle.TxProto.MsgCreateFeed parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.oracle.TxProto.MsgCreateFeed parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.oracle.TxProto.MsgCreateFeed parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.oracle.TxProto.MsgCreateFeed parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.oracle.TxProto.MsgCreateFeed parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.oracle.TxProto.MsgCreateFeed parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.oracle.TxProto.MsgCreateFeed parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.oracle.TxProto.MsgCreateFeed parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.oracle.TxProto.MsgCreateFeed parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.oracle.TxProto.MsgCreateFeed parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.oracle.TxProto.MsgCreateFeed prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCreateFeed defines an sdk.Msg type that supports creating a feed
+     * </pre>
+     *
+     * Protobuf type {@code irismod.oracle.MsgCreateFeed}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.oracle.MsgCreateFeed)
+        com.irismod.oracle.TxProto.MsgCreateFeedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgCreateFeed_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgCreateFeed_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.oracle.TxProto.MsgCreateFeed.class, com.irismod.oracle.TxProto.MsgCreateFeed.Builder.class);
+      }
+
+      // Construct using com.irismod.oracle.TxProto.MsgCreateFeed.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        feedName_ = "";
+        latestHistory_ = 0L;
+        description_ = "";
+        creator_ = "";
+        serviceName_ = "";
+        providers_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        input_ = "";
+        timeout_ = 0L;
+        if (serviceFeeCapBuilder_ == null) {
+          serviceFeeCap_ = java.util.Collections.emptyList();
+        } else {
+          serviceFeeCap_ = null;
+          serviceFeeCapBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000100);
+        repeatedFrequency_ = 0L;
+        aggregateFunc_ = "";
+        valueJsonPath_ = "";
+        responseThreshold_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgCreateFeed_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.oracle.TxProto.MsgCreateFeed getDefaultInstanceForType() {
+        return com.irismod.oracle.TxProto.MsgCreateFeed.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.oracle.TxProto.MsgCreateFeed build() {
+        com.irismod.oracle.TxProto.MsgCreateFeed result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.oracle.TxProto.MsgCreateFeed buildPartial() {
+        com.irismod.oracle.TxProto.MsgCreateFeed result = new com.irismod.oracle.TxProto.MsgCreateFeed(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.irismod.oracle.TxProto.MsgCreateFeed result) {
+        if (serviceFeeCapBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) != 0)) {
+            serviceFeeCap_ = java.util.Collections.unmodifiableList(serviceFeeCap_);
+            bitField0_ = (bitField0_ & ~0x00000100);
+          }
+          result.serviceFeeCap_ = serviceFeeCap_;
+        } else {
+          result.serviceFeeCap_ = serviceFeeCapBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.irismod.oracle.TxProto.MsgCreateFeed result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.feedName_ = feedName_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.latestHistory_ = latestHistory_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.creator_ = creator_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.serviceName_ = serviceName_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          providers_.makeImmutable();
+          result.providers_ = providers_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.input_ = input_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.timeout_ = timeout_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.repeatedFrequency_ = repeatedFrequency_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.aggregateFunc_ = aggregateFunc_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.valueJsonPath_ = valueJsonPath_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.responseThreshold_ = responseThreshold_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.oracle.TxProto.MsgCreateFeed) {
+          return mergeFrom((com.irismod.oracle.TxProto.MsgCreateFeed)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.oracle.TxProto.MsgCreateFeed other) {
+        if (other == com.irismod.oracle.TxProto.MsgCreateFeed.getDefaultInstance()) return this;
+        if (!other.getFeedName().isEmpty()) {
+          feedName_ = other.feedName_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getLatestHistory() != 0L) {
+          setLatestHistory(other.getLatestHistory());
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getCreator().isEmpty()) {
+          creator_ = other.creator_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getServiceName().isEmpty()) {
+          serviceName_ = other.serviceName_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.providers_.isEmpty()) {
+          if (providers_.isEmpty()) {
+            providers_ = other.providers_;
+            bitField0_ |= 0x00000020;
+          } else {
+            ensureProvidersIsMutable();
+            providers_.addAll(other.providers_);
+          }
+          onChanged();
+        }
+        if (!other.getInput().isEmpty()) {
+          input_ = other.input_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        if (other.getTimeout() != 0L) {
+          setTimeout(other.getTimeout());
+        }
+        if (serviceFeeCapBuilder_ == null) {
+          if (!other.serviceFeeCap_.isEmpty()) {
+            if (serviceFeeCap_.isEmpty()) {
+              serviceFeeCap_ = other.serviceFeeCap_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+            } else {
+              ensureServiceFeeCapIsMutable();
+              serviceFeeCap_.addAll(other.serviceFeeCap_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.serviceFeeCap_.isEmpty()) {
+            if (serviceFeeCapBuilder_.isEmpty()) {
+              serviceFeeCapBuilder_.dispose();
+              serviceFeeCapBuilder_ = null;
+              serviceFeeCap_ = other.serviceFeeCap_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+              serviceFeeCapBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getServiceFeeCapFieldBuilder() : null;
+            } else {
+              serviceFeeCapBuilder_.addAllMessages(other.serviceFeeCap_);
+            }
+          }
+        }
+        if (other.getRepeatedFrequency() != 0L) {
+          setRepeatedFrequency(other.getRepeatedFrequency());
+        }
+        if (!other.getAggregateFunc().isEmpty()) {
+          aggregateFunc_ = other.aggregateFunc_;
+          bitField0_ |= 0x00000400;
+          onChanged();
+        }
+        if (!other.getValueJsonPath().isEmpty()) {
+          valueJsonPath_ = other.valueJsonPath_;
+          bitField0_ |= 0x00000800;
+          onChanged();
+        }
+        if (other.getResponseThreshold() != 0) {
+          setResponseThreshold(other.getResponseThreshold());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                feedName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                latestHistory_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                creator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                serviceName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureProvidersIsMutable();
+                providers_.add(s);
+                break;
+              } // case 50
+              case 58: {
+                input_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 64: {
+                timeout_ = input.readInt64();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
+              case 74: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (serviceFeeCapBuilder_ == null) {
+                  ensureServiceFeeCapIsMutable();
+                  serviceFeeCap_.add(m);
+                } else {
+                  serviceFeeCapBuilder_.addMessage(m);
+                }
+                break;
+              } // case 74
+              case 80: {
+                repeatedFrequency_ = input.readUInt64();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 80
+              case 90: {
+                aggregateFunc_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 90
+              case 98: {
+                valueJsonPath_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 98
+              case 104: {
+                responseThreshold_ = input.readUInt32();
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 104
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object feedName_ = "";
+      /**
+       * <code>string feed_name = 1 [json_name = "feedName", (.gogoproto.moretags) = "yaml:&#92;"feed_name&#92;""];</code>
+       * @return The feedName.
+       */
+      public java.lang.String getFeedName() {
+        java.lang.Object ref = feedName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          feedName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string feed_name = 1 [json_name = "feedName", (.gogoproto.moretags) = "yaml:&#92;"feed_name&#92;""];</code>
+       * @return The bytes for feedName.
+       */
+      public com.google.protobuf.ByteString
+          getFeedNameBytes() {
+        java.lang.Object ref = feedName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          feedName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string feed_name = 1 [json_name = "feedName", (.gogoproto.moretags) = "yaml:&#92;"feed_name&#92;""];</code>
+       * @param value The feedName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeedName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        feedName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string feed_name = 1 [json_name = "feedName", (.gogoproto.moretags) = "yaml:&#92;"feed_name&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFeedName() {
+        feedName_ = getDefaultInstance().getFeedName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string feed_name = 1 [json_name = "feedName", (.gogoproto.moretags) = "yaml:&#92;"feed_name&#92;""];</code>
+       * @param value The bytes for feedName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeedNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        feedName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long latestHistory_ ;
+      /**
+       * <code>uint64 latest_history = 2 [json_name = "latestHistory", (.gogoproto.moretags) = "yaml:&#92;"latest_history&#92;""];</code>
+       * @return The latestHistory.
+       */
+      @java.lang.Override
+      public long getLatestHistory() {
+        return latestHistory_;
+      }
+      /**
+       * <code>uint64 latest_history = 2 [json_name = "latestHistory", (.gogoproto.moretags) = "yaml:&#92;"latest_history&#92;""];</code>
+       * @param value The latestHistory to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLatestHistory(long value) {
+
+        latestHistory_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 latest_history = 2 [json_name = "latestHistory", (.gogoproto.moretags) = "yaml:&#92;"latest_history&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLatestHistory() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        latestHistory_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 3 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object creator_ = "";
+      /**
+       * <code>string creator = 4 [json_name = "creator"];</code>
+       * @return The creator.
+       */
+      public java.lang.String getCreator() {
+        java.lang.Object ref = creator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          creator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string creator = 4 [json_name = "creator"];</code>
+       * @return The bytes for creator.
+       */
+      public com.google.protobuf.ByteString
+          getCreatorBytes() {
+        java.lang.Object ref = creator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          creator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string creator = 4 [json_name = "creator"];</code>
+       * @param value The creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        creator_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 4 [json_name = "creator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreator() {
+        creator_ = getDefaultInstance().getCreator();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 4 [json_name = "creator"];</code>
+       * @param value The bytes for creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        creator_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serviceName_ = "";
+      /**
+       * <code>string service_name = 5 [json_name = "serviceName", (.gogoproto.moretags) = "yaml:&#92;"service_name&#92;""];</code>
+       * @return The serviceName.
+       */
+      public java.lang.String getServiceName() {
+        java.lang.Object ref = serviceName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string service_name = 5 [json_name = "serviceName", (.gogoproto.moretags) = "yaml:&#92;"service_name&#92;""];</code>
+       * @return The bytes for serviceName.
+       */
+      public com.google.protobuf.ByteString
+          getServiceNameBytes() {
+        java.lang.Object ref = serviceName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string service_name = 5 [json_name = "serviceName", (.gogoproto.moretags) = "yaml:&#92;"service_name&#92;""];</code>
+       * @param value The serviceName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        serviceName_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string service_name = 5 [json_name = "serviceName", (.gogoproto.moretags) = "yaml:&#92;"service_name&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServiceName() {
+        serviceName_ = getDefaultInstance().getServiceName();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string service_name = 5 [json_name = "serviceName", (.gogoproto.moretags) = "yaml:&#92;"service_name&#92;""];</code>
+       * @param value The bytes for serviceName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        serviceName_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList providers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureProvidersIsMutable() {
+        if (!providers_.isModifiable()) {
+          providers_ = new com.google.protobuf.LazyStringArrayList(providers_);
+        }
+        bitField0_ |= 0x00000020;
+      }
+      /**
+       * <code>repeated string providers = 6 [json_name = "providers"];</code>
+       * @return A list containing the providers.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getProvidersList() {
+        providers_.makeImmutable();
+        return providers_;
+      }
+      /**
+       * <code>repeated string providers = 6 [json_name = "providers"];</code>
+       * @return The count of providers.
+       */
+      public int getProvidersCount() {
+        return providers_.size();
+      }
+      /**
+       * <code>repeated string providers = 6 [json_name = "providers"];</code>
+       * @param index The index of the element to return.
+       * @return The providers at the given index.
+       */
+      public java.lang.String getProviders(int index) {
+        return providers_.get(index);
+      }
+      /**
+       * <code>repeated string providers = 6 [json_name = "providers"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the providers at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getProvidersBytes(int index) {
+        return providers_.getByteString(index);
+      }
+      /**
+       * <code>repeated string providers = 6 [json_name = "providers"];</code>
+       * @param index The index to set the value at.
+       * @param value The providers to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProviders(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureProvidersIsMutable();
+        providers_.set(index, value);
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string providers = 6 [json_name = "providers"];</code>
+       * @param value The providers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addProviders(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureProvidersIsMutable();
+        providers_.add(value);
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string providers = 6 [json_name = "providers"];</code>
+       * @param values The providers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllProviders(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureProvidersIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, providers_);
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string providers = 6 [json_name = "providers"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProviders() {
+        providers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string providers = 6 [json_name = "providers"];</code>
+       * @param value The bytes of the providers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addProvidersBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureProvidersIsMutable();
+        providers_.add(value);
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object input_ = "";
+      /**
+       * <code>string input = 7 [json_name = "input"];</code>
+       * @return The input.
+       */
+      public java.lang.String getInput() {
+        java.lang.Object ref = input_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          input_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string input = 7 [json_name = "input"];</code>
+       * @return The bytes for input.
+       */
+      public com.google.protobuf.ByteString
+          getInputBytes() {
+        java.lang.Object ref = input_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          input_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string input = 7 [json_name = "input"];</code>
+       * @param value The input to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInput(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        input_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string input = 7 [json_name = "input"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInput() {
+        input_ = getDefaultInstance().getInput();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string input = 7 [json_name = "input"];</code>
+       * @param value The bytes for input to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInputBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        input_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+
+      private long timeout_ ;
+      /**
+       * <code>int64 timeout = 8 [json_name = "timeout"];</code>
+       * @return The timeout.
+       */
+      @java.lang.Override
+      public long getTimeout() {
+        return timeout_;
+      }
+      /**
+       * <code>int64 timeout = 8 [json_name = "timeout"];</code>
+       * @param value The timeout to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimeout(long value) {
+
+        timeout_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 timeout = 8 [json_name = "timeout"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTimeout() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        timeout_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> serviceFeeCap_ =
+        java.util.Collections.emptyList();
+      private void ensureServiceFeeCapIsMutable() {
+        if (!((bitField0_ & 0x00000100) != 0)) {
+          serviceFeeCap_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(serviceFeeCap_);
+          bitField0_ |= 0x00000100;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> serviceFeeCapBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 9 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getServiceFeeCapList() {
+        if (serviceFeeCapBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(serviceFeeCap_);
+        } else {
+          return serviceFeeCapBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 9 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getServiceFeeCapCount() {
+        if (serviceFeeCapBuilder_ == null) {
+          return serviceFeeCap_.size();
+        } else {
+          return serviceFeeCapBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 9 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getServiceFeeCap(int index) {
+        if (serviceFeeCapBuilder_ == null) {
+          return serviceFeeCap_.get(index);
+        } else {
+          return serviceFeeCapBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 9 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setServiceFeeCap(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (serviceFeeCapBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureServiceFeeCapIsMutable();
+          serviceFeeCap_.set(index, value);
+          onChanged();
+        } else {
+          serviceFeeCapBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 9 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setServiceFeeCap(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (serviceFeeCapBuilder_ == null) {
+          ensureServiceFeeCapIsMutable();
+          serviceFeeCap_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          serviceFeeCapBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 9 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addServiceFeeCap(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (serviceFeeCapBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureServiceFeeCapIsMutable();
+          serviceFeeCap_.add(value);
+          onChanged();
+        } else {
+          serviceFeeCapBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 9 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addServiceFeeCap(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (serviceFeeCapBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureServiceFeeCapIsMutable();
+          serviceFeeCap_.add(index, value);
+          onChanged();
+        } else {
+          serviceFeeCapBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 9 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addServiceFeeCap(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (serviceFeeCapBuilder_ == null) {
+          ensureServiceFeeCapIsMutable();
+          serviceFeeCap_.add(builderForValue.build());
+          onChanged();
+        } else {
+          serviceFeeCapBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 9 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addServiceFeeCap(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (serviceFeeCapBuilder_ == null) {
+          ensureServiceFeeCapIsMutable();
+          serviceFeeCap_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          serviceFeeCapBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 9 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllServiceFeeCap(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (serviceFeeCapBuilder_ == null) {
+          ensureServiceFeeCapIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, serviceFeeCap_);
+          onChanged();
+        } else {
+          serviceFeeCapBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 9 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearServiceFeeCap() {
+        if (serviceFeeCapBuilder_ == null) {
+          serviceFeeCap_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000100);
+          onChanged();
+        } else {
+          serviceFeeCapBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 9 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeServiceFeeCap(int index) {
+        if (serviceFeeCapBuilder_ == null) {
+          ensureServiceFeeCapIsMutable();
+          serviceFeeCap_.remove(index);
+          onChanged();
+        } else {
+          serviceFeeCapBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 9 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getServiceFeeCapBuilder(
+          int index) {
+        return getServiceFeeCapFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 9 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getServiceFeeCapOrBuilder(
+          int index) {
+        if (serviceFeeCapBuilder_ == null) {
+          return serviceFeeCap_.get(index);  } else {
+          return serviceFeeCapBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 9 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getServiceFeeCapOrBuilderList() {
+        if (serviceFeeCapBuilder_ != null) {
+          return serviceFeeCapBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(serviceFeeCap_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 9 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addServiceFeeCapBuilder() {
+        return getServiceFeeCapFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 9 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addServiceFeeCapBuilder(
+          int index) {
+        return getServiceFeeCapFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 9 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getServiceFeeCapBuilderList() {
+        return getServiceFeeCapFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getServiceFeeCapFieldBuilder() {
+        if (serviceFeeCapBuilder_ == null) {
+          serviceFeeCapBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  serviceFeeCap_,
+                  ((bitField0_ & 0x00000100) != 0),
+                  getParentForChildren(),
+                  isClean());
+          serviceFeeCap_ = null;
+        }
+        return serviceFeeCapBuilder_;
+      }
+
+      private long repeatedFrequency_ ;
+      /**
+       * <code>uint64 repeated_frequency = 10 [json_name = "repeatedFrequency", (.gogoproto.moretags) = "yaml:&#92;"repeated_frequency&#92;""];</code>
+       * @return The repeatedFrequency.
+       */
+      @java.lang.Override
+      public long getRepeatedFrequency() {
+        return repeatedFrequency_;
+      }
+      /**
+       * <code>uint64 repeated_frequency = 10 [json_name = "repeatedFrequency", (.gogoproto.moretags) = "yaml:&#92;"repeated_frequency&#92;""];</code>
+       * @param value The repeatedFrequency to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRepeatedFrequency(long value) {
+
+        repeatedFrequency_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 repeated_frequency = 10 [json_name = "repeatedFrequency", (.gogoproto.moretags) = "yaml:&#92;"repeated_frequency&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRepeatedFrequency() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        repeatedFrequency_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object aggregateFunc_ = "";
+      /**
+       * <code>string aggregate_func = 11 [json_name = "aggregateFunc", (.gogoproto.moretags) = "yaml:&#92;"aggregate_func&#92;""];</code>
+       * @return The aggregateFunc.
+       */
+      public java.lang.String getAggregateFunc() {
+        java.lang.Object ref = aggregateFunc_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          aggregateFunc_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string aggregate_func = 11 [json_name = "aggregateFunc", (.gogoproto.moretags) = "yaml:&#92;"aggregate_func&#92;""];</code>
+       * @return The bytes for aggregateFunc.
+       */
+      public com.google.protobuf.ByteString
+          getAggregateFuncBytes() {
+        java.lang.Object ref = aggregateFunc_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          aggregateFunc_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string aggregate_func = 11 [json_name = "aggregateFunc", (.gogoproto.moretags) = "yaml:&#92;"aggregate_func&#92;""];</code>
+       * @param value The aggregateFunc to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAggregateFunc(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        aggregateFunc_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string aggregate_func = 11 [json_name = "aggregateFunc", (.gogoproto.moretags) = "yaml:&#92;"aggregate_func&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAggregateFunc() {
+        aggregateFunc_ = getDefaultInstance().getAggregateFunc();
+        bitField0_ = (bitField0_ & ~0x00000400);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string aggregate_func = 11 [json_name = "aggregateFunc", (.gogoproto.moretags) = "yaml:&#92;"aggregate_func&#92;""];</code>
+       * @param value The bytes for aggregateFunc to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAggregateFuncBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        aggregateFunc_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object valueJsonPath_ = "";
+      /**
+       * <code>string value_json_path = 12 [json_name = "valueJsonPath", (.gogoproto.moretags) = "yaml:&#92;"value_json_path&#92;""];</code>
+       * @return The valueJsonPath.
+       */
+      public java.lang.String getValueJsonPath() {
+        java.lang.Object ref = valueJsonPath_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          valueJsonPath_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string value_json_path = 12 [json_name = "valueJsonPath", (.gogoproto.moretags) = "yaml:&#92;"value_json_path&#92;""];</code>
+       * @return The bytes for valueJsonPath.
+       */
+      public com.google.protobuf.ByteString
+          getValueJsonPathBytes() {
+        java.lang.Object ref = valueJsonPath_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          valueJsonPath_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string value_json_path = 12 [json_name = "valueJsonPath", (.gogoproto.moretags) = "yaml:&#92;"value_json_path&#92;""];</code>
+       * @param value The valueJsonPath to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValueJsonPath(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        valueJsonPath_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string value_json_path = 12 [json_name = "valueJsonPath", (.gogoproto.moretags) = "yaml:&#92;"value_json_path&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValueJsonPath() {
+        valueJsonPath_ = getDefaultInstance().getValueJsonPath();
+        bitField0_ = (bitField0_ & ~0x00000800);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string value_json_path = 12 [json_name = "valueJsonPath", (.gogoproto.moretags) = "yaml:&#92;"value_json_path&#92;""];</code>
+       * @param value The bytes for valueJsonPath to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValueJsonPathBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        valueJsonPath_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+
+      private int responseThreshold_ ;
+      /**
+       * <code>uint32 response_threshold = 13 [json_name = "responseThreshold", (.gogoproto.moretags) = "yaml:&#92;"response_threshold&#92;""];</code>
+       * @return The responseThreshold.
+       */
+      @java.lang.Override
+      public int getResponseThreshold() {
+        return responseThreshold_;
+      }
+      /**
+       * <code>uint32 response_threshold = 13 [json_name = "responseThreshold", (.gogoproto.moretags) = "yaml:&#92;"response_threshold&#92;""];</code>
+       * @param value The responseThreshold to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResponseThreshold(int value) {
+
+        responseThreshold_ = value;
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 response_threshold = 13 [json_name = "responseThreshold", (.gogoproto.moretags) = "yaml:&#92;"response_threshold&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResponseThreshold() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        responseThreshold_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.oracle.MsgCreateFeed)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.oracle.MsgCreateFeed)
+    private static final com.irismod.oracle.TxProto.MsgCreateFeed DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.oracle.TxProto.MsgCreateFeed();
+    }
+
+    public static com.irismod.oracle.TxProto.MsgCreateFeed getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateFeed>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateFeed>() {
+      @java.lang.Override
+      public MsgCreateFeed parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateFeed> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateFeed> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.oracle.TxProto.MsgCreateFeed getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCreateFeedResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.oracle.MsgCreateFeedResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgCreateFeedResponse defines the Msg/CreateFeed response type
+   * </pre>
+   *
+   * Protobuf type {@code irismod.oracle.MsgCreateFeedResponse}
+   */
+  public static final class MsgCreateFeedResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.oracle.MsgCreateFeedResponse)
+      MsgCreateFeedResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateFeedResponse.newBuilder() to construct.
+    private MsgCreateFeedResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateFeedResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateFeedResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgCreateFeedResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgCreateFeedResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.oracle.TxProto.MsgCreateFeedResponse.class, com.irismod.oracle.TxProto.MsgCreateFeedResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.oracle.TxProto.MsgCreateFeedResponse)) {
+        return super.equals(obj);
+      }
+      com.irismod.oracle.TxProto.MsgCreateFeedResponse other = (com.irismod.oracle.TxProto.MsgCreateFeedResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.oracle.TxProto.MsgCreateFeedResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.oracle.TxProto.MsgCreateFeedResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.oracle.TxProto.MsgCreateFeedResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.oracle.TxProto.MsgCreateFeedResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.oracle.TxProto.MsgCreateFeedResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.oracle.TxProto.MsgCreateFeedResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.oracle.TxProto.MsgCreateFeedResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.oracle.TxProto.MsgCreateFeedResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.oracle.TxProto.MsgCreateFeedResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.oracle.TxProto.MsgCreateFeedResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.oracle.TxProto.MsgCreateFeedResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.oracle.TxProto.MsgCreateFeedResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.oracle.TxProto.MsgCreateFeedResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCreateFeedResponse defines the Msg/CreateFeed response type
+     * </pre>
+     *
+     * Protobuf type {@code irismod.oracle.MsgCreateFeedResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.oracle.MsgCreateFeedResponse)
+        com.irismod.oracle.TxProto.MsgCreateFeedResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgCreateFeedResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgCreateFeedResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.oracle.TxProto.MsgCreateFeedResponse.class, com.irismod.oracle.TxProto.MsgCreateFeedResponse.Builder.class);
+      }
+
+      // Construct using com.irismod.oracle.TxProto.MsgCreateFeedResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgCreateFeedResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.oracle.TxProto.MsgCreateFeedResponse getDefaultInstanceForType() {
+        return com.irismod.oracle.TxProto.MsgCreateFeedResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.oracle.TxProto.MsgCreateFeedResponse build() {
+        com.irismod.oracle.TxProto.MsgCreateFeedResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.oracle.TxProto.MsgCreateFeedResponse buildPartial() {
+        com.irismod.oracle.TxProto.MsgCreateFeedResponse result = new com.irismod.oracle.TxProto.MsgCreateFeedResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.oracle.TxProto.MsgCreateFeedResponse) {
+          return mergeFrom((com.irismod.oracle.TxProto.MsgCreateFeedResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.oracle.TxProto.MsgCreateFeedResponse other) {
+        if (other == com.irismod.oracle.TxProto.MsgCreateFeedResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.oracle.MsgCreateFeedResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.oracle.MsgCreateFeedResponse)
+    private static final com.irismod.oracle.TxProto.MsgCreateFeedResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.oracle.TxProto.MsgCreateFeedResponse();
+    }
+
+    public static com.irismod.oracle.TxProto.MsgCreateFeedResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateFeedResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateFeedResponse>() {
+      @java.lang.Override
+      public MsgCreateFeedResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateFeedResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateFeedResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.oracle.TxProto.MsgCreateFeedResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgStartFeedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.oracle.MsgStartFeed)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string feed_name = 1 [json_name = "feedName", (.gogoproto.moretags) = "yaml:&#92;"feed_name&#92;""];</code>
+     * @return The feedName.
+     */
+    java.lang.String getFeedName();
+    /**
+     * <code>string feed_name = 1 [json_name = "feedName", (.gogoproto.moretags) = "yaml:&#92;"feed_name&#92;""];</code>
+     * @return The bytes for feedName.
+     */
+    com.google.protobuf.ByteString
+        getFeedNameBytes();
+
+    /**
+     * <code>string creator = 2 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    java.lang.String getCreator();
+    /**
+     * <code>string creator = 2 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    com.google.protobuf.ByteString
+        getCreatorBytes();
+  }
+  /**
+   * <pre>
+   * MsgPauseFeed defines an sdk.Msg type that supports stating a feed
+   * </pre>
+   *
+   * Protobuf type {@code irismod.oracle.MsgStartFeed}
+   */
+  public static final class MsgStartFeed extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.oracle.MsgStartFeed)
+      MsgStartFeedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgStartFeed.newBuilder() to construct.
+    private MsgStartFeed(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgStartFeed() {
+      feedName_ = "";
+      creator_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgStartFeed();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgStartFeed_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgStartFeed_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.oracle.TxProto.MsgStartFeed.class, com.irismod.oracle.TxProto.MsgStartFeed.Builder.class);
+    }
+
+    public static final int FEED_NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object feedName_ = "";
+    /**
+     * <code>string feed_name = 1 [json_name = "feedName", (.gogoproto.moretags) = "yaml:&#92;"feed_name&#92;""];</code>
+     * @return The feedName.
+     */
+    @java.lang.Override
+    public java.lang.String getFeedName() {
+      java.lang.Object ref = feedName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        feedName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string feed_name = 1 [json_name = "feedName", (.gogoproto.moretags) = "yaml:&#92;"feed_name&#92;""];</code>
+     * @return The bytes for feedName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFeedNameBytes() {
+      java.lang.Object ref = feedName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        feedName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CREATOR_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object creator_ = "";
+    /**
+     * <code>string creator = 2 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    @java.lang.Override
+    public java.lang.String getCreator() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        creator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string creator = 2 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatorBytes() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        creator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feedName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, feedName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, creator_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feedName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, feedName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, creator_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.oracle.TxProto.MsgStartFeed)) {
+        return super.equals(obj);
+      }
+      com.irismod.oracle.TxProto.MsgStartFeed other = (com.irismod.oracle.TxProto.MsgStartFeed) obj;
+
+      if (!getFeedName()
+          .equals(other.getFeedName())) return false;
+      if (!getCreator()
+          .equals(other.getCreator())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FEED_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getFeedName().hashCode();
+      hash = (37 * hash) + CREATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCreator().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.oracle.TxProto.MsgStartFeed parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.oracle.TxProto.MsgStartFeed parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.oracle.TxProto.MsgStartFeed parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.oracle.TxProto.MsgStartFeed parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.oracle.TxProto.MsgStartFeed parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.oracle.TxProto.MsgStartFeed parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.oracle.TxProto.MsgStartFeed parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.oracle.TxProto.MsgStartFeed parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.oracle.TxProto.MsgStartFeed parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.oracle.TxProto.MsgStartFeed parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.oracle.TxProto.MsgStartFeed parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.oracle.TxProto.MsgStartFeed parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.oracle.TxProto.MsgStartFeed prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgPauseFeed defines an sdk.Msg type that supports stating a feed
+     * </pre>
+     *
+     * Protobuf type {@code irismod.oracle.MsgStartFeed}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.oracle.MsgStartFeed)
+        com.irismod.oracle.TxProto.MsgStartFeedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgStartFeed_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgStartFeed_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.oracle.TxProto.MsgStartFeed.class, com.irismod.oracle.TxProto.MsgStartFeed.Builder.class);
+      }
+
+      // Construct using com.irismod.oracle.TxProto.MsgStartFeed.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        feedName_ = "";
+        creator_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgStartFeed_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.oracle.TxProto.MsgStartFeed getDefaultInstanceForType() {
+        return com.irismod.oracle.TxProto.MsgStartFeed.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.oracle.TxProto.MsgStartFeed build() {
+        com.irismod.oracle.TxProto.MsgStartFeed result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.oracle.TxProto.MsgStartFeed buildPartial() {
+        com.irismod.oracle.TxProto.MsgStartFeed result = new com.irismod.oracle.TxProto.MsgStartFeed(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.oracle.TxProto.MsgStartFeed result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.feedName_ = feedName_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.creator_ = creator_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.oracle.TxProto.MsgStartFeed) {
+          return mergeFrom((com.irismod.oracle.TxProto.MsgStartFeed)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.oracle.TxProto.MsgStartFeed other) {
+        if (other == com.irismod.oracle.TxProto.MsgStartFeed.getDefaultInstance()) return this;
+        if (!other.getFeedName().isEmpty()) {
+          feedName_ = other.feedName_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getCreator().isEmpty()) {
+          creator_ = other.creator_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                feedName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                creator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object feedName_ = "";
+      /**
+       * <code>string feed_name = 1 [json_name = "feedName", (.gogoproto.moretags) = "yaml:&#92;"feed_name&#92;""];</code>
+       * @return The feedName.
+       */
+      public java.lang.String getFeedName() {
+        java.lang.Object ref = feedName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          feedName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string feed_name = 1 [json_name = "feedName", (.gogoproto.moretags) = "yaml:&#92;"feed_name&#92;""];</code>
+       * @return The bytes for feedName.
+       */
+      public com.google.protobuf.ByteString
+          getFeedNameBytes() {
+        java.lang.Object ref = feedName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          feedName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string feed_name = 1 [json_name = "feedName", (.gogoproto.moretags) = "yaml:&#92;"feed_name&#92;""];</code>
+       * @param value The feedName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeedName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        feedName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string feed_name = 1 [json_name = "feedName", (.gogoproto.moretags) = "yaml:&#92;"feed_name&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFeedName() {
+        feedName_ = getDefaultInstance().getFeedName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string feed_name = 1 [json_name = "feedName", (.gogoproto.moretags) = "yaml:&#92;"feed_name&#92;""];</code>
+       * @param value The bytes for feedName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeedNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        feedName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object creator_ = "";
+      /**
+       * <code>string creator = 2 [json_name = "creator"];</code>
+       * @return The creator.
+       */
+      public java.lang.String getCreator() {
+        java.lang.Object ref = creator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          creator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string creator = 2 [json_name = "creator"];</code>
+       * @return The bytes for creator.
+       */
+      public com.google.protobuf.ByteString
+          getCreatorBytes() {
+        java.lang.Object ref = creator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          creator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string creator = 2 [json_name = "creator"];</code>
+       * @param value The creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        creator_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 2 [json_name = "creator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreator() {
+        creator_ = getDefaultInstance().getCreator();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 2 [json_name = "creator"];</code>
+       * @param value The bytes for creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        creator_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.oracle.MsgStartFeed)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.oracle.MsgStartFeed)
+    private static final com.irismod.oracle.TxProto.MsgStartFeed DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.oracle.TxProto.MsgStartFeed();
+    }
+
+    public static com.irismod.oracle.TxProto.MsgStartFeed getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgStartFeed>
+        PARSER = new com.google.protobuf.AbstractParser<MsgStartFeed>() {
+      @java.lang.Override
+      public MsgStartFeed parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgStartFeed> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgStartFeed> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.oracle.TxProto.MsgStartFeed getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgStartFeedResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.oracle.MsgStartFeedResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgStartFeedResponse defines the Msg/StartFeed response type
+   * </pre>
+   *
+   * Protobuf type {@code irismod.oracle.MsgStartFeedResponse}
+   */
+  public static final class MsgStartFeedResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.oracle.MsgStartFeedResponse)
+      MsgStartFeedResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgStartFeedResponse.newBuilder() to construct.
+    private MsgStartFeedResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgStartFeedResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgStartFeedResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgStartFeedResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgStartFeedResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.oracle.TxProto.MsgStartFeedResponse.class, com.irismod.oracle.TxProto.MsgStartFeedResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.oracle.TxProto.MsgStartFeedResponse)) {
+        return super.equals(obj);
+      }
+      com.irismod.oracle.TxProto.MsgStartFeedResponse other = (com.irismod.oracle.TxProto.MsgStartFeedResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.oracle.TxProto.MsgStartFeedResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.oracle.TxProto.MsgStartFeedResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.oracle.TxProto.MsgStartFeedResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.oracle.TxProto.MsgStartFeedResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.oracle.TxProto.MsgStartFeedResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.oracle.TxProto.MsgStartFeedResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.oracle.TxProto.MsgStartFeedResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.oracle.TxProto.MsgStartFeedResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.oracle.TxProto.MsgStartFeedResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.oracle.TxProto.MsgStartFeedResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.oracle.TxProto.MsgStartFeedResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.oracle.TxProto.MsgStartFeedResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.oracle.TxProto.MsgStartFeedResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgStartFeedResponse defines the Msg/StartFeed response type
+     * </pre>
+     *
+     * Protobuf type {@code irismod.oracle.MsgStartFeedResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.oracle.MsgStartFeedResponse)
+        com.irismod.oracle.TxProto.MsgStartFeedResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgStartFeedResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgStartFeedResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.oracle.TxProto.MsgStartFeedResponse.class, com.irismod.oracle.TxProto.MsgStartFeedResponse.Builder.class);
+      }
+
+      // Construct using com.irismod.oracle.TxProto.MsgStartFeedResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgStartFeedResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.oracle.TxProto.MsgStartFeedResponse getDefaultInstanceForType() {
+        return com.irismod.oracle.TxProto.MsgStartFeedResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.oracle.TxProto.MsgStartFeedResponse build() {
+        com.irismod.oracle.TxProto.MsgStartFeedResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.oracle.TxProto.MsgStartFeedResponse buildPartial() {
+        com.irismod.oracle.TxProto.MsgStartFeedResponse result = new com.irismod.oracle.TxProto.MsgStartFeedResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.oracle.TxProto.MsgStartFeedResponse) {
+          return mergeFrom((com.irismod.oracle.TxProto.MsgStartFeedResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.oracle.TxProto.MsgStartFeedResponse other) {
+        if (other == com.irismod.oracle.TxProto.MsgStartFeedResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.oracle.MsgStartFeedResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.oracle.MsgStartFeedResponse)
+    private static final com.irismod.oracle.TxProto.MsgStartFeedResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.oracle.TxProto.MsgStartFeedResponse();
+    }
+
+    public static com.irismod.oracle.TxProto.MsgStartFeedResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgStartFeedResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgStartFeedResponse>() {
+      @java.lang.Override
+      public MsgStartFeedResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgStartFeedResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgStartFeedResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.oracle.TxProto.MsgStartFeedResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgPauseFeedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.oracle.MsgPauseFeed)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string feed_name = 1 [json_name = "feedName", (.gogoproto.moretags) = "yaml:&#92;"feed_name&#92;""];</code>
+     * @return The feedName.
+     */
+    java.lang.String getFeedName();
+    /**
+     * <code>string feed_name = 1 [json_name = "feedName", (.gogoproto.moretags) = "yaml:&#92;"feed_name&#92;""];</code>
+     * @return The bytes for feedName.
+     */
+    com.google.protobuf.ByteString
+        getFeedNameBytes();
+
+    /**
+     * <code>string creator = 2 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    java.lang.String getCreator();
+    /**
+     * <code>string creator = 2 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    com.google.protobuf.ByteString
+        getCreatorBytes();
+  }
+  /**
+   * <pre>
+   * MsgPauseFeed defines an sdk.Msg type that supports pausing a feed
+   * </pre>
+   *
+   * Protobuf type {@code irismod.oracle.MsgPauseFeed}
+   */
+  public static final class MsgPauseFeed extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.oracle.MsgPauseFeed)
+      MsgPauseFeedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgPauseFeed.newBuilder() to construct.
+    private MsgPauseFeed(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgPauseFeed() {
+      feedName_ = "";
+      creator_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgPauseFeed();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgPauseFeed_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgPauseFeed_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.oracle.TxProto.MsgPauseFeed.class, com.irismod.oracle.TxProto.MsgPauseFeed.Builder.class);
+    }
+
+    public static final int FEED_NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object feedName_ = "";
+    /**
+     * <code>string feed_name = 1 [json_name = "feedName", (.gogoproto.moretags) = "yaml:&#92;"feed_name&#92;""];</code>
+     * @return The feedName.
+     */
+    @java.lang.Override
+    public java.lang.String getFeedName() {
+      java.lang.Object ref = feedName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        feedName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string feed_name = 1 [json_name = "feedName", (.gogoproto.moretags) = "yaml:&#92;"feed_name&#92;""];</code>
+     * @return The bytes for feedName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFeedNameBytes() {
+      java.lang.Object ref = feedName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        feedName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CREATOR_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object creator_ = "";
+    /**
+     * <code>string creator = 2 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    @java.lang.Override
+    public java.lang.String getCreator() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        creator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string creator = 2 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatorBytes() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        creator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feedName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, feedName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, creator_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feedName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, feedName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, creator_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.oracle.TxProto.MsgPauseFeed)) {
+        return super.equals(obj);
+      }
+      com.irismod.oracle.TxProto.MsgPauseFeed other = (com.irismod.oracle.TxProto.MsgPauseFeed) obj;
+
+      if (!getFeedName()
+          .equals(other.getFeedName())) return false;
+      if (!getCreator()
+          .equals(other.getCreator())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FEED_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getFeedName().hashCode();
+      hash = (37 * hash) + CREATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCreator().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.oracle.TxProto.MsgPauseFeed parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.oracle.TxProto.MsgPauseFeed parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.oracle.TxProto.MsgPauseFeed parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.oracle.TxProto.MsgPauseFeed parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.oracle.TxProto.MsgPauseFeed parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.oracle.TxProto.MsgPauseFeed parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.oracle.TxProto.MsgPauseFeed parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.oracle.TxProto.MsgPauseFeed parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.oracle.TxProto.MsgPauseFeed parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.oracle.TxProto.MsgPauseFeed parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.oracle.TxProto.MsgPauseFeed parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.oracle.TxProto.MsgPauseFeed parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.oracle.TxProto.MsgPauseFeed prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgPauseFeed defines an sdk.Msg type that supports pausing a feed
+     * </pre>
+     *
+     * Protobuf type {@code irismod.oracle.MsgPauseFeed}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.oracle.MsgPauseFeed)
+        com.irismod.oracle.TxProto.MsgPauseFeedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgPauseFeed_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgPauseFeed_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.oracle.TxProto.MsgPauseFeed.class, com.irismod.oracle.TxProto.MsgPauseFeed.Builder.class);
+      }
+
+      // Construct using com.irismod.oracle.TxProto.MsgPauseFeed.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        feedName_ = "";
+        creator_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgPauseFeed_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.oracle.TxProto.MsgPauseFeed getDefaultInstanceForType() {
+        return com.irismod.oracle.TxProto.MsgPauseFeed.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.oracle.TxProto.MsgPauseFeed build() {
+        com.irismod.oracle.TxProto.MsgPauseFeed result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.oracle.TxProto.MsgPauseFeed buildPartial() {
+        com.irismod.oracle.TxProto.MsgPauseFeed result = new com.irismod.oracle.TxProto.MsgPauseFeed(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.irismod.oracle.TxProto.MsgPauseFeed result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.feedName_ = feedName_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.creator_ = creator_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.oracle.TxProto.MsgPauseFeed) {
+          return mergeFrom((com.irismod.oracle.TxProto.MsgPauseFeed)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.oracle.TxProto.MsgPauseFeed other) {
+        if (other == com.irismod.oracle.TxProto.MsgPauseFeed.getDefaultInstance()) return this;
+        if (!other.getFeedName().isEmpty()) {
+          feedName_ = other.feedName_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getCreator().isEmpty()) {
+          creator_ = other.creator_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                feedName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                creator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object feedName_ = "";
+      /**
+       * <code>string feed_name = 1 [json_name = "feedName", (.gogoproto.moretags) = "yaml:&#92;"feed_name&#92;""];</code>
+       * @return The feedName.
+       */
+      public java.lang.String getFeedName() {
+        java.lang.Object ref = feedName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          feedName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string feed_name = 1 [json_name = "feedName", (.gogoproto.moretags) = "yaml:&#92;"feed_name&#92;""];</code>
+       * @return The bytes for feedName.
+       */
+      public com.google.protobuf.ByteString
+          getFeedNameBytes() {
+        java.lang.Object ref = feedName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          feedName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string feed_name = 1 [json_name = "feedName", (.gogoproto.moretags) = "yaml:&#92;"feed_name&#92;""];</code>
+       * @param value The feedName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeedName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        feedName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string feed_name = 1 [json_name = "feedName", (.gogoproto.moretags) = "yaml:&#92;"feed_name&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFeedName() {
+        feedName_ = getDefaultInstance().getFeedName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string feed_name = 1 [json_name = "feedName", (.gogoproto.moretags) = "yaml:&#92;"feed_name&#92;""];</code>
+       * @param value The bytes for feedName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeedNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        feedName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object creator_ = "";
+      /**
+       * <code>string creator = 2 [json_name = "creator"];</code>
+       * @return The creator.
+       */
+      public java.lang.String getCreator() {
+        java.lang.Object ref = creator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          creator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string creator = 2 [json_name = "creator"];</code>
+       * @return The bytes for creator.
+       */
+      public com.google.protobuf.ByteString
+          getCreatorBytes() {
+        java.lang.Object ref = creator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          creator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string creator = 2 [json_name = "creator"];</code>
+       * @param value The creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        creator_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 2 [json_name = "creator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreator() {
+        creator_ = getDefaultInstance().getCreator();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 2 [json_name = "creator"];</code>
+       * @param value The bytes for creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        creator_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.oracle.MsgPauseFeed)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.oracle.MsgPauseFeed)
+    private static final com.irismod.oracle.TxProto.MsgPauseFeed DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.oracle.TxProto.MsgPauseFeed();
+    }
+
+    public static com.irismod.oracle.TxProto.MsgPauseFeed getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgPauseFeed>
+        PARSER = new com.google.protobuf.AbstractParser<MsgPauseFeed>() {
+      @java.lang.Override
+      public MsgPauseFeed parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgPauseFeed> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgPauseFeed> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.oracle.TxProto.MsgPauseFeed getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgPauseFeedResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.oracle.MsgPauseFeedResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgPauseFeedResponse defines the Msg/PauseFeed response type
+   * </pre>
+   *
+   * Protobuf type {@code irismod.oracle.MsgPauseFeedResponse}
+   */
+  public static final class MsgPauseFeedResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.oracle.MsgPauseFeedResponse)
+      MsgPauseFeedResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgPauseFeedResponse.newBuilder() to construct.
+    private MsgPauseFeedResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgPauseFeedResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgPauseFeedResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgPauseFeedResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgPauseFeedResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.oracle.TxProto.MsgPauseFeedResponse.class, com.irismod.oracle.TxProto.MsgPauseFeedResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.oracle.TxProto.MsgPauseFeedResponse)) {
+        return super.equals(obj);
+      }
+      com.irismod.oracle.TxProto.MsgPauseFeedResponse other = (com.irismod.oracle.TxProto.MsgPauseFeedResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.oracle.TxProto.MsgPauseFeedResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.oracle.TxProto.MsgPauseFeedResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.oracle.TxProto.MsgPauseFeedResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.oracle.TxProto.MsgPauseFeedResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.oracle.TxProto.MsgPauseFeedResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.oracle.TxProto.MsgPauseFeedResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.oracle.TxProto.MsgPauseFeedResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.oracle.TxProto.MsgPauseFeedResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.oracle.TxProto.MsgPauseFeedResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.oracle.TxProto.MsgPauseFeedResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.oracle.TxProto.MsgPauseFeedResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.oracle.TxProto.MsgPauseFeedResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.oracle.TxProto.MsgPauseFeedResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgPauseFeedResponse defines the Msg/PauseFeed response type
+     * </pre>
+     *
+     * Protobuf type {@code irismod.oracle.MsgPauseFeedResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.oracle.MsgPauseFeedResponse)
+        com.irismod.oracle.TxProto.MsgPauseFeedResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgPauseFeedResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgPauseFeedResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.oracle.TxProto.MsgPauseFeedResponse.class, com.irismod.oracle.TxProto.MsgPauseFeedResponse.Builder.class);
+      }
+
+      // Construct using com.irismod.oracle.TxProto.MsgPauseFeedResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgPauseFeedResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.oracle.TxProto.MsgPauseFeedResponse getDefaultInstanceForType() {
+        return com.irismod.oracle.TxProto.MsgPauseFeedResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.oracle.TxProto.MsgPauseFeedResponse build() {
+        com.irismod.oracle.TxProto.MsgPauseFeedResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.oracle.TxProto.MsgPauseFeedResponse buildPartial() {
+        com.irismod.oracle.TxProto.MsgPauseFeedResponse result = new com.irismod.oracle.TxProto.MsgPauseFeedResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.oracle.TxProto.MsgPauseFeedResponse) {
+          return mergeFrom((com.irismod.oracle.TxProto.MsgPauseFeedResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.oracle.TxProto.MsgPauseFeedResponse other) {
+        if (other == com.irismod.oracle.TxProto.MsgPauseFeedResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.oracle.MsgPauseFeedResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.oracle.MsgPauseFeedResponse)
+    private static final com.irismod.oracle.TxProto.MsgPauseFeedResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.oracle.TxProto.MsgPauseFeedResponse();
+    }
+
+    public static com.irismod.oracle.TxProto.MsgPauseFeedResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgPauseFeedResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgPauseFeedResponse>() {
+      @java.lang.Override
+      public MsgPauseFeedResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgPauseFeedResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgPauseFeedResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.oracle.TxProto.MsgPauseFeedResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgEditFeedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.oracle.MsgEditFeed)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string feed_name = 1 [json_name = "feedName", (.gogoproto.moretags) = "yaml:&#92;"feed_name&#92;""];</code>
+     * @return The feedName.
+     */
+    java.lang.String getFeedName();
+    /**
+     * <code>string feed_name = 1 [json_name = "feedName", (.gogoproto.moretags) = "yaml:&#92;"feed_name&#92;""];</code>
+     * @return The bytes for feedName.
+     */
+    com.google.protobuf.ByteString
+        getFeedNameBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>uint64 latest_history = 3 [json_name = "latestHistory", (.gogoproto.moretags) = "yaml:&#92;"latest_history&#92;""];</code>
+     * @return The latestHistory.
+     */
+    long getLatestHistory();
+
+    /**
+     * <code>repeated string providers = 4 [json_name = "providers"];</code>
+     * @return A list containing the providers.
+     */
+    java.util.List<java.lang.String>
+        getProvidersList();
+    /**
+     * <code>repeated string providers = 4 [json_name = "providers"];</code>
+     * @return The count of providers.
+     */
+    int getProvidersCount();
+    /**
+     * <code>repeated string providers = 4 [json_name = "providers"];</code>
+     * @param index The index of the element to return.
+     * @return The providers at the given index.
+     */
+    java.lang.String getProviders(int index);
+    /**
+     * <code>repeated string providers = 4 [json_name = "providers"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the providers at the given index.
+     */
+    com.google.protobuf.ByteString
+        getProvidersBytes(int index);
+
+    /**
+     * <code>int64 timeout = 5 [json_name = "timeout"];</code>
+     * @return The timeout.
+     */
+    long getTimeout();
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 6 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getServiceFeeCapList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 6 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getServiceFeeCap(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 6 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getServiceFeeCapCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 6 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getServiceFeeCapOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 6 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getServiceFeeCapOrBuilder(
+        int index);
+
+    /**
+     * <code>uint64 repeated_frequency = 7 [json_name = "repeatedFrequency", (.gogoproto.moretags) = "yaml:&#92;"repeated_frequency&#92;""];</code>
+     * @return The repeatedFrequency.
+     */
+    long getRepeatedFrequency();
+
+    /**
+     * <code>uint32 response_threshold = 8 [json_name = "responseThreshold", (.gogoproto.moretags) = "yaml:&#92;"response_threshold&#92;""];</code>
+     * @return The responseThreshold.
+     */
+    int getResponseThreshold();
+
+    /**
+     * <code>string creator = 9 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    java.lang.String getCreator();
+    /**
+     * <code>string creator = 9 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    com.google.protobuf.ByteString
+        getCreatorBytes();
+  }
+  /**
+   * <pre>
+   * MsgEditFeed defines an sdk.Msg type that supports editing a feed
+   * </pre>
+   *
+   * Protobuf type {@code irismod.oracle.MsgEditFeed}
+   */
+  public static final class MsgEditFeed extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.oracle.MsgEditFeed)
+      MsgEditFeedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgEditFeed.newBuilder() to construct.
+    private MsgEditFeed(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgEditFeed() {
+      feedName_ = "";
+      description_ = "";
+      providers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      serviceFeeCap_ = java.util.Collections.emptyList();
+      creator_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgEditFeed();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgEditFeed_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgEditFeed_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.oracle.TxProto.MsgEditFeed.class, com.irismod.oracle.TxProto.MsgEditFeed.Builder.class);
+    }
+
+    public static final int FEED_NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object feedName_ = "";
+    /**
+     * <code>string feed_name = 1 [json_name = "feedName", (.gogoproto.moretags) = "yaml:&#92;"feed_name&#92;""];</code>
+     * @return The feedName.
+     */
+    @java.lang.Override
+    public java.lang.String getFeedName() {
+      java.lang.Object ref = feedName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        feedName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string feed_name = 1 [json_name = "feedName", (.gogoproto.moretags) = "yaml:&#92;"feed_name&#92;""];</code>
+     * @return The bytes for feedName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFeedNameBytes() {
+      java.lang.Object ref = feedName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        feedName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LATEST_HISTORY_FIELD_NUMBER = 3;
+    private long latestHistory_ = 0L;
+    /**
+     * <code>uint64 latest_history = 3 [json_name = "latestHistory", (.gogoproto.moretags) = "yaml:&#92;"latest_history&#92;""];</code>
+     * @return The latestHistory.
+     */
+    @java.lang.Override
+    public long getLatestHistory() {
+      return latestHistory_;
+    }
+
+    public static final int PROVIDERS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList providers_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string providers = 4 [json_name = "providers"];</code>
+     * @return A list containing the providers.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getProvidersList() {
+      return providers_;
+    }
+    /**
+     * <code>repeated string providers = 4 [json_name = "providers"];</code>
+     * @return The count of providers.
+     */
+    public int getProvidersCount() {
+      return providers_.size();
+    }
+    /**
+     * <code>repeated string providers = 4 [json_name = "providers"];</code>
+     * @param index The index of the element to return.
+     * @return The providers at the given index.
+     */
+    public java.lang.String getProviders(int index) {
+      return providers_.get(index);
+    }
+    /**
+     * <code>repeated string providers = 4 [json_name = "providers"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the providers at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getProvidersBytes(int index) {
+      return providers_.getByteString(index);
+    }
+
+    public static final int TIMEOUT_FIELD_NUMBER = 5;
+    private long timeout_ = 0L;
+    /**
+     * <code>int64 timeout = 5 [json_name = "timeout"];</code>
+     * @return The timeout.
+     */
+    @java.lang.Override
+    public long getTimeout() {
+      return timeout_;
+    }
+
+    public static final int SERVICE_FEE_CAP_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> serviceFeeCap_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 6 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getServiceFeeCapList() {
+      return serviceFeeCap_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 6 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getServiceFeeCapOrBuilderList() {
+      return serviceFeeCap_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 6 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getServiceFeeCapCount() {
+      return serviceFeeCap_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 6 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getServiceFeeCap(int index) {
+      return serviceFeeCap_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 6 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getServiceFeeCapOrBuilder(
+        int index) {
+      return serviceFeeCap_.get(index);
+    }
+
+    public static final int REPEATED_FREQUENCY_FIELD_NUMBER = 7;
+    private long repeatedFrequency_ = 0L;
+    /**
+     * <code>uint64 repeated_frequency = 7 [json_name = "repeatedFrequency", (.gogoproto.moretags) = "yaml:&#92;"repeated_frequency&#92;""];</code>
+     * @return The repeatedFrequency.
+     */
+    @java.lang.Override
+    public long getRepeatedFrequency() {
+      return repeatedFrequency_;
+    }
+
+    public static final int RESPONSE_THRESHOLD_FIELD_NUMBER = 8;
+    private int responseThreshold_ = 0;
+    /**
+     * <code>uint32 response_threshold = 8 [json_name = "responseThreshold", (.gogoproto.moretags) = "yaml:&#92;"response_threshold&#92;""];</code>
+     * @return The responseThreshold.
+     */
+    @java.lang.Override
+    public int getResponseThreshold() {
+      return responseThreshold_;
+    }
+
+    public static final int CREATOR_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object creator_ = "";
+    /**
+     * <code>string creator = 9 [json_name = "creator"];</code>
+     * @return The creator.
+     */
+    @java.lang.Override
+    public java.lang.String getCreator() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        creator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string creator = 9 [json_name = "creator"];</code>
+     * @return The bytes for creator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatorBytes() {
+      java.lang.Object ref = creator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        creator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feedName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, feedName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (latestHistory_ != 0L) {
+        output.writeUInt64(3, latestHistory_);
+      }
+      for (int i = 0; i < providers_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, providers_.getRaw(i));
+      }
+      if (timeout_ != 0L) {
+        output.writeInt64(5, timeout_);
+      }
+      for (int i = 0; i < serviceFeeCap_.size(); i++) {
+        output.writeMessage(6, serviceFeeCap_.get(i));
+      }
+      if (repeatedFrequency_ != 0L) {
+        output.writeUInt64(7, repeatedFrequency_);
+      }
+      if (responseThreshold_ != 0) {
+        output.writeUInt32(8, responseThreshold_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, creator_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feedName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, feedName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (latestHistory_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, latestHistory_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < providers_.size(); i++) {
+          dataSize += computeStringSizeNoTag(providers_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getProvidersList().size();
+      }
+      if (timeout_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(5, timeout_);
+      }
+      for (int i = 0; i < serviceFeeCap_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, serviceFeeCap_.get(i));
+      }
+      if (repeatedFrequency_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(7, repeatedFrequency_);
+      }
+      if (responseThreshold_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(8, responseThreshold_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, creator_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.oracle.TxProto.MsgEditFeed)) {
+        return super.equals(obj);
+      }
+      com.irismod.oracle.TxProto.MsgEditFeed other = (com.irismod.oracle.TxProto.MsgEditFeed) obj;
+
+      if (!getFeedName()
+          .equals(other.getFeedName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (getLatestHistory()
+          != other.getLatestHistory()) return false;
+      if (!getProvidersList()
+          .equals(other.getProvidersList())) return false;
+      if (getTimeout()
+          != other.getTimeout()) return false;
+      if (!getServiceFeeCapList()
+          .equals(other.getServiceFeeCapList())) return false;
+      if (getRepeatedFrequency()
+          != other.getRepeatedFrequency()) return false;
+      if (getResponseThreshold()
+          != other.getResponseThreshold()) return false;
+      if (!getCreator()
+          .equals(other.getCreator())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FEED_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getFeedName().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + LATEST_HISTORY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLatestHistory());
+      if (getProvidersCount() > 0) {
+        hash = (37 * hash) + PROVIDERS_FIELD_NUMBER;
+        hash = (53 * hash) + getProvidersList().hashCode();
+      }
+      hash = (37 * hash) + TIMEOUT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTimeout());
+      if (getServiceFeeCapCount() > 0) {
+        hash = (37 * hash) + SERVICE_FEE_CAP_FIELD_NUMBER;
+        hash = (53 * hash) + getServiceFeeCapList().hashCode();
+      }
+      hash = (37 * hash) + REPEATED_FREQUENCY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRepeatedFrequency());
+      hash = (37 * hash) + RESPONSE_THRESHOLD_FIELD_NUMBER;
+      hash = (53 * hash) + getResponseThreshold();
+      hash = (37 * hash) + CREATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCreator().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.oracle.TxProto.MsgEditFeed parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.oracle.TxProto.MsgEditFeed parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.oracle.TxProto.MsgEditFeed parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.oracle.TxProto.MsgEditFeed parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.oracle.TxProto.MsgEditFeed parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.oracle.TxProto.MsgEditFeed parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.oracle.TxProto.MsgEditFeed parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.oracle.TxProto.MsgEditFeed parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.oracle.TxProto.MsgEditFeed parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.oracle.TxProto.MsgEditFeed parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.oracle.TxProto.MsgEditFeed parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.oracle.TxProto.MsgEditFeed parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.oracle.TxProto.MsgEditFeed prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgEditFeed defines an sdk.Msg type that supports editing a feed
+     * </pre>
+     *
+     * Protobuf type {@code irismod.oracle.MsgEditFeed}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.oracle.MsgEditFeed)
+        com.irismod.oracle.TxProto.MsgEditFeedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgEditFeed_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgEditFeed_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.oracle.TxProto.MsgEditFeed.class, com.irismod.oracle.TxProto.MsgEditFeed.Builder.class);
+      }
+
+      // Construct using com.irismod.oracle.TxProto.MsgEditFeed.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        feedName_ = "";
+        description_ = "";
+        latestHistory_ = 0L;
+        providers_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        timeout_ = 0L;
+        if (serviceFeeCapBuilder_ == null) {
+          serviceFeeCap_ = java.util.Collections.emptyList();
+        } else {
+          serviceFeeCap_ = null;
+          serviceFeeCapBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        repeatedFrequency_ = 0L;
+        responseThreshold_ = 0;
+        creator_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgEditFeed_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.oracle.TxProto.MsgEditFeed getDefaultInstanceForType() {
+        return com.irismod.oracle.TxProto.MsgEditFeed.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.oracle.TxProto.MsgEditFeed build() {
+        com.irismod.oracle.TxProto.MsgEditFeed result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.oracle.TxProto.MsgEditFeed buildPartial() {
+        com.irismod.oracle.TxProto.MsgEditFeed result = new com.irismod.oracle.TxProto.MsgEditFeed(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.irismod.oracle.TxProto.MsgEditFeed result) {
+        if (serviceFeeCapBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            serviceFeeCap_ = java.util.Collections.unmodifiableList(serviceFeeCap_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.serviceFeeCap_ = serviceFeeCap_;
+        } else {
+          result.serviceFeeCap_ = serviceFeeCapBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.irismod.oracle.TxProto.MsgEditFeed result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.feedName_ = feedName_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.latestHistory_ = latestHistory_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          providers_.makeImmutable();
+          result.providers_ = providers_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.timeout_ = timeout_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.repeatedFrequency_ = repeatedFrequency_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.responseThreshold_ = responseThreshold_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.creator_ = creator_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.oracle.TxProto.MsgEditFeed) {
+          return mergeFrom((com.irismod.oracle.TxProto.MsgEditFeed)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.oracle.TxProto.MsgEditFeed other) {
+        if (other == com.irismod.oracle.TxProto.MsgEditFeed.getDefaultInstance()) return this;
+        if (!other.getFeedName().isEmpty()) {
+          feedName_ = other.feedName_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getLatestHistory() != 0L) {
+          setLatestHistory(other.getLatestHistory());
+        }
+        if (!other.providers_.isEmpty()) {
+          if (providers_.isEmpty()) {
+            providers_ = other.providers_;
+            bitField0_ |= 0x00000008;
+          } else {
+            ensureProvidersIsMutable();
+            providers_.addAll(other.providers_);
+          }
+          onChanged();
+        }
+        if (other.getTimeout() != 0L) {
+          setTimeout(other.getTimeout());
+        }
+        if (serviceFeeCapBuilder_ == null) {
+          if (!other.serviceFeeCap_.isEmpty()) {
+            if (serviceFeeCap_.isEmpty()) {
+              serviceFeeCap_ = other.serviceFeeCap_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureServiceFeeCapIsMutable();
+              serviceFeeCap_.addAll(other.serviceFeeCap_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.serviceFeeCap_.isEmpty()) {
+            if (serviceFeeCapBuilder_.isEmpty()) {
+              serviceFeeCapBuilder_.dispose();
+              serviceFeeCapBuilder_ = null;
+              serviceFeeCap_ = other.serviceFeeCap_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              serviceFeeCapBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getServiceFeeCapFieldBuilder() : null;
+            } else {
+              serviceFeeCapBuilder_.addAllMessages(other.serviceFeeCap_);
+            }
+          }
+        }
+        if (other.getRepeatedFrequency() != 0L) {
+          setRepeatedFrequency(other.getRepeatedFrequency());
+        }
+        if (other.getResponseThreshold() != 0) {
+          setResponseThreshold(other.getResponseThreshold());
+        }
+        if (!other.getCreator().isEmpty()) {
+          creator_ = other.creator_;
+          bitField0_ |= 0x00000100;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                feedName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                latestHistory_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureProvidersIsMutable();
+                providers_.add(s);
+                break;
+              } // case 34
+              case 40: {
+                timeout_ = input.readInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 50: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (serviceFeeCapBuilder_ == null) {
+                  ensureServiceFeeCapIsMutable();
+                  serviceFeeCap_.add(m);
+                } else {
+                  serviceFeeCapBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              case 56: {
+                repeatedFrequency_ = input.readUInt64();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              case 64: {
+                responseThreshold_ = input.readUInt32();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
+              case 74: {
+                creator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object feedName_ = "";
+      /**
+       * <code>string feed_name = 1 [json_name = "feedName", (.gogoproto.moretags) = "yaml:&#92;"feed_name&#92;""];</code>
+       * @return The feedName.
+       */
+      public java.lang.String getFeedName() {
+        java.lang.Object ref = feedName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          feedName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string feed_name = 1 [json_name = "feedName", (.gogoproto.moretags) = "yaml:&#92;"feed_name&#92;""];</code>
+       * @return The bytes for feedName.
+       */
+      public com.google.protobuf.ByteString
+          getFeedNameBytes() {
+        java.lang.Object ref = feedName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          feedName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string feed_name = 1 [json_name = "feedName", (.gogoproto.moretags) = "yaml:&#92;"feed_name&#92;""];</code>
+       * @param value The feedName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeedName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        feedName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string feed_name = 1 [json_name = "feedName", (.gogoproto.moretags) = "yaml:&#92;"feed_name&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFeedName() {
+        feedName_ = getDefaultInstance().getFeedName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string feed_name = 1 [json_name = "feedName", (.gogoproto.moretags) = "yaml:&#92;"feed_name&#92;""];</code>
+       * @param value The bytes for feedName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFeedNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        feedName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private long latestHistory_ ;
+      /**
+       * <code>uint64 latest_history = 3 [json_name = "latestHistory", (.gogoproto.moretags) = "yaml:&#92;"latest_history&#92;""];</code>
+       * @return The latestHistory.
+       */
+      @java.lang.Override
+      public long getLatestHistory() {
+        return latestHistory_;
+      }
+      /**
+       * <code>uint64 latest_history = 3 [json_name = "latestHistory", (.gogoproto.moretags) = "yaml:&#92;"latest_history&#92;""];</code>
+       * @param value The latestHistory to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLatestHistory(long value) {
+
+        latestHistory_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 latest_history = 3 [json_name = "latestHistory", (.gogoproto.moretags) = "yaml:&#92;"latest_history&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLatestHistory() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        latestHistory_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList providers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureProvidersIsMutable() {
+        if (!providers_.isModifiable()) {
+          providers_ = new com.google.protobuf.LazyStringArrayList(providers_);
+        }
+        bitField0_ |= 0x00000008;
+      }
+      /**
+       * <code>repeated string providers = 4 [json_name = "providers"];</code>
+       * @return A list containing the providers.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getProvidersList() {
+        providers_.makeImmutable();
+        return providers_;
+      }
+      /**
+       * <code>repeated string providers = 4 [json_name = "providers"];</code>
+       * @return The count of providers.
+       */
+      public int getProvidersCount() {
+        return providers_.size();
+      }
+      /**
+       * <code>repeated string providers = 4 [json_name = "providers"];</code>
+       * @param index The index of the element to return.
+       * @return The providers at the given index.
+       */
+      public java.lang.String getProviders(int index) {
+        return providers_.get(index);
+      }
+      /**
+       * <code>repeated string providers = 4 [json_name = "providers"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the providers at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getProvidersBytes(int index) {
+        return providers_.getByteString(index);
+      }
+      /**
+       * <code>repeated string providers = 4 [json_name = "providers"];</code>
+       * @param index The index to set the value at.
+       * @param value The providers to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProviders(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureProvidersIsMutable();
+        providers_.set(index, value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string providers = 4 [json_name = "providers"];</code>
+       * @param value The providers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addProviders(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureProvidersIsMutable();
+        providers_.add(value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string providers = 4 [json_name = "providers"];</code>
+       * @param values The providers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllProviders(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureProvidersIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, providers_);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string providers = 4 [json_name = "providers"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProviders() {
+        providers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string providers = 4 [json_name = "providers"];</code>
+       * @param value The bytes of the providers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addProvidersBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureProvidersIsMutable();
+        providers_.add(value);
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private long timeout_ ;
+      /**
+       * <code>int64 timeout = 5 [json_name = "timeout"];</code>
+       * @return The timeout.
+       */
+      @java.lang.Override
+      public long getTimeout() {
+        return timeout_;
+      }
+      /**
+       * <code>int64 timeout = 5 [json_name = "timeout"];</code>
+       * @param value The timeout to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimeout(long value) {
+
+        timeout_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 timeout = 5 [json_name = "timeout"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTimeout() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        timeout_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> serviceFeeCap_ =
+        java.util.Collections.emptyList();
+      private void ensureServiceFeeCapIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          serviceFeeCap_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(serviceFeeCap_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> serviceFeeCapBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 6 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getServiceFeeCapList() {
+        if (serviceFeeCapBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(serviceFeeCap_);
+        } else {
+          return serviceFeeCapBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 6 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getServiceFeeCapCount() {
+        if (serviceFeeCapBuilder_ == null) {
+          return serviceFeeCap_.size();
+        } else {
+          return serviceFeeCapBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 6 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getServiceFeeCap(int index) {
+        if (serviceFeeCapBuilder_ == null) {
+          return serviceFeeCap_.get(index);
+        } else {
+          return serviceFeeCapBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 6 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setServiceFeeCap(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (serviceFeeCapBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureServiceFeeCapIsMutable();
+          serviceFeeCap_.set(index, value);
+          onChanged();
+        } else {
+          serviceFeeCapBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 6 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setServiceFeeCap(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (serviceFeeCapBuilder_ == null) {
+          ensureServiceFeeCapIsMutable();
+          serviceFeeCap_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          serviceFeeCapBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 6 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addServiceFeeCap(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (serviceFeeCapBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureServiceFeeCapIsMutable();
+          serviceFeeCap_.add(value);
+          onChanged();
+        } else {
+          serviceFeeCapBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 6 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addServiceFeeCap(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (serviceFeeCapBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureServiceFeeCapIsMutable();
+          serviceFeeCap_.add(index, value);
+          onChanged();
+        } else {
+          serviceFeeCapBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 6 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addServiceFeeCap(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (serviceFeeCapBuilder_ == null) {
+          ensureServiceFeeCapIsMutable();
+          serviceFeeCap_.add(builderForValue.build());
+          onChanged();
+        } else {
+          serviceFeeCapBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 6 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addServiceFeeCap(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (serviceFeeCapBuilder_ == null) {
+          ensureServiceFeeCapIsMutable();
+          serviceFeeCap_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          serviceFeeCapBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 6 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllServiceFeeCap(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (serviceFeeCapBuilder_ == null) {
+          ensureServiceFeeCapIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, serviceFeeCap_);
+          onChanged();
+        } else {
+          serviceFeeCapBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 6 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearServiceFeeCap() {
+        if (serviceFeeCapBuilder_ == null) {
+          serviceFeeCap_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          serviceFeeCapBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 6 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeServiceFeeCap(int index) {
+        if (serviceFeeCapBuilder_ == null) {
+          ensureServiceFeeCapIsMutable();
+          serviceFeeCap_.remove(index);
+          onChanged();
+        } else {
+          serviceFeeCapBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 6 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getServiceFeeCapBuilder(
+          int index) {
+        return getServiceFeeCapFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 6 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getServiceFeeCapOrBuilder(
+          int index) {
+        if (serviceFeeCapBuilder_ == null) {
+          return serviceFeeCap_.get(index);  } else {
+          return serviceFeeCapBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 6 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getServiceFeeCapOrBuilderList() {
+        if (serviceFeeCapBuilder_ != null) {
+          return serviceFeeCapBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(serviceFeeCap_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 6 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addServiceFeeCapBuilder() {
+        return getServiceFeeCapFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 6 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addServiceFeeCapBuilder(
+          int index) {
+        return getServiceFeeCapFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin service_fee_cap = 6 [json_name = "serviceFeeCap", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"service_fee_cap&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getServiceFeeCapBuilderList() {
+        return getServiceFeeCapFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getServiceFeeCapFieldBuilder() {
+        if (serviceFeeCapBuilder_ == null) {
+          serviceFeeCapBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  serviceFeeCap_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          serviceFeeCap_ = null;
+        }
+        return serviceFeeCapBuilder_;
+      }
+
+      private long repeatedFrequency_ ;
+      /**
+       * <code>uint64 repeated_frequency = 7 [json_name = "repeatedFrequency", (.gogoproto.moretags) = "yaml:&#92;"repeated_frequency&#92;""];</code>
+       * @return The repeatedFrequency.
+       */
+      @java.lang.Override
+      public long getRepeatedFrequency() {
+        return repeatedFrequency_;
+      }
+      /**
+       * <code>uint64 repeated_frequency = 7 [json_name = "repeatedFrequency", (.gogoproto.moretags) = "yaml:&#92;"repeated_frequency&#92;""];</code>
+       * @param value The repeatedFrequency to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRepeatedFrequency(long value) {
+
+        repeatedFrequency_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 repeated_frequency = 7 [json_name = "repeatedFrequency", (.gogoproto.moretags) = "yaml:&#92;"repeated_frequency&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRepeatedFrequency() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        repeatedFrequency_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int responseThreshold_ ;
+      /**
+       * <code>uint32 response_threshold = 8 [json_name = "responseThreshold", (.gogoproto.moretags) = "yaml:&#92;"response_threshold&#92;""];</code>
+       * @return The responseThreshold.
+       */
+      @java.lang.Override
+      public int getResponseThreshold() {
+        return responseThreshold_;
+      }
+      /**
+       * <code>uint32 response_threshold = 8 [json_name = "responseThreshold", (.gogoproto.moretags) = "yaml:&#92;"response_threshold&#92;""];</code>
+       * @param value The responseThreshold to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResponseThreshold(int value) {
+
+        responseThreshold_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 response_threshold = 8 [json_name = "responseThreshold", (.gogoproto.moretags) = "yaml:&#92;"response_threshold&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResponseThreshold() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        responseThreshold_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object creator_ = "";
+      /**
+       * <code>string creator = 9 [json_name = "creator"];</code>
+       * @return The creator.
+       */
+      public java.lang.String getCreator() {
+        java.lang.Object ref = creator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          creator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string creator = 9 [json_name = "creator"];</code>
+       * @return The bytes for creator.
+       */
+      public com.google.protobuf.ByteString
+          getCreatorBytes() {
+        java.lang.Object ref = creator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          creator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string creator = 9 [json_name = "creator"];</code>
+       * @param value The creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        creator_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 9 [json_name = "creator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreator() {
+        creator_ = getDefaultInstance().getCreator();
+        bitField0_ = (bitField0_ & ~0x00000100);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string creator = 9 [json_name = "creator"];</code>
+       * @param value The bytes for creator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        creator_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.oracle.MsgEditFeed)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.oracle.MsgEditFeed)
+    private static final com.irismod.oracle.TxProto.MsgEditFeed DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.oracle.TxProto.MsgEditFeed();
+    }
+
+    public static com.irismod.oracle.TxProto.MsgEditFeed getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgEditFeed>
+        PARSER = new com.google.protobuf.AbstractParser<MsgEditFeed>() {
+      @java.lang.Override
+      public MsgEditFeed parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgEditFeed> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgEditFeed> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.oracle.TxProto.MsgEditFeed getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgEditFeedResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:irismod.oracle.MsgEditFeedResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgEditFeedResponse defines the Msg/EditFeed response type
+   * </pre>
+   *
+   * Protobuf type {@code irismod.oracle.MsgEditFeedResponse}
+   */
+  public static final class MsgEditFeedResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:irismod.oracle.MsgEditFeedResponse)
+      MsgEditFeedResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgEditFeedResponse.newBuilder() to construct.
+    private MsgEditFeedResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgEditFeedResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgEditFeedResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgEditFeedResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgEditFeedResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.irismod.oracle.TxProto.MsgEditFeedResponse.class, com.irismod.oracle.TxProto.MsgEditFeedResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.irismod.oracle.TxProto.MsgEditFeedResponse)) {
+        return super.equals(obj);
+      }
+      com.irismod.oracle.TxProto.MsgEditFeedResponse other = (com.irismod.oracle.TxProto.MsgEditFeedResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.irismod.oracle.TxProto.MsgEditFeedResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.oracle.TxProto.MsgEditFeedResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.oracle.TxProto.MsgEditFeedResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.oracle.TxProto.MsgEditFeedResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.oracle.TxProto.MsgEditFeedResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.irismod.oracle.TxProto.MsgEditFeedResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.irismod.oracle.TxProto.MsgEditFeedResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.oracle.TxProto.MsgEditFeedResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.irismod.oracle.TxProto.MsgEditFeedResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.irismod.oracle.TxProto.MsgEditFeedResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.irismod.oracle.TxProto.MsgEditFeedResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.irismod.oracle.TxProto.MsgEditFeedResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.irismod.oracle.TxProto.MsgEditFeedResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgEditFeedResponse defines the Msg/EditFeed response type
+     * </pre>
+     *
+     * Protobuf type {@code irismod.oracle.MsgEditFeedResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:irismod.oracle.MsgEditFeedResponse)
+        com.irismod.oracle.TxProto.MsgEditFeedResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgEditFeedResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgEditFeedResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.irismod.oracle.TxProto.MsgEditFeedResponse.class, com.irismod.oracle.TxProto.MsgEditFeedResponse.Builder.class);
+      }
+
+      // Construct using com.irismod.oracle.TxProto.MsgEditFeedResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.irismod.oracle.TxProto.internal_static_irismod_oracle_MsgEditFeedResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.irismod.oracle.TxProto.MsgEditFeedResponse getDefaultInstanceForType() {
+        return com.irismod.oracle.TxProto.MsgEditFeedResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.irismod.oracle.TxProto.MsgEditFeedResponse build() {
+        com.irismod.oracle.TxProto.MsgEditFeedResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.irismod.oracle.TxProto.MsgEditFeedResponse buildPartial() {
+        com.irismod.oracle.TxProto.MsgEditFeedResponse result = new com.irismod.oracle.TxProto.MsgEditFeedResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.irismod.oracle.TxProto.MsgEditFeedResponse) {
+          return mergeFrom((com.irismod.oracle.TxProto.MsgEditFeedResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.irismod.oracle.TxProto.MsgEditFeedResponse other) {
+        if (other == com.irismod.oracle.TxProto.MsgEditFeedResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:irismod.oracle.MsgEditFeedResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:irismod.oracle.MsgEditFeedResponse)
+    private static final com.irismod.oracle.TxProto.MsgEditFeedResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.irismod.oracle.TxProto.MsgEditFeedResponse();
+    }
+
+    public static com.irismod.oracle.TxProto.MsgEditFeedResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgEditFeedResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgEditFeedResponse>() {
+      @java.lang.Override
+      public MsgEditFeedResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgEditFeedResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgEditFeedResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.irismod.oracle.TxProto.MsgEditFeedResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_oracle_MsgCreateFeed_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_oracle_MsgCreateFeed_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_oracle_MsgCreateFeedResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_oracle_MsgCreateFeedResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_oracle_MsgStartFeed_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_oracle_MsgStartFeed_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_oracle_MsgStartFeedResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_oracle_MsgStartFeedResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_oracle_MsgPauseFeed_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_oracle_MsgPauseFeed_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_oracle_MsgPauseFeedResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_oracle_MsgPauseFeedResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_oracle_MsgEditFeed_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_oracle_MsgEditFeed_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_irismod_oracle_MsgEditFeedResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_irismod_oracle_MsgEditFeedResponse_fieldAccessorTable;
 
@@ -113,12 +7219,12 @@ public final class TxProto {
       "rismod.oracle.MsgStartFeed\032$.irismod.ora" +
       "cle.MsgStartFeedResponse\022O\n\tPauseFeed\022\034." +
       "irismod.oracle.MsgPauseFeed\032$.irismod.or" +
-      "acle.MsgPauseFeedResponseB\247\001\n\022com.irismo" +
-      "d.oracleB\007TxProtoP\001Z/github.com/irisnet/" +
-      "irismod/modules/oracle/types\242\002\003IOX\252\002\016Iri" +
-      "smod.Oracle\312\002\016Irismod\\Oracle\342\002\032Irismod\\O" +
-      "racle\\GPBMetadata\352\002\017Irismod::Oracleb\006pro" +
-      "to3"
+      "acle.MsgPauseFeedResponseB\245\001\n\022com.irismo" +
+      "d.oracleB\007TxProtoZ/github.com/irisnet/ir" +
+      "ismod/modules/oracle/types\242\002\003IOX\252\002\016Irism" +
+      "od.Oracle\312\002\016Irismod\\Oracle\342\002\032Irismod\\Ora" +
+      "cle\\GPBMetadata\352\002\017Irismod::Oracleb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -14,9 +14,669 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:em.inflation.v1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * todo (reviewer): yaml naming is a bit inconsistent. state contains assets
+     * </pre>
+     *
+     * <code>.em.inflation.v1.InflationState assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationState", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+     * @return Whether the assets field is set.
+     */
+    boolean hasAssets();
+    /**
+     * <pre>
+     * todo (reviewer): yaml naming is a bit inconsistent. state contains assets
+     * </pre>
+     *
+     * <code>.em.inflation.v1.InflationState assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationState", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+     * @return The assets.
+     */
+    com.em.inflation.v1.InflationProto.InflationState getAssets();
+    /**
+     * <pre>
+     * todo (reviewer): yaml naming is a bit inconsistent. state contains assets
+     * </pre>
+     *
+     * <code>.em.inflation.v1.InflationState assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationState", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+     */
+    com.em.inflation.v1.InflationProto.InflationStateOrBuilder getAssetsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code em.inflation.v1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:em.inflation.v1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.em.inflation.v1.GenesisProto.internal_static_em_inflation_v1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.em.inflation.v1.GenesisProto.internal_static_em_inflation_v1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.em.inflation.v1.GenesisProto.GenesisState.class, com.em.inflation.v1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int ASSETS_FIELD_NUMBER = 1;
+    private com.em.inflation.v1.InflationProto.InflationState assets_;
+    /**
+     * <pre>
+     * todo (reviewer): yaml naming is a bit inconsistent. state contains assets
+     * </pre>
+     *
+     * <code>.em.inflation.v1.InflationState assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationState", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+     * @return Whether the assets field is set.
+     */
+    @java.lang.Override
+    public boolean hasAssets() {
+      return assets_ != null;
+    }
+    /**
+     * <pre>
+     * todo (reviewer): yaml naming is a bit inconsistent. state contains assets
+     * </pre>
+     *
+     * <code>.em.inflation.v1.InflationState assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationState", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+     * @return The assets.
+     */
+    @java.lang.Override
+    public com.em.inflation.v1.InflationProto.InflationState getAssets() {
+      return assets_ == null ? com.em.inflation.v1.InflationProto.InflationState.getDefaultInstance() : assets_;
+    }
+    /**
+     * <pre>
+     * todo (reviewer): yaml naming is a bit inconsistent. state contains assets
+     * </pre>
+     *
+     * <code>.em.inflation.v1.InflationState assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationState", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.em.inflation.v1.InflationProto.InflationStateOrBuilder getAssetsOrBuilder() {
+      return assets_ == null ? com.em.inflation.v1.InflationProto.InflationState.getDefaultInstance() : assets_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (assets_ != null) {
+        output.writeMessage(1, getAssets());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (assets_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getAssets());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.em.inflation.v1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.em.inflation.v1.GenesisProto.GenesisState other = (com.em.inflation.v1.GenesisProto.GenesisState) obj;
+
+      if (hasAssets() != other.hasAssets()) return false;
+      if (hasAssets()) {
+        if (!getAssets()
+            .equals(other.getAssets())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAssets()) {
+        hash = (37 * hash) + ASSETS_FIELD_NUMBER;
+        hash = (53 * hash) + getAssets().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.em.inflation.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.inflation.v1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.inflation.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.inflation.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.inflation.v1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.em.inflation.v1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.em.inflation.v1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.inflation.v1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.em.inflation.v1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.em.inflation.v1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.em.inflation.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.em.inflation.v1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.em.inflation.v1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code em.inflation.v1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:em.inflation.v1.GenesisState)
+        com.em.inflation.v1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.em.inflation.v1.GenesisProto.internal_static_em_inflation_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.em.inflation.v1.GenesisProto.internal_static_em_inflation_v1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.em.inflation.v1.GenesisProto.GenesisState.class, com.em.inflation.v1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.em.inflation.v1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        assets_ = null;
+        if (assetsBuilder_ != null) {
+          assetsBuilder_.dispose();
+          assetsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.em.inflation.v1.GenesisProto.internal_static_em_inflation_v1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.em.inflation.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.em.inflation.v1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.em.inflation.v1.GenesisProto.GenesisState build() {
+        com.em.inflation.v1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.em.inflation.v1.GenesisProto.GenesisState buildPartial() {
+        com.em.inflation.v1.GenesisProto.GenesisState result = new com.em.inflation.v1.GenesisProto.GenesisState(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.em.inflation.v1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.assets_ = assetsBuilder_ == null
+              ? assets_
+              : assetsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.em.inflation.v1.GenesisProto.GenesisState) {
+          return mergeFrom((com.em.inflation.v1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.em.inflation.v1.GenesisProto.GenesisState other) {
+        if (other == com.em.inflation.v1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasAssets()) {
+          mergeAssets(other.getAssets());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getAssetsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.em.inflation.v1.InflationProto.InflationState assets_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.em.inflation.v1.InflationProto.InflationState, com.em.inflation.v1.InflationProto.InflationState.Builder, com.em.inflation.v1.InflationProto.InflationStateOrBuilder> assetsBuilder_;
+      /**
+       * <pre>
+       * todo (reviewer): yaml naming is a bit inconsistent. state contains assets
+       * </pre>
+       *
+       * <code>.em.inflation.v1.InflationState assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationState", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       * @return Whether the assets field is set.
+       */
+      public boolean hasAssets() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * todo (reviewer): yaml naming is a bit inconsistent. state contains assets
+       * </pre>
+       *
+       * <code>.em.inflation.v1.InflationState assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationState", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       * @return The assets.
+       */
+      public com.em.inflation.v1.InflationProto.InflationState getAssets() {
+        if (assetsBuilder_ == null) {
+          return assets_ == null ? com.em.inflation.v1.InflationProto.InflationState.getDefaultInstance() : assets_;
+        } else {
+          return assetsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * todo (reviewer): yaml naming is a bit inconsistent. state contains assets
+       * </pre>
+       *
+       * <code>.em.inflation.v1.InflationState assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationState", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public Builder setAssets(com.em.inflation.v1.InflationProto.InflationState value) {
+        if (assetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          assets_ = value;
+        } else {
+          assetsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * todo (reviewer): yaml naming is a bit inconsistent. state contains assets
+       * </pre>
+       *
+       * <code>.em.inflation.v1.InflationState assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationState", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public Builder setAssets(
+          com.em.inflation.v1.InflationProto.InflationState.Builder builderForValue) {
+        if (assetsBuilder_ == null) {
+          assets_ = builderForValue.build();
+        } else {
+          assetsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * todo (reviewer): yaml naming is a bit inconsistent. state contains assets
+       * </pre>
+       *
+       * <code>.em.inflation.v1.InflationState assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationState", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public Builder mergeAssets(com.em.inflation.v1.InflationProto.InflationState value) {
+        if (assetsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            assets_ != null &&
+            assets_ != com.em.inflation.v1.InflationProto.InflationState.getDefaultInstance()) {
+            getAssetsBuilder().mergeFrom(value);
+          } else {
+            assets_ = value;
+          }
+        } else {
+          assetsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * todo (reviewer): yaml naming is a bit inconsistent. state contains assets
+       * </pre>
+       *
+       * <code>.em.inflation.v1.InflationState assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationState", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public Builder clearAssets() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        assets_ = null;
+        if (assetsBuilder_ != null) {
+          assetsBuilder_.dispose();
+          assetsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * todo (reviewer): yaml naming is a bit inconsistent. state contains assets
+       * </pre>
+       *
+       * <code>.em.inflation.v1.InflationState assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationState", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public com.em.inflation.v1.InflationProto.InflationState.Builder getAssetsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getAssetsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * todo (reviewer): yaml naming is a bit inconsistent. state contains assets
+       * </pre>
+       *
+       * <code>.em.inflation.v1.InflationState assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationState", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      public com.em.inflation.v1.InflationProto.InflationStateOrBuilder getAssetsOrBuilder() {
+        if (assetsBuilder_ != null) {
+          return assetsBuilder_.getMessageOrBuilder();
+        } else {
+          return assets_ == null ?
+              com.em.inflation.v1.InflationProto.InflationState.getDefaultInstance() : assets_;
+        }
+      }
+      /**
+       * <pre>
+       * todo (reviewer): yaml naming is a bit inconsistent. state contains assets
+       * </pre>
+       *
+       * <code>.em.inflation.v1.InflationState assets = 1 [json_name = "assets", (.gogoproto.nullable) = false, (.gogoproto.customname) = "InflationState", (.gogoproto.moretags) = "yaml:&#92;"assets&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.em.inflation.v1.InflationProto.InflationState, com.em.inflation.v1.InflationProto.InflationState.Builder, com.em.inflation.v1.InflationProto.InflationStateOrBuilder> 
+          getAssetsFieldBuilder() {
+        if (assetsBuilder_ == null) {
+          assetsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.em.inflation.v1.InflationProto.InflationState, com.em.inflation.v1.InflationProto.InflationState.Builder, com.em.inflation.v1.InflationProto.InflationStateOrBuilder>(
+                  getAssets(),
+                  getParentForChildren(),
+                  isClean());
+          assets_ = null;
+        }
+        return assetsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:em.inflation.v1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:em.inflation.v1.GenesisState)
+    private static final com.em.inflation.v1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.em.inflation.v1.GenesisProto.GenesisState();
+    }
+
+    public static com.em.inflation.v1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.em.inflation.v1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_em_inflation_v1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_em_inflation_v1_GenesisState_fieldAccessorTable;
 
@@ -34,11 +694,11 @@ public final class GenesisProto {
       "inflation.proto\"p\n\014GenesisState\022`\n\006asset" +
       "s\030\001 \001(\0132\037.em.inflation.v1.InflationState" +
       "B\'\310\336\037\000\342\336\037\016InflationState\362\336\037\ryaml:\"assets" +
-      "\"R\006assetsB\261\001\n\023com.em.inflation.v1B\014Genes" +
-      "isProtoP\001Z.github.com/e-money/em-ledger/" +
-      "x/inflation/types\242\002\003EIX\252\002\017Em.Inflation.V" +
-      "1\312\002\017Em\\Inflation\\V1\342\002\033Em\\Inflation\\V1\\GP" +
-      "BMetadata\352\002\021Em::Inflation::V1b\006proto3"
+      "\"R\006assetsB\257\001\n\023com.em.inflation.v1B\014Genes" +
+      "isProtoZ.github.com/e-money/em-ledger/x/" +
+      "inflation/types\242\002\003EIX\252\002\017Em.Inflation.V1\312" +
+      "\002\017Em\\Inflation\\V1\342\002\033Em\\Inflation\\V1\\GPBM" +
+      "etadata\352\002\021Em::Inflation::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

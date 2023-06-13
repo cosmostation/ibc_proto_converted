@@ -26,13 +26,13 @@ public final class TxProto {
       "\n%osmosis/cosmwasmpool/v1beta1/tx.proto\022" +
       "\034osmosis.cosmwasmpool.v1beta1\032\024gogoproto" +
       "/gogo.proto\032\036cosmos/base/v1beta1/coin.pr" +
-      "oto2\005\n\003MsgB\367\001\n com.osmosis.cosmwasmpool." +
-      "v1beta1B\007TxProtoP\001Z8github.com/osmosis-l" +
-      "abs/osmosis/v15/x/cosmwasmpool/types\242\002\003O" +
-      "CX\252\002\034Osmosis.Cosmwasmpool.V1beta1\312\002\034Osmo" +
-      "sis\\Cosmwasmpool\\V1beta1\342\002(Osmosis\\Cosmw" +
-      "asmpool\\V1beta1\\GPBMetadata\352\002\036Osmosis::C" +
-      "osmwasmpool::V1beta1b\006proto3"
+      "oto2\005\n\003MsgB\365\001\n com.osmosis.cosmwasmpool." +
+      "v1beta1B\007TxProtoZ8github.com/osmosis-lab" +
+      "s/osmosis/v15/x/cosmwasmpool/types\242\002\003OCX" +
+      "\252\002\034Osmosis.Cosmwasmpool.V1beta1\312\002\034Osmosi" +
+      "s\\Cosmwasmpool\\V1beta1\342\002(Osmosis\\Cosmwas" +
+      "mpool\\V1beta1\\GPBMetadata\352\002\036Osmosis::Cos" +
+      "mwasmpool::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

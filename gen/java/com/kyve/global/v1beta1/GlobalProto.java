@@ -14,19 +14,3592 @@ public final class GlobalProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.global.v1beta1.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * min_gas_price defines the minimum gas price value for all transactions.
+     * </pre>
+     *
+     * <code>string min_gas_price = 1 [json_name = "minGasPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The minGasPrice.
+     */
+    java.lang.String getMinGasPrice();
+    /**
+     * <pre>
+     * min_gas_price defines the minimum gas price value for all transactions.
+     * </pre>
+     *
+     * <code>string min_gas_price = 1 [json_name = "minGasPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for minGasPrice.
+     */
+    com.google.protobuf.ByteString
+        getMinGasPriceBytes();
+
+    /**
+     * <pre>
+     * burn_ratio defines the ratio of transaction fees burnt.
+     * </pre>
+     *
+     * <code>string burn_ratio = 2 [json_name = "burnRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The burnRatio.
+     */
+    java.lang.String getBurnRatio();
+    /**
+     * <pre>
+     * burn_ratio defines the ratio of transaction fees burnt.
+     * </pre>
+     *
+     * <code>string burn_ratio = 2 [json_name = "burnRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for burnRatio.
+     */
+    com.google.protobuf.ByteString
+        getBurnRatioBytes();
+
+    /**
+     * <pre>
+     * gas_adjustments can add a constant amount of gas to a specific message type.
+     * This gives more control to make certain messages more expensive to avoid spamming
+     * of certain types of messages.
+     * </pre>
+     *
+     * <code>repeated .kyve.global.v1beta1.GasAdjustment gas_adjustments = 3 [json_name = "gasAdjustments", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.kyve.global.v1beta1.GlobalProto.GasAdjustment> 
+        getGasAdjustmentsList();
+    /**
+     * <pre>
+     * gas_adjustments can add a constant amount of gas to a specific message type.
+     * This gives more control to make certain messages more expensive to avoid spamming
+     * of certain types of messages.
+     * </pre>
+     *
+     * <code>repeated .kyve.global.v1beta1.GasAdjustment gas_adjustments = 3 [json_name = "gasAdjustments", (.gogoproto.nullable) = false];</code>
+     */
+    com.kyve.global.v1beta1.GlobalProto.GasAdjustment getGasAdjustments(int index);
+    /**
+     * <pre>
+     * gas_adjustments can add a constant amount of gas to a specific message type.
+     * This gives more control to make certain messages more expensive to avoid spamming
+     * of certain types of messages.
+     * </pre>
+     *
+     * <code>repeated .kyve.global.v1beta1.GasAdjustment gas_adjustments = 3 [json_name = "gasAdjustments", (.gogoproto.nullable) = false];</code>
+     */
+    int getGasAdjustmentsCount();
+    /**
+     * <pre>
+     * gas_adjustments can add a constant amount of gas to a specific message type.
+     * This gives more control to make certain messages more expensive to avoid spamming
+     * of certain types of messages.
+     * </pre>
+     *
+     * <code>repeated .kyve.global.v1beta1.GasAdjustment gas_adjustments = 3 [json_name = "gasAdjustments", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.kyve.global.v1beta1.GlobalProto.GasAdjustmentOrBuilder> 
+        getGasAdjustmentsOrBuilderList();
+    /**
+     * <pre>
+     * gas_adjustments can add a constant amount of gas to a specific message type.
+     * This gives more control to make certain messages more expensive to avoid spamming
+     * of certain types of messages.
+     * </pre>
+     *
+     * <code>repeated .kyve.global.v1beta1.GasAdjustment gas_adjustments = 3 [json_name = "gasAdjustments", (.gogoproto.nullable) = false];</code>
+     */
+    com.kyve.global.v1beta1.GlobalProto.GasAdjustmentOrBuilder getGasAdjustmentsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * gas_refunds lets the governance specify a fraction of how much gas
+     * a user gets refunded for a certain type of transaction.
+     * This could be used to make transactions which support to network cheaper.
+     * Gas refunds only work if the transaction only included one message.
+     * </pre>
+     *
+     * <code>repeated .kyve.global.v1beta1.GasRefund gas_refunds = 4 [json_name = "gasRefunds", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.kyve.global.v1beta1.GlobalProto.GasRefund> 
+        getGasRefundsList();
+    /**
+     * <pre>
+     * gas_refunds lets the governance specify a fraction of how much gas
+     * a user gets refunded for a certain type of transaction.
+     * This could be used to make transactions which support to network cheaper.
+     * Gas refunds only work if the transaction only included one message.
+     * </pre>
+     *
+     * <code>repeated .kyve.global.v1beta1.GasRefund gas_refunds = 4 [json_name = "gasRefunds", (.gogoproto.nullable) = false];</code>
+     */
+    com.kyve.global.v1beta1.GlobalProto.GasRefund getGasRefunds(int index);
+    /**
+     * <pre>
+     * gas_refunds lets the governance specify a fraction of how much gas
+     * a user gets refunded for a certain type of transaction.
+     * This could be used to make transactions which support to network cheaper.
+     * Gas refunds only work if the transaction only included one message.
+     * </pre>
+     *
+     * <code>repeated .kyve.global.v1beta1.GasRefund gas_refunds = 4 [json_name = "gasRefunds", (.gogoproto.nullable) = false];</code>
+     */
+    int getGasRefundsCount();
+    /**
+     * <pre>
+     * gas_refunds lets the governance specify a fraction of how much gas
+     * a user gets refunded for a certain type of transaction.
+     * This could be used to make transactions which support to network cheaper.
+     * Gas refunds only work if the transaction only included one message.
+     * </pre>
+     *
+     * <code>repeated .kyve.global.v1beta1.GasRefund gas_refunds = 4 [json_name = "gasRefunds", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.kyve.global.v1beta1.GlobalProto.GasRefundOrBuilder> 
+        getGasRefundsOrBuilderList();
+    /**
+     * <pre>
+     * gas_refunds lets the governance specify a fraction of how much gas
+     * a user gets refunded for a certain type of transaction.
+     * This could be used to make transactions which support to network cheaper.
+     * Gas refunds only work if the transaction only included one message.
+     * </pre>
+     *
+     * <code>repeated .kyve.global.v1beta1.GasRefund gas_refunds = 4 [json_name = "gasRefunds", (.gogoproto.nullable) = false];</code>
+     */
+    com.kyve.global.v1beta1.GlobalProto.GasRefundOrBuilder getGasRefundsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * min_initial_deposit_ratio sets a minimum fraction of initial deposit for a
+     * governance proposal. This is used to avoid spamming of proposals and
+     * polluting the proposals page.
+     * </pre>
+     *
+     * <code>string min_initial_deposit_ratio = 5 [json_name = "minInitialDepositRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The minInitialDepositRatio.
+     */
+    java.lang.String getMinInitialDepositRatio();
+    /**
+     * <pre>
+     * min_initial_deposit_ratio sets a minimum fraction of initial deposit for a
+     * governance proposal. This is used to avoid spamming of proposals and
+     * polluting the proposals page.
+     * </pre>
+     *
+     * <code>string min_initial_deposit_ratio = 5 [json_name = "minInitialDepositRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for minInitialDepositRatio.
+     */
+    com.google.protobuf.ByteString
+        getMinInitialDepositRatioBytes();
+  }
+  /**
+   * <pre>
+   * Params defines the global module parameters.
+   * </pre>
+   *
+   * Protobuf type {@code kyve.global.v1beta1.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.global.v1beta1.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+      minGasPrice_ = "";
+      burnRatio_ = "";
+      gasAdjustments_ = java.util.Collections.emptyList();
+      gasRefunds_ = java.util.Collections.emptyList();
+      minInitialDepositRatio_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.global.v1beta1.GlobalProto.internal_static_kyve_global_v1beta1_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.global.v1beta1.GlobalProto.internal_static_kyve_global_v1beta1_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.global.v1beta1.GlobalProto.Params.class, com.kyve.global.v1beta1.GlobalProto.Params.Builder.class);
+    }
+
+    public static final int MIN_GAS_PRICE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object minGasPrice_ = "";
+    /**
+     * <pre>
+     * min_gas_price defines the minimum gas price value for all transactions.
+     * </pre>
+     *
+     * <code>string min_gas_price = 1 [json_name = "minGasPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The minGasPrice.
+     */
+    @java.lang.Override
+    public java.lang.String getMinGasPrice() {
+      java.lang.Object ref = minGasPrice_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        minGasPrice_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * min_gas_price defines the minimum gas price value for all transactions.
+     * </pre>
+     *
+     * <code>string min_gas_price = 1 [json_name = "minGasPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for minGasPrice.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMinGasPriceBytes() {
+      java.lang.Object ref = minGasPrice_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        minGasPrice_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BURN_RATIO_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object burnRatio_ = "";
+    /**
+     * <pre>
+     * burn_ratio defines the ratio of transaction fees burnt.
+     * </pre>
+     *
+     * <code>string burn_ratio = 2 [json_name = "burnRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The burnRatio.
+     */
+    @java.lang.Override
+    public java.lang.String getBurnRatio() {
+      java.lang.Object ref = burnRatio_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        burnRatio_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * burn_ratio defines the ratio of transaction fees burnt.
+     * </pre>
+     *
+     * <code>string burn_ratio = 2 [json_name = "burnRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for burnRatio.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBurnRatioBytes() {
+      java.lang.Object ref = burnRatio_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        burnRatio_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int GAS_ADJUSTMENTS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.kyve.global.v1beta1.GlobalProto.GasAdjustment> gasAdjustments_;
+    /**
+     * <pre>
+     * gas_adjustments can add a constant amount of gas to a specific message type.
+     * This gives more control to make certain messages more expensive to avoid spamming
+     * of certain types of messages.
+     * </pre>
+     *
+     * <code>repeated .kyve.global.v1beta1.GasAdjustment gas_adjustments = 3 [json_name = "gasAdjustments", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.kyve.global.v1beta1.GlobalProto.GasAdjustment> getGasAdjustmentsList() {
+      return gasAdjustments_;
+    }
+    /**
+     * <pre>
+     * gas_adjustments can add a constant amount of gas to a specific message type.
+     * This gives more control to make certain messages more expensive to avoid spamming
+     * of certain types of messages.
+     * </pre>
+     *
+     * <code>repeated .kyve.global.v1beta1.GasAdjustment gas_adjustments = 3 [json_name = "gasAdjustments", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.kyve.global.v1beta1.GlobalProto.GasAdjustmentOrBuilder> 
+        getGasAdjustmentsOrBuilderList() {
+      return gasAdjustments_;
+    }
+    /**
+     * <pre>
+     * gas_adjustments can add a constant amount of gas to a specific message type.
+     * This gives more control to make certain messages more expensive to avoid spamming
+     * of certain types of messages.
+     * </pre>
+     *
+     * <code>repeated .kyve.global.v1beta1.GasAdjustment gas_adjustments = 3 [json_name = "gasAdjustments", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getGasAdjustmentsCount() {
+      return gasAdjustments_.size();
+    }
+    /**
+     * <pre>
+     * gas_adjustments can add a constant amount of gas to a specific message type.
+     * This gives more control to make certain messages more expensive to avoid spamming
+     * of certain types of messages.
+     * </pre>
+     *
+     * <code>repeated .kyve.global.v1beta1.GasAdjustment gas_adjustments = 3 [json_name = "gasAdjustments", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.kyve.global.v1beta1.GlobalProto.GasAdjustment getGasAdjustments(int index) {
+      return gasAdjustments_.get(index);
+    }
+    /**
+     * <pre>
+     * gas_adjustments can add a constant amount of gas to a specific message type.
+     * This gives more control to make certain messages more expensive to avoid spamming
+     * of certain types of messages.
+     * </pre>
+     *
+     * <code>repeated .kyve.global.v1beta1.GasAdjustment gas_adjustments = 3 [json_name = "gasAdjustments", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.kyve.global.v1beta1.GlobalProto.GasAdjustmentOrBuilder getGasAdjustmentsOrBuilder(
+        int index) {
+      return gasAdjustments_.get(index);
+    }
+
+    public static final int GAS_REFUNDS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.kyve.global.v1beta1.GlobalProto.GasRefund> gasRefunds_;
+    /**
+     * <pre>
+     * gas_refunds lets the governance specify a fraction of how much gas
+     * a user gets refunded for a certain type of transaction.
+     * This could be used to make transactions which support to network cheaper.
+     * Gas refunds only work if the transaction only included one message.
+     * </pre>
+     *
+     * <code>repeated .kyve.global.v1beta1.GasRefund gas_refunds = 4 [json_name = "gasRefunds", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.kyve.global.v1beta1.GlobalProto.GasRefund> getGasRefundsList() {
+      return gasRefunds_;
+    }
+    /**
+     * <pre>
+     * gas_refunds lets the governance specify a fraction of how much gas
+     * a user gets refunded for a certain type of transaction.
+     * This could be used to make transactions which support to network cheaper.
+     * Gas refunds only work if the transaction only included one message.
+     * </pre>
+     *
+     * <code>repeated .kyve.global.v1beta1.GasRefund gas_refunds = 4 [json_name = "gasRefunds", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.kyve.global.v1beta1.GlobalProto.GasRefundOrBuilder> 
+        getGasRefundsOrBuilderList() {
+      return gasRefunds_;
+    }
+    /**
+     * <pre>
+     * gas_refunds lets the governance specify a fraction of how much gas
+     * a user gets refunded for a certain type of transaction.
+     * This could be used to make transactions which support to network cheaper.
+     * Gas refunds only work if the transaction only included one message.
+     * </pre>
+     *
+     * <code>repeated .kyve.global.v1beta1.GasRefund gas_refunds = 4 [json_name = "gasRefunds", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getGasRefundsCount() {
+      return gasRefunds_.size();
+    }
+    /**
+     * <pre>
+     * gas_refunds lets the governance specify a fraction of how much gas
+     * a user gets refunded for a certain type of transaction.
+     * This could be used to make transactions which support to network cheaper.
+     * Gas refunds only work if the transaction only included one message.
+     * </pre>
+     *
+     * <code>repeated .kyve.global.v1beta1.GasRefund gas_refunds = 4 [json_name = "gasRefunds", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.kyve.global.v1beta1.GlobalProto.GasRefund getGasRefunds(int index) {
+      return gasRefunds_.get(index);
+    }
+    /**
+     * <pre>
+     * gas_refunds lets the governance specify a fraction of how much gas
+     * a user gets refunded for a certain type of transaction.
+     * This could be used to make transactions which support to network cheaper.
+     * Gas refunds only work if the transaction only included one message.
+     * </pre>
+     *
+     * <code>repeated .kyve.global.v1beta1.GasRefund gas_refunds = 4 [json_name = "gasRefunds", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.kyve.global.v1beta1.GlobalProto.GasRefundOrBuilder getGasRefundsOrBuilder(
+        int index) {
+      return gasRefunds_.get(index);
+    }
+
+    public static final int MIN_INITIAL_DEPOSIT_RATIO_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object minInitialDepositRatio_ = "";
+    /**
+     * <pre>
+     * min_initial_deposit_ratio sets a minimum fraction of initial deposit for a
+     * governance proposal. This is used to avoid spamming of proposals and
+     * polluting the proposals page.
+     * </pre>
+     *
+     * <code>string min_initial_deposit_ratio = 5 [json_name = "minInitialDepositRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The minInitialDepositRatio.
+     */
+    @java.lang.Override
+    public java.lang.String getMinInitialDepositRatio() {
+      java.lang.Object ref = minInitialDepositRatio_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        minInitialDepositRatio_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * min_initial_deposit_ratio sets a minimum fraction of initial deposit for a
+     * governance proposal. This is used to avoid spamming of proposals and
+     * polluting the proposals page.
+     * </pre>
+     *
+     * <code>string min_initial_deposit_ratio = 5 [json_name = "minInitialDepositRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for minInitialDepositRatio.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMinInitialDepositRatioBytes() {
+      java.lang.Object ref = minInitialDepositRatio_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        minInitialDepositRatio_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minGasPrice_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, minGasPrice_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(burnRatio_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, burnRatio_);
+      }
+      for (int i = 0; i < gasAdjustments_.size(); i++) {
+        output.writeMessage(3, gasAdjustments_.get(i));
+      }
+      for (int i = 0; i < gasRefunds_.size(); i++) {
+        output.writeMessage(4, gasRefunds_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minInitialDepositRatio_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, minInitialDepositRatio_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minGasPrice_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, minGasPrice_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(burnRatio_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, burnRatio_);
+      }
+      for (int i = 0; i < gasAdjustments_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, gasAdjustments_.get(i));
+      }
+      for (int i = 0; i < gasRefunds_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, gasRefunds_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(minInitialDepositRatio_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, minInitialDepositRatio_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.global.v1beta1.GlobalProto.Params)) {
+        return super.equals(obj);
+      }
+      com.kyve.global.v1beta1.GlobalProto.Params other = (com.kyve.global.v1beta1.GlobalProto.Params) obj;
+
+      if (!getMinGasPrice()
+          .equals(other.getMinGasPrice())) return false;
+      if (!getBurnRatio()
+          .equals(other.getBurnRatio())) return false;
+      if (!getGasAdjustmentsList()
+          .equals(other.getGasAdjustmentsList())) return false;
+      if (!getGasRefundsList()
+          .equals(other.getGasRefundsList())) return false;
+      if (!getMinInitialDepositRatio()
+          .equals(other.getMinInitialDepositRatio())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MIN_GAS_PRICE_FIELD_NUMBER;
+      hash = (53 * hash) + getMinGasPrice().hashCode();
+      hash = (37 * hash) + BURN_RATIO_FIELD_NUMBER;
+      hash = (53 * hash) + getBurnRatio().hashCode();
+      if (getGasAdjustmentsCount() > 0) {
+        hash = (37 * hash) + GAS_ADJUSTMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getGasAdjustmentsList().hashCode();
+      }
+      if (getGasRefundsCount() > 0) {
+        hash = (37 * hash) + GAS_REFUNDS_FIELD_NUMBER;
+        hash = (53 * hash) + getGasRefundsList().hashCode();
+      }
+      hash = (37 * hash) + MIN_INITIAL_DEPOSIT_RATIO_FIELD_NUMBER;
+      hash = (53 * hash) + getMinInitialDepositRatio().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.global.v1beta1.GlobalProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.global.v1beta1.GlobalProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.global.v1beta1.GlobalProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.global.v1beta1.GlobalProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.global.v1beta1.GlobalProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.global.v1beta1.GlobalProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.global.v1beta1.GlobalProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.global.v1beta1.GlobalProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.global.v1beta1.GlobalProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.global.v1beta1.GlobalProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.global.v1beta1.GlobalProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.global.v1beta1.GlobalProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.global.v1beta1.GlobalProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params defines the global module parameters.
+     * </pre>
+     *
+     * Protobuf type {@code kyve.global.v1beta1.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.global.v1beta1.Params)
+        com.kyve.global.v1beta1.GlobalProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.global.v1beta1.GlobalProto.internal_static_kyve_global_v1beta1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.global.v1beta1.GlobalProto.internal_static_kyve_global_v1beta1_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.global.v1beta1.GlobalProto.Params.class, com.kyve.global.v1beta1.GlobalProto.Params.Builder.class);
+      }
+
+      // Construct using com.kyve.global.v1beta1.GlobalProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        minGasPrice_ = "";
+        burnRatio_ = "";
+        if (gasAdjustmentsBuilder_ == null) {
+          gasAdjustments_ = java.util.Collections.emptyList();
+        } else {
+          gasAdjustments_ = null;
+          gasAdjustmentsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (gasRefundsBuilder_ == null) {
+          gasRefunds_ = java.util.Collections.emptyList();
+        } else {
+          gasRefunds_ = null;
+          gasRefundsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        minInitialDepositRatio_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.global.v1beta1.GlobalProto.internal_static_kyve_global_v1beta1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.global.v1beta1.GlobalProto.Params getDefaultInstanceForType() {
+        return com.kyve.global.v1beta1.GlobalProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.global.v1beta1.GlobalProto.Params build() {
+        com.kyve.global.v1beta1.GlobalProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.global.v1beta1.GlobalProto.Params buildPartial() {
+        com.kyve.global.v1beta1.GlobalProto.Params result = new com.kyve.global.v1beta1.GlobalProto.Params(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.kyve.global.v1beta1.GlobalProto.Params result) {
+        if (gasAdjustmentsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            gasAdjustments_ = java.util.Collections.unmodifiableList(gasAdjustments_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.gasAdjustments_ = gasAdjustments_;
+        } else {
+          result.gasAdjustments_ = gasAdjustmentsBuilder_.build();
+        }
+        if (gasRefundsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            gasRefunds_ = java.util.Collections.unmodifiableList(gasRefunds_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.gasRefunds_ = gasRefunds_;
+        } else {
+          result.gasRefunds_ = gasRefundsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.kyve.global.v1beta1.GlobalProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.minGasPrice_ = minGasPrice_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.burnRatio_ = burnRatio_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.minInitialDepositRatio_ = minInitialDepositRatio_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.global.v1beta1.GlobalProto.Params) {
+          return mergeFrom((com.kyve.global.v1beta1.GlobalProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.global.v1beta1.GlobalProto.Params other) {
+        if (other == com.kyve.global.v1beta1.GlobalProto.Params.getDefaultInstance()) return this;
+        if (!other.getMinGasPrice().isEmpty()) {
+          minGasPrice_ = other.minGasPrice_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getBurnRatio().isEmpty()) {
+          burnRatio_ = other.burnRatio_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (gasAdjustmentsBuilder_ == null) {
+          if (!other.gasAdjustments_.isEmpty()) {
+            if (gasAdjustments_.isEmpty()) {
+              gasAdjustments_ = other.gasAdjustments_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureGasAdjustmentsIsMutable();
+              gasAdjustments_.addAll(other.gasAdjustments_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.gasAdjustments_.isEmpty()) {
+            if (gasAdjustmentsBuilder_.isEmpty()) {
+              gasAdjustmentsBuilder_.dispose();
+              gasAdjustmentsBuilder_ = null;
+              gasAdjustments_ = other.gasAdjustments_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              gasAdjustmentsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getGasAdjustmentsFieldBuilder() : null;
+            } else {
+              gasAdjustmentsBuilder_.addAllMessages(other.gasAdjustments_);
+            }
+          }
+        }
+        if (gasRefundsBuilder_ == null) {
+          if (!other.gasRefunds_.isEmpty()) {
+            if (gasRefunds_.isEmpty()) {
+              gasRefunds_ = other.gasRefunds_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureGasRefundsIsMutable();
+              gasRefunds_.addAll(other.gasRefunds_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.gasRefunds_.isEmpty()) {
+            if (gasRefundsBuilder_.isEmpty()) {
+              gasRefundsBuilder_.dispose();
+              gasRefundsBuilder_ = null;
+              gasRefunds_ = other.gasRefunds_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              gasRefundsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getGasRefundsFieldBuilder() : null;
+            } else {
+              gasRefundsBuilder_.addAllMessages(other.gasRefunds_);
+            }
+          }
+        }
+        if (!other.getMinInitialDepositRatio().isEmpty()) {
+          minInitialDepositRatio_ = other.minInitialDepositRatio_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                minGasPrice_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                burnRatio_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                com.kyve.global.v1beta1.GlobalProto.GasAdjustment m =
+                    input.readMessage(
+                        com.kyve.global.v1beta1.GlobalProto.GasAdjustment.parser(),
+                        extensionRegistry);
+                if (gasAdjustmentsBuilder_ == null) {
+                  ensureGasAdjustmentsIsMutable();
+                  gasAdjustments_.add(m);
+                } else {
+                  gasAdjustmentsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                com.kyve.global.v1beta1.GlobalProto.GasRefund m =
+                    input.readMessage(
+                        com.kyve.global.v1beta1.GlobalProto.GasRefund.parser(),
+                        extensionRegistry);
+                if (gasRefundsBuilder_ == null) {
+                  ensureGasRefundsIsMutable();
+                  gasRefunds_.add(m);
+                } else {
+                  gasRefundsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                minInitialDepositRatio_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object minGasPrice_ = "";
+      /**
+       * <pre>
+       * min_gas_price defines the minimum gas price value for all transactions.
+       * </pre>
+       *
+       * <code>string min_gas_price = 1 [json_name = "minGasPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The minGasPrice.
+       */
+      public java.lang.String getMinGasPrice() {
+        java.lang.Object ref = minGasPrice_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          minGasPrice_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * min_gas_price defines the minimum gas price value for all transactions.
+       * </pre>
+       *
+       * <code>string min_gas_price = 1 [json_name = "minGasPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for minGasPrice.
+       */
+      public com.google.protobuf.ByteString
+          getMinGasPriceBytes() {
+        java.lang.Object ref = minGasPrice_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          minGasPrice_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * min_gas_price defines the minimum gas price value for all transactions.
+       * </pre>
+       *
+       * <code>string min_gas_price = 1 [json_name = "minGasPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The minGasPrice to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinGasPrice(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        minGasPrice_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * min_gas_price defines the minimum gas price value for all transactions.
+       * </pre>
+       *
+       * <code>string min_gas_price = 1 [json_name = "minGasPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinGasPrice() {
+        minGasPrice_ = getDefaultInstance().getMinGasPrice();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * min_gas_price defines the minimum gas price value for all transactions.
+       * </pre>
+       *
+       * <code>string min_gas_price = 1 [json_name = "minGasPrice", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for minGasPrice to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinGasPriceBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        minGasPrice_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object burnRatio_ = "";
+      /**
+       * <pre>
+       * burn_ratio defines the ratio of transaction fees burnt.
+       * </pre>
+       *
+       * <code>string burn_ratio = 2 [json_name = "burnRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The burnRatio.
+       */
+      public java.lang.String getBurnRatio() {
+        java.lang.Object ref = burnRatio_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          burnRatio_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * burn_ratio defines the ratio of transaction fees burnt.
+       * </pre>
+       *
+       * <code>string burn_ratio = 2 [json_name = "burnRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for burnRatio.
+       */
+      public com.google.protobuf.ByteString
+          getBurnRatioBytes() {
+        java.lang.Object ref = burnRatio_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          burnRatio_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * burn_ratio defines the ratio of transaction fees burnt.
+       * </pre>
+       *
+       * <code>string burn_ratio = 2 [json_name = "burnRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The burnRatio to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBurnRatio(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        burnRatio_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * burn_ratio defines the ratio of transaction fees burnt.
+       * </pre>
+       *
+       * <code>string burn_ratio = 2 [json_name = "burnRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBurnRatio() {
+        burnRatio_ = getDefaultInstance().getBurnRatio();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * burn_ratio defines the ratio of transaction fees burnt.
+       * </pre>
+       *
+       * <code>string burn_ratio = 2 [json_name = "burnRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for burnRatio to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBurnRatioBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        burnRatio_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.kyve.global.v1beta1.GlobalProto.GasAdjustment> gasAdjustments_ =
+        java.util.Collections.emptyList();
+      private void ensureGasAdjustmentsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          gasAdjustments_ = new java.util.ArrayList<com.kyve.global.v1beta1.GlobalProto.GasAdjustment>(gasAdjustments_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.kyve.global.v1beta1.GlobalProto.GasAdjustment, com.kyve.global.v1beta1.GlobalProto.GasAdjustment.Builder, com.kyve.global.v1beta1.GlobalProto.GasAdjustmentOrBuilder> gasAdjustmentsBuilder_;
+
+      /**
+       * <pre>
+       * gas_adjustments can add a constant amount of gas to a specific message type.
+       * This gives more control to make certain messages more expensive to avoid spamming
+       * of certain types of messages.
+       * </pre>
+       *
+       * <code>repeated .kyve.global.v1beta1.GasAdjustment gas_adjustments = 3 [json_name = "gasAdjustments", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.kyve.global.v1beta1.GlobalProto.GasAdjustment> getGasAdjustmentsList() {
+        if (gasAdjustmentsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(gasAdjustments_);
+        } else {
+          return gasAdjustmentsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * gas_adjustments can add a constant amount of gas to a specific message type.
+       * This gives more control to make certain messages more expensive to avoid spamming
+       * of certain types of messages.
+       * </pre>
+       *
+       * <code>repeated .kyve.global.v1beta1.GasAdjustment gas_adjustments = 3 [json_name = "gasAdjustments", (.gogoproto.nullable) = false];</code>
+       */
+      public int getGasAdjustmentsCount() {
+        if (gasAdjustmentsBuilder_ == null) {
+          return gasAdjustments_.size();
+        } else {
+          return gasAdjustmentsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * gas_adjustments can add a constant amount of gas to a specific message type.
+       * This gives more control to make certain messages more expensive to avoid spamming
+       * of certain types of messages.
+       * </pre>
+       *
+       * <code>repeated .kyve.global.v1beta1.GasAdjustment gas_adjustments = 3 [json_name = "gasAdjustments", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.global.v1beta1.GlobalProto.GasAdjustment getGasAdjustments(int index) {
+        if (gasAdjustmentsBuilder_ == null) {
+          return gasAdjustments_.get(index);
+        } else {
+          return gasAdjustmentsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * gas_adjustments can add a constant amount of gas to a specific message type.
+       * This gives more control to make certain messages more expensive to avoid spamming
+       * of certain types of messages.
+       * </pre>
+       *
+       * <code>repeated .kyve.global.v1beta1.GasAdjustment gas_adjustments = 3 [json_name = "gasAdjustments", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setGasAdjustments(
+          int index, com.kyve.global.v1beta1.GlobalProto.GasAdjustment value) {
+        if (gasAdjustmentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGasAdjustmentsIsMutable();
+          gasAdjustments_.set(index, value);
+          onChanged();
+        } else {
+          gasAdjustmentsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gas_adjustments can add a constant amount of gas to a specific message type.
+       * This gives more control to make certain messages more expensive to avoid spamming
+       * of certain types of messages.
+       * </pre>
+       *
+       * <code>repeated .kyve.global.v1beta1.GasAdjustment gas_adjustments = 3 [json_name = "gasAdjustments", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setGasAdjustments(
+          int index, com.kyve.global.v1beta1.GlobalProto.GasAdjustment.Builder builderForValue) {
+        if (gasAdjustmentsBuilder_ == null) {
+          ensureGasAdjustmentsIsMutable();
+          gasAdjustments_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          gasAdjustmentsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gas_adjustments can add a constant amount of gas to a specific message type.
+       * This gives more control to make certain messages more expensive to avoid spamming
+       * of certain types of messages.
+       * </pre>
+       *
+       * <code>repeated .kyve.global.v1beta1.GasAdjustment gas_adjustments = 3 [json_name = "gasAdjustments", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGasAdjustments(com.kyve.global.v1beta1.GlobalProto.GasAdjustment value) {
+        if (gasAdjustmentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGasAdjustmentsIsMutable();
+          gasAdjustments_.add(value);
+          onChanged();
+        } else {
+          gasAdjustmentsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gas_adjustments can add a constant amount of gas to a specific message type.
+       * This gives more control to make certain messages more expensive to avoid spamming
+       * of certain types of messages.
+       * </pre>
+       *
+       * <code>repeated .kyve.global.v1beta1.GasAdjustment gas_adjustments = 3 [json_name = "gasAdjustments", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGasAdjustments(
+          int index, com.kyve.global.v1beta1.GlobalProto.GasAdjustment value) {
+        if (gasAdjustmentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGasAdjustmentsIsMutable();
+          gasAdjustments_.add(index, value);
+          onChanged();
+        } else {
+          gasAdjustmentsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gas_adjustments can add a constant amount of gas to a specific message type.
+       * This gives more control to make certain messages more expensive to avoid spamming
+       * of certain types of messages.
+       * </pre>
+       *
+       * <code>repeated .kyve.global.v1beta1.GasAdjustment gas_adjustments = 3 [json_name = "gasAdjustments", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGasAdjustments(
+          com.kyve.global.v1beta1.GlobalProto.GasAdjustment.Builder builderForValue) {
+        if (gasAdjustmentsBuilder_ == null) {
+          ensureGasAdjustmentsIsMutable();
+          gasAdjustments_.add(builderForValue.build());
+          onChanged();
+        } else {
+          gasAdjustmentsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gas_adjustments can add a constant amount of gas to a specific message type.
+       * This gives more control to make certain messages more expensive to avoid spamming
+       * of certain types of messages.
+       * </pre>
+       *
+       * <code>repeated .kyve.global.v1beta1.GasAdjustment gas_adjustments = 3 [json_name = "gasAdjustments", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGasAdjustments(
+          int index, com.kyve.global.v1beta1.GlobalProto.GasAdjustment.Builder builderForValue) {
+        if (gasAdjustmentsBuilder_ == null) {
+          ensureGasAdjustmentsIsMutable();
+          gasAdjustments_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          gasAdjustmentsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gas_adjustments can add a constant amount of gas to a specific message type.
+       * This gives more control to make certain messages more expensive to avoid spamming
+       * of certain types of messages.
+       * </pre>
+       *
+       * <code>repeated .kyve.global.v1beta1.GasAdjustment gas_adjustments = 3 [json_name = "gasAdjustments", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllGasAdjustments(
+          java.lang.Iterable<? extends com.kyve.global.v1beta1.GlobalProto.GasAdjustment> values) {
+        if (gasAdjustmentsBuilder_ == null) {
+          ensureGasAdjustmentsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, gasAdjustments_);
+          onChanged();
+        } else {
+          gasAdjustmentsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gas_adjustments can add a constant amount of gas to a specific message type.
+       * This gives more control to make certain messages more expensive to avoid spamming
+       * of certain types of messages.
+       * </pre>
+       *
+       * <code>repeated .kyve.global.v1beta1.GasAdjustment gas_adjustments = 3 [json_name = "gasAdjustments", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearGasAdjustments() {
+        if (gasAdjustmentsBuilder_ == null) {
+          gasAdjustments_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          gasAdjustmentsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gas_adjustments can add a constant amount of gas to a specific message type.
+       * This gives more control to make certain messages more expensive to avoid spamming
+       * of certain types of messages.
+       * </pre>
+       *
+       * <code>repeated .kyve.global.v1beta1.GasAdjustment gas_adjustments = 3 [json_name = "gasAdjustments", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeGasAdjustments(int index) {
+        if (gasAdjustmentsBuilder_ == null) {
+          ensureGasAdjustmentsIsMutable();
+          gasAdjustments_.remove(index);
+          onChanged();
+        } else {
+          gasAdjustmentsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gas_adjustments can add a constant amount of gas to a specific message type.
+       * This gives more control to make certain messages more expensive to avoid spamming
+       * of certain types of messages.
+       * </pre>
+       *
+       * <code>repeated .kyve.global.v1beta1.GasAdjustment gas_adjustments = 3 [json_name = "gasAdjustments", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.global.v1beta1.GlobalProto.GasAdjustment.Builder getGasAdjustmentsBuilder(
+          int index) {
+        return getGasAdjustmentsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * gas_adjustments can add a constant amount of gas to a specific message type.
+       * This gives more control to make certain messages more expensive to avoid spamming
+       * of certain types of messages.
+       * </pre>
+       *
+       * <code>repeated .kyve.global.v1beta1.GasAdjustment gas_adjustments = 3 [json_name = "gasAdjustments", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.global.v1beta1.GlobalProto.GasAdjustmentOrBuilder getGasAdjustmentsOrBuilder(
+          int index) {
+        if (gasAdjustmentsBuilder_ == null) {
+          return gasAdjustments_.get(index);  } else {
+          return gasAdjustmentsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * gas_adjustments can add a constant amount of gas to a specific message type.
+       * This gives more control to make certain messages more expensive to avoid spamming
+       * of certain types of messages.
+       * </pre>
+       *
+       * <code>repeated .kyve.global.v1beta1.GasAdjustment gas_adjustments = 3 [json_name = "gasAdjustments", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.kyve.global.v1beta1.GlobalProto.GasAdjustmentOrBuilder> 
+           getGasAdjustmentsOrBuilderList() {
+        if (gasAdjustmentsBuilder_ != null) {
+          return gasAdjustmentsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(gasAdjustments_);
+        }
+      }
+      /**
+       * <pre>
+       * gas_adjustments can add a constant amount of gas to a specific message type.
+       * This gives more control to make certain messages more expensive to avoid spamming
+       * of certain types of messages.
+       * </pre>
+       *
+       * <code>repeated .kyve.global.v1beta1.GasAdjustment gas_adjustments = 3 [json_name = "gasAdjustments", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.global.v1beta1.GlobalProto.GasAdjustment.Builder addGasAdjustmentsBuilder() {
+        return getGasAdjustmentsFieldBuilder().addBuilder(
+            com.kyve.global.v1beta1.GlobalProto.GasAdjustment.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * gas_adjustments can add a constant amount of gas to a specific message type.
+       * This gives more control to make certain messages more expensive to avoid spamming
+       * of certain types of messages.
+       * </pre>
+       *
+       * <code>repeated .kyve.global.v1beta1.GasAdjustment gas_adjustments = 3 [json_name = "gasAdjustments", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.global.v1beta1.GlobalProto.GasAdjustment.Builder addGasAdjustmentsBuilder(
+          int index) {
+        return getGasAdjustmentsFieldBuilder().addBuilder(
+            index, com.kyve.global.v1beta1.GlobalProto.GasAdjustment.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * gas_adjustments can add a constant amount of gas to a specific message type.
+       * This gives more control to make certain messages more expensive to avoid spamming
+       * of certain types of messages.
+       * </pre>
+       *
+       * <code>repeated .kyve.global.v1beta1.GasAdjustment gas_adjustments = 3 [json_name = "gasAdjustments", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.kyve.global.v1beta1.GlobalProto.GasAdjustment.Builder> 
+           getGasAdjustmentsBuilderList() {
+        return getGasAdjustmentsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.kyve.global.v1beta1.GlobalProto.GasAdjustment, com.kyve.global.v1beta1.GlobalProto.GasAdjustment.Builder, com.kyve.global.v1beta1.GlobalProto.GasAdjustmentOrBuilder> 
+          getGasAdjustmentsFieldBuilder() {
+        if (gasAdjustmentsBuilder_ == null) {
+          gasAdjustmentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.kyve.global.v1beta1.GlobalProto.GasAdjustment, com.kyve.global.v1beta1.GlobalProto.GasAdjustment.Builder, com.kyve.global.v1beta1.GlobalProto.GasAdjustmentOrBuilder>(
+                  gasAdjustments_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          gasAdjustments_ = null;
+        }
+        return gasAdjustmentsBuilder_;
+      }
+
+      private java.util.List<com.kyve.global.v1beta1.GlobalProto.GasRefund> gasRefunds_ =
+        java.util.Collections.emptyList();
+      private void ensureGasRefundsIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          gasRefunds_ = new java.util.ArrayList<com.kyve.global.v1beta1.GlobalProto.GasRefund>(gasRefunds_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.kyve.global.v1beta1.GlobalProto.GasRefund, com.kyve.global.v1beta1.GlobalProto.GasRefund.Builder, com.kyve.global.v1beta1.GlobalProto.GasRefundOrBuilder> gasRefundsBuilder_;
+
+      /**
+       * <pre>
+       * gas_refunds lets the governance specify a fraction of how much gas
+       * a user gets refunded for a certain type of transaction.
+       * This could be used to make transactions which support to network cheaper.
+       * Gas refunds only work if the transaction only included one message.
+       * </pre>
+       *
+       * <code>repeated .kyve.global.v1beta1.GasRefund gas_refunds = 4 [json_name = "gasRefunds", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.kyve.global.v1beta1.GlobalProto.GasRefund> getGasRefundsList() {
+        if (gasRefundsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(gasRefunds_);
+        } else {
+          return gasRefundsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * gas_refunds lets the governance specify a fraction of how much gas
+       * a user gets refunded for a certain type of transaction.
+       * This could be used to make transactions which support to network cheaper.
+       * Gas refunds only work if the transaction only included one message.
+       * </pre>
+       *
+       * <code>repeated .kyve.global.v1beta1.GasRefund gas_refunds = 4 [json_name = "gasRefunds", (.gogoproto.nullable) = false];</code>
+       */
+      public int getGasRefundsCount() {
+        if (gasRefundsBuilder_ == null) {
+          return gasRefunds_.size();
+        } else {
+          return gasRefundsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * gas_refunds lets the governance specify a fraction of how much gas
+       * a user gets refunded for a certain type of transaction.
+       * This could be used to make transactions which support to network cheaper.
+       * Gas refunds only work if the transaction only included one message.
+       * </pre>
+       *
+       * <code>repeated .kyve.global.v1beta1.GasRefund gas_refunds = 4 [json_name = "gasRefunds", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.global.v1beta1.GlobalProto.GasRefund getGasRefunds(int index) {
+        if (gasRefundsBuilder_ == null) {
+          return gasRefunds_.get(index);
+        } else {
+          return gasRefundsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * gas_refunds lets the governance specify a fraction of how much gas
+       * a user gets refunded for a certain type of transaction.
+       * This could be used to make transactions which support to network cheaper.
+       * Gas refunds only work if the transaction only included one message.
+       * </pre>
+       *
+       * <code>repeated .kyve.global.v1beta1.GasRefund gas_refunds = 4 [json_name = "gasRefunds", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setGasRefunds(
+          int index, com.kyve.global.v1beta1.GlobalProto.GasRefund value) {
+        if (gasRefundsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGasRefundsIsMutable();
+          gasRefunds_.set(index, value);
+          onChanged();
+        } else {
+          gasRefundsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gas_refunds lets the governance specify a fraction of how much gas
+       * a user gets refunded for a certain type of transaction.
+       * This could be used to make transactions which support to network cheaper.
+       * Gas refunds only work if the transaction only included one message.
+       * </pre>
+       *
+       * <code>repeated .kyve.global.v1beta1.GasRefund gas_refunds = 4 [json_name = "gasRefunds", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setGasRefunds(
+          int index, com.kyve.global.v1beta1.GlobalProto.GasRefund.Builder builderForValue) {
+        if (gasRefundsBuilder_ == null) {
+          ensureGasRefundsIsMutable();
+          gasRefunds_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          gasRefundsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gas_refunds lets the governance specify a fraction of how much gas
+       * a user gets refunded for a certain type of transaction.
+       * This could be used to make transactions which support to network cheaper.
+       * Gas refunds only work if the transaction only included one message.
+       * </pre>
+       *
+       * <code>repeated .kyve.global.v1beta1.GasRefund gas_refunds = 4 [json_name = "gasRefunds", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGasRefunds(com.kyve.global.v1beta1.GlobalProto.GasRefund value) {
+        if (gasRefundsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGasRefundsIsMutable();
+          gasRefunds_.add(value);
+          onChanged();
+        } else {
+          gasRefundsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gas_refunds lets the governance specify a fraction of how much gas
+       * a user gets refunded for a certain type of transaction.
+       * This could be used to make transactions which support to network cheaper.
+       * Gas refunds only work if the transaction only included one message.
+       * </pre>
+       *
+       * <code>repeated .kyve.global.v1beta1.GasRefund gas_refunds = 4 [json_name = "gasRefunds", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGasRefunds(
+          int index, com.kyve.global.v1beta1.GlobalProto.GasRefund value) {
+        if (gasRefundsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGasRefundsIsMutable();
+          gasRefunds_.add(index, value);
+          onChanged();
+        } else {
+          gasRefundsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gas_refunds lets the governance specify a fraction of how much gas
+       * a user gets refunded for a certain type of transaction.
+       * This could be used to make transactions which support to network cheaper.
+       * Gas refunds only work if the transaction only included one message.
+       * </pre>
+       *
+       * <code>repeated .kyve.global.v1beta1.GasRefund gas_refunds = 4 [json_name = "gasRefunds", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGasRefunds(
+          com.kyve.global.v1beta1.GlobalProto.GasRefund.Builder builderForValue) {
+        if (gasRefundsBuilder_ == null) {
+          ensureGasRefundsIsMutable();
+          gasRefunds_.add(builderForValue.build());
+          onChanged();
+        } else {
+          gasRefundsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gas_refunds lets the governance specify a fraction of how much gas
+       * a user gets refunded for a certain type of transaction.
+       * This could be used to make transactions which support to network cheaper.
+       * Gas refunds only work if the transaction only included one message.
+       * </pre>
+       *
+       * <code>repeated .kyve.global.v1beta1.GasRefund gas_refunds = 4 [json_name = "gasRefunds", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addGasRefunds(
+          int index, com.kyve.global.v1beta1.GlobalProto.GasRefund.Builder builderForValue) {
+        if (gasRefundsBuilder_ == null) {
+          ensureGasRefundsIsMutable();
+          gasRefunds_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          gasRefundsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gas_refunds lets the governance specify a fraction of how much gas
+       * a user gets refunded for a certain type of transaction.
+       * This could be used to make transactions which support to network cheaper.
+       * Gas refunds only work if the transaction only included one message.
+       * </pre>
+       *
+       * <code>repeated .kyve.global.v1beta1.GasRefund gas_refunds = 4 [json_name = "gasRefunds", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllGasRefunds(
+          java.lang.Iterable<? extends com.kyve.global.v1beta1.GlobalProto.GasRefund> values) {
+        if (gasRefundsBuilder_ == null) {
+          ensureGasRefundsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, gasRefunds_);
+          onChanged();
+        } else {
+          gasRefundsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gas_refunds lets the governance specify a fraction of how much gas
+       * a user gets refunded for a certain type of transaction.
+       * This could be used to make transactions which support to network cheaper.
+       * Gas refunds only work if the transaction only included one message.
+       * </pre>
+       *
+       * <code>repeated .kyve.global.v1beta1.GasRefund gas_refunds = 4 [json_name = "gasRefunds", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearGasRefunds() {
+        if (gasRefundsBuilder_ == null) {
+          gasRefunds_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          gasRefundsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gas_refunds lets the governance specify a fraction of how much gas
+       * a user gets refunded for a certain type of transaction.
+       * This could be used to make transactions which support to network cheaper.
+       * Gas refunds only work if the transaction only included one message.
+       * </pre>
+       *
+       * <code>repeated .kyve.global.v1beta1.GasRefund gas_refunds = 4 [json_name = "gasRefunds", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeGasRefunds(int index) {
+        if (gasRefundsBuilder_ == null) {
+          ensureGasRefundsIsMutable();
+          gasRefunds_.remove(index);
+          onChanged();
+        } else {
+          gasRefundsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * gas_refunds lets the governance specify a fraction of how much gas
+       * a user gets refunded for a certain type of transaction.
+       * This could be used to make transactions which support to network cheaper.
+       * Gas refunds only work if the transaction only included one message.
+       * </pre>
+       *
+       * <code>repeated .kyve.global.v1beta1.GasRefund gas_refunds = 4 [json_name = "gasRefunds", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.global.v1beta1.GlobalProto.GasRefund.Builder getGasRefundsBuilder(
+          int index) {
+        return getGasRefundsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * gas_refunds lets the governance specify a fraction of how much gas
+       * a user gets refunded for a certain type of transaction.
+       * This could be used to make transactions which support to network cheaper.
+       * Gas refunds only work if the transaction only included one message.
+       * </pre>
+       *
+       * <code>repeated .kyve.global.v1beta1.GasRefund gas_refunds = 4 [json_name = "gasRefunds", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.global.v1beta1.GlobalProto.GasRefundOrBuilder getGasRefundsOrBuilder(
+          int index) {
+        if (gasRefundsBuilder_ == null) {
+          return gasRefunds_.get(index);  } else {
+          return gasRefundsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * gas_refunds lets the governance specify a fraction of how much gas
+       * a user gets refunded for a certain type of transaction.
+       * This could be used to make transactions which support to network cheaper.
+       * Gas refunds only work if the transaction only included one message.
+       * </pre>
+       *
+       * <code>repeated .kyve.global.v1beta1.GasRefund gas_refunds = 4 [json_name = "gasRefunds", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.kyve.global.v1beta1.GlobalProto.GasRefundOrBuilder> 
+           getGasRefundsOrBuilderList() {
+        if (gasRefundsBuilder_ != null) {
+          return gasRefundsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(gasRefunds_);
+        }
+      }
+      /**
+       * <pre>
+       * gas_refunds lets the governance specify a fraction of how much gas
+       * a user gets refunded for a certain type of transaction.
+       * This could be used to make transactions which support to network cheaper.
+       * Gas refunds only work if the transaction only included one message.
+       * </pre>
+       *
+       * <code>repeated .kyve.global.v1beta1.GasRefund gas_refunds = 4 [json_name = "gasRefunds", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.global.v1beta1.GlobalProto.GasRefund.Builder addGasRefundsBuilder() {
+        return getGasRefundsFieldBuilder().addBuilder(
+            com.kyve.global.v1beta1.GlobalProto.GasRefund.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * gas_refunds lets the governance specify a fraction of how much gas
+       * a user gets refunded for a certain type of transaction.
+       * This could be used to make transactions which support to network cheaper.
+       * Gas refunds only work if the transaction only included one message.
+       * </pre>
+       *
+       * <code>repeated .kyve.global.v1beta1.GasRefund gas_refunds = 4 [json_name = "gasRefunds", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.global.v1beta1.GlobalProto.GasRefund.Builder addGasRefundsBuilder(
+          int index) {
+        return getGasRefundsFieldBuilder().addBuilder(
+            index, com.kyve.global.v1beta1.GlobalProto.GasRefund.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * gas_refunds lets the governance specify a fraction of how much gas
+       * a user gets refunded for a certain type of transaction.
+       * This could be used to make transactions which support to network cheaper.
+       * Gas refunds only work if the transaction only included one message.
+       * </pre>
+       *
+       * <code>repeated .kyve.global.v1beta1.GasRefund gas_refunds = 4 [json_name = "gasRefunds", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.kyve.global.v1beta1.GlobalProto.GasRefund.Builder> 
+           getGasRefundsBuilderList() {
+        return getGasRefundsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.kyve.global.v1beta1.GlobalProto.GasRefund, com.kyve.global.v1beta1.GlobalProto.GasRefund.Builder, com.kyve.global.v1beta1.GlobalProto.GasRefundOrBuilder> 
+          getGasRefundsFieldBuilder() {
+        if (gasRefundsBuilder_ == null) {
+          gasRefundsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.kyve.global.v1beta1.GlobalProto.GasRefund, com.kyve.global.v1beta1.GlobalProto.GasRefund.Builder, com.kyve.global.v1beta1.GlobalProto.GasRefundOrBuilder>(
+                  gasRefunds_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          gasRefunds_ = null;
+        }
+        return gasRefundsBuilder_;
+      }
+
+      private java.lang.Object minInitialDepositRatio_ = "";
+      /**
+       * <pre>
+       * min_initial_deposit_ratio sets a minimum fraction of initial deposit for a
+       * governance proposal. This is used to avoid spamming of proposals and
+       * polluting the proposals page.
+       * </pre>
+       *
+       * <code>string min_initial_deposit_ratio = 5 [json_name = "minInitialDepositRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The minInitialDepositRatio.
+       */
+      public java.lang.String getMinInitialDepositRatio() {
+        java.lang.Object ref = minInitialDepositRatio_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          minInitialDepositRatio_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * min_initial_deposit_ratio sets a minimum fraction of initial deposit for a
+       * governance proposal. This is used to avoid spamming of proposals and
+       * polluting the proposals page.
+       * </pre>
+       *
+       * <code>string min_initial_deposit_ratio = 5 [json_name = "minInitialDepositRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for minInitialDepositRatio.
+       */
+      public com.google.protobuf.ByteString
+          getMinInitialDepositRatioBytes() {
+        java.lang.Object ref = minInitialDepositRatio_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          minInitialDepositRatio_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * min_initial_deposit_ratio sets a minimum fraction of initial deposit for a
+       * governance proposal. This is used to avoid spamming of proposals and
+       * polluting the proposals page.
+       * </pre>
+       *
+       * <code>string min_initial_deposit_ratio = 5 [json_name = "minInitialDepositRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The minInitialDepositRatio to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinInitialDepositRatio(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        minInitialDepositRatio_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * min_initial_deposit_ratio sets a minimum fraction of initial deposit for a
+       * governance proposal. This is used to avoid spamming of proposals and
+       * polluting the proposals page.
+       * </pre>
+       *
+       * <code>string min_initial_deposit_ratio = 5 [json_name = "minInitialDepositRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinInitialDepositRatio() {
+        minInitialDepositRatio_ = getDefaultInstance().getMinInitialDepositRatio();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * min_initial_deposit_ratio sets a minimum fraction of initial deposit for a
+       * governance proposal. This is used to avoid spamming of proposals and
+       * polluting the proposals page.
+       * </pre>
+       *
+       * <code>string min_initial_deposit_ratio = 5 [json_name = "minInitialDepositRatio", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for minInitialDepositRatio to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinInitialDepositRatioBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        minInitialDepositRatio_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.global.v1beta1.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.global.v1beta1.Params)
+    private static final com.kyve.global.v1beta1.GlobalProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.global.v1beta1.GlobalProto.Params();
+    }
+
+    public static com.kyve.global.v1beta1.GlobalProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.global.v1beta1.GlobalProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GasAdjustmentOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.global.v1beta1.GasAdjustment)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * type of the sdk-message
+     * </pre>
+     *
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @return The type.
+     */
+    java.lang.String getType();
+    /**
+     * <pre>
+     * type of the sdk-message
+     * </pre>
+     *
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @return The bytes for type.
+     */
+    com.google.protobuf.ByteString
+        getTypeBytes();
+
+    /**
+     * <pre>
+     * amount of gas which is added to the message
+     * </pre>
+     *
+     * <code>uint64 amount = 2 [json_name = "amount"];</code>
+     * @return The amount.
+     */
+    long getAmount();
+  }
+  /**
+   * <pre>
+   * GasAdjustment stores for every message type a fixed amount
+   * of gas which is added to the message
+   * </pre>
+   *
+   * Protobuf type {@code kyve.global.v1beta1.GasAdjustment}
+   */
+  public static final class GasAdjustment extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.global.v1beta1.GasAdjustment)
+      GasAdjustmentOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GasAdjustment.newBuilder() to construct.
+    private GasAdjustment(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GasAdjustment() {
+      type_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GasAdjustment();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.global.v1beta1.GlobalProto.internal_static_kyve_global_v1beta1_GasAdjustment_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.global.v1beta1.GlobalProto.internal_static_kyve_global_v1beta1_GasAdjustment_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.global.v1beta1.GlobalProto.GasAdjustment.class, com.kyve.global.v1beta1.GlobalProto.GasAdjustment.Builder.class);
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object type_ = "";
+    /**
+     * <pre>
+     * type of the sdk-message
+     * </pre>
+     *
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public java.lang.String getType() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        type_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * type of the sdk-message
+     * </pre>
+     *
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @return The bytes for type.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTypeBytes() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        type_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 2;
+    private long amount_ = 0L;
+    /**
+     * <pre>
+     * amount of gas which is added to the message
+     * </pre>
+     *
+     * <code>uint64 amount = 2 [json_name = "amount"];</code>
+     * @return The amount.
+     */
+    @java.lang.Override
+    public long getAmount() {
+      return amount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, type_);
+      }
+      if (amount_ != 0L) {
+        output.writeUInt64(2, amount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, type_);
+      }
+      if (amount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, amount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.global.v1beta1.GlobalProto.GasAdjustment)) {
+        return super.equals(obj);
+      }
+      com.kyve.global.v1beta1.GlobalProto.GasAdjustment other = (com.kyve.global.v1beta1.GlobalProto.GasAdjustment) obj;
+
+      if (!getType()
+          .equals(other.getType())) return false;
+      if (getAmount()
+          != other.getAmount()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getType().hashCode();
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAmount());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.global.v1beta1.GlobalProto.GasAdjustment parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.global.v1beta1.GlobalProto.GasAdjustment parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.global.v1beta1.GlobalProto.GasAdjustment parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.global.v1beta1.GlobalProto.GasAdjustment parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.global.v1beta1.GlobalProto.GasAdjustment parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.global.v1beta1.GlobalProto.GasAdjustment parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.global.v1beta1.GlobalProto.GasAdjustment parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.global.v1beta1.GlobalProto.GasAdjustment parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.global.v1beta1.GlobalProto.GasAdjustment parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.global.v1beta1.GlobalProto.GasAdjustment parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.global.v1beta1.GlobalProto.GasAdjustment parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.global.v1beta1.GlobalProto.GasAdjustment parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.global.v1beta1.GlobalProto.GasAdjustment prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GasAdjustment stores for every message type a fixed amount
+     * of gas which is added to the message
+     * </pre>
+     *
+     * Protobuf type {@code kyve.global.v1beta1.GasAdjustment}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.global.v1beta1.GasAdjustment)
+        com.kyve.global.v1beta1.GlobalProto.GasAdjustmentOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.global.v1beta1.GlobalProto.internal_static_kyve_global_v1beta1_GasAdjustment_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.global.v1beta1.GlobalProto.internal_static_kyve_global_v1beta1_GasAdjustment_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.global.v1beta1.GlobalProto.GasAdjustment.class, com.kyve.global.v1beta1.GlobalProto.GasAdjustment.Builder.class);
+      }
+
+      // Construct using com.kyve.global.v1beta1.GlobalProto.GasAdjustment.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        type_ = "";
+        amount_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.global.v1beta1.GlobalProto.internal_static_kyve_global_v1beta1_GasAdjustment_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.global.v1beta1.GlobalProto.GasAdjustment getDefaultInstanceForType() {
+        return com.kyve.global.v1beta1.GlobalProto.GasAdjustment.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.global.v1beta1.GlobalProto.GasAdjustment build() {
+        com.kyve.global.v1beta1.GlobalProto.GasAdjustment result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.global.v1beta1.GlobalProto.GasAdjustment buildPartial() {
+        com.kyve.global.v1beta1.GlobalProto.GasAdjustment result = new com.kyve.global.v1beta1.GlobalProto.GasAdjustment(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.global.v1beta1.GlobalProto.GasAdjustment result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.type_ = type_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.amount_ = amount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.global.v1beta1.GlobalProto.GasAdjustment) {
+          return mergeFrom((com.kyve.global.v1beta1.GlobalProto.GasAdjustment)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.global.v1beta1.GlobalProto.GasAdjustment other) {
+        if (other == com.kyve.global.v1beta1.GlobalProto.GasAdjustment.getDefaultInstance()) return this;
+        if (!other.getType().isEmpty()) {
+          type_ = other.type_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getAmount() != 0L) {
+          setAmount(other.getAmount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                type_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                amount_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object type_ = "";
+      /**
+       * <pre>
+       * type of the sdk-message
+       * </pre>
+       *
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @return The type.
+       */
+      public java.lang.String getType() {
+        java.lang.Object ref = type_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          type_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * type of the sdk-message
+       * </pre>
+       *
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @return The bytes for type.
+       */
+      public com.google.protobuf.ByteString
+          getTypeBytes() {
+        java.lang.Object ref = type_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          type_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * type of the sdk-message
+       * </pre>
+       *
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        type_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * type of the sdk-message
+       * </pre>
+       *
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        type_ = getDefaultInstance().getType();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * type of the sdk-message
+       * </pre>
+       *
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        type_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long amount_ ;
+      /**
+       * <pre>
+       * amount of gas which is added to the message
+       * </pre>
+       *
+       * <code>uint64 amount = 2 [json_name = "amount"];</code>
+       * @return The amount.
+       */
+      @java.lang.Override
+      public long getAmount() {
+        return amount_;
+      }
+      /**
+       * <pre>
+       * amount of gas which is added to the message
+       * </pre>
+       *
+       * <code>uint64 amount = 2 [json_name = "amount"];</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(long value) {
+
+        amount_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * amount of gas which is added to the message
+       * </pre>
+       *
+       * <code>uint64 amount = 2 [json_name = "amount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        amount_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.global.v1beta1.GasAdjustment)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.global.v1beta1.GasAdjustment)
+    private static final com.kyve.global.v1beta1.GlobalProto.GasAdjustment DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.global.v1beta1.GlobalProto.GasAdjustment();
+    }
+
+    public static com.kyve.global.v1beta1.GlobalProto.GasAdjustment getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GasAdjustment>
+        PARSER = new com.google.protobuf.AbstractParser<GasAdjustment>() {
+      @java.lang.Override
+      public GasAdjustment parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GasAdjustment> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GasAdjustment> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.global.v1beta1.GlobalProto.GasAdjustment getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GasRefundOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.global.v1beta1.GasRefund)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * type of the sdk-message
+     * </pre>
+     *
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @return The type.
+     */
+    java.lang.String getType();
+    /**
+     * <pre>
+     * type of the sdk-message
+     * </pre>
+     *
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @return The bytes for type.
+     */
+    com.google.protobuf.ByteString
+        getTypeBytes();
+
+    /**
+     * <pre>
+     * fraction in decimal representation between 0 and 1
+     * </pre>
+     *
+     * <code>string fraction = 2 [json_name = "fraction", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The fraction.
+     */
+    java.lang.String getFraction();
+    /**
+     * <pre>
+     * fraction in decimal representation between 0 and 1
+     * </pre>
+     *
+     * <code>string fraction = 2 [json_name = "fraction", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for fraction.
+     */
+    com.google.protobuf.ByteString
+        getFractionBytes();
+  }
+  /**
+   * <pre>
+   * GasRefund stores the fraction of gas which will be refunded for a given
+   * type of message.
+   * This only works if the transaction only includes one message.
+   * </pre>
+   *
+   * Protobuf type {@code kyve.global.v1beta1.GasRefund}
+   */
+  public static final class GasRefund extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.global.v1beta1.GasRefund)
+      GasRefundOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GasRefund.newBuilder() to construct.
+    private GasRefund(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GasRefund() {
+      type_ = "";
+      fraction_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GasRefund();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.global.v1beta1.GlobalProto.internal_static_kyve_global_v1beta1_GasRefund_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.global.v1beta1.GlobalProto.internal_static_kyve_global_v1beta1_GasRefund_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.global.v1beta1.GlobalProto.GasRefund.class, com.kyve.global.v1beta1.GlobalProto.GasRefund.Builder.class);
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object type_ = "";
+    /**
+     * <pre>
+     * type of the sdk-message
+     * </pre>
+     *
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @return The type.
+     */
+    @java.lang.Override
+    public java.lang.String getType() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        type_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * type of the sdk-message
+     * </pre>
+     *
+     * <code>string type = 1 [json_name = "type"];</code>
+     * @return The bytes for type.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTypeBytes() {
+      java.lang.Object ref = type_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        type_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FRACTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object fraction_ = "";
+    /**
+     * <pre>
+     * fraction in decimal representation between 0 and 1
+     * </pre>
+     *
+     * <code>string fraction = 2 [json_name = "fraction", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The fraction.
+     */
+    @java.lang.Override
+    public java.lang.String getFraction() {
+      java.lang.Object ref = fraction_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        fraction_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * fraction in decimal representation between 0 and 1
+     * </pre>
+     *
+     * <code>string fraction = 2 [json_name = "fraction", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+     * @return The bytes for fraction.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFractionBytes() {
+      java.lang.Object ref = fraction_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fraction_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, type_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fraction_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, fraction_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(type_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, type_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fraction_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, fraction_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.global.v1beta1.GlobalProto.GasRefund)) {
+        return super.equals(obj);
+      }
+      com.kyve.global.v1beta1.GlobalProto.GasRefund other = (com.kyve.global.v1beta1.GlobalProto.GasRefund) obj;
+
+      if (!getType()
+          .equals(other.getType())) return false;
+      if (!getFraction()
+          .equals(other.getFraction())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getType().hashCode();
+      hash = (37 * hash) + FRACTION_FIELD_NUMBER;
+      hash = (53 * hash) + getFraction().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.global.v1beta1.GlobalProto.GasRefund parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.global.v1beta1.GlobalProto.GasRefund parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.global.v1beta1.GlobalProto.GasRefund parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.global.v1beta1.GlobalProto.GasRefund parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.global.v1beta1.GlobalProto.GasRefund parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.global.v1beta1.GlobalProto.GasRefund parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.global.v1beta1.GlobalProto.GasRefund parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.global.v1beta1.GlobalProto.GasRefund parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.global.v1beta1.GlobalProto.GasRefund parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.global.v1beta1.GlobalProto.GasRefund parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.global.v1beta1.GlobalProto.GasRefund parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.global.v1beta1.GlobalProto.GasRefund parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.global.v1beta1.GlobalProto.GasRefund prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GasRefund stores the fraction of gas which will be refunded for a given
+     * type of message.
+     * This only works if the transaction only includes one message.
+     * </pre>
+     *
+     * Protobuf type {@code kyve.global.v1beta1.GasRefund}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.global.v1beta1.GasRefund)
+        com.kyve.global.v1beta1.GlobalProto.GasRefundOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.global.v1beta1.GlobalProto.internal_static_kyve_global_v1beta1_GasRefund_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.global.v1beta1.GlobalProto.internal_static_kyve_global_v1beta1_GasRefund_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.global.v1beta1.GlobalProto.GasRefund.class, com.kyve.global.v1beta1.GlobalProto.GasRefund.Builder.class);
+      }
+
+      // Construct using com.kyve.global.v1beta1.GlobalProto.GasRefund.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        type_ = "";
+        fraction_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.global.v1beta1.GlobalProto.internal_static_kyve_global_v1beta1_GasRefund_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.global.v1beta1.GlobalProto.GasRefund getDefaultInstanceForType() {
+        return com.kyve.global.v1beta1.GlobalProto.GasRefund.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.global.v1beta1.GlobalProto.GasRefund build() {
+        com.kyve.global.v1beta1.GlobalProto.GasRefund result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.global.v1beta1.GlobalProto.GasRefund buildPartial() {
+        com.kyve.global.v1beta1.GlobalProto.GasRefund result = new com.kyve.global.v1beta1.GlobalProto.GasRefund(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.global.v1beta1.GlobalProto.GasRefund result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.type_ = type_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.fraction_ = fraction_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.global.v1beta1.GlobalProto.GasRefund) {
+          return mergeFrom((com.kyve.global.v1beta1.GlobalProto.GasRefund)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.global.v1beta1.GlobalProto.GasRefund other) {
+        if (other == com.kyve.global.v1beta1.GlobalProto.GasRefund.getDefaultInstance()) return this;
+        if (!other.getType().isEmpty()) {
+          type_ = other.type_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getFraction().isEmpty()) {
+          fraction_ = other.fraction_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                type_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                fraction_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object type_ = "";
+      /**
+       * <pre>
+       * type of the sdk-message
+       * </pre>
+       *
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @return The type.
+       */
+      public java.lang.String getType() {
+        java.lang.Object ref = type_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          type_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * type of the sdk-message
+       * </pre>
+       *
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @return The bytes for type.
+       */
+      public com.google.protobuf.ByteString
+          getTypeBytes() {
+        java.lang.Object ref = type_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          type_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * type of the sdk-message
+       * </pre>
+       *
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        type_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * type of the sdk-message
+       * </pre>
+       *
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        type_ = getDefaultInstance().getType();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * type of the sdk-message
+       * </pre>
+       *
+       * <code>string type = 1 [json_name = "type"];</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        type_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object fraction_ = "";
+      /**
+       * <pre>
+       * fraction in decimal representation between 0 and 1
+       * </pre>
+       *
+       * <code>string fraction = 2 [json_name = "fraction", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The fraction.
+       */
+      public java.lang.String getFraction() {
+        java.lang.Object ref = fraction_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          fraction_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * fraction in decimal representation between 0 and 1
+       * </pre>
+       *
+       * <code>string fraction = 2 [json_name = "fraction", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return The bytes for fraction.
+       */
+      public com.google.protobuf.ByteString
+          getFractionBytes() {
+        java.lang.Object ref = fraction_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fraction_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * fraction in decimal representation between 0 and 1
+       * </pre>
+       *
+       * <code>string fraction = 2 [json_name = "fraction", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The fraction to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFraction(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        fraction_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * fraction in decimal representation between 0 and 1
+       * </pre>
+       *
+       * <code>string fraction = 2 [json_name = "fraction", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFraction() {
+        fraction_ = getDefaultInstance().getFraction();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * fraction in decimal representation between 0 and 1
+       * </pre>
+       *
+       * <code>string fraction = 2 [json_name = "fraction", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec"];</code>
+       * @param value The bytes for fraction to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFractionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        fraction_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.global.v1beta1.GasRefund)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.global.v1beta1.GasRefund)
+    private static final com.kyve.global.v1beta1.GlobalProto.GasRefund DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.global.v1beta1.GlobalProto.GasRefund();
+    }
+
+    public static com.kyve.global.v1beta1.GlobalProto.GasRefund getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GasRefund>
+        PARSER = new com.google.protobuf.AbstractParser<GasRefund>() {
+      @java.lang.Override
+      public GasRefund parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GasRefund> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GasRefund> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.global.v1beta1.GlobalProto.GasRefund getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_global_v1beta1_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_global_v1beta1_Params_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_global_v1beta1_GasAdjustment_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_global_v1beta1_GasAdjustment_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_global_v1beta1_GasRefund_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_global_v1beta1_GasRefund_fieldAccessorTable;
 
@@ -55,12 +3628,12 @@ public final class GlobalProto {
       "\002 \001(\004R\006amount\"k\n\tGasRefund\022\022\n\004type\030\001 \001(\t" +
       "R\004type\022J\n\010fraction\030\002 \001(\tB.\310\336\037\000\332\336\037&github" +
       ".com/cosmos/cosmos-sdk/types.DecR\010fracti" +
-      "onB\303\001\n\027com.kyve.global.v1beta1B\013GlobalPr" +
-      "otoP\001Z+github.com/KYVENetwork/chain/x/gl" +
-      "obal/types\242\002\003KGX\252\002\023Kyve.Global.V1beta1\312\002" +
-      "\024Kyve\\Global_\\V1beta1\342\002 Kyve\\Global_\\V1b" +
-      "eta1\\GPBMetadata\352\002\025Kyve::Global::V1beta1" +
-      "b\006proto3"
+      "onB\301\001\n\027com.kyve.global.v1beta1B\013GlobalPr" +
+      "otoZ+github.com/KYVENetwork/chain/x/glob" +
+      "al/types\242\002\003KGX\252\002\023Kyve.Global.V1beta1\312\002\024K" +
+      "yve\\Global_\\V1beta1\342\002 Kyve\\Global_\\V1bet" +
+      "a1\\GPBMetadata\352\002\025Kyve::Global::V1beta1b\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

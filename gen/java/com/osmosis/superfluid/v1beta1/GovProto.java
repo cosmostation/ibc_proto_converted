@@ -14,19 +14,3006 @@ public final class GovProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface SetSuperfluidAssetsProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.superfluid.v1beta1.SetSuperfluidAssetsProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>repeated .osmosis.superfluid.SuperfluidAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.osmosis.superfluid.SuperfluidProto.SuperfluidAsset> 
+        getAssetsList();
+    /**
+     * <code>repeated .osmosis.superfluid.SuperfluidAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.superfluid.SuperfluidProto.SuperfluidAsset getAssets(int index);
+    /**
+     * <code>repeated .osmosis.superfluid.SuperfluidAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+     */
+    int getAssetsCount();
+    /**
+     * <code>repeated .osmosis.superfluid.SuperfluidAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.osmosis.superfluid.SuperfluidProto.SuperfluidAssetOrBuilder> 
+        getAssetsOrBuilderList();
+    /**
+     * <code>repeated .osmosis.superfluid.SuperfluidAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+     */
+    com.osmosis.superfluid.SuperfluidProto.SuperfluidAssetOrBuilder getAssetsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * SetSuperfluidAssetsProposal is a gov Content type to update the superfluid
+   * assets
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.superfluid.v1beta1.SetSuperfluidAssetsProposal}
+   */
+  public static final class SetSuperfluidAssetsProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.superfluid.v1beta1.SetSuperfluidAssetsProposal)
+      SetSuperfluidAssetsProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SetSuperfluidAssetsProposal.newBuilder() to construct.
+    private SetSuperfluidAssetsProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SetSuperfluidAssetsProposal() {
+      title_ = "";
+      description_ = "";
+      assets_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SetSuperfluidAssetsProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.superfluid.v1beta1.GovProto.internal_static_osmosis_superfluid_v1beta1_SetSuperfluidAssetsProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.superfluid.v1beta1.GovProto.internal_static_osmosis_superfluid_v1beta1_SetSuperfluidAssetsProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposal.class, com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposal.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ASSETS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.osmosis.superfluid.SuperfluidProto.SuperfluidAsset> assets_;
+    /**
+     * <code>repeated .osmosis.superfluid.SuperfluidAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.osmosis.superfluid.SuperfluidProto.SuperfluidAsset> getAssetsList() {
+      return assets_;
+    }
+    /**
+     * <code>repeated .osmosis.superfluid.SuperfluidAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.osmosis.superfluid.SuperfluidProto.SuperfluidAssetOrBuilder> 
+        getAssetsOrBuilderList() {
+      return assets_;
+    }
+    /**
+     * <code>repeated .osmosis.superfluid.SuperfluidAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getAssetsCount() {
+      return assets_.size();
+    }
+    /**
+     * <code>repeated .osmosis.superfluid.SuperfluidAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.superfluid.SuperfluidProto.SuperfluidAsset getAssets(int index) {
+      return assets_.get(index);
+    }
+    /**
+     * <code>repeated .osmosis.superfluid.SuperfluidAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.superfluid.SuperfluidProto.SuperfluidAssetOrBuilder getAssetsOrBuilder(
+        int index) {
+      return assets_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      for (int i = 0; i < assets_.size(); i++) {
+        output.writeMessage(3, assets_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      for (int i = 0; i < assets_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, assets_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposal)) {
+        return super.equals(obj);
+      }
+      com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposal other = (com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposal) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getAssetsList()
+          .equals(other.getAssetsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (getAssetsCount() > 0) {
+        hash = (37 * hash) + ASSETS_FIELD_NUMBER;
+        hash = (53 * hash) + getAssetsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * SetSuperfluidAssetsProposal is a gov Content type to update the superfluid
+     * assets
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.superfluid.v1beta1.SetSuperfluidAssetsProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.superfluid.v1beta1.SetSuperfluidAssetsProposal)
+        com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.superfluid.v1beta1.GovProto.internal_static_osmosis_superfluid_v1beta1_SetSuperfluidAssetsProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.superfluid.v1beta1.GovProto.internal_static_osmosis_superfluid_v1beta1_SetSuperfluidAssetsProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposal.class, com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposal.Builder.class);
+      }
+
+      // Construct using com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        if (assetsBuilder_ == null) {
+          assets_ = java.util.Collections.emptyList();
+        } else {
+          assets_ = null;
+          assetsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.superfluid.v1beta1.GovProto.internal_static_osmosis_superfluid_v1beta1_SetSuperfluidAssetsProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposal getDefaultInstanceForType() {
+        return com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposal build() {
+        com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposal buildPartial() {
+        com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposal result = new com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposal(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposal result) {
+        if (assetsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            assets_ = java.util.Collections.unmodifiableList(assets_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.assets_ = assets_;
+        } else {
+          result.assets_ = assetsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposal) {
+          return mergeFrom((com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposal other) {
+        if (other == com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposal.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (assetsBuilder_ == null) {
+          if (!other.assets_.isEmpty()) {
+            if (assets_.isEmpty()) {
+              assets_ = other.assets_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureAssetsIsMutable();
+              assets_.addAll(other.assets_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.assets_.isEmpty()) {
+            if (assetsBuilder_.isEmpty()) {
+              assetsBuilder_.dispose();
+              assetsBuilder_ = null;
+              assets_ = other.assets_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              assetsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAssetsFieldBuilder() : null;
+            } else {
+              assetsBuilder_.addAllMessages(other.assets_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                com.osmosis.superfluid.SuperfluidProto.SuperfluidAsset m =
+                    input.readMessage(
+                        com.osmosis.superfluid.SuperfluidProto.SuperfluidAsset.parser(),
+                        extensionRegistry);
+                if (assetsBuilder_ == null) {
+                  ensureAssetsIsMutable();
+                  assets_.add(m);
+                } else {
+                  assetsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.osmosis.superfluid.SuperfluidProto.SuperfluidAsset> assets_ =
+        java.util.Collections.emptyList();
+      private void ensureAssetsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          assets_ = new java.util.ArrayList<com.osmosis.superfluid.SuperfluidProto.SuperfluidAsset>(assets_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.superfluid.SuperfluidProto.SuperfluidAsset, com.osmosis.superfluid.SuperfluidProto.SuperfluidAsset.Builder, com.osmosis.superfluid.SuperfluidProto.SuperfluidAssetOrBuilder> assetsBuilder_;
+
+      /**
+       * <code>repeated .osmosis.superfluid.SuperfluidAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.osmosis.superfluid.SuperfluidProto.SuperfluidAsset> getAssetsList() {
+        if (assetsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(assets_);
+        } else {
+          return assetsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.SuperfluidAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public int getAssetsCount() {
+        if (assetsBuilder_ == null) {
+          return assets_.size();
+        } else {
+          return assetsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.SuperfluidAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.superfluid.SuperfluidProto.SuperfluidAsset getAssets(int index) {
+        if (assetsBuilder_ == null) {
+          return assets_.get(index);
+        } else {
+          return assetsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.SuperfluidAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAssets(
+          int index, com.osmosis.superfluid.SuperfluidProto.SuperfluidAsset value) {
+        if (assetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetsIsMutable();
+          assets_.set(index, value);
+          onChanged();
+        } else {
+          assetsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.SuperfluidAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAssets(
+          int index, com.osmosis.superfluid.SuperfluidProto.SuperfluidAsset.Builder builderForValue) {
+        if (assetsBuilder_ == null) {
+          ensureAssetsIsMutable();
+          assets_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          assetsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.SuperfluidAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAssets(com.osmosis.superfluid.SuperfluidProto.SuperfluidAsset value) {
+        if (assetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetsIsMutable();
+          assets_.add(value);
+          onChanged();
+        } else {
+          assetsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.SuperfluidAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAssets(
+          int index, com.osmosis.superfluid.SuperfluidProto.SuperfluidAsset value) {
+        if (assetsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAssetsIsMutable();
+          assets_.add(index, value);
+          onChanged();
+        } else {
+          assetsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.SuperfluidAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAssets(
+          com.osmosis.superfluid.SuperfluidProto.SuperfluidAsset.Builder builderForValue) {
+        if (assetsBuilder_ == null) {
+          ensureAssetsIsMutable();
+          assets_.add(builderForValue.build());
+          onChanged();
+        } else {
+          assetsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.SuperfluidAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAssets(
+          int index, com.osmosis.superfluid.SuperfluidProto.SuperfluidAsset.Builder builderForValue) {
+        if (assetsBuilder_ == null) {
+          ensureAssetsIsMutable();
+          assets_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          assetsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.SuperfluidAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllAssets(
+          java.lang.Iterable<? extends com.osmosis.superfluid.SuperfluidProto.SuperfluidAsset> values) {
+        if (assetsBuilder_ == null) {
+          ensureAssetsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, assets_);
+          onChanged();
+        } else {
+          assetsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.SuperfluidAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearAssets() {
+        if (assetsBuilder_ == null) {
+          assets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          assetsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.SuperfluidAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeAssets(int index) {
+        if (assetsBuilder_ == null) {
+          ensureAssetsIsMutable();
+          assets_.remove(index);
+          onChanged();
+        } else {
+          assetsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.SuperfluidAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.superfluid.SuperfluidProto.SuperfluidAsset.Builder getAssetsBuilder(
+          int index) {
+        return getAssetsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.SuperfluidAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.superfluid.SuperfluidProto.SuperfluidAssetOrBuilder getAssetsOrBuilder(
+          int index) {
+        if (assetsBuilder_ == null) {
+          return assets_.get(index);  } else {
+          return assetsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.SuperfluidAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.osmosis.superfluid.SuperfluidProto.SuperfluidAssetOrBuilder> 
+           getAssetsOrBuilderList() {
+        if (assetsBuilder_ != null) {
+          return assetsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(assets_);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.SuperfluidAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.superfluid.SuperfluidProto.SuperfluidAsset.Builder addAssetsBuilder() {
+        return getAssetsFieldBuilder().addBuilder(
+            com.osmosis.superfluid.SuperfluidProto.SuperfluidAsset.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.SuperfluidAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public com.osmosis.superfluid.SuperfluidProto.SuperfluidAsset.Builder addAssetsBuilder(
+          int index) {
+        return getAssetsFieldBuilder().addBuilder(
+            index, com.osmosis.superfluid.SuperfluidProto.SuperfluidAsset.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .osmosis.superfluid.SuperfluidAsset assets = 3 [json_name = "assets", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.osmosis.superfluid.SuperfluidProto.SuperfluidAsset.Builder> 
+           getAssetsBuilderList() {
+        return getAssetsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.superfluid.SuperfluidProto.SuperfluidAsset, com.osmosis.superfluid.SuperfluidProto.SuperfluidAsset.Builder, com.osmosis.superfluid.SuperfluidProto.SuperfluidAssetOrBuilder> 
+          getAssetsFieldBuilder() {
+        if (assetsBuilder_ == null) {
+          assetsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.osmosis.superfluid.SuperfluidProto.SuperfluidAsset, com.osmosis.superfluid.SuperfluidProto.SuperfluidAsset.Builder, com.osmosis.superfluid.SuperfluidProto.SuperfluidAssetOrBuilder>(
+                  assets_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          assets_ = null;
+        }
+        return assetsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.superfluid.v1beta1.SetSuperfluidAssetsProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.superfluid.v1beta1.SetSuperfluidAssetsProposal)
+    private static final com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposal();
+    }
+
+    public static com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SetSuperfluidAssetsProposal>
+        PARSER = new com.google.protobuf.AbstractParser<SetSuperfluidAssetsProposal>() {
+      @java.lang.Override
+      public SetSuperfluidAssetsProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SetSuperfluidAssetsProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SetSuperfluidAssetsProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.superfluid.v1beta1.GovProto.SetSuperfluidAssetsProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RemoveSuperfluidAssetsProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.superfluid.v1beta1.RemoveSuperfluidAssetsProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>repeated string superfluid_asset_denoms = 3 [json_name = "superfluidAssetDenoms"];</code>
+     * @return A list containing the superfluidAssetDenoms.
+     */
+    java.util.List<java.lang.String>
+        getSuperfluidAssetDenomsList();
+    /**
+     * <code>repeated string superfluid_asset_denoms = 3 [json_name = "superfluidAssetDenoms"];</code>
+     * @return The count of superfluidAssetDenoms.
+     */
+    int getSuperfluidAssetDenomsCount();
+    /**
+     * <code>repeated string superfluid_asset_denoms = 3 [json_name = "superfluidAssetDenoms"];</code>
+     * @param index The index of the element to return.
+     * @return The superfluidAssetDenoms at the given index.
+     */
+    java.lang.String getSuperfluidAssetDenoms(int index);
+    /**
+     * <code>repeated string superfluid_asset_denoms = 3 [json_name = "superfluidAssetDenoms"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the superfluidAssetDenoms at the given index.
+     */
+    com.google.protobuf.ByteString
+        getSuperfluidAssetDenomsBytes(int index);
+  }
+  /**
+   * <pre>
+   * RemoveSuperfluidAssetsProposal is a gov Content type to remove the superfluid
+   * assets by denom
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.superfluid.v1beta1.RemoveSuperfluidAssetsProposal}
+   */
+  public static final class RemoveSuperfluidAssetsProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.superfluid.v1beta1.RemoveSuperfluidAssetsProposal)
+      RemoveSuperfluidAssetsProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RemoveSuperfluidAssetsProposal.newBuilder() to construct.
+    private RemoveSuperfluidAssetsProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RemoveSuperfluidAssetsProposal() {
+      title_ = "";
+      description_ = "";
+      superfluidAssetDenoms_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RemoveSuperfluidAssetsProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.superfluid.v1beta1.GovProto.internal_static_osmosis_superfluid_v1beta1_RemoveSuperfluidAssetsProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.superfluid.v1beta1.GovProto.internal_static_osmosis_superfluid_v1beta1_RemoveSuperfluidAssetsProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.superfluid.v1beta1.GovProto.RemoveSuperfluidAssetsProposal.class, com.osmosis.superfluid.v1beta1.GovProto.RemoveSuperfluidAssetsProposal.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUPERFLUID_ASSET_DENOMS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList superfluidAssetDenoms_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string superfluid_asset_denoms = 3 [json_name = "superfluidAssetDenoms"];</code>
+     * @return A list containing the superfluidAssetDenoms.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSuperfluidAssetDenomsList() {
+      return superfluidAssetDenoms_;
+    }
+    /**
+     * <code>repeated string superfluid_asset_denoms = 3 [json_name = "superfluidAssetDenoms"];</code>
+     * @return The count of superfluidAssetDenoms.
+     */
+    public int getSuperfluidAssetDenomsCount() {
+      return superfluidAssetDenoms_.size();
+    }
+    /**
+     * <code>repeated string superfluid_asset_denoms = 3 [json_name = "superfluidAssetDenoms"];</code>
+     * @param index The index of the element to return.
+     * @return The superfluidAssetDenoms at the given index.
+     */
+    public java.lang.String getSuperfluidAssetDenoms(int index) {
+      return superfluidAssetDenoms_.get(index);
+    }
+    /**
+     * <code>repeated string superfluid_asset_denoms = 3 [json_name = "superfluidAssetDenoms"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the superfluidAssetDenoms at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getSuperfluidAssetDenomsBytes(int index) {
+      return superfluidAssetDenoms_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      for (int i = 0; i < superfluidAssetDenoms_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, superfluidAssetDenoms_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < superfluidAssetDenoms_.size(); i++) {
+          dataSize += computeStringSizeNoTag(superfluidAssetDenoms_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getSuperfluidAssetDenomsList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.superfluid.v1beta1.GovProto.RemoveSuperfluidAssetsProposal)) {
+        return super.equals(obj);
+      }
+      com.osmosis.superfluid.v1beta1.GovProto.RemoveSuperfluidAssetsProposal other = (com.osmosis.superfluid.v1beta1.GovProto.RemoveSuperfluidAssetsProposal) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getSuperfluidAssetDenomsList()
+          .equals(other.getSuperfluidAssetDenomsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (getSuperfluidAssetDenomsCount() > 0) {
+        hash = (37 * hash) + SUPERFLUID_ASSET_DENOMS_FIELD_NUMBER;
+        hash = (53 * hash) + getSuperfluidAssetDenomsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.superfluid.v1beta1.GovProto.RemoveSuperfluidAssetsProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.superfluid.v1beta1.GovProto.RemoveSuperfluidAssetsProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.v1beta1.GovProto.RemoveSuperfluidAssetsProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.superfluid.v1beta1.GovProto.RemoveSuperfluidAssetsProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.v1beta1.GovProto.RemoveSuperfluidAssetsProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.superfluid.v1beta1.GovProto.RemoveSuperfluidAssetsProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.v1beta1.GovProto.RemoveSuperfluidAssetsProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.superfluid.v1beta1.GovProto.RemoveSuperfluidAssetsProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.superfluid.v1beta1.GovProto.RemoveSuperfluidAssetsProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.superfluid.v1beta1.GovProto.RemoveSuperfluidAssetsProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.v1beta1.GovProto.RemoveSuperfluidAssetsProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.superfluid.v1beta1.GovProto.RemoveSuperfluidAssetsProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.superfluid.v1beta1.GovProto.RemoveSuperfluidAssetsProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * RemoveSuperfluidAssetsProposal is a gov Content type to remove the superfluid
+     * assets by denom
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.superfluid.v1beta1.RemoveSuperfluidAssetsProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.superfluid.v1beta1.RemoveSuperfluidAssetsProposal)
+        com.osmosis.superfluid.v1beta1.GovProto.RemoveSuperfluidAssetsProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.superfluid.v1beta1.GovProto.internal_static_osmosis_superfluid_v1beta1_RemoveSuperfluidAssetsProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.superfluid.v1beta1.GovProto.internal_static_osmosis_superfluid_v1beta1_RemoveSuperfluidAssetsProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.superfluid.v1beta1.GovProto.RemoveSuperfluidAssetsProposal.class, com.osmosis.superfluid.v1beta1.GovProto.RemoveSuperfluidAssetsProposal.Builder.class);
+      }
+
+      // Construct using com.osmosis.superfluid.v1beta1.GovProto.RemoveSuperfluidAssetsProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        superfluidAssetDenoms_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.superfluid.v1beta1.GovProto.internal_static_osmosis_superfluid_v1beta1_RemoveSuperfluidAssetsProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.superfluid.v1beta1.GovProto.RemoveSuperfluidAssetsProposal getDefaultInstanceForType() {
+        return com.osmosis.superfluid.v1beta1.GovProto.RemoveSuperfluidAssetsProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.superfluid.v1beta1.GovProto.RemoveSuperfluidAssetsProposal build() {
+        com.osmosis.superfluid.v1beta1.GovProto.RemoveSuperfluidAssetsProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.superfluid.v1beta1.GovProto.RemoveSuperfluidAssetsProposal buildPartial() {
+        com.osmosis.superfluid.v1beta1.GovProto.RemoveSuperfluidAssetsProposal result = new com.osmosis.superfluid.v1beta1.GovProto.RemoveSuperfluidAssetsProposal(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.osmosis.superfluid.v1beta1.GovProto.RemoveSuperfluidAssetsProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          superfluidAssetDenoms_.makeImmutable();
+          result.superfluidAssetDenoms_ = superfluidAssetDenoms_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.superfluid.v1beta1.GovProto.RemoveSuperfluidAssetsProposal) {
+          return mergeFrom((com.osmosis.superfluid.v1beta1.GovProto.RemoveSuperfluidAssetsProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.superfluid.v1beta1.GovProto.RemoveSuperfluidAssetsProposal other) {
+        if (other == com.osmosis.superfluid.v1beta1.GovProto.RemoveSuperfluidAssetsProposal.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.superfluidAssetDenoms_.isEmpty()) {
+          if (superfluidAssetDenoms_.isEmpty()) {
+            superfluidAssetDenoms_ = other.superfluidAssetDenoms_;
+            bitField0_ |= 0x00000004;
+          } else {
+            ensureSuperfluidAssetDenomsIsMutable();
+            superfluidAssetDenoms_.addAll(other.superfluidAssetDenoms_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureSuperfluidAssetDenomsIsMutable();
+                superfluidAssetDenoms_.add(s);
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList superfluidAssetDenoms_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureSuperfluidAssetDenomsIsMutable() {
+        if (!superfluidAssetDenoms_.isModifiable()) {
+          superfluidAssetDenoms_ = new com.google.protobuf.LazyStringArrayList(superfluidAssetDenoms_);
+        }
+        bitField0_ |= 0x00000004;
+      }
+      /**
+       * <code>repeated string superfluid_asset_denoms = 3 [json_name = "superfluidAssetDenoms"];</code>
+       * @return A list containing the superfluidAssetDenoms.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSuperfluidAssetDenomsList() {
+        superfluidAssetDenoms_.makeImmutable();
+        return superfluidAssetDenoms_;
+      }
+      /**
+       * <code>repeated string superfluid_asset_denoms = 3 [json_name = "superfluidAssetDenoms"];</code>
+       * @return The count of superfluidAssetDenoms.
+       */
+      public int getSuperfluidAssetDenomsCount() {
+        return superfluidAssetDenoms_.size();
+      }
+      /**
+       * <code>repeated string superfluid_asset_denoms = 3 [json_name = "superfluidAssetDenoms"];</code>
+       * @param index The index of the element to return.
+       * @return The superfluidAssetDenoms at the given index.
+       */
+      public java.lang.String getSuperfluidAssetDenoms(int index) {
+        return superfluidAssetDenoms_.get(index);
+      }
+      /**
+       * <code>repeated string superfluid_asset_denoms = 3 [json_name = "superfluidAssetDenoms"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the superfluidAssetDenoms at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getSuperfluidAssetDenomsBytes(int index) {
+        return superfluidAssetDenoms_.getByteString(index);
+      }
+      /**
+       * <code>repeated string superfluid_asset_denoms = 3 [json_name = "superfluidAssetDenoms"];</code>
+       * @param index The index to set the value at.
+       * @param value The superfluidAssetDenoms to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSuperfluidAssetDenoms(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureSuperfluidAssetDenomsIsMutable();
+        superfluidAssetDenoms_.set(index, value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string superfluid_asset_denoms = 3 [json_name = "superfluidAssetDenoms"];</code>
+       * @param value The superfluidAssetDenoms to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSuperfluidAssetDenoms(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureSuperfluidAssetDenomsIsMutable();
+        superfluidAssetDenoms_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string superfluid_asset_denoms = 3 [json_name = "superfluidAssetDenoms"];</code>
+       * @param values The superfluidAssetDenoms to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSuperfluidAssetDenoms(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSuperfluidAssetDenomsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, superfluidAssetDenoms_);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string superfluid_asset_denoms = 3 [json_name = "superfluidAssetDenoms"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSuperfluidAssetDenoms() {
+        superfluidAssetDenoms_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string superfluid_asset_denoms = 3 [json_name = "superfluidAssetDenoms"];</code>
+       * @param value The bytes of the superfluidAssetDenoms to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSuperfluidAssetDenomsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureSuperfluidAssetDenomsIsMutable();
+        superfluidAssetDenoms_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.superfluid.v1beta1.RemoveSuperfluidAssetsProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.superfluid.v1beta1.RemoveSuperfluidAssetsProposal)
+    private static final com.osmosis.superfluid.v1beta1.GovProto.RemoveSuperfluidAssetsProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.superfluid.v1beta1.GovProto.RemoveSuperfluidAssetsProposal();
+    }
+
+    public static com.osmosis.superfluid.v1beta1.GovProto.RemoveSuperfluidAssetsProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RemoveSuperfluidAssetsProposal>
+        PARSER = new com.google.protobuf.AbstractParser<RemoveSuperfluidAssetsProposal>() {
+      @java.lang.Override
+      public RemoveSuperfluidAssetsProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RemoveSuperfluidAssetsProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RemoveSuperfluidAssetsProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.superfluid.v1beta1.GovProto.RemoveSuperfluidAssetsProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateUnpoolWhiteListProposalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.superfluid.v1beta1.UpdateUnpoolWhiteListProposal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>repeated uint64 ids = 3 [json_name = "ids"];</code>
+     * @return A list containing the ids.
+     */
+    java.util.List<java.lang.Long> getIdsList();
+    /**
+     * <code>repeated uint64 ids = 3 [json_name = "ids"];</code>
+     * @return The count of ids.
+     */
+    int getIdsCount();
+    /**
+     * <code>repeated uint64 ids = 3 [json_name = "ids"];</code>
+     * @param index The index of the element to return.
+     * @return The ids at the given index.
+     */
+    long getIds(int index);
+
+    /**
+     * <code>bool is_overwrite = 4 [json_name = "isOverwrite"];</code>
+     * @return The isOverwrite.
+     */
+    boolean getIsOverwrite();
+  }
+  /**
+   * <pre>
+   * UpdateUnpoolWhiteListProposal is a gov Content type to update the
+   * allowed list of pool ids.
+   * </pre>
+   *
+   * Protobuf type {@code osmosis.superfluid.v1beta1.UpdateUnpoolWhiteListProposal}
+   */
+  public static final class UpdateUnpoolWhiteListProposal extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.superfluid.v1beta1.UpdateUnpoolWhiteListProposal)
+      UpdateUnpoolWhiteListProposalOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateUnpoolWhiteListProposal.newBuilder() to construct.
+    private UpdateUnpoolWhiteListProposal(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateUnpoolWhiteListProposal() {
+      title_ = "";
+      description_ = "";
+      ids_ = emptyLongList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateUnpoolWhiteListProposal();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.superfluid.v1beta1.GovProto.internal_static_osmosis_superfluid_v1beta1_UpdateUnpoolWhiteListProposal_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.superfluid.v1beta1.GovProto.internal_static_osmosis_superfluid_v1beta1_UpdateUnpoolWhiteListProposal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal.class, com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IDS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.LongList ids_;
+    /**
+     * <code>repeated uint64 ids = 3 [json_name = "ids"];</code>
+     * @return A list containing the ids.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Long>
+        getIdsList() {
+      return ids_;
+    }
+    /**
+     * <code>repeated uint64 ids = 3 [json_name = "ids"];</code>
+     * @return The count of ids.
+     */
+    public int getIdsCount() {
+      return ids_.size();
+    }
+    /**
+     * <code>repeated uint64 ids = 3 [json_name = "ids"];</code>
+     * @param index The index of the element to return.
+     * @return The ids at the given index.
+     */
+    public long getIds(int index) {
+      return ids_.getLong(index);
+    }
+    private int idsMemoizedSerializedSize = -1;
+
+    public static final int IS_OVERWRITE_FIELD_NUMBER = 4;
+    private boolean isOverwrite_ = false;
+    /**
+     * <code>bool is_overwrite = 4 [json_name = "isOverwrite"];</code>
+     * @return The isOverwrite.
+     */
+    @java.lang.Override
+    public boolean getIsOverwrite() {
+      return isOverwrite_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (getIdsList().size() > 0) {
+        output.writeUInt32NoTag(26);
+        output.writeUInt32NoTag(idsMemoizedSerializedSize);
+      }
+      for (int i = 0; i < ids_.size(); i++) {
+        output.writeUInt64NoTag(ids_.getLong(i));
+      }
+      if (isOverwrite_ != false) {
+        output.writeBool(4, isOverwrite_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < ids_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt64SizeNoTag(ids_.getLong(i));
+        }
+        size += dataSize;
+        if (!getIdsList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        idsMemoizedSerializedSize = dataSize;
+      }
+      if (isOverwrite_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, isOverwrite_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal)) {
+        return super.equals(obj);
+      }
+      com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal other = (com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getIdsList()
+          .equals(other.getIdsList())) return false;
+      if (getIsOverwrite()
+          != other.getIsOverwrite()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (getIdsCount() > 0) {
+        hash = (37 * hash) + IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getIdsList().hashCode();
+      }
+      hash = (37 * hash) + IS_OVERWRITE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsOverwrite());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * UpdateUnpoolWhiteListProposal is a gov Content type to update the
+     * allowed list of pool ids.
+     * </pre>
+     *
+     * Protobuf type {@code osmosis.superfluid.v1beta1.UpdateUnpoolWhiteListProposal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.superfluid.v1beta1.UpdateUnpoolWhiteListProposal)
+        com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.superfluid.v1beta1.GovProto.internal_static_osmosis_superfluid_v1beta1_UpdateUnpoolWhiteListProposal_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.superfluid.v1beta1.GovProto.internal_static_osmosis_superfluid_v1beta1_UpdateUnpoolWhiteListProposal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal.class, com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal.Builder.class);
+      }
+
+      // Construct using com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        ids_ = emptyLongList();
+        isOverwrite_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.superfluid.v1beta1.GovProto.internal_static_osmosis_superfluid_v1beta1_UpdateUnpoolWhiteListProposal_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal getDefaultInstanceForType() {
+        return com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal build() {
+        com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal buildPartial() {
+        com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal result = new com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal result) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          ids_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.ids_ = ids_;
+      }
+
+      private void buildPartial0(com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.isOverwrite_ = isOverwrite_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal) {
+          return mergeFrom((com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal other) {
+        if (other == com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.ids_.isEmpty()) {
+          if (ids_.isEmpty()) {
+            ids_ = other.ids_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureIdsIsMutable();
+            ids_.addAll(other.ids_);
+          }
+          onChanged();
+        }
+        if (other.getIsOverwrite() != false) {
+          setIsOverwrite(other.getIsOverwrite());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                long v = input.readUInt64();
+                ensureIdsIsMutable();
+                ids_.addLong(v);
+                break;
+              } // case 24
+              case 26: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureIdsIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  ids_.addLong(input.readUInt64());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 26
+              case 32: {
+                isOverwrite_ = input.readBool();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.LongList ids_ = emptyLongList();
+      private void ensureIdsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          ids_ = mutableCopy(ids_);
+          bitField0_ |= 0x00000004;
+        }
+      }
+      /**
+       * <code>repeated uint64 ids = 3 [json_name = "ids"];</code>
+       * @return A list containing the ids.
+       */
+      public java.util.List<java.lang.Long>
+          getIdsList() {
+        return ((bitField0_ & 0x00000004) != 0) ?
+                 java.util.Collections.unmodifiableList(ids_) : ids_;
+      }
+      /**
+       * <code>repeated uint64 ids = 3 [json_name = "ids"];</code>
+       * @return The count of ids.
+       */
+      public int getIdsCount() {
+        return ids_.size();
+      }
+      /**
+       * <code>repeated uint64 ids = 3 [json_name = "ids"];</code>
+       * @param index The index of the element to return.
+       * @return The ids at the given index.
+       */
+      public long getIds(int index) {
+        return ids_.getLong(index);
+      }
+      /**
+       * <code>repeated uint64 ids = 3 [json_name = "ids"];</code>
+       * @param index The index to set the value at.
+       * @param value The ids to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIds(
+          int index, long value) {
+
+        ensureIdsIsMutable();
+        ids_.setLong(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 ids = 3 [json_name = "ids"];</code>
+       * @param value The ids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addIds(long value) {
+
+        ensureIdsIsMutable();
+        ids_.addLong(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 ids = 3 [json_name = "ids"];</code>
+       * @param values The ids to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllIds(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, ids_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint64 ids = 3 [json_name = "ids"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIds() {
+        ids_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+
+      private boolean isOverwrite_ ;
+      /**
+       * <code>bool is_overwrite = 4 [json_name = "isOverwrite"];</code>
+       * @return The isOverwrite.
+       */
+      @java.lang.Override
+      public boolean getIsOverwrite() {
+        return isOverwrite_;
+      }
+      /**
+       * <code>bool is_overwrite = 4 [json_name = "isOverwrite"];</code>
+       * @param value The isOverwrite to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsOverwrite(boolean value) {
+
+        isOverwrite_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool is_overwrite = 4 [json_name = "isOverwrite"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsOverwrite() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        isOverwrite_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.superfluid.v1beta1.UpdateUnpoolWhiteListProposal)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.superfluid.v1beta1.UpdateUnpoolWhiteListProposal)
+    private static final com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal();
+    }
+
+    public static com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateUnpoolWhiteListProposal>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateUnpoolWhiteListProposal>() {
+      @java.lang.Override
+      public UpdateUnpoolWhiteListProposal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateUnpoolWhiteListProposal> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateUnpoolWhiteListProposal> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.superfluid.v1beta1.GovProto.UpdateUnpoolWhiteListProposal getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_superfluid_v1beta1_SetSuperfluidAssetsProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_superfluid_v1beta1_SetSuperfluidAssetsProposal_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_superfluid_v1beta1_RemoveSuperfluidAssetsProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_superfluid_v1beta1_RemoveSuperfluidAssetsProposal_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_superfluid_v1beta1_UpdateUnpoolWhiteListProposal_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_superfluid_v1beta1_UpdateUnpoolWhiteListProposal_fieldAccessorTable;
 
@@ -59,13 +3046,13 @@ public final class GovProto {
       " \001(\tR\013description\022\020\n\003ids\030\003 \003(\004R\003ids\022!\n\014i" +
       "s_overwrite\030\004 \001(\010R\013isOverwrite:N\210\240\037\000\230\240\037\000" +
       "\350\240\037\001\312\264-\032cosmos.gov.v1beta1.Content\212\347\260*\037o" +
-      "smosis/update-unpool-whitelistB\354\001\n\036com.o" +
-      "smosis.superfluid.v1beta1B\010GovProtoP\001Z6g" +
-      "ithub.com/osmosis-labs/osmosis/v15/x/sup" +
-      "erfluid/types\242\002\003OSX\252\002\032Osmosis.Superfluid" +
-      ".V1beta1\312\002\032Osmosis\\Superfluid\\V1beta1\342\002&" +
-      "Osmosis\\Superfluid\\V1beta1\\GPBMetadata\352\002" +
-      "\034Osmosis::Superfluid::V1beta1b\006proto3"
+      "smosis/update-unpool-whitelistB\352\001\n\036com.o" +
+      "smosis.superfluid.v1beta1B\010GovProtoZ6git" +
+      "hub.com/osmosis-labs/osmosis/v15/x/super" +
+      "fluid/types\242\002\003OSX\252\002\032Osmosis.Superfluid.V" +
+      "1beta1\312\002\032Osmosis\\Superfluid\\V1beta1\342\002&Os" +
+      "mosis\\Superfluid\\V1beta1\\GPBMetadata\352\002\034O" +
+      "smosis::Superfluid::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

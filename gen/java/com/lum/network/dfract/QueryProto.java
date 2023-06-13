@@ -14,44 +14,5564 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  /**
+   * Protobuf enum {@code lum.network.dfract.DepositsQueryType}
+   */
+  public enum DepositsQueryType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>PENDING_WITHDRAWAL = 0 [(.gogoproto.enumvalue_customname) = "TypePendingWithdrawal"];</code>
+     */
+    PENDING_WITHDRAWAL(0),
+    /**
+     * <code>PENDING_MINT = 1 [(.gogoproto.enumvalue_customname) = "TypePendingMint"];</code>
+     */
+    PENDING_MINT(1),
+    /**
+     * <code>MINTED = 2 [(.gogoproto.enumvalue_customname) = "TypeMinted"];</code>
+     */
+    MINTED(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>PENDING_WITHDRAWAL = 0 [(.gogoproto.enumvalue_customname) = "TypePendingWithdrawal"];</code>
+     */
+    public static final int PENDING_WITHDRAWAL_VALUE = 0;
+    /**
+     * <code>PENDING_MINT = 1 [(.gogoproto.enumvalue_customname) = "TypePendingMint"];</code>
+     */
+    public static final int PENDING_MINT_VALUE = 1;
+    /**
+     * <code>MINTED = 2 [(.gogoproto.enumvalue_customname) = "TypeMinted"];</code>
+     */
+    public static final int MINTED_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static DepositsQueryType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static DepositsQueryType forNumber(int value) {
+      switch (value) {
+        case 0: return PENDING_WITHDRAWAL;
+        case 1: return PENDING_MINT;
+        case 2: return MINTED;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<DepositsQueryType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        DepositsQueryType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<DepositsQueryType>() {
+            public DepositsQueryType findValueByNumber(int number) {
+              return DepositsQueryType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.lum.network.dfract.QueryProto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final DepositsQueryType[] VALUES = values();
+
+    public static DepositsQueryType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private DepositsQueryType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:lum.network.dfract.DepositsQueryType)
+  }
+
+  public interface QueryModuleAccountBalanceRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lum.network.dfract.QueryModuleAccountBalanceRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code lum.network.dfract.QueryModuleAccountBalanceRequest}
+   */
+  public static final class QueryModuleAccountBalanceRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lum.network.dfract.QueryModuleAccountBalanceRequest)
+      QueryModuleAccountBalanceRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryModuleAccountBalanceRequest.newBuilder() to construct.
+    private QueryModuleAccountBalanceRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryModuleAccountBalanceRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryModuleAccountBalanceRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryModuleAccountBalanceRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryModuleAccountBalanceRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceRequest.class, com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceRequest)) {
+        return super.equals(obj);
+      }
+      com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceRequest other = (com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lum.network.dfract.QueryModuleAccountBalanceRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lum.network.dfract.QueryModuleAccountBalanceRequest)
+        com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryModuleAccountBalanceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryModuleAccountBalanceRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceRequest.class, com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceRequest.Builder.class);
+      }
+
+      // Construct using com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryModuleAccountBalanceRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceRequest getDefaultInstanceForType() {
+        return com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceRequest build() {
+        com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceRequest buildPartial() {
+        com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceRequest result = new com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceRequest) {
+          return mergeFrom((com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceRequest other) {
+        if (other == com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lum.network.dfract.QueryModuleAccountBalanceRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:lum.network.dfract.QueryModuleAccountBalanceRequest)
+    private static final com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceRequest();
+    }
+
+    public static com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryModuleAccountBalanceRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryModuleAccountBalanceRequest>() {
+      @java.lang.Override
+      public QueryModuleAccountBalanceRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryModuleAccountBalanceRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryModuleAccountBalanceRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryModuleAccountBalanceResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lum.network.dfract.QueryModuleAccountBalanceResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin moduleAccountBalance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getModuleAccountBalanceList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin moduleAccountBalance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getModuleAccountBalance(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin moduleAccountBalance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    int getModuleAccountBalanceCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin moduleAccountBalance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getModuleAccountBalanceOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin moduleAccountBalance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getModuleAccountBalanceOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code lum.network.dfract.QueryModuleAccountBalanceResponse}
+   */
+  public static final class QueryModuleAccountBalanceResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lum.network.dfract.QueryModuleAccountBalanceResponse)
+      QueryModuleAccountBalanceResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryModuleAccountBalanceResponse.newBuilder() to construct.
+    private QueryModuleAccountBalanceResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryModuleAccountBalanceResponse() {
+      moduleAccountBalance_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryModuleAccountBalanceResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryModuleAccountBalanceResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryModuleAccountBalanceResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponse.class, com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponse.Builder.class);
+    }
+
+    public static final int MODULEACCOUNTBALANCE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> moduleAccountBalance_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin moduleAccountBalance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getModuleAccountBalanceList() {
+      return moduleAccountBalance_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin moduleAccountBalance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getModuleAccountBalanceOrBuilderList() {
+      return moduleAccountBalance_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin moduleAccountBalance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public int getModuleAccountBalanceCount() {
+      return moduleAccountBalance_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin moduleAccountBalance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getModuleAccountBalance(int index) {
+      return moduleAccountBalance_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.Coin moduleAccountBalance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getModuleAccountBalanceOrBuilder(
+        int index) {
+      return moduleAccountBalance_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < moduleAccountBalance_.size(); i++) {
+        output.writeMessage(1, moduleAccountBalance_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < moduleAccountBalance_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, moduleAccountBalance_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponse)) {
+        return super.equals(obj);
+      }
+      com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponse other = (com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponse) obj;
+
+      if (!getModuleAccountBalanceList()
+          .equals(other.getModuleAccountBalanceList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getModuleAccountBalanceCount() > 0) {
+        hash = (37 * hash) + MODULEACCOUNTBALANCE_FIELD_NUMBER;
+        hash = (53 * hash) + getModuleAccountBalanceList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lum.network.dfract.QueryModuleAccountBalanceResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lum.network.dfract.QueryModuleAccountBalanceResponse)
+        com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryModuleAccountBalanceResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryModuleAccountBalanceResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponse.class, com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponse.Builder.class);
+      }
+
+      // Construct using com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (moduleAccountBalanceBuilder_ == null) {
+          moduleAccountBalance_ = java.util.Collections.emptyList();
+        } else {
+          moduleAccountBalance_ = null;
+          moduleAccountBalanceBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryModuleAccountBalanceResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponse getDefaultInstanceForType() {
+        return com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponse build() {
+        com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponse buildPartial() {
+        com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponse result = new com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponse result) {
+        if (moduleAccountBalanceBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            moduleAccountBalance_ = java.util.Collections.unmodifiableList(moduleAccountBalance_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.moduleAccountBalance_ = moduleAccountBalance_;
+        } else {
+          result.moduleAccountBalance_ = moduleAccountBalanceBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponse) {
+          return mergeFrom((com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponse other) {
+        if (other == com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponse.getDefaultInstance()) return this;
+        if (moduleAccountBalanceBuilder_ == null) {
+          if (!other.moduleAccountBalance_.isEmpty()) {
+            if (moduleAccountBalance_.isEmpty()) {
+              moduleAccountBalance_ = other.moduleAccountBalance_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureModuleAccountBalanceIsMutable();
+              moduleAccountBalance_.addAll(other.moduleAccountBalance_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.moduleAccountBalance_.isEmpty()) {
+            if (moduleAccountBalanceBuilder_.isEmpty()) {
+              moduleAccountBalanceBuilder_.dispose();
+              moduleAccountBalanceBuilder_ = null;
+              moduleAccountBalance_ = other.moduleAccountBalance_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              moduleAccountBalanceBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getModuleAccountBalanceFieldBuilder() : null;
+            } else {
+              moduleAccountBalanceBuilder_.addAllMessages(other.moduleAccountBalance_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (moduleAccountBalanceBuilder_ == null) {
+                  ensureModuleAccountBalanceIsMutable();
+                  moduleAccountBalance_.add(m);
+                } else {
+                  moduleAccountBalanceBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> moduleAccountBalance_ =
+        java.util.Collections.emptyList();
+      private void ensureModuleAccountBalanceIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          moduleAccountBalance_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(moduleAccountBalance_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> moduleAccountBalanceBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin moduleAccountBalance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getModuleAccountBalanceList() {
+        if (moduleAccountBalanceBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(moduleAccountBalance_);
+        } else {
+          return moduleAccountBalanceBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin moduleAccountBalance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public int getModuleAccountBalanceCount() {
+        if (moduleAccountBalanceBuilder_ == null) {
+          return moduleAccountBalance_.size();
+        } else {
+          return moduleAccountBalanceBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin moduleAccountBalance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getModuleAccountBalance(int index) {
+        if (moduleAccountBalanceBuilder_ == null) {
+          return moduleAccountBalance_.get(index);
+        } else {
+          return moduleAccountBalanceBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin moduleAccountBalance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setModuleAccountBalance(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (moduleAccountBalanceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureModuleAccountBalanceIsMutable();
+          moduleAccountBalance_.set(index, value);
+          onChanged();
+        } else {
+          moduleAccountBalanceBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin moduleAccountBalance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder setModuleAccountBalance(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (moduleAccountBalanceBuilder_ == null) {
+          ensureModuleAccountBalanceIsMutable();
+          moduleAccountBalance_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          moduleAccountBalanceBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin moduleAccountBalance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addModuleAccountBalance(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (moduleAccountBalanceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureModuleAccountBalanceIsMutable();
+          moduleAccountBalance_.add(value);
+          onChanged();
+        } else {
+          moduleAccountBalanceBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin moduleAccountBalance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addModuleAccountBalance(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (moduleAccountBalanceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureModuleAccountBalanceIsMutable();
+          moduleAccountBalance_.add(index, value);
+          onChanged();
+        } else {
+          moduleAccountBalanceBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin moduleAccountBalance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addModuleAccountBalance(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (moduleAccountBalanceBuilder_ == null) {
+          ensureModuleAccountBalanceIsMutable();
+          moduleAccountBalance_.add(builderForValue.build());
+          onChanged();
+        } else {
+          moduleAccountBalanceBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin moduleAccountBalance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addModuleAccountBalance(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (moduleAccountBalanceBuilder_ == null) {
+          ensureModuleAccountBalanceIsMutable();
+          moduleAccountBalance_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          moduleAccountBalanceBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin moduleAccountBalance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder addAllModuleAccountBalance(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (moduleAccountBalanceBuilder_ == null) {
+          ensureModuleAccountBalanceIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, moduleAccountBalance_);
+          onChanged();
+        } else {
+          moduleAccountBalanceBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin moduleAccountBalance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder clearModuleAccountBalance() {
+        if (moduleAccountBalanceBuilder_ == null) {
+          moduleAccountBalance_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          moduleAccountBalanceBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin moduleAccountBalance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public Builder removeModuleAccountBalance(int index) {
+        if (moduleAccountBalanceBuilder_ == null) {
+          ensureModuleAccountBalanceIsMutable();
+          moduleAccountBalance_.remove(index);
+          onChanged();
+        } else {
+          moduleAccountBalanceBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin moduleAccountBalance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getModuleAccountBalanceBuilder(
+          int index) {
+        return getModuleAccountBalanceFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin moduleAccountBalance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getModuleAccountBalanceOrBuilder(
+          int index) {
+        if (moduleAccountBalanceBuilder_ == null) {
+          return moduleAccountBalance_.get(index);  } else {
+          return moduleAccountBalanceBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin moduleAccountBalance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getModuleAccountBalanceOrBuilderList() {
+        if (moduleAccountBalanceBuilder_ != null) {
+          return moduleAccountBalanceBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(moduleAccountBalance_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin moduleAccountBalance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addModuleAccountBalanceBuilder() {
+        return getModuleAccountBalanceFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin moduleAccountBalance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addModuleAccountBalanceBuilder(
+          int index) {
+        return getModuleAccountBalanceFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.Coin moduleAccountBalance = 1 [json_name = "moduleAccountBalance", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"coins&#92;"", (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.Coins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getModuleAccountBalanceBuilderList() {
+        return getModuleAccountBalanceFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getModuleAccountBalanceFieldBuilder() {
+        if (moduleAccountBalanceBuilder_ == null) {
+          moduleAccountBalanceBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  moduleAccountBalance_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          moduleAccountBalance_ = null;
+        }
+        return moduleAccountBalanceBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lum.network.dfract.QueryModuleAccountBalanceResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:lum.network.dfract.QueryModuleAccountBalanceResponse)
+    private static final com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponse();
+    }
+
+    public static com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryModuleAccountBalanceResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryModuleAccountBalanceResponse>() {
+      @java.lang.Override
+      public QueryModuleAccountBalanceResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryModuleAccountBalanceResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryModuleAccountBalanceResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lum.network.dfract.QueryProto.QueryModuleAccountBalanceResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lum.network.dfract.QueryParamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code lum.network.dfract.QueryParamsRequest}
+   */
+  public static final class QueryParamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lum.network.dfract.QueryParamsRequest)
+      QueryParamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsRequest.newBuilder() to construct.
+    private QueryParamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryParamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryParamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lum.network.dfract.QueryProto.QueryParamsRequest.class, com.lum.network.dfract.QueryProto.QueryParamsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lum.network.dfract.QueryProto.QueryParamsRequest)) {
+        return super.equals(obj);
+      }
+      com.lum.network.dfract.QueryProto.QueryParamsRequest other = (com.lum.network.dfract.QueryProto.QueryParamsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lum.network.dfract.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryParamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryParamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryParamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryParamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lum.network.dfract.QueryProto.QueryParamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lum.network.dfract.QueryProto.QueryParamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lum.network.dfract.QueryProto.QueryParamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lum.network.dfract.QueryParamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lum.network.dfract.QueryParamsRequest)
+        com.lum.network.dfract.QueryProto.QueryParamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryParamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lum.network.dfract.QueryProto.QueryParamsRequest.class, com.lum.network.dfract.QueryProto.QueryParamsRequest.Builder.class);
+      }
+
+      // Construct using com.lum.network.dfract.QueryProto.QueryParamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lum.network.dfract.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+        return com.lum.network.dfract.QueryProto.QueryParamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lum.network.dfract.QueryProto.QueryParamsRequest build() {
+        com.lum.network.dfract.QueryProto.QueryParamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lum.network.dfract.QueryProto.QueryParamsRequest buildPartial() {
+        com.lum.network.dfract.QueryProto.QueryParamsRequest result = new com.lum.network.dfract.QueryProto.QueryParamsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lum.network.dfract.QueryProto.QueryParamsRequest) {
+          return mergeFrom((com.lum.network.dfract.QueryProto.QueryParamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lum.network.dfract.QueryProto.QueryParamsRequest other) {
+        if (other == com.lum.network.dfract.QueryProto.QueryParamsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lum.network.dfract.QueryParamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:lum.network.dfract.QueryParamsRequest)
+    private static final com.lum.network.dfract.QueryProto.QueryParamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lum.network.dfract.QueryProto.QueryParamsRequest();
+    }
+
+    public static com.lum.network.dfract.QueryProto.QueryParamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsRequest>() {
+      @java.lang.Override
+      public QueryParamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lum.network.dfract.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lum.network.dfract.QueryParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.lum.network.dfract.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.lum.network.dfract.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.lum.network.dfract.ParamsProto.Params getParams();
+    /**
+     * <code>.lum.network.dfract.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.lum.network.dfract.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code lum.network.dfract.QueryParamsResponse}
+   */
+  public static final class QueryParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lum.network.dfract.QueryParamsResponse)
+      QueryParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsResponse.newBuilder() to construct.
+    private QueryParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lum.network.dfract.QueryProto.QueryParamsResponse.class, com.lum.network.dfract.QueryProto.QueryParamsResponse.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.lum.network.dfract.ParamsProto.Params params_;
+    /**
+     * <code>.lum.network.dfract.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.lum.network.dfract.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.lum.network.dfract.ParamsProto.Params getParams() {
+      return params_ == null ? com.lum.network.dfract.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.lum.network.dfract.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.lum.network.dfract.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.lum.network.dfract.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lum.network.dfract.QueryProto.QueryParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.lum.network.dfract.QueryProto.QueryParamsResponse other = (com.lum.network.dfract.QueryProto.QueryParamsResponse) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lum.network.dfract.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lum.network.dfract.QueryProto.QueryParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lum.network.dfract.QueryProto.QueryParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lum.network.dfract.QueryProto.QueryParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lum.network.dfract.QueryParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lum.network.dfract.QueryParamsResponse)
+        com.lum.network.dfract.QueryProto.QueryParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lum.network.dfract.QueryProto.QueryParamsResponse.class, com.lum.network.dfract.QueryProto.QueryParamsResponse.Builder.class);
+      }
+
+      // Construct using com.lum.network.dfract.QueryProto.QueryParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lum.network.dfract.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+        return com.lum.network.dfract.QueryProto.QueryParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lum.network.dfract.QueryProto.QueryParamsResponse build() {
+        com.lum.network.dfract.QueryProto.QueryParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lum.network.dfract.QueryProto.QueryParamsResponse buildPartial() {
+        com.lum.network.dfract.QueryProto.QueryParamsResponse result = new com.lum.network.dfract.QueryProto.QueryParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.lum.network.dfract.QueryProto.QueryParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lum.network.dfract.QueryProto.QueryParamsResponse) {
+          return mergeFrom((com.lum.network.dfract.QueryProto.QueryParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lum.network.dfract.QueryProto.QueryParamsResponse other) {
+        if (other == com.lum.network.dfract.QueryProto.QueryParamsResponse.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.lum.network.dfract.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.lum.network.dfract.ParamsProto.Params, com.lum.network.dfract.ParamsProto.Params.Builder, com.lum.network.dfract.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.lum.network.dfract.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.lum.network.dfract.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.lum.network.dfract.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.lum.network.dfract.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.lum.network.dfract.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.lum.network.dfract.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.dfract.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.lum.network.dfract.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.dfract.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.lum.network.dfract.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.lum.network.dfract.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.dfract.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.dfract.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.lum.network.dfract.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.lum.network.dfract.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.lum.network.dfract.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.lum.network.dfract.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.lum.network.dfract.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.lum.network.dfract.ParamsProto.Params, com.lum.network.dfract.ParamsProto.Params.Builder, com.lum.network.dfract.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.lum.network.dfract.ParamsProto.Params, com.lum.network.dfract.ParamsProto.Params.Builder, com.lum.network.dfract.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lum.network.dfract.QueryParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:lum.network.dfract.QueryParamsResponse)
+    private static final com.lum.network.dfract.QueryProto.QueryParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lum.network.dfract.QueryProto.QueryParamsResponse();
+    }
+
+    public static com.lum.network.dfract.QueryProto.QueryParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsResponse>() {
+      @java.lang.Override
+      public QueryParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lum.network.dfract.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryGetDepositsForAddressRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lum.network.dfract.QueryGetDepositsForAddressRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+  }
+  /**
+   * Protobuf type {@code lum.network.dfract.QueryGetDepositsForAddressRequest}
+   */
+  public static final class QueryGetDepositsForAddressRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lum.network.dfract.QueryGetDepositsForAddressRequest)
+      QueryGetDepositsForAddressRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryGetDepositsForAddressRequest.newBuilder() to construct.
+    private QueryGetDepositsForAddressRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryGetDepositsForAddressRequest() {
+      address_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryGetDepositsForAddressRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryGetDepositsForAddressRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryGetDepositsForAddressRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressRequest.class, com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressRequest.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressRequest)) {
+        return super.equals(obj);
+      }
+      com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressRequest other = (com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressRequest) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lum.network.dfract.QueryGetDepositsForAddressRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lum.network.dfract.QueryGetDepositsForAddressRequest)
+        com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryGetDepositsForAddressRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryGetDepositsForAddressRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressRequest.class, com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressRequest.Builder.class);
+      }
+
+      // Construct using com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryGetDepositsForAddressRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressRequest getDefaultInstanceForType() {
+        return com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressRequest build() {
+        com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressRequest buildPartial() {
+        com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressRequest result = new com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressRequest) {
+          return mergeFrom((com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressRequest other) {
+        if (other == com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressRequest.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lum.network.dfract.QueryGetDepositsForAddressRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:lum.network.dfract.QueryGetDepositsForAddressRequest)
+    private static final com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressRequest();
+    }
+
+    public static com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryGetDepositsForAddressRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGetDepositsForAddressRequest>() {
+      @java.lang.Override
+      public QueryGetDepositsForAddressRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryGetDepositsForAddressRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryGetDepositsForAddressRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryFetchDepositsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lum.network.dfract.QueryFetchDepositsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+
+    /**
+     * <code>.lum.network.dfract.DepositsQueryType type = 2 [json_name = "type"];</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    int getTypeValue();
+    /**
+     * <code>.lum.network.dfract.DepositsQueryType type = 2 [json_name = "type"];</code>
+     * @return The type.
+     */
+    com.lum.network.dfract.QueryProto.DepositsQueryType getType();
+  }
+  /**
+   * Protobuf type {@code lum.network.dfract.QueryFetchDepositsRequest}
+   */
+  public static final class QueryFetchDepositsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lum.network.dfract.QueryFetchDepositsRequest)
+      QueryFetchDepositsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryFetchDepositsRequest.newBuilder() to construct.
+    private QueryFetchDepositsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryFetchDepositsRequest() {
+      type_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryFetchDepositsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryFetchDepositsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryFetchDepositsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest.class, com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest.Builder.class);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 1;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 2;
+    private int type_ = 0;
+    /**
+     * <code>.lum.network.dfract.DepositsQueryType type = 2 [json_name = "type"];</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    @java.lang.Override public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <code>.lum.network.dfract.DepositsQueryType type = 2 [json_name = "type"];</code>
+     * @return The type.
+     */
+    @java.lang.Override public com.lum.network.dfract.QueryProto.DepositsQueryType getType() {
+      com.lum.network.dfract.QueryProto.DepositsQueryType result = com.lum.network.dfract.QueryProto.DepositsQueryType.forNumber(type_);
+      return result == null ? com.lum.network.dfract.QueryProto.DepositsQueryType.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (pagination_ != null) {
+        output.writeMessage(1, getPagination());
+      }
+      if (type_ != com.lum.network.dfract.QueryProto.DepositsQueryType.PENDING_WITHDRAWAL.getNumber()) {
+        output.writeEnum(2, type_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPagination());
+      }
+      if (type_ != com.lum.network.dfract.QueryProto.DepositsQueryType.PENDING_WITHDRAWAL.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, type_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest)) {
+        return super.equals(obj);
+      }
+      com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest other = (com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest) obj;
+
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (type_ != other.type_) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + type_;
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lum.network.dfract.QueryFetchDepositsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lum.network.dfract.QueryFetchDepositsRequest)
+        com.lum.network.dfract.QueryProto.QueryFetchDepositsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryFetchDepositsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryFetchDepositsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest.class, com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest.Builder.class);
+      }
+
+      // Construct using com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        type_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryFetchDepositsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest getDefaultInstanceForType() {
+        return com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest build() {
+        com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest buildPartial() {
+        com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest result = new com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.type_ = type_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest) {
+          return mergeFrom((com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest other) {
+        if (other == com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest.getDefaultInstance()) return this;
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        if (other.type_ != 0) {
+          setTypeValue(other.getTypeValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                type_ = input.readEnum();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 1 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+
+      private int type_ = 0;
+      /**
+       * <code>.lum.network.dfract.DepositsQueryType type = 2 [json_name = "type"];</code>
+       * @return The enum numeric value on the wire for type.
+       */
+      @java.lang.Override public int getTypeValue() {
+        return type_;
+      }
+      /**
+       * <code>.lum.network.dfract.DepositsQueryType type = 2 [json_name = "type"];</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeValue(int value) {
+        type_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.dfract.DepositsQueryType type = 2 [json_name = "type"];</code>
+       * @return The type.
+       */
+      @java.lang.Override
+      public com.lum.network.dfract.QueryProto.DepositsQueryType getType() {
+        com.lum.network.dfract.QueryProto.DepositsQueryType result = com.lum.network.dfract.QueryProto.DepositsQueryType.forNumber(type_);
+        return result == null ? com.lum.network.dfract.QueryProto.DepositsQueryType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.lum.network.dfract.DepositsQueryType type = 2 [json_name = "type"];</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(com.lum.network.dfract.QueryProto.DepositsQueryType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.dfract.DepositsQueryType type = 2 [json_name = "type"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lum.network.dfract.QueryFetchDepositsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:lum.network.dfract.QueryFetchDepositsRequest)
+    private static final com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest();
+    }
+
+    public static com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryFetchDepositsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryFetchDepositsRequest>() {
+      @java.lang.Override
+      public QueryFetchDepositsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryFetchDepositsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryFetchDepositsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lum.network.dfract.QueryProto.QueryFetchDepositsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryGetDepositsForAddressResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lum.network.dfract.QueryGetDepositsForAddressResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.lum.network.dfract.Deposit deposits_pending_withdrawal = 1 [json_name = "depositsPendingWithdrawal"];</code>
+     * @return Whether the depositsPendingWithdrawal field is set.
+     */
+    boolean hasDepositsPendingWithdrawal();
+    /**
+     * <code>.lum.network.dfract.Deposit deposits_pending_withdrawal = 1 [json_name = "depositsPendingWithdrawal"];</code>
+     * @return The depositsPendingWithdrawal.
+     */
+    com.lum.network.dfract.DepositProto.Deposit getDepositsPendingWithdrawal();
+    /**
+     * <code>.lum.network.dfract.Deposit deposits_pending_withdrawal = 1 [json_name = "depositsPendingWithdrawal"];</code>
+     */
+    com.lum.network.dfract.DepositProto.DepositOrBuilder getDepositsPendingWithdrawalOrBuilder();
+
+    /**
+     * <code>.lum.network.dfract.Deposit deposits_pending_mint = 2 [json_name = "depositsPendingMint"];</code>
+     * @return Whether the depositsPendingMint field is set.
+     */
+    boolean hasDepositsPendingMint();
+    /**
+     * <code>.lum.network.dfract.Deposit deposits_pending_mint = 2 [json_name = "depositsPendingMint"];</code>
+     * @return The depositsPendingMint.
+     */
+    com.lum.network.dfract.DepositProto.Deposit getDepositsPendingMint();
+    /**
+     * <code>.lum.network.dfract.Deposit deposits_pending_mint = 2 [json_name = "depositsPendingMint"];</code>
+     */
+    com.lum.network.dfract.DepositProto.DepositOrBuilder getDepositsPendingMintOrBuilder();
+
+    /**
+     * <code>.lum.network.dfract.Deposit deposits_minted = 3 [json_name = "depositsMinted"];</code>
+     * @return Whether the depositsMinted field is set.
+     */
+    boolean hasDepositsMinted();
+    /**
+     * <code>.lum.network.dfract.Deposit deposits_minted = 3 [json_name = "depositsMinted"];</code>
+     * @return The depositsMinted.
+     */
+    com.lum.network.dfract.DepositProto.Deposit getDepositsMinted();
+    /**
+     * <code>.lum.network.dfract.Deposit deposits_minted = 3 [json_name = "depositsMinted"];</code>
+     */
+    com.lum.network.dfract.DepositProto.DepositOrBuilder getDepositsMintedOrBuilder();
+  }
+  /**
+   * Protobuf type {@code lum.network.dfract.QueryGetDepositsForAddressResponse}
+   */
+  public static final class QueryGetDepositsForAddressResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lum.network.dfract.QueryGetDepositsForAddressResponse)
+      QueryGetDepositsForAddressResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryGetDepositsForAddressResponse.newBuilder() to construct.
+    private QueryGetDepositsForAddressResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryGetDepositsForAddressResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryGetDepositsForAddressResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryGetDepositsForAddressResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryGetDepositsForAddressResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse.class, com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse.Builder.class);
+    }
+
+    public static final int DEPOSITS_PENDING_WITHDRAWAL_FIELD_NUMBER = 1;
+    private com.lum.network.dfract.DepositProto.Deposit depositsPendingWithdrawal_;
+    /**
+     * <code>.lum.network.dfract.Deposit deposits_pending_withdrawal = 1 [json_name = "depositsPendingWithdrawal"];</code>
+     * @return Whether the depositsPendingWithdrawal field is set.
+     */
+    @java.lang.Override
+    public boolean hasDepositsPendingWithdrawal() {
+      return depositsPendingWithdrawal_ != null;
+    }
+    /**
+     * <code>.lum.network.dfract.Deposit deposits_pending_withdrawal = 1 [json_name = "depositsPendingWithdrawal"];</code>
+     * @return The depositsPendingWithdrawal.
+     */
+    @java.lang.Override
+    public com.lum.network.dfract.DepositProto.Deposit getDepositsPendingWithdrawal() {
+      return depositsPendingWithdrawal_ == null ? com.lum.network.dfract.DepositProto.Deposit.getDefaultInstance() : depositsPendingWithdrawal_;
+    }
+    /**
+     * <code>.lum.network.dfract.Deposit deposits_pending_withdrawal = 1 [json_name = "depositsPendingWithdrawal"];</code>
+     */
+    @java.lang.Override
+    public com.lum.network.dfract.DepositProto.DepositOrBuilder getDepositsPendingWithdrawalOrBuilder() {
+      return depositsPendingWithdrawal_ == null ? com.lum.network.dfract.DepositProto.Deposit.getDefaultInstance() : depositsPendingWithdrawal_;
+    }
+
+    public static final int DEPOSITS_PENDING_MINT_FIELD_NUMBER = 2;
+    private com.lum.network.dfract.DepositProto.Deposit depositsPendingMint_;
+    /**
+     * <code>.lum.network.dfract.Deposit deposits_pending_mint = 2 [json_name = "depositsPendingMint"];</code>
+     * @return Whether the depositsPendingMint field is set.
+     */
+    @java.lang.Override
+    public boolean hasDepositsPendingMint() {
+      return depositsPendingMint_ != null;
+    }
+    /**
+     * <code>.lum.network.dfract.Deposit deposits_pending_mint = 2 [json_name = "depositsPendingMint"];</code>
+     * @return The depositsPendingMint.
+     */
+    @java.lang.Override
+    public com.lum.network.dfract.DepositProto.Deposit getDepositsPendingMint() {
+      return depositsPendingMint_ == null ? com.lum.network.dfract.DepositProto.Deposit.getDefaultInstance() : depositsPendingMint_;
+    }
+    /**
+     * <code>.lum.network.dfract.Deposit deposits_pending_mint = 2 [json_name = "depositsPendingMint"];</code>
+     */
+    @java.lang.Override
+    public com.lum.network.dfract.DepositProto.DepositOrBuilder getDepositsPendingMintOrBuilder() {
+      return depositsPendingMint_ == null ? com.lum.network.dfract.DepositProto.Deposit.getDefaultInstance() : depositsPendingMint_;
+    }
+
+    public static final int DEPOSITS_MINTED_FIELD_NUMBER = 3;
+    private com.lum.network.dfract.DepositProto.Deposit depositsMinted_;
+    /**
+     * <code>.lum.network.dfract.Deposit deposits_minted = 3 [json_name = "depositsMinted"];</code>
+     * @return Whether the depositsMinted field is set.
+     */
+    @java.lang.Override
+    public boolean hasDepositsMinted() {
+      return depositsMinted_ != null;
+    }
+    /**
+     * <code>.lum.network.dfract.Deposit deposits_minted = 3 [json_name = "depositsMinted"];</code>
+     * @return The depositsMinted.
+     */
+    @java.lang.Override
+    public com.lum.network.dfract.DepositProto.Deposit getDepositsMinted() {
+      return depositsMinted_ == null ? com.lum.network.dfract.DepositProto.Deposit.getDefaultInstance() : depositsMinted_;
+    }
+    /**
+     * <code>.lum.network.dfract.Deposit deposits_minted = 3 [json_name = "depositsMinted"];</code>
+     */
+    @java.lang.Override
+    public com.lum.network.dfract.DepositProto.DepositOrBuilder getDepositsMintedOrBuilder() {
+      return depositsMinted_ == null ? com.lum.network.dfract.DepositProto.Deposit.getDefaultInstance() : depositsMinted_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (depositsPendingWithdrawal_ != null) {
+        output.writeMessage(1, getDepositsPendingWithdrawal());
+      }
+      if (depositsPendingMint_ != null) {
+        output.writeMessage(2, getDepositsPendingMint());
+      }
+      if (depositsMinted_ != null) {
+        output.writeMessage(3, getDepositsMinted());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (depositsPendingWithdrawal_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getDepositsPendingWithdrawal());
+      }
+      if (depositsPendingMint_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getDepositsPendingMint());
+      }
+      if (depositsMinted_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getDepositsMinted());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse)) {
+        return super.equals(obj);
+      }
+      com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse other = (com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse) obj;
+
+      if (hasDepositsPendingWithdrawal() != other.hasDepositsPendingWithdrawal()) return false;
+      if (hasDepositsPendingWithdrawal()) {
+        if (!getDepositsPendingWithdrawal()
+            .equals(other.getDepositsPendingWithdrawal())) return false;
+      }
+      if (hasDepositsPendingMint() != other.hasDepositsPendingMint()) return false;
+      if (hasDepositsPendingMint()) {
+        if (!getDepositsPendingMint()
+            .equals(other.getDepositsPendingMint())) return false;
+      }
+      if (hasDepositsMinted() != other.hasDepositsMinted()) return false;
+      if (hasDepositsMinted()) {
+        if (!getDepositsMinted()
+            .equals(other.getDepositsMinted())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasDepositsPendingWithdrawal()) {
+        hash = (37 * hash) + DEPOSITS_PENDING_WITHDRAWAL_FIELD_NUMBER;
+        hash = (53 * hash) + getDepositsPendingWithdrawal().hashCode();
+      }
+      if (hasDepositsPendingMint()) {
+        hash = (37 * hash) + DEPOSITS_PENDING_MINT_FIELD_NUMBER;
+        hash = (53 * hash) + getDepositsPendingMint().hashCode();
+      }
+      if (hasDepositsMinted()) {
+        hash = (37 * hash) + DEPOSITS_MINTED_FIELD_NUMBER;
+        hash = (53 * hash) + getDepositsMinted().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lum.network.dfract.QueryGetDepositsForAddressResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lum.network.dfract.QueryGetDepositsForAddressResponse)
+        com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryGetDepositsForAddressResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryGetDepositsForAddressResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse.class, com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse.Builder.class);
+      }
+
+      // Construct using com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        depositsPendingWithdrawal_ = null;
+        if (depositsPendingWithdrawalBuilder_ != null) {
+          depositsPendingWithdrawalBuilder_.dispose();
+          depositsPendingWithdrawalBuilder_ = null;
+        }
+        depositsPendingMint_ = null;
+        if (depositsPendingMintBuilder_ != null) {
+          depositsPendingMintBuilder_.dispose();
+          depositsPendingMintBuilder_ = null;
+        }
+        depositsMinted_ = null;
+        if (depositsMintedBuilder_ != null) {
+          depositsMintedBuilder_.dispose();
+          depositsMintedBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryGetDepositsForAddressResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse getDefaultInstanceForType() {
+        return com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse build() {
+        com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse buildPartial() {
+        com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse result = new com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.depositsPendingWithdrawal_ = depositsPendingWithdrawalBuilder_ == null
+              ? depositsPendingWithdrawal_
+              : depositsPendingWithdrawalBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.depositsPendingMint_ = depositsPendingMintBuilder_ == null
+              ? depositsPendingMint_
+              : depositsPendingMintBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.depositsMinted_ = depositsMintedBuilder_ == null
+              ? depositsMinted_
+              : depositsMintedBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse) {
+          return mergeFrom((com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse other) {
+        if (other == com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse.getDefaultInstance()) return this;
+        if (other.hasDepositsPendingWithdrawal()) {
+          mergeDepositsPendingWithdrawal(other.getDepositsPendingWithdrawal());
+        }
+        if (other.hasDepositsPendingMint()) {
+          mergeDepositsPendingMint(other.getDepositsPendingMint());
+        }
+        if (other.hasDepositsMinted()) {
+          mergeDepositsMinted(other.getDepositsMinted());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getDepositsPendingWithdrawalFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getDepositsPendingMintFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getDepositsMintedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.lum.network.dfract.DepositProto.Deposit depositsPendingWithdrawal_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.lum.network.dfract.DepositProto.Deposit, com.lum.network.dfract.DepositProto.Deposit.Builder, com.lum.network.dfract.DepositProto.DepositOrBuilder> depositsPendingWithdrawalBuilder_;
+      /**
+       * <code>.lum.network.dfract.Deposit deposits_pending_withdrawal = 1 [json_name = "depositsPendingWithdrawal"];</code>
+       * @return Whether the depositsPendingWithdrawal field is set.
+       */
+      public boolean hasDepositsPendingWithdrawal() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.lum.network.dfract.Deposit deposits_pending_withdrawal = 1 [json_name = "depositsPendingWithdrawal"];</code>
+       * @return The depositsPendingWithdrawal.
+       */
+      public com.lum.network.dfract.DepositProto.Deposit getDepositsPendingWithdrawal() {
+        if (depositsPendingWithdrawalBuilder_ == null) {
+          return depositsPendingWithdrawal_ == null ? com.lum.network.dfract.DepositProto.Deposit.getDefaultInstance() : depositsPendingWithdrawal_;
+        } else {
+          return depositsPendingWithdrawalBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.lum.network.dfract.Deposit deposits_pending_withdrawal = 1 [json_name = "depositsPendingWithdrawal"];</code>
+       */
+      public Builder setDepositsPendingWithdrawal(com.lum.network.dfract.DepositProto.Deposit value) {
+        if (depositsPendingWithdrawalBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          depositsPendingWithdrawal_ = value;
+        } else {
+          depositsPendingWithdrawalBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.dfract.Deposit deposits_pending_withdrawal = 1 [json_name = "depositsPendingWithdrawal"];</code>
+       */
+      public Builder setDepositsPendingWithdrawal(
+          com.lum.network.dfract.DepositProto.Deposit.Builder builderForValue) {
+        if (depositsPendingWithdrawalBuilder_ == null) {
+          depositsPendingWithdrawal_ = builderForValue.build();
+        } else {
+          depositsPendingWithdrawalBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.dfract.Deposit deposits_pending_withdrawal = 1 [json_name = "depositsPendingWithdrawal"];</code>
+       */
+      public Builder mergeDepositsPendingWithdrawal(com.lum.network.dfract.DepositProto.Deposit value) {
+        if (depositsPendingWithdrawalBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            depositsPendingWithdrawal_ != null &&
+            depositsPendingWithdrawal_ != com.lum.network.dfract.DepositProto.Deposit.getDefaultInstance()) {
+            getDepositsPendingWithdrawalBuilder().mergeFrom(value);
+          } else {
+            depositsPendingWithdrawal_ = value;
+          }
+        } else {
+          depositsPendingWithdrawalBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.dfract.Deposit deposits_pending_withdrawal = 1 [json_name = "depositsPendingWithdrawal"];</code>
+       */
+      public Builder clearDepositsPendingWithdrawal() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        depositsPendingWithdrawal_ = null;
+        if (depositsPendingWithdrawalBuilder_ != null) {
+          depositsPendingWithdrawalBuilder_.dispose();
+          depositsPendingWithdrawalBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.dfract.Deposit deposits_pending_withdrawal = 1 [json_name = "depositsPendingWithdrawal"];</code>
+       */
+      public com.lum.network.dfract.DepositProto.Deposit.Builder getDepositsPendingWithdrawalBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getDepositsPendingWithdrawalFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.lum.network.dfract.Deposit deposits_pending_withdrawal = 1 [json_name = "depositsPendingWithdrawal"];</code>
+       */
+      public com.lum.network.dfract.DepositProto.DepositOrBuilder getDepositsPendingWithdrawalOrBuilder() {
+        if (depositsPendingWithdrawalBuilder_ != null) {
+          return depositsPendingWithdrawalBuilder_.getMessageOrBuilder();
+        } else {
+          return depositsPendingWithdrawal_ == null ?
+              com.lum.network.dfract.DepositProto.Deposit.getDefaultInstance() : depositsPendingWithdrawal_;
+        }
+      }
+      /**
+       * <code>.lum.network.dfract.Deposit deposits_pending_withdrawal = 1 [json_name = "depositsPendingWithdrawal"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.lum.network.dfract.DepositProto.Deposit, com.lum.network.dfract.DepositProto.Deposit.Builder, com.lum.network.dfract.DepositProto.DepositOrBuilder> 
+          getDepositsPendingWithdrawalFieldBuilder() {
+        if (depositsPendingWithdrawalBuilder_ == null) {
+          depositsPendingWithdrawalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.lum.network.dfract.DepositProto.Deposit, com.lum.network.dfract.DepositProto.Deposit.Builder, com.lum.network.dfract.DepositProto.DepositOrBuilder>(
+                  getDepositsPendingWithdrawal(),
+                  getParentForChildren(),
+                  isClean());
+          depositsPendingWithdrawal_ = null;
+        }
+        return depositsPendingWithdrawalBuilder_;
+      }
+
+      private com.lum.network.dfract.DepositProto.Deposit depositsPendingMint_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.lum.network.dfract.DepositProto.Deposit, com.lum.network.dfract.DepositProto.Deposit.Builder, com.lum.network.dfract.DepositProto.DepositOrBuilder> depositsPendingMintBuilder_;
+      /**
+       * <code>.lum.network.dfract.Deposit deposits_pending_mint = 2 [json_name = "depositsPendingMint"];</code>
+       * @return Whether the depositsPendingMint field is set.
+       */
+      public boolean hasDepositsPendingMint() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.lum.network.dfract.Deposit deposits_pending_mint = 2 [json_name = "depositsPendingMint"];</code>
+       * @return The depositsPendingMint.
+       */
+      public com.lum.network.dfract.DepositProto.Deposit getDepositsPendingMint() {
+        if (depositsPendingMintBuilder_ == null) {
+          return depositsPendingMint_ == null ? com.lum.network.dfract.DepositProto.Deposit.getDefaultInstance() : depositsPendingMint_;
+        } else {
+          return depositsPendingMintBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.lum.network.dfract.Deposit deposits_pending_mint = 2 [json_name = "depositsPendingMint"];</code>
+       */
+      public Builder setDepositsPendingMint(com.lum.network.dfract.DepositProto.Deposit value) {
+        if (depositsPendingMintBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          depositsPendingMint_ = value;
+        } else {
+          depositsPendingMintBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.dfract.Deposit deposits_pending_mint = 2 [json_name = "depositsPendingMint"];</code>
+       */
+      public Builder setDepositsPendingMint(
+          com.lum.network.dfract.DepositProto.Deposit.Builder builderForValue) {
+        if (depositsPendingMintBuilder_ == null) {
+          depositsPendingMint_ = builderForValue.build();
+        } else {
+          depositsPendingMintBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.dfract.Deposit deposits_pending_mint = 2 [json_name = "depositsPendingMint"];</code>
+       */
+      public Builder mergeDepositsPendingMint(com.lum.network.dfract.DepositProto.Deposit value) {
+        if (depositsPendingMintBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            depositsPendingMint_ != null &&
+            depositsPendingMint_ != com.lum.network.dfract.DepositProto.Deposit.getDefaultInstance()) {
+            getDepositsPendingMintBuilder().mergeFrom(value);
+          } else {
+            depositsPendingMint_ = value;
+          }
+        } else {
+          depositsPendingMintBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.dfract.Deposit deposits_pending_mint = 2 [json_name = "depositsPendingMint"];</code>
+       */
+      public Builder clearDepositsPendingMint() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        depositsPendingMint_ = null;
+        if (depositsPendingMintBuilder_ != null) {
+          depositsPendingMintBuilder_.dispose();
+          depositsPendingMintBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.dfract.Deposit deposits_pending_mint = 2 [json_name = "depositsPendingMint"];</code>
+       */
+      public com.lum.network.dfract.DepositProto.Deposit.Builder getDepositsPendingMintBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getDepositsPendingMintFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.lum.network.dfract.Deposit deposits_pending_mint = 2 [json_name = "depositsPendingMint"];</code>
+       */
+      public com.lum.network.dfract.DepositProto.DepositOrBuilder getDepositsPendingMintOrBuilder() {
+        if (depositsPendingMintBuilder_ != null) {
+          return depositsPendingMintBuilder_.getMessageOrBuilder();
+        } else {
+          return depositsPendingMint_ == null ?
+              com.lum.network.dfract.DepositProto.Deposit.getDefaultInstance() : depositsPendingMint_;
+        }
+      }
+      /**
+       * <code>.lum.network.dfract.Deposit deposits_pending_mint = 2 [json_name = "depositsPendingMint"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.lum.network.dfract.DepositProto.Deposit, com.lum.network.dfract.DepositProto.Deposit.Builder, com.lum.network.dfract.DepositProto.DepositOrBuilder> 
+          getDepositsPendingMintFieldBuilder() {
+        if (depositsPendingMintBuilder_ == null) {
+          depositsPendingMintBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.lum.network.dfract.DepositProto.Deposit, com.lum.network.dfract.DepositProto.Deposit.Builder, com.lum.network.dfract.DepositProto.DepositOrBuilder>(
+                  getDepositsPendingMint(),
+                  getParentForChildren(),
+                  isClean());
+          depositsPendingMint_ = null;
+        }
+        return depositsPendingMintBuilder_;
+      }
+
+      private com.lum.network.dfract.DepositProto.Deposit depositsMinted_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.lum.network.dfract.DepositProto.Deposit, com.lum.network.dfract.DepositProto.Deposit.Builder, com.lum.network.dfract.DepositProto.DepositOrBuilder> depositsMintedBuilder_;
+      /**
+       * <code>.lum.network.dfract.Deposit deposits_minted = 3 [json_name = "depositsMinted"];</code>
+       * @return Whether the depositsMinted field is set.
+       */
+      public boolean hasDepositsMinted() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.lum.network.dfract.Deposit deposits_minted = 3 [json_name = "depositsMinted"];</code>
+       * @return The depositsMinted.
+       */
+      public com.lum.network.dfract.DepositProto.Deposit getDepositsMinted() {
+        if (depositsMintedBuilder_ == null) {
+          return depositsMinted_ == null ? com.lum.network.dfract.DepositProto.Deposit.getDefaultInstance() : depositsMinted_;
+        } else {
+          return depositsMintedBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.lum.network.dfract.Deposit deposits_minted = 3 [json_name = "depositsMinted"];</code>
+       */
+      public Builder setDepositsMinted(com.lum.network.dfract.DepositProto.Deposit value) {
+        if (depositsMintedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          depositsMinted_ = value;
+        } else {
+          depositsMintedBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.dfract.Deposit deposits_minted = 3 [json_name = "depositsMinted"];</code>
+       */
+      public Builder setDepositsMinted(
+          com.lum.network.dfract.DepositProto.Deposit.Builder builderForValue) {
+        if (depositsMintedBuilder_ == null) {
+          depositsMinted_ = builderForValue.build();
+        } else {
+          depositsMintedBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.dfract.Deposit deposits_minted = 3 [json_name = "depositsMinted"];</code>
+       */
+      public Builder mergeDepositsMinted(com.lum.network.dfract.DepositProto.Deposit value) {
+        if (depositsMintedBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            depositsMinted_ != null &&
+            depositsMinted_ != com.lum.network.dfract.DepositProto.Deposit.getDefaultInstance()) {
+            getDepositsMintedBuilder().mergeFrom(value);
+          } else {
+            depositsMinted_ = value;
+          }
+        } else {
+          depositsMintedBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.dfract.Deposit deposits_minted = 3 [json_name = "depositsMinted"];</code>
+       */
+      public Builder clearDepositsMinted() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        depositsMinted_ = null;
+        if (depositsMintedBuilder_ != null) {
+          depositsMintedBuilder_.dispose();
+          depositsMintedBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.lum.network.dfract.Deposit deposits_minted = 3 [json_name = "depositsMinted"];</code>
+       */
+      public com.lum.network.dfract.DepositProto.Deposit.Builder getDepositsMintedBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getDepositsMintedFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.lum.network.dfract.Deposit deposits_minted = 3 [json_name = "depositsMinted"];</code>
+       */
+      public com.lum.network.dfract.DepositProto.DepositOrBuilder getDepositsMintedOrBuilder() {
+        if (depositsMintedBuilder_ != null) {
+          return depositsMintedBuilder_.getMessageOrBuilder();
+        } else {
+          return depositsMinted_ == null ?
+              com.lum.network.dfract.DepositProto.Deposit.getDefaultInstance() : depositsMinted_;
+        }
+      }
+      /**
+       * <code>.lum.network.dfract.Deposit deposits_minted = 3 [json_name = "depositsMinted"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.lum.network.dfract.DepositProto.Deposit, com.lum.network.dfract.DepositProto.Deposit.Builder, com.lum.network.dfract.DepositProto.DepositOrBuilder> 
+          getDepositsMintedFieldBuilder() {
+        if (depositsMintedBuilder_ == null) {
+          depositsMintedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.lum.network.dfract.DepositProto.Deposit, com.lum.network.dfract.DepositProto.Deposit.Builder, com.lum.network.dfract.DepositProto.DepositOrBuilder>(
+                  getDepositsMinted(),
+                  getParentForChildren(),
+                  isClean());
+          depositsMinted_ = null;
+        }
+        return depositsMintedBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lum.network.dfract.QueryGetDepositsForAddressResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:lum.network.dfract.QueryGetDepositsForAddressResponse)
+    private static final com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse();
+    }
+
+    public static com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryGetDepositsForAddressResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryGetDepositsForAddressResponse>() {
+      @java.lang.Override
+      public QueryGetDepositsForAddressResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryGetDepositsForAddressResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryGetDepositsForAddressResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lum.network.dfract.QueryProto.QueryGetDepositsForAddressResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryFetchDepositsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:lum.network.dfract.QueryFetchDepositsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .lum.network.dfract.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.lum.network.dfract.DepositProto.Deposit> 
+        getDepositsList();
+    /**
+     * <code>repeated .lum.network.dfract.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+     */
+    com.lum.network.dfract.DepositProto.Deposit getDeposits(int index);
+    /**
+     * <code>repeated .lum.network.dfract.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+     */
+    int getDepositsCount();
+    /**
+     * <code>repeated .lum.network.dfract.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.lum.network.dfract.DepositProto.DepositOrBuilder> 
+        getDepositsOrBuilderList();
+    /**
+     * <code>repeated .lum.network.dfract.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+     */
+    com.lum.network.dfract.DepositProto.DepositOrBuilder getDepositsOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code lum.network.dfract.QueryFetchDepositsResponse}
+   */
+  public static final class QueryFetchDepositsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:lum.network.dfract.QueryFetchDepositsResponse)
+      QueryFetchDepositsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryFetchDepositsResponse.newBuilder() to construct.
+    private QueryFetchDepositsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryFetchDepositsResponse() {
+      deposits_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryFetchDepositsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryFetchDepositsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryFetchDepositsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse.class, com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse.Builder.class);
+    }
+
+    public static final int DEPOSITS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.lum.network.dfract.DepositProto.Deposit> deposits_;
+    /**
+     * <code>repeated .lum.network.dfract.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.lum.network.dfract.DepositProto.Deposit> getDepositsList() {
+      return deposits_;
+    }
+    /**
+     * <code>repeated .lum.network.dfract.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.lum.network.dfract.DepositProto.DepositOrBuilder> 
+        getDepositsOrBuilderList() {
+      return deposits_;
+    }
+    /**
+     * <code>repeated .lum.network.dfract.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getDepositsCount() {
+      return deposits_.size();
+    }
+    /**
+     * <code>repeated .lum.network.dfract.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.lum.network.dfract.DepositProto.Deposit getDeposits(int index) {
+      return deposits_.get(index);
+    }
+    /**
+     * <code>repeated .lum.network.dfract.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.lum.network.dfract.DepositProto.DepositOrBuilder getDepositsOrBuilder(
+        int index) {
+      return deposits_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < deposits_.size(); i++) {
+        output.writeMessage(1, deposits_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < deposits_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, deposits_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse)) {
+        return super.equals(obj);
+      }
+      com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse other = (com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse) obj;
+
+      if (!getDepositsList()
+          .equals(other.getDepositsList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getDepositsCount() > 0) {
+        hash = (37 * hash) + DEPOSITS_FIELD_NUMBER;
+        hash = (53 * hash) + getDepositsList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code lum.network.dfract.QueryFetchDepositsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:lum.network.dfract.QueryFetchDepositsResponse)
+        com.lum.network.dfract.QueryProto.QueryFetchDepositsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryFetchDepositsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryFetchDepositsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse.class, com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse.Builder.class);
+      }
+
+      // Construct using com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (depositsBuilder_ == null) {
+          deposits_ = java.util.Collections.emptyList();
+        } else {
+          deposits_ = null;
+          depositsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.lum.network.dfract.QueryProto.internal_static_lum_network_dfract_QueryFetchDepositsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse getDefaultInstanceForType() {
+        return com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse build() {
+        com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse buildPartial() {
+        com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse result = new com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse result) {
+        if (depositsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            deposits_ = java.util.Collections.unmodifiableList(deposits_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.deposits_ = deposits_;
+        } else {
+          result.deposits_ = depositsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse) {
+          return mergeFrom((com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse other) {
+        if (other == com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse.getDefaultInstance()) return this;
+        if (depositsBuilder_ == null) {
+          if (!other.deposits_.isEmpty()) {
+            if (deposits_.isEmpty()) {
+              deposits_ = other.deposits_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureDepositsIsMutable();
+              deposits_.addAll(other.deposits_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.deposits_.isEmpty()) {
+            if (depositsBuilder_.isEmpty()) {
+              depositsBuilder_.dispose();
+              depositsBuilder_ = null;
+              deposits_ = other.deposits_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              depositsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDepositsFieldBuilder() : null;
+            } else {
+              depositsBuilder_.addAllMessages(other.deposits_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.lum.network.dfract.DepositProto.Deposit m =
+                    input.readMessage(
+                        com.lum.network.dfract.DepositProto.Deposit.parser(),
+                        extensionRegistry);
+                if (depositsBuilder_ == null) {
+                  ensureDepositsIsMutable();
+                  deposits_.add(m);
+                } else {
+                  depositsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.lum.network.dfract.DepositProto.Deposit> deposits_ =
+        java.util.Collections.emptyList();
+      private void ensureDepositsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          deposits_ = new java.util.ArrayList<com.lum.network.dfract.DepositProto.Deposit>(deposits_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.lum.network.dfract.DepositProto.Deposit, com.lum.network.dfract.DepositProto.Deposit.Builder, com.lum.network.dfract.DepositProto.DepositOrBuilder> depositsBuilder_;
+
+      /**
+       * <code>repeated .lum.network.dfract.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.lum.network.dfract.DepositProto.Deposit> getDepositsList() {
+        if (depositsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(deposits_);
+        } else {
+          return depositsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .lum.network.dfract.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public int getDepositsCount() {
+        if (depositsBuilder_ == null) {
+          return deposits_.size();
+        } else {
+          return depositsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .lum.network.dfract.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public com.lum.network.dfract.DepositProto.Deposit getDeposits(int index) {
+        if (depositsBuilder_ == null) {
+          return deposits_.get(index);
+        } else {
+          return depositsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .lum.network.dfract.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDeposits(
+          int index, com.lum.network.dfract.DepositProto.Deposit value) {
+        if (depositsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDepositsIsMutable();
+          deposits_.set(index, value);
+          onChanged();
+        } else {
+          depositsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.dfract.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDeposits(
+          int index, com.lum.network.dfract.DepositProto.Deposit.Builder builderForValue) {
+        if (depositsBuilder_ == null) {
+          ensureDepositsIsMutable();
+          deposits_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          depositsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.dfract.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDeposits(com.lum.network.dfract.DepositProto.Deposit value) {
+        if (depositsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDepositsIsMutable();
+          deposits_.add(value);
+          onChanged();
+        } else {
+          depositsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.dfract.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDeposits(
+          int index, com.lum.network.dfract.DepositProto.Deposit value) {
+        if (depositsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDepositsIsMutable();
+          deposits_.add(index, value);
+          onChanged();
+        } else {
+          depositsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.dfract.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDeposits(
+          com.lum.network.dfract.DepositProto.Deposit.Builder builderForValue) {
+        if (depositsBuilder_ == null) {
+          ensureDepositsIsMutable();
+          deposits_.add(builderForValue.build());
+          onChanged();
+        } else {
+          depositsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.dfract.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDeposits(
+          int index, com.lum.network.dfract.DepositProto.Deposit.Builder builderForValue) {
+        if (depositsBuilder_ == null) {
+          ensureDepositsIsMutable();
+          deposits_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          depositsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.dfract.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllDeposits(
+          java.lang.Iterable<? extends com.lum.network.dfract.DepositProto.Deposit> values) {
+        if (depositsBuilder_ == null) {
+          ensureDepositsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, deposits_);
+          onChanged();
+        } else {
+          depositsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.dfract.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearDeposits() {
+        if (depositsBuilder_ == null) {
+          deposits_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          depositsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.dfract.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeDeposits(int index) {
+        if (depositsBuilder_ == null) {
+          ensureDepositsIsMutable();
+          deposits_.remove(index);
+          onChanged();
+        } else {
+          depositsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .lum.network.dfract.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public com.lum.network.dfract.DepositProto.Deposit.Builder getDepositsBuilder(
+          int index) {
+        return getDepositsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .lum.network.dfract.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public com.lum.network.dfract.DepositProto.DepositOrBuilder getDepositsOrBuilder(
+          int index) {
+        if (depositsBuilder_ == null) {
+          return deposits_.get(index);  } else {
+          return depositsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .lum.network.dfract.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.lum.network.dfract.DepositProto.DepositOrBuilder> 
+           getDepositsOrBuilderList() {
+        if (depositsBuilder_ != null) {
+          return depositsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(deposits_);
+        }
+      }
+      /**
+       * <code>repeated .lum.network.dfract.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public com.lum.network.dfract.DepositProto.Deposit.Builder addDepositsBuilder() {
+        return getDepositsFieldBuilder().addBuilder(
+            com.lum.network.dfract.DepositProto.Deposit.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .lum.network.dfract.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public com.lum.network.dfract.DepositProto.Deposit.Builder addDepositsBuilder(
+          int index) {
+        return getDepositsFieldBuilder().addBuilder(
+            index, com.lum.network.dfract.DepositProto.Deposit.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .lum.network.dfract.Deposit deposits = 1 [json_name = "deposits", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.lum.network.dfract.DepositProto.Deposit.Builder> 
+           getDepositsBuilderList() {
+        return getDepositsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.lum.network.dfract.DepositProto.Deposit, com.lum.network.dfract.DepositProto.Deposit.Builder, com.lum.network.dfract.DepositProto.DepositOrBuilder> 
+          getDepositsFieldBuilder() {
+        if (depositsBuilder_ == null) {
+          depositsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.lum.network.dfract.DepositProto.Deposit, com.lum.network.dfract.DepositProto.Deposit.Builder, com.lum.network.dfract.DepositProto.DepositOrBuilder>(
+                  deposits_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          deposits_ = null;
+        }
+        return depositsBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:lum.network.dfract.QueryFetchDepositsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:lum.network.dfract.QueryFetchDepositsResponse)
+    private static final com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse();
+    }
+
+    public static com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryFetchDepositsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryFetchDepositsResponse>() {
+      @java.lang.Override
+      public QueryFetchDepositsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryFetchDepositsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryFetchDepositsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lum.network.dfract.QueryProto.QueryFetchDepositsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lum_network_dfract_QueryModuleAccountBalanceRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lum_network_dfract_QueryModuleAccountBalanceRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lum_network_dfract_QueryModuleAccountBalanceResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lum_network_dfract_QueryModuleAccountBalanceResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lum_network_dfract_QueryParamsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lum_network_dfract_QueryParamsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lum_network_dfract_QueryParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lum_network_dfract_QueryParamsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lum_network_dfract_QueryGetDepositsForAddressRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lum_network_dfract_QueryGetDepositsForAddressRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lum_network_dfract_QueryFetchDepositsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lum_network_dfract_QueryFetchDepositsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lum_network_dfract_QueryGetDepositsForAddressResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lum_network_dfract_QueryGetDepositsForAddressResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_lum_network_dfract_QueryFetchDepositsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_lum_network_dfract_QueryFetchDepositsResponse_fieldAccessorTable;
 
@@ -114,12 +5634,11 @@ public final class QueryProto {
       "work.dfract.QueryFetchDepositsRequest\032.." +
       "lum.network.dfract.QueryFetchDepositsRes" +
       "ponse\"$\202\323\344\223\002\036\022\034/lum-network/dfract/depos" +
-      "itsB\273\001\n\026com.lum.network.dfractB\nQueryPro" +
-      "toP\001Z+github.com/lum-network/chain/x/dfr" +
-      "act/types\242\002\003LND\252\002\022Lum.Network.Dfract\312\002\022L" +
-      "um\\Network\\Dfract\342\002\036Lum\\Network\\Dfract\\G" +
-      "PBMetadata\352\002\024Lum::Network::Dfractb\006proto" +
-      "3"
+      "itsB\271\001\n\026com.lum.network.dfractB\nQueryPro" +
+      "toZ+github.com/lum-network/chain/x/dfrac" +
+      "t/types\242\002\003LND\252\002\022Lum.Network.Dfract\312\002\022Lum" +
+      "\\Network\\Dfract\342\002\036Lum\\Network\\Dfract\\GPB" +
+      "Metadata\352\002\024Lum::Network::Dfractb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

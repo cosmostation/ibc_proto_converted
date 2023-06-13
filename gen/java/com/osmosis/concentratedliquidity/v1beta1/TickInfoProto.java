@@ -14,14 +14,2752 @@ public final class TickInfoProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface TickInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.concentratedliquidity.v1beta1.TickInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string liquidity_gross = 1 [json_name = "liquidityGross", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidity_gross&#92;""];</code>
+     * @return The liquidityGross.
+     */
+    java.lang.String getLiquidityGross();
+    /**
+     * <code>string liquidity_gross = 1 [json_name = "liquidityGross", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidity_gross&#92;""];</code>
+     * @return The bytes for liquidityGross.
+     */
+    com.google.protobuf.ByteString
+        getLiquidityGrossBytes();
+
+    /**
+     * <code>string liquidity_net = 2 [json_name = "liquidityNet", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidity_net&#92;""];</code>
+     * @return The liquidityNet.
+     */
+    java.lang.String getLiquidityNet();
+    /**
+     * <code>string liquidity_net = 2 [json_name = "liquidityNet", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidity_net&#92;""];</code>
+     * @return The bytes for liquidityNet.
+     */
+    com.google.protobuf.ByteString
+        getLiquidityNetBytes();
+
+    /**
+     * <pre>
+     * Total spread rewards accumulated in the opposite direction that the tick
+     * was last crossed. i.e. if the current tick is to the right of this tick
+     * (meaning its currently a greater price), then this is the total spread
+     * rewards accumulated below the tick. If the current tick is to the left of
+     * this tick (meaning its currently at a lower price), then this is the total
+     * spread rewards accumulated above the tick.
+     *
+     * Note: the way this value is used depends on the direction of spread rewards
+     * we are calculating for. If we are calculating spread rewards below the
+     * lower tick and the lower tick is the active tick, then this is the
+     * spreadRewardGrowthGlobal - the lower tick's
+     * spreadRewardGrowthOppositeDirectionOfLastTraversal. If we are calculating
+     * spread rewards above the upper tick and the upper tick is the active tick,
+     * then this is just the tick's
+     * spreadRewardGrowthOppositeDirectionOfLastTraversal value.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin spread_reward_growth_opposite_direction_of_last_traversal = 3 [json_name = "spreadRewardGrowthOppositeDirectionOfLastTraversal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> 
+        getSpreadRewardGrowthOppositeDirectionOfLastTraversalList();
+    /**
+     * <pre>
+     * Total spread rewards accumulated in the opposite direction that the tick
+     * was last crossed. i.e. if the current tick is to the right of this tick
+     * (meaning its currently a greater price), then this is the total spread
+     * rewards accumulated below the tick. If the current tick is to the left of
+     * this tick (meaning its currently at a lower price), then this is the total
+     * spread rewards accumulated above the tick.
+     *
+     * Note: the way this value is used depends on the direction of spread rewards
+     * we are calculating for. If we are calculating spread rewards below the
+     * lower tick and the lower tick is the active tick, then this is the
+     * spreadRewardGrowthGlobal - the lower tick's
+     * spreadRewardGrowthOppositeDirectionOfLastTraversal. If we are calculating
+     * spread rewards above the upper tick and the upper tick is the active tick,
+     * then this is just the tick's
+     * spreadRewardGrowthOppositeDirectionOfLastTraversal value.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin spread_reward_growth_opposite_direction_of_last_traversal = 3 [json_name = "spreadRewardGrowthOppositeDirectionOfLastTraversal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoin getSpreadRewardGrowthOppositeDirectionOfLastTraversal(int index);
+    /**
+     * <pre>
+     * Total spread rewards accumulated in the opposite direction that the tick
+     * was last crossed. i.e. if the current tick is to the right of this tick
+     * (meaning its currently a greater price), then this is the total spread
+     * rewards accumulated below the tick. If the current tick is to the left of
+     * this tick (meaning its currently at a lower price), then this is the total
+     * spread rewards accumulated above the tick.
+     *
+     * Note: the way this value is used depends on the direction of spread rewards
+     * we are calculating for. If we are calculating spread rewards below the
+     * lower tick and the lower tick is the active tick, then this is the
+     * spreadRewardGrowthGlobal - the lower tick's
+     * spreadRewardGrowthOppositeDirectionOfLastTraversal. If we are calculating
+     * spread rewards above the upper tick and the upper tick is the active tick,
+     * then this is just the tick's
+     * spreadRewardGrowthOppositeDirectionOfLastTraversal value.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin spread_reward_growth_opposite_direction_of_last_traversal = 3 [json_name = "spreadRewardGrowthOppositeDirectionOfLastTraversal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    int getSpreadRewardGrowthOppositeDirectionOfLastTraversalCount();
+    /**
+     * <pre>
+     * Total spread rewards accumulated in the opposite direction that the tick
+     * was last crossed. i.e. if the current tick is to the right of this tick
+     * (meaning its currently a greater price), then this is the total spread
+     * rewards accumulated below the tick. If the current tick is to the left of
+     * this tick (meaning its currently at a lower price), then this is the total
+     * spread rewards accumulated above the tick.
+     *
+     * Note: the way this value is used depends on the direction of spread rewards
+     * we are calculating for. If we are calculating spread rewards below the
+     * lower tick and the lower tick is the active tick, then this is the
+     * spreadRewardGrowthGlobal - the lower tick's
+     * spreadRewardGrowthOppositeDirectionOfLastTraversal. If we are calculating
+     * spread rewards above the upper tick and the upper tick is the active tick,
+     * then this is just the tick's
+     * spreadRewardGrowthOppositeDirectionOfLastTraversal value.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin spread_reward_growth_opposite_direction_of_last_traversal = 3 [json_name = "spreadRewardGrowthOppositeDirectionOfLastTraversal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getSpreadRewardGrowthOppositeDirectionOfLastTraversalOrBuilderList();
+    /**
+     * <pre>
+     * Total spread rewards accumulated in the opposite direction that the tick
+     * was last crossed. i.e. if the current tick is to the right of this tick
+     * (meaning its currently a greater price), then this is the total spread
+     * rewards accumulated below the tick. If the current tick is to the left of
+     * this tick (meaning its currently at a lower price), then this is the total
+     * spread rewards accumulated above the tick.
+     *
+     * Note: the way this value is used depends on the direction of spread rewards
+     * we are calculating for. If we are calculating spread rewards below the
+     * lower tick and the lower tick is the active tick, then this is the
+     * spreadRewardGrowthGlobal - the lower tick's
+     * spreadRewardGrowthOppositeDirectionOfLastTraversal. If we are calculating
+     * spread rewards above the upper tick and the upper tick is the active tick,
+     * then this is just the tick's
+     * spreadRewardGrowthOppositeDirectionOfLastTraversal value.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin spread_reward_growth_opposite_direction_of_last_traversal = 3 [json_name = "spreadRewardGrowthOppositeDirectionOfLastTraversal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getSpreadRewardGrowthOppositeDirectionOfLastTraversalOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .osmosis.concentratedliquidity.v1beta1.UptimeTracker uptime_trackers = 4 [json_name = "uptimeTrackers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"uptime_trackers&#92;""];</code>
+     */
+    java.util.List<com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker> 
+        getUptimeTrackersList();
+    /**
+     * <code>repeated .osmosis.concentratedliquidity.v1beta1.UptimeTracker uptime_trackers = 4 [json_name = "uptimeTrackers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"uptime_trackers&#92;""];</code>
+     */
+    com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker getUptimeTrackers(int index);
+    /**
+     * <code>repeated .osmosis.concentratedliquidity.v1beta1.UptimeTracker uptime_trackers = 4 [json_name = "uptimeTrackers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"uptime_trackers&#92;""];</code>
+     */
+    int getUptimeTrackersCount();
+    /**
+     * <code>repeated .osmosis.concentratedliquidity.v1beta1.UptimeTracker uptime_trackers = 4 [json_name = "uptimeTrackers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"uptime_trackers&#92;""];</code>
+     */
+    java.util.List<? extends com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTrackerOrBuilder> 
+        getUptimeTrackersOrBuilderList();
+    /**
+     * <code>repeated .osmosis.concentratedliquidity.v1beta1.UptimeTracker uptime_trackers = 4 [json_name = "uptimeTrackers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"uptime_trackers&#92;""];</code>
+     */
+    com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTrackerOrBuilder getUptimeTrackersOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code osmosis.concentratedliquidity.v1beta1.TickInfo}
+   */
+  public static final class TickInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.concentratedliquidity.v1beta1.TickInfo)
+      TickInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TickInfo.newBuilder() to construct.
+    private TickInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TickInfo() {
+      liquidityGross_ = "";
+      liquidityNet_ = "";
+      spreadRewardGrowthOppositeDirectionOfLastTraversal_ = java.util.Collections.emptyList();
+      uptimeTrackers_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TickInfo();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.internal_static_osmosis_concentratedliquidity_v1beta1_TickInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.internal_static_osmosis_concentratedliquidity_v1beta1_TickInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfo.class, com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfo.Builder.class);
+    }
+
+    public static final int LIQUIDITY_GROSS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object liquidityGross_ = "";
+    /**
+     * <code>string liquidity_gross = 1 [json_name = "liquidityGross", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidity_gross&#92;""];</code>
+     * @return The liquidityGross.
+     */
+    @java.lang.Override
+    public java.lang.String getLiquidityGross() {
+      java.lang.Object ref = liquidityGross_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        liquidityGross_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string liquidity_gross = 1 [json_name = "liquidityGross", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidity_gross&#92;""];</code>
+     * @return The bytes for liquidityGross.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLiquidityGrossBytes() {
+      java.lang.Object ref = liquidityGross_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        liquidityGross_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LIQUIDITY_NET_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object liquidityNet_ = "";
+    /**
+     * <code>string liquidity_net = 2 [json_name = "liquidityNet", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidity_net&#92;""];</code>
+     * @return The liquidityNet.
+     */
+    @java.lang.Override
+    public java.lang.String getLiquidityNet() {
+      java.lang.Object ref = liquidityNet_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        liquidityNet_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string liquidity_net = 2 [json_name = "liquidityNet", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidity_net&#92;""];</code>
+     * @return The bytes for liquidityNet.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLiquidityNetBytes() {
+      java.lang.Object ref = liquidityNet_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        liquidityNet_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SPREAD_REWARD_GROWTH_OPPOSITE_DIRECTION_OF_LAST_TRAVERSAL_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> spreadRewardGrowthOppositeDirectionOfLastTraversal_;
+    /**
+     * <pre>
+     * Total spread rewards accumulated in the opposite direction that the tick
+     * was last crossed. i.e. if the current tick is to the right of this tick
+     * (meaning its currently a greater price), then this is the total spread
+     * rewards accumulated below the tick. If the current tick is to the left of
+     * this tick (meaning its currently at a lower price), then this is the total
+     * spread rewards accumulated above the tick.
+     *
+     * Note: the way this value is used depends on the direction of spread rewards
+     * we are calculating for. If we are calculating spread rewards below the
+     * lower tick and the lower tick is the active tick, then this is the
+     * spreadRewardGrowthGlobal - the lower tick's
+     * spreadRewardGrowthOppositeDirectionOfLastTraversal. If we are calculating
+     * spread rewards above the upper tick and the upper tick is the active tick,
+     * then this is just the tick's
+     * spreadRewardGrowthOppositeDirectionOfLastTraversal value.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin spread_reward_growth_opposite_direction_of_last_traversal = 3 [json_name = "spreadRewardGrowthOppositeDirectionOfLastTraversal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getSpreadRewardGrowthOppositeDirectionOfLastTraversalList() {
+      return spreadRewardGrowthOppositeDirectionOfLastTraversal_;
+    }
+    /**
+     * <pre>
+     * Total spread rewards accumulated in the opposite direction that the tick
+     * was last crossed. i.e. if the current tick is to the right of this tick
+     * (meaning its currently a greater price), then this is the total spread
+     * rewards accumulated below the tick. If the current tick is to the left of
+     * this tick (meaning its currently at a lower price), then this is the total
+     * spread rewards accumulated above the tick.
+     *
+     * Note: the way this value is used depends on the direction of spread rewards
+     * we are calculating for. If we are calculating spread rewards below the
+     * lower tick and the lower tick is the active tick, then this is the
+     * spreadRewardGrowthGlobal - the lower tick's
+     * spreadRewardGrowthOppositeDirectionOfLastTraversal. If we are calculating
+     * spread rewards above the upper tick and the upper tick is the active tick,
+     * then this is just the tick's
+     * spreadRewardGrowthOppositeDirectionOfLastTraversal value.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin spread_reward_growth_opposite_direction_of_last_traversal = 3 [json_name = "spreadRewardGrowthOppositeDirectionOfLastTraversal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getSpreadRewardGrowthOppositeDirectionOfLastTraversalOrBuilderList() {
+      return spreadRewardGrowthOppositeDirectionOfLastTraversal_;
+    }
+    /**
+     * <pre>
+     * Total spread rewards accumulated in the opposite direction that the tick
+     * was last crossed. i.e. if the current tick is to the right of this tick
+     * (meaning its currently a greater price), then this is the total spread
+     * rewards accumulated below the tick. If the current tick is to the left of
+     * this tick (meaning its currently at a lower price), then this is the total
+     * spread rewards accumulated above the tick.
+     *
+     * Note: the way this value is used depends on the direction of spread rewards
+     * we are calculating for. If we are calculating spread rewards below the
+     * lower tick and the lower tick is the active tick, then this is the
+     * spreadRewardGrowthGlobal - the lower tick's
+     * spreadRewardGrowthOppositeDirectionOfLastTraversal. If we are calculating
+     * spread rewards above the upper tick and the upper tick is the active tick,
+     * then this is just the tick's
+     * spreadRewardGrowthOppositeDirectionOfLastTraversal value.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin spread_reward_growth_opposite_direction_of_last_traversal = 3 [json_name = "spreadRewardGrowthOppositeDirectionOfLastTraversal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public int getSpreadRewardGrowthOppositeDirectionOfLastTraversalCount() {
+      return spreadRewardGrowthOppositeDirectionOfLastTraversal_.size();
+    }
+    /**
+     * <pre>
+     * Total spread rewards accumulated in the opposite direction that the tick
+     * was last crossed. i.e. if the current tick is to the right of this tick
+     * (meaning its currently a greater price), then this is the total spread
+     * rewards accumulated below the tick. If the current tick is to the left of
+     * this tick (meaning its currently at a lower price), then this is the total
+     * spread rewards accumulated above the tick.
+     *
+     * Note: the way this value is used depends on the direction of spread rewards
+     * we are calculating for. If we are calculating spread rewards below the
+     * lower tick and the lower tick is the active tick, then this is the
+     * spreadRewardGrowthGlobal - the lower tick's
+     * spreadRewardGrowthOppositeDirectionOfLastTraversal. If we are calculating
+     * spread rewards above the upper tick and the upper tick is the active tick,
+     * then this is just the tick's
+     * spreadRewardGrowthOppositeDirectionOfLastTraversal value.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin spread_reward_growth_opposite_direction_of_last_traversal = 3 [json_name = "spreadRewardGrowthOppositeDirectionOfLastTraversal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoin getSpreadRewardGrowthOppositeDirectionOfLastTraversal(int index) {
+      return spreadRewardGrowthOppositeDirectionOfLastTraversal_.get(index);
+    }
+    /**
+     * <pre>
+     * Total spread rewards accumulated in the opposite direction that the tick
+     * was last crossed. i.e. if the current tick is to the right of this tick
+     * (meaning its currently a greater price), then this is the total spread
+     * rewards accumulated below the tick. If the current tick is to the left of
+     * this tick (meaning its currently at a lower price), then this is the total
+     * spread rewards accumulated above the tick.
+     *
+     * Note: the way this value is used depends on the direction of spread rewards
+     * we are calculating for. If we are calculating spread rewards below the
+     * lower tick and the lower tick is the active tick, then this is the
+     * spreadRewardGrowthGlobal - the lower tick's
+     * spreadRewardGrowthOppositeDirectionOfLastTraversal. If we are calculating
+     * spread rewards above the upper tick and the upper tick is the active tick,
+     * then this is just the tick's
+     * spreadRewardGrowthOppositeDirectionOfLastTraversal value.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.DecCoin spread_reward_growth_opposite_direction_of_last_traversal = 3 [json_name = "spreadRewardGrowthOppositeDirectionOfLastTraversal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getSpreadRewardGrowthOppositeDirectionOfLastTraversalOrBuilder(
+        int index) {
+      return spreadRewardGrowthOppositeDirectionOfLastTraversal_.get(index);
+    }
+
+    public static final int UPTIME_TRACKERS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker> uptimeTrackers_;
+    /**
+     * <code>repeated .osmosis.concentratedliquidity.v1beta1.UptimeTracker uptime_trackers = 4 [json_name = "uptimeTrackers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"uptime_trackers&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker> getUptimeTrackersList() {
+      return uptimeTrackers_;
+    }
+    /**
+     * <code>repeated .osmosis.concentratedliquidity.v1beta1.UptimeTracker uptime_trackers = 4 [json_name = "uptimeTrackers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"uptime_trackers&#92;""];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTrackerOrBuilder> 
+        getUptimeTrackersOrBuilderList() {
+      return uptimeTrackers_;
+    }
+    /**
+     * <code>repeated .osmosis.concentratedliquidity.v1beta1.UptimeTracker uptime_trackers = 4 [json_name = "uptimeTrackers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"uptime_trackers&#92;""];</code>
+     */
+    @java.lang.Override
+    public int getUptimeTrackersCount() {
+      return uptimeTrackers_.size();
+    }
+    /**
+     * <code>repeated .osmosis.concentratedliquidity.v1beta1.UptimeTracker uptime_trackers = 4 [json_name = "uptimeTrackers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"uptime_trackers&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker getUptimeTrackers(int index) {
+      return uptimeTrackers_.get(index);
+    }
+    /**
+     * <code>repeated .osmosis.concentratedliquidity.v1beta1.UptimeTracker uptime_trackers = 4 [json_name = "uptimeTrackers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"uptime_trackers&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTrackerOrBuilder getUptimeTrackersOrBuilder(
+        int index) {
+      return uptimeTrackers_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(liquidityGross_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, liquidityGross_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(liquidityNet_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, liquidityNet_);
+      }
+      for (int i = 0; i < spreadRewardGrowthOppositeDirectionOfLastTraversal_.size(); i++) {
+        output.writeMessage(3, spreadRewardGrowthOppositeDirectionOfLastTraversal_.get(i));
+      }
+      for (int i = 0; i < uptimeTrackers_.size(); i++) {
+        output.writeMessage(4, uptimeTrackers_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(liquidityGross_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, liquidityGross_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(liquidityNet_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, liquidityNet_);
+      }
+      for (int i = 0; i < spreadRewardGrowthOppositeDirectionOfLastTraversal_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, spreadRewardGrowthOppositeDirectionOfLastTraversal_.get(i));
+      }
+      for (int i = 0; i < uptimeTrackers_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, uptimeTrackers_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfo)) {
+        return super.equals(obj);
+      }
+      com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfo other = (com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfo) obj;
+
+      if (!getLiquidityGross()
+          .equals(other.getLiquidityGross())) return false;
+      if (!getLiquidityNet()
+          .equals(other.getLiquidityNet())) return false;
+      if (!getSpreadRewardGrowthOppositeDirectionOfLastTraversalList()
+          .equals(other.getSpreadRewardGrowthOppositeDirectionOfLastTraversalList())) return false;
+      if (!getUptimeTrackersList()
+          .equals(other.getUptimeTrackersList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + LIQUIDITY_GROSS_FIELD_NUMBER;
+      hash = (53 * hash) + getLiquidityGross().hashCode();
+      hash = (37 * hash) + LIQUIDITY_NET_FIELD_NUMBER;
+      hash = (53 * hash) + getLiquidityNet().hashCode();
+      if (getSpreadRewardGrowthOppositeDirectionOfLastTraversalCount() > 0) {
+        hash = (37 * hash) + SPREAD_REWARD_GROWTH_OPPOSITE_DIRECTION_OF_LAST_TRAVERSAL_FIELD_NUMBER;
+        hash = (53 * hash) + getSpreadRewardGrowthOppositeDirectionOfLastTraversalList().hashCode();
+      }
+      if (getUptimeTrackersCount() > 0) {
+        hash = (37 * hash) + UPTIME_TRACKERS_FIELD_NUMBER;
+        hash = (53 * hash) + getUptimeTrackersList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.concentratedliquidity.v1beta1.TickInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.concentratedliquidity.v1beta1.TickInfo)
+        com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.internal_static_osmosis_concentratedliquidity_v1beta1_TickInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.internal_static_osmosis_concentratedliquidity_v1beta1_TickInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfo.class, com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfo.Builder.class);
+      }
+
+      // Construct using com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfo.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        liquidityGross_ = "";
+        liquidityNet_ = "";
+        if (spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_ == null) {
+          spreadRewardGrowthOppositeDirectionOfLastTraversal_ = java.util.Collections.emptyList();
+        } else {
+          spreadRewardGrowthOppositeDirectionOfLastTraversal_ = null;
+          spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (uptimeTrackersBuilder_ == null) {
+          uptimeTrackers_ = java.util.Collections.emptyList();
+        } else {
+          uptimeTrackers_ = null;
+          uptimeTrackersBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.internal_static_osmosis_concentratedliquidity_v1beta1_TickInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfo getDefaultInstanceForType() {
+        return com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfo build() {
+        com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfo buildPartial() {
+        com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfo result = new com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfo(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfo result) {
+        if (spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            spreadRewardGrowthOppositeDirectionOfLastTraversal_ = java.util.Collections.unmodifiableList(spreadRewardGrowthOppositeDirectionOfLastTraversal_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.spreadRewardGrowthOppositeDirectionOfLastTraversal_ = spreadRewardGrowthOppositeDirectionOfLastTraversal_;
+        } else {
+          result.spreadRewardGrowthOppositeDirectionOfLastTraversal_ = spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_.build();
+        }
+        if (uptimeTrackersBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            uptimeTrackers_ = java.util.Collections.unmodifiableList(uptimeTrackers_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.uptimeTrackers_ = uptimeTrackers_;
+        } else {
+          result.uptimeTrackers_ = uptimeTrackersBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfo result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.liquidityGross_ = liquidityGross_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.liquidityNet_ = liquidityNet_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfo) {
+          return mergeFrom((com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfo other) {
+        if (other == com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfo.getDefaultInstance()) return this;
+        if (!other.getLiquidityGross().isEmpty()) {
+          liquidityGross_ = other.liquidityGross_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getLiquidityNet().isEmpty()) {
+          liquidityNet_ = other.liquidityNet_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_ == null) {
+          if (!other.spreadRewardGrowthOppositeDirectionOfLastTraversal_.isEmpty()) {
+            if (spreadRewardGrowthOppositeDirectionOfLastTraversal_.isEmpty()) {
+              spreadRewardGrowthOppositeDirectionOfLastTraversal_ = other.spreadRewardGrowthOppositeDirectionOfLastTraversal_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureSpreadRewardGrowthOppositeDirectionOfLastTraversalIsMutable();
+              spreadRewardGrowthOppositeDirectionOfLastTraversal_.addAll(other.spreadRewardGrowthOppositeDirectionOfLastTraversal_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.spreadRewardGrowthOppositeDirectionOfLastTraversal_.isEmpty()) {
+            if (spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_.isEmpty()) {
+              spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_.dispose();
+              spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_ = null;
+              spreadRewardGrowthOppositeDirectionOfLastTraversal_ = other.spreadRewardGrowthOppositeDirectionOfLastTraversal_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSpreadRewardGrowthOppositeDirectionOfLastTraversalFieldBuilder() : null;
+            } else {
+              spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_.addAllMessages(other.spreadRewardGrowthOppositeDirectionOfLastTraversal_);
+            }
+          }
+        }
+        if (uptimeTrackersBuilder_ == null) {
+          if (!other.uptimeTrackers_.isEmpty()) {
+            if (uptimeTrackers_.isEmpty()) {
+              uptimeTrackers_ = other.uptimeTrackers_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureUptimeTrackersIsMutable();
+              uptimeTrackers_.addAll(other.uptimeTrackers_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.uptimeTrackers_.isEmpty()) {
+            if (uptimeTrackersBuilder_.isEmpty()) {
+              uptimeTrackersBuilder_.dispose();
+              uptimeTrackersBuilder_ = null;
+              uptimeTrackers_ = other.uptimeTrackers_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              uptimeTrackersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getUptimeTrackersFieldBuilder() : null;
+            } else {
+              uptimeTrackersBuilder_.addAllMessages(other.uptimeTrackers_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                liquidityGross_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                liquidityNet_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                com.cosmos.base.v1beta1.CoinProto.DecCoin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.DecCoin.parser(),
+                        extensionRegistry);
+                if (spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_ == null) {
+                  ensureSpreadRewardGrowthOppositeDirectionOfLastTraversalIsMutable();
+                  spreadRewardGrowthOppositeDirectionOfLastTraversal_.add(m);
+                } else {
+                  spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker m =
+                    input.readMessage(
+                        com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker.parser(),
+                        extensionRegistry);
+                if (uptimeTrackersBuilder_ == null) {
+                  ensureUptimeTrackersIsMutable();
+                  uptimeTrackers_.add(m);
+                } else {
+                  uptimeTrackersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object liquidityGross_ = "";
+      /**
+       * <code>string liquidity_gross = 1 [json_name = "liquidityGross", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidity_gross&#92;""];</code>
+       * @return The liquidityGross.
+       */
+      public java.lang.String getLiquidityGross() {
+        java.lang.Object ref = liquidityGross_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          liquidityGross_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string liquidity_gross = 1 [json_name = "liquidityGross", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidity_gross&#92;""];</code>
+       * @return The bytes for liquidityGross.
+       */
+      public com.google.protobuf.ByteString
+          getLiquidityGrossBytes() {
+        java.lang.Object ref = liquidityGross_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          liquidityGross_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string liquidity_gross = 1 [json_name = "liquidityGross", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidity_gross&#92;""];</code>
+       * @param value The liquidityGross to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLiquidityGross(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        liquidityGross_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string liquidity_gross = 1 [json_name = "liquidityGross", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidity_gross&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLiquidityGross() {
+        liquidityGross_ = getDefaultInstance().getLiquidityGross();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string liquidity_gross = 1 [json_name = "liquidityGross", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidity_gross&#92;""];</code>
+       * @param value The bytes for liquidityGross to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLiquidityGrossBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        liquidityGross_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object liquidityNet_ = "";
+      /**
+       * <code>string liquidity_net = 2 [json_name = "liquidityNet", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidity_net&#92;""];</code>
+       * @return The liquidityNet.
+       */
+      public java.lang.String getLiquidityNet() {
+        java.lang.Object ref = liquidityNet_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          liquidityNet_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string liquidity_net = 2 [json_name = "liquidityNet", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidity_net&#92;""];</code>
+       * @return The bytes for liquidityNet.
+       */
+      public com.google.protobuf.ByteString
+          getLiquidityNetBytes() {
+        java.lang.Object ref = liquidityNet_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          liquidityNet_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string liquidity_net = 2 [json_name = "liquidityNet", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidity_net&#92;""];</code>
+       * @param value The liquidityNet to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLiquidityNet(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        liquidityNet_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string liquidity_net = 2 [json_name = "liquidityNet", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidity_net&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLiquidityNet() {
+        liquidityNet_ = getDefaultInstance().getLiquidityNet();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string liquidity_net = 2 [json_name = "liquidityNet", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"liquidity_net&#92;""];</code>
+       * @param value The bytes for liquidityNet to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLiquidityNetBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        liquidityNet_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> spreadRewardGrowthOppositeDirectionOfLastTraversal_ =
+        java.util.Collections.emptyList();
+      private void ensureSpreadRewardGrowthOppositeDirectionOfLastTraversalIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          spreadRewardGrowthOppositeDirectionOfLastTraversal_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.DecCoin>(spreadRewardGrowthOppositeDirectionOfLastTraversal_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_;
+
+      /**
+       * <pre>
+       * Total spread rewards accumulated in the opposite direction that the tick
+       * was last crossed. i.e. if the current tick is to the right of this tick
+       * (meaning its currently a greater price), then this is the total spread
+       * rewards accumulated below the tick. If the current tick is to the left of
+       * this tick (meaning its currently at a lower price), then this is the total
+       * spread rewards accumulated above the tick.
+       *
+       * Note: the way this value is used depends on the direction of spread rewards
+       * we are calculating for. If we are calculating spread rewards below the
+       * lower tick and the lower tick is the active tick, then this is the
+       * spreadRewardGrowthGlobal - the lower tick's
+       * spreadRewardGrowthOppositeDirectionOfLastTraversal. If we are calculating
+       * spread rewards above the upper tick and the upper tick is the active tick,
+       * then this is just the tick's
+       * spreadRewardGrowthOppositeDirectionOfLastTraversal value.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin spread_reward_growth_opposite_direction_of_last_traversal = 3 [json_name = "spreadRewardGrowthOppositeDirectionOfLastTraversal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getSpreadRewardGrowthOppositeDirectionOfLastTraversalList() {
+        if (spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(spreadRewardGrowthOppositeDirectionOfLastTraversal_);
+        } else {
+          return spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Total spread rewards accumulated in the opposite direction that the tick
+       * was last crossed. i.e. if the current tick is to the right of this tick
+       * (meaning its currently a greater price), then this is the total spread
+       * rewards accumulated below the tick. If the current tick is to the left of
+       * this tick (meaning its currently at a lower price), then this is the total
+       * spread rewards accumulated above the tick.
+       *
+       * Note: the way this value is used depends on the direction of spread rewards
+       * we are calculating for. If we are calculating spread rewards below the
+       * lower tick and the lower tick is the active tick, then this is the
+       * spreadRewardGrowthGlobal - the lower tick's
+       * spreadRewardGrowthOppositeDirectionOfLastTraversal. If we are calculating
+       * spread rewards above the upper tick and the upper tick is the active tick,
+       * then this is just the tick's
+       * spreadRewardGrowthOppositeDirectionOfLastTraversal value.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin spread_reward_growth_opposite_direction_of_last_traversal = 3 [json_name = "spreadRewardGrowthOppositeDirectionOfLastTraversal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public int getSpreadRewardGrowthOppositeDirectionOfLastTraversalCount() {
+        if (spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_ == null) {
+          return spreadRewardGrowthOppositeDirectionOfLastTraversal_.size();
+        } else {
+          return spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Total spread rewards accumulated in the opposite direction that the tick
+       * was last crossed. i.e. if the current tick is to the right of this tick
+       * (meaning its currently a greater price), then this is the total spread
+       * rewards accumulated below the tick. If the current tick is to the left of
+       * this tick (meaning its currently at a lower price), then this is the total
+       * spread rewards accumulated above the tick.
+       *
+       * Note: the way this value is used depends on the direction of spread rewards
+       * we are calculating for. If we are calculating spread rewards below the
+       * lower tick and the lower tick is the active tick, then this is the
+       * spreadRewardGrowthGlobal - the lower tick's
+       * spreadRewardGrowthOppositeDirectionOfLastTraversal. If we are calculating
+       * spread rewards above the upper tick and the upper tick is the active tick,
+       * then this is just the tick's
+       * spreadRewardGrowthOppositeDirectionOfLastTraversal value.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin spread_reward_growth_opposite_direction_of_last_traversal = 3 [json_name = "spreadRewardGrowthOppositeDirectionOfLastTraversal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin getSpreadRewardGrowthOppositeDirectionOfLastTraversal(int index) {
+        if (spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_ == null) {
+          return spreadRewardGrowthOppositeDirectionOfLastTraversal_.get(index);
+        } else {
+          return spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Total spread rewards accumulated in the opposite direction that the tick
+       * was last crossed. i.e. if the current tick is to the right of this tick
+       * (meaning its currently a greater price), then this is the total spread
+       * rewards accumulated below the tick. If the current tick is to the left of
+       * this tick (meaning its currently at a lower price), then this is the total
+       * spread rewards accumulated above the tick.
+       *
+       * Note: the way this value is used depends on the direction of spread rewards
+       * we are calculating for. If we are calculating spread rewards below the
+       * lower tick and the lower tick is the active tick, then this is the
+       * spreadRewardGrowthGlobal - the lower tick's
+       * spreadRewardGrowthOppositeDirectionOfLastTraversal. If we are calculating
+       * spread rewards above the upper tick and the upper tick is the active tick,
+       * then this is just the tick's
+       * spreadRewardGrowthOppositeDirectionOfLastTraversal value.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin spread_reward_growth_opposite_direction_of_last_traversal = 3 [json_name = "spreadRewardGrowthOppositeDirectionOfLastTraversal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setSpreadRewardGrowthOppositeDirectionOfLastTraversal(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSpreadRewardGrowthOppositeDirectionOfLastTraversalIsMutable();
+          spreadRewardGrowthOppositeDirectionOfLastTraversal_.set(index, value);
+          onChanged();
+        } else {
+          spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Total spread rewards accumulated in the opposite direction that the tick
+       * was last crossed. i.e. if the current tick is to the right of this tick
+       * (meaning its currently a greater price), then this is the total spread
+       * rewards accumulated below the tick. If the current tick is to the left of
+       * this tick (meaning its currently at a lower price), then this is the total
+       * spread rewards accumulated above the tick.
+       *
+       * Note: the way this value is used depends on the direction of spread rewards
+       * we are calculating for. If we are calculating spread rewards below the
+       * lower tick and the lower tick is the active tick, then this is the
+       * spreadRewardGrowthGlobal - the lower tick's
+       * spreadRewardGrowthOppositeDirectionOfLastTraversal. If we are calculating
+       * spread rewards above the upper tick and the upper tick is the active tick,
+       * then this is just the tick's
+       * spreadRewardGrowthOppositeDirectionOfLastTraversal value.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin spread_reward_growth_opposite_direction_of_last_traversal = 3 [json_name = "spreadRewardGrowthOppositeDirectionOfLastTraversal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setSpreadRewardGrowthOppositeDirectionOfLastTraversal(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_ == null) {
+          ensureSpreadRewardGrowthOppositeDirectionOfLastTraversalIsMutable();
+          spreadRewardGrowthOppositeDirectionOfLastTraversal_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Total spread rewards accumulated in the opposite direction that the tick
+       * was last crossed. i.e. if the current tick is to the right of this tick
+       * (meaning its currently a greater price), then this is the total spread
+       * rewards accumulated below the tick. If the current tick is to the left of
+       * this tick (meaning its currently at a lower price), then this is the total
+       * spread rewards accumulated above the tick.
+       *
+       * Note: the way this value is used depends on the direction of spread rewards
+       * we are calculating for. If we are calculating spread rewards below the
+       * lower tick and the lower tick is the active tick, then this is the
+       * spreadRewardGrowthGlobal - the lower tick's
+       * spreadRewardGrowthOppositeDirectionOfLastTraversal. If we are calculating
+       * spread rewards above the upper tick and the upper tick is the active tick,
+       * then this is just the tick's
+       * spreadRewardGrowthOppositeDirectionOfLastTraversal value.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin spread_reward_growth_opposite_direction_of_last_traversal = 3 [json_name = "spreadRewardGrowthOppositeDirectionOfLastTraversal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addSpreadRewardGrowthOppositeDirectionOfLastTraversal(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSpreadRewardGrowthOppositeDirectionOfLastTraversalIsMutable();
+          spreadRewardGrowthOppositeDirectionOfLastTraversal_.add(value);
+          onChanged();
+        } else {
+          spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Total spread rewards accumulated in the opposite direction that the tick
+       * was last crossed. i.e. if the current tick is to the right of this tick
+       * (meaning its currently a greater price), then this is the total spread
+       * rewards accumulated below the tick. If the current tick is to the left of
+       * this tick (meaning its currently at a lower price), then this is the total
+       * spread rewards accumulated above the tick.
+       *
+       * Note: the way this value is used depends on the direction of spread rewards
+       * we are calculating for. If we are calculating spread rewards below the
+       * lower tick and the lower tick is the active tick, then this is the
+       * spreadRewardGrowthGlobal - the lower tick's
+       * spreadRewardGrowthOppositeDirectionOfLastTraversal. If we are calculating
+       * spread rewards above the upper tick and the upper tick is the active tick,
+       * then this is just the tick's
+       * spreadRewardGrowthOppositeDirectionOfLastTraversal value.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin spread_reward_growth_opposite_direction_of_last_traversal = 3 [json_name = "spreadRewardGrowthOppositeDirectionOfLastTraversal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addSpreadRewardGrowthOppositeDirectionOfLastTraversal(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSpreadRewardGrowthOppositeDirectionOfLastTraversalIsMutable();
+          spreadRewardGrowthOppositeDirectionOfLastTraversal_.add(index, value);
+          onChanged();
+        } else {
+          spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Total spread rewards accumulated in the opposite direction that the tick
+       * was last crossed. i.e. if the current tick is to the right of this tick
+       * (meaning its currently a greater price), then this is the total spread
+       * rewards accumulated below the tick. If the current tick is to the left of
+       * this tick (meaning its currently at a lower price), then this is the total
+       * spread rewards accumulated above the tick.
+       *
+       * Note: the way this value is used depends on the direction of spread rewards
+       * we are calculating for. If we are calculating spread rewards below the
+       * lower tick and the lower tick is the active tick, then this is the
+       * spreadRewardGrowthGlobal - the lower tick's
+       * spreadRewardGrowthOppositeDirectionOfLastTraversal. If we are calculating
+       * spread rewards above the upper tick and the upper tick is the active tick,
+       * then this is just the tick's
+       * spreadRewardGrowthOppositeDirectionOfLastTraversal value.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin spread_reward_growth_opposite_direction_of_last_traversal = 3 [json_name = "spreadRewardGrowthOppositeDirectionOfLastTraversal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addSpreadRewardGrowthOppositeDirectionOfLastTraversal(
+          com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_ == null) {
+          ensureSpreadRewardGrowthOppositeDirectionOfLastTraversalIsMutable();
+          spreadRewardGrowthOppositeDirectionOfLastTraversal_.add(builderForValue.build());
+          onChanged();
+        } else {
+          spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Total spread rewards accumulated in the opposite direction that the tick
+       * was last crossed. i.e. if the current tick is to the right of this tick
+       * (meaning its currently a greater price), then this is the total spread
+       * rewards accumulated below the tick. If the current tick is to the left of
+       * this tick (meaning its currently at a lower price), then this is the total
+       * spread rewards accumulated above the tick.
+       *
+       * Note: the way this value is used depends on the direction of spread rewards
+       * we are calculating for. If we are calculating spread rewards below the
+       * lower tick and the lower tick is the active tick, then this is the
+       * spreadRewardGrowthGlobal - the lower tick's
+       * spreadRewardGrowthOppositeDirectionOfLastTraversal. If we are calculating
+       * spread rewards above the upper tick and the upper tick is the active tick,
+       * then this is just the tick's
+       * spreadRewardGrowthOppositeDirectionOfLastTraversal value.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin spread_reward_growth_opposite_direction_of_last_traversal = 3 [json_name = "spreadRewardGrowthOppositeDirectionOfLastTraversal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addSpreadRewardGrowthOppositeDirectionOfLastTraversal(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_ == null) {
+          ensureSpreadRewardGrowthOppositeDirectionOfLastTraversalIsMutable();
+          spreadRewardGrowthOppositeDirectionOfLastTraversal_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Total spread rewards accumulated in the opposite direction that the tick
+       * was last crossed. i.e. if the current tick is to the right of this tick
+       * (meaning its currently a greater price), then this is the total spread
+       * rewards accumulated below the tick. If the current tick is to the left of
+       * this tick (meaning its currently at a lower price), then this is the total
+       * spread rewards accumulated above the tick.
+       *
+       * Note: the way this value is used depends on the direction of spread rewards
+       * we are calculating for. If we are calculating spread rewards below the
+       * lower tick and the lower tick is the active tick, then this is the
+       * spreadRewardGrowthGlobal - the lower tick's
+       * spreadRewardGrowthOppositeDirectionOfLastTraversal. If we are calculating
+       * spread rewards above the upper tick and the upper tick is the active tick,
+       * then this is just the tick's
+       * spreadRewardGrowthOppositeDirectionOfLastTraversal value.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin spread_reward_growth_opposite_direction_of_last_traversal = 3 [json_name = "spreadRewardGrowthOppositeDirectionOfLastTraversal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAllSpreadRewardGrowthOppositeDirectionOfLastTraversal(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.DecCoin> values) {
+        if (spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_ == null) {
+          ensureSpreadRewardGrowthOppositeDirectionOfLastTraversalIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, spreadRewardGrowthOppositeDirectionOfLastTraversal_);
+          onChanged();
+        } else {
+          spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Total spread rewards accumulated in the opposite direction that the tick
+       * was last crossed. i.e. if the current tick is to the right of this tick
+       * (meaning its currently a greater price), then this is the total spread
+       * rewards accumulated below the tick. If the current tick is to the left of
+       * this tick (meaning its currently at a lower price), then this is the total
+       * spread rewards accumulated above the tick.
+       *
+       * Note: the way this value is used depends on the direction of spread rewards
+       * we are calculating for. If we are calculating spread rewards below the
+       * lower tick and the lower tick is the active tick, then this is the
+       * spreadRewardGrowthGlobal - the lower tick's
+       * spreadRewardGrowthOppositeDirectionOfLastTraversal. If we are calculating
+       * spread rewards above the upper tick and the upper tick is the active tick,
+       * then this is just the tick's
+       * spreadRewardGrowthOppositeDirectionOfLastTraversal value.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin spread_reward_growth_opposite_direction_of_last_traversal = 3 [json_name = "spreadRewardGrowthOppositeDirectionOfLastTraversal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder clearSpreadRewardGrowthOppositeDirectionOfLastTraversal() {
+        if (spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_ == null) {
+          spreadRewardGrowthOppositeDirectionOfLastTraversal_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Total spread rewards accumulated in the opposite direction that the tick
+       * was last crossed. i.e. if the current tick is to the right of this tick
+       * (meaning its currently a greater price), then this is the total spread
+       * rewards accumulated below the tick. If the current tick is to the left of
+       * this tick (meaning its currently at a lower price), then this is the total
+       * spread rewards accumulated above the tick.
+       *
+       * Note: the way this value is used depends on the direction of spread rewards
+       * we are calculating for. If we are calculating spread rewards below the
+       * lower tick and the lower tick is the active tick, then this is the
+       * spreadRewardGrowthGlobal - the lower tick's
+       * spreadRewardGrowthOppositeDirectionOfLastTraversal. If we are calculating
+       * spread rewards above the upper tick and the upper tick is the active tick,
+       * then this is just the tick's
+       * spreadRewardGrowthOppositeDirectionOfLastTraversal value.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin spread_reward_growth_opposite_direction_of_last_traversal = 3 [json_name = "spreadRewardGrowthOppositeDirectionOfLastTraversal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder removeSpreadRewardGrowthOppositeDirectionOfLastTraversal(int index) {
+        if (spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_ == null) {
+          ensureSpreadRewardGrowthOppositeDirectionOfLastTraversalIsMutable();
+          spreadRewardGrowthOppositeDirectionOfLastTraversal_.remove(index);
+          onChanged();
+        } else {
+          spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Total spread rewards accumulated in the opposite direction that the tick
+       * was last crossed. i.e. if the current tick is to the right of this tick
+       * (meaning its currently a greater price), then this is the total spread
+       * rewards accumulated below the tick. If the current tick is to the left of
+       * this tick (meaning its currently at a lower price), then this is the total
+       * spread rewards accumulated above the tick.
+       *
+       * Note: the way this value is used depends on the direction of spread rewards
+       * we are calculating for. If we are calculating spread rewards below the
+       * lower tick and the lower tick is the active tick, then this is the
+       * spreadRewardGrowthGlobal - the lower tick's
+       * spreadRewardGrowthOppositeDirectionOfLastTraversal. If we are calculating
+       * spread rewards above the upper tick and the upper tick is the active tick,
+       * then this is just the tick's
+       * spreadRewardGrowthOppositeDirectionOfLastTraversal value.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin spread_reward_growth_opposite_direction_of_last_traversal = 3 [json_name = "spreadRewardGrowthOppositeDirectionOfLastTraversal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder getSpreadRewardGrowthOppositeDirectionOfLastTraversalBuilder(
+          int index) {
+        return getSpreadRewardGrowthOppositeDirectionOfLastTraversalFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Total spread rewards accumulated in the opposite direction that the tick
+       * was last crossed. i.e. if the current tick is to the right of this tick
+       * (meaning its currently a greater price), then this is the total spread
+       * rewards accumulated below the tick. If the current tick is to the left of
+       * this tick (meaning its currently at a lower price), then this is the total
+       * spread rewards accumulated above the tick.
+       *
+       * Note: the way this value is used depends on the direction of spread rewards
+       * we are calculating for. If we are calculating spread rewards below the
+       * lower tick and the lower tick is the active tick, then this is the
+       * spreadRewardGrowthGlobal - the lower tick's
+       * spreadRewardGrowthOppositeDirectionOfLastTraversal. If we are calculating
+       * spread rewards above the upper tick and the upper tick is the active tick,
+       * then this is just the tick's
+       * spreadRewardGrowthOppositeDirectionOfLastTraversal value.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin spread_reward_growth_opposite_direction_of_last_traversal = 3 [json_name = "spreadRewardGrowthOppositeDirectionOfLastTraversal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getSpreadRewardGrowthOppositeDirectionOfLastTraversalOrBuilder(
+          int index) {
+        if (spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_ == null) {
+          return spreadRewardGrowthOppositeDirectionOfLastTraversal_.get(index);  } else {
+          return spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Total spread rewards accumulated in the opposite direction that the tick
+       * was last crossed. i.e. if the current tick is to the right of this tick
+       * (meaning its currently a greater price), then this is the total spread
+       * rewards accumulated below the tick. If the current tick is to the left of
+       * this tick (meaning its currently at a lower price), then this is the total
+       * spread rewards accumulated above the tick.
+       *
+       * Note: the way this value is used depends on the direction of spread rewards
+       * we are calculating for. If we are calculating spread rewards below the
+       * lower tick and the lower tick is the active tick, then this is the
+       * spreadRewardGrowthGlobal - the lower tick's
+       * spreadRewardGrowthOppositeDirectionOfLastTraversal. If we are calculating
+       * spread rewards above the upper tick and the upper tick is the active tick,
+       * then this is just the tick's
+       * spreadRewardGrowthOppositeDirectionOfLastTraversal value.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin spread_reward_growth_opposite_direction_of_last_traversal = 3 [json_name = "spreadRewardGrowthOppositeDirectionOfLastTraversal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+           getSpreadRewardGrowthOppositeDirectionOfLastTraversalOrBuilderList() {
+        if (spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_ != null) {
+          return spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(spreadRewardGrowthOppositeDirectionOfLastTraversal_);
+        }
+      }
+      /**
+       * <pre>
+       * Total spread rewards accumulated in the opposite direction that the tick
+       * was last crossed. i.e. if the current tick is to the right of this tick
+       * (meaning its currently a greater price), then this is the total spread
+       * rewards accumulated below the tick. If the current tick is to the left of
+       * this tick (meaning its currently at a lower price), then this is the total
+       * spread rewards accumulated above the tick.
+       *
+       * Note: the way this value is used depends on the direction of spread rewards
+       * we are calculating for. If we are calculating spread rewards below the
+       * lower tick and the lower tick is the active tick, then this is the
+       * spreadRewardGrowthGlobal - the lower tick's
+       * spreadRewardGrowthOppositeDirectionOfLastTraversal. If we are calculating
+       * spread rewards above the upper tick and the upper tick is the active tick,
+       * then this is just the tick's
+       * spreadRewardGrowthOppositeDirectionOfLastTraversal value.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin spread_reward_growth_opposite_direction_of_last_traversal = 3 [json_name = "spreadRewardGrowthOppositeDirectionOfLastTraversal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addSpreadRewardGrowthOppositeDirectionOfLastTraversalBuilder() {
+        return getSpreadRewardGrowthOppositeDirectionOfLastTraversalFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Total spread rewards accumulated in the opposite direction that the tick
+       * was last crossed. i.e. if the current tick is to the right of this tick
+       * (meaning its currently a greater price), then this is the total spread
+       * rewards accumulated below the tick. If the current tick is to the left of
+       * this tick (meaning its currently at a lower price), then this is the total
+       * spread rewards accumulated above the tick.
+       *
+       * Note: the way this value is used depends on the direction of spread rewards
+       * we are calculating for. If we are calculating spread rewards below the
+       * lower tick and the lower tick is the active tick, then this is the
+       * spreadRewardGrowthGlobal - the lower tick's
+       * spreadRewardGrowthOppositeDirectionOfLastTraversal. If we are calculating
+       * spread rewards above the upper tick and the upper tick is the active tick,
+       * then this is just the tick's
+       * spreadRewardGrowthOppositeDirectionOfLastTraversal value.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin spread_reward_growth_opposite_direction_of_last_traversal = 3 [json_name = "spreadRewardGrowthOppositeDirectionOfLastTraversal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addSpreadRewardGrowthOppositeDirectionOfLastTraversalBuilder(
+          int index) {
+        return getSpreadRewardGrowthOppositeDirectionOfLastTraversalFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Total spread rewards accumulated in the opposite direction that the tick
+       * was last crossed. i.e. if the current tick is to the right of this tick
+       * (meaning its currently a greater price), then this is the total spread
+       * rewards accumulated below the tick. If the current tick is to the left of
+       * this tick (meaning its currently at a lower price), then this is the total
+       * spread rewards accumulated above the tick.
+       *
+       * Note: the way this value is used depends on the direction of spread rewards
+       * we are calculating for. If we are calculating spread rewards below the
+       * lower tick and the lower tick is the active tick, then this is the
+       * spreadRewardGrowthGlobal - the lower tick's
+       * spreadRewardGrowthOppositeDirectionOfLastTraversal. If we are calculating
+       * spread rewards above the upper tick and the upper tick is the active tick,
+       * then this is just the tick's
+       * spreadRewardGrowthOppositeDirectionOfLastTraversal value.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.DecCoin spread_reward_growth_opposite_direction_of_last_traversal = 3 [json_name = "spreadRewardGrowthOppositeDirectionOfLastTraversal", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder> 
+           getSpreadRewardGrowthOppositeDirectionOfLastTraversalBuilderList() {
+        return getSpreadRewardGrowthOppositeDirectionOfLastTraversalFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+          getSpreadRewardGrowthOppositeDirectionOfLastTraversalFieldBuilder() {
+        if (spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_ == null) {
+          spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder>(
+                  spreadRewardGrowthOppositeDirectionOfLastTraversal_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          spreadRewardGrowthOppositeDirectionOfLastTraversal_ = null;
+        }
+        return spreadRewardGrowthOppositeDirectionOfLastTraversalBuilder_;
+      }
+
+      private java.util.List<com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker> uptimeTrackers_ =
+        java.util.Collections.emptyList();
+      private void ensureUptimeTrackersIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          uptimeTrackers_ = new java.util.ArrayList<com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker>(uptimeTrackers_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker, com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker.Builder, com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTrackerOrBuilder> uptimeTrackersBuilder_;
+
+      /**
+       * <code>repeated .osmosis.concentratedliquidity.v1beta1.UptimeTracker uptime_trackers = 4 [json_name = "uptimeTrackers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"uptime_trackers&#92;""];</code>
+       */
+      public java.util.List<com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker> getUptimeTrackersList() {
+        if (uptimeTrackersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(uptimeTrackers_);
+        } else {
+          return uptimeTrackersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .osmosis.concentratedliquidity.v1beta1.UptimeTracker uptime_trackers = 4 [json_name = "uptimeTrackers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"uptime_trackers&#92;""];</code>
+       */
+      public int getUptimeTrackersCount() {
+        if (uptimeTrackersBuilder_ == null) {
+          return uptimeTrackers_.size();
+        } else {
+          return uptimeTrackersBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .osmosis.concentratedliquidity.v1beta1.UptimeTracker uptime_trackers = 4 [json_name = "uptimeTrackers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"uptime_trackers&#92;""];</code>
+       */
+      public com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker getUptimeTrackers(int index) {
+        if (uptimeTrackersBuilder_ == null) {
+          return uptimeTrackers_.get(index);
+        } else {
+          return uptimeTrackersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.concentratedliquidity.v1beta1.UptimeTracker uptime_trackers = 4 [json_name = "uptimeTrackers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"uptime_trackers&#92;""];</code>
+       */
+      public Builder setUptimeTrackers(
+          int index, com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker value) {
+        if (uptimeTrackersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUptimeTrackersIsMutable();
+          uptimeTrackers_.set(index, value);
+          onChanged();
+        } else {
+          uptimeTrackersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.concentratedliquidity.v1beta1.UptimeTracker uptime_trackers = 4 [json_name = "uptimeTrackers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"uptime_trackers&#92;""];</code>
+       */
+      public Builder setUptimeTrackers(
+          int index, com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker.Builder builderForValue) {
+        if (uptimeTrackersBuilder_ == null) {
+          ensureUptimeTrackersIsMutable();
+          uptimeTrackers_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          uptimeTrackersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.concentratedliquidity.v1beta1.UptimeTracker uptime_trackers = 4 [json_name = "uptimeTrackers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"uptime_trackers&#92;""];</code>
+       */
+      public Builder addUptimeTrackers(com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker value) {
+        if (uptimeTrackersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUptimeTrackersIsMutable();
+          uptimeTrackers_.add(value);
+          onChanged();
+        } else {
+          uptimeTrackersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.concentratedliquidity.v1beta1.UptimeTracker uptime_trackers = 4 [json_name = "uptimeTrackers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"uptime_trackers&#92;""];</code>
+       */
+      public Builder addUptimeTrackers(
+          int index, com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker value) {
+        if (uptimeTrackersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUptimeTrackersIsMutable();
+          uptimeTrackers_.add(index, value);
+          onChanged();
+        } else {
+          uptimeTrackersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.concentratedliquidity.v1beta1.UptimeTracker uptime_trackers = 4 [json_name = "uptimeTrackers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"uptime_trackers&#92;""];</code>
+       */
+      public Builder addUptimeTrackers(
+          com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker.Builder builderForValue) {
+        if (uptimeTrackersBuilder_ == null) {
+          ensureUptimeTrackersIsMutable();
+          uptimeTrackers_.add(builderForValue.build());
+          onChanged();
+        } else {
+          uptimeTrackersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.concentratedliquidity.v1beta1.UptimeTracker uptime_trackers = 4 [json_name = "uptimeTrackers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"uptime_trackers&#92;""];</code>
+       */
+      public Builder addUptimeTrackers(
+          int index, com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker.Builder builderForValue) {
+        if (uptimeTrackersBuilder_ == null) {
+          ensureUptimeTrackersIsMutable();
+          uptimeTrackers_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          uptimeTrackersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.concentratedliquidity.v1beta1.UptimeTracker uptime_trackers = 4 [json_name = "uptimeTrackers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"uptime_trackers&#92;""];</code>
+       */
+      public Builder addAllUptimeTrackers(
+          java.lang.Iterable<? extends com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker> values) {
+        if (uptimeTrackersBuilder_ == null) {
+          ensureUptimeTrackersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, uptimeTrackers_);
+          onChanged();
+        } else {
+          uptimeTrackersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.concentratedliquidity.v1beta1.UptimeTracker uptime_trackers = 4 [json_name = "uptimeTrackers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"uptime_trackers&#92;""];</code>
+       */
+      public Builder clearUptimeTrackers() {
+        if (uptimeTrackersBuilder_ == null) {
+          uptimeTrackers_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          uptimeTrackersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.concentratedliquidity.v1beta1.UptimeTracker uptime_trackers = 4 [json_name = "uptimeTrackers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"uptime_trackers&#92;""];</code>
+       */
+      public Builder removeUptimeTrackers(int index) {
+        if (uptimeTrackersBuilder_ == null) {
+          ensureUptimeTrackersIsMutable();
+          uptimeTrackers_.remove(index);
+          onChanged();
+        } else {
+          uptimeTrackersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .osmosis.concentratedliquidity.v1beta1.UptimeTracker uptime_trackers = 4 [json_name = "uptimeTrackers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"uptime_trackers&#92;""];</code>
+       */
+      public com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker.Builder getUptimeTrackersBuilder(
+          int index) {
+        return getUptimeTrackersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .osmosis.concentratedliquidity.v1beta1.UptimeTracker uptime_trackers = 4 [json_name = "uptimeTrackers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"uptime_trackers&#92;""];</code>
+       */
+      public com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTrackerOrBuilder getUptimeTrackersOrBuilder(
+          int index) {
+        if (uptimeTrackersBuilder_ == null) {
+          return uptimeTrackers_.get(index);  } else {
+          return uptimeTrackersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.concentratedliquidity.v1beta1.UptimeTracker uptime_trackers = 4 [json_name = "uptimeTrackers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"uptime_trackers&#92;""];</code>
+       */
+      public java.util.List<? extends com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTrackerOrBuilder> 
+           getUptimeTrackersOrBuilderList() {
+        if (uptimeTrackersBuilder_ != null) {
+          return uptimeTrackersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(uptimeTrackers_);
+        }
+      }
+      /**
+       * <code>repeated .osmosis.concentratedliquidity.v1beta1.UptimeTracker uptime_trackers = 4 [json_name = "uptimeTrackers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"uptime_trackers&#92;""];</code>
+       */
+      public com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker.Builder addUptimeTrackersBuilder() {
+        return getUptimeTrackersFieldBuilder().addBuilder(
+            com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .osmosis.concentratedliquidity.v1beta1.UptimeTracker uptime_trackers = 4 [json_name = "uptimeTrackers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"uptime_trackers&#92;""];</code>
+       */
+      public com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker.Builder addUptimeTrackersBuilder(
+          int index) {
+        return getUptimeTrackersFieldBuilder().addBuilder(
+            index, com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .osmosis.concentratedliquidity.v1beta1.UptimeTracker uptime_trackers = 4 [json_name = "uptimeTrackers", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"uptime_trackers&#92;""];</code>
+       */
+      public java.util.List<com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker.Builder> 
+           getUptimeTrackersBuilderList() {
+        return getUptimeTrackersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker, com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker.Builder, com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTrackerOrBuilder> 
+          getUptimeTrackersFieldBuilder() {
+        if (uptimeTrackersBuilder_ == null) {
+          uptimeTrackersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker, com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker.Builder, com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTrackerOrBuilder>(
+                  uptimeTrackers_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          uptimeTrackers_ = null;
+        }
+        return uptimeTrackersBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.concentratedliquidity.v1beta1.TickInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.concentratedliquidity.v1beta1.TickInfo)
+    private static final com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfo();
+    }
+
+    public static com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TickInfo>
+        PARSER = new com.google.protobuf.AbstractParser<TickInfo>() {
+      @java.lang.Override
+      public TickInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<TickInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TickInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.TickInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UptimeTrackerOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:osmosis.concentratedliquidity.v1beta1.UptimeTracker)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin uptime_growth_outside = 1 [json_name = "uptimeGrowthOutside", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> 
+        getUptimeGrowthOutsideList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin uptime_growth_outside = 1 [json_name = "uptimeGrowthOutside", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoin getUptimeGrowthOutside(int index);
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin uptime_growth_outside = 1 [json_name = "uptimeGrowthOutside", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    int getUptimeGrowthOutsideCount();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin uptime_growth_outside = 1 [json_name = "uptimeGrowthOutside", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getUptimeGrowthOutsideOrBuilderList();
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin uptime_growth_outside = 1 [json_name = "uptimeGrowthOutside", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getUptimeGrowthOutsideOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code osmosis.concentratedliquidity.v1beta1.UptimeTracker}
+   */
+  public static final class UptimeTracker extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:osmosis.concentratedliquidity.v1beta1.UptimeTracker)
+      UptimeTrackerOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UptimeTracker.newBuilder() to construct.
+    private UptimeTracker(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UptimeTracker() {
+      uptimeGrowthOutside_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UptimeTracker();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.internal_static_osmosis_concentratedliquidity_v1beta1_UptimeTracker_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.internal_static_osmosis_concentratedliquidity_v1beta1_UptimeTracker_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker.class, com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker.Builder.class);
+    }
+
+    public static final int UPTIME_GROWTH_OUTSIDE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> uptimeGrowthOutside_;
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin uptime_growth_outside = 1 [json_name = "uptimeGrowthOutside", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getUptimeGrowthOutsideList() {
+      return uptimeGrowthOutside_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin uptime_growth_outside = 1 [json_name = "uptimeGrowthOutside", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+        getUptimeGrowthOutsideOrBuilderList() {
+      return uptimeGrowthOutside_;
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin uptime_growth_outside = 1 [json_name = "uptimeGrowthOutside", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public int getUptimeGrowthOutsideCount() {
+      return uptimeGrowthOutside_.size();
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin uptime_growth_outside = 1 [json_name = "uptimeGrowthOutside", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoin getUptimeGrowthOutside(int index) {
+      return uptimeGrowthOutside_.get(index);
+    }
+    /**
+     * <code>repeated .cosmos.base.v1beta1.DecCoin uptime_growth_outside = 1 [json_name = "uptimeGrowthOutside", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getUptimeGrowthOutsideOrBuilder(
+        int index) {
+      return uptimeGrowthOutside_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < uptimeGrowthOutside_.size(); i++) {
+        output.writeMessage(1, uptimeGrowthOutside_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < uptimeGrowthOutside_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, uptimeGrowthOutside_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker)) {
+        return super.equals(obj);
+      }
+      com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker other = (com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker) obj;
+
+      if (!getUptimeGrowthOutsideList()
+          .equals(other.getUptimeGrowthOutsideList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getUptimeGrowthOutsideCount() > 0) {
+        hash = (37 * hash) + UPTIME_GROWTH_OUTSIDE_FIELD_NUMBER;
+        hash = (53 * hash) + getUptimeGrowthOutsideList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code osmosis.concentratedliquidity.v1beta1.UptimeTracker}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:osmosis.concentratedliquidity.v1beta1.UptimeTracker)
+        com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTrackerOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.internal_static_osmosis_concentratedliquidity_v1beta1_UptimeTracker_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.internal_static_osmosis_concentratedliquidity_v1beta1_UptimeTracker_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker.class, com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker.Builder.class);
+      }
+
+      // Construct using com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (uptimeGrowthOutsideBuilder_ == null) {
+          uptimeGrowthOutside_ = java.util.Collections.emptyList();
+        } else {
+          uptimeGrowthOutside_ = null;
+          uptimeGrowthOutsideBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.internal_static_osmosis_concentratedliquidity_v1beta1_UptimeTracker_descriptor;
+      }
+
+      @java.lang.Override
+      public com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker getDefaultInstanceForType() {
+        return com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker build() {
+        com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker buildPartial() {
+        com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker result = new com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker result) {
+        if (uptimeGrowthOutsideBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            uptimeGrowthOutside_ = java.util.Collections.unmodifiableList(uptimeGrowthOutside_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.uptimeGrowthOutside_ = uptimeGrowthOutside_;
+        } else {
+          result.uptimeGrowthOutside_ = uptimeGrowthOutsideBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker) {
+          return mergeFrom((com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker other) {
+        if (other == com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker.getDefaultInstance()) return this;
+        if (uptimeGrowthOutsideBuilder_ == null) {
+          if (!other.uptimeGrowthOutside_.isEmpty()) {
+            if (uptimeGrowthOutside_.isEmpty()) {
+              uptimeGrowthOutside_ = other.uptimeGrowthOutside_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureUptimeGrowthOutsideIsMutable();
+              uptimeGrowthOutside_.addAll(other.uptimeGrowthOutside_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.uptimeGrowthOutside_.isEmpty()) {
+            if (uptimeGrowthOutsideBuilder_.isEmpty()) {
+              uptimeGrowthOutsideBuilder_.dispose();
+              uptimeGrowthOutsideBuilder_ = null;
+              uptimeGrowthOutside_ = other.uptimeGrowthOutside_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              uptimeGrowthOutsideBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getUptimeGrowthOutsideFieldBuilder() : null;
+            } else {
+              uptimeGrowthOutsideBuilder_.addAllMessages(other.uptimeGrowthOutside_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cosmos.base.v1beta1.CoinProto.DecCoin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.DecCoin.parser(),
+                        extensionRegistry);
+                if (uptimeGrowthOutsideBuilder_ == null) {
+                  ensureUptimeGrowthOutsideIsMutable();
+                  uptimeGrowthOutside_.add(m);
+                } else {
+                  uptimeGrowthOutsideBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> uptimeGrowthOutside_ =
+        java.util.Collections.emptyList();
+      private void ensureUptimeGrowthOutsideIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          uptimeGrowthOutside_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.DecCoin>(uptimeGrowthOutside_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> uptimeGrowthOutsideBuilder_;
+
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin uptime_growth_outside = 1 [json_name = "uptimeGrowthOutside", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin> getUptimeGrowthOutsideList() {
+        if (uptimeGrowthOutsideBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(uptimeGrowthOutside_);
+        } else {
+          return uptimeGrowthOutsideBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin uptime_growth_outside = 1 [json_name = "uptimeGrowthOutside", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public int getUptimeGrowthOutsideCount() {
+        if (uptimeGrowthOutsideBuilder_ == null) {
+          return uptimeGrowthOutside_.size();
+        } else {
+          return uptimeGrowthOutsideBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin uptime_growth_outside = 1 [json_name = "uptimeGrowthOutside", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin getUptimeGrowthOutside(int index) {
+        if (uptimeGrowthOutsideBuilder_ == null) {
+          return uptimeGrowthOutside_.get(index);
+        } else {
+          return uptimeGrowthOutsideBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin uptime_growth_outside = 1 [json_name = "uptimeGrowthOutside", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setUptimeGrowthOutside(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (uptimeGrowthOutsideBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUptimeGrowthOutsideIsMutable();
+          uptimeGrowthOutside_.set(index, value);
+          onChanged();
+        } else {
+          uptimeGrowthOutsideBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin uptime_growth_outside = 1 [json_name = "uptimeGrowthOutside", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder setUptimeGrowthOutside(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (uptimeGrowthOutsideBuilder_ == null) {
+          ensureUptimeGrowthOutsideIsMutable();
+          uptimeGrowthOutside_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          uptimeGrowthOutsideBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin uptime_growth_outside = 1 [json_name = "uptimeGrowthOutside", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addUptimeGrowthOutside(com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (uptimeGrowthOutsideBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUptimeGrowthOutsideIsMutable();
+          uptimeGrowthOutside_.add(value);
+          onChanged();
+        } else {
+          uptimeGrowthOutsideBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin uptime_growth_outside = 1 [json_name = "uptimeGrowthOutside", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addUptimeGrowthOutside(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin value) {
+        if (uptimeGrowthOutsideBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureUptimeGrowthOutsideIsMutable();
+          uptimeGrowthOutside_.add(index, value);
+          onChanged();
+        } else {
+          uptimeGrowthOutsideBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin uptime_growth_outside = 1 [json_name = "uptimeGrowthOutside", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addUptimeGrowthOutside(
+          com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (uptimeGrowthOutsideBuilder_ == null) {
+          ensureUptimeGrowthOutsideIsMutable();
+          uptimeGrowthOutside_.add(builderForValue.build());
+          onChanged();
+        } else {
+          uptimeGrowthOutsideBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin uptime_growth_outside = 1 [json_name = "uptimeGrowthOutside", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addUptimeGrowthOutside(
+          int index, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder builderForValue) {
+        if (uptimeGrowthOutsideBuilder_ == null) {
+          ensureUptimeGrowthOutsideIsMutable();
+          uptimeGrowthOutside_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          uptimeGrowthOutsideBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin uptime_growth_outside = 1 [json_name = "uptimeGrowthOutside", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder addAllUptimeGrowthOutside(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.DecCoin> values) {
+        if (uptimeGrowthOutsideBuilder_ == null) {
+          ensureUptimeGrowthOutsideIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, uptimeGrowthOutside_);
+          onChanged();
+        } else {
+          uptimeGrowthOutsideBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin uptime_growth_outside = 1 [json_name = "uptimeGrowthOutside", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder clearUptimeGrowthOutside() {
+        if (uptimeGrowthOutsideBuilder_ == null) {
+          uptimeGrowthOutside_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          uptimeGrowthOutsideBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin uptime_growth_outside = 1 [json_name = "uptimeGrowthOutside", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public Builder removeUptimeGrowthOutside(int index) {
+        if (uptimeGrowthOutsideBuilder_ == null) {
+          ensureUptimeGrowthOutsideIsMutable();
+          uptimeGrowthOutside_.remove(index);
+          onChanged();
+        } else {
+          uptimeGrowthOutsideBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin uptime_growth_outside = 1 [json_name = "uptimeGrowthOutside", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder getUptimeGrowthOutsideBuilder(
+          int index) {
+        return getUptimeGrowthOutsideFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin uptime_growth_outside = 1 [json_name = "uptimeGrowthOutside", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder getUptimeGrowthOutsideOrBuilder(
+          int index) {
+        if (uptimeGrowthOutsideBuilder_ == null) {
+          return uptimeGrowthOutside_.get(index);  } else {
+          return uptimeGrowthOutsideBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin uptime_growth_outside = 1 [json_name = "uptimeGrowthOutside", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+           getUptimeGrowthOutsideOrBuilderList() {
+        if (uptimeGrowthOutsideBuilder_ != null) {
+          return uptimeGrowthOutsideBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(uptimeGrowthOutside_);
+        }
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin uptime_growth_outside = 1 [json_name = "uptimeGrowthOutside", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addUptimeGrowthOutsideBuilder() {
+        return getUptimeGrowthOutsideFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin uptime_growth_outside = 1 [json_name = "uptimeGrowthOutside", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder addUptimeGrowthOutsideBuilder(
+          int index) {
+        return getUptimeGrowthOutsideFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.DecCoin.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cosmos.base.v1beta1.DecCoin uptime_growth_outside = 1 [json_name = "uptimeGrowthOutside", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/types.DecCoins"];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder> 
+           getUptimeGrowthOutsideBuilderList() {
+        return getUptimeGrowthOutsideFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder> 
+          getUptimeGrowthOutsideFieldBuilder() {
+        if (uptimeGrowthOutsideBuilder_ == null) {
+          uptimeGrowthOutsideBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.DecCoin, com.cosmos.base.v1beta1.CoinProto.DecCoin.Builder, com.cosmos.base.v1beta1.CoinProto.DecCoinOrBuilder>(
+                  uptimeGrowthOutside_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          uptimeGrowthOutside_ = null;
+        }
+        return uptimeGrowthOutsideBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:osmosis.concentratedliquidity.v1beta1.UptimeTracker)
+    }
+
+    // @@protoc_insertion_point(class_scope:osmosis.concentratedliquidity.v1beta1.UptimeTracker)
+    private static final com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker();
+    }
+
+    public static com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UptimeTracker>
+        PARSER = new com.google.protobuf.AbstractParser<UptimeTracker>() {
+      @java.lang.Override
+      public UptimeTracker parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UptimeTracker> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UptimeTracker> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.osmosis.concentratedliquidity.v1beta1.TickInfoProto.UptimeTracker getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_concentratedliquidity_v1beta1_TickInfo_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_concentratedliquidity_v1beta1_TickInfo_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_osmosis_concentratedliquidity_v1beta1_UptimeTracker_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_osmosis_concentratedliquidity_v1beta1_UptimeTracker_fieldAccessorTable;
 
@@ -55,15 +2793,15 @@ public final class TickInfoProto {
       "ime_growth_outside\030\001 \003(\0132\034.cosmos.base.v" +
       "1beta1.DecCoinB3\310\336\037\000\252\337\037+github.com/cosmo" +
       "s/cosmos-sdk/types.DecCoinsR\023uptimeGrowt" +
-      "hOutsideB\264\002\n)com.osmosis.concentratedliq" +
-      "uidity.v1beta1B\rTickInfoProtoP\001ZBgithub." +
-      "com/osmosis-labs/osmosis/v15/x/concentra" +
-      "ted-liquidity/model\242\002\003OCX\252\002%Osmosis.Conc" +
-      "entratedliquidity.V1beta1\312\002%Osmosis\\Conc" +
-      "entratedliquidity\\V1beta1\342\0021Osmosis\\Conc" +
-      "entratedliquidity\\V1beta1\\GPBMetadata\352\002\'" +
-      "Osmosis::Concentratedliquidity::V1beta1b" +
-      "\006proto3"
+      "hOutsideB\262\002\n)com.osmosis.concentratedliq" +
+      "uidity.v1beta1B\rTickInfoProtoZBgithub.co" +
+      "m/osmosis-labs/osmosis/v15/x/concentrate" +
+      "d-liquidity/model\242\002\003OCX\252\002%Osmosis.Concen" +
+      "tratedliquidity.V1beta1\312\002%Osmosis\\Concen" +
+      "tratedliquidity\\V1beta1\342\0021Osmosis\\Concen" +
+      "tratedliquidity\\V1beta1\\GPBMetadata\352\002\'Os" +
+      "mosis::Concentratedliquidity::V1beta1b\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

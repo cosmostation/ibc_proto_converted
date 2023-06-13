@@ -14,9 +14,1397 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:crescent.claim.v1beta1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * airdrops specifies a list of airdrops
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.crescent.claim.v1beta1.ClaimProto.Airdrop> 
+        getAirdropsList();
+    /**
+     * <pre>
+     * airdrops specifies a list of airdrops
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.claim.v1beta1.ClaimProto.Airdrop getAirdrops(int index);
+    /**
+     * <pre>
+     * airdrops specifies a list of airdrops
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+     */
+    int getAirdropsCount();
+    /**
+     * <pre>
+     * airdrops specifies a list of airdrops
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.crescent.claim.v1beta1.ClaimProto.AirdropOrBuilder> 
+        getAirdropsOrBuilderList();
+    /**
+     * <pre>
+     * airdrops specifies a list of airdrops
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.claim.v1beta1.ClaimProto.AirdropOrBuilder getAirdropsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * claim_records specifies a list of claim records
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.ClaimRecord claim_records = 2 [json_name = "claimRecords", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.crescent.claim.v1beta1.ClaimProto.ClaimRecord> 
+        getClaimRecordsList();
+    /**
+     * <pre>
+     * claim_records specifies a list of claim records
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.ClaimRecord claim_records = 2 [json_name = "claimRecords", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.claim.v1beta1.ClaimProto.ClaimRecord getClaimRecords(int index);
+    /**
+     * <pre>
+     * claim_records specifies a list of claim records
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.ClaimRecord claim_records = 2 [json_name = "claimRecords", (.gogoproto.nullable) = false];</code>
+     */
+    int getClaimRecordsCount();
+    /**
+     * <pre>
+     * claim_records specifies a list of claim records
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.ClaimRecord claim_records = 2 [json_name = "claimRecords", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.crescent.claim.v1beta1.ClaimProto.ClaimRecordOrBuilder> 
+        getClaimRecordsOrBuilderList();
+    /**
+     * <pre>
+     * claim_records specifies a list of claim records
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.ClaimRecord claim_records = 2 [json_name = "claimRecords", (.gogoproto.nullable) = false];</code>
+     */
+    com.crescent.claim.v1beta1.ClaimProto.ClaimRecordOrBuilder getClaimRecordsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisState defines the claim module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code crescent.claim.v1beta1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:crescent.claim.v1beta1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      airdrops_ = java.util.Collections.emptyList();
+      claimRecords_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.crescent.claim.v1beta1.GenesisProto.internal_static_crescent_claim_v1beta1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.crescent.claim.v1beta1.GenesisProto.internal_static_crescent_claim_v1beta1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.crescent.claim.v1beta1.GenesisProto.GenesisState.class, com.crescent.claim.v1beta1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int AIRDROPS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.crescent.claim.v1beta1.ClaimProto.Airdrop> airdrops_;
+    /**
+     * <pre>
+     * airdrops specifies a list of airdrops
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.crescent.claim.v1beta1.ClaimProto.Airdrop> getAirdropsList() {
+      return airdrops_;
+    }
+    /**
+     * <pre>
+     * airdrops specifies a list of airdrops
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.crescent.claim.v1beta1.ClaimProto.AirdropOrBuilder> 
+        getAirdropsOrBuilderList() {
+      return airdrops_;
+    }
+    /**
+     * <pre>
+     * airdrops specifies a list of airdrops
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getAirdropsCount() {
+      return airdrops_.size();
+    }
+    /**
+     * <pre>
+     * airdrops specifies a list of airdrops
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.claim.v1beta1.ClaimProto.Airdrop getAirdrops(int index) {
+      return airdrops_.get(index);
+    }
+    /**
+     * <pre>
+     * airdrops specifies a list of airdrops
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.claim.v1beta1.ClaimProto.AirdropOrBuilder getAirdropsOrBuilder(
+        int index) {
+      return airdrops_.get(index);
+    }
+
+    public static final int CLAIM_RECORDS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.crescent.claim.v1beta1.ClaimProto.ClaimRecord> claimRecords_;
+    /**
+     * <pre>
+     * claim_records specifies a list of claim records
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.ClaimRecord claim_records = 2 [json_name = "claimRecords", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.crescent.claim.v1beta1.ClaimProto.ClaimRecord> getClaimRecordsList() {
+      return claimRecords_;
+    }
+    /**
+     * <pre>
+     * claim_records specifies a list of claim records
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.ClaimRecord claim_records = 2 [json_name = "claimRecords", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.crescent.claim.v1beta1.ClaimProto.ClaimRecordOrBuilder> 
+        getClaimRecordsOrBuilderList() {
+      return claimRecords_;
+    }
+    /**
+     * <pre>
+     * claim_records specifies a list of claim records
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.ClaimRecord claim_records = 2 [json_name = "claimRecords", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getClaimRecordsCount() {
+      return claimRecords_.size();
+    }
+    /**
+     * <pre>
+     * claim_records specifies a list of claim records
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.ClaimRecord claim_records = 2 [json_name = "claimRecords", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.claim.v1beta1.ClaimProto.ClaimRecord getClaimRecords(int index) {
+      return claimRecords_.get(index);
+    }
+    /**
+     * <pre>
+     * claim_records specifies a list of claim records
+     * </pre>
+     *
+     * <code>repeated .crescent.claim.v1beta1.ClaimRecord claim_records = 2 [json_name = "claimRecords", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.crescent.claim.v1beta1.ClaimProto.ClaimRecordOrBuilder getClaimRecordsOrBuilder(
+        int index) {
+      return claimRecords_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < airdrops_.size(); i++) {
+        output.writeMessage(1, airdrops_.get(i));
+      }
+      for (int i = 0; i < claimRecords_.size(); i++) {
+        output.writeMessage(2, claimRecords_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < airdrops_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, airdrops_.get(i));
+      }
+      for (int i = 0; i < claimRecords_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, claimRecords_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.crescent.claim.v1beta1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.crescent.claim.v1beta1.GenesisProto.GenesisState other = (com.crescent.claim.v1beta1.GenesisProto.GenesisState) obj;
+
+      if (!getAirdropsList()
+          .equals(other.getAirdropsList())) return false;
+      if (!getClaimRecordsList()
+          .equals(other.getClaimRecordsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getAirdropsCount() > 0) {
+        hash = (37 * hash) + AIRDROPS_FIELD_NUMBER;
+        hash = (53 * hash) + getAirdropsList().hashCode();
+      }
+      if (getClaimRecordsCount() > 0) {
+        hash = (37 * hash) + CLAIM_RECORDS_FIELD_NUMBER;
+        hash = (53 * hash) + getClaimRecordsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.crescent.claim.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.claim.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.claim.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.claim.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.claim.v1beta1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.crescent.claim.v1beta1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.crescent.claim.v1beta1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.claim.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.crescent.claim.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.crescent.claim.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.crescent.claim.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.crescent.claim.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.crescent.claim.v1beta1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the claim module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code crescent.claim.v1beta1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:crescent.claim.v1beta1.GenesisState)
+        com.crescent.claim.v1beta1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.crescent.claim.v1beta1.GenesisProto.internal_static_crescent_claim_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.crescent.claim.v1beta1.GenesisProto.internal_static_crescent_claim_v1beta1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.crescent.claim.v1beta1.GenesisProto.GenesisState.class, com.crescent.claim.v1beta1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.crescent.claim.v1beta1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (airdropsBuilder_ == null) {
+          airdrops_ = java.util.Collections.emptyList();
+        } else {
+          airdrops_ = null;
+          airdropsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (claimRecordsBuilder_ == null) {
+          claimRecords_ = java.util.Collections.emptyList();
+        } else {
+          claimRecords_ = null;
+          claimRecordsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.crescent.claim.v1beta1.GenesisProto.internal_static_crescent_claim_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.crescent.claim.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.crescent.claim.v1beta1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.crescent.claim.v1beta1.GenesisProto.GenesisState build() {
+        com.crescent.claim.v1beta1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.crescent.claim.v1beta1.GenesisProto.GenesisState buildPartial() {
+        com.crescent.claim.v1beta1.GenesisProto.GenesisState result = new com.crescent.claim.v1beta1.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.crescent.claim.v1beta1.GenesisProto.GenesisState result) {
+        if (airdropsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            airdrops_ = java.util.Collections.unmodifiableList(airdrops_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.airdrops_ = airdrops_;
+        } else {
+          result.airdrops_ = airdropsBuilder_.build();
+        }
+        if (claimRecordsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            claimRecords_ = java.util.Collections.unmodifiableList(claimRecords_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.claimRecords_ = claimRecords_;
+        } else {
+          result.claimRecords_ = claimRecordsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.crescent.claim.v1beta1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.crescent.claim.v1beta1.GenesisProto.GenesisState) {
+          return mergeFrom((com.crescent.claim.v1beta1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.crescent.claim.v1beta1.GenesisProto.GenesisState other) {
+        if (other == com.crescent.claim.v1beta1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (airdropsBuilder_ == null) {
+          if (!other.airdrops_.isEmpty()) {
+            if (airdrops_.isEmpty()) {
+              airdrops_ = other.airdrops_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureAirdropsIsMutable();
+              airdrops_.addAll(other.airdrops_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.airdrops_.isEmpty()) {
+            if (airdropsBuilder_.isEmpty()) {
+              airdropsBuilder_.dispose();
+              airdropsBuilder_ = null;
+              airdrops_ = other.airdrops_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              airdropsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAirdropsFieldBuilder() : null;
+            } else {
+              airdropsBuilder_.addAllMessages(other.airdrops_);
+            }
+          }
+        }
+        if (claimRecordsBuilder_ == null) {
+          if (!other.claimRecords_.isEmpty()) {
+            if (claimRecords_.isEmpty()) {
+              claimRecords_ = other.claimRecords_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureClaimRecordsIsMutable();
+              claimRecords_.addAll(other.claimRecords_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.claimRecords_.isEmpty()) {
+            if (claimRecordsBuilder_.isEmpty()) {
+              claimRecordsBuilder_.dispose();
+              claimRecordsBuilder_ = null;
+              claimRecords_ = other.claimRecords_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              claimRecordsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getClaimRecordsFieldBuilder() : null;
+            } else {
+              claimRecordsBuilder_.addAllMessages(other.claimRecords_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.crescent.claim.v1beta1.ClaimProto.Airdrop m =
+                    input.readMessage(
+                        com.crescent.claim.v1beta1.ClaimProto.Airdrop.parser(),
+                        extensionRegistry);
+                if (airdropsBuilder_ == null) {
+                  ensureAirdropsIsMutable();
+                  airdrops_.add(m);
+                } else {
+                  airdropsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                com.crescent.claim.v1beta1.ClaimProto.ClaimRecord m =
+                    input.readMessage(
+                        com.crescent.claim.v1beta1.ClaimProto.ClaimRecord.parser(),
+                        extensionRegistry);
+                if (claimRecordsBuilder_ == null) {
+                  ensureClaimRecordsIsMutable();
+                  claimRecords_.add(m);
+                } else {
+                  claimRecordsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.crescent.claim.v1beta1.ClaimProto.Airdrop> airdrops_ =
+        java.util.Collections.emptyList();
+      private void ensureAirdropsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          airdrops_ = new java.util.ArrayList<com.crescent.claim.v1beta1.ClaimProto.Airdrop>(airdrops_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.claim.v1beta1.ClaimProto.Airdrop, com.crescent.claim.v1beta1.ClaimProto.Airdrop.Builder, com.crescent.claim.v1beta1.ClaimProto.AirdropOrBuilder> airdropsBuilder_;
+
+      /**
+       * <pre>
+       * airdrops specifies a list of airdrops
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.claim.v1beta1.ClaimProto.Airdrop> getAirdropsList() {
+        if (airdropsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(airdrops_);
+        } else {
+          return airdropsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * airdrops specifies a list of airdrops
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+       */
+      public int getAirdropsCount() {
+        if (airdropsBuilder_ == null) {
+          return airdrops_.size();
+        } else {
+          return airdropsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * airdrops specifies a list of airdrops
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.claim.v1beta1.ClaimProto.Airdrop getAirdrops(int index) {
+        if (airdropsBuilder_ == null) {
+          return airdrops_.get(index);
+        } else {
+          return airdropsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * airdrops specifies a list of airdrops
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAirdrops(
+          int index, com.crescent.claim.v1beta1.ClaimProto.Airdrop value) {
+        if (airdropsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAirdropsIsMutable();
+          airdrops_.set(index, value);
+          onChanged();
+        } else {
+          airdropsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * airdrops specifies a list of airdrops
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAirdrops(
+          int index, com.crescent.claim.v1beta1.ClaimProto.Airdrop.Builder builderForValue) {
+        if (airdropsBuilder_ == null) {
+          ensureAirdropsIsMutable();
+          airdrops_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          airdropsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * airdrops specifies a list of airdrops
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAirdrops(com.crescent.claim.v1beta1.ClaimProto.Airdrop value) {
+        if (airdropsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAirdropsIsMutable();
+          airdrops_.add(value);
+          onChanged();
+        } else {
+          airdropsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * airdrops specifies a list of airdrops
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAirdrops(
+          int index, com.crescent.claim.v1beta1.ClaimProto.Airdrop value) {
+        if (airdropsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAirdropsIsMutable();
+          airdrops_.add(index, value);
+          onChanged();
+        } else {
+          airdropsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * airdrops specifies a list of airdrops
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAirdrops(
+          com.crescent.claim.v1beta1.ClaimProto.Airdrop.Builder builderForValue) {
+        if (airdropsBuilder_ == null) {
+          ensureAirdropsIsMutable();
+          airdrops_.add(builderForValue.build());
+          onChanged();
+        } else {
+          airdropsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * airdrops specifies a list of airdrops
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAirdrops(
+          int index, com.crescent.claim.v1beta1.ClaimProto.Airdrop.Builder builderForValue) {
+        if (airdropsBuilder_ == null) {
+          ensureAirdropsIsMutable();
+          airdrops_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          airdropsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * airdrops specifies a list of airdrops
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllAirdrops(
+          java.lang.Iterable<? extends com.crescent.claim.v1beta1.ClaimProto.Airdrop> values) {
+        if (airdropsBuilder_ == null) {
+          ensureAirdropsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, airdrops_);
+          onChanged();
+        } else {
+          airdropsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * airdrops specifies a list of airdrops
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearAirdrops() {
+        if (airdropsBuilder_ == null) {
+          airdrops_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          airdropsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * airdrops specifies a list of airdrops
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeAirdrops(int index) {
+        if (airdropsBuilder_ == null) {
+          ensureAirdropsIsMutable();
+          airdrops_.remove(index);
+          onChanged();
+        } else {
+          airdropsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * airdrops specifies a list of airdrops
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.claim.v1beta1.ClaimProto.Airdrop.Builder getAirdropsBuilder(
+          int index) {
+        return getAirdropsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * airdrops specifies a list of airdrops
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.claim.v1beta1.ClaimProto.AirdropOrBuilder getAirdropsOrBuilder(
+          int index) {
+        if (airdropsBuilder_ == null) {
+          return airdrops_.get(index);  } else {
+          return airdropsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * airdrops specifies a list of airdrops
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.crescent.claim.v1beta1.ClaimProto.AirdropOrBuilder> 
+           getAirdropsOrBuilderList() {
+        if (airdropsBuilder_ != null) {
+          return airdropsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(airdrops_);
+        }
+      }
+      /**
+       * <pre>
+       * airdrops specifies a list of airdrops
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.claim.v1beta1.ClaimProto.Airdrop.Builder addAirdropsBuilder() {
+        return getAirdropsFieldBuilder().addBuilder(
+            com.crescent.claim.v1beta1.ClaimProto.Airdrop.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * airdrops specifies a list of airdrops
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.claim.v1beta1.ClaimProto.Airdrop.Builder addAirdropsBuilder(
+          int index) {
+        return getAirdropsFieldBuilder().addBuilder(
+            index, com.crescent.claim.v1beta1.ClaimProto.Airdrop.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * airdrops specifies a list of airdrops
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.Airdrop airdrops = 1 [json_name = "airdrops", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.claim.v1beta1.ClaimProto.Airdrop.Builder> 
+           getAirdropsBuilderList() {
+        return getAirdropsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.claim.v1beta1.ClaimProto.Airdrop, com.crescent.claim.v1beta1.ClaimProto.Airdrop.Builder, com.crescent.claim.v1beta1.ClaimProto.AirdropOrBuilder> 
+          getAirdropsFieldBuilder() {
+        if (airdropsBuilder_ == null) {
+          airdropsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.crescent.claim.v1beta1.ClaimProto.Airdrop, com.crescent.claim.v1beta1.ClaimProto.Airdrop.Builder, com.crescent.claim.v1beta1.ClaimProto.AirdropOrBuilder>(
+                  airdrops_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          airdrops_ = null;
+        }
+        return airdropsBuilder_;
+      }
+
+      private java.util.List<com.crescent.claim.v1beta1.ClaimProto.ClaimRecord> claimRecords_ =
+        java.util.Collections.emptyList();
+      private void ensureClaimRecordsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          claimRecords_ = new java.util.ArrayList<com.crescent.claim.v1beta1.ClaimProto.ClaimRecord>(claimRecords_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.claim.v1beta1.ClaimProto.ClaimRecord, com.crescent.claim.v1beta1.ClaimProto.ClaimRecord.Builder, com.crescent.claim.v1beta1.ClaimProto.ClaimRecordOrBuilder> claimRecordsBuilder_;
+
+      /**
+       * <pre>
+       * claim_records specifies a list of claim records
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ClaimRecord claim_records = 2 [json_name = "claimRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.claim.v1beta1.ClaimProto.ClaimRecord> getClaimRecordsList() {
+        if (claimRecordsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(claimRecords_);
+        } else {
+          return claimRecordsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * claim_records specifies a list of claim records
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ClaimRecord claim_records = 2 [json_name = "claimRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public int getClaimRecordsCount() {
+        if (claimRecordsBuilder_ == null) {
+          return claimRecords_.size();
+        } else {
+          return claimRecordsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * claim_records specifies a list of claim records
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ClaimRecord claim_records = 2 [json_name = "claimRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.claim.v1beta1.ClaimProto.ClaimRecord getClaimRecords(int index) {
+        if (claimRecordsBuilder_ == null) {
+          return claimRecords_.get(index);
+        } else {
+          return claimRecordsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * claim_records specifies a list of claim records
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ClaimRecord claim_records = 2 [json_name = "claimRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setClaimRecords(
+          int index, com.crescent.claim.v1beta1.ClaimProto.ClaimRecord value) {
+        if (claimRecordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClaimRecordsIsMutable();
+          claimRecords_.set(index, value);
+          onChanged();
+        } else {
+          claimRecordsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claim_records specifies a list of claim records
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ClaimRecord claim_records = 2 [json_name = "claimRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setClaimRecords(
+          int index, com.crescent.claim.v1beta1.ClaimProto.ClaimRecord.Builder builderForValue) {
+        if (claimRecordsBuilder_ == null) {
+          ensureClaimRecordsIsMutable();
+          claimRecords_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          claimRecordsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claim_records specifies a list of claim records
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ClaimRecord claim_records = 2 [json_name = "claimRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addClaimRecords(com.crescent.claim.v1beta1.ClaimProto.ClaimRecord value) {
+        if (claimRecordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClaimRecordsIsMutable();
+          claimRecords_.add(value);
+          onChanged();
+        } else {
+          claimRecordsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claim_records specifies a list of claim records
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ClaimRecord claim_records = 2 [json_name = "claimRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addClaimRecords(
+          int index, com.crescent.claim.v1beta1.ClaimProto.ClaimRecord value) {
+        if (claimRecordsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClaimRecordsIsMutable();
+          claimRecords_.add(index, value);
+          onChanged();
+        } else {
+          claimRecordsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claim_records specifies a list of claim records
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ClaimRecord claim_records = 2 [json_name = "claimRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addClaimRecords(
+          com.crescent.claim.v1beta1.ClaimProto.ClaimRecord.Builder builderForValue) {
+        if (claimRecordsBuilder_ == null) {
+          ensureClaimRecordsIsMutable();
+          claimRecords_.add(builderForValue.build());
+          onChanged();
+        } else {
+          claimRecordsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claim_records specifies a list of claim records
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ClaimRecord claim_records = 2 [json_name = "claimRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addClaimRecords(
+          int index, com.crescent.claim.v1beta1.ClaimProto.ClaimRecord.Builder builderForValue) {
+        if (claimRecordsBuilder_ == null) {
+          ensureClaimRecordsIsMutable();
+          claimRecords_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          claimRecordsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claim_records specifies a list of claim records
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ClaimRecord claim_records = 2 [json_name = "claimRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllClaimRecords(
+          java.lang.Iterable<? extends com.crescent.claim.v1beta1.ClaimProto.ClaimRecord> values) {
+        if (claimRecordsBuilder_ == null) {
+          ensureClaimRecordsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, claimRecords_);
+          onChanged();
+        } else {
+          claimRecordsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claim_records specifies a list of claim records
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ClaimRecord claim_records = 2 [json_name = "claimRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearClaimRecords() {
+        if (claimRecordsBuilder_ == null) {
+          claimRecords_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          claimRecordsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claim_records specifies a list of claim records
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ClaimRecord claim_records = 2 [json_name = "claimRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeClaimRecords(int index) {
+        if (claimRecordsBuilder_ == null) {
+          ensureClaimRecordsIsMutable();
+          claimRecords_.remove(index);
+          onChanged();
+        } else {
+          claimRecordsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claim_records specifies a list of claim records
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ClaimRecord claim_records = 2 [json_name = "claimRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.claim.v1beta1.ClaimProto.ClaimRecord.Builder getClaimRecordsBuilder(
+          int index) {
+        return getClaimRecordsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * claim_records specifies a list of claim records
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ClaimRecord claim_records = 2 [json_name = "claimRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.claim.v1beta1.ClaimProto.ClaimRecordOrBuilder getClaimRecordsOrBuilder(
+          int index) {
+        if (claimRecordsBuilder_ == null) {
+          return claimRecords_.get(index);  } else {
+          return claimRecordsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * claim_records specifies a list of claim records
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ClaimRecord claim_records = 2 [json_name = "claimRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.crescent.claim.v1beta1.ClaimProto.ClaimRecordOrBuilder> 
+           getClaimRecordsOrBuilderList() {
+        if (claimRecordsBuilder_ != null) {
+          return claimRecordsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(claimRecords_);
+        }
+      }
+      /**
+       * <pre>
+       * claim_records specifies a list of claim records
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ClaimRecord claim_records = 2 [json_name = "claimRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.claim.v1beta1.ClaimProto.ClaimRecord.Builder addClaimRecordsBuilder() {
+        return getClaimRecordsFieldBuilder().addBuilder(
+            com.crescent.claim.v1beta1.ClaimProto.ClaimRecord.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * claim_records specifies a list of claim records
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ClaimRecord claim_records = 2 [json_name = "claimRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public com.crescent.claim.v1beta1.ClaimProto.ClaimRecord.Builder addClaimRecordsBuilder(
+          int index) {
+        return getClaimRecordsFieldBuilder().addBuilder(
+            index, com.crescent.claim.v1beta1.ClaimProto.ClaimRecord.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * claim_records specifies a list of claim records
+       * </pre>
+       *
+       * <code>repeated .crescent.claim.v1beta1.ClaimRecord claim_records = 2 [json_name = "claimRecords", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.crescent.claim.v1beta1.ClaimProto.ClaimRecord.Builder> 
+           getClaimRecordsBuilderList() {
+        return getClaimRecordsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.crescent.claim.v1beta1.ClaimProto.ClaimRecord, com.crescent.claim.v1beta1.ClaimProto.ClaimRecord.Builder, com.crescent.claim.v1beta1.ClaimProto.ClaimRecordOrBuilder> 
+          getClaimRecordsFieldBuilder() {
+        if (claimRecordsBuilder_ == null) {
+          claimRecordsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.crescent.claim.v1beta1.ClaimProto.ClaimRecord, com.crescent.claim.v1beta1.ClaimProto.ClaimRecord.Builder, com.crescent.claim.v1beta1.ClaimProto.ClaimRecordOrBuilder>(
+                  claimRecords_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          claimRecords_ = null;
+        }
+        return claimRecordsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:crescent.claim.v1beta1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:crescent.claim.v1beta1.GenesisState)
+    private static final com.crescent.claim.v1beta1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.crescent.claim.v1beta1.GenesisProto.GenesisState();
+    }
+
+    public static com.crescent.claim.v1beta1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.crescent.claim.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_crescent_claim_v1beta1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_crescent_claim_v1beta1_GenesisState_fieldAccessorTable;
 
@@ -35,13 +1423,13 @@ public final class GenesisProto {
       "esisState\022A\n\010airdrops\030\001 \003(\0132\037.crescent.c" +
       "laim.v1beta1.AirdropB\004\310\336\037\000R\010airdrops\022N\n\r" +
       "claim_records\030\002 \003(\0132#.crescent.claim.v1b" +
-      "eta1.ClaimRecordB\004\310\336\037\000R\014claimRecordsB\333\001\n" +
+      "eta1.ClaimRecordB\004\310\336\037\000R\014claimRecordsB\331\001\n" +
       "\032com.crescent.claim.v1beta1B\014GenesisProt" +
-      "oP\001Z5github.com/crescent-network/crescen" +
-      "t/v5/x/claim/types\242\002\003CCX\252\002\026Crescent.Clai" +
-      "m.V1beta1\312\002\026Crescent\\Claim\\V1beta1\342\002\"Cre" +
-      "scent\\Claim\\V1beta1\\GPBMetadata\352\002\030Cresce" +
-      "nt::Claim::V1beta1b\006proto3"
+      "oZ5github.com/crescent-network/crescent/" +
+      "v5/x/claim/types\242\002\003CCX\252\002\026Crescent.Claim." +
+      "V1beta1\312\002\026Crescent\\Claim\\V1beta1\342\002\"Cresc" +
+      "ent\\Claim\\V1beta1\\GPBMetadata\352\002\030Crescent" +
+      "::Claim::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

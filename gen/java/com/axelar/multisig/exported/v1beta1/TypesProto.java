@@ -14,6 +14,240 @@ public final class TypesProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  /**
+   * Protobuf enum {@code axelar.multisig.exported.v1beta1.MultisigState}
+   */
+  public enum MultisigState
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>MULTISIG_STATE_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "NonExistent"];</code>
+     */
+    MULTISIG_STATE_UNSPECIFIED(0),
+    /**
+     * <code>MULTISIG_STATE_PENDING = 1 [(.gogoproto.enumvalue_customname) = "Pending"];</code>
+     */
+    MULTISIG_STATE_PENDING(1),
+    /**
+     * <code>MULTISIG_STATE_COMPLETED = 2 [(.gogoproto.enumvalue_customname) = "Completed"];</code>
+     */
+    MULTISIG_STATE_COMPLETED(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>MULTISIG_STATE_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "NonExistent"];</code>
+     */
+    public static final int MULTISIG_STATE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>MULTISIG_STATE_PENDING = 1 [(.gogoproto.enumvalue_customname) = "Pending"];</code>
+     */
+    public static final int MULTISIG_STATE_PENDING_VALUE = 1;
+    /**
+     * <code>MULTISIG_STATE_COMPLETED = 2 [(.gogoproto.enumvalue_customname) = "Completed"];</code>
+     */
+    public static final int MULTISIG_STATE_COMPLETED_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static MultisigState valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static MultisigState forNumber(int value) {
+      switch (value) {
+        case 0: return MULTISIG_STATE_UNSPECIFIED;
+        case 1: return MULTISIG_STATE_PENDING;
+        case 2: return MULTISIG_STATE_COMPLETED;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<MultisigState>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        MultisigState> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<MultisigState>() {
+            public MultisigState findValueByNumber(int number) {
+              return MultisigState.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.axelar.multisig.exported.v1beta1.TypesProto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final MultisigState[] VALUES = values();
+
+    public static MultisigState valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private MultisigState(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:axelar.multisig.exported.v1beta1.MultisigState)
+  }
+
+  /**
+   * Protobuf enum {@code axelar.multisig.exported.v1beta1.KeyState}
+   */
+  public enum KeyState
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>KEY_STATE_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "Inactive"];</code>
+     */
+    KEY_STATE_UNSPECIFIED(0),
+    /**
+     * <code>KEY_STATE_ASSIGNED = 1 [(.gogoproto.enumvalue_customname) = "Assigned"];</code>
+     */
+    KEY_STATE_ASSIGNED(1),
+    /**
+     * <code>KEY_STATE_ACTIVE = 2 [(.gogoproto.enumvalue_customname) = "Active"];</code>
+     */
+    KEY_STATE_ACTIVE(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>KEY_STATE_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "Inactive"];</code>
+     */
+    public static final int KEY_STATE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>KEY_STATE_ASSIGNED = 1 [(.gogoproto.enumvalue_customname) = "Assigned"];</code>
+     */
+    public static final int KEY_STATE_ASSIGNED_VALUE = 1;
+    /**
+     * <code>KEY_STATE_ACTIVE = 2 [(.gogoproto.enumvalue_customname) = "Active"];</code>
+     */
+    public static final int KEY_STATE_ACTIVE_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static KeyState valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static KeyState forNumber(int value) {
+      switch (value) {
+        case 0: return KEY_STATE_UNSPECIFIED;
+        case 1: return KEY_STATE_ASSIGNED;
+        case 2: return KEY_STATE_ACTIVE;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<KeyState>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        KeyState> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<KeyState>() {
+            public KeyState findValueByNumber(int number) {
+              return KeyState.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.axelar.multisig.exported.v1beta1.TypesProto.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final KeyState[] VALUES = values();
+
+    public static KeyState valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private KeyState(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:axelar.multisig.exported.v1beta1.KeyState)
+  }
+
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -33,14 +267,14 @@ public final class TypesProto {
       "\n\025KEY_STATE_UNSPECIFIED\020\000\032\014\212\235 \010Inactive\022" +
       "$\n\022KEY_STATE_ASSIGNED\020\001\032\014\212\235 \010Assigned\022 \n" +
       "\020KEY_STATE_ACTIVE\020\002\032\n\212\235 \006Active\032\010\210\243\036\000\250\244\036" +
-      "\001B\223\002\n$com.axelar.multisig.exported.v1bet" +
-      "a1B\nTypesProtoP\001Z8github.com/axelarnetwo" +
-      "rk/axelar-core/x/multisig/exported\242\002\003AME" +
-      "\252\002 Axelar.Multisig.Exported.V1beta1\312\002 Ax" +
-      "elar\\Multisig\\Exported\\V1beta1\342\002,Axelar\\" +
-      "Multisig\\Exported\\V1beta1\\GPBMetadata\352\002#" +
-      "Axelar::Multisig::Exported::V1beta1\310\341\036\000b" +
-      "\006proto3"
+      "\001B\221\002\n$com.axelar.multisig.exported.v1bet" +
+      "a1B\nTypesProtoZ8github.com/axelarnetwork" +
+      "/axelar-core/x/multisig/exported\242\002\003AME\252\002" +
+      " Axelar.Multisig.Exported.V1beta1\312\002 Axel" +
+      "ar\\Multisig\\Exported\\V1beta1\342\002,Axelar\\Mu" +
+      "ltisig\\Exported\\V1beta1\\GPBMetadata\352\002#Ax" +
+      "elar::Multisig::Exported::V1beta1\310\341\036\000b\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

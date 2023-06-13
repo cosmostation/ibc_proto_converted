@@ -14,59 +14,6938 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryParamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:neutron.interchainqueries.QueryParamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryParamsRequest is request type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code neutron.interchainqueries.QueryParamsRequest}
+   */
+  public static final class QueryParamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:neutron.interchainqueries.QueryParamsRequest)
+      QueryParamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsRequest.newBuilder() to construct.
+    private QueryParamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryParamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryParamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.neutron.interchainqueries.QueryProto.QueryParamsRequest.class, com.neutron.interchainqueries.QueryProto.QueryParamsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.neutron.interchainqueries.QueryProto.QueryParamsRequest)) {
+        return super.equals(obj);
+      }
+      com.neutron.interchainqueries.QueryProto.QueryParamsRequest other = (com.neutron.interchainqueries.QueryProto.QueryParamsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryParamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryParamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryParamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryParamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryParamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryParamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.neutron.interchainqueries.QueryProto.QueryParamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsRequest is request type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code neutron.interchainqueries.QueryParamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:neutron.interchainqueries.QueryParamsRequest)
+        com.neutron.interchainqueries.QueryProto.QueryParamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryParamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.neutron.interchainqueries.QueryProto.QueryParamsRequest.class, com.neutron.interchainqueries.QueryProto.QueryParamsRequest.Builder.class);
+      }
+
+      // Construct using com.neutron.interchainqueries.QueryProto.QueryParamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+        return com.neutron.interchainqueries.QueryProto.QueryParamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.QueryProto.QueryParamsRequest build() {
+        com.neutron.interchainqueries.QueryProto.QueryParamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.QueryProto.QueryParamsRequest buildPartial() {
+        com.neutron.interchainqueries.QueryProto.QueryParamsRequest result = new com.neutron.interchainqueries.QueryProto.QueryParamsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.neutron.interchainqueries.QueryProto.QueryParamsRequest) {
+          return mergeFrom((com.neutron.interchainqueries.QueryProto.QueryParamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.neutron.interchainqueries.QueryProto.QueryParamsRequest other) {
+        if (other == com.neutron.interchainqueries.QueryProto.QueryParamsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:neutron.interchainqueries.QueryParamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:neutron.interchainqueries.QueryParamsRequest)
+    private static final com.neutron.interchainqueries.QueryProto.QueryParamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.neutron.interchainqueries.QueryProto.QueryParamsRequest();
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryParamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsRequest>() {
+      @java.lang.Override
+      public QueryParamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.neutron.interchainqueries.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:neutron.interchainqueries.QueryParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.neutron.interchainqueries.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.neutron.interchainqueries.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.neutron.interchainqueries.ParamsProto.Params getParams();
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.neutron.interchainqueries.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.neutron.interchainqueries.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryParamsResponse is response type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code neutron.interchainqueries.QueryParamsResponse}
+   */
+  public static final class QueryParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:neutron.interchainqueries.QueryParamsResponse)
+      QueryParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsResponse.newBuilder() to construct.
+    private QueryParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.neutron.interchainqueries.QueryProto.QueryParamsResponse.class, com.neutron.interchainqueries.QueryProto.QueryParamsResponse.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.neutron.interchainqueries.ParamsProto.Params params_;
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.neutron.interchainqueries.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.neutron.interchainqueries.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.neutron.interchainqueries.ParamsProto.Params getParams() {
+      return params_ == null ? com.neutron.interchainqueries.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * params holds all the parameters of this module.
+     * </pre>
+     *
+     * <code>.neutron.interchainqueries.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.neutron.interchainqueries.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.neutron.interchainqueries.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.neutron.interchainqueries.QueryProto.QueryParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.neutron.interchainqueries.QueryProto.QueryParamsResponse other = (com.neutron.interchainqueries.QueryProto.QueryParamsResponse) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.neutron.interchainqueries.QueryProto.QueryParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsResponse is response type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code neutron.interchainqueries.QueryParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:neutron.interchainqueries.QueryParamsResponse)
+        com.neutron.interchainqueries.QueryProto.QueryParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.neutron.interchainqueries.QueryProto.QueryParamsResponse.class, com.neutron.interchainqueries.QueryProto.QueryParamsResponse.Builder.class);
+      }
+
+      // Construct using com.neutron.interchainqueries.QueryProto.QueryParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+        return com.neutron.interchainqueries.QueryProto.QueryParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.QueryProto.QueryParamsResponse build() {
+        com.neutron.interchainqueries.QueryProto.QueryParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.QueryProto.QueryParamsResponse buildPartial() {
+        com.neutron.interchainqueries.QueryProto.QueryParamsResponse result = new com.neutron.interchainqueries.QueryProto.QueryParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.neutron.interchainqueries.QueryProto.QueryParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.neutron.interchainqueries.QueryProto.QueryParamsResponse) {
+          return mergeFrom((com.neutron.interchainqueries.QueryProto.QueryParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.neutron.interchainqueries.QueryProto.QueryParamsResponse other) {
+        if (other == com.neutron.interchainqueries.QueryProto.QueryParamsResponse.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.neutron.interchainqueries.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.neutron.interchainqueries.ParamsProto.Params, com.neutron.interchainqueries.ParamsProto.Params.Builder, com.neutron.interchainqueries.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.neutron.interchainqueries.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.neutron.interchainqueries.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.neutron.interchainqueries.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.neutron.interchainqueries.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.neutron.interchainqueries.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.neutron.interchainqueries.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.neutron.interchainqueries.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.neutron.interchainqueries.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.neutron.interchainqueries.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.neutron.interchainqueries.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.neutron.interchainqueries.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.neutron.interchainqueries.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.neutron.interchainqueries.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.neutron.interchainqueries.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.neutron.interchainqueries.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.neutron.interchainqueries.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.neutron.interchainqueries.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * params holds all the parameters of this module.
+       * </pre>
+       *
+       * <code>.neutron.interchainqueries.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.neutron.interchainqueries.ParamsProto.Params, com.neutron.interchainqueries.ParamsProto.Params.Builder, com.neutron.interchainqueries.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.neutron.interchainqueries.ParamsProto.Params, com.neutron.interchainqueries.ParamsProto.Params.Builder, com.neutron.interchainqueries.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:neutron.interchainqueries.QueryParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:neutron.interchainqueries.QueryParamsResponse)
+    private static final com.neutron.interchainqueries.QueryProto.QueryParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.neutron.interchainqueries.QueryProto.QueryParamsResponse();
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsResponse>() {
+      @java.lang.Override
+      public QueryParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.neutron.interchainqueries.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRegisteredQueriesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:neutron.interchainqueries.QueryRegisteredQueriesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string owners = 1 [json_name = "owners"];</code>
+     * @return A list containing the owners.
+     */
+    java.util.List<java.lang.String>
+        getOwnersList();
+    /**
+     * <code>repeated string owners = 1 [json_name = "owners"];</code>
+     * @return The count of owners.
+     */
+    int getOwnersCount();
+    /**
+     * <code>repeated string owners = 1 [json_name = "owners"];</code>
+     * @param index The index of the element to return.
+     * @return The owners at the given index.
+     */
+    java.lang.String getOwners(int index);
+    /**
+     * <code>repeated string owners = 1 [json_name = "owners"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the owners at the given index.
+     */
+    com.google.protobuf.ByteString
+        getOwnersBytes(int index);
+
+    /**
+     * <code>string connection_id = 2 [json_name = "connectionId"];</code>
+     * @return The connectionId.
+     */
+    java.lang.String getConnectionId();
+    /**
+     * <code>string connection_id = 2 [json_name = "connectionId"];</code>
+     * @return The bytes for connectionId.
+     */
+    com.google.protobuf.ByteString
+        getConnectionIdBytes();
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code neutron.interchainqueries.QueryRegisteredQueriesRequest}
+   */
+  public static final class QueryRegisteredQueriesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:neutron.interchainqueries.QueryRegisteredQueriesRequest)
+      QueryRegisteredQueriesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRegisteredQueriesRequest.newBuilder() to construct.
+    private QueryRegisteredQueriesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRegisteredQueriesRequest() {
+      owners_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      connectionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRegisteredQueriesRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryRegisteredQueriesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryRegisteredQueriesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesRequest.class, com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesRequest.Builder.class);
+    }
+
+    public static final int OWNERS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList owners_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string owners = 1 [json_name = "owners"];</code>
+     * @return A list containing the owners.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getOwnersList() {
+      return owners_;
+    }
+    /**
+     * <code>repeated string owners = 1 [json_name = "owners"];</code>
+     * @return The count of owners.
+     */
+    public int getOwnersCount() {
+      return owners_.size();
+    }
+    /**
+     * <code>repeated string owners = 1 [json_name = "owners"];</code>
+     * @param index The index of the element to return.
+     * @return The owners at the given index.
+     */
+    public java.lang.String getOwners(int index) {
+      return owners_.get(index);
+    }
+    /**
+     * <code>repeated string owners = 1 [json_name = "owners"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the owners at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getOwnersBytes(int index) {
+      return owners_.getByteString(index);
+    }
+
+    public static final int CONNECTION_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object connectionId_ = "";
+    /**
+     * <code>string connection_id = 2 [json_name = "connectionId"];</code>
+     * @return The connectionId.
+     */
+    @java.lang.Override
+    public java.lang.String getConnectionId() {
+      java.lang.Object ref = connectionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        connectionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string connection_id = 2 [json_name = "connectionId"];</code>
+     * @return The bytes for connectionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConnectionIdBytes() {
+      java.lang.Object ref = connectionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        connectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 3;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < owners_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, owners_.getRaw(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, connectionId_);
+      }
+      if (pagination_ != null) {
+        output.writeMessage(3, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < owners_.size(); i++) {
+          dataSize += computeStringSizeNoTag(owners_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getOwnersList().size();
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, connectionId_);
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesRequest)) {
+        return super.equals(obj);
+      }
+      com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesRequest other = (com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesRequest) obj;
+
+      if (!getOwnersList()
+          .equals(other.getOwnersList())) return false;
+      if (!getConnectionId()
+          .equals(other.getConnectionId())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getOwnersCount() > 0) {
+        hash = (37 * hash) + OWNERS_FIELD_NUMBER;
+        hash = (53 * hash) + getOwnersList().hashCode();
+      }
+      hash = (37 * hash) + CONNECTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getConnectionId().hashCode();
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code neutron.interchainqueries.QueryRegisteredQueriesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:neutron.interchainqueries.QueryRegisteredQueriesRequest)
+        com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryRegisteredQueriesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryRegisteredQueriesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesRequest.class, com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesRequest.Builder.class);
+      }
+
+      // Construct using com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        owners_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        connectionId_ = "";
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryRegisteredQueriesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesRequest getDefaultInstanceForType() {
+        return com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesRequest build() {
+        com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesRequest buildPartial() {
+        com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesRequest result = new com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          owners_.makeImmutable();
+          result.owners_ = owners_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.connectionId_ = connectionId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesRequest) {
+          return mergeFrom((com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesRequest other) {
+        if (other == com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesRequest.getDefaultInstance()) return this;
+        if (!other.owners_.isEmpty()) {
+          if (owners_.isEmpty()) {
+            owners_ = other.owners_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureOwnersIsMutable();
+            owners_.addAll(other.owners_);
+          }
+          onChanged();
+        }
+        if (!other.getConnectionId().isEmpty()) {
+          connectionId_ = other.connectionId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureOwnersIsMutable();
+                owners_.add(s);
+                break;
+              } // case 10
+              case 18: {
+                connectionId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList owners_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureOwnersIsMutable() {
+        if (!owners_.isModifiable()) {
+          owners_ = new com.google.protobuf.LazyStringArrayList(owners_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <code>repeated string owners = 1 [json_name = "owners"];</code>
+       * @return A list containing the owners.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getOwnersList() {
+        owners_.makeImmutable();
+        return owners_;
+      }
+      /**
+       * <code>repeated string owners = 1 [json_name = "owners"];</code>
+       * @return The count of owners.
+       */
+      public int getOwnersCount() {
+        return owners_.size();
+      }
+      /**
+       * <code>repeated string owners = 1 [json_name = "owners"];</code>
+       * @param index The index of the element to return.
+       * @return The owners at the given index.
+       */
+      public java.lang.String getOwners(int index) {
+        return owners_.get(index);
+      }
+      /**
+       * <code>repeated string owners = 1 [json_name = "owners"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the owners at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getOwnersBytes(int index) {
+        return owners_.getByteString(index);
+      }
+      /**
+       * <code>repeated string owners = 1 [json_name = "owners"];</code>
+       * @param index The index to set the value at.
+       * @param value The owners to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOwners(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureOwnersIsMutable();
+        owners_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string owners = 1 [json_name = "owners"];</code>
+       * @param value The owners to add.
+       * @return This builder for chaining.
+       */
+      public Builder addOwners(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureOwnersIsMutable();
+        owners_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string owners = 1 [json_name = "owners"];</code>
+       * @param values The owners to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllOwners(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureOwnersIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, owners_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string owners = 1 [json_name = "owners"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOwners() {
+        owners_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string owners = 1 [json_name = "owners"];</code>
+       * @param value The bytes of the owners to add.
+       * @return This builder for chaining.
+       */
+      public Builder addOwnersBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureOwnersIsMutable();
+        owners_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object connectionId_ = "";
+      /**
+       * <code>string connection_id = 2 [json_name = "connectionId"];</code>
+       * @return The connectionId.
+       */
+      public java.lang.String getConnectionId() {
+        java.lang.Object ref = connectionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          connectionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string connection_id = 2 [json_name = "connectionId"];</code>
+       * @return The bytes for connectionId.
+       */
+      public com.google.protobuf.ByteString
+          getConnectionIdBytes() {
+        java.lang.Object ref = connectionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          connectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string connection_id = 2 [json_name = "connectionId"];</code>
+       * @param value The connectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectionId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        connectionId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string connection_id = 2 [json_name = "connectionId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConnectionId() {
+        connectionId_ = getDefaultInstance().getConnectionId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string connection_id = 2 [json_name = "connectionId"];</code>
+       * @param value The bytes for connectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        connectionId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 3 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:neutron.interchainqueries.QueryRegisteredQueriesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:neutron.interchainqueries.QueryRegisteredQueriesRequest)
+    private static final com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesRequest();
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRegisteredQueriesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRegisteredQueriesRequest>() {
+      @java.lang.Override
+      public QueryRegisteredQueriesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRegisteredQueriesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRegisteredQueriesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRegisteredQueriesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:neutron.interchainqueries.QueryRegisteredQueriesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .neutron.interchainqueries.RegisteredQuery registered_queries = 1 [json_name = "registeredQueries", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.neutron.interchainqueries.GenesisProto.RegisteredQuery> 
+        getRegisteredQueriesList();
+    /**
+     * <code>repeated .neutron.interchainqueries.RegisteredQuery registered_queries = 1 [json_name = "registeredQueries", (.gogoproto.nullable) = false];</code>
+     */
+    com.neutron.interchainqueries.GenesisProto.RegisteredQuery getRegisteredQueries(int index);
+    /**
+     * <code>repeated .neutron.interchainqueries.RegisteredQuery registered_queries = 1 [json_name = "registeredQueries", (.gogoproto.nullable) = false];</code>
+     */
+    int getRegisteredQueriesCount();
+    /**
+     * <code>repeated .neutron.interchainqueries.RegisteredQuery registered_queries = 1 [json_name = "registeredQueries", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.neutron.interchainqueries.GenesisProto.RegisteredQueryOrBuilder> 
+        getRegisteredQueriesOrBuilderList();
+    /**
+     * <code>repeated .neutron.interchainqueries.RegisteredQuery registered_queries = 1 [json_name = "registeredQueries", (.gogoproto.nullable) = false];</code>
+     */
+    com.neutron.interchainqueries.GenesisProto.RegisteredQueryOrBuilder getRegisteredQueriesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code neutron.interchainqueries.QueryRegisteredQueriesResponse}
+   */
+  public static final class QueryRegisteredQueriesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:neutron.interchainqueries.QueryRegisteredQueriesResponse)
+      QueryRegisteredQueriesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRegisteredQueriesResponse.newBuilder() to construct.
+    private QueryRegisteredQueriesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRegisteredQueriesResponse() {
+      registeredQueries_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRegisteredQueriesResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryRegisteredQueriesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryRegisteredQueriesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponse.class, com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponse.Builder.class);
+    }
+
+    public static final int REGISTERED_QUERIES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.neutron.interchainqueries.GenesisProto.RegisteredQuery> registeredQueries_;
+    /**
+     * <code>repeated .neutron.interchainqueries.RegisteredQuery registered_queries = 1 [json_name = "registeredQueries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.neutron.interchainqueries.GenesisProto.RegisteredQuery> getRegisteredQueriesList() {
+      return registeredQueries_;
+    }
+    /**
+     * <code>repeated .neutron.interchainqueries.RegisteredQuery registered_queries = 1 [json_name = "registeredQueries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.neutron.interchainqueries.GenesisProto.RegisteredQueryOrBuilder> 
+        getRegisteredQueriesOrBuilderList() {
+      return registeredQueries_;
+    }
+    /**
+     * <code>repeated .neutron.interchainqueries.RegisteredQuery registered_queries = 1 [json_name = "registeredQueries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getRegisteredQueriesCount() {
+      return registeredQueries_.size();
+    }
+    /**
+     * <code>repeated .neutron.interchainqueries.RegisteredQuery registered_queries = 1 [json_name = "registeredQueries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.neutron.interchainqueries.GenesisProto.RegisteredQuery getRegisteredQueries(int index) {
+      return registeredQueries_.get(index);
+    }
+    /**
+     * <code>repeated .neutron.interchainqueries.RegisteredQuery registered_queries = 1 [json_name = "registeredQueries", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.neutron.interchainqueries.GenesisProto.RegisteredQueryOrBuilder getRegisteredQueriesOrBuilder(
+        int index) {
+      return registeredQueries_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <pre>
+     * pagination defines the pagination in the response.
+     * </pre>
+     *
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < registeredQueries_.size(); i++) {
+        output.writeMessage(1, registeredQueries_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < registeredQueries_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, registeredQueries_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponse)) {
+        return super.equals(obj);
+      }
+      com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponse other = (com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponse) obj;
+
+      if (!getRegisteredQueriesList()
+          .equals(other.getRegisteredQueriesList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getRegisteredQueriesCount() > 0) {
+        hash = (37 * hash) + REGISTERED_QUERIES_FIELD_NUMBER;
+        hash = (53 * hash) + getRegisteredQueriesList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code neutron.interchainqueries.QueryRegisteredQueriesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:neutron.interchainqueries.QueryRegisteredQueriesResponse)
+        com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryRegisteredQueriesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryRegisteredQueriesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponse.class, com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponse.Builder.class);
+      }
+
+      // Construct using com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (registeredQueriesBuilder_ == null) {
+          registeredQueries_ = java.util.Collections.emptyList();
+        } else {
+          registeredQueries_ = null;
+          registeredQueriesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryRegisteredQueriesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponse getDefaultInstanceForType() {
+        return com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponse build() {
+        com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponse buildPartial() {
+        com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponse result = new com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponse result) {
+        if (registeredQueriesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            registeredQueries_ = java.util.Collections.unmodifiableList(registeredQueries_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.registeredQueries_ = registeredQueries_;
+        } else {
+          result.registeredQueries_ = registeredQueriesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponse) {
+          return mergeFrom((com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponse other) {
+        if (other == com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponse.getDefaultInstance()) return this;
+        if (registeredQueriesBuilder_ == null) {
+          if (!other.registeredQueries_.isEmpty()) {
+            if (registeredQueries_.isEmpty()) {
+              registeredQueries_ = other.registeredQueries_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureRegisteredQueriesIsMutable();
+              registeredQueries_.addAll(other.registeredQueries_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.registeredQueries_.isEmpty()) {
+            if (registeredQueriesBuilder_.isEmpty()) {
+              registeredQueriesBuilder_.dispose();
+              registeredQueriesBuilder_ = null;
+              registeredQueries_ = other.registeredQueries_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              registeredQueriesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRegisteredQueriesFieldBuilder() : null;
+            } else {
+              registeredQueriesBuilder_.addAllMessages(other.registeredQueries_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.neutron.interchainqueries.GenesisProto.RegisteredQuery m =
+                    input.readMessage(
+                        com.neutron.interchainqueries.GenesisProto.RegisteredQuery.parser(),
+                        extensionRegistry);
+                if (registeredQueriesBuilder_ == null) {
+                  ensureRegisteredQueriesIsMutable();
+                  registeredQueries_.add(m);
+                } else {
+                  registeredQueriesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.neutron.interchainqueries.GenesisProto.RegisteredQuery> registeredQueries_ =
+        java.util.Collections.emptyList();
+      private void ensureRegisteredQueriesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          registeredQueries_ = new java.util.ArrayList<com.neutron.interchainqueries.GenesisProto.RegisteredQuery>(registeredQueries_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.neutron.interchainqueries.GenesisProto.RegisteredQuery, com.neutron.interchainqueries.GenesisProto.RegisteredQuery.Builder, com.neutron.interchainqueries.GenesisProto.RegisteredQueryOrBuilder> registeredQueriesBuilder_;
+
+      /**
+       * <code>repeated .neutron.interchainqueries.RegisteredQuery registered_queries = 1 [json_name = "registeredQueries", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.neutron.interchainqueries.GenesisProto.RegisteredQuery> getRegisteredQueriesList() {
+        if (registeredQueriesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(registeredQueries_);
+        } else {
+          return registeredQueriesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.RegisteredQuery registered_queries = 1 [json_name = "registeredQueries", (.gogoproto.nullable) = false];</code>
+       */
+      public int getRegisteredQueriesCount() {
+        if (registeredQueriesBuilder_ == null) {
+          return registeredQueries_.size();
+        } else {
+          return registeredQueriesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.RegisteredQuery registered_queries = 1 [json_name = "registeredQueries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.neutron.interchainqueries.GenesisProto.RegisteredQuery getRegisteredQueries(int index) {
+        if (registeredQueriesBuilder_ == null) {
+          return registeredQueries_.get(index);
+        } else {
+          return registeredQueriesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.RegisteredQuery registered_queries = 1 [json_name = "registeredQueries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRegisteredQueries(
+          int index, com.neutron.interchainqueries.GenesisProto.RegisteredQuery value) {
+        if (registeredQueriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRegisteredQueriesIsMutable();
+          registeredQueries_.set(index, value);
+          onChanged();
+        } else {
+          registeredQueriesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.RegisteredQuery registered_queries = 1 [json_name = "registeredQueries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setRegisteredQueries(
+          int index, com.neutron.interchainqueries.GenesisProto.RegisteredQuery.Builder builderForValue) {
+        if (registeredQueriesBuilder_ == null) {
+          ensureRegisteredQueriesIsMutable();
+          registeredQueries_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          registeredQueriesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.RegisteredQuery registered_queries = 1 [json_name = "registeredQueries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRegisteredQueries(com.neutron.interchainqueries.GenesisProto.RegisteredQuery value) {
+        if (registeredQueriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRegisteredQueriesIsMutable();
+          registeredQueries_.add(value);
+          onChanged();
+        } else {
+          registeredQueriesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.RegisteredQuery registered_queries = 1 [json_name = "registeredQueries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRegisteredQueries(
+          int index, com.neutron.interchainqueries.GenesisProto.RegisteredQuery value) {
+        if (registeredQueriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRegisteredQueriesIsMutable();
+          registeredQueries_.add(index, value);
+          onChanged();
+        } else {
+          registeredQueriesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.RegisteredQuery registered_queries = 1 [json_name = "registeredQueries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRegisteredQueries(
+          com.neutron.interchainqueries.GenesisProto.RegisteredQuery.Builder builderForValue) {
+        if (registeredQueriesBuilder_ == null) {
+          ensureRegisteredQueriesIsMutable();
+          registeredQueries_.add(builderForValue.build());
+          onChanged();
+        } else {
+          registeredQueriesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.RegisteredQuery registered_queries = 1 [json_name = "registeredQueries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addRegisteredQueries(
+          int index, com.neutron.interchainqueries.GenesisProto.RegisteredQuery.Builder builderForValue) {
+        if (registeredQueriesBuilder_ == null) {
+          ensureRegisteredQueriesIsMutable();
+          registeredQueries_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          registeredQueriesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.RegisteredQuery registered_queries = 1 [json_name = "registeredQueries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllRegisteredQueries(
+          java.lang.Iterable<? extends com.neutron.interchainqueries.GenesisProto.RegisteredQuery> values) {
+        if (registeredQueriesBuilder_ == null) {
+          ensureRegisteredQueriesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, registeredQueries_);
+          onChanged();
+        } else {
+          registeredQueriesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.RegisteredQuery registered_queries = 1 [json_name = "registeredQueries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearRegisteredQueries() {
+        if (registeredQueriesBuilder_ == null) {
+          registeredQueries_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          registeredQueriesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.RegisteredQuery registered_queries = 1 [json_name = "registeredQueries", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeRegisteredQueries(int index) {
+        if (registeredQueriesBuilder_ == null) {
+          ensureRegisteredQueriesIsMutable();
+          registeredQueries_.remove(index);
+          onChanged();
+        } else {
+          registeredQueriesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.RegisteredQuery registered_queries = 1 [json_name = "registeredQueries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.neutron.interchainqueries.GenesisProto.RegisteredQuery.Builder getRegisteredQueriesBuilder(
+          int index) {
+        return getRegisteredQueriesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.RegisteredQuery registered_queries = 1 [json_name = "registeredQueries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.neutron.interchainqueries.GenesisProto.RegisteredQueryOrBuilder getRegisteredQueriesOrBuilder(
+          int index) {
+        if (registeredQueriesBuilder_ == null) {
+          return registeredQueries_.get(index);  } else {
+          return registeredQueriesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.RegisteredQuery registered_queries = 1 [json_name = "registeredQueries", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.neutron.interchainqueries.GenesisProto.RegisteredQueryOrBuilder> 
+           getRegisteredQueriesOrBuilderList() {
+        if (registeredQueriesBuilder_ != null) {
+          return registeredQueriesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(registeredQueries_);
+        }
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.RegisteredQuery registered_queries = 1 [json_name = "registeredQueries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.neutron.interchainqueries.GenesisProto.RegisteredQuery.Builder addRegisteredQueriesBuilder() {
+        return getRegisteredQueriesFieldBuilder().addBuilder(
+            com.neutron.interchainqueries.GenesisProto.RegisteredQuery.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.RegisteredQuery registered_queries = 1 [json_name = "registeredQueries", (.gogoproto.nullable) = false];</code>
+       */
+      public com.neutron.interchainqueries.GenesisProto.RegisteredQuery.Builder addRegisteredQueriesBuilder(
+          int index) {
+        return getRegisteredQueriesFieldBuilder().addBuilder(
+            index, com.neutron.interchainqueries.GenesisProto.RegisteredQuery.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .neutron.interchainqueries.RegisteredQuery registered_queries = 1 [json_name = "registeredQueries", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.neutron.interchainqueries.GenesisProto.RegisteredQuery.Builder> 
+           getRegisteredQueriesBuilderList() {
+        return getRegisteredQueriesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.neutron.interchainqueries.GenesisProto.RegisteredQuery, com.neutron.interchainqueries.GenesisProto.RegisteredQuery.Builder, com.neutron.interchainqueries.GenesisProto.RegisteredQueryOrBuilder> 
+          getRegisteredQueriesFieldBuilder() {
+        if (registeredQueriesBuilder_ == null) {
+          registeredQueriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.neutron.interchainqueries.GenesisProto.RegisteredQuery, com.neutron.interchainqueries.GenesisProto.RegisteredQuery.Builder, com.neutron.interchainqueries.GenesisProto.RegisteredQueryOrBuilder>(
+                  registeredQueries_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          registeredQueries_ = null;
+        }
+        return registeredQueriesBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <pre>
+       * pagination defines the pagination in the response.
+       * </pre>
+       *
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:neutron.interchainqueries.QueryRegisteredQueriesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:neutron.interchainqueries.QueryRegisteredQueriesResponse)
+    private static final com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponse();
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRegisteredQueriesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRegisteredQueriesResponse>() {
+      @java.lang.Override
+      public QueryRegisteredQueriesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRegisteredQueriesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRegisteredQueriesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.neutron.interchainqueries.QueryProto.QueryRegisteredQueriesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRegisteredQueryRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:neutron.interchainqueries.QueryRegisteredQueryRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 query_id = 1 [json_name = "queryId"];</code>
+     * @return The queryId.
+     */
+    long getQueryId();
+  }
+  /**
+   * Protobuf type {@code neutron.interchainqueries.QueryRegisteredQueryRequest}
+   */
+  public static final class QueryRegisteredQueryRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:neutron.interchainqueries.QueryRegisteredQueryRequest)
+      QueryRegisteredQueryRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRegisteredQueryRequest.newBuilder() to construct.
+    private QueryRegisteredQueryRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRegisteredQueryRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRegisteredQueryRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryRegisteredQueryRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryRegisteredQueryRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryRequest.class, com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryRequest.Builder.class);
+    }
+
+    public static final int QUERY_ID_FIELD_NUMBER = 1;
+    private long queryId_ = 0L;
+    /**
+     * <code>uint64 query_id = 1 [json_name = "queryId"];</code>
+     * @return The queryId.
+     */
+    @java.lang.Override
+    public long getQueryId() {
+      return queryId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (queryId_ != 0L) {
+        output.writeUInt64(1, queryId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (queryId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, queryId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryRequest)) {
+        return super.equals(obj);
+      }
+      com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryRequest other = (com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryRequest) obj;
+
+      if (getQueryId()
+          != other.getQueryId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + QUERY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getQueryId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code neutron.interchainqueries.QueryRegisteredQueryRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:neutron.interchainqueries.QueryRegisteredQueryRequest)
+        com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryRegisteredQueryRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryRegisteredQueryRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryRequest.class, com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryRequest.Builder.class);
+      }
+
+      // Construct using com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        queryId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryRegisteredQueryRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryRequest getDefaultInstanceForType() {
+        return com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryRequest build() {
+        com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryRequest buildPartial() {
+        com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryRequest result = new com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.queryId_ = queryId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryRequest) {
+          return mergeFrom((com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryRequest other) {
+        if (other == com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryRequest.getDefaultInstance()) return this;
+        if (other.getQueryId() != 0L) {
+          setQueryId(other.getQueryId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                queryId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long queryId_ ;
+      /**
+       * <code>uint64 query_id = 1 [json_name = "queryId"];</code>
+       * @return The queryId.
+       */
+      @java.lang.Override
+      public long getQueryId() {
+        return queryId_;
+      }
+      /**
+       * <code>uint64 query_id = 1 [json_name = "queryId"];</code>
+       * @param value The queryId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQueryId(long value) {
+
+        queryId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 query_id = 1 [json_name = "queryId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQueryId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        queryId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:neutron.interchainqueries.QueryRegisteredQueryRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:neutron.interchainqueries.QueryRegisteredQueryRequest)
+    private static final com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryRequest();
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRegisteredQueryRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRegisteredQueryRequest>() {
+      @java.lang.Override
+      public QueryRegisteredQueryRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRegisteredQueryRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRegisteredQueryRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRegisteredQueryResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:neutron.interchainqueries.QueryRegisteredQueryResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.neutron.interchainqueries.RegisteredQuery registered_query = 1 [json_name = "registeredQuery"];</code>
+     * @return Whether the registeredQuery field is set.
+     */
+    boolean hasRegisteredQuery();
+    /**
+     * <code>.neutron.interchainqueries.RegisteredQuery registered_query = 1 [json_name = "registeredQuery"];</code>
+     * @return The registeredQuery.
+     */
+    com.neutron.interchainqueries.GenesisProto.RegisteredQuery getRegisteredQuery();
+    /**
+     * <code>.neutron.interchainqueries.RegisteredQuery registered_query = 1 [json_name = "registeredQuery"];</code>
+     */
+    com.neutron.interchainqueries.GenesisProto.RegisteredQueryOrBuilder getRegisteredQueryOrBuilder();
+  }
+  /**
+   * Protobuf type {@code neutron.interchainqueries.QueryRegisteredQueryResponse}
+   */
+  public static final class QueryRegisteredQueryResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:neutron.interchainqueries.QueryRegisteredQueryResponse)
+      QueryRegisteredQueryResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRegisteredQueryResponse.newBuilder() to construct.
+    private QueryRegisteredQueryResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRegisteredQueryResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRegisteredQueryResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryRegisteredQueryResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryRegisteredQueryResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResponse.class, com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResponse.Builder.class);
+    }
+
+    public static final int REGISTERED_QUERY_FIELD_NUMBER = 1;
+    private com.neutron.interchainqueries.GenesisProto.RegisteredQuery registeredQuery_;
+    /**
+     * <code>.neutron.interchainqueries.RegisteredQuery registered_query = 1 [json_name = "registeredQuery"];</code>
+     * @return Whether the registeredQuery field is set.
+     */
+    @java.lang.Override
+    public boolean hasRegisteredQuery() {
+      return registeredQuery_ != null;
+    }
+    /**
+     * <code>.neutron.interchainqueries.RegisteredQuery registered_query = 1 [json_name = "registeredQuery"];</code>
+     * @return The registeredQuery.
+     */
+    @java.lang.Override
+    public com.neutron.interchainqueries.GenesisProto.RegisteredQuery getRegisteredQuery() {
+      return registeredQuery_ == null ? com.neutron.interchainqueries.GenesisProto.RegisteredQuery.getDefaultInstance() : registeredQuery_;
+    }
+    /**
+     * <code>.neutron.interchainqueries.RegisteredQuery registered_query = 1 [json_name = "registeredQuery"];</code>
+     */
+    @java.lang.Override
+    public com.neutron.interchainqueries.GenesisProto.RegisteredQueryOrBuilder getRegisteredQueryOrBuilder() {
+      return registeredQuery_ == null ? com.neutron.interchainqueries.GenesisProto.RegisteredQuery.getDefaultInstance() : registeredQuery_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (registeredQuery_ != null) {
+        output.writeMessage(1, getRegisteredQuery());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (registeredQuery_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getRegisteredQuery());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResponse)) {
+        return super.equals(obj);
+      }
+      com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResponse other = (com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResponse) obj;
+
+      if (hasRegisteredQuery() != other.hasRegisteredQuery()) return false;
+      if (hasRegisteredQuery()) {
+        if (!getRegisteredQuery()
+            .equals(other.getRegisteredQuery())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasRegisteredQuery()) {
+        hash = (37 * hash) + REGISTERED_QUERY_FIELD_NUMBER;
+        hash = (53 * hash) + getRegisteredQuery().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code neutron.interchainqueries.QueryRegisteredQueryResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:neutron.interchainqueries.QueryRegisteredQueryResponse)
+        com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryRegisteredQueryResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryRegisteredQueryResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResponse.class, com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResponse.Builder.class);
+      }
+
+      // Construct using com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        registeredQuery_ = null;
+        if (registeredQueryBuilder_ != null) {
+          registeredQueryBuilder_.dispose();
+          registeredQueryBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryRegisteredQueryResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResponse getDefaultInstanceForType() {
+        return com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResponse build() {
+        com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResponse buildPartial() {
+        com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResponse result = new com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.registeredQuery_ = registeredQueryBuilder_ == null
+              ? registeredQuery_
+              : registeredQueryBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResponse) {
+          return mergeFrom((com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResponse other) {
+        if (other == com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResponse.getDefaultInstance()) return this;
+        if (other.hasRegisteredQuery()) {
+          mergeRegisteredQuery(other.getRegisteredQuery());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getRegisteredQueryFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.neutron.interchainqueries.GenesisProto.RegisteredQuery registeredQuery_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.neutron.interchainqueries.GenesisProto.RegisteredQuery, com.neutron.interchainqueries.GenesisProto.RegisteredQuery.Builder, com.neutron.interchainqueries.GenesisProto.RegisteredQueryOrBuilder> registeredQueryBuilder_;
+      /**
+       * <code>.neutron.interchainqueries.RegisteredQuery registered_query = 1 [json_name = "registeredQuery"];</code>
+       * @return Whether the registeredQuery field is set.
+       */
+      public boolean hasRegisteredQuery() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.neutron.interchainqueries.RegisteredQuery registered_query = 1 [json_name = "registeredQuery"];</code>
+       * @return The registeredQuery.
+       */
+      public com.neutron.interchainqueries.GenesisProto.RegisteredQuery getRegisteredQuery() {
+        if (registeredQueryBuilder_ == null) {
+          return registeredQuery_ == null ? com.neutron.interchainqueries.GenesisProto.RegisteredQuery.getDefaultInstance() : registeredQuery_;
+        } else {
+          return registeredQueryBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.neutron.interchainqueries.RegisteredQuery registered_query = 1 [json_name = "registeredQuery"];</code>
+       */
+      public Builder setRegisteredQuery(com.neutron.interchainqueries.GenesisProto.RegisteredQuery value) {
+        if (registeredQueryBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          registeredQuery_ = value;
+        } else {
+          registeredQueryBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.interchainqueries.RegisteredQuery registered_query = 1 [json_name = "registeredQuery"];</code>
+       */
+      public Builder setRegisteredQuery(
+          com.neutron.interchainqueries.GenesisProto.RegisteredQuery.Builder builderForValue) {
+        if (registeredQueryBuilder_ == null) {
+          registeredQuery_ = builderForValue.build();
+        } else {
+          registeredQueryBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.interchainqueries.RegisteredQuery registered_query = 1 [json_name = "registeredQuery"];</code>
+       */
+      public Builder mergeRegisteredQuery(com.neutron.interchainqueries.GenesisProto.RegisteredQuery value) {
+        if (registeredQueryBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            registeredQuery_ != null &&
+            registeredQuery_ != com.neutron.interchainqueries.GenesisProto.RegisteredQuery.getDefaultInstance()) {
+            getRegisteredQueryBuilder().mergeFrom(value);
+          } else {
+            registeredQuery_ = value;
+          }
+        } else {
+          registeredQueryBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.interchainqueries.RegisteredQuery registered_query = 1 [json_name = "registeredQuery"];</code>
+       */
+      public Builder clearRegisteredQuery() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        registeredQuery_ = null;
+        if (registeredQueryBuilder_ != null) {
+          registeredQueryBuilder_.dispose();
+          registeredQueryBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.interchainqueries.RegisteredQuery registered_query = 1 [json_name = "registeredQuery"];</code>
+       */
+      public com.neutron.interchainqueries.GenesisProto.RegisteredQuery.Builder getRegisteredQueryBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getRegisteredQueryFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.neutron.interchainqueries.RegisteredQuery registered_query = 1 [json_name = "registeredQuery"];</code>
+       */
+      public com.neutron.interchainqueries.GenesisProto.RegisteredQueryOrBuilder getRegisteredQueryOrBuilder() {
+        if (registeredQueryBuilder_ != null) {
+          return registeredQueryBuilder_.getMessageOrBuilder();
+        } else {
+          return registeredQuery_ == null ?
+              com.neutron.interchainqueries.GenesisProto.RegisteredQuery.getDefaultInstance() : registeredQuery_;
+        }
+      }
+      /**
+       * <code>.neutron.interchainqueries.RegisteredQuery registered_query = 1 [json_name = "registeredQuery"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.neutron.interchainqueries.GenesisProto.RegisteredQuery, com.neutron.interchainqueries.GenesisProto.RegisteredQuery.Builder, com.neutron.interchainqueries.GenesisProto.RegisteredQueryOrBuilder> 
+          getRegisteredQueryFieldBuilder() {
+        if (registeredQueryBuilder_ == null) {
+          registeredQueryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.neutron.interchainqueries.GenesisProto.RegisteredQuery, com.neutron.interchainqueries.GenesisProto.RegisteredQuery.Builder, com.neutron.interchainqueries.GenesisProto.RegisteredQueryOrBuilder>(
+                  getRegisteredQuery(),
+                  getParentForChildren(),
+                  isClean());
+          registeredQuery_ = null;
+        }
+        return registeredQueryBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:neutron.interchainqueries.QueryRegisteredQueryResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:neutron.interchainqueries.QueryRegisteredQueryResponse)
+    private static final com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResponse();
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRegisteredQueryResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRegisteredQueryResponse>() {
+      @java.lang.Override
+      public QueryRegisteredQueryResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRegisteredQueryResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRegisteredQueryResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRegisteredQueryResultRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:neutron.interchainqueries.QueryRegisteredQueryResultRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 query_id = 1 [json_name = "queryId"];</code>
+     * @return The queryId.
+     */
+    long getQueryId();
+  }
+  /**
+   * Protobuf type {@code neutron.interchainqueries.QueryRegisteredQueryResultRequest}
+   */
+  public static final class QueryRegisteredQueryResultRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:neutron.interchainqueries.QueryRegisteredQueryResultRequest)
+      QueryRegisteredQueryResultRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRegisteredQueryResultRequest.newBuilder() to construct.
+    private QueryRegisteredQueryResultRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRegisteredQueryResultRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRegisteredQueryResultRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryRegisteredQueryResultRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryRegisteredQueryResultRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultRequest.class, com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultRequest.Builder.class);
+    }
+
+    public static final int QUERY_ID_FIELD_NUMBER = 1;
+    private long queryId_ = 0L;
+    /**
+     * <code>uint64 query_id = 1 [json_name = "queryId"];</code>
+     * @return The queryId.
+     */
+    @java.lang.Override
+    public long getQueryId() {
+      return queryId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (queryId_ != 0L) {
+        output.writeUInt64(1, queryId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (queryId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, queryId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultRequest)) {
+        return super.equals(obj);
+      }
+      com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultRequest other = (com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultRequest) obj;
+
+      if (getQueryId()
+          != other.getQueryId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + QUERY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getQueryId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code neutron.interchainqueries.QueryRegisteredQueryResultRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:neutron.interchainqueries.QueryRegisteredQueryResultRequest)
+        com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryRegisteredQueryResultRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryRegisteredQueryResultRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultRequest.class, com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultRequest.Builder.class);
+      }
+
+      // Construct using com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        queryId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryRegisteredQueryResultRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultRequest getDefaultInstanceForType() {
+        return com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultRequest build() {
+        com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultRequest buildPartial() {
+        com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultRequest result = new com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.queryId_ = queryId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultRequest) {
+          return mergeFrom((com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultRequest other) {
+        if (other == com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultRequest.getDefaultInstance()) return this;
+        if (other.getQueryId() != 0L) {
+          setQueryId(other.getQueryId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                queryId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long queryId_ ;
+      /**
+       * <code>uint64 query_id = 1 [json_name = "queryId"];</code>
+       * @return The queryId.
+       */
+      @java.lang.Override
+      public long getQueryId() {
+        return queryId_;
+      }
+      /**
+       * <code>uint64 query_id = 1 [json_name = "queryId"];</code>
+       * @param value The queryId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQueryId(long value) {
+
+        queryId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 query_id = 1 [json_name = "queryId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQueryId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        queryId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:neutron.interchainqueries.QueryRegisteredQueryResultRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:neutron.interchainqueries.QueryRegisteredQueryResultRequest)
+    private static final com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultRequest();
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRegisteredQueryResultRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRegisteredQueryResultRequest>() {
+      @java.lang.Override
+      public QueryRegisteredQueryResultRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRegisteredQueryResultRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRegisteredQueryResultRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryRegisteredQueryResultResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:neutron.interchainqueries.QueryRegisteredQueryResultResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.neutron.interchainqueries.QueryResult result = 1 [json_name = "result"];</code>
+     * @return Whether the result field is set.
+     */
+    boolean hasResult();
+    /**
+     * <code>.neutron.interchainqueries.QueryResult result = 1 [json_name = "result"];</code>
+     * @return The result.
+     */
+    com.neutron.interchainqueries.TxProto.QueryResult getResult();
+    /**
+     * <code>.neutron.interchainqueries.QueryResult result = 1 [json_name = "result"];</code>
+     */
+    com.neutron.interchainqueries.TxProto.QueryResultOrBuilder getResultOrBuilder();
+  }
+  /**
+   * Protobuf type {@code neutron.interchainqueries.QueryRegisteredQueryResultResponse}
+   */
+  public static final class QueryRegisteredQueryResultResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:neutron.interchainqueries.QueryRegisteredQueryResultResponse)
+      QueryRegisteredQueryResultResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryRegisteredQueryResultResponse.newBuilder() to construct.
+    private QueryRegisteredQueryResultResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryRegisteredQueryResultResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryRegisteredQueryResultResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryRegisteredQueryResultResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryRegisteredQueryResultResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultResponse.class, com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultResponse.Builder.class);
+    }
+
+    public static final int RESULT_FIELD_NUMBER = 1;
+    private com.neutron.interchainqueries.TxProto.QueryResult result_;
+    /**
+     * <code>.neutron.interchainqueries.QueryResult result = 1 [json_name = "result"];</code>
+     * @return Whether the result field is set.
+     */
+    @java.lang.Override
+    public boolean hasResult() {
+      return result_ != null;
+    }
+    /**
+     * <code>.neutron.interchainqueries.QueryResult result = 1 [json_name = "result"];</code>
+     * @return The result.
+     */
+    @java.lang.Override
+    public com.neutron.interchainqueries.TxProto.QueryResult getResult() {
+      return result_ == null ? com.neutron.interchainqueries.TxProto.QueryResult.getDefaultInstance() : result_;
+    }
+    /**
+     * <code>.neutron.interchainqueries.QueryResult result = 1 [json_name = "result"];</code>
+     */
+    @java.lang.Override
+    public com.neutron.interchainqueries.TxProto.QueryResultOrBuilder getResultOrBuilder() {
+      return result_ == null ? com.neutron.interchainqueries.TxProto.QueryResult.getDefaultInstance() : result_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (result_ != null) {
+        output.writeMessage(1, getResult());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (result_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getResult());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultResponse)) {
+        return super.equals(obj);
+      }
+      com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultResponse other = (com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultResponse) obj;
+
+      if (hasResult() != other.hasResult()) return false;
+      if (hasResult()) {
+        if (!getResult()
+            .equals(other.getResult())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasResult()) {
+        hash = (37 * hash) + RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + getResult().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code neutron.interchainqueries.QueryRegisteredQueryResultResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:neutron.interchainqueries.QueryRegisteredQueryResultResponse)
+        com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryRegisteredQueryResultResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryRegisteredQueryResultResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultResponse.class, com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultResponse.Builder.class);
+      }
+
+      // Construct using com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        result_ = null;
+        if (resultBuilder_ != null) {
+          resultBuilder_.dispose();
+          resultBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryRegisteredQueryResultResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultResponse getDefaultInstanceForType() {
+        return com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultResponse build() {
+        com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultResponse buildPartial() {
+        com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultResponse result = new com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.result_ = resultBuilder_ == null
+              ? result_
+              : resultBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultResponse) {
+          return mergeFrom((com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultResponse other) {
+        if (other == com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultResponse.getDefaultInstance()) return this;
+        if (other.hasResult()) {
+          mergeResult(other.getResult());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getResultFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.neutron.interchainqueries.TxProto.QueryResult result_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.neutron.interchainqueries.TxProto.QueryResult, com.neutron.interchainqueries.TxProto.QueryResult.Builder, com.neutron.interchainqueries.TxProto.QueryResultOrBuilder> resultBuilder_;
+      /**
+       * <code>.neutron.interchainqueries.QueryResult result = 1 [json_name = "result"];</code>
+       * @return Whether the result field is set.
+       */
+      public boolean hasResult() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.neutron.interchainqueries.QueryResult result = 1 [json_name = "result"];</code>
+       * @return The result.
+       */
+      public com.neutron.interchainqueries.TxProto.QueryResult getResult() {
+        if (resultBuilder_ == null) {
+          return result_ == null ? com.neutron.interchainqueries.TxProto.QueryResult.getDefaultInstance() : result_;
+        } else {
+          return resultBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.neutron.interchainqueries.QueryResult result = 1 [json_name = "result"];</code>
+       */
+      public Builder setResult(com.neutron.interchainqueries.TxProto.QueryResult value) {
+        if (resultBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          result_ = value;
+        } else {
+          resultBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.interchainqueries.QueryResult result = 1 [json_name = "result"];</code>
+       */
+      public Builder setResult(
+          com.neutron.interchainqueries.TxProto.QueryResult.Builder builderForValue) {
+        if (resultBuilder_ == null) {
+          result_ = builderForValue.build();
+        } else {
+          resultBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.interchainqueries.QueryResult result = 1 [json_name = "result"];</code>
+       */
+      public Builder mergeResult(com.neutron.interchainqueries.TxProto.QueryResult value) {
+        if (resultBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            result_ != null &&
+            result_ != com.neutron.interchainqueries.TxProto.QueryResult.getDefaultInstance()) {
+            getResultBuilder().mergeFrom(value);
+          } else {
+            result_ = value;
+          }
+        } else {
+          resultBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.interchainqueries.QueryResult result = 1 [json_name = "result"];</code>
+       */
+      public Builder clearResult() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        result_ = null;
+        if (resultBuilder_ != null) {
+          resultBuilder_.dispose();
+          resultBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.neutron.interchainqueries.QueryResult result = 1 [json_name = "result"];</code>
+       */
+      public com.neutron.interchainqueries.TxProto.QueryResult.Builder getResultBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getResultFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.neutron.interchainqueries.QueryResult result = 1 [json_name = "result"];</code>
+       */
+      public com.neutron.interchainqueries.TxProto.QueryResultOrBuilder getResultOrBuilder() {
+        if (resultBuilder_ != null) {
+          return resultBuilder_.getMessageOrBuilder();
+        } else {
+          return result_ == null ?
+              com.neutron.interchainqueries.TxProto.QueryResult.getDefaultInstance() : result_;
+        }
+      }
+      /**
+       * <code>.neutron.interchainqueries.QueryResult result = 1 [json_name = "result"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.neutron.interchainqueries.TxProto.QueryResult, com.neutron.interchainqueries.TxProto.QueryResult.Builder, com.neutron.interchainqueries.TxProto.QueryResultOrBuilder> 
+          getResultFieldBuilder() {
+        if (resultBuilder_ == null) {
+          resultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.neutron.interchainqueries.TxProto.QueryResult, com.neutron.interchainqueries.TxProto.QueryResult.Builder, com.neutron.interchainqueries.TxProto.QueryResultOrBuilder>(
+                  getResult(),
+                  getParentForChildren(),
+                  isClean());
+          result_ = null;
+        }
+        return resultBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:neutron.interchainqueries.QueryRegisteredQueryResultResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:neutron.interchainqueries.QueryRegisteredQueryResultResponse)
+    private static final com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultResponse();
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryRegisteredQueryResultResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryRegisteredQueryResultResponse>() {
+      @java.lang.Override
+      public QueryRegisteredQueryResultResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryRegisteredQueryResultResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryRegisteredQueryResultResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.neutron.interchainqueries.QueryProto.QueryRegisteredQueryResultResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TransactionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:neutron.interchainqueries.Transaction)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+
+    /**
+     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * @return The height.
+     */
+    long getHeight();
+
+    /**
+     * <code>bytes data = 3 [json_name = "data"];</code>
+     * @return The data.
+     */
+    com.google.protobuf.ByteString getData();
+  }
+  /**
+   * Protobuf type {@code neutron.interchainqueries.Transaction}
+   */
+  public static final class Transaction extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:neutron.interchainqueries.Transaction)
+      TransactionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Transaction.newBuilder() to construct.
+    private Transaction(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Transaction() {
+      data_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Transaction();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_Transaction_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_Transaction_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.neutron.interchainqueries.QueryProto.Transaction.class, com.neutron.interchainqueries.QueryProto.Transaction.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_ = 0L;
+    /**
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    public static final int HEIGHT_FIELD_NUMBER = 2;
+    private long height_ = 0L;
+    /**
+     * <code>uint64 height = 2 [json_name = "height"];</code>
+     * @return The height.
+     */
+    @java.lang.Override
+    public long getHeight() {
+      return height_;
+    }
+
+    public static final int DATA_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes data = 3 [json_name = "data"];</code>
+     * @return The data.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getData() {
+      return data_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeUInt64(1, id_);
+      }
+      if (height_ != 0L) {
+        output.writeUInt64(2, height_);
+      }
+      if (!data_.isEmpty()) {
+        output.writeBytes(3, data_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, id_);
+      }
+      if (height_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, height_);
+      }
+      if (!data_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, data_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.neutron.interchainqueries.QueryProto.Transaction)) {
+        return super.equals(obj);
+      }
+      com.neutron.interchainqueries.QueryProto.Transaction other = (com.neutron.interchainqueries.QueryProto.Transaction) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (getHeight()
+          != other.getHeight()) return false;
+      if (!getData()
+          .equals(other.getData())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getHeight());
+      hash = (37 * hash) + DATA_FIELD_NUMBER;
+      hash = (53 * hash) + getData().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.Transaction parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.QueryProto.Transaction parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.Transaction parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.QueryProto.Transaction parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.Transaction parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.QueryProto.Transaction parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.Transaction parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.QueryProto.Transaction parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.Transaction parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.Transaction parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.Transaction parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.QueryProto.Transaction parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.neutron.interchainqueries.QueryProto.Transaction prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code neutron.interchainqueries.Transaction}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:neutron.interchainqueries.Transaction)
+        com.neutron.interchainqueries.QueryProto.TransactionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_Transaction_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_Transaction_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.neutron.interchainqueries.QueryProto.Transaction.class, com.neutron.interchainqueries.QueryProto.Transaction.Builder.class);
+      }
+
+      // Construct using com.neutron.interchainqueries.QueryProto.Transaction.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = 0L;
+        height_ = 0L;
+        data_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_Transaction_descriptor;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.QueryProto.Transaction getDefaultInstanceForType() {
+        return com.neutron.interchainqueries.QueryProto.Transaction.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.QueryProto.Transaction build() {
+        com.neutron.interchainqueries.QueryProto.Transaction result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.QueryProto.Transaction buildPartial() {
+        com.neutron.interchainqueries.QueryProto.Transaction result = new com.neutron.interchainqueries.QueryProto.Transaction(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.neutron.interchainqueries.QueryProto.Transaction result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.height_ = height_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.data_ = data_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.neutron.interchainqueries.QueryProto.Transaction) {
+          return mergeFrom((com.neutron.interchainqueries.QueryProto.Transaction)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.neutron.interchainqueries.QueryProto.Transaction other) {
+        if (other == com.neutron.interchainqueries.QueryProto.Transaction.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        if (other.getHeight() != 0L) {
+          setHeight(other.getHeight());
+        }
+        if (other.getData() != com.google.protobuf.ByteString.EMPTY) {
+          setData(other.getData());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                height_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                data_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long id_ ;
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long height_ ;
+      /**
+       * <code>uint64 height = 2 [json_name = "height"];</code>
+       * @return The height.
+       */
+      @java.lang.Override
+      public long getHeight() {
+        return height_;
+      }
+      /**
+       * <code>uint64 height = 2 [json_name = "height"];</code>
+       * @param value The height to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHeight(long value) {
+
+        height_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 height = 2 [json_name = "height"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHeight() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        height_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes data = 3 [json_name = "data"];</code>
+       * @return The data.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getData() {
+        return data_;
+      }
+      /**
+       * <code>bytes data = 3 [json_name = "data"];</code>
+       * @param value The data to set.
+       * @return This builder for chaining.
+       */
+      public Builder setData(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        data_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes data = 3 [json_name = "data"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearData() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        data_ = getDefaultInstance().getData();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:neutron.interchainqueries.Transaction)
+    }
+
+    // @@protoc_insertion_point(class_scope:neutron.interchainqueries.Transaction)
+    private static final com.neutron.interchainqueries.QueryProto.Transaction DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.neutron.interchainqueries.QueryProto.Transaction();
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.Transaction getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Transaction>
+        PARSER = new com.google.protobuf.AbstractParser<Transaction>() {
+      @java.lang.Override
+      public Transaction parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Transaction> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Transaction> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.neutron.interchainqueries.QueryProto.Transaction getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryLastRemoteHeightOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:neutron.interchainqueries.QueryLastRemoteHeight)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string connection_id = 1 [json_name = "connectionId"];</code>
+     * @return The connectionId.
+     */
+    java.lang.String getConnectionId();
+    /**
+     * <code>string connection_id = 1 [json_name = "connectionId"];</code>
+     * @return The bytes for connectionId.
+     */
+    com.google.protobuf.ByteString
+        getConnectionIdBytes();
+  }
+  /**
+   * Protobuf type {@code neutron.interchainqueries.QueryLastRemoteHeight}
+   */
+  public static final class QueryLastRemoteHeight extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:neutron.interchainqueries.QueryLastRemoteHeight)
+      QueryLastRemoteHeightOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryLastRemoteHeight.newBuilder() to construct.
+    private QueryLastRemoteHeight(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryLastRemoteHeight() {
+      connectionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryLastRemoteHeight();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryLastRemoteHeight_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryLastRemoteHeight_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeight.class, com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeight.Builder.class);
+    }
+
+    public static final int CONNECTION_ID_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object connectionId_ = "";
+    /**
+     * <code>string connection_id = 1 [json_name = "connectionId"];</code>
+     * @return The connectionId.
+     */
+    @java.lang.Override
+    public java.lang.String getConnectionId() {
+      java.lang.Object ref = connectionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        connectionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string connection_id = 1 [json_name = "connectionId"];</code>
+     * @return The bytes for connectionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConnectionIdBytes() {
+      java.lang.Object ref = connectionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        connectionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, connectionId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(connectionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, connectionId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeight)) {
+        return super.equals(obj);
+      }
+      com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeight other = (com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeight) obj;
+
+      if (!getConnectionId()
+          .equals(other.getConnectionId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONNECTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getConnectionId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeight parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeight parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeight parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeight parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeight parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeight parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeight parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeight parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeight parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeight parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeight parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeight parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeight prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code neutron.interchainqueries.QueryLastRemoteHeight}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:neutron.interchainqueries.QueryLastRemoteHeight)
+        com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryLastRemoteHeight_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryLastRemoteHeight_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeight.class, com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeight.Builder.class);
+      }
+
+      // Construct using com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeight.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        connectionId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryLastRemoteHeight_descriptor;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeight getDefaultInstanceForType() {
+        return com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeight.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeight build() {
+        com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeight result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeight buildPartial() {
+        com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeight result = new com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeight(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeight result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.connectionId_ = connectionId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeight) {
+          return mergeFrom((com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeight)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeight other) {
+        if (other == com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeight.getDefaultInstance()) return this;
+        if (!other.getConnectionId().isEmpty()) {
+          connectionId_ = other.connectionId_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                connectionId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object connectionId_ = "";
+      /**
+       * <code>string connection_id = 1 [json_name = "connectionId"];</code>
+       * @return The connectionId.
+       */
+      public java.lang.String getConnectionId() {
+        java.lang.Object ref = connectionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          connectionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string connection_id = 1 [json_name = "connectionId"];</code>
+       * @return The bytes for connectionId.
+       */
+      public com.google.protobuf.ByteString
+          getConnectionIdBytes() {
+        java.lang.Object ref = connectionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          connectionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string connection_id = 1 [json_name = "connectionId"];</code>
+       * @param value The connectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectionId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        connectionId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string connection_id = 1 [json_name = "connectionId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConnectionId() {
+        connectionId_ = getDefaultInstance().getConnectionId();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string connection_id = 1 [json_name = "connectionId"];</code>
+       * @param value The bytes for connectionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConnectionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        connectionId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:neutron.interchainqueries.QueryLastRemoteHeight)
+    }
+
+    // @@protoc_insertion_point(class_scope:neutron.interchainqueries.QueryLastRemoteHeight)
+    private static final com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeight DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeight();
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeight getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryLastRemoteHeight>
+        PARSER = new com.google.protobuf.AbstractParser<QueryLastRemoteHeight>() {
+      @java.lang.Override
+      public QueryLastRemoteHeight parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryLastRemoteHeight> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryLastRemoteHeight> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeight getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryLastRemoteHeightResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:neutron.interchainqueries.QueryLastRemoteHeightResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * @return The height.
+     */
+    long getHeight();
+  }
+  /**
+   * Protobuf type {@code neutron.interchainqueries.QueryLastRemoteHeightResponse}
+   */
+  public static final class QueryLastRemoteHeightResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:neutron.interchainqueries.QueryLastRemoteHeightResponse)
+      QueryLastRemoteHeightResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryLastRemoteHeightResponse.newBuilder() to construct.
+    private QueryLastRemoteHeightResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryLastRemoteHeightResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryLastRemoteHeightResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryLastRemoteHeightResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryLastRemoteHeightResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightResponse.class, com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightResponse.Builder.class);
+    }
+
+    public static final int HEIGHT_FIELD_NUMBER = 1;
+    private long height_ = 0L;
+    /**
+     * <code>uint64 height = 1 [json_name = "height"];</code>
+     * @return The height.
+     */
+    @java.lang.Override
+    public long getHeight() {
+      return height_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (height_ != 0L) {
+        output.writeUInt64(1, height_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (height_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, height_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightResponse)) {
+        return super.equals(obj);
+      }
+      com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightResponse other = (com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightResponse) obj;
+
+      if (getHeight()
+          != other.getHeight()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + HEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getHeight());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code neutron.interchainqueries.QueryLastRemoteHeightResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:neutron.interchainqueries.QueryLastRemoteHeightResponse)
+        com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryLastRemoteHeightResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryLastRemoteHeightResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightResponse.class, com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightResponse.Builder.class);
+      }
+
+      // Construct using com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        height_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.neutron.interchainqueries.QueryProto.internal_static_neutron_interchainqueries_QueryLastRemoteHeightResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightResponse getDefaultInstanceForType() {
+        return com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightResponse build() {
+        com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightResponse buildPartial() {
+        com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightResponse result = new com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.height_ = height_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightResponse) {
+          return mergeFrom((com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightResponse other) {
+        if (other == com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightResponse.getDefaultInstance()) return this;
+        if (other.getHeight() != 0L) {
+          setHeight(other.getHeight());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                height_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long height_ ;
+      /**
+       * <code>uint64 height = 1 [json_name = "height"];</code>
+       * @return The height.
+       */
+      @java.lang.Override
+      public long getHeight() {
+        return height_;
+      }
+      /**
+       * <code>uint64 height = 1 [json_name = "height"];</code>
+       * @param value The height to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHeight(long value) {
+
+        height_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 height = 1 [json_name = "height"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHeight() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        height_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:neutron.interchainqueries.QueryLastRemoteHeightResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:neutron.interchainqueries.QueryLastRemoteHeightResponse)
+    private static final com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightResponse();
+    }
+
+    public static com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryLastRemoteHeightResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryLastRemoteHeightResponse>() {
+      @java.lang.Override
+      public QueryLastRemoteHeightResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryLastRemoteHeightResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryLastRemoteHeightResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.neutron.interchainqueries.QueryProto.QueryLastRemoteHeightResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_neutron_interchainqueries_QueryParamsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_neutron_interchainqueries_QueryParamsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_neutron_interchainqueries_QueryParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_neutron_interchainqueries_QueryParamsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_neutron_interchainqueries_QueryRegisteredQueriesRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_neutron_interchainqueries_QueryRegisteredQueriesRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_neutron_interchainqueries_QueryRegisteredQueriesResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_neutron_interchainqueries_QueryRegisteredQueriesResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_neutron_interchainqueries_QueryRegisteredQueryRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_neutron_interchainqueries_QueryRegisteredQueryRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_neutron_interchainqueries_QueryRegisteredQueryResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_neutron_interchainqueries_QueryRegisteredQueryResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_neutron_interchainqueries_QueryRegisteredQueryResultRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_neutron_interchainqueries_QueryRegisteredQueryResultRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_neutron_interchainqueries_QueryRegisteredQueryResultResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_neutron_interchainqueries_QueryRegisteredQueryResultResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_neutron_interchainqueries_Transaction_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_neutron_interchainqueries_Transaction_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_neutron_interchainqueries_QueryLastRemoteHeight_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_neutron_interchainqueries_QueryLastRemoteHeight_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_neutron_interchainqueries_QueryLastRemoteHeightResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_neutron_interchainqueries_QueryLastRemoteHeightResponse_fieldAccessorTable;
 
@@ -133,13 +7012,13 @@ public final class QueryProto {
       "ryLastRemoteHeight\0328.neutron.interchainq" +
       "ueries.QueryLastRemoteHeightResponse\"0\202\323" +
       "\344\223\002*\022(/neutron/interchainqueries/remote_" +
-      "heightB\352\001\n\035com.neutron.interchainqueries" +
-      "B\nQueryProtoP\001Z8github.com/neutron-org/n" +
-      "eutron/x/interchainqueries/types\242\002\003NIX\252\002" +
-      "\031Neutron.Interchainqueries\312\002\031Neutron\\Int" +
-      "erchainqueries\342\002%Neutron\\Interchainqueri" +
-      "es\\GPBMetadata\352\002\032Neutron::Interchainquer" +
-      "iesb\006proto3"
+      "heightB\350\001\n\035com.neutron.interchainqueries" +
+      "B\nQueryProtoZ8github.com/neutron-org/neu" +
+      "tron/x/interchainqueries/types\242\002\003NIX\252\002\031N" +
+      "eutron.Interchainqueries\312\002\031Neutron\\Inter" +
+      "chainqueries\342\002%Neutron\\Interchainqueries" +
+      "\\GPBMetadata\352\002\032Neutron::Interchainquerie" +
+      "sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

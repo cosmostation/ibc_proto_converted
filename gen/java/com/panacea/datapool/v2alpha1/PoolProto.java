@@ -14,49 +14,9830 @@ public final class PoolProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface PoolOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.datapool.v2alpha1.Pool)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <code>string pool_address = 2 [json_name = "poolAddress"];</code>
+     * @return The poolAddress.
+     */
+    java.lang.String getPoolAddress();
+    /**
+     * <code>string pool_address = 2 [json_name = "poolAddress"];</code>
+     * @return The bytes for poolAddress.
+     */
+    com.google.protobuf.ByteString
+        getPoolAddressBytes();
+
+    /**
+     * <code>uint64 round = 3 [json_name = "round"];</code>
+     * @return The round.
+     */
+    long getRound();
+
+    /**
+     * <code>.panacea.datapool.v2alpha1.PoolParams pool_params = 4 [json_name = "poolParams"];</code>
+     * @return Whether the poolParams field is set.
+     */
+    boolean hasPoolParams();
+    /**
+     * <code>.panacea.datapool.v2alpha1.PoolParams pool_params = 4 [json_name = "poolParams"];</code>
+     * @return The poolParams.
+     */
+    com.panacea.datapool.v2alpha1.PoolProto.PoolParams getPoolParams();
+    /**
+     * <code>.panacea.datapool.v2alpha1.PoolParams pool_params = 4 [json_name = "poolParams"];</code>
+     */
+    com.panacea.datapool.v2alpha1.PoolProto.PoolParamsOrBuilder getPoolParamsOrBuilder();
+
+    /**
+     * <pre>
+     * current number of data
+     * </pre>
+     *
+     * <code>uint64 cur_num_data = 5 [json_name = "curNumData"];</code>
+     * @return The curNumData.
+     */
+    long getCurNumData();
+
+    /**
+     * <pre>
+     * current issued NFTs
+     * </pre>
+     *
+     * <code>uint64 num_issued_nfts = 6 [json_name = "numIssuedNfts"];</code>
+     * @return The numIssuedNfts.
+     */
+    long getNumIssuedNfts();
+
+    /**
+     * <code>string status = 7 [json_name = "status"];</code>
+     * @return The status.
+     */
+    java.lang.String getStatus();
+    /**
+     * <code>string status = 7 [json_name = "status"];</code>
+     * @return The bytes for status.
+     */
+    com.google.protobuf.ByteString
+        getStatusBytes();
+
+    /**
+     * <code>string curator = 8 [json_name = "curator"];</code>
+     * @return The curator.
+     */
+    java.lang.String getCurator();
+    /**
+     * <code>string curator = 8 [json_name = "curator"];</code>
+     * @return The bytes for curator.
+     */
+    com.google.protobuf.ByteString
+        getCuratorBytes();
+
+    /**
+     * <pre>
+     * deposit
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin deposit = 9 [json_name = "deposit", (.gogoproto.nullable) = false];</code>
+     * @return Whether the deposit field is set.
+     */
+    boolean hasDeposit();
+    /**
+     * <pre>
+     * deposit
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin deposit = 9 [json_name = "deposit", (.gogoproto.nullable) = false];</code>
+     * @return The deposit.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getDeposit();
+    /**
+     * <pre>
+     * deposit
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin deposit = 9 [json_name = "deposit", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDepositOrBuilder();
+
+    /**
+     * <pre>
+     * NFT contract address of pool
+     * </pre>
+     *
+     * <code>string nft_contract_addr = 10 [json_name = "nftContractAddr"];</code>
+     * @return The nftContractAddr.
+     */
+    java.lang.String getNftContractAddr();
+    /**
+     * <pre>
+     * NFT contract address of pool
+     * </pre>
+     *
+     * <code>string nft_contract_addr = 10 [json_name = "nftContractAddr"];</code>
+     * @return The bytes for nftContractAddr.
+     */
+    com.google.protobuf.ByteString
+        getNftContractAddrBytes();
+
+    /**
+     * <code>bool was_deposit_returned = 11 [json_name = "wasDepositReturned"];</code>
+     * @return The wasDepositReturned.
+     */
+    boolean getWasDepositReturned();
+
+    /**
+     * <pre>
+     * key: round, value: paid curator commission balance
+     * </pre>
+     *
+     * <code>map&lt;uint64, .cosmos.base.v1beta1.Coin&gt; curator_commission = 12 [json_name = "curatorCommission", (.gogoproto.nullable) = false];</code>
+     */
+    int getCuratorCommissionCount();
+    /**
+     * <pre>
+     * key: round, value: paid curator commission balance
+     * </pre>
+     *
+     * <code>map&lt;uint64, .cosmos.base.v1beta1.Coin&gt; curator_commission = 12 [json_name = "curatorCommission", (.gogoproto.nullable) = false];</code>
+     */
+    boolean containsCuratorCommission(
+        long key);
+    /**
+     * Use {@link #getCuratorCommissionMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.Long, com.cosmos.base.v1beta1.CoinProto.Coin>
+    getCuratorCommission();
+    /**
+     * <pre>
+     * key: round, value: paid curator commission balance
+     * </pre>
+     *
+     * <code>map&lt;uint64, .cosmos.base.v1beta1.Coin&gt; curator_commission = 12 [json_name = "curatorCommission", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.Map<java.lang.Long, com.cosmos.base.v1beta1.CoinProto.Coin>
+    getCuratorCommissionMap();
+    /**
+     * <pre>
+     * key: round, value: paid curator commission balance
+     * </pre>
+     *
+     * <code>map&lt;uint64, .cosmos.base.v1beta1.Coin&gt; curator_commission = 12 [json_name = "curatorCommission", (.gogoproto.nullable) = false];</code>
+     */
+    /* nullable */
+com.cosmos.base.v1beta1.CoinProto.Coin getCuratorCommissionOrDefault(
+        long key,
+        /* nullable */
+com.cosmos.base.v1beta1.CoinProto.Coin defaultValue);
+    /**
+     * <pre>
+     * key: round, value: paid curator commission balance
+     * </pre>
+     *
+     * <code>map&lt;uint64, .cosmos.base.v1beta1.Coin&gt; curator_commission = 12 [json_name = "curatorCommission", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getCuratorCommissionOrThrow(
+        long key);
+
+    /**
+     * <pre>
+     * curator commission rate
+     * </pre>
+     *
+     * <code>string curator_commission_rate = 13 [json_name = "curatorCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"curator_commission_rate&#92;""];</code>
+     * @return The curatorCommissionRate.
+     */
+    java.lang.String getCuratorCommissionRate();
+    /**
+     * <pre>
+     * curator commission rate
+     * </pre>
+     *
+     * <code>string curator_commission_rate = 13 [json_name = "curatorCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"curator_commission_rate&#92;""];</code>
+     * @return The bytes for curatorCommissionRate.
+     */
+    com.google.protobuf.ByteString
+        getCuratorCommissionRateBytes();
+  }
+  /**
+   * <pre>
+   * Pool defines a data pool
+   * </pre>
+   *
+   * Protobuf type {@code panacea.datapool.v2alpha1.Pool}
+   */
+  public static final class Pool extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.datapool.v2alpha1.Pool)
+      PoolOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Pool.newBuilder() to construct.
+    private Pool(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Pool() {
+      poolAddress_ = "";
+      status_ = "";
+      curator_ = "";
+      nftContractAddr_ = "";
+      curatorCommissionRate_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Pool();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_Pool_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 12:
+          return internalGetCuratorCommission();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_Pool_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.datapool.v2alpha1.PoolProto.Pool.class, com.panacea.datapool.v2alpha1.PoolProto.Pool.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int POOL_ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object poolAddress_ = "";
+    /**
+     * <code>string pool_address = 2 [json_name = "poolAddress"];</code>
+     * @return The poolAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getPoolAddress() {
+      java.lang.Object ref = poolAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        poolAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string pool_address = 2 [json_name = "poolAddress"];</code>
+     * @return The bytes for poolAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPoolAddressBytes() {
+      java.lang.Object ref = poolAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        poolAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ROUND_FIELD_NUMBER = 3;
+    private long round_ = 0L;
+    /**
+     * <code>uint64 round = 3 [json_name = "round"];</code>
+     * @return The round.
+     */
+    @java.lang.Override
+    public long getRound() {
+      return round_;
+    }
+
+    public static final int POOL_PARAMS_FIELD_NUMBER = 4;
+    private com.panacea.datapool.v2alpha1.PoolProto.PoolParams poolParams_;
+    /**
+     * <code>.panacea.datapool.v2alpha1.PoolParams pool_params = 4 [json_name = "poolParams"];</code>
+     * @return Whether the poolParams field is set.
+     */
+    @java.lang.Override
+    public boolean hasPoolParams() {
+      return poolParams_ != null;
+    }
+    /**
+     * <code>.panacea.datapool.v2alpha1.PoolParams pool_params = 4 [json_name = "poolParams"];</code>
+     * @return The poolParams.
+     */
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.PoolProto.PoolParams getPoolParams() {
+      return poolParams_ == null ? com.panacea.datapool.v2alpha1.PoolProto.PoolParams.getDefaultInstance() : poolParams_;
+    }
+    /**
+     * <code>.panacea.datapool.v2alpha1.PoolParams pool_params = 4 [json_name = "poolParams"];</code>
+     */
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.PoolProto.PoolParamsOrBuilder getPoolParamsOrBuilder() {
+      return poolParams_ == null ? com.panacea.datapool.v2alpha1.PoolProto.PoolParams.getDefaultInstance() : poolParams_;
+    }
+
+    public static final int CUR_NUM_DATA_FIELD_NUMBER = 5;
+    private long curNumData_ = 0L;
+    /**
+     * <pre>
+     * current number of data
+     * </pre>
+     *
+     * <code>uint64 cur_num_data = 5 [json_name = "curNumData"];</code>
+     * @return The curNumData.
+     */
+    @java.lang.Override
+    public long getCurNumData() {
+      return curNumData_;
+    }
+
+    public static final int NUM_ISSUED_NFTS_FIELD_NUMBER = 6;
+    private long numIssuedNfts_ = 0L;
+    /**
+     * <pre>
+     * current issued NFTs
+     * </pre>
+     *
+     * <code>uint64 num_issued_nfts = 6 [json_name = "numIssuedNfts"];</code>
+     * @return The numIssuedNfts.
+     */
+    @java.lang.Override
+    public long getNumIssuedNfts() {
+      return numIssuedNfts_;
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object status_ = "";
+    /**
+     * <code>string status = 7 [json_name = "status"];</code>
+     * @return The status.
+     */
+    @java.lang.Override
+    public java.lang.String getStatus() {
+      java.lang.Object ref = status_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        status_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string status = 7 [json_name = "status"];</code>
+     * @return The bytes for status.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getStatusBytes() {
+      java.lang.Object ref = status_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        status_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CURATOR_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object curator_ = "";
+    /**
+     * <code>string curator = 8 [json_name = "curator"];</code>
+     * @return The curator.
+     */
+    @java.lang.Override
+    public java.lang.String getCurator() {
+      java.lang.Object ref = curator_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        curator_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string curator = 8 [json_name = "curator"];</code>
+     * @return The bytes for curator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCuratorBytes() {
+      java.lang.Object ref = curator_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        curator_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEPOSIT_FIELD_NUMBER = 9;
+    private com.cosmos.base.v1beta1.CoinProto.Coin deposit_;
+    /**
+     * <pre>
+     * deposit
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin deposit = 9 [json_name = "deposit", (.gogoproto.nullable) = false];</code>
+     * @return Whether the deposit field is set.
+     */
+    @java.lang.Override
+    public boolean hasDeposit() {
+      return deposit_ != null;
+    }
+    /**
+     * <pre>
+     * deposit
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin deposit = 9 [json_name = "deposit", (.gogoproto.nullable) = false];</code>
+     * @return The deposit.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getDeposit() {
+      return deposit_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : deposit_;
+    }
+    /**
+     * <pre>
+     * deposit
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin deposit = 9 [json_name = "deposit", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDepositOrBuilder() {
+      return deposit_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : deposit_;
+    }
+
+    public static final int NFT_CONTRACT_ADDR_FIELD_NUMBER = 10;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object nftContractAddr_ = "";
+    /**
+     * <pre>
+     * NFT contract address of pool
+     * </pre>
+     *
+     * <code>string nft_contract_addr = 10 [json_name = "nftContractAddr"];</code>
+     * @return The nftContractAddr.
+     */
+    @java.lang.Override
+    public java.lang.String getNftContractAddr() {
+      java.lang.Object ref = nftContractAddr_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nftContractAddr_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * NFT contract address of pool
+     * </pre>
+     *
+     * <code>string nft_contract_addr = 10 [json_name = "nftContractAddr"];</code>
+     * @return The bytes for nftContractAddr.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNftContractAddrBytes() {
+      java.lang.Object ref = nftContractAddr_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nftContractAddr_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WAS_DEPOSIT_RETURNED_FIELD_NUMBER = 11;
+    private boolean wasDepositReturned_ = false;
+    /**
+     * <code>bool was_deposit_returned = 11 [json_name = "wasDepositReturned"];</code>
+     * @return The wasDepositReturned.
+     */
+    @java.lang.Override
+    public boolean getWasDepositReturned() {
+      return wasDepositReturned_;
+    }
+
+    public static final int CURATOR_COMMISSION_FIELD_NUMBER = 12;
+    private static final class CuratorCommissionDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.Long, com.cosmos.base.v1beta1.CoinProto.Coin> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.Long, com.cosmos.base.v1beta1.CoinProto.Coin>newDefaultInstance(
+                  com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_Pool_CuratorCommissionEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.UINT64,
+                  0L,
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+    }
+    @SuppressWarnings("serial")
+    private com.google.protobuf.MapField<
+        java.lang.Long, com.cosmos.base.v1beta1.CoinProto.Coin> curatorCommission_;
+    private com.google.protobuf.MapField<java.lang.Long, com.cosmos.base.v1beta1.CoinProto.Coin>
+    internalGetCuratorCommission() {
+      if (curatorCommission_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            CuratorCommissionDefaultEntryHolder.defaultEntry);
+      }
+      return curatorCommission_;
+    }
+    public int getCuratorCommissionCount() {
+      return internalGetCuratorCommission().getMap().size();
+    }
+    /**
+     * <pre>
+     * key: round, value: paid curator commission balance
+     * </pre>
+     *
+     * <code>map&lt;uint64, .cosmos.base.v1beta1.Coin&gt; curator_commission = 12 [json_name = "curatorCommission", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public boolean containsCuratorCommission(
+        long key) {
+
+      return internalGetCuratorCommission().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getCuratorCommissionMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.Long, com.cosmos.base.v1beta1.CoinProto.Coin> getCuratorCommission() {
+      return getCuratorCommissionMap();
+    }
+    /**
+     * <pre>
+     * key: round, value: paid curator commission balance
+     * </pre>
+     *
+     * <code>map&lt;uint64, .cosmos.base.v1beta1.Coin&gt; curator_commission = 12 [json_name = "curatorCommission", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.Long, com.cosmos.base.v1beta1.CoinProto.Coin> getCuratorCommissionMap() {
+      return internalGetCuratorCommission().getMap();
+    }
+    /**
+     * <pre>
+     * key: round, value: paid curator commission balance
+     * </pre>
+     *
+     * <code>map&lt;uint64, .cosmos.base.v1beta1.Coin&gt; curator_commission = 12 [json_name = "curatorCommission", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+com.cosmos.base.v1beta1.CoinProto.Coin getCuratorCommissionOrDefault(
+        long key,
+        /* nullable */
+com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
+
+      java.util.Map<java.lang.Long, com.cosmos.base.v1beta1.CoinProto.Coin> map =
+          internalGetCuratorCommission().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * key: round, value: paid curator commission balance
+     * </pre>
+     *
+     * <code>map&lt;uint64, .cosmos.base.v1beta1.Coin&gt; curator_commission = 12 [json_name = "curatorCommission", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getCuratorCommissionOrThrow(
+        long key) {
+
+      java.util.Map<java.lang.Long, com.cosmos.base.v1beta1.CoinProto.Coin> map =
+          internalGetCuratorCommission().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int CURATOR_COMMISSION_RATE_FIELD_NUMBER = 13;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object curatorCommissionRate_ = "";
+    /**
+     * <pre>
+     * curator commission rate
+     * </pre>
+     *
+     * <code>string curator_commission_rate = 13 [json_name = "curatorCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"curator_commission_rate&#92;""];</code>
+     * @return The curatorCommissionRate.
+     */
+    @java.lang.Override
+    public java.lang.String getCuratorCommissionRate() {
+      java.lang.Object ref = curatorCommissionRate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        curatorCommissionRate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * curator commission rate
+     * </pre>
+     *
+     * <code>string curator_commission_rate = 13 [json_name = "curatorCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"curator_commission_rate&#92;""];</code>
+     * @return The bytes for curatorCommissionRate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCuratorCommissionRateBytes() {
+      java.lang.Object ref = curatorCommissionRate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        curatorCommissionRate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(poolAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, poolAddress_);
+      }
+      if (round_ != 0L) {
+        output.writeUInt64(3, round_);
+      }
+      if (poolParams_ != null) {
+        output.writeMessage(4, getPoolParams());
+      }
+      if (curNumData_ != 0L) {
+        output.writeUInt64(5, curNumData_);
+      }
+      if (numIssuedNfts_ != 0L) {
+        output.writeUInt64(6, numIssuedNfts_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(status_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, status_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(curator_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, curator_);
+      }
+      if (deposit_ != null) {
+        output.writeMessage(9, getDeposit());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nftContractAddr_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, nftContractAddr_);
+      }
+      if (wasDepositReturned_ != false) {
+        output.writeBool(11, wasDepositReturned_);
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeLongMapTo(
+          output,
+          internalGetCuratorCommission(),
+          CuratorCommissionDefaultEntryHolder.defaultEntry,
+          12);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(curatorCommissionRate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, curatorCommissionRate_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(poolAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, poolAddress_);
+      }
+      if (round_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, round_);
+      }
+      if (poolParams_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getPoolParams());
+      }
+      if (curNumData_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(5, curNumData_);
+      }
+      if (numIssuedNfts_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(6, numIssuedNfts_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(status_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, status_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(curator_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, curator_);
+      }
+      if (deposit_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getDeposit());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nftContractAddr_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, nftContractAddr_);
+      }
+      if (wasDepositReturned_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(11, wasDepositReturned_);
+      }
+      for (java.util.Map.Entry<java.lang.Long, com.cosmos.base.v1beta1.CoinProto.Coin> entry
+           : internalGetCuratorCommission().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.Long, com.cosmos.base.v1beta1.CoinProto.Coin>
+        curatorCommission__ = CuratorCommissionDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(12, curatorCommission__);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(curatorCommissionRate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, curatorCommissionRate_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.datapool.v2alpha1.PoolProto.Pool)) {
+        return super.equals(obj);
+      }
+      com.panacea.datapool.v2alpha1.PoolProto.Pool other = (com.panacea.datapool.v2alpha1.PoolProto.Pool) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (!getPoolAddress()
+          .equals(other.getPoolAddress())) return false;
+      if (getRound()
+          != other.getRound()) return false;
+      if (hasPoolParams() != other.hasPoolParams()) return false;
+      if (hasPoolParams()) {
+        if (!getPoolParams()
+            .equals(other.getPoolParams())) return false;
+      }
+      if (getCurNumData()
+          != other.getCurNumData()) return false;
+      if (getNumIssuedNfts()
+          != other.getNumIssuedNfts()) return false;
+      if (!getStatus()
+          .equals(other.getStatus())) return false;
+      if (!getCurator()
+          .equals(other.getCurator())) return false;
+      if (hasDeposit() != other.hasDeposit()) return false;
+      if (hasDeposit()) {
+        if (!getDeposit()
+            .equals(other.getDeposit())) return false;
+      }
+      if (!getNftContractAddr()
+          .equals(other.getNftContractAddr())) return false;
+      if (getWasDepositReturned()
+          != other.getWasDepositReturned()) return false;
+      if (!internalGetCuratorCommission().equals(
+          other.internalGetCuratorCommission())) return false;
+      if (!getCuratorCommissionRate()
+          .equals(other.getCuratorCommissionRate())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + POOL_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getPoolAddress().hashCode();
+      hash = (37 * hash) + ROUND_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRound());
+      if (hasPoolParams()) {
+        hash = (37 * hash) + POOL_PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getPoolParams().hashCode();
+      }
+      hash = (37 * hash) + CUR_NUM_DATA_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCurNumData());
+      hash = (37 * hash) + NUM_ISSUED_NFTS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getNumIssuedNfts());
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + getStatus().hashCode();
+      hash = (37 * hash) + CURATOR_FIELD_NUMBER;
+      hash = (53 * hash) + getCurator().hashCode();
+      if (hasDeposit()) {
+        hash = (37 * hash) + DEPOSIT_FIELD_NUMBER;
+        hash = (53 * hash) + getDeposit().hashCode();
+      }
+      hash = (37 * hash) + NFT_CONTRACT_ADDR_FIELD_NUMBER;
+      hash = (53 * hash) + getNftContractAddr().hashCode();
+      hash = (37 * hash) + WAS_DEPOSIT_RETURNED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getWasDepositReturned());
+      if (!internalGetCuratorCommission().getMap().isEmpty()) {
+        hash = (37 * hash) + CURATOR_COMMISSION_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetCuratorCommission().hashCode();
+      }
+      hash = (37 * hash) + CURATOR_COMMISSION_RATE_FIELD_NUMBER;
+      hash = (53 * hash) + getCuratorCommissionRate().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.datapool.v2alpha1.PoolProto.Pool parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.Pool parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.Pool parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.Pool parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.Pool parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.Pool parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.Pool parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.Pool parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.datapool.v2alpha1.PoolProto.Pool parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.datapool.v2alpha1.PoolProto.Pool parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.Pool parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.Pool parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.datapool.v2alpha1.PoolProto.Pool prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Pool defines a data pool
+     * </pre>
+     *
+     * Protobuf type {@code panacea.datapool.v2alpha1.Pool}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.datapool.v2alpha1.Pool)
+        com.panacea.datapool.v2alpha1.PoolProto.PoolOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_Pool_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 12:
+            return internalGetCuratorCommission();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 12:
+            return internalGetMutableCuratorCommission();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_Pool_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.datapool.v2alpha1.PoolProto.Pool.class, com.panacea.datapool.v2alpha1.PoolProto.Pool.Builder.class);
+      }
+
+      // Construct using com.panacea.datapool.v2alpha1.PoolProto.Pool.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        poolAddress_ = "";
+        round_ = 0L;
+        poolParams_ = null;
+        if (poolParamsBuilder_ != null) {
+          poolParamsBuilder_.dispose();
+          poolParamsBuilder_ = null;
+        }
+        curNumData_ = 0L;
+        numIssuedNfts_ = 0L;
+        status_ = "";
+        curator_ = "";
+        deposit_ = null;
+        if (depositBuilder_ != null) {
+          depositBuilder_.dispose();
+          depositBuilder_ = null;
+        }
+        nftContractAddr_ = "";
+        wasDepositReturned_ = false;
+        internalGetMutableCuratorCommission().clear();
+        curatorCommissionRate_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_Pool_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.PoolProto.Pool getDefaultInstanceForType() {
+        return com.panacea.datapool.v2alpha1.PoolProto.Pool.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.PoolProto.Pool build() {
+        com.panacea.datapool.v2alpha1.PoolProto.Pool result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.PoolProto.Pool buildPartial() {
+        com.panacea.datapool.v2alpha1.PoolProto.Pool result = new com.panacea.datapool.v2alpha1.PoolProto.Pool(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.datapool.v2alpha1.PoolProto.Pool result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.poolAddress_ = poolAddress_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.round_ = round_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.poolParams_ = poolParamsBuilder_ == null
+              ? poolParams_
+              : poolParamsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.curNumData_ = curNumData_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.numIssuedNfts_ = numIssuedNfts_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.status_ = status_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.curator_ = curator_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.deposit_ = depositBuilder_ == null
+              ? deposit_
+              : depositBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.nftContractAddr_ = nftContractAddr_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.wasDepositReturned_ = wasDepositReturned_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.curatorCommission_ = internalGetCuratorCommission();
+          result.curatorCommission_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.curatorCommissionRate_ = curatorCommissionRate_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.datapool.v2alpha1.PoolProto.Pool) {
+          return mergeFrom((com.panacea.datapool.v2alpha1.PoolProto.Pool)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.datapool.v2alpha1.PoolProto.Pool other) {
+        if (other == com.panacea.datapool.v2alpha1.PoolProto.Pool.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (!other.getPoolAddress().isEmpty()) {
+          poolAddress_ = other.poolAddress_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getRound() != 0L) {
+          setRound(other.getRound());
+        }
+        if (other.hasPoolParams()) {
+          mergePoolParams(other.getPoolParams());
+        }
+        if (other.getCurNumData() != 0L) {
+          setCurNumData(other.getCurNumData());
+        }
+        if (other.getNumIssuedNfts() != 0L) {
+          setNumIssuedNfts(other.getNumIssuedNfts());
+        }
+        if (!other.getStatus().isEmpty()) {
+          status_ = other.status_;
+          bitField0_ |= 0x00000040;
+          onChanged();
+        }
+        if (!other.getCurator().isEmpty()) {
+          curator_ = other.curator_;
+          bitField0_ |= 0x00000080;
+          onChanged();
+        }
+        if (other.hasDeposit()) {
+          mergeDeposit(other.getDeposit());
+        }
+        if (!other.getNftContractAddr().isEmpty()) {
+          nftContractAddr_ = other.nftContractAddr_;
+          bitField0_ |= 0x00000200;
+          onChanged();
+        }
+        if (other.getWasDepositReturned() != false) {
+          setWasDepositReturned(other.getWasDepositReturned());
+        }
+        internalGetMutableCuratorCommission().mergeFrom(
+            other.internalGetCuratorCommission());
+        bitField0_ |= 0x00000800;
+        if (!other.getCuratorCommissionRate().isEmpty()) {
+          curatorCommissionRate_ = other.curatorCommissionRate_;
+          bitField0_ |= 0x00001000;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                poolAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                round_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                input.readMessage(
+                    getPoolParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 40: {
+                curNumData_ = input.readUInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 48: {
+                numIssuedNfts_ = input.readUInt64();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              case 58: {
+                status_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 58
+              case 66: {
+                curator_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 66
+              case 74: {
+                input.readMessage(
+                    getDepositFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 74
+              case 82: {
+                nftContractAddr_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 82
+              case 88: {
+                wasDepositReturned_ = input.readBool();
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 88
+              case 98: {
+                com.google.protobuf.MapEntry<java.lang.Long, com.cosmos.base.v1beta1.CoinProto.Coin>
+                curatorCommission__ = input.readMessage(
+                    CuratorCommissionDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutableCuratorCommission().getMutableMap().put(
+                    curatorCommission__.getKey(), curatorCommission__.getValue());
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 98
+              case 106: {
+                curatorCommissionRate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 106
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object poolAddress_ = "";
+      /**
+       * <code>string pool_address = 2 [json_name = "poolAddress"];</code>
+       * @return The poolAddress.
+       */
+      public java.lang.String getPoolAddress() {
+        java.lang.Object ref = poolAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          poolAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string pool_address = 2 [json_name = "poolAddress"];</code>
+       * @return The bytes for poolAddress.
+       */
+      public com.google.protobuf.ByteString
+          getPoolAddressBytes() {
+        java.lang.Object ref = poolAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          poolAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string pool_address = 2 [json_name = "poolAddress"];</code>
+       * @param value The poolAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        poolAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string pool_address = 2 [json_name = "poolAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolAddress() {
+        poolAddress_ = getDefaultInstance().getPoolAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string pool_address = 2 [json_name = "poolAddress"];</code>
+       * @param value The bytes for poolAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        poolAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private long round_ ;
+      /**
+       * <code>uint64 round = 3 [json_name = "round"];</code>
+       * @return The round.
+       */
+      @java.lang.Override
+      public long getRound() {
+        return round_;
+      }
+      /**
+       * <code>uint64 round = 3 [json_name = "round"];</code>
+       * @param value The round to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRound(long value) {
+
+        round_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 round = 3 [json_name = "round"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRound() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        round_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.panacea.datapool.v2alpha1.PoolProto.PoolParams poolParams_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.datapool.v2alpha1.PoolProto.PoolParams, com.panacea.datapool.v2alpha1.PoolProto.PoolParams.Builder, com.panacea.datapool.v2alpha1.PoolProto.PoolParamsOrBuilder> poolParamsBuilder_;
+      /**
+       * <code>.panacea.datapool.v2alpha1.PoolParams pool_params = 4 [json_name = "poolParams"];</code>
+       * @return Whether the poolParams field is set.
+       */
+      public boolean hasPoolParams() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>.panacea.datapool.v2alpha1.PoolParams pool_params = 4 [json_name = "poolParams"];</code>
+       * @return The poolParams.
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.PoolParams getPoolParams() {
+        if (poolParamsBuilder_ == null) {
+          return poolParams_ == null ? com.panacea.datapool.v2alpha1.PoolProto.PoolParams.getDefaultInstance() : poolParams_;
+        } else {
+          return poolParamsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.panacea.datapool.v2alpha1.PoolParams pool_params = 4 [json_name = "poolParams"];</code>
+       */
+      public Builder setPoolParams(com.panacea.datapool.v2alpha1.PoolProto.PoolParams value) {
+        if (poolParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          poolParams_ = value;
+        } else {
+          poolParamsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.datapool.v2alpha1.PoolParams pool_params = 4 [json_name = "poolParams"];</code>
+       */
+      public Builder setPoolParams(
+          com.panacea.datapool.v2alpha1.PoolProto.PoolParams.Builder builderForValue) {
+        if (poolParamsBuilder_ == null) {
+          poolParams_ = builderForValue.build();
+        } else {
+          poolParamsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.datapool.v2alpha1.PoolParams pool_params = 4 [json_name = "poolParams"];</code>
+       */
+      public Builder mergePoolParams(com.panacea.datapool.v2alpha1.PoolProto.PoolParams value) {
+        if (poolParamsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            poolParams_ != null &&
+            poolParams_ != com.panacea.datapool.v2alpha1.PoolProto.PoolParams.getDefaultInstance()) {
+            getPoolParamsBuilder().mergeFrom(value);
+          } else {
+            poolParams_ = value;
+          }
+        } else {
+          poolParamsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.datapool.v2alpha1.PoolParams pool_params = 4 [json_name = "poolParams"];</code>
+       */
+      public Builder clearPoolParams() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        poolParams_ = null;
+        if (poolParamsBuilder_ != null) {
+          poolParamsBuilder_.dispose();
+          poolParamsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.panacea.datapool.v2alpha1.PoolParams pool_params = 4 [json_name = "poolParams"];</code>
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.PoolParams.Builder getPoolParamsBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getPoolParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.panacea.datapool.v2alpha1.PoolParams pool_params = 4 [json_name = "poolParams"];</code>
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.PoolParamsOrBuilder getPoolParamsOrBuilder() {
+        if (poolParamsBuilder_ != null) {
+          return poolParamsBuilder_.getMessageOrBuilder();
+        } else {
+          return poolParams_ == null ?
+              com.panacea.datapool.v2alpha1.PoolProto.PoolParams.getDefaultInstance() : poolParams_;
+        }
+      }
+      /**
+       * <code>.panacea.datapool.v2alpha1.PoolParams pool_params = 4 [json_name = "poolParams"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.datapool.v2alpha1.PoolProto.PoolParams, com.panacea.datapool.v2alpha1.PoolProto.PoolParams.Builder, com.panacea.datapool.v2alpha1.PoolProto.PoolParamsOrBuilder> 
+          getPoolParamsFieldBuilder() {
+        if (poolParamsBuilder_ == null) {
+          poolParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.panacea.datapool.v2alpha1.PoolProto.PoolParams, com.panacea.datapool.v2alpha1.PoolProto.PoolParams.Builder, com.panacea.datapool.v2alpha1.PoolProto.PoolParamsOrBuilder>(
+                  getPoolParams(),
+                  getParentForChildren(),
+                  isClean());
+          poolParams_ = null;
+        }
+        return poolParamsBuilder_;
+      }
+
+      private long curNumData_ ;
+      /**
+       * <pre>
+       * current number of data
+       * </pre>
+       *
+       * <code>uint64 cur_num_data = 5 [json_name = "curNumData"];</code>
+       * @return The curNumData.
+       */
+      @java.lang.Override
+      public long getCurNumData() {
+        return curNumData_;
+      }
+      /**
+       * <pre>
+       * current number of data
+       * </pre>
+       *
+       * <code>uint64 cur_num_data = 5 [json_name = "curNumData"];</code>
+       * @param value The curNumData to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurNumData(long value) {
+
+        curNumData_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * current number of data
+       * </pre>
+       *
+       * <code>uint64 cur_num_data = 5 [json_name = "curNumData"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCurNumData() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        curNumData_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long numIssuedNfts_ ;
+      /**
+       * <pre>
+       * current issued NFTs
+       * </pre>
+       *
+       * <code>uint64 num_issued_nfts = 6 [json_name = "numIssuedNfts"];</code>
+       * @return The numIssuedNfts.
+       */
+      @java.lang.Override
+      public long getNumIssuedNfts() {
+        return numIssuedNfts_;
+      }
+      /**
+       * <pre>
+       * current issued NFTs
+       * </pre>
+       *
+       * <code>uint64 num_issued_nfts = 6 [json_name = "numIssuedNfts"];</code>
+       * @param value The numIssuedNfts to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumIssuedNfts(long value) {
+
+        numIssuedNfts_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * current issued NFTs
+       * </pre>
+       *
+       * <code>uint64 num_issued_nfts = 6 [json_name = "numIssuedNfts"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNumIssuedNfts() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        numIssuedNfts_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object status_ = "";
+      /**
+       * <code>string status = 7 [json_name = "status"];</code>
+       * @return The status.
+       */
+      public java.lang.String getStatus() {
+        java.lang.Object ref = status_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          status_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string status = 7 [json_name = "status"];</code>
+       * @return The bytes for status.
+       */
+      public com.google.protobuf.ByteString
+          getStatusBytes() {
+        java.lang.Object ref = status_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          status_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string status = 7 [json_name = "status"];</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        status_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string status = 7 [json_name = "status"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        status_ = getDefaultInstance().getStatus();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string status = 7 [json_name = "status"];</code>
+       * @param value The bytes for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        status_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object curator_ = "";
+      /**
+       * <code>string curator = 8 [json_name = "curator"];</code>
+       * @return The curator.
+       */
+      public java.lang.String getCurator() {
+        java.lang.Object ref = curator_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          curator_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string curator = 8 [json_name = "curator"];</code>
+       * @return The bytes for curator.
+       */
+      public com.google.protobuf.ByteString
+          getCuratorBytes() {
+        java.lang.Object ref = curator_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          curator_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string curator = 8 [json_name = "curator"];</code>
+       * @param value The curator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurator(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        curator_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string curator = 8 [json_name = "curator"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCurator() {
+        curator_ = getDefaultInstance().getCurator();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string curator = 8 [json_name = "curator"];</code>
+       * @param value The bytes for curator to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCuratorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        curator_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin deposit_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> depositBuilder_;
+      /**
+       * <pre>
+       * deposit
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin deposit = 9 [json_name = "deposit", (.gogoproto.nullable) = false];</code>
+       * @return Whether the deposit field is set.
+       */
+      public boolean hasDeposit() {
+        return ((bitField0_ & 0x00000100) != 0);
+      }
+      /**
+       * <pre>
+       * deposit
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin deposit = 9 [json_name = "deposit", (.gogoproto.nullable) = false];</code>
+       * @return The deposit.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getDeposit() {
+        if (depositBuilder_ == null) {
+          return deposit_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : deposit_;
+        } else {
+          return depositBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * deposit
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin deposit = 9 [json_name = "deposit", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDeposit(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (depositBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          deposit_ = value;
+        } else {
+          depositBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * deposit
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin deposit = 9 [json_name = "deposit", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDeposit(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (depositBuilder_ == null) {
+          deposit_ = builderForValue.build();
+        } else {
+          depositBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * deposit
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin deposit = 9 [json_name = "deposit", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeDeposit(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (depositBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) != 0) &&
+            deposit_ != null &&
+            deposit_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getDepositBuilder().mergeFrom(value);
+          } else {
+            deposit_ = value;
+          }
+        } else {
+          depositBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * deposit
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin deposit = 9 [json_name = "deposit", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearDeposit() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        deposit_ = null;
+        if (depositBuilder_ != null) {
+          depositBuilder_.dispose();
+          depositBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * deposit
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin deposit = 9 [json_name = "deposit", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getDepositBuilder() {
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return getDepositFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * deposit
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin deposit = 9 [json_name = "deposit", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getDepositOrBuilder() {
+        if (depositBuilder_ != null) {
+          return depositBuilder_.getMessageOrBuilder();
+        } else {
+          return deposit_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : deposit_;
+        }
+      }
+      /**
+       * <pre>
+       * deposit
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin deposit = 9 [json_name = "deposit", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getDepositFieldBuilder() {
+        if (depositBuilder_ == null) {
+          depositBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getDeposit(),
+                  getParentForChildren(),
+                  isClean());
+          deposit_ = null;
+        }
+        return depositBuilder_;
+      }
+
+      private java.lang.Object nftContractAddr_ = "";
+      /**
+       * <pre>
+       * NFT contract address of pool
+       * </pre>
+       *
+       * <code>string nft_contract_addr = 10 [json_name = "nftContractAddr"];</code>
+       * @return The nftContractAddr.
+       */
+      public java.lang.String getNftContractAddr() {
+        java.lang.Object ref = nftContractAddr_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nftContractAddr_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * NFT contract address of pool
+       * </pre>
+       *
+       * <code>string nft_contract_addr = 10 [json_name = "nftContractAddr"];</code>
+       * @return The bytes for nftContractAddr.
+       */
+      public com.google.protobuf.ByteString
+          getNftContractAddrBytes() {
+        java.lang.Object ref = nftContractAddr_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nftContractAddr_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * NFT contract address of pool
+       * </pre>
+       *
+       * <code>string nft_contract_addr = 10 [json_name = "nftContractAddr"];</code>
+       * @param value The nftContractAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNftContractAddr(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        nftContractAddr_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * NFT contract address of pool
+       * </pre>
+       *
+       * <code>string nft_contract_addr = 10 [json_name = "nftContractAddr"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNftContractAddr() {
+        nftContractAddr_ = getDefaultInstance().getNftContractAddr();
+        bitField0_ = (bitField0_ & ~0x00000200);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * NFT contract address of pool
+       * </pre>
+       *
+       * <code>string nft_contract_addr = 10 [json_name = "nftContractAddr"];</code>
+       * @param value The bytes for nftContractAddr to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNftContractAddrBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        nftContractAddr_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+
+      private boolean wasDepositReturned_ ;
+      /**
+       * <code>bool was_deposit_returned = 11 [json_name = "wasDepositReturned"];</code>
+       * @return The wasDepositReturned.
+       */
+      @java.lang.Override
+      public boolean getWasDepositReturned() {
+        return wasDepositReturned_;
+      }
+      /**
+       * <code>bool was_deposit_returned = 11 [json_name = "wasDepositReturned"];</code>
+       * @param value The wasDepositReturned to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWasDepositReturned(boolean value) {
+
+        wasDepositReturned_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool was_deposit_returned = 11 [json_name = "wasDepositReturned"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWasDepositReturned() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        wasDepositReturned_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.Long, com.cosmos.base.v1beta1.CoinProto.Coin> curatorCommission_;
+      private com.google.protobuf.MapField<java.lang.Long, com.cosmos.base.v1beta1.CoinProto.Coin>
+          internalGetCuratorCommission() {
+        if (curatorCommission_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              CuratorCommissionDefaultEntryHolder.defaultEntry);
+        }
+        return curatorCommission_;
+      }
+      private com.google.protobuf.MapField<java.lang.Long, com.cosmos.base.v1beta1.CoinProto.Coin>
+          internalGetMutableCuratorCommission() {
+        if (curatorCommission_ == null) {
+          curatorCommission_ = com.google.protobuf.MapField.newMapField(
+              CuratorCommissionDefaultEntryHolder.defaultEntry);
+        }
+        if (!curatorCommission_.isMutable()) {
+          curatorCommission_ = curatorCommission_.copy();
+        }
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return curatorCommission_;
+      }
+      public int getCuratorCommissionCount() {
+        return internalGetCuratorCommission().getMap().size();
+      }
+      /**
+       * <pre>
+       * key: round, value: paid curator commission balance
+       * </pre>
+       *
+       * <code>map&lt;uint64, .cosmos.base.v1beta1.Coin&gt; curator_commission = 12 [json_name = "curatorCommission", (.gogoproto.nullable) = false];</code>
+       */
+      @java.lang.Override
+      public boolean containsCuratorCommission(
+          long key) {
+
+        return internalGetCuratorCommission().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getCuratorCommissionMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Long, com.cosmos.base.v1beta1.CoinProto.Coin> getCuratorCommission() {
+        return getCuratorCommissionMap();
+      }
+      /**
+       * <pre>
+       * key: round, value: paid curator commission balance
+       * </pre>
+       *
+       * <code>map&lt;uint64, .cosmos.base.v1beta1.Coin&gt; curator_commission = 12 [json_name = "curatorCommission", (.gogoproto.nullable) = false];</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.Long, com.cosmos.base.v1beta1.CoinProto.Coin> getCuratorCommissionMap() {
+        return internalGetCuratorCommission().getMap();
+      }
+      /**
+       * <pre>
+       * key: round, value: paid curator commission balance
+       * </pre>
+       *
+       * <code>map&lt;uint64, .cosmos.base.v1beta1.Coin&gt; curator_commission = 12 [json_name = "curatorCommission", (.gogoproto.nullable) = false];</code>
+       */
+      @java.lang.Override
+      public /* nullable */
+com.cosmos.base.v1beta1.CoinProto.Coin getCuratorCommissionOrDefault(
+          long key,
+          /* nullable */
+com.cosmos.base.v1beta1.CoinProto.Coin defaultValue) {
+
+        java.util.Map<java.lang.Long, com.cosmos.base.v1beta1.CoinProto.Coin> map =
+            internalGetCuratorCommission().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * key: round, value: paid curator commission balance
+       * </pre>
+       *
+       * <code>map&lt;uint64, .cosmos.base.v1beta1.Coin&gt; curator_commission = 12 [json_name = "curatorCommission", (.gogoproto.nullable) = false];</code>
+       */
+      @java.lang.Override
+      public com.cosmos.base.v1beta1.CoinProto.Coin getCuratorCommissionOrThrow(
+          long key) {
+
+        java.util.Map<java.lang.Long, com.cosmos.base.v1beta1.CoinProto.Coin> map =
+            internalGetCuratorCommission().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      public Builder clearCuratorCommission() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        internalGetMutableCuratorCommission().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * key: round, value: paid curator commission balance
+       * </pre>
+       *
+       * <code>map&lt;uint64, .cosmos.base.v1beta1.Coin&gt; curator_commission = 12 [json_name = "curatorCommission", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeCuratorCommission(
+          long key) {
+
+        internalGetMutableCuratorCommission().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.Long, com.cosmos.base.v1beta1.CoinProto.Coin>
+          getMutableCuratorCommission() {
+        bitField0_ |= 0x00000800;
+        return internalGetMutableCuratorCommission().getMutableMap();
+      }
+      /**
+       * <pre>
+       * key: round, value: paid curator commission balance
+       * </pre>
+       *
+       * <code>map&lt;uint64, .cosmos.base.v1beta1.Coin&gt; curator_commission = 12 [json_name = "curatorCommission", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder putCuratorCommission(
+          long key,
+          com.cosmos.base.v1beta1.CoinProto.Coin value) {
+
+        if (value == null) { throw new NullPointerException("map value"); }
+        internalGetMutableCuratorCommission().getMutableMap()
+            .put(key, value);
+        bitField0_ |= 0x00000800;
+        return this;
+      }
+      /**
+       * <pre>
+       * key: round, value: paid curator commission balance
+       * </pre>
+       *
+       * <code>map&lt;uint64, .cosmos.base.v1beta1.Coin&gt; curator_commission = 12 [json_name = "curatorCommission", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder putAllCuratorCommission(
+          java.util.Map<java.lang.Long, com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        internalGetMutableCuratorCommission().getMutableMap()
+            .putAll(values);
+        bitField0_ |= 0x00000800;
+        return this;
+      }
+
+      private java.lang.Object curatorCommissionRate_ = "";
+      /**
+       * <pre>
+       * curator commission rate
+       * </pre>
+       *
+       * <code>string curator_commission_rate = 13 [json_name = "curatorCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"curator_commission_rate&#92;""];</code>
+       * @return The curatorCommissionRate.
+       */
+      public java.lang.String getCuratorCommissionRate() {
+        java.lang.Object ref = curatorCommissionRate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          curatorCommissionRate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * curator commission rate
+       * </pre>
+       *
+       * <code>string curator_commission_rate = 13 [json_name = "curatorCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"curator_commission_rate&#92;""];</code>
+       * @return The bytes for curatorCommissionRate.
+       */
+      public com.google.protobuf.ByteString
+          getCuratorCommissionRateBytes() {
+        java.lang.Object ref = curatorCommissionRate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          curatorCommissionRate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * curator commission rate
+       * </pre>
+       *
+       * <code>string curator_commission_rate = 13 [json_name = "curatorCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"curator_commission_rate&#92;""];</code>
+       * @param value The curatorCommissionRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCuratorCommissionRate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        curatorCommissionRate_ = value;
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * curator commission rate
+       * </pre>
+       *
+       * <code>string curator_commission_rate = 13 [json_name = "curatorCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"curator_commission_rate&#92;""];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCuratorCommissionRate() {
+        curatorCommissionRate_ = getDefaultInstance().getCuratorCommissionRate();
+        bitField0_ = (bitField0_ & ~0x00001000);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * curator commission rate
+       * </pre>
+       *
+       * <code>string curator_commission_rate = 13 [json_name = "curatorCommissionRate", (.gogoproto.nullable) = false, (.gogoproto.customtype) = "github.com/cosmos/cosmos-sdk/types.Dec", (.gogoproto.moretags) = "yaml:&#92;"curator_commission_rate&#92;""];</code>
+       * @param value The bytes for curatorCommissionRate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCuratorCommissionRateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        curatorCommissionRate_ = value;
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.datapool.v2alpha1.Pool)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.datapool.v2alpha1.Pool)
+    private static final com.panacea.datapool.v2alpha1.PoolProto.Pool DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.datapool.v2alpha1.PoolProto.Pool();
+    }
+
+    public static com.panacea.datapool.v2alpha1.PoolProto.Pool getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Pool>
+        PARSER = new com.google.protobuf.AbstractParser<Pool>() {
+      @java.lang.Override
+      public Pool parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Pool> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Pool> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.PoolProto.Pool getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DataCertOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.datapool.v2alpha1.DataCert)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * unsigned certificate
+     * </pre>
+     *
+     * <code>.panacea.datapool.v2alpha1.UnsignedDataCert unsigned_cert = 1 [json_name = "unsignedCert"];</code>
+     * @return Whether the unsignedCert field is set.
+     */
+    boolean hasUnsignedCert();
+    /**
+     * <pre>
+     * unsigned certificate
+     * </pre>
+     *
+     * <code>.panacea.datapool.v2alpha1.UnsignedDataCert unsigned_cert = 1 [json_name = "unsignedCert"];</code>
+     * @return The unsignedCert.
+     */
+    com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert getUnsignedCert();
+    /**
+     * <pre>
+     * unsigned certificate
+     * </pre>
+     *
+     * <code>.panacea.datapool.v2alpha1.UnsignedDataCert unsigned_cert = 1 [json_name = "unsignedCert"];</code>
+     */
+    com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCertOrBuilder getUnsignedCertOrBuilder();
+
+    /**
+     * <pre>
+     * signature for data validation by data validator
+     * </pre>
+     *
+     * <code>bytes signature = 2 [json_name = "signature"];</code>
+     * @return The signature.
+     */
+    com.google.protobuf.ByteString getSignature();
+  }
+  /**
+   * <pre>
+   * DataCert defines the certificate for data validation w/ data oricle signature.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.datapool.v2alpha1.DataCert}
+   */
+  public static final class DataCert extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.datapool.v2alpha1.DataCert)
+      DataCertOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DataCert.newBuilder() to construct.
+    private DataCert(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DataCert() {
+      signature_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DataCert();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_DataCert_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_DataCert_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.datapool.v2alpha1.PoolProto.DataCert.class, com.panacea.datapool.v2alpha1.PoolProto.DataCert.Builder.class);
+    }
+
+    public static final int UNSIGNED_CERT_FIELD_NUMBER = 1;
+    private com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert unsignedCert_;
+    /**
+     * <pre>
+     * unsigned certificate
+     * </pre>
+     *
+     * <code>.panacea.datapool.v2alpha1.UnsignedDataCert unsigned_cert = 1 [json_name = "unsignedCert"];</code>
+     * @return Whether the unsignedCert field is set.
+     */
+    @java.lang.Override
+    public boolean hasUnsignedCert() {
+      return unsignedCert_ != null;
+    }
+    /**
+     * <pre>
+     * unsigned certificate
+     * </pre>
+     *
+     * <code>.panacea.datapool.v2alpha1.UnsignedDataCert unsigned_cert = 1 [json_name = "unsignedCert"];</code>
+     * @return The unsignedCert.
+     */
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert getUnsignedCert() {
+      return unsignedCert_ == null ? com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert.getDefaultInstance() : unsignedCert_;
+    }
+    /**
+     * <pre>
+     * unsigned certificate
+     * </pre>
+     *
+     * <code>.panacea.datapool.v2alpha1.UnsignedDataCert unsigned_cert = 1 [json_name = "unsignedCert"];</code>
+     */
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCertOrBuilder getUnsignedCertOrBuilder() {
+      return unsignedCert_ == null ? com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert.getDefaultInstance() : unsignedCert_;
+    }
+
+    public static final int SIGNATURE_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString signature_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * signature for data validation by data validator
+     * </pre>
+     *
+     * <code>bytes signature = 2 [json_name = "signature"];</code>
+     * @return The signature.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSignature() {
+      return signature_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (unsignedCert_ != null) {
+        output.writeMessage(1, getUnsignedCert());
+      }
+      if (!signature_.isEmpty()) {
+        output.writeBytes(2, signature_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (unsignedCert_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getUnsignedCert());
+      }
+      if (!signature_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, signature_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.datapool.v2alpha1.PoolProto.DataCert)) {
+        return super.equals(obj);
+      }
+      com.panacea.datapool.v2alpha1.PoolProto.DataCert other = (com.panacea.datapool.v2alpha1.PoolProto.DataCert) obj;
+
+      if (hasUnsignedCert() != other.hasUnsignedCert()) return false;
+      if (hasUnsignedCert()) {
+        if (!getUnsignedCert()
+            .equals(other.getUnsignedCert())) return false;
+      }
+      if (!getSignature()
+          .equals(other.getSignature())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasUnsignedCert()) {
+        hash = (37 * hash) + UNSIGNED_CERT_FIELD_NUMBER;
+        hash = (53 * hash) + getUnsignedCert().hashCode();
+      }
+      hash = (37 * hash) + SIGNATURE_FIELD_NUMBER;
+      hash = (53 * hash) + getSignature().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataCert parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataCert parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataCert parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataCert parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataCert parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataCert parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataCert parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataCert parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataCert parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataCert parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataCert parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataCert parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.datapool.v2alpha1.PoolProto.DataCert prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * DataCert defines the certificate for data validation w/ data oricle signature.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.datapool.v2alpha1.DataCert}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.datapool.v2alpha1.DataCert)
+        com.panacea.datapool.v2alpha1.PoolProto.DataCertOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_DataCert_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_DataCert_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.datapool.v2alpha1.PoolProto.DataCert.class, com.panacea.datapool.v2alpha1.PoolProto.DataCert.Builder.class);
+      }
+
+      // Construct using com.panacea.datapool.v2alpha1.PoolProto.DataCert.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        unsignedCert_ = null;
+        if (unsignedCertBuilder_ != null) {
+          unsignedCertBuilder_.dispose();
+          unsignedCertBuilder_ = null;
+        }
+        signature_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_DataCert_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.PoolProto.DataCert getDefaultInstanceForType() {
+        return com.panacea.datapool.v2alpha1.PoolProto.DataCert.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.PoolProto.DataCert build() {
+        com.panacea.datapool.v2alpha1.PoolProto.DataCert result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.PoolProto.DataCert buildPartial() {
+        com.panacea.datapool.v2alpha1.PoolProto.DataCert result = new com.panacea.datapool.v2alpha1.PoolProto.DataCert(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.datapool.v2alpha1.PoolProto.DataCert result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.unsignedCert_ = unsignedCertBuilder_ == null
+              ? unsignedCert_
+              : unsignedCertBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.signature_ = signature_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.datapool.v2alpha1.PoolProto.DataCert) {
+          return mergeFrom((com.panacea.datapool.v2alpha1.PoolProto.DataCert)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.datapool.v2alpha1.PoolProto.DataCert other) {
+        if (other == com.panacea.datapool.v2alpha1.PoolProto.DataCert.getDefaultInstance()) return this;
+        if (other.hasUnsignedCert()) {
+          mergeUnsignedCert(other.getUnsignedCert());
+        }
+        if (other.getSignature() != com.google.protobuf.ByteString.EMPTY) {
+          setSignature(other.getSignature());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getUnsignedCertFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                signature_ = input.readBytes();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert unsignedCert_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert, com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert.Builder, com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCertOrBuilder> unsignedCertBuilder_;
+      /**
+       * <pre>
+       * unsigned certificate
+       * </pre>
+       *
+       * <code>.panacea.datapool.v2alpha1.UnsignedDataCert unsigned_cert = 1 [json_name = "unsignedCert"];</code>
+       * @return Whether the unsignedCert field is set.
+       */
+      public boolean hasUnsignedCert() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * unsigned certificate
+       * </pre>
+       *
+       * <code>.panacea.datapool.v2alpha1.UnsignedDataCert unsigned_cert = 1 [json_name = "unsignedCert"];</code>
+       * @return The unsignedCert.
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert getUnsignedCert() {
+        if (unsignedCertBuilder_ == null) {
+          return unsignedCert_ == null ? com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert.getDefaultInstance() : unsignedCert_;
+        } else {
+          return unsignedCertBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * unsigned certificate
+       * </pre>
+       *
+       * <code>.panacea.datapool.v2alpha1.UnsignedDataCert unsigned_cert = 1 [json_name = "unsignedCert"];</code>
+       */
+      public Builder setUnsignedCert(com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert value) {
+        if (unsignedCertBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          unsignedCert_ = value;
+        } else {
+          unsignedCertBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * unsigned certificate
+       * </pre>
+       *
+       * <code>.panacea.datapool.v2alpha1.UnsignedDataCert unsigned_cert = 1 [json_name = "unsignedCert"];</code>
+       */
+      public Builder setUnsignedCert(
+          com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert.Builder builderForValue) {
+        if (unsignedCertBuilder_ == null) {
+          unsignedCert_ = builderForValue.build();
+        } else {
+          unsignedCertBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * unsigned certificate
+       * </pre>
+       *
+       * <code>.panacea.datapool.v2alpha1.UnsignedDataCert unsigned_cert = 1 [json_name = "unsignedCert"];</code>
+       */
+      public Builder mergeUnsignedCert(com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert value) {
+        if (unsignedCertBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            unsignedCert_ != null &&
+            unsignedCert_ != com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert.getDefaultInstance()) {
+            getUnsignedCertBuilder().mergeFrom(value);
+          } else {
+            unsignedCert_ = value;
+          }
+        } else {
+          unsignedCertBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * unsigned certificate
+       * </pre>
+       *
+       * <code>.panacea.datapool.v2alpha1.UnsignedDataCert unsigned_cert = 1 [json_name = "unsignedCert"];</code>
+       */
+      public Builder clearUnsignedCert() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        unsignedCert_ = null;
+        if (unsignedCertBuilder_ != null) {
+          unsignedCertBuilder_.dispose();
+          unsignedCertBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * unsigned certificate
+       * </pre>
+       *
+       * <code>.panacea.datapool.v2alpha1.UnsignedDataCert unsigned_cert = 1 [json_name = "unsignedCert"];</code>
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert.Builder getUnsignedCertBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getUnsignedCertFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * unsigned certificate
+       * </pre>
+       *
+       * <code>.panacea.datapool.v2alpha1.UnsignedDataCert unsigned_cert = 1 [json_name = "unsignedCert"];</code>
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCertOrBuilder getUnsignedCertOrBuilder() {
+        if (unsignedCertBuilder_ != null) {
+          return unsignedCertBuilder_.getMessageOrBuilder();
+        } else {
+          return unsignedCert_ == null ?
+              com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert.getDefaultInstance() : unsignedCert_;
+        }
+      }
+      /**
+       * <pre>
+       * unsigned certificate
+       * </pre>
+       *
+       * <code>.panacea.datapool.v2alpha1.UnsignedDataCert unsigned_cert = 1 [json_name = "unsignedCert"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert, com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert.Builder, com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCertOrBuilder> 
+          getUnsignedCertFieldBuilder() {
+        if (unsignedCertBuilder_ == null) {
+          unsignedCertBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert, com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert.Builder, com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCertOrBuilder>(
+                  getUnsignedCert(),
+                  getParentForChildren(),
+                  isClean());
+          unsignedCert_ = null;
+        }
+        return unsignedCertBuilder_;
+      }
+
+      private com.google.protobuf.ByteString signature_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * signature for data validation by data validator
+       * </pre>
+       *
+       * <code>bytes signature = 2 [json_name = "signature"];</code>
+       * @return The signature.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSignature() {
+        return signature_;
+      }
+      /**
+       * <pre>
+       * signature for data validation by data validator
+       * </pre>
+       *
+       * <code>bytes signature = 2 [json_name = "signature"];</code>
+       * @param value The signature to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignature(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        signature_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * signature for data validation by data validator
+       * </pre>
+       *
+       * <code>bytes signature = 2 [json_name = "signature"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSignature() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        signature_ = getDefaultInstance().getSignature();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.datapool.v2alpha1.DataCert)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.datapool.v2alpha1.DataCert)
+    private static final com.panacea.datapool.v2alpha1.PoolProto.DataCert DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.datapool.v2alpha1.PoolProto.DataCert();
+    }
+
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataCert getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DataCert>
+        PARSER = new com.google.protobuf.AbstractParser<DataCert>() {
+      @java.lang.Override
+      public DataCert parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DataCert> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DataCert> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.PoolProto.DataCert getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UnsignedDataCertOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.datapool.v2alpha1.UnsignedDataCert)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * pool Id for selling data
+     * </pre>
+     *
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <pre>
+     * Always 1 for v0
+     * </pre>
+     *
+     * <code>uint64 round = 2 [json_name = "round"];</code>
+     * @return The round.
+     */
+    long getRound();
+
+    /**
+     * <pre>
+     * sha-256 hash of the data
+     * </pre>
+     *
+     * <code>bytes data_hash = 3 [json_name = "dataHash"];</code>
+     * @return The dataHash.
+     */
+    com.google.protobuf.ByteString getDataHash();
+
+    /**
+     * <pre>
+     * 'panacea1' address of oracle
+     * </pre>
+     *
+     * <code>string oracle = 4 [json_name = "oracle"];</code>
+     * @return The oracle.
+     */
+    java.lang.String getOracle();
+    /**
+     * <pre>
+     * 'panacea1' address of oracle
+     * </pre>
+     *
+     * <code>string oracle = 4 [json_name = "oracle"];</code>
+     * @return The bytes for oracle.
+     */
+    com.google.protobuf.ByteString
+        getOracleBytes();
+
+    /**
+     * <pre>
+     * 'panacea1' address of seller
+     * </pre>
+     *
+     * <code>string requester = 5 [json_name = "requester"];</code>
+     * @return The requester.
+     */
+    java.lang.String getRequester();
+    /**
+     * <pre>
+     * 'panacea1' address of seller
+     * </pre>
+     *
+     * <code>string requester = 5 [json_name = "requester"];</code>
+     * @return The bytes for requester.
+     */
+    com.google.protobuf.ByteString
+        getRequesterBytes();
+  }
+  /**
+   * <pre>
+   * UnsignedDataCert defines the unsigned certificate for data validation.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.datapool.v2alpha1.UnsignedDataCert}
+   */
+  public static final class UnsignedDataCert extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.datapool.v2alpha1.UnsignedDataCert)
+      UnsignedDataCertOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UnsignedDataCert.newBuilder() to construct.
+    private UnsignedDataCert(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UnsignedDataCert() {
+      dataHash_ = com.google.protobuf.ByteString.EMPTY;
+      oracle_ = "";
+      requester_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UnsignedDataCert();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_UnsignedDataCert_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_UnsignedDataCert_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert.class, com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <pre>
+     * pool Id for selling data
+     * </pre>
+     *
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int ROUND_FIELD_NUMBER = 2;
+    private long round_ = 0L;
+    /**
+     * <pre>
+     * Always 1 for v0
+     * </pre>
+     *
+     * <code>uint64 round = 2 [json_name = "round"];</code>
+     * @return The round.
+     */
+    @java.lang.Override
+    public long getRound() {
+      return round_;
+    }
+
+    public static final int DATA_HASH_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString dataHash_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * sha-256 hash of the data
+     * </pre>
+     *
+     * <code>bytes data_hash = 3 [json_name = "dataHash"];</code>
+     * @return The dataHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getDataHash() {
+      return dataHash_;
+    }
+
+    public static final int ORACLE_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object oracle_ = "";
+    /**
+     * <pre>
+     * 'panacea1' address of oracle
+     * </pre>
+     *
+     * <code>string oracle = 4 [json_name = "oracle"];</code>
+     * @return The oracle.
+     */
+    @java.lang.Override
+    public java.lang.String getOracle() {
+      java.lang.Object ref = oracle_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        oracle_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * 'panacea1' address of oracle
+     * </pre>
+     *
+     * <code>string oracle = 4 [json_name = "oracle"];</code>
+     * @return The bytes for oracle.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOracleBytes() {
+      java.lang.Object ref = oracle_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        oracle_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REQUESTER_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object requester_ = "";
+    /**
+     * <pre>
+     * 'panacea1' address of seller
+     * </pre>
+     *
+     * <code>string requester = 5 [json_name = "requester"];</code>
+     * @return The requester.
+     */
+    @java.lang.Override
+    public java.lang.String getRequester() {
+      java.lang.Object ref = requester_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        requester_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * 'panacea1' address of seller
+     * </pre>
+     *
+     * <code>string requester = 5 [json_name = "requester"];</code>
+     * @return The bytes for requester.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRequesterBytes() {
+      java.lang.Object ref = requester_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        requester_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      if (round_ != 0L) {
+        output.writeUInt64(2, round_);
+      }
+      if (!dataHash_.isEmpty()) {
+        output.writeBytes(3, dataHash_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(oracle_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, oracle_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requester_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, requester_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      if (round_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, round_);
+      }
+      if (!dataHash_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, dataHash_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(oracle_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, oracle_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requester_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, requester_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert)) {
+        return super.equals(obj);
+      }
+      com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert other = (com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (getRound()
+          != other.getRound()) return false;
+      if (!getDataHash()
+          .equals(other.getDataHash())) return false;
+      if (!getOracle()
+          .equals(other.getOracle())) return false;
+      if (!getRequester()
+          .equals(other.getRequester())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + ROUND_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRound());
+      hash = (37 * hash) + DATA_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getDataHash().hashCode();
+      hash = (37 * hash) + ORACLE_FIELD_NUMBER;
+      hash = (53 * hash) + getOracle().hashCode();
+      hash = (37 * hash) + REQUESTER_FIELD_NUMBER;
+      hash = (53 * hash) + getRequester().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * UnsignedDataCert defines the unsigned certificate for data validation.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.datapool.v2alpha1.UnsignedDataCert}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.datapool.v2alpha1.UnsignedDataCert)
+        com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCertOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_UnsignedDataCert_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_UnsignedDataCert_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert.class, com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert.Builder.class);
+      }
+
+      // Construct using com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        round_ = 0L;
+        dataHash_ = com.google.protobuf.ByteString.EMPTY;
+        oracle_ = "";
+        requester_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_UnsignedDataCert_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert getDefaultInstanceForType() {
+        return com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert build() {
+        com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert buildPartial() {
+        com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert result = new com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.round_ = round_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.dataHash_ = dataHash_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.oracle_ = oracle_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.requester_ = requester_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert) {
+          return mergeFrom((com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert other) {
+        if (other == com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (other.getRound() != 0L) {
+          setRound(other.getRound());
+        }
+        if (other.getDataHash() != com.google.protobuf.ByteString.EMPTY) {
+          setDataHash(other.getDataHash());
+        }
+        if (!other.getOracle().isEmpty()) {
+          oracle_ = other.oracle_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getRequester().isEmpty()) {
+          requester_ = other.requester_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                round_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                dataHash_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                oracle_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                requester_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <pre>
+       * pool Id for selling data
+       * </pre>
+       *
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <pre>
+       * pool Id for selling data
+       * </pre>
+       *
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool Id for selling data
+       * </pre>
+       *
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long round_ ;
+      /**
+       * <pre>
+       * Always 1 for v0
+       * </pre>
+       *
+       * <code>uint64 round = 2 [json_name = "round"];</code>
+       * @return The round.
+       */
+      @java.lang.Override
+      public long getRound() {
+        return round_;
+      }
+      /**
+       * <pre>
+       * Always 1 for v0
+       * </pre>
+       *
+       * <code>uint64 round = 2 [json_name = "round"];</code>
+       * @param value The round to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRound(long value) {
+
+        round_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Always 1 for v0
+       * </pre>
+       *
+       * <code>uint64 round = 2 [json_name = "round"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRound() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        round_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString dataHash_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * sha-256 hash of the data
+       * </pre>
+       *
+       * <code>bytes data_hash = 3 [json_name = "dataHash"];</code>
+       * @return The dataHash.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getDataHash() {
+        return dataHash_;
+      }
+      /**
+       * <pre>
+       * sha-256 hash of the data
+       * </pre>
+       *
+       * <code>bytes data_hash = 3 [json_name = "dataHash"];</code>
+       * @param value The dataHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataHash(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        dataHash_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * sha-256 hash of the data
+       * </pre>
+       *
+       * <code>bytes data_hash = 3 [json_name = "dataHash"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDataHash() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        dataHash_ = getDefaultInstance().getDataHash();
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object oracle_ = "";
+      /**
+       * <pre>
+       * 'panacea1' address of oracle
+       * </pre>
+       *
+       * <code>string oracle = 4 [json_name = "oracle"];</code>
+       * @return The oracle.
+       */
+      public java.lang.String getOracle() {
+        java.lang.Object ref = oracle_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          oracle_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 'panacea1' address of oracle
+       * </pre>
+       *
+       * <code>string oracle = 4 [json_name = "oracle"];</code>
+       * @return The bytes for oracle.
+       */
+      public com.google.protobuf.ByteString
+          getOracleBytes() {
+        java.lang.Object ref = oracle_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          oracle_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 'panacea1' address of oracle
+       * </pre>
+       *
+       * <code>string oracle = 4 [json_name = "oracle"];</code>
+       * @param value The oracle to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOracle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        oracle_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 'panacea1' address of oracle
+       * </pre>
+       *
+       * <code>string oracle = 4 [json_name = "oracle"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOracle() {
+        oracle_ = getDefaultInstance().getOracle();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 'panacea1' address of oracle
+       * </pre>
+       *
+       * <code>string oracle = 4 [json_name = "oracle"];</code>
+       * @param value The bytes for oracle to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOracleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        oracle_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object requester_ = "";
+      /**
+       * <pre>
+       * 'panacea1' address of seller
+       * </pre>
+       *
+       * <code>string requester = 5 [json_name = "requester"];</code>
+       * @return The requester.
+       */
+      public java.lang.String getRequester() {
+        java.lang.Object ref = requester_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          requester_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 'panacea1' address of seller
+       * </pre>
+       *
+       * <code>string requester = 5 [json_name = "requester"];</code>
+       * @return The bytes for requester.
+       */
+      public com.google.protobuf.ByteString
+          getRequesterBytes() {
+        java.lang.Object ref = requester_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          requester_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 'panacea1' address of seller
+       * </pre>
+       *
+       * <code>string requester = 5 [json_name = "requester"];</code>
+       * @param value The requester to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequester(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        requester_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 'panacea1' address of seller
+       * </pre>
+       *
+       * <code>string requester = 5 [json_name = "requester"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRequester() {
+        requester_ = getDefaultInstance().getRequester();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 'panacea1' address of seller
+       * </pre>
+       *
+       * <code>string requester = 5 [json_name = "requester"];</code>
+       * @param value The bytes for requester to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequesterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        requester_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.datapool.v2alpha1.UnsignedDataCert)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.datapool.v2alpha1.UnsignedDataCert)
+    private static final com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert();
+    }
+
+    public static com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UnsignedDataCert>
+        PARSER = new com.google.protobuf.AbstractParser<UnsignedDataCert>() {
+      @java.lang.Override
+      public UnsignedDataCert parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<UnsignedDataCert> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UnsignedDataCert> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.PoolProto.UnsignedDataCert getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DataPassRedeemReceiptOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.datapool.v2alpha1.DataPassRedeemReceipt)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <code>uint64 round = 2 [json_name = "round"];</code>
+     * @return The round.
+     */
+    long getRound();
+
+    /**
+     * <code>uint64 data_pass_id = 3 [json_name = "dataPassId"];</code>
+     * @return The dataPassId.
+     */
+    long getDataPassId();
+
+    /**
+     * <pre>
+     * 'panacea1' address of redeemer
+     * </pre>
+     *
+     * <code>string redeemer = 4 [json_name = "redeemer"];</code>
+     * @return The redeemer.
+     */
+    java.lang.String getRedeemer();
+    /**
+     * <pre>
+     * 'panacea1' address of redeemer
+     * </pre>
+     *
+     * <code>string redeemer = 4 [json_name = "redeemer"];</code>
+     * @return The bytes for redeemer.
+     */
+    com.google.protobuf.ByteString
+        getRedeemerBytes();
+  }
+  /**
+   * <pre>
+   * DataPassRedeemReceipt defines a receipt for redeeming data pass to get data.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.datapool.v2alpha1.DataPassRedeemReceipt}
+   */
+  public static final class DataPassRedeemReceipt extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.datapool.v2alpha1.DataPassRedeemReceipt)
+      DataPassRedeemReceiptOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DataPassRedeemReceipt.newBuilder() to construct.
+    private DataPassRedeemReceipt(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DataPassRedeemReceipt() {
+      redeemer_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DataPassRedeemReceipt();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_DataPassRedeemReceipt_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_DataPassRedeemReceipt_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.class, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int ROUND_FIELD_NUMBER = 2;
+    private long round_ = 0L;
+    /**
+     * <code>uint64 round = 2 [json_name = "round"];</code>
+     * @return The round.
+     */
+    @java.lang.Override
+    public long getRound() {
+      return round_;
+    }
+
+    public static final int DATA_PASS_ID_FIELD_NUMBER = 3;
+    private long dataPassId_ = 0L;
+    /**
+     * <code>uint64 data_pass_id = 3 [json_name = "dataPassId"];</code>
+     * @return The dataPassId.
+     */
+    @java.lang.Override
+    public long getDataPassId() {
+      return dataPassId_;
+    }
+
+    public static final int REDEEMER_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object redeemer_ = "";
+    /**
+     * <pre>
+     * 'panacea1' address of redeemer
+     * </pre>
+     *
+     * <code>string redeemer = 4 [json_name = "redeemer"];</code>
+     * @return The redeemer.
+     */
+    @java.lang.Override
+    public java.lang.String getRedeemer() {
+      java.lang.Object ref = redeemer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        redeemer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * 'panacea1' address of redeemer
+     * </pre>
+     *
+     * <code>string redeemer = 4 [json_name = "redeemer"];</code>
+     * @return The bytes for redeemer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRedeemerBytes() {
+      java.lang.Object ref = redeemer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        redeemer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      if (round_ != 0L) {
+        output.writeUInt64(2, round_);
+      }
+      if (dataPassId_ != 0L) {
+        output.writeUInt64(3, dataPassId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(redeemer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, redeemer_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      if (round_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, round_);
+      }
+      if (dataPassId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, dataPassId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(redeemer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, redeemer_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt)) {
+        return super.equals(obj);
+      }
+      com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt other = (com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (getRound()
+          != other.getRound()) return false;
+      if (getDataPassId()
+          != other.getDataPassId()) return false;
+      if (!getRedeemer()
+          .equals(other.getRedeemer())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + ROUND_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRound());
+      hash = (37 * hash) + DATA_PASS_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDataPassId());
+      hash = (37 * hash) + REDEEMER_FIELD_NUMBER;
+      hash = (53 * hash) + getRedeemer().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * DataPassRedeemReceipt defines a receipt for redeeming data pass to get data.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.datapool.v2alpha1.DataPassRedeemReceipt}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.datapool.v2alpha1.DataPassRedeemReceipt)
+        com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceiptOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_DataPassRedeemReceipt_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_DataPassRedeemReceipt_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.class, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.Builder.class);
+      }
+
+      // Construct using com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        round_ = 0L;
+        dataPassId_ = 0L;
+        redeemer_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_DataPassRedeemReceipt_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt getDefaultInstanceForType() {
+        return com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt build() {
+        com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt buildPartial() {
+        com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt result = new com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.round_ = round_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.dataPassId_ = dataPassId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.redeemer_ = redeemer_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt) {
+          return mergeFrom((com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt other) {
+        if (other == com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (other.getRound() != 0L) {
+          setRound(other.getRound());
+        }
+        if (other.getDataPassId() != 0L) {
+          setDataPassId(other.getDataPassId());
+        }
+        if (!other.getRedeemer().isEmpty()) {
+          redeemer_ = other.redeemer_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                round_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                dataPassId_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                redeemer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long round_ ;
+      /**
+       * <code>uint64 round = 2 [json_name = "round"];</code>
+       * @return The round.
+       */
+      @java.lang.Override
+      public long getRound() {
+        return round_;
+      }
+      /**
+       * <code>uint64 round = 2 [json_name = "round"];</code>
+       * @param value The round to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRound(long value) {
+
+        round_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 round = 2 [json_name = "round"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRound() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        round_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long dataPassId_ ;
+      /**
+       * <code>uint64 data_pass_id = 3 [json_name = "dataPassId"];</code>
+       * @return The dataPassId.
+       */
+      @java.lang.Override
+      public long getDataPassId() {
+        return dataPassId_;
+      }
+      /**
+       * <code>uint64 data_pass_id = 3 [json_name = "dataPassId"];</code>
+       * @param value The dataPassId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataPassId(long value) {
+
+        dataPassId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 data_pass_id = 3 [json_name = "dataPassId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDataPassId() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        dataPassId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object redeemer_ = "";
+      /**
+       * <pre>
+       * 'panacea1' address of redeemer
+       * </pre>
+       *
+       * <code>string redeemer = 4 [json_name = "redeemer"];</code>
+       * @return The redeemer.
+       */
+      public java.lang.String getRedeemer() {
+        java.lang.Object ref = redeemer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          redeemer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 'panacea1' address of redeemer
+       * </pre>
+       *
+       * <code>string redeemer = 4 [json_name = "redeemer"];</code>
+       * @return The bytes for redeemer.
+       */
+      public com.google.protobuf.ByteString
+          getRedeemerBytes() {
+        java.lang.Object ref = redeemer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          redeemer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 'panacea1' address of redeemer
+       * </pre>
+       *
+       * <code>string redeemer = 4 [json_name = "redeemer"];</code>
+       * @param value The redeemer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRedeemer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        redeemer_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 'panacea1' address of redeemer
+       * </pre>
+       *
+       * <code>string redeemer = 4 [json_name = "redeemer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRedeemer() {
+        redeemer_ = getDefaultInstance().getRedeemer();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 'panacea1' address of redeemer
+       * </pre>
+       *
+       * <code>string redeemer = 4 [json_name = "redeemer"];</code>
+       * @param value The bytes for redeemer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRedeemerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        redeemer_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.datapool.v2alpha1.DataPassRedeemReceipt)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.datapool.v2alpha1.DataPassRedeemReceipt)
+    private static final com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt();
+    }
+
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DataPassRedeemReceipt>
+        PARSER = new com.google.protobuf.AbstractParser<DataPassRedeemReceipt>() {
+      @java.lang.Override
+      public DataPassRedeemReceipt parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DataPassRedeemReceipt> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DataPassRedeemReceipt> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PoolParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.datapool.v2alpha1.PoolParams)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * JSON Schema URIs
+     * </pre>
+     *
+     * <code>repeated string data_schema = 1 [json_name = "dataSchema"];</code>
+     * @return A list containing the dataSchema.
+     */
+    java.util.List<java.lang.String>
+        getDataSchemaList();
+    /**
+     * <pre>
+     * JSON Schema URIs
+     * </pre>
+     *
+     * <code>repeated string data_schema = 1 [json_name = "dataSchema"];</code>
+     * @return The count of dataSchema.
+     */
+    int getDataSchemaCount();
+    /**
+     * <pre>
+     * JSON Schema URIs
+     * </pre>
+     *
+     * <code>repeated string data_schema = 1 [json_name = "dataSchema"];</code>
+     * @param index The index of the element to return.
+     * @return The dataSchema at the given index.
+     */
+    java.lang.String getDataSchema(int index);
+    /**
+     * <pre>
+     * JSON Schema URIs
+     * </pre>
+     *
+     * <code>repeated string data_schema = 1 [json_name = "dataSchema"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the dataSchema at the given index.
+     */
+    com.google.protobuf.ByteString
+        getDataSchemaBytes(int index);
+
+    /**
+     * <pre>
+     * A target num of data to be collected
+     * </pre>
+     *
+     * <code>uint64 target_num_data = 2 [json_name = "targetNumData"];</code>
+     * @return The targetNumData.
+     */
+    long getTargetNumData();
+
+    /**
+     * <pre>
+     * A max num of NFTs that can be minted (= A total num of potential buyers)
+     * </pre>
+     *
+     * <code>uint64 max_nft_supply = 3 [json_name = "maxNftSupply"];</code>
+     * @return The maxNftSupply.
+     */
+    long getMaxNftSupply();
+
+    /**
+     * <pre>
+     * A price of a NFT
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin nft_price = 4 [json_name = "nftPrice"];</code>
+     * @return Whether the nftPrice field is set.
+     */
+    boolean hasNftPrice();
+    /**
+     * <pre>
+     * A price of a NFT
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin nft_price = 4 [json_name = "nftPrice"];</code>
+     * @return The nftPrice.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getNftPrice();
+    /**
+     * <pre>
+     * A price of a NFT
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin nft_price = 4 [json_name = "nftPrice"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getNftPriceOrBuilder();
+
+    /**
+     * <pre>
+     * Trusted oracles' addresses
+     * </pre>
+     *
+     * <code>repeated string trusted_oracles = 5 [json_name = "trustedOracles"];</code>
+     * @return A list containing the trustedOracles.
+     */
+    java.util.List<java.lang.String>
+        getTrustedOraclesList();
+    /**
+     * <pre>
+     * Trusted oracles' addresses
+     * </pre>
+     *
+     * <code>repeated string trusted_oracles = 5 [json_name = "trustedOracles"];</code>
+     * @return The count of trustedOracles.
+     */
+    int getTrustedOraclesCount();
+    /**
+     * <pre>
+     * Trusted oracles' addresses
+     * </pre>
+     *
+     * <code>repeated string trusted_oracles = 5 [json_name = "trustedOracles"];</code>
+     * @param index The index of the element to return.
+     * @return The trustedOracles at the given index.
+     */
+    java.lang.String getTrustedOracles(int index);
+    /**
+     * <pre>
+     * Trusted oracles' addresses
+     * </pre>
+     *
+     * <code>repeated string trusted_oracles = 5 [json_name = "trustedOracles"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the trustedOracles at the given index.
+     */
+    com.google.protobuf.ByteString
+        getTrustedOraclesBytes(int index);
+
+    /**
+     * <pre>
+     * Optional. Data issuers that is trusted by the curator
+     * </pre>
+     *
+     * <code>repeated string trusted_data_issuers = 6 [json_name = "trustedDataIssuers"];</code>
+     * @return A list containing the trustedDataIssuers.
+     */
+    java.util.List<java.lang.String>
+        getTrustedDataIssuersList();
+    /**
+     * <pre>
+     * Optional. Data issuers that is trusted by the curator
+     * </pre>
+     *
+     * <code>repeated string trusted_data_issuers = 6 [json_name = "trustedDataIssuers"];</code>
+     * @return The count of trustedDataIssuers.
+     */
+    int getTrustedDataIssuersCount();
+    /**
+     * <pre>
+     * Optional. Data issuers that is trusted by the curator
+     * </pre>
+     *
+     * <code>repeated string trusted_data_issuers = 6 [json_name = "trustedDataIssuers"];</code>
+     * @param index The index of the element to return.
+     * @return The trustedDataIssuers at the given index.
+     */
+    java.lang.String getTrustedDataIssuers(int index);
+    /**
+     * <pre>
+     * Optional. Data issuers that is trusted by the curator
+     * </pre>
+     *
+     * <code>repeated string trusted_data_issuers = 6 [json_name = "trustedDataIssuers"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the trustedDataIssuers at the given index.
+     */
+    com.google.protobuf.ByteString
+        getTrustedDataIssuersBytes(int index);
+  }
+  /**
+   * <pre>
+   * PoolParams defines parameters for data pool
+   * </pre>
+   *
+   * Protobuf type {@code panacea.datapool.v2alpha1.PoolParams}
+   */
+  public static final class PoolParams extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.datapool.v2alpha1.PoolParams)
+      PoolParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PoolParams.newBuilder() to construct.
+    private PoolParams(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PoolParams() {
+      dataSchema_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      trustedOracles_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      trustedDataIssuers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PoolParams();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_PoolParams_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_PoolParams_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.datapool.v2alpha1.PoolProto.PoolParams.class, com.panacea.datapool.v2alpha1.PoolProto.PoolParams.Builder.class);
+    }
+
+    public static final int DATA_SCHEMA_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList dataSchema_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * JSON Schema URIs
+     * </pre>
+     *
+     * <code>repeated string data_schema = 1 [json_name = "dataSchema"];</code>
+     * @return A list containing the dataSchema.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getDataSchemaList() {
+      return dataSchema_;
+    }
+    /**
+     * <pre>
+     * JSON Schema URIs
+     * </pre>
+     *
+     * <code>repeated string data_schema = 1 [json_name = "dataSchema"];</code>
+     * @return The count of dataSchema.
+     */
+    public int getDataSchemaCount() {
+      return dataSchema_.size();
+    }
+    /**
+     * <pre>
+     * JSON Schema URIs
+     * </pre>
+     *
+     * <code>repeated string data_schema = 1 [json_name = "dataSchema"];</code>
+     * @param index The index of the element to return.
+     * @return The dataSchema at the given index.
+     */
+    public java.lang.String getDataSchema(int index) {
+      return dataSchema_.get(index);
+    }
+    /**
+     * <pre>
+     * JSON Schema URIs
+     * </pre>
+     *
+     * <code>repeated string data_schema = 1 [json_name = "dataSchema"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the dataSchema at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getDataSchemaBytes(int index) {
+      return dataSchema_.getByteString(index);
+    }
+
+    public static final int TARGET_NUM_DATA_FIELD_NUMBER = 2;
+    private long targetNumData_ = 0L;
+    /**
+     * <pre>
+     * A target num of data to be collected
+     * </pre>
+     *
+     * <code>uint64 target_num_data = 2 [json_name = "targetNumData"];</code>
+     * @return The targetNumData.
+     */
+    @java.lang.Override
+    public long getTargetNumData() {
+      return targetNumData_;
+    }
+
+    public static final int MAX_NFT_SUPPLY_FIELD_NUMBER = 3;
+    private long maxNftSupply_ = 0L;
+    /**
+     * <pre>
+     * A max num of NFTs that can be minted (= A total num of potential buyers)
+     * </pre>
+     *
+     * <code>uint64 max_nft_supply = 3 [json_name = "maxNftSupply"];</code>
+     * @return The maxNftSupply.
+     */
+    @java.lang.Override
+    public long getMaxNftSupply() {
+      return maxNftSupply_;
+    }
+
+    public static final int NFT_PRICE_FIELD_NUMBER = 4;
+    private com.cosmos.base.v1beta1.CoinProto.Coin nftPrice_;
+    /**
+     * <pre>
+     * A price of a NFT
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin nft_price = 4 [json_name = "nftPrice"];</code>
+     * @return Whether the nftPrice field is set.
+     */
+    @java.lang.Override
+    public boolean hasNftPrice() {
+      return nftPrice_ != null;
+    }
+    /**
+     * <pre>
+     * A price of a NFT
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin nft_price = 4 [json_name = "nftPrice"];</code>
+     * @return The nftPrice.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getNftPrice() {
+      return nftPrice_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : nftPrice_;
+    }
+    /**
+     * <pre>
+     * A price of a NFT
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin nft_price = 4 [json_name = "nftPrice"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getNftPriceOrBuilder() {
+      return nftPrice_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : nftPrice_;
+    }
+
+    public static final int TRUSTED_ORACLES_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList trustedOracles_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * Trusted oracles' addresses
+     * </pre>
+     *
+     * <code>repeated string trusted_oracles = 5 [json_name = "trustedOracles"];</code>
+     * @return A list containing the trustedOracles.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTrustedOraclesList() {
+      return trustedOracles_;
+    }
+    /**
+     * <pre>
+     * Trusted oracles' addresses
+     * </pre>
+     *
+     * <code>repeated string trusted_oracles = 5 [json_name = "trustedOracles"];</code>
+     * @return The count of trustedOracles.
+     */
+    public int getTrustedOraclesCount() {
+      return trustedOracles_.size();
+    }
+    /**
+     * <pre>
+     * Trusted oracles' addresses
+     * </pre>
+     *
+     * <code>repeated string trusted_oracles = 5 [json_name = "trustedOracles"];</code>
+     * @param index The index of the element to return.
+     * @return The trustedOracles at the given index.
+     */
+    public java.lang.String getTrustedOracles(int index) {
+      return trustedOracles_.get(index);
+    }
+    /**
+     * <pre>
+     * Trusted oracles' addresses
+     * </pre>
+     *
+     * <code>repeated string trusted_oracles = 5 [json_name = "trustedOracles"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the trustedOracles at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getTrustedOraclesBytes(int index) {
+      return trustedOracles_.getByteString(index);
+    }
+
+    public static final int TRUSTED_DATA_ISSUERS_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList trustedDataIssuers_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * Optional. Data issuers that is trusted by the curator
+     * </pre>
+     *
+     * <code>repeated string trusted_data_issuers = 6 [json_name = "trustedDataIssuers"];</code>
+     * @return A list containing the trustedDataIssuers.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTrustedDataIssuersList() {
+      return trustedDataIssuers_;
+    }
+    /**
+     * <pre>
+     * Optional. Data issuers that is trusted by the curator
+     * </pre>
+     *
+     * <code>repeated string trusted_data_issuers = 6 [json_name = "trustedDataIssuers"];</code>
+     * @return The count of trustedDataIssuers.
+     */
+    public int getTrustedDataIssuersCount() {
+      return trustedDataIssuers_.size();
+    }
+    /**
+     * <pre>
+     * Optional. Data issuers that is trusted by the curator
+     * </pre>
+     *
+     * <code>repeated string trusted_data_issuers = 6 [json_name = "trustedDataIssuers"];</code>
+     * @param index The index of the element to return.
+     * @return The trustedDataIssuers at the given index.
+     */
+    public java.lang.String getTrustedDataIssuers(int index) {
+      return trustedDataIssuers_.get(index);
+    }
+    /**
+     * <pre>
+     * Optional. Data issuers that is trusted by the curator
+     * </pre>
+     *
+     * <code>repeated string trusted_data_issuers = 6 [json_name = "trustedDataIssuers"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the trustedDataIssuers at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getTrustedDataIssuersBytes(int index) {
+      return trustedDataIssuers_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < dataSchema_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dataSchema_.getRaw(i));
+      }
+      if (targetNumData_ != 0L) {
+        output.writeUInt64(2, targetNumData_);
+      }
+      if (maxNftSupply_ != 0L) {
+        output.writeUInt64(3, maxNftSupply_);
+      }
+      if (nftPrice_ != null) {
+        output.writeMessage(4, getNftPrice());
+      }
+      for (int i = 0; i < trustedOracles_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, trustedOracles_.getRaw(i));
+      }
+      for (int i = 0; i < trustedDataIssuers_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, trustedDataIssuers_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < dataSchema_.size(); i++) {
+          dataSize += computeStringSizeNoTag(dataSchema_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getDataSchemaList().size();
+      }
+      if (targetNumData_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, targetNumData_);
+      }
+      if (maxNftSupply_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, maxNftSupply_);
+      }
+      if (nftPrice_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getNftPrice());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < trustedOracles_.size(); i++) {
+          dataSize += computeStringSizeNoTag(trustedOracles_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getTrustedOraclesList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < trustedDataIssuers_.size(); i++) {
+          dataSize += computeStringSizeNoTag(trustedDataIssuers_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getTrustedDataIssuersList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.datapool.v2alpha1.PoolProto.PoolParams)) {
+        return super.equals(obj);
+      }
+      com.panacea.datapool.v2alpha1.PoolProto.PoolParams other = (com.panacea.datapool.v2alpha1.PoolProto.PoolParams) obj;
+
+      if (!getDataSchemaList()
+          .equals(other.getDataSchemaList())) return false;
+      if (getTargetNumData()
+          != other.getTargetNumData()) return false;
+      if (getMaxNftSupply()
+          != other.getMaxNftSupply()) return false;
+      if (hasNftPrice() != other.hasNftPrice()) return false;
+      if (hasNftPrice()) {
+        if (!getNftPrice()
+            .equals(other.getNftPrice())) return false;
+      }
+      if (!getTrustedOraclesList()
+          .equals(other.getTrustedOraclesList())) return false;
+      if (!getTrustedDataIssuersList()
+          .equals(other.getTrustedDataIssuersList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getDataSchemaCount() > 0) {
+        hash = (37 * hash) + DATA_SCHEMA_FIELD_NUMBER;
+        hash = (53 * hash) + getDataSchemaList().hashCode();
+      }
+      hash = (37 * hash) + TARGET_NUM_DATA_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTargetNumData());
+      hash = (37 * hash) + MAX_NFT_SUPPLY_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMaxNftSupply());
+      if (hasNftPrice()) {
+        hash = (37 * hash) + NFT_PRICE_FIELD_NUMBER;
+        hash = (53 * hash) + getNftPrice().hashCode();
+      }
+      if (getTrustedOraclesCount() > 0) {
+        hash = (37 * hash) + TRUSTED_ORACLES_FIELD_NUMBER;
+        hash = (53 * hash) + getTrustedOraclesList().hashCode();
+      }
+      if (getTrustedDataIssuersCount() > 0) {
+        hash = (37 * hash) + TRUSTED_DATA_ISSUERS_FIELD_NUMBER;
+        hash = (53 * hash) + getTrustedDataIssuersList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.datapool.v2alpha1.PoolProto.PoolParams parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.PoolParams parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.PoolParams parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.PoolParams parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.PoolParams parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.PoolParams parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.PoolParams parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.PoolParams parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.datapool.v2alpha1.PoolProto.PoolParams parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.datapool.v2alpha1.PoolProto.PoolParams parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.PoolParams parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.PoolParams parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.datapool.v2alpha1.PoolProto.PoolParams prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * PoolParams defines parameters for data pool
+     * </pre>
+     *
+     * Protobuf type {@code panacea.datapool.v2alpha1.PoolParams}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.datapool.v2alpha1.PoolParams)
+        com.panacea.datapool.v2alpha1.PoolProto.PoolParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_PoolParams_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_PoolParams_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.datapool.v2alpha1.PoolProto.PoolParams.class, com.panacea.datapool.v2alpha1.PoolProto.PoolParams.Builder.class);
+      }
+
+      // Construct using com.panacea.datapool.v2alpha1.PoolProto.PoolParams.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        dataSchema_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        targetNumData_ = 0L;
+        maxNftSupply_ = 0L;
+        nftPrice_ = null;
+        if (nftPriceBuilder_ != null) {
+          nftPriceBuilder_.dispose();
+          nftPriceBuilder_ = null;
+        }
+        trustedOracles_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        trustedDataIssuers_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_PoolParams_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.PoolProto.PoolParams getDefaultInstanceForType() {
+        return com.panacea.datapool.v2alpha1.PoolProto.PoolParams.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.PoolProto.PoolParams build() {
+        com.panacea.datapool.v2alpha1.PoolProto.PoolParams result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.PoolProto.PoolParams buildPartial() {
+        com.panacea.datapool.v2alpha1.PoolProto.PoolParams result = new com.panacea.datapool.v2alpha1.PoolProto.PoolParams(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.panacea.datapool.v2alpha1.PoolProto.PoolParams result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          dataSchema_.makeImmutable();
+          result.dataSchema_ = dataSchema_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.targetNumData_ = targetNumData_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.maxNftSupply_ = maxNftSupply_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.nftPrice_ = nftPriceBuilder_ == null
+              ? nftPrice_
+              : nftPriceBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          trustedOracles_.makeImmutable();
+          result.trustedOracles_ = trustedOracles_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          trustedDataIssuers_.makeImmutable();
+          result.trustedDataIssuers_ = trustedDataIssuers_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.datapool.v2alpha1.PoolProto.PoolParams) {
+          return mergeFrom((com.panacea.datapool.v2alpha1.PoolProto.PoolParams)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.datapool.v2alpha1.PoolProto.PoolParams other) {
+        if (other == com.panacea.datapool.v2alpha1.PoolProto.PoolParams.getDefaultInstance()) return this;
+        if (!other.dataSchema_.isEmpty()) {
+          if (dataSchema_.isEmpty()) {
+            dataSchema_ = other.dataSchema_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureDataSchemaIsMutable();
+            dataSchema_.addAll(other.dataSchema_);
+          }
+          onChanged();
+        }
+        if (other.getTargetNumData() != 0L) {
+          setTargetNumData(other.getTargetNumData());
+        }
+        if (other.getMaxNftSupply() != 0L) {
+          setMaxNftSupply(other.getMaxNftSupply());
+        }
+        if (other.hasNftPrice()) {
+          mergeNftPrice(other.getNftPrice());
+        }
+        if (!other.trustedOracles_.isEmpty()) {
+          if (trustedOracles_.isEmpty()) {
+            trustedOracles_ = other.trustedOracles_;
+            bitField0_ |= 0x00000010;
+          } else {
+            ensureTrustedOraclesIsMutable();
+            trustedOracles_.addAll(other.trustedOracles_);
+          }
+          onChanged();
+        }
+        if (!other.trustedDataIssuers_.isEmpty()) {
+          if (trustedDataIssuers_.isEmpty()) {
+            trustedDataIssuers_ = other.trustedDataIssuers_;
+            bitField0_ |= 0x00000020;
+          } else {
+            ensureTrustedDataIssuersIsMutable();
+            trustedDataIssuers_.addAll(other.trustedDataIssuers_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureDataSchemaIsMutable();
+                dataSchema_.add(s);
+                break;
+              } // case 10
+              case 16: {
+                targetNumData_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                maxNftSupply_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 34: {
+                input.readMessage(
+                    getNftPriceFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureTrustedOraclesIsMutable();
+                trustedOracles_.add(s);
+                break;
+              } // case 42
+              case 50: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureTrustedDataIssuersIsMutable();
+                trustedDataIssuers_.add(s);
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList dataSchema_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureDataSchemaIsMutable() {
+        if (!dataSchema_.isModifiable()) {
+          dataSchema_ = new com.google.protobuf.LazyStringArrayList(dataSchema_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <pre>
+       * JSON Schema URIs
+       * </pre>
+       *
+       * <code>repeated string data_schema = 1 [json_name = "dataSchema"];</code>
+       * @return A list containing the dataSchema.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getDataSchemaList() {
+        dataSchema_.makeImmutable();
+        return dataSchema_;
+      }
+      /**
+       * <pre>
+       * JSON Schema URIs
+       * </pre>
+       *
+       * <code>repeated string data_schema = 1 [json_name = "dataSchema"];</code>
+       * @return The count of dataSchema.
+       */
+      public int getDataSchemaCount() {
+        return dataSchema_.size();
+      }
+      /**
+       * <pre>
+       * JSON Schema URIs
+       * </pre>
+       *
+       * <code>repeated string data_schema = 1 [json_name = "dataSchema"];</code>
+       * @param index The index of the element to return.
+       * @return The dataSchema at the given index.
+       */
+      public java.lang.String getDataSchema(int index) {
+        return dataSchema_.get(index);
+      }
+      /**
+       * <pre>
+       * JSON Schema URIs
+       * </pre>
+       *
+       * <code>repeated string data_schema = 1 [json_name = "dataSchema"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the dataSchema at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getDataSchemaBytes(int index) {
+        return dataSchema_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * JSON Schema URIs
+       * </pre>
+       *
+       * <code>repeated string data_schema = 1 [json_name = "dataSchema"];</code>
+       * @param index The index to set the value at.
+       * @param value The dataSchema to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataSchema(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureDataSchemaIsMutable();
+        dataSchema_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * JSON Schema URIs
+       * </pre>
+       *
+       * <code>repeated string data_schema = 1 [json_name = "dataSchema"];</code>
+       * @param value The dataSchema to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDataSchema(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureDataSchemaIsMutable();
+        dataSchema_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * JSON Schema URIs
+       * </pre>
+       *
+       * <code>repeated string data_schema = 1 [json_name = "dataSchema"];</code>
+       * @param values The dataSchema to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllDataSchema(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureDataSchemaIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, dataSchema_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * JSON Schema URIs
+       * </pre>
+       *
+       * <code>repeated string data_schema = 1 [json_name = "dataSchema"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDataSchema() {
+        dataSchema_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * JSON Schema URIs
+       * </pre>
+       *
+       * <code>repeated string data_schema = 1 [json_name = "dataSchema"];</code>
+       * @param value The bytes of the dataSchema to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDataSchemaBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureDataSchemaIsMutable();
+        dataSchema_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long targetNumData_ ;
+      /**
+       * <pre>
+       * A target num of data to be collected
+       * </pre>
+       *
+       * <code>uint64 target_num_data = 2 [json_name = "targetNumData"];</code>
+       * @return The targetNumData.
+       */
+      @java.lang.Override
+      public long getTargetNumData() {
+        return targetNumData_;
+      }
+      /**
+       * <pre>
+       * A target num of data to be collected
+       * </pre>
+       *
+       * <code>uint64 target_num_data = 2 [json_name = "targetNumData"];</code>
+       * @param value The targetNumData to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTargetNumData(long value) {
+
+        targetNumData_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A target num of data to be collected
+       * </pre>
+       *
+       * <code>uint64 target_num_data = 2 [json_name = "targetNumData"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTargetNumData() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        targetNumData_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long maxNftSupply_ ;
+      /**
+       * <pre>
+       * A max num of NFTs that can be minted (= A total num of potential buyers)
+       * </pre>
+       *
+       * <code>uint64 max_nft_supply = 3 [json_name = "maxNftSupply"];</code>
+       * @return The maxNftSupply.
+       */
+      @java.lang.Override
+      public long getMaxNftSupply() {
+        return maxNftSupply_;
+      }
+      /**
+       * <pre>
+       * A max num of NFTs that can be minted (= A total num of potential buyers)
+       * </pre>
+       *
+       * <code>uint64 max_nft_supply = 3 [json_name = "maxNftSupply"];</code>
+       * @param value The maxNftSupply to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxNftSupply(long value) {
+
+        maxNftSupply_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A max num of NFTs that can be minted (= A total num of potential buyers)
+       * </pre>
+       *
+       * <code>uint64 max_nft_supply = 3 [json_name = "maxNftSupply"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxNftSupply() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        maxNftSupply_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin nftPrice_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> nftPriceBuilder_;
+      /**
+       * <pre>
+       * A price of a NFT
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin nft_price = 4 [json_name = "nftPrice"];</code>
+       * @return Whether the nftPrice field is set.
+       */
+      public boolean hasNftPrice() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * A price of a NFT
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin nft_price = 4 [json_name = "nftPrice"];</code>
+       * @return The nftPrice.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getNftPrice() {
+        if (nftPriceBuilder_ == null) {
+          return nftPrice_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : nftPrice_;
+        } else {
+          return nftPriceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * A price of a NFT
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin nft_price = 4 [json_name = "nftPrice"];</code>
+       */
+      public Builder setNftPrice(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (nftPriceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          nftPrice_ = value;
+        } else {
+          nftPriceBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A price of a NFT
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin nft_price = 4 [json_name = "nftPrice"];</code>
+       */
+      public Builder setNftPrice(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (nftPriceBuilder_ == null) {
+          nftPrice_ = builderForValue.build();
+        } else {
+          nftPriceBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A price of a NFT
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin nft_price = 4 [json_name = "nftPrice"];</code>
+       */
+      public Builder mergeNftPrice(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (nftPriceBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            nftPrice_ != null &&
+            nftPrice_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getNftPriceBuilder().mergeFrom(value);
+          } else {
+            nftPrice_ = value;
+          }
+        } else {
+          nftPriceBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A price of a NFT
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin nft_price = 4 [json_name = "nftPrice"];</code>
+       */
+      public Builder clearNftPrice() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        nftPrice_ = null;
+        if (nftPriceBuilder_ != null) {
+          nftPriceBuilder_.dispose();
+          nftPriceBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A price of a NFT
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin nft_price = 4 [json_name = "nftPrice"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getNftPriceBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getNftPriceFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * A price of a NFT
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin nft_price = 4 [json_name = "nftPrice"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getNftPriceOrBuilder() {
+        if (nftPriceBuilder_ != null) {
+          return nftPriceBuilder_.getMessageOrBuilder();
+        } else {
+          return nftPrice_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : nftPrice_;
+        }
+      }
+      /**
+       * <pre>
+       * A price of a NFT
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin nft_price = 4 [json_name = "nftPrice"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getNftPriceFieldBuilder() {
+        if (nftPriceBuilder_ == null) {
+          nftPriceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getNftPrice(),
+                  getParentForChildren(),
+                  isClean());
+          nftPrice_ = null;
+        }
+        return nftPriceBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringArrayList trustedOracles_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureTrustedOraclesIsMutable() {
+        if (!trustedOracles_.isModifiable()) {
+          trustedOracles_ = new com.google.protobuf.LazyStringArrayList(trustedOracles_);
+        }
+        bitField0_ |= 0x00000010;
+      }
+      /**
+       * <pre>
+       * Trusted oracles' addresses
+       * </pre>
+       *
+       * <code>repeated string trusted_oracles = 5 [json_name = "trustedOracles"];</code>
+       * @return A list containing the trustedOracles.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTrustedOraclesList() {
+        trustedOracles_.makeImmutable();
+        return trustedOracles_;
+      }
+      /**
+       * <pre>
+       * Trusted oracles' addresses
+       * </pre>
+       *
+       * <code>repeated string trusted_oracles = 5 [json_name = "trustedOracles"];</code>
+       * @return The count of trustedOracles.
+       */
+      public int getTrustedOraclesCount() {
+        return trustedOracles_.size();
+      }
+      /**
+       * <pre>
+       * Trusted oracles' addresses
+       * </pre>
+       *
+       * <code>repeated string trusted_oracles = 5 [json_name = "trustedOracles"];</code>
+       * @param index The index of the element to return.
+       * @return The trustedOracles at the given index.
+       */
+      public java.lang.String getTrustedOracles(int index) {
+        return trustedOracles_.get(index);
+      }
+      /**
+       * <pre>
+       * Trusted oracles' addresses
+       * </pre>
+       *
+       * <code>repeated string trusted_oracles = 5 [json_name = "trustedOracles"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the trustedOracles at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getTrustedOraclesBytes(int index) {
+        return trustedOracles_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Trusted oracles' addresses
+       * </pre>
+       *
+       * <code>repeated string trusted_oracles = 5 [json_name = "trustedOracles"];</code>
+       * @param index The index to set the value at.
+       * @param value The trustedOracles to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTrustedOracles(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureTrustedOraclesIsMutable();
+        trustedOracles_.set(index, value);
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Trusted oracles' addresses
+       * </pre>
+       *
+       * <code>repeated string trusted_oracles = 5 [json_name = "trustedOracles"];</code>
+       * @param value The trustedOracles to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTrustedOracles(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureTrustedOraclesIsMutable();
+        trustedOracles_.add(value);
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Trusted oracles' addresses
+       * </pre>
+       *
+       * <code>repeated string trusted_oracles = 5 [json_name = "trustedOracles"];</code>
+       * @param values The trustedOracles to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllTrustedOracles(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTrustedOraclesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, trustedOracles_);
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Trusted oracles' addresses
+       * </pre>
+       *
+       * <code>repeated string trusted_oracles = 5 [json_name = "trustedOracles"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTrustedOracles() {
+        trustedOracles_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Trusted oracles' addresses
+       * </pre>
+       *
+       * <code>repeated string trusted_oracles = 5 [json_name = "trustedOracles"];</code>
+       * @param value The bytes of the trustedOracles to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTrustedOraclesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureTrustedOraclesIsMutable();
+        trustedOracles_.add(value);
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList trustedDataIssuers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureTrustedDataIssuersIsMutable() {
+        if (!trustedDataIssuers_.isModifiable()) {
+          trustedDataIssuers_ = new com.google.protobuf.LazyStringArrayList(trustedDataIssuers_);
+        }
+        bitField0_ |= 0x00000020;
+      }
+      /**
+       * <pre>
+       * Optional. Data issuers that is trusted by the curator
+       * </pre>
+       *
+       * <code>repeated string trusted_data_issuers = 6 [json_name = "trustedDataIssuers"];</code>
+       * @return A list containing the trustedDataIssuers.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTrustedDataIssuersList() {
+        trustedDataIssuers_.makeImmutable();
+        return trustedDataIssuers_;
+      }
+      /**
+       * <pre>
+       * Optional. Data issuers that is trusted by the curator
+       * </pre>
+       *
+       * <code>repeated string trusted_data_issuers = 6 [json_name = "trustedDataIssuers"];</code>
+       * @return The count of trustedDataIssuers.
+       */
+      public int getTrustedDataIssuersCount() {
+        return trustedDataIssuers_.size();
+      }
+      /**
+       * <pre>
+       * Optional. Data issuers that is trusted by the curator
+       * </pre>
+       *
+       * <code>repeated string trusted_data_issuers = 6 [json_name = "trustedDataIssuers"];</code>
+       * @param index The index of the element to return.
+       * @return The trustedDataIssuers at the given index.
+       */
+      public java.lang.String getTrustedDataIssuers(int index) {
+        return trustedDataIssuers_.get(index);
+      }
+      /**
+       * <pre>
+       * Optional. Data issuers that is trusted by the curator
+       * </pre>
+       *
+       * <code>repeated string trusted_data_issuers = 6 [json_name = "trustedDataIssuers"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the trustedDataIssuers at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getTrustedDataIssuersBytes(int index) {
+        return trustedDataIssuers_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * Optional. Data issuers that is trusted by the curator
+       * </pre>
+       *
+       * <code>repeated string trusted_data_issuers = 6 [json_name = "trustedDataIssuers"];</code>
+       * @param index The index to set the value at.
+       * @param value The trustedDataIssuers to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTrustedDataIssuers(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureTrustedDataIssuersIsMutable();
+        trustedDataIssuers_.set(index, value);
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Data issuers that is trusted by the curator
+       * </pre>
+       *
+       * <code>repeated string trusted_data_issuers = 6 [json_name = "trustedDataIssuers"];</code>
+       * @param value The trustedDataIssuers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTrustedDataIssuers(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureTrustedDataIssuersIsMutable();
+        trustedDataIssuers_.add(value);
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Data issuers that is trusted by the curator
+       * </pre>
+       *
+       * <code>repeated string trusted_data_issuers = 6 [json_name = "trustedDataIssuers"];</code>
+       * @param values The trustedDataIssuers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllTrustedDataIssuers(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTrustedDataIssuersIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, trustedDataIssuers_);
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Data issuers that is trusted by the curator
+       * </pre>
+       *
+       * <code>repeated string trusted_data_issuers = 6 [json_name = "trustedDataIssuers"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTrustedDataIssuers() {
+        trustedDataIssuers_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Optional. Data issuers that is trusted by the curator
+       * </pre>
+       *
+       * <code>repeated string trusted_data_issuers = 6 [json_name = "trustedDataIssuers"];</code>
+       * @param value The bytes of the trustedDataIssuers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTrustedDataIssuersBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureTrustedDataIssuersIsMutable();
+        trustedDataIssuers_.add(value);
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.datapool.v2alpha1.PoolParams)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.datapool.v2alpha1.PoolParams)
+    private static final com.panacea.datapool.v2alpha1.PoolProto.PoolParams DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.datapool.v2alpha1.PoolProto.PoolParams();
+    }
+
+    public static com.panacea.datapool.v2alpha1.PoolProto.PoolParams getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PoolParams>
+        PARSER = new com.google.protobuf.AbstractParser<PoolParams>() {
+      @java.lang.Override
+      public PoolParams parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PoolParams> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PoolParams> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.PoolProto.PoolParams getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface InstantRevenueDistributionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.datapool.v2alpha1.InstantRevenueDistribution)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Execute information for pool reward distribution
+     * </pre>
+     *
+     * <code>repeated uint64 pool_ids = 1 [json_name = "poolIds"];</code>
+     * @return A list containing the poolIds.
+     */
+    java.util.List<java.lang.Long> getPoolIdsList();
+    /**
+     * <pre>
+     * Execute information for pool reward distribution
+     * </pre>
+     *
+     * <code>repeated uint64 pool_ids = 1 [json_name = "poolIds"];</code>
+     * @return The count of poolIds.
+     */
+    int getPoolIdsCount();
+    /**
+     * <pre>
+     * Execute information for pool reward distribution
+     * </pre>
+     *
+     * <code>repeated uint64 pool_ids = 1 [json_name = "poolIds"];</code>
+     * @param index The index of the element to return.
+     * @return The poolIds at the given index.
+     */
+    long getPoolIds(int index);
+  }
+  /**
+   * <pre>
+   * InstantRevenueDistribution defines poolID information to distribution revenue.
+   * </pre>
+   *
+   * Protobuf type {@code panacea.datapool.v2alpha1.InstantRevenueDistribution}
+   */
+  public static final class InstantRevenueDistribution extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.datapool.v2alpha1.InstantRevenueDistribution)
+      InstantRevenueDistributionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use InstantRevenueDistribution.newBuilder() to construct.
+    private InstantRevenueDistribution(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private InstantRevenueDistribution() {
+      poolIds_ = emptyLongList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new InstantRevenueDistribution();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_InstantRevenueDistribution_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_InstantRevenueDistribution_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution.class, com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution.Builder.class);
+    }
+
+    public static final int POOL_IDS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.LongList poolIds_;
+    /**
+     * <pre>
+     * Execute information for pool reward distribution
+     * </pre>
+     *
+     * <code>repeated uint64 pool_ids = 1 [json_name = "poolIds"];</code>
+     * @return A list containing the poolIds.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Long>
+        getPoolIdsList() {
+      return poolIds_;
+    }
+    /**
+     * <pre>
+     * Execute information for pool reward distribution
+     * </pre>
+     *
+     * <code>repeated uint64 pool_ids = 1 [json_name = "poolIds"];</code>
+     * @return The count of poolIds.
+     */
+    public int getPoolIdsCount() {
+      return poolIds_.size();
+    }
+    /**
+     * <pre>
+     * Execute information for pool reward distribution
+     * </pre>
+     *
+     * <code>repeated uint64 pool_ids = 1 [json_name = "poolIds"];</code>
+     * @param index The index of the element to return.
+     * @return The poolIds at the given index.
+     */
+    public long getPoolIds(int index) {
+      return poolIds_.getLong(index);
+    }
+    private int poolIdsMemoizedSerializedSize = -1;
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (getPoolIdsList().size() > 0) {
+        output.writeUInt32NoTag(10);
+        output.writeUInt32NoTag(poolIdsMemoizedSerializedSize);
+      }
+      for (int i = 0; i < poolIds_.size(); i++) {
+        output.writeUInt64NoTag(poolIds_.getLong(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < poolIds_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt64SizeNoTag(poolIds_.getLong(i));
+        }
+        size += dataSize;
+        if (!getPoolIdsList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        poolIdsMemoizedSerializedSize = dataSize;
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution)) {
+        return super.equals(obj);
+      }
+      com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution other = (com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution) obj;
+
+      if (!getPoolIdsList()
+          .equals(other.getPoolIdsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getPoolIdsCount() > 0) {
+        hash = (37 * hash) + POOL_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getPoolIdsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * InstantRevenueDistribution defines poolID information to distribution revenue.
+     * </pre>
+     *
+     * Protobuf type {@code panacea.datapool.v2alpha1.InstantRevenueDistribution}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.datapool.v2alpha1.InstantRevenueDistribution)
+        com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistributionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_InstantRevenueDistribution_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_InstantRevenueDistribution_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution.class, com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution.Builder.class);
+      }
+
+      // Construct using com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolIds_ = emptyLongList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_InstantRevenueDistribution_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution getDefaultInstanceForType() {
+        return com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution build() {
+        com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution buildPartial() {
+        com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution result = new com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution result) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          poolIds_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.poolIds_ = poolIds_;
+      }
+
+      private void buildPartial0(com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution) {
+          return mergeFrom((com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution other) {
+        if (other == com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution.getDefaultInstance()) return this;
+        if (!other.poolIds_.isEmpty()) {
+          if (poolIds_.isEmpty()) {
+            poolIds_ = other.poolIds_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensurePoolIdsIsMutable();
+            poolIds_.addAll(other.poolIds_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                long v = input.readUInt64();
+                ensurePoolIdsIsMutable();
+                poolIds_.addLong(v);
+                break;
+              } // case 8
+              case 10: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensurePoolIdsIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  poolIds_.addLong(input.readUInt64());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Internal.LongList poolIds_ = emptyLongList();
+      private void ensurePoolIdsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          poolIds_ = mutableCopy(poolIds_);
+          bitField0_ |= 0x00000001;
+        }
+      }
+      /**
+       * <pre>
+       * Execute information for pool reward distribution
+       * </pre>
+       *
+       * <code>repeated uint64 pool_ids = 1 [json_name = "poolIds"];</code>
+       * @return A list containing the poolIds.
+       */
+      public java.util.List<java.lang.Long>
+          getPoolIdsList() {
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(poolIds_) : poolIds_;
+      }
+      /**
+       * <pre>
+       * Execute information for pool reward distribution
+       * </pre>
+       *
+       * <code>repeated uint64 pool_ids = 1 [json_name = "poolIds"];</code>
+       * @return The count of poolIds.
+       */
+      public int getPoolIdsCount() {
+        return poolIds_.size();
+      }
+      /**
+       * <pre>
+       * Execute information for pool reward distribution
+       * </pre>
+       *
+       * <code>repeated uint64 pool_ids = 1 [json_name = "poolIds"];</code>
+       * @param index The index of the element to return.
+       * @return The poolIds at the given index.
+       */
+      public long getPoolIds(int index) {
+        return poolIds_.getLong(index);
+      }
+      /**
+       * <pre>
+       * Execute information for pool reward distribution
+       * </pre>
+       *
+       * <code>repeated uint64 pool_ids = 1 [json_name = "poolIds"];</code>
+       * @param index The index to set the value at.
+       * @param value The poolIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolIds(
+          int index, long value) {
+
+        ensurePoolIdsIsMutable();
+        poolIds_.setLong(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Execute information for pool reward distribution
+       * </pre>
+       *
+       * <code>repeated uint64 pool_ids = 1 [json_name = "poolIds"];</code>
+       * @param value The poolIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPoolIds(long value) {
+
+        ensurePoolIdsIsMutable();
+        poolIds_.addLong(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Execute information for pool reward distribution
+       * </pre>
+       *
+       * <code>repeated uint64 pool_ids = 1 [json_name = "poolIds"];</code>
+       * @param values The poolIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPoolIds(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensurePoolIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, poolIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Execute information for pool reward distribution
+       * </pre>
+       *
+       * <code>repeated uint64 pool_ids = 1 [json_name = "poolIds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolIds() {
+        poolIds_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.datapool.v2alpha1.InstantRevenueDistribution)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.datapool.v2alpha1.InstantRevenueDistribution)
+    private static final com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution();
+    }
+
+    public static com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<InstantRevenueDistribution>
+        PARSER = new com.google.protobuf.AbstractParser<InstantRevenueDistribution>() {
+      @java.lang.Override
+      public InstantRevenueDistribution parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<InstantRevenueDistribution> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<InstantRevenueDistribution> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.PoolProto.InstantRevenueDistribution getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SalesHistoryOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.datapool.v2alpha1.SalesHistory)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * pool Id for selling data
+     * </pre>
+     *
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <pre>
+     * Always 1 for v0
+     * </pre>
+     *
+     * <code>uint64 round = 2 [json_name = "round"];</code>
+     * @return The round.
+     */
+    long getRound();
+
+    /**
+     * <pre>
+     * address to be distributed
+     * </pre>
+     *
+     * <code>string seller_address = 3 [json_name = "sellerAddress"];</code>
+     * @return The sellerAddress.
+     */
+    java.lang.String getSellerAddress();
+    /**
+     * <pre>
+     * address to be distributed
+     * </pre>
+     *
+     * <code>string seller_address = 3 [json_name = "sellerAddress"];</code>
+     * @return The bytes for sellerAddress.
+     */
+    com.google.protobuf.ByteString
+        getSellerAddressBytes();
+
+    /**
+     * <code>repeated bytes data_hashes = 4 [json_name = "dataHashes"];</code>
+     * @return A list containing the dataHashes.
+     */
+    java.util.List<com.google.protobuf.ByteString> getDataHashesList();
+    /**
+     * <code>repeated bytes data_hashes = 4 [json_name = "dataHashes"];</code>
+     * @return The count of dataHashes.
+     */
+    int getDataHashesCount();
+    /**
+     * <code>repeated bytes data_hashes = 4 [json_name = "dataHashes"];</code>
+     * @param index The index of the element to return.
+     * @return The dataHashes at the given index.
+     */
+    com.google.protobuf.ByteString getDataHashes(int index);
+
+    /**
+     * <pre>
+     * Proceeds distributed in the round
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin paid_coin = 5 [json_name = "paidCoin"];</code>
+     * @return Whether the paidCoin field is set.
+     */
+    boolean hasPaidCoin();
+    /**
+     * <pre>
+     * Proceeds distributed in the round
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin paid_coin = 5 [json_name = "paidCoin"];</code>
+     * @return The paidCoin.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getPaidCoin();
+    /**
+     * <pre>
+     * Proceeds distributed in the round
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin paid_coin = 5 [json_name = "paidCoin"];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getPaidCoinOrBuilder();
+  }
+  /**
+   * <pre>
+   * SalesInfo defines sales information
+   * </pre>
+   *
+   * Protobuf type {@code panacea.datapool.v2alpha1.SalesHistory}
+   */
+  public static final class SalesHistory extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.datapool.v2alpha1.SalesHistory)
+      SalesHistoryOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SalesHistory.newBuilder() to construct.
+    private SalesHistory(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SalesHistory() {
+      sellerAddress_ = "";
+      dataHashes_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SalesHistory();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_SalesHistory_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_SalesHistory_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.datapool.v2alpha1.PoolProto.SalesHistory.class, com.panacea.datapool.v2alpha1.PoolProto.SalesHistory.Builder.class);
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 1;
+    private long poolId_ = 0L;
+    /**
+     * <pre>
+     * pool Id for selling data
+     * </pre>
+     *
+     * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int ROUND_FIELD_NUMBER = 2;
+    private long round_ = 0L;
+    /**
+     * <pre>
+     * Always 1 for v0
+     * </pre>
+     *
+     * <code>uint64 round = 2 [json_name = "round"];</code>
+     * @return The round.
+     */
+    @java.lang.Override
+    public long getRound() {
+      return round_;
+    }
+
+    public static final int SELLER_ADDRESS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sellerAddress_ = "";
+    /**
+     * <pre>
+     * address to be distributed
+     * </pre>
+     *
+     * <code>string seller_address = 3 [json_name = "sellerAddress"];</code>
+     * @return The sellerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getSellerAddress() {
+      java.lang.Object ref = sellerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sellerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * address to be distributed
+     * </pre>
+     *
+     * <code>string seller_address = 3 [json_name = "sellerAddress"];</code>
+     * @return The bytes for sellerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSellerAddressBytes() {
+      java.lang.Object ref = sellerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sellerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DATA_HASHES_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.google.protobuf.ByteString> dataHashes_;
+    /**
+     * <code>repeated bytes data_hashes = 4 [json_name = "dataHashes"];</code>
+     * @return A list containing the dataHashes.
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.ByteString>
+        getDataHashesList() {
+      return dataHashes_;
+    }
+    /**
+     * <code>repeated bytes data_hashes = 4 [json_name = "dataHashes"];</code>
+     * @return The count of dataHashes.
+     */
+    public int getDataHashesCount() {
+      return dataHashes_.size();
+    }
+    /**
+     * <code>repeated bytes data_hashes = 4 [json_name = "dataHashes"];</code>
+     * @param index The index of the element to return.
+     * @return The dataHashes at the given index.
+     */
+    public com.google.protobuf.ByteString getDataHashes(int index) {
+      return dataHashes_.get(index);
+    }
+
+    public static final int PAID_COIN_FIELD_NUMBER = 5;
+    private com.cosmos.base.v1beta1.CoinProto.Coin paidCoin_;
+    /**
+     * <pre>
+     * Proceeds distributed in the round
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin paid_coin = 5 [json_name = "paidCoin"];</code>
+     * @return Whether the paidCoin field is set.
+     */
+    @java.lang.Override
+    public boolean hasPaidCoin() {
+      return paidCoin_ != null;
+    }
+    /**
+     * <pre>
+     * Proceeds distributed in the round
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin paid_coin = 5 [json_name = "paidCoin"];</code>
+     * @return The paidCoin.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getPaidCoin() {
+      return paidCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : paidCoin_;
+    }
+    /**
+     * <pre>
+     * Proceeds distributed in the round
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin paid_coin = 5 [json_name = "paidCoin"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getPaidCoinOrBuilder() {
+      return paidCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : paidCoin_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (poolId_ != 0L) {
+        output.writeUInt64(1, poolId_);
+      }
+      if (round_ != 0L) {
+        output.writeUInt64(2, round_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sellerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, sellerAddress_);
+      }
+      for (int i = 0; i < dataHashes_.size(); i++) {
+        output.writeBytes(4, dataHashes_.get(i));
+      }
+      if (paidCoin_ != null) {
+        output.writeMessage(5, getPaidCoin());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, poolId_);
+      }
+      if (round_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, round_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sellerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, sellerAddress_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < dataHashes_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeBytesSizeNoTag(dataHashes_.get(i));
+        }
+        size += dataSize;
+        size += 1 * getDataHashesList().size();
+      }
+      if (paidCoin_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getPaidCoin());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.datapool.v2alpha1.PoolProto.SalesHistory)) {
+        return super.equals(obj);
+      }
+      com.panacea.datapool.v2alpha1.PoolProto.SalesHistory other = (com.panacea.datapool.v2alpha1.PoolProto.SalesHistory) obj;
+
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (getRound()
+          != other.getRound()) return false;
+      if (!getSellerAddress()
+          .equals(other.getSellerAddress())) return false;
+      if (!getDataHashesList()
+          .equals(other.getDataHashesList())) return false;
+      if (hasPaidCoin() != other.hasPaidCoin()) return false;
+      if (hasPaidCoin()) {
+        if (!getPaidCoin()
+            .equals(other.getPaidCoin())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      hash = (37 * hash) + ROUND_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRound());
+      hash = (37 * hash) + SELLER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getSellerAddress().hashCode();
+      if (getDataHashesCount() > 0) {
+        hash = (37 * hash) + DATA_HASHES_FIELD_NUMBER;
+        hash = (53 * hash) + getDataHashesList().hashCode();
+      }
+      if (hasPaidCoin()) {
+        hash = (37 * hash) + PAID_COIN_FIELD_NUMBER;
+        hash = (53 * hash) + getPaidCoin().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.datapool.v2alpha1.PoolProto.SalesHistory parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.SalesHistory parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.SalesHistory parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.SalesHistory parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.SalesHistory parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.SalesHistory parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.SalesHistory parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.SalesHistory parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.datapool.v2alpha1.PoolProto.SalesHistory parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.datapool.v2alpha1.PoolProto.SalesHistory parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.SalesHistory parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.SalesHistory parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.datapool.v2alpha1.PoolProto.SalesHistory prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * SalesInfo defines sales information
+     * </pre>
+     *
+     * Protobuf type {@code panacea.datapool.v2alpha1.SalesHistory}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.datapool.v2alpha1.SalesHistory)
+        com.panacea.datapool.v2alpha1.PoolProto.SalesHistoryOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_SalesHistory_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_SalesHistory_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.datapool.v2alpha1.PoolProto.SalesHistory.class, com.panacea.datapool.v2alpha1.PoolProto.SalesHistory.Builder.class);
+      }
+
+      // Construct using com.panacea.datapool.v2alpha1.PoolProto.SalesHistory.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        poolId_ = 0L;
+        round_ = 0L;
+        sellerAddress_ = "";
+        dataHashes_ = java.util.Collections.emptyList();
+        paidCoin_ = null;
+        if (paidCoinBuilder_ != null) {
+          paidCoinBuilder_.dispose();
+          paidCoinBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_SalesHistory_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.PoolProto.SalesHistory getDefaultInstanceForType() {
+        return com.panacea.datapool.v2alpha1.PoolProto.SalesHistory.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.PoolProto.SalesHistory build() {
+        com.panacea.datapool.v2alpha1.PoolProto.SalesHistory result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.PoolProto.SalesHistory buildPartial() {
+        com.panacea.datapool.v2alpha1.PoolProto.SalesHistory result = new com.panacea.datapool.v2alpha1.PoolProto.SalesHistory(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.panacea.datapool.v2alpha1.PoolProto.SalesHistory result) {
+        if (((bitField0_ & 0x00000008) != 0)) {
+          dataHashes_ = java.util.Collections.unmodifiableList(dataHashes_);
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.dataHashes_ = dataHashes_;
+      }
+
+      private void buildPartial0(com.panacea.datapool.v2alpha1.PoolProto.SalesHistory result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.poolId_ = poolId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.round_ = round_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.sellerAddress_ = sellerAddress_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.paidCoin_ = paidCoinBuilder_ == null
+              ? paidCoin_
+              : paidCoinBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.datapool.v2alpha1.PoolProto.SalesHistory) {
+          return mergeFrom((com.panacea.datapool.v2alpha1.PoolProto.SalesHistory)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.datapool.v2alpha1.PoolProto.SalesHistory other) {
+        if (other == com.panacea.datapool.v2alpha1.PoolProto.SalesHistory.getDefaultInstance()) return this;
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (other.getRound() != 0L) {
+          setRound(other.getRound());
+        }
+        if (!other.getSellerAddress().isEmpty()) {
+          sellerAddress_ = other.sellerAddress_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.dataHashes_.isEmpty()) {
+          if (dataHashes_.isEmpty()) {
+            dataHashes_ = other.dataHashes_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureDataHashesIsMutable();
+            dataHashes_.addAll(other.dataHashes_);
+          }
+          onChanged();
+        }
+        if (other.hasPaidCoin()) {
+          mergePaidCoin(other.getPaidCoin());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                round_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                sellerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                com.google.protobuf.ByteString v = input.readBytes();
+                ensureDataHashesIsMutable();
+                dataHashes_.add(v);
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getPaidCoinFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long poolId_ ;
+      /**
+       * <pre>
+       * pool Id for selling data
+       * </pre>
+       *
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <pre>
+       * pool Id for selling data
+       * </pre>
+       *
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pool Id for selling data
+       * </pre>
+       *
+       * <code>uint64 pool_id = 1 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long round_ ;
+      /**
+       * <pre>
+       * Always 1 for v0
+       * </pre>
+       *
+       * <code>uint64 round = 2 [json_name = "round"];</code>
+       * @return The round.
+       */
+      @java.lang.Override
+      public long getRound() {
+        return round_;
+      }
+      /**
+       * <pre>
+       * Always 1 for v0
+       * </pre>
+       *
+       * <code>uint64 round = 2 [json_name = "round"];</code>
+       * @param value The round to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRound(long value) {
+
+        round_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Always 1 for v0
+       * </pre>
+       *
+       * <code>uint64 round = 2 [json_name = "round"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRound() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        round_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sellerAddress_ = "";
+      /**
+       * <pre>
+       * address to be distributed
+       * </pre>
+       *
+       * <code>string seller_address = 3 [json_name = "sellerAddress"];</code>
+       * @return The sellerAddress.
+       */
+      public java.lang.String getSellerAddress() {
+        java.lang.Object ref = sellerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sellerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address to be distributed
+       * </pre>
+       *
+       * <code>string seller_address = 3 [json_name = "sellerAddress"];</code>
+       * @return The bytes for sellerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getSellerAddressBytes() {
+        java.lang.Object ref = sellerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sellerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * address to be distributed
+       * </pre>
+       *
+       * <code>string seller_address = 3 [json_name = "sellerAddress"];</code>
+       * @param value The sellerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSellerAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        sellerAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address to be distributed
+       * </pre>
+       *
+       * <code>string seller_address = 3 [json_name = "sellerAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSellerAddress() {
+        sellerAddress_ = getDefaultInstance().getSellerAddress();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * address to be distributed
+       * </pre>
+       *
+       * <code>string seller_address = 3 [json_name = "sellerAddress"];</code>
+       * @param value The bytes for sellerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSellerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        sellerAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.google.protobuf.ByteString> dataHashes_ = java.util.Collections.emptyList();
+      private void ensureDataHashesIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          dataHashes_ = new java.util.ArrayList<com.google.protobuf.ByteString>(dataHashes_);
+          bitField0_ |= 0x00000008;
+        }
+      }
+      /**
+       * <code>repeated bytes data_hashes = 4 [json_name = "dataHashes"];</code>
+       * @return A list containing the dataHashes.
+       */
+      public java.util.List<com.google.protobuf.ByteString>
+          getDataHashesList() {
+        return ((bitField0_ & 0x00000008) != 0) ?
+                 java.util.Collections.unmodifiableList(dataHashes_) : dataHashes_;
+      }
+      /**
+       * <code>repeated bytes data_hashes = 4 [json_name = "dataHashes"];</code>
+       * @return The count of dataHashes.
+       */
+      public int getDataHashesCount() {
+        return dataHashes_.size();
+      }
+      /**
+       * <code>repeated bytes data_hashes = 4 [json_name = "dataHashes"];</code>
+       * @param index The index of the element to return.
+       * @return The dataHashes at the given index.
+       */
+      public com.google.protobuf.ByteString getDataHashes(int index) {
+        return dataHashes_.get(index);
+      }
+      /**
+       * <code>repeated bytes data_hashes = 4 [json_name = "dataHashes"];</code>
+       * @param index The index to set the value at.
+       * @param value The dataHashes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataHashes(
+          int index, com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureDataHashesIsMutable();
+        dataHashes_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated bytes data_hashes = 4 [json_name = "dataHashes"];</code>
+       * @param value The dataHashes to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDataHashes(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureDataHashesIsMutable();
+        dataHashes_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated bytes data_hashes = 4 [json_name = "dataHashes"];</code>
+       * @param values The dataHashes to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllDataHashes(
+          java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
+        ensureDataHashesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, dataHashes_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated bytes data_hashes = 4 [json_name = "dataHashes"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDataHashes() {
+        dataHashes_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin paidCoin_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> paidCoinBuilder_;
+      /**
+       * <pre>
+       * Proceeds distributed in the round
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin paid_coin = 5 [json_name = "paidCoin"];</code>
+       * @return Whether the paidCoin field is set.
+       */
+      public boolean hasPaidCoin() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * Proceeds distributed in the round
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin paid_coin = 5 [json_name = "paidCoin"];</code>
+       * @return The paidCoin.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getPaidCoin() {
+        if (paidCoinBuilder_ == null) {
+          return paidCoin_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : paidCoin_;
+        } else {
+          return paidCoinBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Proceeds distributed in the round
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin paid_coin = 5 [json_name = "paidCoin"];</code>
+       */
+      public Builder setPaidCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (paidCoinBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          paidCoin_ = value;
+        } else {
+          paidCoinBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Proceeds distributed in the round
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin paid_coin = 5 [json_name = "paidCoin"];</code>
+       */
+      public Builder setPaidCoin(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (paidCoinBuilder_ == null) {
+          paidCoin_ = builderForValue.build();
+        } else {
+          paidCoinBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Proceeds distributed in the round
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin paid_coin = 5 [json_name = "paidCoin"];</code>
+       */
+      public Builder mergePaidCoin(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (paidCoinBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            paidCoin_ != null &&
+            paidCoin_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getPaidCoinBuilder().mergeFrom(value);
+          } else {
+            paidCoin_ = value;
+          }
+        } else {
+          paidCoinBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Proceeds distributed in the round
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin paid_coin = 5 [json_name = "paidCoin"];</code>
+       */
+      public Builder clearPaidCoin() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        paidCoin_ = null;
+        if (paidCoinBuilder_ != null) {
+          paidCoinBuilder_.dispose();
+          paidCoinBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Proceeds distributed in the round
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin paid_coin = 5 [json_name = "paidCoin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getPaidCoinBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getPaidCoinFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Proceeds distributed in the round
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin paid_coin = 5 [json_name = "paidCoin"];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getPaidCoinOrBuilder() {
+        if (paidCoinBuilder_ != null) {
+          return paidCoinBuilder_.getMessageOrBuilder();
+        } else {
+          return paidCoin_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : paidCoin_;
+        }
+      }
+      /**
+       * <pre>
+       * Proceeds distributed in the round
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin paid_coin = 5 [json_name = "paidCoin"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getPaidCoinFieldBuilder() {
+        if (paidCoinBuilder_ == null) {
+          paidCoinBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getPaidCoin(),
+                  getParentForChildren(),
+                  isClean());
+          paidCoin_ = null;
+        }
+        return paidCoinBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.datapool.v2alpha1.SalesHistory)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.datapool.v2alpha1.SalesHistory)
+    private static final com.panacea.datapool.v2alpha1.PoolProto.SalesHistory DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.datapool.v2alpha1.PoolProto.SalesHistory();
+    }
+
+    public static com.panacea.datapool.v2alpha1.PoolProto.SalesHistory getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SalesHistory>
+        PARSER = new com.google.protobuf.AbstractParser<SalesHistory>() {
+      @java.lang.Override
+      public SalesHistory parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SalesHistory> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SalesHistory> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.PoolProto.SalesHistory getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DataPassRedeemHistoryOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:panacea.datapool.v2alpha1.DataPassRedeemHistory)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string redeemer = 1 [json_name = "redeemer"];</code>
+     * @return The redeemer.
+     */
+    java.lang.String getRedeemer();
+    /**
+     * <code>string redeemer = 1 [json_name = "redeemer"];</code>
+     * @return The bytes for redeemer.
+     */
+    com.google.protobuf.ByteString
+        getRedeemerBytes();
+
+    /**
+     * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    long getPoolId();
+
+    /**
+     * <pre>
+     * list of redeem receipts
+     * </pre>
+     *
+     * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 3 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt> 
+        getDataPassRedeemReceiptsList();
+    /**
+     * <pre>
+     * list of redeem receipts
+     * </pre>
+     *
+     * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 3 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt getDataPassRedeemReceipts(int index);
+    /**
+     * <pre>
+     * list of redeem receipts
+     * </pre>
+     *
+     * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 3 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+     */
+    int getDataPassRedeemReceiptsCount();
+    /**
+     * <pre>
+     * list of redeem receipts
+     * </pre>
+     *
+     * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 3 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceiptOrBuilder> 
+        getDataPassRedeemReceiptsOrBuilderList();
+    /**
+     * <pre>
+     * list of redeem receipts
+     * </pre>
+     *
+     * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 3 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+     */
+    com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceiptOrBuilder getDataPassRedeemReceiptsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * DataPassRedeemHistory defines a list of redeem histories
+   * </pre>
+   *
+   * Protobuf type {@code panacea.datapool.v2alpha1.DataPassRedeemHistory}
+   */
+  public static final class DataPassRedeemHistory extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:panacea.datapool.v2alpha1.DataPassRedeemHistory)
+      DataPassRedeemHistoryOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DataPassRedeemHistory.newBuilder() to construct.
+    private DataPassRedeemHistory(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DataPassRedeemHistory() {
+      redeemer_ = "";
+      dataPassRedeemReceipts_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DataPassRedeemHistory();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_DataPassRedeemHistory_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_DataPassRedeemHistory_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory.class, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory.Builder.class);
+    }
+
+    public static final int REDEEMER_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object redeemer_ = "";
+    /**
+     * <code>string redeemer = 1 [json_name = "redeemer"];</code>
+     * @return The redeemer.
+     */
+    @java.lang.Override
+    public java.lang.String getRedeemer() {
+      java.lang.Object ref = redeemer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        redeemer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string redeemer = 1 [json_name = "redeemer"];</code>
+     * @return The bytes for redeemer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRedeemerBytes() {
+      java.lang.Object ref = redeemer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        redeemer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int POOL_ID_FIELD_NUMBER = 2;
+    private long poolId_ = 0L;
+    /**
+     * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+     * @return The poolId.
+     */
+    @java.lang.Override
+    public long getPoolId() {
+      return poolId_;
+    }
+
+    public static final int DATA_PASS_REDEEM_RECEIPTS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt> dataPassRedeemReceipts_;
+    /**
+     * <pre>
+     * list of redeem receipts
+     * </pre>
+     *
+     * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 3 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt> getDataPassRedeemReceiptsList() {
+      return dataPassRedeemReceipts_;
+    }
+    /**
+     * <pre>
+     * list of redeem receipts
+     * </pre>
+     *
+     * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 3 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceiptOrBuilder> 
+        getDataPassRedeemReceiptsOrBuilderList() {
+      return dataPassRedeemReceipts_;
+    }
+    /**
+     * <pre>
+     * list of redeem receipts
+     * </pre>
+     *
+     * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 3 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getDataPassRedeemReceiptsCount() {
+      return dataPassRedeemReceipts_.size();
+    }
+    /**
+     * <pre>
+     * list of redeem receipts
+     * </pre>
+     *
+     * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 3 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt getDataPassRedeemReceipts(int index) {
+      return dataPassRedeemReceipts_.get(index);
+    }
+    /**
+     * <pre>
+     * list of redeem receipts
+     * </pre>
+     *
+     * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 3 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceiptOrBuilder getDataPassRedeemReceiptsOrBuilder(
+        int index) {
+      return dataPassRedeemReceipts_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(redeemer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, redeemer_);
+      }
+      if (poolId_ != 0L) {
+        output.writeUInt64(2, poolId_);
+      }
+      for (int i = 0; i < dataPassRedeemReceipts_.size(); i++) {
+        output.writeMessage(3, dataPassRedeemReceipts_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(redeemer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, redeemer_);
+      }
+      if (poolId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, poolId_);
+      }
+      for (int i = 0; i < dataPassRedeemReceipts_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, dataPassRedeemReceipts_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory)) {
+        return super.equals(obj);
+      }
+      com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory other = (com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory) obj;
+
+      if (!getRedeemer()
+          .equals(other.getRedeemer())) return false;
+      if (getPoolId()
+          != other.getPoolId()) return false;
+      if (!getDataPassRedeemReceiptsList()
+          .equals(other.getDataPassRedeemReceiptsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REDEEMER_FIELD_NUMBER;
+      hash = (53 * hash) + getRedeemer().hashCode();
+      hash = (37 * hash) + POOL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPoolId());
+      if (getDataPassRedeemReceiptsCount() > 0) {
+        hash = (37 * hash) + DATA_PASS_REDEEM_RECEIPTS_FIELD_NUMBER;
+        hash = (53 * hash) + getDataPassRedeemReceiptsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * DataPassRedeemHistory defines a list of redeem histories
+     * </pre>
+     *
+     * Protobuf type {@code panacea.datapool.v2alpha1.DataPassRedeemHistory}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:panacea.datapool.v2alpha1.DataPassRedeemHistory)
+        com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistoryOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_DataPassRedeemHistory_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_DataPassRedeemHistory_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory.class, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory.Builder.class);
+      }
+
+      // Construct using com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        redeemer_ = "";
+        poolId_ = 0L;
+        if (dataPassRedeemReceiptsBuilder_ == null) {
+          dataPassRedeemReceipts_ = java.util.Collections.emptyList();
+        } else {
+          dataPassRedeemReceipts_ = null;
+          dataPassRedeemReceiptsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.panacea.datapool.v2alpha1.PoolProto.internal_static_panacea_datapool_v2alpha1_DataPassRedeemHistory_descriptor;
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory getDefaultInstanceForType() {
+        return com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory build() {
+        com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory buildPartial() {
+        com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory result = new com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory result) {
+        if (dataPassRedeemReceiptsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            dataPassRedeemReceipts_ = java.util.Collections.unmodifiableList(dataPassRedeemReceipts_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.dataPassRedeemReceipts_ = dataPassRedeemReceipts_;
+        } else {
+          result.dataPassRedeemReceipts_ = dataPassRedeemReceiptsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.redeemer_ = redeemer_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.poolId_ = poolId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory) {
+          return mergeFrom((com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory other) {
+        if (other == com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory.getDefaultInstance()) return this;
+        if (!other.getRedeemer().isEmpty()) {
+          redeemer_ = other.redeemer_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getPoolId() != 0L) {
+          setPoolId(other.getPoolId());
+        }
+        if (dataPassRedeemReceiptsBuilder_ == null) {
+          if (!other.dataPassRedeemReceipts_.isEmpty()) {
+            if (dataPassRedeemReceipts_.isEmpty()) {
+              dataPassRedeemReceipts_ = other.dataPassRedeemReceipts_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureDataPassRedeemReceiptsIsMutable();
+              dataPassRedeemReceipts_.addAll(other.dataPassRedeemReceipts_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.dataPassRedeemReceipts_.isEmpty()) {
+            if (dataPassRedeemReceiptsBuilder_.isEmpty()) {
+              dataPassRedeemReceiptsBuilder_.dispose();
+              dataPassRedeemReceiptsBuilder_ = null;
+              dataPassRedeemReceipts_ = other.dataPassRedeemReceipts_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              dataPassRedeemReceiptsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDataPassRedeemReceiptsFieldBuilder() : null;
+            } else {
+              dataPassRedeemReceiptsBuilder_.addAllMessages(other.dataPassRedeemReceipts_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                redeemer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                poolId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt m =
+                    input.readMessage(
+                        com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.parser(),
+                        extensionRegistry);
+                if (dataPassRedeemReceiptsBuilder_ == null) {
+                  ensureDataPassRedeemReceiptsIsMutable();
+                  dataPassRedeemReceipts_.add(m);
+                } else {
+                  dataPassRedeemReceiptsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object redeemer_ = "";
+      /**
+       * <code>string redeemer = 1 [json_name = "redeemer"];</code>
+       * @return The redeemer.
+       */
+      public java.lang.String getRedeemer() {
+        java.lang.Object ref = redeemer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          redeemer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string redeemer = 1 [json_name = "redeemer"];</code>
+       * @return The bytes for redeemer.
+       */
+      public com.google.protobuf.ByteString
+          getRedeemerBytes() {
+        java.lang.Object ref = redeemer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          redeemer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string redeemer = 1 [json_name = "redeemer"];</code>
+       * @param value The redeemer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRedeemer(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        redeemer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string redeemer = 1 [json_name = "redeemer"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRedeemer() {
+        redeemer_ = getDefaultInstance().getRedeemer();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string redeemer = 1 [json_name = "redeemer"];</code>
+       * @param value The bytes for redeemer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRedeemerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        redeemer_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long poolId_ ;
+      /**
+       * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+       * @return The poolId.
+       */
+      @java.lang.Override
+      public long getPoolId() {
+        return poolId_;
+      }
+      /**
+       * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+       * @param value The poolId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolId(long value) {
+
+        poolId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 pool_id = 2 [json_name = "poolId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        poolId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt> dataPassRedeemReceipts_ =
+        java.util.Collections.emptyList();
+      private void ensureDataPassRedeemReceiptsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          dataPassRedeemReceipts_ = new java.util.ArrayList<com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt>(dataPassRedeemReceipts_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.Builder, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceiptOrBuilder> dataPassRedeemReceiptsBuilder_;
+
+      /**
+       * <pre>
+       * list of redeem receipts
+       * </pre>
+       *
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 3 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt> getDataPassRedeemReceiptsList() {
+        if (dataPassRedeemReceiptsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(dataPassRedeemReceipts_);
+        } else {
+          return dataPassRedeemReceiptsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * list of redeem receipts
+       * </pre>
+       *
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 3 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+       */
+      public int getDataPassRedeemReceiptsCount() {
+        if (dataPassRedeemReceiptsBuilder_ == null) {
+          return dataPassRedeemReceipts_.size();
+        } else {
+          return dataPassRedeemReceiptsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * list of redeem receipts
+       * </pre>
+       *
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 3 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt getDataPassRedeemReceipts(int index) {
+        if (dataPassRedeemReceiptsBuilder_ == null) {
+          return dataPassRedeemReceipts_.get(index);
+        } else {
+          return dataPassRedeemReceiptsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * list of redeem receipts
+       * </pre>
+       *
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 3 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDataPassRedeemReceipts(
+          int index, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt value) {
+        if (dataPassRedeemReceiptsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDataPassRedeemReceiptsIsMutable();
+          dataPassRedeemReceipts_.set(index, value);
+          onChanged();
+        } else {
+          dataPassRedeemReceiptsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * list of redeem receipts
+       * </pre>
+       *
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 3 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setDataPassRedeemReceipts(
+          int index, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.Builder builderForValue) {
+        if (dataPassRedeemReceiptsBuilder_ == null) {
+          ensureDataPassRedeemReceiptsIsMutable();
+          dataPassRedeemReceipts_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          dataPassRedeemReceiptsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * list of redeem receipts
+       * </pre>
+       *
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 3 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDataPassRedeemReceipts(com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt value) {
+        if (dataPassRedeemReceiptsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDataPassRedeemReceiptsIsMutable();
+          dataPassRedeemReceipts_.add(value);
+          onChanged();
+        } else {
+          dataPassRedeemReceiptsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * list of redeem receipts
+       * </pre>
+       *
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 3 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDataPassRedeemReceipts(
+          int index, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt value) {
+        if (dataPassRedeemReceiptsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDataPassRedeemReceiptsIsMutable();
+          dataPassRedeemReceipts_.add(index, value);
+          onChanged();
+        } else {
+          dataPassRedeemReceiptsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * list of redeem receipts
+       * </pre>
+       *
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 3 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDataPassRedeemReceipts(
+          com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.Builder builderForValue) {
+        if (dataPassRedeemReceiptsBuilder_ == null) {
+          ensureDataPassRedeemReceiptsIsMutable();
+          dataPassRedeemReceipts_.add(builderForValue.build());
+          onChanged();
+        } else {
+          dataPassRedeemReceiptsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * list of redeem receipts
+       * </pre>
+       *
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 3 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addDataPassRedeemReceipts(
+          int index, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.Builder builderForValue) {
+        if (dataPassRedeemReceiptsBuilder_ == null) {
+          ensureDataPassRedeemReceiptsIsMutable();
+          dataPassRedeemReceipts_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          dataPassRedeemReceiptsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * list of redeem receipts
+       * </pre>
+       *
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 3 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllDataPassRedeemReceipts(
+          java.lang.Iterable<? extends com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt> values) {
+        if (dataPassRedeemReceiptsBuilder_ == null) {
+          ensureDataPassRedeemReceiptsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, dataPassRedeemReceipts_);
+          onChanged();
+        } else {
+          dataPassRedeemReceiptsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * list of redeem receipts
+       * </pre>
+       *
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 3 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearDataPassRedeemReceipts() {
+        if (dataPassRedeemReceiptsBuilder_ == null) {
+          dataPassRedeemReceipts_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          dataPassRedeemReceiptsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * list of redeem receipts
+       * </pre>
+       *
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 3 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeDataPassRedeemReceipts(int index) {
+        if (dataPassRedeemReceiptsBuilder_ == null) {
+          ensureDataPassRedeemReceiptsIsMutable();
+          dataPassRedeemReceipts_.remove(index);
+          onChanged();
+        } else {
+          dataPassRedeemReceiptsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * list of redeem receipts
+       * </pre>
+       *
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 3 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.Builder getDataPassRedeemReceiptsBuilder(
+          int index) {
+        return getDataPassRedeemReceiptsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * list of redeem receipts
+       * </pre>
+       *
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 3 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceiptOrBuilder getDataPassRedeemReceiptsOrBuilder(
+          int index) {
+        if (dataPassRedeemReceiptsBuilder_ == null) {
+          return dataPassRedeemReceipts_.get(index);  } else {
+          return dataPassRedeemReceiptsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * list of redeem receipts
+       * </pre>
+       *
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 3 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceiptOrBuilder> 
+           getDataPassRedeemReceiptsOrBuilderList() {
+        if (dataPassRedeemReceiptsBuilder_ != null) {
+          return dataPassRedeemReceiptsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(dataPassRedeemReceipts_);
+        }
+      }
+      /**
+       * <pre>
+       * list of redeem receipts
+       * </pre>
+       *
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 3 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.Builder addDataPassRedeemReceiptsBuilder() {
+        return getDataPassRedeemReceiptsFieldBuilder().addBuilder(
+            com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * list of redeem receipts
+       * </pre>
+       *
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 3 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+       */
+      public com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.Builder addDataPassRedeemReceiptsBuilder(
+          int index) {
+        return getDataPassRedeemReceiptsFieldBuilder().addBuilder(
+            index, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * list of redeem receipts
+       * </pre>
+       *
+       * <code>repeated .panacea.datapool.v2alpha1.DataPassRedeemReceipt data_pass_redeem_receipts = 3 [json_name = "dataPassRedeemReceipts", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.Builder> 
+           getDataPassRedeemReceiptsBuilderList() {
+        return getDataPassRedeemReceiptsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.Builder, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceiptOrBuilder> 
+          getDataPassRedeemReceiptsFieldBuilder() {
+        if (dataPassRedeemReceiptsBuilder_ == null) {
+          dataPassRedeemReceiptsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceipt.Builder, com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemReceiptOrBuilder>(
+                  dataPassRedeemReceipts_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          dataPassRedeemReceipts_ = null;
+        }
+        return dataPassRedeemReceiptsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:panacea.datapool.v2alpha1.DataPassRedeemHistory)
+    }
+
+    // @@protoc_insertion_point(class_scope:panacea.datapool.v2alpha1.DataPassRedeemHistory)
+    private static final com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory();
+    }
+
+    public static com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DataPassRedeemHistory>
+        PARSER = new com.google.protobuf.AbstractParser<DataPassRedeemHistory>() {
+      @java.lang.Override
+      public DataPassRedeemHistory parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DataPassRedeemHistory> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DataPassRedeemHistory> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.panacea.datapool.v2alpha1.PoolProto.DataPassRedeemHistory getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_datapool_v2alpha1_Pool_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_datapool_v2alpha1_Pool_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_datapool_v2alpha1_Pool_CuratorCommissionEntry_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_datapool_v2alpha1_Pool_CuratorCommissionEntry_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_datapool_v2alpha1_DataCert_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_datapool_v2alpha1_DataCert_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_datapool_v2alpha1_UnsignedDataCert_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_datapool_v2alpha1_UnsignedDataCert_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_datapool_v2alpha1_DataPassRedeemReceipt_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_datapool_v2alpha1_DataPassRedeemReceipt_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_datapool_v2alpha1_PoolParams_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_datapool_v2alpha1_PoolParams_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_datapool_v2alpha1_InstantRevenueDistribution_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_datapool_v2alpha1_InstantRevenueDistribution_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_datapool_v2alpha1_SalesHistory_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_datapool_v2alpha1_SalesHistory_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_panacea_datapool_v2alpha1_DataPassRedeemHistory_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_panacea_datapool_v2alpha1_DataPassRedeemHistory_fieldAccessorTable;
 
@@ -118,13 +9899,13 @@ public final class PoolProto {
       "R\010redeemer\022\027\n\007pool_id\030\002 \001(\004R\006poolId\022q\n\031d" +
       "ata_pass_redeem_receipts\030\003 \003(\01320.panacea" +
       ".datapool.v2alpha1.DataPassRedeemReceipt" +
-      "B\004\310\336\037\000R\026dataPassRedeemReceiptsB\346\001\n\035com.p" +
-      "anacea.datapool.v2alpha1B\tPoolProtoP\001Z4g" +
-      "ithub.com/medibloc/panacea-core/v2/x/dat" +
-      "apool/types\242\002\003PDX\252\002\031Panacea.Datapool.V2a" +
-      "lpha1\312\002\031Panacea\\Datapool\\V2alpha1\342\002%Pana" +
-      "cea\\Datapool\\V2alpha1\\GPBMetadata\352\002\033Pana" +
-      "cea::Datapool::V2alpha1b\006proto3"
+      "B\004\310\336\037\000R\026dataPassRedeemReceiptsB\344\001\n\035com.p" +
+      "anacea.datapool.v2alpha1B\tPoolProtoZ4git" +
+      "hub.com/medibloc/panacea-core/v2/x/datap" +
+      "ool/types\242\002\003PDX\252\002\031Panacea.Datapool.V2alp" +
+      "ha1\312\002\031Panacea\\Datapool\\V2alpha1\342\002%Panace" +
+      "a\\Datapool\\V2alpha1\\GPBMetadata\352\002\033Panace" +
+      "a::Datapool::V2alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -33,15 +33,15 @@ public final class ServiceProto {
       "ssetmantle.modules.orders.transactions.m" +
       "odify.Message\032C.assetmantle.modules.orde" +
       "rs.transactions.modify.TransactionRespon" +
-      "se\"\035\202\323\344\223\002\027\"\025/mantle/orders/modifyB\240\002\n2co" +
+      "se\"\035\202\323\344\223\002\027\"\025/mantle/orders/modifyB\236\002\n2co" +
       "m.assetmantle.modules.orders.transaction" +
-      "s.modifyB\014ServiceProtoP\001\242\002\005AMOTM\252\002.Asset" +
-      "mantle.Modules.Orders.Transactions.Modif" +
-      "y\312\002.Assetmantle\\Modules\\Orders\\Transacti" +
-      "ons\\Modify\342\002:Assetmantle\\Modules\\Orders\\" +
-      "Transactions\\Modify\\GPBMetadata\352\0022Assetm" +
-      "antle::Modules::Orders::Transactions::Mo" +
-      "difyb\006proto3"
+      "s.modifyB\014ServiceProto\242\002\005AMOTM\252\002.Assetma" +
+      "ntle.Modules.Orders.Transactions.Modify\312" +
+      "\002.Assetmantle\\Modules\\Orders\\Transaction" +
+      "s\\Modify\342\002:Assetmantle\\Modules\\Orders\\Tr" +
+      "ansactions\\Modify\\GPBMetadata\352\0022Assetman" +
+      "tle::Modules::Orders::Transactions::Modi" +
+      "fyb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

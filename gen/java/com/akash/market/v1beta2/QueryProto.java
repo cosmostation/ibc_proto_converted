@@ -14,64 +14,9474 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryOrdersRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.market.v1beta2.QueryOrdersRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.akash.market.v1beta2.OrderFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+     * @return Whether the filters field is set.
+     */
+    boolean hasFilters();
+    /**
+     * <code>.akash.market.v1beta2.OrderFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+     * @return The filters.
+     */
+    com.akash.market.v1beta2.OrderProto.OrderFilters getFilters();
+    /**
+     * <code>.akash.market.v1beta2.OrderFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+     */
+    com.akash.market.v1beta2.OrderProto.OrderFiltersOrBuilder getFiltersOrBuilder();
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryOrdersRequest is request type for the Query/Orders RPC method
+   * </pre>
+   *
+   * Protobuf type {@code akash.market.v1beta2.QueryOrdersRequest}
+   */
+  public static final class QueryOrdersRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.market.v1beta2.QueryOrdersRequest)
+      QueryOrdersRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryOrdersRequest.newBuilder() to construct.
+    private QueryOrdersRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryOrdersRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryOrdersRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryOrdersRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryOrdersRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.market.v1beta2.QueryProto.QueryOrdersRequest.class, com.akash.market.v1beta2.QueryProto.QueryOrdersRequest.Builder.class);
+    }
+
+    public static final int FILTERS_FIELD_NUMBER = 1;
+    private com.akash.market.v1beta2.OrderProto.OrderFilters filters_;
+    /**
+     * <code>.akash.market.v1beta2.OrderFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+     * @return Whether the filters field is set.
+     */
+    @java.lang.Override
+    public boolean hasFilters() {
+      return filters_ != null;
+    }
+    /**
+     * <code>.akash.market.v1beta2.OrderFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+     * @return The filters.
+     */
+    @java.lang.Override
+    public com.akash.market.v1beta2.OrderProto.OrderFilters getFilters() {
+      return filters_ == null ? com.akash.market.v1beta2.OrderProto.OrderFilters.getDefaultInstance() : filters_;
+    }
+    /**
+     * <code>.akash.market.v1beta2.OrderFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.akash.market.v1beta2.OrderProto.OrderFiltersOrBuilder getFiltersOrBuilder() {
+      return filters_ == null ? com.akash.market.v1beta2.OrderProto.OrderFilters.getDefaultInstance() : filters_;
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (filters_ != null) {
+        output.writeMessage(1, getFilters());
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (filters_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getFilters());
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.market.v1beta2.QueryProto.QueryOrdersRequest)) {
+        return super.equals(obj);
+      }
+      com.akash.market.v1beta2.QueryProto.QueryOrdersRequest other = (com.akash.market.v1beta2.QueryProto.QueryOrdersRequest) obj;
+
+      if (hasFilters() != other.hasFilters()) return false;
+      if (hasFilters()) {
+        if (!getFilters()
+            .equals(other.getFilters())) return false;
+      }
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasFilters()) {
+        hash = (37 * hash) + FILTERS_FIELD_NUMBER;
+        hash = (53 * hash) + getFilters().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryOrdersRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryOrdersRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryOrdersRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryOrdersRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryOrdersRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryOrdersRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryOrdersRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryOrdersRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryOrdersRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryOrdersRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryOrdersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryOrdersRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.market.v1beta2.QueryProto.QueryOrdersRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryOrdersRequest is request type for the Query/Orders RPC method
+     * </pre>
+     *
+     * Protobuf type {@code akash.market.v1beta2.QueryOrdersRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.market.v1beta2.QueryOrdersRequest)
+        com.akash.market.v1beta2.QueryProto.QueryOrdersRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryOrdersRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryOrdersRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.market.v1beta2.QueryProto.QueryOrdersRequest.class, com.akash.market.v1beta2.QueryProto.QueryOrdersRequest.Builder.class);
+      }
+
+      // Construct using com.akash.market.v1beta2.QueryProto.QueryOrdersRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        filters_ = null;
+        if (filtersBuilder_ != null) {
+          filtersBuilder_.dispose();
+          filtersBuilder_ = null;
+        }
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryOrdersRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta2.QueryProto.QueryOrdersRequest getDefaultInstanceForType() {
+        return com.akash.market.v1beta2.QueryProto.QueryOrdersRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta2.QueryProto.QueryOrdersRequest build() {
+        com.akash.market.v1beta2.QueryProto.QueryOrdersRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta2.QueryProto.QueryOrdersRequest buildPartial() {
+        com.akash.market.v1beta2.QueryProto.QueryOrdersRequest result = new com.akash.market.v1beta2.QueryProto.QueryOrdersRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.akash.market.v1beta2.QueryProto.QueryOrdersRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.filters_ = filtersBuilder_ == null
+              ? filters_
+              : filtersBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.market.v1beta2.QueryProto.QueryOrdersRequest) {
+          return mergeFrom((com.akash.market.v1beta2.QueryProto.QueryOrdersRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.market.v1beta2.QueryProto.QueryOrdersRequest other) {
+        if (other == com.akash.market.v1beta2.QueryProto.QueryOrdersRequest.getDefaultInstance()) return this;
+        if (other.hasFilters()) {
+          mergeFilters(other.getFilters());
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getFiltersFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.akash.market.v1beta2.OrderProto.OrderFilters filters_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.market.v1beta2.OrderProto.OrderFilters, com.akash.market.v1beta2.OrderProto.OrderFilters.Builder, com.akash.market.v1beta2.OrderProto.OrderFiltersOrBuilder> filtersBuilder_;
+      /**
+       * <code>.akash.market.v1beta2.OrderFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+       * @return Whether the filters field is set.
+       */
+      public boolean hasFilters() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.akash.market.v1beta2.OrderFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+       * @return The filters.
+       */
+      public com.akash.market.v1beta2.OrderProto.OrderFilters getFilters() {
+        if (filtersBuilder_ == null) {
+          return filters_ == null ? com.akash.market.v1beta2.OrderProto.OrderFilters.getDefaultInstance() : filters_;
+        } else {
+          return filtersBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.akash.market.v1beta2.OrderFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFilters(com.akash.market.v1beta2.OrderProto.OrderFilters value) {
+        if (filtersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          filters_ = value;
+        } else {
+          filtersBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta2.OrderFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFilters(
+          com.akash.market.v1beta2.OrderProto.OrderFilters.Builder builderForValue) {
+        if (filtersBuilder_ == null) {
+          filters_ = builderForValue.build();
+        } else {
+          filtersBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta2.OrderFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeFilters(com.akash.market.v1beta2.OrderProto.OrderFilters value) {
+        if (filtersBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            filters_ != null &&
+            filters_ != com.akash.market.v1beta2.OrderProto.OrderFilters.getDefaultInstance()) {
+            getFiltersBuilder().mergeFrom(value);
+          } else {
+            filters_ = value;
+          }
+        } else {
+          filtersBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta2.OrderFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearFilters() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        filters_ = null;
+        if (filtersBuilder_ != null) {
+          filtersBuilder_.dispose();
+          filtersBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta2.OrderFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.akash.market.v1beta2.OrderProto.OrderFilters.Builder getFiltersBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getFiltersFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.akash.market.v1beta2.OrderFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.akash.market.v1beta2.OrderProto.OrderFiltersOrBuilder getFiltersOrBuilder() {
+        if (filtersBuilder_ != null) {
+          return filtersBuilder_.getMessageOrBuilder();
+        } else {
+          return filters_ == null ?
+              com.akash.market.v1beta2.OrderProto.OrderFilters.getDefaultInstance() : filters_;
+        }
+      }
+      /**
+       * <code>.akash.market.v1beta2.OrderFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.market.v1beta2.OrderProto.OrderFilters, com.akash.market.v1beta2.OrderProto.OrderFilters.Builder, com.akash.market.v1beta2.OrderProto.OrderFiltersOrBuilder> 
+          getFiltersFieldBuilder() {
+        if (filtersBuilder_ == null) {
+          filtersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.akash.market.v1beta2.OrderProto.OrderFilters, com.akash.market.v1beta2.OrderProto.OrderFilters.Builder, com.akash.market.v1beta2.OrderProto.OrderFiltersOrBuilder>(
+                  getFilters(),
+                  getParentForChildren(),
+                  isClean());
+          filters_ = null;
+        }
+        return filtersBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.market.v1beta2.QueryOrdersRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.market.v1beta2.QueryOrdersRequest)
+    private static final com.akash.market.v1beta2.QueryProto.QueryOrdersRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.market.v1beta2.QueryProto.QueryOrdersRequest();
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryOrdersRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryOrdersRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryOrdersRequest>() {
+      @java.lang.Override
+      public QueryOrdersRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryOrdersRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryOrdersRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.market.v1beta2.QueryProto.QueryOrdersRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryOrdersResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.market.v1beta2.QueryOrdersResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .akash.market.v1beta2.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "Orders"];</code>
+     */
+    java.util.List<com.akash.market.v1beta2.OrderProto.Order> 
+        getOrdersList();
+    /**
+     * <code>repeated .akash.market.v1beta2.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "Orders"];</code>
+     */
+    com.akash.market.v1beta2.OrderProto.Order getOrders(int index);
+    /**
+     * <code>repeated .akash.market.v1beta2.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "Orders"];</code>
+     */
+    int getOrdersCount();
+    /**
+     * <code>repeated .akash.market.v1beta2.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "Orders"];</code>
+     */
+    java.util.List<? extends com.akash.market.v1beta2.OrderProto.OrderOrBuilder> 
+        getOrdersOrBuilderList();
+    /**
+     * <code>repeated .akash.market.v1beta2.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "Orders"];</code>
+     */
+    com.akash.market.v1beta2.OrderProto.OrderOrBuilder getOrdersOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryOrdersResponse is response type for the Query/Orders RPC method
+   * </pre>
+   *
+   * Protobuf type {@code akash.market.v1beta2.QueryOrdersResponse}
+   */
+  public static final class QueryOrdersResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.market.v1beta2.QueryOrdersResponse)
+      QueryOrdersResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryOrdersResponse.newBuilder() to construct.
+    private QueryOrdersResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryOrdersResponse() {
+      orders_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryOrdersResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryOrdersResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryOrdersResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.market.v1beta2.QueryProto.QueryOrdersResponse.class, com.akash.market.v1beta2.QueryProto.QueryOrdersResponse.Builder.class);
+    }
+
+    public static final int ORDERS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.akash.market.v1beta2.OrderProto.Order> orders_;
+    /**
+     * <code>repeated .akash.market.v1beta2.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "Orders"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.akash.market.v1beta2.OrderProto.Order> getOrdersList() {
+      return orders_;
+    }
+    /**
+     * <code>repeated .akash.market.v1beta2.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "Orders"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.akash.market.v1beta2.OrderProto.OrderOrBuilder> 
+        getOrdersOrBuilderList() {
+      return orders_;
+    }
+    /**
+     * <code>repeated .akash.market.v1beta2.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "Orders"];</code>
+     */
+    @java.lang.Override
+    public int getOrdersCount() {
+      return orders_.size();
+    }
+    /**
+     * <code>repeated .akash.market.v1beta2.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "Orders"];</code>
+     */
+    @java.lang.Override
+    public com.akash.market.v1beta2.OrderProto.Order getOrders(int index) {
+      return orders_.get(index);
+    }
+    /**
+     * <code>repeated .akash.market.v1beta2.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "Orders"];</code>
+     */
+    @java.lang.Override
+    public com.akash.market.v1beta2.OrderProto.OrderOrBuilder getOrdersOrBuilder(
+        int index) {
+      return orders_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < orders_.size(); i++) {
+        output.writeMessage(1, orders_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < orders_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, orders_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.market.v1beta2.QueryProto.QueryOrdersResponse)) {
+        return super.equals(obj);
+      }
+      com.akash.market.v1beta2.QueryProto.QueryOrdersResponse other = (com.akash.market.v1beta2.QueryProto.QueryOrdersResponse) obj;
+
+      if (!getOrdersList()
+          .equals(other.getOrdersList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getOrdersCount() > 0) {
+        hash = (37 * hash) + ORDERS_FIELD_NUMBER;
+        hash = (53 * hash) + getOrdersList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryOrdersResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryOrdersResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryOrdersResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryOrdersResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryOrdersResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryOrdersResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryOrdersResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryOrdersResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryOrdersResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryOrdersResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryOrdersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryOrdersResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.market.v1beta2.QueryProto.QueryOrdersResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryOrdersResponse is response type for the Query/Orders RPC method
+     * </pre>
+     *
+     * Protobuf type {@code akash.market.v1beta2.QueryOrdersResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.market.v1beta2.QueryOrdersResponse)
+        com.akash.market.v1beta2.QueryProto.QueryOrdersResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryOrdersResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryOrdersResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.market.v1beta2.QueryProto.QueryOrdersResponse.class, com.akash.market.v1beta2.QueryProto.QueryOrdersResponse.Builder.class);
+      }
+
+      // Construct using com.akash.market.v1beta2.QueryProto.QueryOrdersResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (ordersBuilder_ == null) {
+          orders_ = java.util.Collections.emptyList();
+        } else {
+          orders_ = null;
+          ordersBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryOrdersResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta2.QueryProto.QueryOrdersResponse getDefaultInstanceForType() {
+        return com.akash.market.v1beta2.QueryProto.QueryOrdersResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta2.QueryProto.QueryOrdersResponse build() {
+        com.akash.market.v1beta2.QueryProto.QueryOrdersResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta2.QueryProto.QueryOrdersResponse buildPartial() {
+        com.akash.market.v1beta2.QueryProto.QueryOrdersResponse result = new com.akash.market.v1beta2.QueryProto.QueryOrdersResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.akash.market.v1beta2.QueryProto.QueryOrdersResponse result) {
+        if (ordersBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            orders_ = java.util.Collections.unmodifiableList(orders_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.orders_ = orders_;
+        } else {
+          result.orders_ = ordersBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.akash.market.v1beta2.QueryProto.QueryOrdersResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.market.v1beta2.QueryProto.QueryOrdersResponse) {
+          return mergeFrom((com.akash.market.v1beta2.QueryProto.QueryOrdersResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.market.v1beta2.QueryProto.QueryOrdersResponse other) {
+        if (other == com.akash.market.v1beta2.QueryProto.QueryOrdersResponse.getDefaultInstance()) return this;
+        if (ordersBuilder_ == null) {
+          if (!other.orders_.isEmpty()) {
+            if (orders_.isEmpty()) {
+              orders_ = other.orders_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureOrdersIsMutable();
+              orders_.addAll(other.orders_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.orders_.isEmpty()) {
+            if (ordersBuilder_.isEmpty()) {
+              ordersBuilder_.dispose();
+              ordersBuilder_ = null;
+              orders_ = other.orders_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              ordersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOrdersFieldBuilder() : null;
+            } else {
+              ordersBuilder_.addAllMessages(other.orders_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.akash.market.v1beta2.OrderProto.Order m =
+                    input.readMessage(
+                        com.akash.market.v1beta2.OrderProto.Order.parser(),
+                        extensionRegistry);
+                if (ordersBuilder_ == null) {
+                  ensureOrdersIsMutable();
+                  orders_.add(m);
+                } else {
+                  ordersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.akash.market.v1beta2.OrderProto.Order> orders_ =
+        java.util.Collections.emptyList();
+      private void ensureOrdersIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          orders_ = new java.util.ArrayList<com.akash.market.v1beta2.OrderProto.Order>(orders_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.akash.market.v1beta2.OrderProto.Order, com.akash.market.v1beta2.OrderProto.Order.Builder, com.akash.market.v1beta2.OrderProto.OrderOrBuilder> ordersBuilder_;
+
+      /**
+       * <code>repeated .akash.market.v1beta2.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "Orders"];</code>
+       */
+      public java.util.List<com.akash.market.v1beta2.OrderProto.Order> getOrdersList() {
+        if (ordersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(orders_);
+        } else {
+          return ordersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "Orders"];</code>
+       */
+      public int getOrdersCount() {
+        if (ordersBuilder_ == null) {
+          return orders_.size();
+        } else {
+          return ordersBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "Orders"];</code>
+       */
+      public com.akash.market.v1beta2.OrderProto.Order getOrders(int index) {
+        if (ordersBuilder_ == null) {
+          return orders_.get(index);
+        } else {
+          return ordersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "Orders"];</code>
+       */
+      public Builder setOrders(
+          int index, com.akash.market.v1beta2.OrderProto.Order value) {
+        if (ordersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOrdersIsMutable();
+          orders_.set(index, value);
+          onChanged();
+        } else {
+          ordersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "Orders"];</code>
+       */
+      public Builder setOrders(
+          int index, com.akash.market.v1beta2.OrderProto.Order.Builder builderForValue) {
+        if (ordersBuilder_ == null) {
+          ensureOrdersIsMutable();
+          orders_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          ordersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "Orders"];</code>
+       */
+      public Builder addOrders(com.akash.market.v1beta2.OrderProto.Order value) {
+        if (ordersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOrdersIsMutable();
+          orders_.add(value);
+          onChanged();
+        } else {
+          ordersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "Orders"];</code>
+       */
+      public Builder addOrders(
+          int index, com.akash.market.v1beta2.OrderProto.Order value) {
+        if (ordersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOrdersIsMutable();
+          orders_.add(index, value);
+          onChanged();
+        } else {
+          ordersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "Orders"];</code>
+       */
+      public Builder addOrders(
+          com.akash.market.v1beta2.OrderProto.Order.Builder builderForValue) {
+        if (ordersBuilder_ == null) {
+          ensureOrdersIsMutable();
+          orders_.add(builderForValue.build());
+          onChanged();
+        } else {
+          ordersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "Orders"];</code>
+       */
+      public Builder addOrders(
+          int index, com.akash.market.v1beta2.OrderProto.Order.Builder builderForValue) {
+        if (ordersBuilder_ == null) {
+          ensureOrdersIsMutable();
+          orders_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          ordersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "Orders"];</code>
+       */
+      public Builder addAllOrders(
+          java.lang.Iterable<? extends com.akash.market.v1beta2.OrderProto.Order> values) {
+        if (ordersBuilder_ == null) {
+          ensureOrdersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, orders_);
+          onChanged();
+        } else {
+          ordersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "Orders"];</code>
+       */
+      public Builder clearOrders() {
+        if (ordersBuilder_ == null) {
+          orders_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          ordersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "Orders"];</code>
+       */
+      public Builder removeOrders(int index) {
+        if (ordersBuilder_ == null) {
+          ensureOrdersIsMutable();
+          orders_.remove(index);
+          onChanged();
+        } else {
+          ordersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "Orders"];</code>
+       */
+      public com.akash.market.v1beta2.OrderProto.Order.Builder getOrdersBuilder(
+          int index) {
+        return getOrdersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "Orders"];</code>
+       */
+      public com.akash.market.v1beta2.OrderProto.OrderOrBuilder getOrdersOrBuilder(
+          int index) {
+        if (ordersBuilder_ == null) {
+          return orders_.get(index);  } else {
+          return ordersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "Orders"];</code>
+       */
+      public java.util.List<? extends com.akash.market.v1beta2.OrderProto.OrderOrBuilder> 
+           getOrdersOrBuilderList() {
+        if (ordersBuilder_ != null) {
+          return ordersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(orders_);
+        }
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "Orders"];</code>
+       */
+      public com.akash.market.v1beta2.OrderProto.Order.Builder addOrdersBuilder() {
+        return getOrdersFieldBuilder().addBuilder(
+            com.akash.market.v1beta2.OrderProto.Order.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "Orders"];</code>
+       */
+      public com.akash.market.v1beta2.OrderProto.Order.Builder addOrdersBuilder(
+          int index) {
+        return getOrdersFieldBuilder().addBuilder(
+            index, com.akash.market.v1beta2.OrderProto.Order.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.Order orders = 1 [json_name = "orders", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "Orders"];</code>
+       */
+      public java.util.List<com.akash.market.v1beta2.OrderProto.Order.Builder> 
+           getOrdersBuilderList() {
+        return getOrdersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.akash.market.v1beta2.OrderProto.Order, com.akash.market.v1beta2.OrderProto.Order.Builder, com.akash.market.v1beta2.OrderProto.OrderOrBuilder> 
+          getOrdersFieldBuilder() {
+        if (ordersBuilder_ == null) {
+          ordersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.akash.market.v1beta2.OrderProto.Order, com.akash.market.v1beta2.OrderProto.Order.Builder, com.akash.market.v1beta2.OrderProto.OrderOrBuilder>(
+                  orders_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          orders_ = null;
+        }
+        return ordersBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.market.v1beta2.QueryOrdersResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.market.v1beta2.QueryOrdersResponse)
+    private static final com.akash.market.v1beta2.QueryProto.QueryOrdersResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.market.v1beta2.QueryProto.QueryOrdersResponse();
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryOrdersResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryOrdersResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryOrdersResponse>() {
+      @java.lang.Override
+      public QueryOrdersResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryOrdersResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryOrdersResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.market.v1beta2.QueryProto.QueryOrdersResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryOrderRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.market.v1beta2.QueryOrderRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.akash.market.v1beta2.OrderID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+     * @return Whether the id field is set.
+     */
+    boolean hasId();
+    /**
+     * <code>.akash.market.v1beta2.OrderID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+     * @return The id.
+     */
+    com.akash.market.v1beta2.OrderProto.OrderID getId();
+    /**
+     * <code>.akash.market.v1beta2.OrderID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+     */
+    com.akash.market.v1beta2.OrderProto.OrderIDOrBuilder getIdOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryOrderRequest is request type for the Query/Order RPC method
+   * </pre>
+   *
+   * Protobuf type {@code akash.market.v1beta2.QueryOrderRequest}
+   */
+  public static final class QueryOrderRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.market.v1beta2.QueryOrderRequest)
+      QueryOrderRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryOrderRequest.newBuilder() to construct.
+    private QueryOrderRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryOrderRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryOrderRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryOrderRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryOrderRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.market.v1beta2.QueryProto.QueryOrderRequest.class, com.akash.market.v1beta2.QueryProto.QueryOrderRequest.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private com.akash.market.v1beta2.OrderProto.OrderID id_;
+    /**
+     * <code>.akash.market.v1beta2.OrderID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+     * @return Whether the id field is set.
+     */
+    @java.lang.Override
+    public boolean hasId() {
+      return id_ != null;
+    }
+    /**
+     * <code>.akash.market.v1beta2.OrderID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public com.akash.market.v1beta2.OrderProto.OrderID getId() {
+      return id_ == null ? com.akash.market.v1beta2.OrderProto.OrderID.getDefaultInstance() : id_;
+    }
+    /**
+     * <code>.akash.market.v1beta2.OrderID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+     */
+    @java.lang.Override
+    public com.akash.market.v1beta2.OrderProto.OrderIDOrBuilder getIdOrBuilder() {
+      return id_ == null ? com.akash.market.v1beta2.OrderProto.OrderID.getDefaultInstance() : id_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != null) {
+        output.writeMessage(1, getId());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getId());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.market.v1beta2.QueryProto.QueryOrderRequest)) {
+        return super.equals(obj);
+      }
+      com.akash.market.v1beta2.QueryProto.QueryOrderRequest other = (com.akash.market.v1beta2.QueryProto.QueryOrderRequest) obj;
+
+      if (hasId() != other.hasId()) return false;
+      if (hasId()) {
+        if (!getId()
+            .equals(other.getId())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasId()) {
+        hash = (37 * hash) + ID_FIELD_NUMBER;
+        hash = (53 * hash) + getId().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryOrderRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryOrderRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryOrderRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryOrderRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryOrderRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryOrderRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryOrderRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryOrderRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryOrderRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryOrderRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryOrderRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryOrderRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.market.v1beta2.QueryProto.QueryOrderRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryOrderRequest is request type for the Query/Order RPC method
+     * </pre>
+     *
+     * Protobuf type {@code akash.market.v1beta2.QueryOrderRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.market.v1beta2.QueryOrderRequest)
+        com.akash.market.v1beta2.QueryProto.QueryOrderRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryOrderRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryOrderRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.market.v1beta2.QueryProto.QueryOrderRequest.class, com.akash.market.v1beta2.QueryProto.QueryOrderRequest.Builder.class);
+      }
+
+      // Construct using com.akash.market.v1beta2.QueryProto.QueryOrderRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = null;
+        if (idBuilder_ != null) {
+          idBuilder_.dispose();
+          idBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryOrderRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta2.QueryProto.QueryOrderRequest getDefaultInstanceForType() {
+        return com.akash.market.v1beta2.QueryProto.QueryOrderRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta2.QueryProto.QueryOrderRequest build() {
+        com.akash.market.v1beta2.QueryProto.QueryOrderRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta2.QueryProto.QueryOrderRequest buildPartial() {
+        com.akash.market.v1beta2.QueryProto.QueryOrderRequest result = new com.akash.market.v1beta2.QueryProto.QueryOrderRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.akash.market.v1beta2.QueryProto.QueryOrderRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = idBuilder_ == null
+              ? id_
+              : idBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.market.v1beta2.QueryProto.QueryOrderRequest) {
+          return mergeFrom((com.akash.market.v1beta2.QueryProto.QueryOrderRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.market.v1beta2.QueryProto.QueryOrderRequest other) {
+        if (other == com.akash.market.v1beta2.QueryProto.QueryOrderRequest.getDefaultInstance()) return this;
+        if (other.hasId()) {
+          mergeId(other.getId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getIdFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.akash.market.v1beta2.OrderProto.OrderID id_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.market.v1beta2.OrderProto.OrderID, com.akash.market.v1beta2.OrderProto.OrderID.Builder, com.akash.market.v1beta2.OrderProto.OrderIDOrBuilder> idBuilder_;
+      /**
+       * <code>.akash.market.v1beta2.OrderID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       * @return Whether the id field is set.
+       */
+      public boolean hasId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.akash.market.v1beta2.OrderID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       * @return The id.
+       */
+      public com.akash.market.v1beta2.OrderProto.OrderID getId() {
+        if (idBuilder_ == null) {
+          return id_ == null ? com.akash.market.v1beta2.OrderProto.OrderID.getDefaultInstance() : id_;
+        } else {
+          return idBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.akash.market.v1beta2.OrderID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       */
+      public Builder setId(com.akash.market.v1beta2.OrderProto.OrderID value) {
+        if (idBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          id_ = value;
+        } else {
+          idBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta2.OrderID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       */
+      public Builder setId(
+          com.akash.market.v1beta2.OrderProto.OrderID.Builder builderForValue) {
+        if (idBuilder_ == null) {
+          id_ = builderForValue.build();
+        } else {
+          idBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta2.OrderID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       */
+      public Builder mergeId(com.akash.market.v1beta2.OrderProto.OrderID value) {
+        if (idBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            id_ != null &&
+            id_ != com.akash.market.v1beta2.OrderProto.OrderID.getDefaultInstance()) {
+            getIdBuilder().mergeFrom(value);
+          } else {
+            id_ = value;
+          }
+        } else {
+          idBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta2.OrderID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = null;
+        if (idBuilder_ != null) {
+          idBuilder_.dispose();
+          idBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta2.OrderID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       */
+      public com.akash.market.v1beta2.OrderProto.OrderID.Builder getIdBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.akash.market.v1beta2.OrderID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       */
+      public com.akash.market.v1beta2.OrderProto.OrderIDOrBuilder getIdOrBuilder() {
+        if (idBuilder_ != null) {
+          return idBuilder_.getMessageOrBuilder();
+        } else {
+          return id_ == null ?
+              com.akash.market.v1beta2.OrderProto.OrderID.getDefaultInstance() : id_;
+        }
+      }
+      /**
+       * <code>.akash.market.v1beta2.OrderID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.market.v1beta2.OrderProto.OrderID, com.akash.market.v1beta2.OrderProto.OrderID.Builder, com.akash.market.v1beta2.OrderProto.OrderIDOrBuilder> 
+          getIdFieldBuilder() {
+        if (idBuilder_ == null) {
+          idBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.akash.market.v1beta2.OrderProto.OrderID, com.akash.market.v1beta2.OrderProto.OrderID.Builder, com.akash.market.v1beta2.OrderProto.OrderIDOrBuilder>(
+                  getId(),
+                  getParentForChildren(),
+                  isClean());
+          id_ = null;
+        }
+        return idBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.market.v1beta2.QueryOrderRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.market.v1beta2.QueryOrderRequest)
+    private static final com.akash.market.v1beta2.QueryProto.QueryOrderRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.market.v1beta2.QueryProto.QueryOrderRequest();
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryOrderRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryOrderRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryOrderRequest>() {
+      @java.lang.Override
+      public QueryOrderRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryOrderRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryOrderRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.market.v1beta2.QueryProto.QueryOrderRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryOrderResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.market.v1beta2.QueryOrderResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.akash.market.v1beta2.Order order = 1 [json_name = "order", (.gogoproto.nullable) = false];</code>
+     * @return Whether the order field is set.
+     */
+    boolean hasOrder();
+    /**
+     * <code>.akash.market.v1beta2.Order order = 1 [json_name = "order", (.gogoproto.nullable) = false];</code>
+     * @return The order.
+     */
+    com.akash.market.v1beta2.OrderProto.Order getOrder();
+    /**
+     * <code>.akash.market.v1beta2.Order order = 1 [json_name = "order", (.gogoproto.nullable) = false];</code>
+     */
+    com.akash.market.v1beta2.OrderProto.OrderOrBuilder getOrderOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryOrderResponse is response type for the Query/Order RPC method
+   * </pre>
+   *
+   * Protobuf type {@code akash.market.v1beta2.QueryOrderResponse}
+   */
+  public static final class QueryOrderResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.market.v1beta2.QueryOrderResponse)
+      QueryOrderResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryOrderResponse.newBuilder() to construct.
+    private QueryOrderResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryOrderResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryOrderResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryOrderResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryOrderResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.market.v1beta2.QueryProto.QueryOrderResponse.class, com.akash.market.v1beta2.QueryProto.QueryOrderResponse.Builder.class);
+    }
+
+    public static final int ORDER_FIELD_NUMBER = 1;
+    private com.akash.market.v1beta2.OrderProto.Order order_;
+    /**
+     * <code>.akash.market.v1beta2.Order order = 1 [json_name = "order", (.gogoproto.nullable) = false];</code>
+     * @return Whether the order field is set.
+     */
+    @java.lang.Override
+    public boolean hasOrder() {
+      return order_ != null;
+    }
+    /**
+     * <code>.akash.market.v1beta2.Order order = 1 [json_name = "order", (.gogoproto.nullable) = false];</code>
+     * @return The order.
+     */
+    @java.lang.Override
+    public com.akash.market.v1beta2.OrderProto.Order getOrder() {
+      return order_ == null ? com.akash.market.v1beta2.OrderProto.Order.getDefaultInstance() : order_;
+    }
+    /**
+     * <code>.akash.market.v1beta2.Order order = 1 [json_name = "order", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.akash.market.v1beta2.OrderProto.OrderOrBuilder getOrderOrBuilder() {
+      return order_ == null ? com.akash.market.v1beta2.OrderProto.Order.getDefaultInstance() : order_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (order_ != null) {
+        output.writeMessage(1, getOrder());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (order_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getOrder());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.market.v1beta2.QueryProto.QueryOrderResponse)) {
+        return super.equals(obj);
+      }
+      com.akash.market.v1beta2.QueryProto.QueryOrderResponse other = (com.akash.market.v1beta2.QueryProto.QueryOrderResponse) obj;
+
+      if (hasOrder() != other.hasOrder()) return false;
+      if (hasOrder()) {
+        if (!getOrder()
+            .equals(other.getOrder())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasOrder()) {
+        hash = (37 * hash) + ORDER_FIELD_NUMBER;
+        hash = (53 * hash) + getOrder().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryOrderResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryOrderResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryOrderResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryOrderResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryOrderResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryOrderResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryOrderResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryOrderResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryOrderResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryOrderResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryOrderResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryOrderResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.market.v1beta2.QueryProto.QueryOrderResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryOrderResponse is response type for the Query/Order RPC method
+     * </pre>
+     *
+     * Protobuf type {@code akash.market.v1beta2.QueryOrderResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.market.v1beta2.QueryOrderResponse)
+        com.akash.market.v1beta2.QueryProto.QueryOrderResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryOrderResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryOrderResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.market.v1beta2.QueryProto.QueryOrderResponse.class, com.akash.market.v1beta2.QueryProto.QueryOrderResponse.Builder.class);
+      }
+
+      // Construct using com.akash.market.v1beta2.QueryProto.QueryOrderResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        order_ = null;
+        if (orderBuilder_ != null) {
+          orderBuilder_.dispose();
+          orderBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryOrderResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta2.QueryProto.QueryOrderResponse getDefaultInstanceForType() {
+        return com.akash.market.v1beta2.QueryProto.QueryOrderResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta2.QueryProto.QueryOrderResponse build() {
+        com.akash.market.v1beta2.QueryProto.QueryOrderResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta2.QueryProto.QueryOrderResponse buildPartial() {
+        com.akash.market.v1beta2.QueryProto.QueryOrderResponse result = new com.akash.market.v1beta2.QueryProto.QueryOrderResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.akash.market.v1beta2.QueryProto.QueryOrderResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.order_ = orderBuilder_ == null
+              ? order_
+              : orderBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.market.v1beta2.QueryProto.QueryOrderResponse) {
+          return mergeFrom((com.akash.market.v1beta2.QueryProto.QueryOrderResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.market.v1beta2.QueryProto.QueryOrderResponse other) {
+        if (other == com.akash.market.v1beta2.QueryProto.QueryOrderResponse.getDefaultInstance()) return this;
+        if (other.hasOrder()) {
+          mergeOrder(other.getOrder());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getOrderFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.akash.market.v1beta2.OrderProto.Order order_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.market.v1beta2.OrderProto.Order, com.akash.market.v1beta2.OrderProto.Order.Builder, com.akash.market.v1beta2.OrderProto.OrderOrBuilder> orderBuilder_;
+      /**
+       * <code>.akash.market.v1beta2.Order order = 1 [json_name = "order", (.gogoproto.nullable) = false];</code>
+       * @return Whether the order field is set.
+       */
+      public boolean hasOrder() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.akash.market.v1beta2.Order order = 1 [json_name = "order", (.gogoproto.nullable) = false];</code>
+       * @return The order.
+       */
+      public com.akash.market.v1beta2.OrderProto.Order getOrder() {
+        if (orderBuilder_ == null) {
+          return order_ == null ? com.akash.market.v1beta2.OrderProto.Order.getDefaultInstance() : order_;
+        } else {
+          return orderBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.akash.market.v1beta2.Order order = 1 [json_name = "order", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setOrder(com.akash.market.v1beta2.OrderProto.Order value) {
+        if (orderBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          order_ = value;
+        } else {
+          orderBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta2.Order order = 1 [json_name = "order", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setOrder(
+          com.akash.market.v1beta2.OrderProto.Order.Builder builderForValue) {
+        if (orderBuilder_ == null) {
+          order_ = builderForValue.build();
+        } else {
+          orderBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta2.Order order = 1 [json_name = "order", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeOrder(com.akash.market.v1beta2.OrderProto.Order value) {
+        if (orderBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            order_ != null &&
+            order_ != com.akash.market.v1beta2.OrderProto.Order.getDefaultInstance()) {
+            getOrderBuilder().mergeFrom(value);
+          } else {
+            order_ = value;
+          }
+        } else {
+          orderBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta2.Order order = 1 [json_name = "order", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearOrder() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        order_ = null;
+        if (orderBuilder_ != null) {
+          orderBuilder_.dispose();
+          orderBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta2.Order order = 1 [json_name = "order", (.gogoproto.nullable) = false];</code>
+       */
+      public com.akash.market.v1beta2.OrderProto.Order.Builder getOrderBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getOrderFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.akash.market.v1beta2.Order order = 1 [json_name = "order", (.gogoproto.nullable) = false];</code>
+       */
+      public com.akash.market.v1beta2.OrderProto.OrderOrBuilder getOrderOrBuilder() {
+        if (orderBuilder_ != null) {
+          return orderBuilder_.getMessageOrBuilder();
+        } else {
+          return order_ == null ?
+              com.akash.market.v1beta2.OrderProto.Order.getDefaultInstance() : order_;
+        }
+      }
+      /**
+       * <code>.akash.market.v1beta2.Order order = 1 [json_name = "order", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.market.v1beta2.OrderProto.Order, com.akash.market.v1beta2.OrderProto.Order.Builder, com.akash.market.v1beta2.OrderProto.OrderOrBuilder> 
+          getOrderFieldBuilder() {
+        if (orderBuilder_ == null) {
+          orderBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.akash.market.v1beta2.OrderProto.Order, com.akash.market.v1beta2.OrderProto.Order.Builder, com.akash.market.v1beta2.OrderProto.OrderOrBuilder>(
+                  getOrder(),
+                  getParentForChildren(),
+                  isClean());
+          order_ = null;
+        }
+        return orderBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.market.v1beta2.QueryOrderResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.market.v1beta2.QueryOrderResponse)
+    private static final com.akash.market.v1beta2.QueryProto.QueryOrderResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.market.v1beta2.QueryProto.QueryOrderResponse();
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryOrderResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryOrderResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryOrderResponse>() {
+      @java.lang.Override
+      public QueryOrderResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryOrderResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryOrderResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.market.v1beta2.QueryProto.QueryOrderResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryBidsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.market.v1beta2.QueryBidsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.akash.market.v1beta2.BidFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+     * @return Whether the filters field is set.
+     */
+    boolean hasFilters();
+    /**
+     * <code>.akash.market.v1beta2.BidFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+     * @return The filters.
+     */
+    com.akash.market.v1beta2.BidProto.BidFilters getFilters();
+    /**
+     * <code>.akash.market.v1beta2.BidFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+     */
+    com.akash.market.v1beta2.BidProto.BidFiltersOrBuilder getFiltersOrBuilder();
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryBidsRequest is request type for the Query/Bids RPC method
+   * </pre>
+   *
+   * Protobuf type {@code akash.market.v1beta2.QueryBidsRequest}
+   */
+  public static final class QueryBidsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.market.v1beta2.QueryBidsRequest)
+      QueryBidsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryBidsRequest.newBuilder() to construct.
+    private QueryBidsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryBidsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryBidsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryBidsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryBidsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.market.v1beta2.QueryProto.QueryBidsRequest.class, com.akash.market.v1beta2.QueryProto.QueryBidsRequest.Builder.class);
+    }
+
+    public static final int FILTERS_FIELD_NUMBER = 1;
+    private com.akash.market.v1beta2.BidProto.BidFilters filters_;
+    /**
+     * <code>.akash.market.v1beta2.BidFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+     * @return Whether the filters field is set.
+     */
+    @java.lang.Override
+    public boolean hasFilters() {
+      return filters_ != null;
+    }
+    /**
+     * <code>.akash.market.v1beta2.BidFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+     * @return The filters.
+     */
+    @java.lang.Override
+    public com.akash.market.v1beta2.BidProto.BidFilters getFilters() {
+      return filters_ == null ? com.akash.market.v1beta2.BidProto.BidFilters.getDefaultInstance() : filters_;
+    }
+    /**
+     * <code>.akash.market.v1beta2.BidFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.akash.market.v1beta2.BidProto.BidFiltersOrBuilder getFiltersOrBuilder() {
+      return filters_ == null ? com.akash.market.v1beta2.BidProto.BidFilters.getDefaultInstance() : filters_;
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (filters_ != null) {
+        output.writeMessage(1, getFilters());
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (filters_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getFilters());
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.market.v1beta2.QueryProto.QueryBidsRequest)) {
+        return super.equals(obj);
+      }
+      com.akash.market.v1beta2.QueryProto.QueryBidsRequest other = (com.akash.market.v1beta2.QueryProto.QueryBidsRequest) obj;
+
+      if (hasFilters() != other.hasFilters()) return false;
+      if (hasFilters()) {
+        if (!getFilters()
+            .equals(other.getFilters())) return false;
+      }
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasFilters()) {
+        hash = (37 * hash) + FILTERS_FIELD_NUMBER;
+        hash = (53 * hash) + getFilters().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryBidsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryBidsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryBidsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryBidsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryBidsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryBidsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryBidsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryBidsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryBidsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryBidsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryBidsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryBidsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.market.v1beta2.QueryProto.QueryBidsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryBidsRequest is request type for the Query/Bids RPC method
+     * </pre>
+     *
+     * Protobuf type {@code akash.market.v1beta2.QueryBidsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.market.v1beta2.QueryBidsRequest)
+        com.akash.market.v1beta2.QueryProto.QueryBidsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryBidsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryBidsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.market.v1beta2.QueryProto.QueryBidsRequest.class, com.akash.market.v1beta2.QueryProto.QueryBidsRequest.Builder.class);
+      }
+
+      // Construct using com.akash.market.v1beta2.QueryProto.QueryBidsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        filters_ = null;
+        if (filtersBuilder_ != null) {
+          filtersBuilder_.dispose();
+          filtersBuilder_ = null;
+        }
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryBidsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta2.QueryProto.QueryBidsRequest getDefaultInstanceForType() {
+        return com.akash.market.v1beta2.QueryProto.QueryBidsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta2.QueryProto.QueryBidsRequest build() {
+        com.akash.market.v1beta2.QueryProto.QueryBidsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta2.QueryProto.QueryBidsRequest buildPartial() {
+        com.akash.market.v1beta2.QueryProto.QueryBidsRequest result = new com.akash.market.v1beta2.QueryProto.QueryBidsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.akash.market.v1beta2.QueryProto.QueryBidsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.filters_ = filtersBuilder_ == null
+              ? filters_
+              : filtersBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.market.v1beta2.QueryProto.QueryBidsRequest) {
+          return mergeFrom((com.akash.market.v1beta2.QueryProto.QueryBidsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.market.v1beta2.QueryProto.QueryBidsRequest other) {
+        if (other == com.akash.market.v1beta2.QueryProto.QueryBidsRequest.getDefaultInstance()) return this;
+        if (other.hasFilters()) {
+          mergeFilters(other.getFilters());
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getFiltersFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.akash.market.v1beta2.BidProto.BidFilters filters_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.market.v1beta2.BidProto.BidFilters, com.akash.market.v1beta2.BidProto.BidFilters.Builder, com.akash.market.v1beta2.BidProto.BidFiltersOrBuilder> filtersBuilder_;
+      /**
+       * <code>.akash.market.v1beta2.BidFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+       * @return Whether the filters field is set.
+       */
+      public boolean hasFilters() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.akash.market.v1beta2.BidFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+       * @return The filters.
+       */
+      public com.akash.market.v1beta2.BidProto.BidFilters getFilters() {
+        if (filtersBuilder_ == null) {
+          return filters_ == null ? com.akash.market.v1beta2.BidProto.BidFilters.getDefaultInstance() : filters_;
+        } else {
+          return filtersBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.akash.market.v1beta2.BidFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFilters(com.akash.market.v1beta2.BidProto.BidFilters value) {
+        if (filtersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          filters_ = value;
+        } else {
+          filtersBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta2.BidFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFilters(
+          com.akash.market.v1beta2.BidProto.BidFilters.Builder builderForValue) {
+        if (filtersBuilder_ == null) {
+          filters_ = builderForValue.build();
+        } else {
+          filtersBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta2.BidFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeFilters(com.akash.market.v1beta2.BidProto.BidFilters value) {
+        if (filtersBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            filters_ != null &&
+            filters_ != com.akash.market.v1beta2.BidProto.BidFilters.getDefaultInstance()) {
+            getFiltersBuilder().mergeFrom(value);
+          } else {
+            filters_ = value;
+          }
+        } else {
+          filtersBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta2.BidFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearFilters() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        filters_ = null;
+        if (filtersBuilder_ != null) {
+          filtersBuilder_.dispose();
+          filtersBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta2.BidFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.akash.market.v1beta2.BidProto.BidFilters.Builder getFiltersBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getFiltersFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.akash.market.v1beta2.BidFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.akash.market.v1beta2.BidProto.BidFiltersOrBuilder getFiltersOrBuilder() {
+        if (filtersBuilder_ != null) {
+          return filtersBuilder_.getMessageOrBuilder();
+        } else {
+          return filters_ == null ?
+              com.akash.market.v1beta2.BidProto.BidFilters.getDefaultInstance() : filters_;
+        }
+      }
+      /**
+       * <code>.akash.market.v1beta2.BidFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.market.v1beta2.BidProto.BidFilters, com.akash.market.v1beta2.BidProto.BidFilters.Builder, com.akash.market.v1beta2.BidProto.BidFiltersOrBuilder> 
+          getFiltersFieldBuilder() {
+        if (filtersBuilder_ == null) {
+          filtersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.akash.market.v1beta2.BidProto.BidFilters, com.akash.market.v1beta2.BidProto.BidFilters.Builder, com.akash.market.v1beta2.BidProto.BidFiltersOrBuilder>(
+                  getFilters(),
+                  getParentForChildren(),
+                  isClean());
+          filters_ = null;
+        }
+        return filtersBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.market.v1beta2.QueryBidsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.market.v1beta2.QueryBidsRequest)
+    private static final com.akash.market.v1beta2.QueryProto.QueryBidsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.market.v1beta2.QueryProto.QueryBidsRequest();
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryBidsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryBidsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryBidsRequest>() {
+      @java.lang.Override
+      public QueryBidsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryBidsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryBidsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.market.v1beta2.QueryProto.QueryBidsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryBidsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.market.v1beta2.QueryBidsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .akash.market.v1beta2.QueryBidResponse bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.akash.market.v1beta2.QueryProto.QueryBidResponse> 
+        getBidsList();
+    /**
+     * <code>repeated .akash.market.v1beta2.QueryBidResponse bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+     */
+    com.akash.market.v1beta2.QueryProto.QueryBidResponse getBids(int index);
+    /**
+     * <code>repeated .akash.market.v1beta2.QueryBidResponse bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+     */
+    int getBidsCount();
+    /**
+     * <code>repeated .akash.market.v1beta2.QueryBidResponse bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.akash.market.v1beta2.QueryProto.QueryBidResponseOrBuilder> 
+        getBidsOrBuilderList();
+    /**
+     * <code>repeated .akash.market.v1beta2.QueryBidResponse bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+     */
+    com.akash.market.v1beta2.QueryProto.QueryBidResponseOrBuilder getBidsOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryBidsResponse is response type for the Query/Bids RPC method
+   * </pre>
+   *
+   * Protobuf type {@code akash.market.v1beta2.QueryBidsResponse}
+   */
+  public static final class QueryBidsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.market.v1beta2.QueryBidsResponse)
+      QueryBidsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryBidsResponse.newBuilder() to construct.
+    private QueryBidsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryBidsResponse() {
+      bids_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryBidsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryBidsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryBidsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.market.v1beta2.QueryProto.QueryBidsResponse.class, com.akash.market.v1beta2.QueryProto.QueryBidsResponse.Builder.class);
+    }
+
+    public static final int BIDS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.akash.market.v1beta2.QueryProto.QueryBidResponse> bids_;
+    /**
+     * <code>repeated .akash.market.v1beta2.QueryBidResponse bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.akash.market.v1beta2.QueryProto.QueryBidResponse> getBidsList() {
+      return bids_;
+    }
+    /**
+     * <code>repeated .akash.market.v1beta2.QueryBidResponse bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.akash.market.v1beta2.QueryProto.QueryBidResponseOrBuilder> 
+        getBidsOrBuilderList() {
+      return bids_;
+    }
+    /**
+     * <code>repeated .akash.market.v1beta2.QueryBidResponse bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getBidsCount() {
+      return bids_.size();
+    }
+    /**
+     * <code>repeated .akash.market.v1beta2.QueryBidResponse bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.akash.market.v1beta2.QueryProto.QueryBidResponse getBids(int index) {
+      return bids_.get(index);
+    }
+    /**
+     * <code>repeated .akash.market.v1beta2.QueryBidResponse bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.akash.market.v1beta2.QueryProto.QueryBidResponseOrBuilder getBidsOrBuilder(
+        int index) {
+      return bids_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < bids_.size(); i++) {
+        output.writeMessage(1, bids_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < bids_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, bids_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.market.v1beta2.QueryProto.QueryBidsResponse)) {
+        return super.equals(obj);
+      }
+      com.akash.market.v1beta2.QueryProto.QueryBidsResponse other = (com.akash.market.v1beta2.QueryProto.QueryBidsResponse) obj;
+
+      if (!getBidsList()
+          .equals(other.getBidsList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getBidsCount() > 0) {
+        hash = (37 * hash) + BIDS_FIELD_NUMBER;
+        hash = (53 * hash) + getBidsList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryBidsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryBidsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryBidsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryBidsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryBidsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryBidsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryBidsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryBidsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryBidsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryBidsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryBidsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryBidsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.market.v1beta2.QueryProto.QueryBidsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryBidsResponse is response type for the Query/Bids RPC method
+     * </pre>
+     *
+     * Protobuf type {@code akash.market.v1beta2.QueryBidsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.market.v1beta2.QueryBidsResponse)
+        com.akash.market.v1beta2.QueryProto.QueryBidsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryBidsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryBidsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.market.v1beta2.QueryProto.QueryBidsResponse.class, com.akash.market.v1beta2.QueryProto.QueryBidsResponse.Builder.class);
+      }
+
+      // Construct using com.akash.market.v1beta2.QueryProto.QueryBidsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (bidsBuilder_ == null) {
+          bids_ = java.util.Collections.emptyList();
+        } else {
+          bids_ = null;
+          bidsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryBidsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta2.QueryProto.QueryBidsResponse getDefaultInstanceForType() {
+        return com.akash.market.v1beta2.QueryProto.QueryBidsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta2.QueryProto.QueryBidsResponse build() {
+        com.akash.market.v1beta2.QueryProto.QueryBidsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta2.QueryProto.QueryBidsResponse buildPartial() {
+        com.akash.market.v1beta2.QueryProto.QueryBidsResponse result = new com.akash.market.v1beta2.QueryProto.QueryBidsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.akash.market.v1beta2.QueryProto.QueryBidsResponse result) {
+        if (bidsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            bids_ = java.util.Collections.unmodifiableList(bids_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.bids_ = bids_;
+        } else {
+          result.bids_ = bidsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.akash.market.v1beta2.QueryProto.QueryBidsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.market.v1beta2.QueryProto.QueryBidsResponse) {
+          return mergeFrom((com.akash.market.v1beta2.QueryProto.QueryBidsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.market.v1beta2.QueryProto.QueryBidsResponse other) {
+        if (other == com.akash.market.v1beta2.QueryProto.QueryBidsResponse.getDefaultInstance()) return this;
+        if (bidsBuilder_ == null) {
+          if (!other.bids_.isEmpty()) {
+            if (bids_.isEmpty()) {
+              bids_ = other.bids_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureBidsIsMutable();
+              bids_.addAll(other.bids_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.bids_.isEmpty()) {
+            if (bidsBuilder_.isEmpty()) {
+              bidsBuilder_.dispose();
+              bidsBuilder_ = null;
+              bids_ = other.bids_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              bidsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getBidsFieldBuilder() : null;
+            } else {
+              bidsBuilder_.addAllMessages(other.bids_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.akash.market.v1beta2.QueryProto.QueryBidResponse m =
+                    input.readMessage(
+                        com.akash.market.v1beta2.QueryProto.QueryBidResponse.parser(),
+                        extensionRegistry);
+                if (bidsBuilder_ == null) {
+                  ensureBidsIsMutable();
+                  bids_.add(m);
+                } else {
+                  bidsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.akash.market.v1beta2.QueryProto.QueryBidResponse> bids_ =
+        java.util.Collections.emptyList();
+      private void ensureBidsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          bids_ = new java.util.ArrayList<com.akash.market.v1beta2.QueryProto.QueryBidResponse>(bids_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.akash.market.v1beta2.QueryProto.QueryBidResponse, com.akash.market.v1beta2.QueryProto.QueryBidResponse.Builder, com.akash.market.v1beta2.QueryProto.QueryBidResponseOrBuilder> bidsBuilder_;
+
+      /**
+       * <code>repeated .akash.market.v1beta2.QueryBidResponse bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.akash.market.v1beta2.QueryProto.QueryBidResponse> getBidsList() {
+        if (bidsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(bids_);
+        } else {
+          return bidsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.QueryBidResponse bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+       */
+      public int getBidsCount() {
+        if (bidsBuilder_ == null) {
+          return bids_.size();
+        } else {
+          return bidsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.QueryBidResponse bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+       */
+      public com.akash.market.v1beta2.QueryProto.QueryBidResponse getBids(int index) {
+        if (bidsBuilder_ == null) {
+          return bids_.get(index);
+        } else {
+          return bidsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.QueryBidResponse bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBids(
+          int index, com.akash.market.v1beta2.QueryProto.QueryBidResponse value) {
+        if (bidsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBidsIsMutable();
+          bids_.set(index, value);
+          onChanged();
+        } else {
+          bidsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.QueryBidResponse bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBids(
+          int index, com.akash.market.v1beta2.QueryProto.QueryBidResponse.Builder builderForValue) {
+        if (bidsBuilder_ == null) {
+          ensureBidsIsMutable();
+          bids_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          bidsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.QueryBidResponse bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addBids(com.akash.market.v1beta2.QueryProto.QueryBidResponse value) {
+        if (bidsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBidsIsMutable();
+          bids_.add(value);
+          onChanged();
+        } else {
+          bidsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.QueryBidResponse bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addBids(
+          int index, com.akash.market.v1beta2.QueryProto.QueryBidResponse value) {
+        if (bidsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureBidsIsMutable();
+          bids_.add(index, value);
+          onChanged();
+        } else {
+          bidsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.QueryBidResponse bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addBids(
+          com.akash.market.v1beta2.QueryProto.QueryBidResponse.Builder builderForValue) {
+        if (bidsBuilder_ == null) {
+          ensureBidsIsMutable();
+          bids_.add(builderForValue.build());
+          onChanged();
+        } else {
+          bidsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.QueryBidResponse bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addBids(
+          int index, com.akash.market.v1beta2.QueryProto.QueryBidResponse.Builder builderForValue) {
+        if (bidsBuilder_ == null) {
+          ensureBidsIsMutable();
+          bids_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          bidsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.QueryBidResponse bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllBids(
+          java.lang.Iterable<? extends com.akash.market.v1beta2.QueryProto.QueryBidResponse> values) {
+        if (bidsBuilder_ == null) {
+          ensureBidsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, bids_);
+          onChanged();
+        } else {
+          bidsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.QueryBidResponse bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearBids() {
+        if (bidsBuilder_ == null) {
+          bids_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          bidsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.QueryBidResponse bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeBids(int index) {
+        if (bidsBuilder_ == null) {
+          ensureBidsIsMutable();
+          bids_.remove(index);
+          onChanged();
+        } else {
+          bidsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.QueryBidResponse bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+       */
+      public com.akash.market.v1beta2.QueryProto.QueryBidResponse.Builder getBidsBuilder(
+          int index) {
+        return getBidsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.QueryBidResponse bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+       */
+      public com.akash.market.v1beta2.QueryProto.QueryBidResponseOrBuilder getBidsOrBuilder(
+          int index) {
+        if (bidsBuilder_ == null) {
+          return bids_.get(index);  } else {
+          return bidsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.QueryBidResponse bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.akash.market.v1beta2.QueryProto.QueryBidResponseOrBuilder> 
+           getBidsOrBuilderList() {
+        if (bidsBuilder_ != null) {
+          return bidsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(bids_);
+        }
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.QueryBidResponse bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+       */
+      public com.akash.market.v1beta2.QueryProto.QueryBidResponse.Builder addBidsBuilder() {
+        return getBidsFieldBuilder().addBuilder(
+            com.akash.market.v1beta2.QueryProto.QueryBidResponse.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.QueryBidResponse bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+       */
+      public com.akash.market.v1beta2.QueryProto.QueryBidResponse.Builder addBidsBuilder(
+          int index) {
+        return getBidsFieldBuilder().addBuilder(
+            index, com.akash.market.v1beta2.QueryProto.QueryBidResponse.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.QueryBidResponse bids = 1 [json_name = "bids", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.akash.market.v1beta2.QueryProto.QueryBidResponse.Builder> 
+           getBidsBuilderList() {
+        return getBidsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.akash.market.v1beta2.QueryProto.QueryBidResponse, com.akash.market.v1beta2.QueryProto.QueryBidResponse.Builder, com.akash.market.v1beta2.QueryProto.QueryBidResponseOrBuilder> 
+          getBidsFieldBuilder() {
+        if (bidsBuilder_ == null) {
+          bidsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.akash.market.v1beta2.QueryProto.QueryBidResponse, com.akash.market.v1beta2.QueryProto.QueryBidResponse.Builder, com.akash.market.v1beta2.QueryProto.QueryBidResponseOrBuilder>(
+                  bids_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          bids_ = null;
+        }
+        return bidsBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.market.v1beta2.QueryBidsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.market.v1beta2.QueryBidsResponse)
+    private static final com.akash.market.v1beta2.QueryProto.QueryBidsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.market.v1beta2.QueryProto.QueryBidsResponse();
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryBidsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryBidsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryBidsResponse>() {
+      @java.lang.Override
+      public QueryBidsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryBidsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryBidsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.market.v1beta2.QueryProto.QueryBidsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryBidRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.market.v1beta2.QueryBidRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.akash.market.v1beta2.BidID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+     * @return Whether the id field is set.
+     */
+    boolean hasId();
+    /**
+     * <code>.akash.market.v1beta2.BidID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+     * @return The id.
+     */
+    com.akash.market.v1beta2.BidProto.BidID getId();
+    /**
+     * <code>.akash.market.v1beta2.BidID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+     */
+    com.akash.market.v1beta2.BidProto.BidIDOrBuilder getIdOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryBidRequest is request type for the Query/Bid RPC method
+   * </pre>
+   *
+   * Protobuf type {@code akash.market.v1beta2.QueryBidRequest}
+   */
+  public static final class QueryBidRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.market.v1beta2.QueryBidRequest)
+      QueryBidRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryBidRequest.newBuilder() to construct.
+    private QueryBidRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryBidRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryBidRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryBidRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryBidRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.market.v1beta2.QueryProto.QueryBidRequest.class, com.akash.market.v1beta2.QueryProto.QueryBidRequest.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private com.akash.market.v1beta2.BidProto.BidID id_;
+    /**
+     * <code>.akash.market.v1beta2.BidID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+     * @return Whether the id field is set.
+     */
+    @java.lang.Override
+    public boolean hasId() {
+      return id_ != null;
+    }
+    /**
+     * <code>.akash.market.v1beta2.BidID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public com.akash.market.v1beta2.BidProto.BidID getId() {
+      return id_ == null ? com.akash.market.v1beta2.BidProto.BidID.getDefaultInstance() : id_;
+    }
+    /**
+     * <code>.akash.market.v1beta2.BidID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+     */
+    @java.lang.Override
+    public com.akash.market.v1beta2.BidProto.BidIDOrBuilder getIdOrBuilder() {
+      return id_ == null ? com.akash.market.v1beta2.BidProto.BidID.getDefaultInstance() : id_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != null) {
+        output.writeMessage(1, getId());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getId());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.market.v1beta2.QueryProto.QueryBidRequest)) {
+        return super.equals(obj);
+      }
+      com.akash.market.v1beta2.QueryProto.QueryBidRequest other = (com.akash.market.v1beta2.QueryProto.QueryBidRequest) obj;
+
+      if (hasId() != other.hasId()) return false;
+      if (hasId()) {
+        if (!getId()
+            .equals(other.getId())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasId()) {
+        hash = (37 * hash) + ID_FIELD_NUMBER;
+        hash = (53 * hash) + getId().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryBidRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryBidRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryBidRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryBidRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryBidRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryBidRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryBidRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryBidRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryBidRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryBidRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryBidRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryBidRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.market.v1beta2.QueryProto.QueryBidRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryBidRequest is request type for the Query/Bid RPC method
+     * </pre>
+     *
+     * Protobuf type {@code akash.market.v1beta2.QueryBidRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.market.v1beta2.QueryBidRequest)
+        com.akash.market.v1beta2.QueryProto.QueryBidRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryBidRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryBidRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.market.v1beta2.QueryProto.QueryBidRequest.class, com.akash.market.v1beta2.QueryProto.QueryBidRequest.Builder.class);
+      }
+
+      // Construct using com.akash.market.v1beta2.QueryProto.QueryBidRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = null;
+        if (idBuilder_ != null) {
+          idBuilder_.dispose();
+          idBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryBidRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta2.QueryProto.QueryBidRequest getDefaultInstanceForType() {
+        return com.akash.market.v1beta2.QueryProto.QueryBidRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta2.QueryProto.QueryBidRequest build() {
+        com.akash.market.v1beta2.QueryProto.QueryBidRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta2.QueryProto.QueryBidRequest buildPartial() {
+        com.akash.market.v1beta2.QueryProto.QueryBidRequest result = new com.akash.market.v1beta2.QueryProto.QueryBidRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.akash.market.v1beta2.QueryProto.QueryBidRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = idBuilder_ == null
+              ? id_
+              : idBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.market.v1beta2.QueryProto.QueryBidRequest) {
+          return mergeFrom((com.akash.market.v1beta2.QueryProto.QueryBidRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.market.v1beta2.QueryProto.QueryBidRequest other) {
+        if (other == com.akash.market.v1beta2.QueryProto.QueryBidRequest.getDefaultInstance()) return this;
+        if (other.hasId()) {
+          mergeId(other.getId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getIdFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.akash.market.v1beta2.BidProto.BidID id_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.market.v1beta2.BidProto.BidID, com.akash.market.v1beta2.BidProto.BidID.Builder, com.akash.market.v1beta2.BidProto.BidIDOrBuilder> idBuilder_;
+      /**
+       * <code>.akash.market.v1beta2.BidID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       * @return Whether the id field is set.
+       */
+      public boolean hasId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.akash.market.v1beta2.BidID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       * @return The id.
+       */
+      public com.akash.market.v1beta2.BidProto.BidID getId() {
+        if (idBuilder_ == null) {
+          return id_ == null ? com.akash.market.v1beta2.BidProto.BidID.getDefaultInstance() : id_;
+        } else {
+          return idBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.akash.market.v1beta2.BidID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       */
+      public Builder setId(com.akash.market.v1beta2.BidProto.BidID value) {
+        if (idBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          id_ = value;
+        } else {
+          idBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta2.BidID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       */
+      public Builder setId(
+          com.akash.market.v1beta2.BidProto.BidID.Builder builderForValue) {
+        if (idBuilder_ == null) {
+          id_ = builderForValue.build();
+        } else {
+          idBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta2.BidID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       */
+      public Builder mergeId(com.akash.market.v1beta2.BidProto.BidID value) {
+        if (idBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            id_ != null &&
+            id_ != com.akash.market.v1beta2.BidProto.BidID.getDefaultInstance()) {
+            getIdBuilder().mergeFrom(value);
+          } else {
+            id_ = value;
+          }
+        } else {
+          idBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta2.BidID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = null;
+        if (idBuilder_ != null) {
+          idBuilder_.dispose();
+          idBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta2.BidID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       */
+      public com.akash.market.v1beta2.BidProto.BidID.Builder getIdBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.akash.market.v1beta2.BidID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       */
+      public com.akash.market.v1beta2.BidProto.BidIDOrBuilder getIdOrBuilder() {
+        if (idBuilder_ != null) {
+          return idBuilder_.getMessageOrBuilder();
+        } else {
+          return id_ == null ?
+              com.akash.market.v1beta2.BidProto.BidID.getDefaultInstance() : id_;
+        }
+      }
+      /**
+       * <code>.akash.market.v1beta2.BidID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.market.v1beta2.BidProto.BidID, com.akash.market.v1beta2.BidProto.BidID.Builder, com.akash.market.v1beta2.BidProto.BidIDOrBuilder> 
+          getIdFieldBuilder() {
+        if (idBuilder_ == null) {
+          idBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.akash.market.v1beta2.BidProto.BidID, com.akash.market.v1beta2.BidProto.BidID.Builder, com.akash.market.v1beta2.BidProto.BidIDOrBuilder>(
+                  getId(),
+                  getParentForChildren(),
+                  isClean());
+          id_ = null;
+        }
+        return idBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.market.v1beta2.QueryBidRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.market.v1beta2.QueryBidRequest)
+    private static final com.akash.market.v1beta2.QueryProto.QueryBidRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.market.v1beta2.QueryProto.QueryBidRequest();
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryBidRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryBidRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryBidRequest>() {
+      @java.lang.Override
+      public QueryBidRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryBidRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryBidRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.market.v1beta2.QueryProto.QueryBidRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryBidResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.market.v1beta2.QueryBidResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.akash.market.v1beta2.Bid bid = 1 [json_name = "bid", (.gogoproto.nullable) = false];</code>
+     * @return Whether the bid field is set.
+     */
+    boolean hasBid();
+    /**
+     * <code>.akash.market.v1beta2.Bid bid = 1 [json_name = "bid", (.gogoproto.nullable) = false];</code>
+     * @return The bid.
+     */
+    com.akash.market.v1beta2.BidProto.Bid getBid();
+    /**
+     * <code>.akash.market.v1beta2.Bid bid = 1 [json_name = "bid", (.gogoproto.nullable) = false];</code>
+     */
+    com.akash.market.v1beta2.BidProto.BidOrBuilder getBidOrBuilder();
+
+    /**
+     * <code>.akash.escrow.v1beta2.Account escrow_account = 2 [json_name = "escrowAccount", (.gogoproto.nullable) = false];</code>
+     * @return Whether the escrowAccount field is set.
+     */
+    boolean hasEscrowAccount();
+    /**
+     * <code>.akash.escrow.v1beta2.Account escrow_account = 2 [json_name = "escrowAccount", (.gogoproto.nullable) = false];</code>
+     * @return The escrowAccount.
+     */
+    com.akash.escrow.v1beta2.TypesProto.Account getEscrowAccount();
+    /**
+     * <code>.akash.escrow.v1beta2.Account escrow_account = 2 [json_name = "escrowAccount", (.gogoproto.nullable) = false];</code>
+     */
+    com.akash.escrow.v1beta2.TypesProto.AccountOrBuilder getEscrowAccountOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryBidResponse is response type for the Query/Bid RPC method
+   * </pre>
+   *
+   * Protobuf type {@code akash.market.v1beta2.QueryBidResponse}
+   */
+  public static final class QueryBidResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.market.v1beta2.QueryBidResponse)
+      QueryBidResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryBidResponse.newBuilder() to construct.
+    private QueryBidResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryBidResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryBidResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryBidResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryBidResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.market.v1beta2.QueryProto.QueryBidResponse.class, com.akash.market.v1beta2.QueryProto.QueryBidResponse.Builder.class);
+    }
+
+    public static final int BID_FIELD_NUMBER = 1;
+    private com.akash.market.v1beta2.BidProto.Bid bid_;
+    /**
+     * <code>.akash.market.v1beta2.Bid bid = 1 [json_name = "bid", (.gogoproto.nullable) = false];</code>
+     * @return Whether the bid field is set.
+     */
+    @java.lang.Override
+    public boolean hasBid() {
+      return bid_ != null;
+    }
+    /**
+     * <code>.akash.market.v1beta2.Bid bid = 1 [json_name = "bid", (.gogoproto.nullable) = false];</code>
+     * @return The bid.
+     */
+    @java.lang.Override
+    public com.akash.market.v1beta2.BidProto.Bid getBid() {
+      return bid_ == null ? com.akash.market.v1beta2.BidProto.Bid.getDefaultInstance() : bid_;
+    }
+    /**
+     * <code>.akash.market.v1beta2.Bid bid = 1 [json_name = "bid", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.akash.market.v1beta2.BidProto.BidOrBuilder getBidOrBuilder() {
+      return bid_ == null ? com.akash.market.v1beta2.BidProto.Bid.getDefaultInstance() : bid_;
+    }
+
+    public static final int ESCROW_ACCOUNT_FIELD_NUMBER = 2;
+    private com.akash.escrow.v1beta2.TypesProto.Account escrowAccount_;
+    /**
+     * <code>.akash.escrow.v1beta2.Account escrow_account = 2 [json_name = "escrowAccount", (.gogoproto.nullable) = false];</code>
+     * @return Whether the escrowAccount field is set.
+     */
+    @java.lang.Override
+    public boolean hasEscrowAccount() {
+      return escrowAccount_ != null;
+    }
+    /**
+     * <code>.akash.escrow.v1beta2.Account escrow_account = 2 [json_name = "escrowAccount", (.gogoproto.nullable) = false];</code>
+     * @return The escrowAccount.
+     */
+    @java.lang.Override
+    public com.akash.escrow.v1beta2.TypesProto.Account getEscrowAccount() {
+      return escrowAccount_ == null ? com.akash.escrow.v1beta2.TypesProto.Account.getDefaultInstance() : escrowAccount_;
+    }
+    /**
+     * <code>.akash.escrow.v1beta2.Account escrow_account = 2 [json_name = "escrowAccount", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.akash.escrow.v1beta2.TypesProto.AccountOrBuilder getEscrowAccountOrBuilder() {
+      return escrowAccount_ == null ? com.akash.escrow.v1beta2.TypesProto.Account.getDefaultInstance() : escrowAccount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (bid_ != null) {
+        output.writeMessage(1, getBid());
+      }
+      if (escrowAccount_ != null) {
+        output.writeMessage(2, getEscrowAccount());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (bid_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getBid());
+      }
+      if (escrowAccount_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getEscrowAccount());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.market.v1beta2.QueryProto.QueryBidResponse)) {
+        return super.equals(obj);
+      }
+      com.akash.market.v1beta2.QueryProto.QueryBidResponse other = (com.akash.market.v1beta2.QueryProto.QueryBidResponse) obj;
+
+      if (hasBid() != other.hasBid()) return false;
+      if (hasBid()) {
+        if (!getBid()
+            .equals(other.getBid())) return false;
+      }
+      if (hasEscrowAccount() != other.hasEscrowAccount()) return false;
+      if (hasEscrowAccount()) {
+        if (!getEscrowAccount()
+            .equals(other.getEscrowAccount())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasBid()) {
+        hash = (37 * hash) + BID_FIELD_NUMBER;
+        hash = (53 * hash) + getBid().hashCode();
+      }
+      if (hasEscrowAccount()) {
+        hash = (37 * hash) + ESCROW_ACCOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getEscrowAccount().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryBidResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryBidResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryBidResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryBidResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryBidResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryBidResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryBidResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryBidResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryBidResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryBidResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryBidResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryBidResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.market.v1beta2.QueryProto.QueryBidResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryBidResponse is response type for the Query/Bid RPC method
+     * </pre>
+     *
+     * Protobuf type {@code akash.market.v1beta2.QueryBidResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.market.v1beta2.QueryBidResponse)
+        com.akash.market.v1beta2.QueryProto.QueryBidResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryBidResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryBidResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.market.v1beta2.QueryProto.QueryBidResponse.class, com.akash.market.v1beta2.QueryProto.QueryBidResponse.Builder.class);
+      }
+
+      // Construct using com.akash.market.v1beta2.QueryProto.QueryBidResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        bid_ = null;
+        if (bidBuilder_ != null) {
+          bidBuilder_.dispose();
+          bidBuilder_ = null;
+        }
+        escrowAccount_ = null;
+        if (escrowAccountBuilder_ != null) {
+          escrowAccountBuilder_.dispose();
+          escrowAccountBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryBidResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta2.QueryProto.QueryBidResponse getDefaultInstanceForType() {
+        return com.akash.market.v1beta2.QueryProto.QueryBidResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta2.QueryProto.QueryBidResponse build() {
+        com.akash.market.v1beta2.QueryProto.QueryBidResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta2.QueryProto.QueryBidResponse buildPartial() {
+        com.akash.market.v1beta2.QueryProto.QueryBidResponse result = new com.akash.market.v1beta2.QueryProto.QueryBidResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.akash.market.v1beta2.QueryProto.QueryBidResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.bid_ = bidBuilder_ == null
+              ? bid_
+              : bidBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.escrowAccount_ = escrowAccountBuilder_ == null
+              ? escrowAccount_
+              : escrowAccountBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.market.v1beta2.QueryProto.QueryBidResponse) {
+          return mergeFrom((com.akash.market.v1beta2.QueryProto.QueryBidResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.market.v1beta2.QueryProto.QueryBidResponse other) {
+        if (other == com.akash.market.v1beta2.QueryProto.QueryBidResponse.getDefaultInstance()) return this;
+        if (other.hasBid()) {
+          mergeBid(other.getBid());
+        }
+        if (other.hasEscrowAccount()) {
+          mergeEscrowAccount(other.getEscrowAccount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getBidFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getEscrowAccountFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.akash.market.v1beta2.BidProto.Bid bid_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.market.v1beta2.BidProto.Bid, com.akash.market.v1beta2.BidProto.Bid.Builder, com.akash.market.v1beta2.BidProto.BidOrBuilder> bidBuilder_;
+      /**
+       * <code>.akash.market.v1beta2.Bid bid = 1 [json_name = "bid", (.gogoproto.nullable) = false];</code>
+       * @return Whether the bid field is set.
+       */
+      public boolean hasBid() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.akash.market.v1beta2.Bid bid = 1 [json_name = "bid", (.gogoproto.nullable) = false];</code>
+       * @return The bid.
+       */
+      public com.akash.market.v1beta2.BidProto.Bid getBid() {
+        if (bidBuilder_ == null) {
+          return bid_ == null ? com.akash.market.v1beta2.BidProto.Bid.getDefaultInstance() : bid_;
+        } else {
+          return bidBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.akash.market.v1beta2.Bid bid = 1 [json_name = "bid", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBid(com.akash.market.v1beta2.BidProto.Bid value) {
+        if (bidBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bid_ = value;
+        } else {
+          bidBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta2.Bid bid = 1 [json_name = "bid", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setBid(
+          com.akash.market.v1beta2.BidProto.Bid.Builder builderForValue) {
+        if (bidBuilder_ == null) {
+          bid_ = builderForValue.build();
+        } else {
+          bidBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta2.Bid bid = 1 [json_name = "bid", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeBid(com.akash.market.v1beta2.BidProto.Bid value) {
+        if (bidBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            bid_ != null &&
+            bid_ != com.akash.market.v1beta2.BidProto.Bid.getDefaultInstance()) {
+            getBidBuilder().mergeFrom(value);
+          } else {
+            bid_ = value;
+          }
+        } else {
+          bidBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta2.Bid bid = 1 [json_name = "bid", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearBid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        bid_ = null;
+        if (bidBuilder_ != null) {
+          bidBuilder_.dispose();
+          bidBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta2.Bid bid = 1 [json_name = "bid", (.gogoproto.nullable) = false];</code>
+       */
+      public com.akash.market.v1beta2.BidProto.Bid.Builder getBidBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getBidFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.akash.market.v1beta2.Bid bid = 1 [json_name = "bid", (.gogoproto.nullable) = false];</code>
+       */
+      public com.akash.market.v1beta2.BidProto.BidOrBuilder getBidOrBuilder() {
+        if (bidBuilder_ != null) {
+          return bidBuilder_.getMessageOrBuilder();
+        } else {
+          return bid_ == null ?
+              com.akash.market.v1beta2.BidProto.Bid.getDefaultInstance() : bid_;
+        }
+      }
+      /**
+       * <code>.akash.market.v1beta2.Bid bid = 1 [json_name = "bid", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.market.v1beta2.BidProto.Bid, com.akash.market.v1beta2.BidProto.Bid.Builder, com.akash.market.v1beta2.BidProto.BidOrBuilder> 
+          getBidFieldBuilder() {
+        if (bidBuilder_ == null) {
+          bidBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.akash.market.v1beta2.BidProto.Bid, com.akash.market.v1beta2.BidProto.Bid.Builder, com.akash.market.v1beta2.BidProto.BidOrBuilder>(
+                  getBid(),
+                  getParentForChildren(),
+                  isClean());
+          bid_ = null;
+        }
+        return bidBuilder_;
+      }
+
+      private com.akash.escrow.v1beta2.TypesProto.Account escrowAccount_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.escrow.v1beta2.TypesProto.Account, com.akash.escrow.v1beta2.TypesProto.Account.Builder, com.akash.escrow.v1beta2.TypesProto.AccountOrBuilder> escrowAccountBuilder_;
+      /**
+       * <code>.akash.escrow.v1beta2.Account escrow_account = 2 [json_name = "escrowAccount", (.gogoproto.nullable) = false];</code>
+       * @return Whether the escrowAccount field is set.
+       */
+      public boolean hasEscrowAccount() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.akash.escrow.v1beta2.Account escrow_account = 2 [json_name = "escrowAccount", (.gogoproto.nullable) = false];</code>
+       * @return The escrowAccount.
+       */
+      public com.akash.escrow.v1beta2.TypesProto.Account getEscrowAccount() {
+        if (escrowAccountBuilder_ == null) {
+          return escrowAccount_ == null ? com.akash.escrow.v1beta2.TypesProto.Account.getDefaultInstance() : escrowAccount_;
+        } else {
+          return escrowAccountBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.akash.escrow.v1beta2.Account escrow_account = 2 [json_name = "escrowAccount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setEscrowAccount(com.akash.escrow.v1beta2.TypesProto.Account value) {
+        if (escrowAccountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          escrowAccount_ = value;
+        } else {
+          escrowAccountBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.escrow.v1beta2.Account escrow_account = 2 [json_name = "escrowAccount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setEscrowAccount(
+          com.akash.escrow.v1beta2.TypesProto.Account.Builder builderForValue) {
+        if (escrowAccountBuilder_ == null) {
+          escrowAccount_ = builderForValue.build();
+        } else {
+          escrowAccountBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.escrow.v1beta2.Account escrow_account = 2 [json_name = "escrowAccount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeEscrowAccount(com.akash.escrow.v1beta2.TypesProto.Account value) {
+        if (escrowAccountBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            escrowAccount_ != null &&
+            escrowAccount_ != com.akash.escrow.v1beta2.TypesProto.Account.getDefaultInstance()) {
+            getEscrowAccountBuilder().mergeFrom(value);
+          } else {
+            escrowAccount_ = value;
+          }
+        } else {
+          escrowAccountBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.escrow.v1beta2.Account escrow_account = 2 [json_name = "escrowAccount", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearEscrowAccount() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        escrowAccount_ = null;
+        if (escrowAccountBuilder_ != null) {
+          escrowAccountBuilder_.dispose();
+          escrowAccountBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.escrow.v1beta2.Account escrow_account = 2 [json_name = "escrowAccount", (.gogoproto.nullable) = false];</code>
+       */
+      public com.akash.escrow.v1beta2.TypesProto.Account.Builder getEscrowAccountBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getEscrowAccountFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.akash.escrow.v1beta2.Account escrow_account = 2 [json_name = "escrowAccount", (.gogoproto.nullable) = false];</code>
+       */
+      public com.akash.escrow.v1beta2.TypesProto.AccountOrBuilder getEscrowAccountOrBuilder() {
+        if (escrowAccountBuilder_ != null) {
+          return escrowAccountBuilder_.getMessageOrBuilder();
+        } else {
+          return escrowAccount_ == null ?
+              com.akash.escrow.v1beta2.TypesProto.Account.getDefaultInstance() : escrowAccount_;
+        }
+      }
+      /**
+       * <code>.akash.escrow.v1beta2.Account escrow_account = 2 [json_name = "escrowAccount", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.escrow.v1beta2.TypesProto.Account, com.akash.escrow.v1beta2.TypesProto.Account.Builder, com.akash.escrow.v1beta2.TypesProto.AccountOrBuilder> 
+          getEscrowAccountFieldBuilder() {
+        if (escrowAccountBuilder_ == null) {
+          escrowAccountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.akash.escrow.v1beta2.TypesProto.Account, com.akash.escrow.v1beta2.TypesProto.Account.Builder, com.akash.escrow.v1beta2.TypesProto.AccountOrBuilder>(
+                  getEscrowAccount(),
+                  getParentForChildren(),
+                  isClean());
+          escrowAccount_ = null;
+        }
+        return escrowAccountBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.market.v1beta2.QueryBidResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.market.v1beta2.QueryBidResponse)
+    private static final com.akash.market.v1beta2.QueryProto.QueryBidResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.market.v1beta2.QueryProto.QueryBidResponse();
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryBidResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryBidResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryBidResponse>() {
+      @java.lang.Override
+      public QueryBidResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryBidResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryBidResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.market.v1beta2.QueryProto.QueryBidResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryLeasesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.market.v1beta2.QueryLeasesRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.akash.market.v1beta2.LeaseFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+     * @return Whether the filters field is set.
+     */
+    boolean hasFilters();
+    /**
+     * <code>.akash.market.v1beta2.LeaseFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+     * @return The filters.
+     */
+    com.akash.market.v1beta2.LeaseProto.LeaseFilters getFilters();
+    /**
+     * <code>.akash.market.v1beta2.LeaseFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+     */
+    com.akash.market.v1beta2.LeaseProto.LeaseFiltersOrBuilder getFiltersOrBuilder();
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryLeasesRequest is request type for the Query/Leases RPC method
+   * </pre>
+   *
+   * Protobuf type {@code akash.market.v1beta2.QueryLeasesRequest}
+   */
+  public static final class QueryLeasesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.market.v1beta2.QueryLeasesRequest)
+      QueryLeasesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryLeasesRequest.newBuilder() to construct.
+    private QueryLeasesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryLeasesRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryLeasesRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryLeasesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryLeasesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.market.v1beta2.QueryProto.QueryLeasesRequest.class, com.akash.market.v1beta2.QueryProto.QueryLeasesRequest.Builder.class);
+    }
+
+    public static final int FILTERS_FIELD_NUMBER = 1;
+    private com.akash.market.v1beta2.LeaseProto.LeaseFilters filters_;
+    /**
+     * <code>.akash.market.v1beta2.LeaseFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+     * @return Whether the filters field is set.
+     */
+    @java.lang.Override
+    public boolean hasFilters() {
+      return filters_ != null;
+    }
+    /**
+     * <code>.akash.market.v1beta2.LeaseFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+     * @return The filters.
+     */
+    @java.lang.Override
+    public com.akash.market.v1beta2.LeaseProto.LeaseFilters getFilters() {
+      return filters_ == null ? com.akash.market.v1beta2.LeaseProto.LeaseFilters.getDefaultInstance() : filters_;
+    }
+    /**
+     * <code>.akash.market.v1beta2.LeaseFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.akash.market.v1beta2.LeaseProto.LeaseFiltersOrBuilder getFiltersOrBuilder() {
+      return filters_ == null ? com.akash.market.v1beta2.LeaseProto.LeaseFilters.getDefaultInstance() : filters_;
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (filters_ != null) {
+        output.writeMessage(1, getFilters());
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (filters_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getFilters());
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.market.v1beta2.QueryProto.QueryLeasesRequest)) {
+        return super.equals(obj);
+      }
+      com.akash.market.v1beta2.QueryProto.QueryLeasesRequest other = (com.akash.market.v1beta2.QueryProto.QueryLeasesRequest) obj;
+
+      if (hasFilters() != other.hasFilters()) return false;
+      if (hasFilters()) {
+        if (!getFilters()
+            .equals(other.getFilters())) return false;
+      }
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasFilters()) {
+        hash = (37 * hash) + FILTERS_FIELD_NUMBER;
+        hash = (53 * hash) + getFilters().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryLeasesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryLeasesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryLeasesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryLeasesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryLeasesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryLeasesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryLeasesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryLeasesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryLeasesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryLeasesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryLeasesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryLeasesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.market.v1beta2.QueryProto.QueryLeasesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryLeasesRequest is request type for the Query/Leases RPC method
+     * </pre>
+     *
+     * Protobuf type {@code akash.market.v1beta2.QueryLeasesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.market.v1beta2.QueryLeasesRequest)
+        com.akash.market.v1beta2.QueryProto.QueryLeasesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryLeasesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryLeasesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.market.v1beta2.QueryProto.QueryLeasesRequest.class, com.akash.market.v1beta2.QueryProto.QueryLeasesRequest.Builder.class);
+      }
+
+      // Construct using com.akash.market.v1beta2.QueryProto.QueryLeasesRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        filters_ = null;
+        if (filtersBuilder_ != null) {
+          filtersBuilder_.dispose();
+          filtersBuilder_ = null;
+        }
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryLeasesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta2.QueryProto.QueryLeasesRequest getDefaultInstanceForType() {
+        return com.akash.market.v1beta2.QueryProto.QueryLeasesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta2.QueryProto.QueryLeasesRequest build() {
+        com.akash.market.v1beta2.QueryProto.QueryLeasesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta2.QueryProto.QueryLeasesRequest buildPartial() {
+        com.akash.market.v1beta2.QueryProto.QueryLeasesRequest result = new com.akash.market.v1beta2.QueryProto.QueryLeasesRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.akash.market.v1beta2.QueryProto.QueryLeasesRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.filters_ = filtersBuilder_ == null
+              ? filters_
+              : filtersBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.market.v1beta2.QueryProto.QueryLeasesRequest) {
+          return mergeFrom((com.akash.market.v1beta2.QueryProto.QueryLeasesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.market.v1beta2.QueryProto.QueryLeasesRequest other) {
+        if (other == com.akash.market.v1beta2.QueryProto.QueryLeasesRequest.getDefaultInstance()) return this;
+        if (other.hasFilters()) {
+          mergeFilters(other.getFilters());
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getFiltersFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.akash.market.v1beta2.LeaseProto.LeaseFilters filters_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.market.v1beta2.LeaseProto.LeaseFilters, com.akash.market.v1beta2.LeaseProto.LeaseFilters.Builder, com.akash.market.v1beta2.LeaseProto.LeaseFiltersOrBuilder> filtersBuilder_;
+      /**
+       * <code>.akash.market.v1beta2.LeaseFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+       * @return Whether the filters field is set.
+       */
+      public boolean hasFilters() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.akash.market.v1beta2.LeaseFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+       * @return The filters.
+       */
+      public com.akash.market.v1beta2.LeaseProto.LeaseFilters getFilters() {
+        if (filtersBuilder_ == null) {
+          return filters_ == null ? com.akash.market.v1beta2.LeaseProto.LeaseFilters.getDefaultInstance() : filters_;
+        } else {
+          return filtersBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.akash.market.v1beta2.LeaseFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFilters(com.akash.market.v1beta2.LeaseProto.LeaseFilters value) {
+        if (filtersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          filters_ = value;
+        } else {
+          filtersBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta2.LeaseFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setFilters(
+          com.akash.market.v1beta2.LeaseProto.LeaseFilters.Builder builderForValue) {
+        if (filtersBuilder_ == null) {
+          filters_ = builderForValue.build();
+        } else {
+          filtersBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta2.LeaseFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeFilters(com.akash.market.v1beta2.LeaseProto.LeaseFilters value) {
+        if (filtersBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            filters_ != null &&
+            filters_ != com.akash.market.v1beta2.LeaseProto.LeaseFilters.getDefaultInstance()) {
+            getFiltersBuilder().mergeFrom(value);
+          } else {
+            filters_ = value;
+          }
+        } else {
+          filtersBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta2.LeaseFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearFilters() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        filters_ = null;
+        if (filtersBuilder_ != null) {
+          filtersBuilder_.dispose();
+          filtersBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta2.LeaseFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.akash.market.v1beta2.LeaseProto.LeaseFilters.Builder getFiltersBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getFiltersFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.akash.market.v1beta2.LeaseFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+       */
+      public com.akash.market.v1beta2.LeaseProto.LeaseFiltersOrBuilder getFiltersOrBuilder() {
+        if (filtersBuilder_ != null) {
+          return filtersBuilder_.getMessageOrBuilder();
+        } else {
+          return filters_ == null ?
+              com.akash.market.v1beta2.LeaseProto.LeaseFilters.getDefaultInstance() : filters_;
+        }
+      }
+      /**
+       * <code>.akash.market.v1beta2.LeaseFilters filters = 1 [json_name = "filters", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.market.v1beta2.LeaseProto.LeaseFilters, com.akash.market.v1beta2.LeaseProto.LeaseFilters.Builder, com.akash.market.v1beta2.LeaseProto.LeaseFiltersOrBuilder> 
+          getFiltersFieldBuilder() {
+        if (filtersBuilder_ == null) {
+          filtersBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.akash.market.v1beta2.LeaseProto.LeaseFilters, com.akash.market.v1beta2.LeaseProto.LeaseFilters.Builder, com.akash.market.v1beta2.LeaseProto.LeaseFiltersOrBuilder>(
+                  getFilters(),
+                  getParentForChildren(),
+                  isClean());
+          filters_ = null;
+        }
+        return filtersBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageRequest pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageRequest value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageRequest pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageRequest, com.cosmos.base.query.v1beta1.PaginationProto.PageRequest.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageRequestOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.market.v1beta2.QueryLeasesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.market.v1beta2.QueryLeasesRequest)
+    private static final com.akash.market.v1beta2.QueryProto.QueryLeasesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.market.v1beta2.QueryProto.QueryLeasesRequest();
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryLeasesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryLeasesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryLeasesRequest>() {
+      @java.lang.Override
+      public QueryLeasesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryLeasesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryLeasesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.market.v1beta2.QueryProto.QueryLeasesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryLeasesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.market.v1beta2.QueryLeasesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .akash.market.v1beta2.QueryLeaseResponse leases = 1 [json_name = "leases", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.akash.market.v1beta2.QueryProto.QueryLeaseResponse> 
+        getLeasesList();
+    /**
+     * <code>repeated .akash.market.v1beta2.QueryLeaseResponse leases = 1 [json_name = "leases", (.gogoproto.nullable) = false];</code>
+     */
+    com.akash.market.v1beta2.QueryProto.QueryLeaseResponse getLeases(int index);
+    /**
+     * <code>repeated .akash.market.v1beta2.QueryLeaseResponse leases = 1 [json_name = "leases", (.gogoproto.nullable) = false];</code>
+     */
+    int getLeasesCount();
+    /**
+     * <code>repeated .akash.market.v1beta2.QueryLeaseResponse leases = 1 [json_name = "leases", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.akash.market.v1beta2.QueryProto.QueryLeaseResponseOrBuilder> 
+        getLeasesOrBuilderList();
+    /**
+     * <code>repeated .akash.market.v1beta2.QueryLeaseResponse leases = 1 [json_name = "leases", (.gogoproto.nullable) = false];</code>
+     */
+    com.akash.market.v1beta2.QueryProto.QueryLeaseResponseOrBuilder getLeasesOrBuilder(
+        int index);
+
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    boolean hasPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination();
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryLeasesResponse is response type for the Query/Leases RPC method
+   * </pre>
+   *
+   * Protobuf type {@code akash.market.v1beta2.QueryLeasesResponse}
+   */
+  public static final class QueryLeasesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.market.v1beta2.QueryLeasesResponse)
+      QueryLeasesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryLeasesResponse.newBuilder() to construct.
+    private QueryLeasesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryLeasesResponse() {
+      leases_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryLeasesResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryLeasesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryLeasesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.market.v1beta2.QueryProto.QueryLeasesResponse.class, com.akash.market.v1beta2.QueryProto.QueryLeasesResponse.Builder.class);
+    }
+
+    public static final int LEASES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.akash.market.v1beta2.QueryProto.QueryLeaseResponse> leases_;
+    /**
+     * <code>repeated .akash.market.v1beta2.QueryLeaseResponse leases = 1 [json_name = "leases", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.akash.market.v1beta2.QueryProto.QueryLeaseResponse> getLeasesList() {
+      return leases_;
+    }
+    /**
+     * <code>repeated .akash.market.v1beta2.QueryLeaseResponse leases = 1 [json_name = "leases", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.akash.market.v1beta2.QueryProto.QueryLeaseResponseOrBuilder> 
+        getLeasesOrBuilderList() {
+      return leases_;
+    }
+    /**
+     * <code>repeated .akash.market.v1beta2.QueryLeaseResponse leases = 1 [json_name = "leases", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getLeasesCount() {
+      return leases_.size();
+    }
+    /**
+     * <code>repeated .akash.market.v1beta2.QueryLeaseResponse leases = 1 [json_name = "leases", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.akash.market.v1beta2.QueryProto.QueryLeaseResponse getLeases(int index) {
+      return leases_.get(index);
+    }
+    /**
+     * <code>repeated .akash.market.v1beta2.QueryLeaseResponse leases = 1 [json_name = "leases", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.akash.market.v1beta2.QueryProto.QueryLeaseResponseOrBuilder getLeasesOrBuilder(
+        int index) {
+      return leases_.get(index);
+    }
+
+    public static final int PAGINATION_FIELD_NUMBER = 2;
+    private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return Whether the pagination field is set.
+     */
+    @java.lang.Override
+    public boolean hasPagination() {
+      return pagination_ != null;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     * @return The pagination.
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+    /**
+     * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+      return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < leases_.size(); i++) {
+        output.writeMessage(1, leases_.get(i));
+      }
+      if (pagination_ != null) {
+        output.writeMessage(2, getPagination());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < leases_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, leases_.get(i));
+      }
+      if (pagination_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPagination());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.market.v1beta2.QueryProto.QueryLeasesResponse)) {
+        return super.equals(obj);
+      }
+      com.akash.market.v1beta2.QueryProto.QueryLeasesResponse other = (com.akash.market.v1beta2.QueryProto.QueryLeasesResponse) obj;
+
+      if (!getLeasesList()
+          .equals(other.getLeasesList())) return false;
+      if (hasPagination() != other.hasPagination()) return false;
+      if (hasPagination()) {
+        if (!getPagination()
+            .equals(other.getPagination())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getLeasesCount() > 0) {
+        hash = (37 * hash) + LEASES_FIELD_NUMBER;
+        hash = (53 * hash) + getLeasesList().hashCode();
+      }
+      if (hasPagination()) {
+        hash = (37 * hash) + PAGINATION_FIELD_NUMBER;
+        hash = (53 * hash) + getPagination().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryLeasesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryLeasesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryLeasesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryLeasesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryLeasesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryLeasesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryLeasesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryLeasesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryLeasesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryLeasesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryLeasesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryLeasesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.market.v1beta2.QueryProto.QueryLeasesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryLeasesResponse is response type for the Query/Leases RPC method
+     * </pre>
+     *
+     * Protobuf type {@code akash.market.v1beta2.QueryLeasesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.market.v1beta2.QueryLeasesResponse)
+        com.akash.market.v1beta2.QueryProto.QueryLeasesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryLeasesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryLeasesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.market.v1beta2.QueryProto.QueryLeasesResponse.class, com.akash.market.v1beta2.QueryProto.QueryLeasesResponse.Builder.class);
+      }
+
+      // Construct using com.akash.market.v1beta2.QueryProto.QueryLeasesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (leasesBuilder_ == null) {
+          leases_ = java.util.Collections.emptyList();
+        } else {
+          leases_ = null;
+          leasesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryLeasesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta2.QueryProto.QueryLeasesResponse getDefaultInstanceForType() {
+        return com.akash.market.v1beta2.QueryProto.QueryLeasesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta2.QueryProto.QueryLeasesResponse build() {
+        com.akash.market.v1beta2.QueryProto.QueryLeasesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta2.QueryProto.QueryLeasesResponse buildPartial() {
+        com.akash.market.v1beta2.QueryProto.QueryLeasesResponse result = new com.akash.market.v1beta2.QueryProto.QueryLeasesResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.akash.market.v1beta2.QueryProto.QueryLeasesResponse result) {
+        if (leasesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            leases_ = java.util.Collections.unmodifiableList(leases_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.leases_ = leases_;
+        } else {
+          result.leases_ = leasesBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.akash.market.v1beta2.QueryProto.QueryLeasesResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.pagination_ = paginationBuilder_ == null
+              ? pagination_
+              : paginationBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.market.v1beta2.QueryProto.QueryLeasesResponse) {
+          return mergeFrom((com.akash.market.v1beta2.QueryProto.QueryLeasesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.market.v1beta2.QueryProto.QueryLeasesResponse other) {
+        if (other == com.akash.market.v1beta2.QueryProto.QueryLeasesResponse.getDefaultInstance()) return this;
+        if (leasesBuilder_ == null) {
+          if (!other.leases_.isEmpty()) {
+            if (leases_.isEmpty()) {
+              leases_ = other.leases_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureLeasesIsMutable();
+              leases_.addAll(other.leases_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.leases_.isEmpty()) {
+            if (leasesBuilder_.isEmpty()) {
+              leasesBuilder_.dispose();
+              leasesBuilder_ = null;
+              leases_ = other.leases_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              leasesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getLeasesFieldBuilder() : null;
+            } else {
+              leasesBuilder_.addAllMessages(other.leases_);
+            }
+          }
+        }
+        if (other.hasPagination()) {
+          mergePagination(other.getPagination());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.akash.market.v1beta2.QueryProto.QueryLeaseResponse m =
+                    input.readMessage(
+                        com.akash.market.v1beta2.QueryProto.QueryLeaseResponse.parser(),
+                        extensionRegistry);
+                if (leasesBuilder_ == null) {
+                  ensureLeasesIsMutable();
+                  leases_.add(m);
+                } else {
+                  leasesBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPaginationFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.akash.market.v1beta2.QueryProto.QueryLeaseResponse> leases_ =
+        java.util.Collections.emptyList();
+      private void ensureLeasesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          leases_ = new java.util.ArrayList<com.akash.market.v1beta2.QueryProto.QueryLeaseResponse>(leases_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.akash.market.v1beta2.QueryProto.QueryLeaseResponse, com.akash.market.v1beta2.QueryProto.QueryLeaseResponse.Builder, com.akash.market.v1beta2.QueryProto.QueryLeaseResponseOrBuilder> leasesBuilder_;
+
+      /**
+       * <code>repeated .akash.market.v1beta2.QueryLeaseResponse leases = 1 [json_name = "leases", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.akash.market.v1beta2.QueryProto.QueryLeaseResponse> getLeasesList() {
+        if (leasesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(leases_);
+        } else {
+          return leasesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.QueryLeaseResponse leases = 1 [json_name = "leases", (.gogoproto.nullable) = false];</code>
+       */
+      public int getLeasesCount() {
+        if (leasesBuilder_ == null) {
+          return leases_.size();
+        } else {
+          return leasesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.QueryLeaseResponse leases = 1 [json_name = "leases", (.gogoproto.nullable) = false];</code>
+       */
+      public com.akash.market.v1beta2.QueryProto.QueryLeaseResponse getLeases(int index) {
+        if (leasesBuilder_ == null) {
+          return leases_.get(index);
+        } else {
+          return leasesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.QueryLeaseResponse leases = 1 [json_name = "leases", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setLeases(
+          int index, com.akash.market.v1beta2.QueryProto.QueryLeaseResponse value) {
+        if (leasesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLeasesIsMutable();
+          leases_.set(index, value);
+          onChanged();
+        } else {
+          leasesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.QueryLeaseResponse leases = 1 [json_name = "leases", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setLeases(
+          int index, com.akash.market.v1beta2.QueryProto.QueryLeaseResponse.Builder builderForValue) {
+        if (leasesBuilder_ == null) {
+          ensureLeasesIsMutable();
+          leases_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          leasesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.QueryLeaseResponse leases = 1 [json_name = "leases", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addLeases(com.akash.market.v1beta2.QueryProto.QueryLeaseResponse value) {
+        if (leasesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLeasesIsMutable();
+          leases_.add(value);
+          onChanged();
+        } else {
+          leasesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.QueryLeaseResponse leases = 1 [json_name = "leases", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addLeases(
+          int index, com.akash.market.v1beta2.QueryProto.QueryLeaseResponse value) {
+        if (leasesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLeasesIsMutable();
+          leases_.add(index, value);
+          onChanged();
+        } else {
+          leasesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.QueryLeaseResponse leases = 1 [json_name = "leases", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addLeases(
+          com.akash.market.v1beta2.QueryProto.QueryLeaseResponse.Builder builderForValue) {
+        if (leasesBuilder_ == null) {
+          ensureLeasesIsMutable();
+          leases_.add(builderForValue.build());
+          onChanged();
+        } else {
+          leasesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.QueryLeaseResponse leases = 1 [json_name = "leases", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addLeases(
+          int index, com.akash.market.v1beta2.QueryProto.QueryLeaseResponse.Builder builderForValue) {
+        if (leasesBuilder_ == null) {
+          ensureLeasesIsMutable();
+          leases_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          leasesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.QueryLeaseResponse leases = 1 [json_name = "leases", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllLeases(
+          java.lang.Iterable<? extends com.akash.market.v1beta2.QueryProto.QueryLeaseResponse> values) {
+        if (leasesBuilder_ == null) {
+          ensureLeasesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, leases_);
+          onChanged();
+        } else {
+          leasesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.QueryLeaseResponse leases = 1 [json_name = "leases", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearLeases() {
+        if (leasesBuilder_ == null) {
+          leases_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          leasesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.QueryLeaseResponse leases = 1 [json_name = "leases", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeLeases(int index) {
+        if (leasesBuilder_ == null) {
+          ensureLeasesIsMutable();
+          leases_.remove(index);
+          onChanged();
+        } else {
+          leasesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.QueryLeaseResponse leases = 1 [json_name = "leases", (.gogoproto.nullable) = false];</code>
+       */
+      public com.akash.market.v1beta2.QueryProto.QueryLeaseResponse.Builder getLeasesBuilder(
+          int index) {
+        return getLeasesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.QueryLeaseResponse leases = 1 [json_name = "leases", (.gogoproto.nullable) = false];</code>
+       */
+      public com.akash.market.v1beta2.QueryProto.QueryLeaseResponseOrBuilder getLeasesOrBuilder(
+          int index) {
+        if (leasesBuilder_ == null) {
+          return leases_.get(index);  } else {
+          return leasesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.QueryLeaseResponse leases = 1 [json_name = "leases", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.akash.market.v1beta2.QueryProto.QueryLeaseResponseOrBuilder> 
+           getLeasesOrBuilderList() {
+        if (leasesBuilder_ != null) {
+          return leasesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(leases_);
+        }
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.QueryLeaseResponse leases = 1 [json_name = "leases", (.gogoproto.nullable) = false];</code>
+       */
+      public com.akash.market.v1beta2.QueryProto.QueryLeaseResponse.Builder addLeasesBuilder() {
+        return getLeasesFieldBuilder().addBuilder(
+            com.akash.market.v1beta2.QueryProto.QueryLeaseResponse.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.QueryLeaseResponse leases = 1 [json_name = "leases", (.gogoproto.nullable) = false];</code>
+       */
+      public com.akash.market.v1beta2.QueryProto.QueryLeaseResponse.Builder addLeasesBuilder(
+          int index) {
+        return getLeasesFieldBuilder().addBuilder(
+            index, com.akash.market.v1beta2.QueryProto.QueryLeaseResponse.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .akash.market.v1beta2.QueryLeaseResponse leases = 1 [json_name = "leases", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.akash.market.v1beta2.QueryProto.QueryLeaseResponse.Builder> 
+           getLeasesBuilderList() {
+        return getLeasesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.akash.market.v1beta2.QueryProto.QueryLeaseResponse, com.akash.market.v1beta2.QueryProto.QueryLeaseResponse.Builder, com.akash.market.v1beta2.QueryProto.QueryLeaseResponseOrBuilder> 
+          getLeasesFieldBuilder() {
+        if (leasesBuilder_ == null) {
+          leasesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.akash.market.v1beta2.QueryProto.QueryLeaseResponse, com.akash.market.v1beta2.QueryProto.QueryLeaseResponse.Builder, com.akash.market.v1beta2.QueryProto.QueryLeaseResponseOrBuilder>(
+                  leases_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          leases_ = null;
+        }
+        return leasesBuilder_;
+      }
+
+      private com.cosmos.base.query.v1beta1.PaginationProto.PageResponse pagination_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> paginationBuilder_;
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return Whether the pagination field is set.
+       */
+      public boolean hasPagination() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       * @return The pagination.
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse getPagination() {
+        if (paginationBuilder_ == null) {
+          return pagination_ == null ? com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        } else {
+          return paginationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pagination_ = value;
+        } else {
+          paginationBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder setPagination(
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder builderForValue) {
+        if (paginationBuilder_ == null) {
+          pagination_ = builderForValue.build();
+        } else {
+          paginationBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder mergePagination(com.cosmos.base.query.v1beta1.PaginationProto.PageResponse value) {
+        if (paginationBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            pagination_ != null &&
+            pagination_ != com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance()) {
+            getPaginationBuilder().mergeFrom(value);
+          } else {
+            pagination_ = value;
+          }
+        } else {
+          paginationBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public Builder clearPagination() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pagination_ = null;
+        if (paginationBuilder_ != null) {
+          paginationBuilder_.dispose();
+          paginationBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder getPaginationBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPaginationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      public com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder getPaginationOrBuilder() {
+        if (paginationBuilder_ != null) {
+          return paginationBuilder_.getMessageOrBuilder();
+        } else {
+          return pagination_ == null ?
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.getDefaultInstance() : pagination_;
+        }
+      }
+      /**
+       * <code>.cosmos.base.query.v1beta1.PageResponse pagination = 2 [json_name = "pagination"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder> 
+          getPaginationFieldBuilder() {
+        if (paginationBuilder_ == null) {
+          paginationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.query.v1beta1.PaginationProto.PageResponse, com.cosmos.base.query.v1beta1.PaginationProto.PageResponse.Builder, com.cosmos.base.query.v1beta1.PaginationProto.PageResponseOrBuilder>(
+                  getPagination(),
+                  getParentForChildren(),
+                  isClean());
+          pagination_ = null;
+        }
+        return paginationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.market.v1beta2.QueryLeasesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.market.v1beta2.QueryLeasesResponse)
+    private static final com.akash.market.v1beta2.QueryProto.QueryLeasesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.market.v1beta2.QueryProto.QueryLeasesResponse();
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryLeasesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryLeasesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryLeasesResponse>() {
+      @java.lang.Override
+      public QueryLeasesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryLeasesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryLeasesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.market.v1beta2.QueryProto.QueryLeasesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryLeaseRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.market.v1beta2.QueryLeaseRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.akash.market.v1beta2.LeaseID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+     * @return Whether the id field is set.
+     */
+    boolean hasId();
+    /**
+     * <code>.akash.market.v1beta2.LeaseID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+     * @return The id.
+     */
+    com.akash.market.v1beta2.LeaseProto.LeaseID getId();
+    /**
+     * <code>.akash.market.v1beta2.LeaseID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+     */
+    com.akash.market.v1beta2.LeaseProto.LeaseIDOrBuilder getIdOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryLeaseRequest is request type for the Query/Lease RPC method
+   * </pre>
+   *
+   * Protobuf type {@code akash.market.v1beta2.QueryLeaseRequest}
+   */
+  public static final class QueryLeaseRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.market.v1beta2.QueryLeaseRequest)
+      QueryLeaseRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryLeaseRequest.newBuilder() to construct.
+    private QueryLeaseRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryLeaseRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryLeaseRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryLeaseRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryLeaseRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.market.v1beta2.QueryProto.QueryLeaseRequest.class, com.akash.market.v1beta2.QueryProto.QueryLeaseRequest.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private com.akash.market.v1beta2.LeaseProto.LeaseID id_;
+    /**
+     * <code>.akash.market.v1beta2.LeaseID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+     * @return Whether the id field is set.
+     */
+    @java.lang.Override
+    public boolean hasId() {
+      return id_ != null;
+    }
+    /**
+     * <code>.akash.market.v1beta2.LeaseID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public com.akash.market.v1beta2.LeaseProto.LeaseID getId() {
+      return id_ == null ? com.akash.market.v1beta2.LeaseProto.LeaseID.getDefaultInstance() : id_;
+    }
+    /**
+     * <code>.akash.market.v1beta2.LeaseID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+     */
+    @java.lang.Override
+    public com.akash.market.v1beta2.LeaseProto.LeaseIDOrBuilder getIdOrBuilder() {
+      return id_ == null ? com.akash.market.v1beta2.LeaseProto.LeaseID.getDefaultInstance() : id_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != null) {
+        output.writeMessage(1, getId());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getId());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.market.v1beta2.QueryProto.QueryLeaseRequest)) {
+        return super.equals(obj);
+      }
+      com.akash.market.v1beta2.QueryProto.QueryLeaseRequest other = (com.akash.market.v1beta2.QueryProto.QueryLeaseRequest) obj;
+
+      if (hasId() != other.hasId()) return false;
+      if (hasId()) {
+        if (!getId()
+            .equals(other.getId())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasId()) {
+        hash = (37 * hash) + ID_FIELD_NUMBER;
+        hash = (53 * hash) + getId().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryLeaseRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryLeaseRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryLeaseRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryLeaseRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryLeaseRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryLeaseRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryLeaseRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryLeaseRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryLeaseRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryLeaseRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryLeaseRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryLeaseRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.market.v1beta2.QueryProto.QueryLeaseRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryLeaseRequest is request type for the Query/Lease RPC method
+     * </pre>
+     *
+     * Protobuf type {@code akash.market.v1beta2.QueryLeaseRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.market.v1beta2.QueryLeaseRequest)
+        com.akash.market.v1beta2.QueryProto.QueryLeaseRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryLeaseRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryLeaseRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.market.v1beta2.QueryProto.QueryLeaseRequest.class, com.akash.market.v1beta2.QueryProto.QueryLeaseRequest.Builder.class);
+      }
+
+      // Construct using com.akash.market.v1beta2.QueryProto.QueryLeaseRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = null;
+        if (idBuilder_ != null) {
+          idBuilder_.dispose();
+          idBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryLeaseRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta2.QueryProto.QueryLeaseRequest getDefaultInstanceForType() {
+        return com.akash.market.v1beta2.QueryProto.QueryLeaseRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta2.QueryProto.QueryLeaseRequest build() {
+        com.akash.market.v1beta2.QueryProto.QueryLeaseRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta2.QueryProto.QueryLeaseRequest buildPartial() {
+        com.akash.market.v1beta2.QueryProto.QueryLeaseRequest result = new com.akash.market.v1beta2.QueryProto.QueryLeaseRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.akash.market.v1beta2.QueryProto.QueryLeaseRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = idBuilder_ == null
+              ? id_
+              : idBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.market.v1beta2.QueryProto.QueryLeaseRequest) {
+          return mergeFrom((com.akash.market.v1beta2.QueryProto.QueryLeaseRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.market.v1beta2.QueryProto.QueryLeaseRequest other) {
+        if (other == com.akash.market.v1beta2.QueryProto.QueryLeaseRequest.getDefaultInstance()) return this;
+        if (other.hasId()) {
+          mergeId(other.getId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getIdFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.akash.market.v1beta2.LeaseProto.LeaseID id_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.market.v1beta2.LeaseProto.LeaseID, com.akash.market.v1beta2.LeaseProto.LeaseID.Builder, com.akash.market.v1beta2.LeaseProto.LeaseIDOrBuilder> idBuilder_;
+      /**
+       * <code>.akash.market.v1beta2.LeaseID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       * @return Whether the id field is set.
+       */
+      public boolean hasId() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.akash.market.v1beta2.LeaseID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       * @return The id.
+       */
+      public com.akash.market.v1beta2.LeaseProto.LeaseID getId() {
+        if (idBuilder_ == null) {
+          return id_ == null ? com.akash.market.v1beta2.LeaseProto.LeaseID.getDefaultInstance() : id_;
+        } else {
+          return idBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.akash.market.v1beta2.LeaseID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       */
+      public Builder setId(com.akash.market.v1beta2.LeaseProto.LeaseID value) {
+        if (idBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          id_ = value;
+        } else {
+          idBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta2.LeaseID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       */
+      public Builder setId(
+          com.akash.market.v1beta2.LeaseProto.LeaseID.Builder builderForValue) {
+        if (idBuilder_ == null) {
+          id_ = builderForValue.build();
+        } else {
+          idBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta2.LeaseID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       */
+      public Builder mergeId(com.akash.market.v1beta2.LeaseProto.LeaseID value) {
+        if (idBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            id_ != null &&
+            id_ != com.akash.market.v1beta2.LeaseProto.LeaseID.getDefaultInstance()) {
+            getIdBuilder().mergeFrom(value);
+          } else {
+            id_ = value;
+          }
+        } else {
+          idBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta2.LeaseID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = null;
+        if (idBuilder_ != null) {
+          idBuilder_.dispose();
+          idBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta2.LeaseID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       */
+      public com.akash.market.v1beta2.LeaseProto.LeaseID.Builder getIdBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.akash.market.v1beta2.LeaseID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       */
+      public com.akash.market.v1beta2.LeaseProto.LeaseIDOrBuilder getIdOrBuilder() {
+        if (idBuilder_ != null) {
+          return idBuilder_.getMessageOrBuilder();
+        } else {
+          return id_ == null ?
+              com.akash.market.v1beta2.LeaseProto.LeaseID.getDefaultInstance() : id_;
+        }
+      }
+      /**
+       * <code>.akash.market.v1beta2.LeaseID id = 1 [json_name = "id", (.gogoproto.nullable) = false, (.gogoproto.customname) = "ID"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.market.v1beta2.LeaseProto.LeaseID, com.akash.market.v1beta2.LeaseProto.LeaseID.Builder, com.akash.market.v1beta2.LeaseProto.LeaseIDOrBuilder> 
+          getIdFieldBuilder() {
+        if (idBuilder_ == null) {
+          idBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.akash.market.v1beta2.LeaseProto.LeaseID, com.akash.market.v1beta2.LeaseProto.LeaseID.Builder, com.akash.market.v1beta2.LeaseProto.LeaseIDOrBuilder>(
+                  getId(),
+                  getParentForChildren(),
+                  isClean());
+          id_ = null;
+        }
+        return idBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.market.v1beta2.QueryLeaseRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.market.v1beta2.QueryLeaseRequest)
+    private static final com.akash.market.v1beta2.QueryProto.QueryLeaseRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.market.v1beta2.QueryProto.QueryLeaseRequest();
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryLeaseRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryLeaseRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryLeaseRequest>() {
+      @java.lang.Override
+      public QueryLeaseRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryLeaseRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryLeaseRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.market.v1beta2.QueryProto.QueryLeaseRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryLeaseResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:akash.market.v1beta2.QueryLeaseResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.akash.market.v1beta2.Lease lease = 1 [json_name = "lease", (.gogoproto.nullable) = false];</code>
+     * @return Whether the lease field is set.
+     */
+    boolean hasLease();
+    /**
+     * <code>.akash.market.v1beta2.Lease lease = 1 [json_name = "lease", (.gogoproto.nullable) = false];</code>
+     * @return The lease.
+     */
+    com.akash.market.v1beta2.LeaseProto.Lease getLease();
+    /**
+     * <code>.akash.market.v1beta2.Lease lease = 1 [json_name = "lease", (.gogoproto.nullable) = false];</code>
+     */
+    com.akash.market.v1beta2.LeaseProto.LeaseOrBuilder getLeaseOrBuilder();
+
+    /**
+     * <code>.akash.escrow.v1beta2.FractionalPayment escrow_payment = 2 [json_name = "escrowPayment", (.gogoproto.nullable) = false];</code>
+     * @return Whether the escrowPayment field is set.
+     */
+    boolean hasEscrowPayment();
+    /**
+     * <code>.akash.escrow.v1beta2.FractionalPayment escrow_payment = 2 [json_name = "escrowPayment", (.gogoproto.nullable) = false];</code>
+     * @return The escrowPayment.
+     */
+    com.akash.escrow.v1beta2.TypesProto.FractionalPayment getEscrowPayment();
+    /**
+     * <code>.akash.escrow.v1beta2.FractionalPayment escrow_payment = 2 [json_name = "escrowPayment", (.gogoproto.nullable) = false];</code>
+     */
+    com.akash.escrow.v1beta2.TypesProto.FractionalPaymentOrBuilder getEscrowPaymentOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryLeaseResponse is response type for the Query/Lease RPC method
+   * </pre>
+   *
+   * Protobuf type {@code akash.market.v1beta2.QueryLeaseResponse}
+   */
+  public static final class QueryLeaseResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:akash.market.v1beta2.QueryLeaseResponse)
+      QueryLeaseResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryLeaseResponse.newBuilder() to construct.
+    private QueryLeaseResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryLeaseResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryLeaseResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryLeaseResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryLeaseResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.akash.market.v1beta2.QueryProto.QueryLeaseResponse.class, com.akash.market.v1beta2.QueryProto.QueryLeaseResponse.Builder.class);
+    }
+
+    public static final int LEASE_FIELD_NUMBER = 1;
+    private com.akash.market.v1beta2.LeaseProto.Lease lease_;
+    /**
+     * <code>.akash.market.v1beta2.Lease lease = 1 [json_name = "lease", (.gogoproto.nullable) = false];</code>
+     * @return Whether the lease field is set.
+     */
+    @java.lang.Override
+    public boolean hasLease() {
+      return lease_ != null;
+    }
+    /**
+     * <code>.akash.market.v1beta2.Lease lease = 1 [json_name = "lease", (.gogoproto.nullable) = false];</code>
+     * @return The lease.
+     */
+    @java.lang.Override
+    public com.akash.market.v1beta2.LeaseProto.Lease getLease() {
+      return lease_ == null ? com.akash.market.v1beta2.LeaseProto.Lease.getDefaultInstance() : lease_;
+    }
+    /**
+     * <code>.akash.market.v1beta2.Lease lease = 1 [json_name = "lease", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.akash.market.v1beta2.LeaseProto.LeaseOrBuilder getLeaseOrBuilder() {
+      return lease_ == null ? com.akash.market.v1beta2.LeaseProto.Lease.getDefaultInstance() : lease_;
+    }
+
+    public static final int ESCROW_PAYMENT_FIELD_NUMBER = 2;
+    private com.akash.escrow.v1beta2.TypesProto.FractionalPayment escrowPayment_;
+    /**
+     * <code>.akash.escrow.v1beta2.FractionalPayment escrow_payment = 2 [json_name = "escrowPayment", (.gogoproto.nullable) = false];</code>
+     * @return Whether the escrowPayment field is set.
+     */
+    @java.lang.Override
+    public boolean hasEscrowPayment() {
+      return escrowPayment_ != null;
+    }
+    /**
+     * <code>.akash.escrow.v1beta2.FractionalPayment escrow_payment = 2 [json_name = "escrowPayment", (.gogoproto.nullable) = false];</code>
+     * @return The escrowPayment.
+     */
+    @java.lang.Override
+    public com.akash.escrow.v1beta2.TypesProto.FractionalPayment getEscrowPayment() {
+      return escrowPayment_ == null ? com.akash.escrow.v1beta2.TypesProto.FractionalPayment.getDefaultInstance() : escrowPayment_;
+    }
+    /**
+     * <code>.akash.escrow.v1beta2.FractionalPayment escrow_payment = 2 [json_name = "escrowPayment", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.akash.escrow.v1beta2.TypesProto.FractionalPaymentOrBuilder getEscrowPaymentOrBuilder() {
+      return escrowPayment_ == null ? com.akash.escrow.v1beta2.TypesProto.FractionalPayment.getDefaultInstance() : escrowPayment_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (lease_ != null) {
+        output.writeMessage(1, getLease());
+      }
+      if (escrowPayment_ != null) {
+        output.writeMessage(2, getEscrowPayment());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (lease_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getLease());
+      }
+      if (escrowPayment_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getEscrowPayment());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.akash.market.v1beta2.QueryProto.QueryLeaseResponse)) {
+        return super.equals(obj);
+      }
+      com.akash.market.v1beta2.QueryProto.QueryLeaseResponse other = (com.akash.market.v1beta2.QueryProto.QueryLeaseResponse) obj;
+
+      if (hasLease() != other.hasLease()) return false;
+      if (hasLease()) {
+        if (!getLease()
+            .equals(other.getLease())) return false;
+      }
+      if (hasEscrowPayment() != other.hasEscrowPayment()) return false;
+      if (hasEscrowPayment()) {
+        if (!getEscrowPayment()
+            .equals(other.getEscrowPayment())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasLease()) {
+        hash = (37 * hash) + LEASE_FIELD_NUMBER;
+        hash = (53 * hash) + getLease().hashCode();
+      }
+      if (hasEscrowPayment()) {
+        hash = (37 * hash) + ESCROW_PAYMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getEscrowPayment().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryLeaseResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryLeaseResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryLeaseResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryLeaseResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryLeaseResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryLeaseResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryLeaseResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryLeaseResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryLeaseResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryLeaseResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryLeaseResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.akash.market.v1beta2.QueryProto.QueryLeaseResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.akash.market.v1beta2.QueryProto.QueryLeaseResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryLeaseResponse is response type for the Query/Lease RPC method
+     * </pre>
+     *
+     * Protobuf type {@code akash.market.v1beta2.QueryLeaseResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:akash.market.v1beta2.QueryLeaseResponse)
+        com.akash.market.v1beta2.QueryProto.QueryLeaseResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryLeaseResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryLeaseResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.akash.market.v1beta2.QueryProto.QueryLeaseResponse.class, com.akash.market.v1beta2.QueryProto.QueryLeaseResponse.Builder.class);
+      }
+
+      // Construct using com.akash.market.v1beta2.QueryProto.QueryLeaseResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        lease_ = null;
+        if (leaseBuilder_ != null) {
+          leaseBuilder_.dispose();
+          leaseBuilder_ = null;
+        }
+        escrowPayment_ = null;
+        if (escrowPaymentBuilder_ != null) {
+          escrowPaymentBuilder_.dispose();
+          escrowPaymentBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.akash.market.v1beta2.QueryProto.internal_static_akash_market_v1beta2_QueryLeaseResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta2.QueryProto.QueryLeaseResponse getDefaultInstanceForType() {
+        return com.akash.market.v1beta2.QueryProto.QueryLeaseResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta2.QueryProto.QueryLeaseResponse build() {
+        com.akash.market.v1beta2.QueryProto.QueryLeaseResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.akash.market.v1beta2.QueryProto.QueryLeaseResponse buildPartial() {
+        com.akash.market.v1beta2.QueryProto.QueryLeaseResponse result = new com.akash.market.v1beta2.QueryProto.QueryLeaseResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.akash.market.v1beta2.QueryProto.QueryLeaseResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.lease_ = leaseBuilder_ == null
+              ? lease_
+              : leaseBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.escrowPayment_ = escrowPaymentBuilder_ == null
+              ? escrowPayment_
+              : escrowPaymentBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.akash.market.v1beta2.QueryProto.QueryLeaseResponse) {
+          return mergeFrom((com.akash.market.v1beta2.QueryProto.QueryLeaseResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.akash.market.v1beta2.QueryProto.QueryLeaseResponse other) {
+        if (other == com.akash.market.v1beta2.QueryProto.QueryLeaseResponse.getDefaultInstance()) return this;
+        if (other.hasLease()) {
+          mergeLease(other.getLease());
+        }
+        if (other.hasEscrowPayment()) {
+          mergeEscrowPayment(other.getEscrowPayment());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getLeaseFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getEscrowPaymentFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.akash.market.v1beta2.LeaseProto.Lease lease_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.market.v1beta2.LeaseProto.Lease, com.akash.market.v1beta2.LeaseProto.Lease.Builder, com.akash.market.v1beta2.LeaseProto.LeaseOrBuilder> leaseBuilder_;
+      /**
+       * <code>.akash.market.v1beta2.Lease lease = 1 [json_name = "lease", (.gogoproto.nullable) = false];</code>
+       * @return Whether the lease field is set.
+       */
+      public boolean hasLease() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.akash.market.v1beta2.Lease lease = 1 [json_name = "lease", (.gogoproto.nullable) = false];</code>
+       * @return The lease.
+       */
+      public com.akash.market.v1beta2.LeaseProto.Lease getLease() {
+        if (leaseBuilder_ == null) {
+          return lease_ == null ? com.akash.market.v1beta2.LeaseProto.Lease.getDefaultInstance() : lease_;
+        } else {
+          return leaseBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.akash.market.v1beta2.Lease lease = 1 [json_name = "lease", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setLease(com.akash.market.v1beta2.LeaseProto.Lease value) {
+        if (leaseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          lease_ = value;
+        } else {
+          leaseBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta2.Lease lease = 1 [json_name = "lease", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setLease(
+          com.akash.market.v1beta2.LeaseProto.Lease.Builder builderForValue) {
+        if (leaseBuilder_ == null) {
+          lease_ = builderForValue.build();
+        } else {
+          leaseBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta2.Lease lease = 1 [json_name = "lease", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeLease(com.akash.market.v1beta2.LeaseProto.Lease value) {
+        if (leaseBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            lease_ != null &&
+            lease_ != com.akash.market.v1beta2.LeaseProto.Lease.getDefaultInstance()) {
+            getLeaseBuilder().mergeFrom(value);
+          } else {
+            lease_ = value;
+          }
+        } else {
+          leaseBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta2.Lease lease = 1 [json_name = "lease", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearLease() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        lease_ = null;
+        if (leaseBuilder_ != null) {
+          leaseBuilder_.dispose();
+          leaseBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.market.v1beta2.Lease lease = 1 [json_name = "lease", (.gogoproto.nullable) = false];</code>
+       */
+      public com.akash.market.v1beta2.LeaseProto.Lease.Builder getLeaseBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getLeaseFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.akash.market.v1beta2.Lease lease = 1 [json_name = "lease", (.gogoproto.nullable) = false];</code>
+       */
+      public com.akash.market.v1beta2.LeaseProto.LeaseOrBuilder getLeaseOrBuilder() {
+        if (leaseBuilder_ != null) {
+          return leaseBuilder_.getMessageOrBuilder();
+        } else {
+          return lease_ == null ?
+              com.akash.market.v1beta2.LeaseProto.Lease.getDefaultInstance() : lease_;
+        }
+      }
+      /**
+       * <code>.akash.market.v1beta2.Lease lease = 1 [json_name = "lease", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.market.v1beta2.LeaseProto.Lease, com.akash.market.v1beta2.LeaseProto.Lease.Builder, com.akash.market.v1beta2.LeaseProto.LeaseOrBuilder> 
+          getLeaseFieldBuilder() {
+        if (leaseBuilder_ == null) {
+          leaseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.akash.market.v1beta2.LeaseProto.Lease, com.akash.market.v1beta2.LeaseProto.Lease.Builder, com.akash.market.v1beta2.LeaseProto.LeaseOrBuilder>(
+                  getLease(),
+                  getParentForChildren(),
+                  isClean());
+          lease_ = null;
+        }
+        return leaseBuilder_;
+      }
+
+      private com.akash.escrow.v1beta2.TypesProto.FractionalPayment escrowPayment_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.escrow.v1beta2.TypesProto.FractionalPayment, com.akash.escrow.v1beta2.TypesProto.FractionalPayment.Builder, com.akash.escrow.v1beta2.TypesProto.FractionalPaymentOrBuilder> escrowPaymentBuilder_;
+      /**
+       * <code>.akash.escrow.v1beta2.FractionalPayment escrow_payment = 2 [json_name = "escrowPayment", (.gogoproto.nullable) = false];</code>
+       * @return Whether the escrowPayment field is set.
+       */
+      public boolean hasEscrowPayment() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.akash.escrow.v1beta2.FractionalPayment escrow_payment = 2 [json_name = "escrowPayment", (.gogoproto.nullable) = false];</code>
+       * @return The escrowPayment.
+       */
+      public com.akash.escrow.v1beta2.TypesProto.FractionalPayment getEscrowPayment() {
+        if (escrowPaymentBuilder_ == null) {
+          return escrowPayment_ == null ? com.akash.escrow.v1beta2.TypesProto.FractionalPayment.getDefaultInstance() : escrowPayment_;
+        } else {
+          return escrowPaymentBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.akash.escrow.v1beta2.FractionalPayment escrow_payment = 2 [json_name = "escrowPayment", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setEscrowPayment(com.akash.escrow.v1beta2.TypesProto.FractionalPayment value) {
+        if (escrowPaymentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          escrowPayment_ = value;
+        } else {
+          escrowPaymentBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.escrow.v1beta2.FractionalPayment escrow_payment = 2 [json_name = "escrowPayment", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setEscrowPayment(
+          com.akash.escrow.v1beta2.TypesProto.FractionalPayment.Builder builderForValue) {
+        if (escrowPaymentBuilder_ == null) {
+          escrowPayment_ = builderForValue.build();
+        } else {
+          escrowPaymentBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.escrow.v1beta2.FractionalPayment escrow_payment = 2 [json_name = "escrowPayment", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeEscrowPayment(com.akash.escrow.v1beta2.TypesProto.FractionalPayment value) {
+        if (escrowPaymentBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            escrowPayment_ != null &&
+            escrowPayment_ != com.akash.escrow.v1beta2.TypesProto.FractionalPayment.getDefaultInstance()) {
+            getEscrowPaymentBuilder().mergeFrom(value);
+          } else {
+            escrowPayment_ = value;
+          }
+        } else {
+          escrowPaymentBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.escrow.v1beta2.FractionalPayment escrow_payment = 2 [json_name = "escrowPayment", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearEscrowPayment() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        escrowPayment_ = null;
+        if (escrowPaymentBuilder_ != null) {
+          escrowPaymentBuilder_.dispose();
+          escrowPaymentBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.akash.escrow.v1beta2.FractionalPayment escrow_payment = 2 [json_name = "escrowPayment", (.gogoproto.nullable) = false];</code>
+       */
+      public com.akash.escrow.v1beta2.TypesProto.FractionalPayment.Builder getEscrowPaymentBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getEscrowPaymentFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.akash.escrow.v1beta2.FractionalPayment escrow_payment = 2 [json_name = "escrowPayment", (.gogoproto.nullable) = false];</code>
+       */
+      public com.akash.escrow.v1beta2.TypesProto.FractionalPaymentOrBuilder getEscrowPaymentOrBuilder() {
+        if (escrowPaymentBuilder_ != null) {
+          return escrowPaymentBuilder_.getMessageOrBuilder();
+        } else {
+          return escrowPayment_ == null ?
+              com.akash.escrow.v1beta2.TypesProto.FractionalPayment.getDefaultInstance() : escrowPayment_;
+        }
+      }
+      /**
+       * <code>.akash.escrow.v1beta2.FractionalPayment escrow_payment = 2 [json_name = "escrowPayment", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.akash.escrow.v1beta2.TypesProto.FractionalPayment, com.akash.escrow.v1beta2.TypesProto.FractionalPayment.Builder, com.akash.escrow.v1beta2.TypesProto.FractionalPaymentOrBuilder> 
+          getEscrowPaymentFieldBuilder() {
+        if (escrowPaymentBuilder_ == null) {
+          escrowPaymentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.akash.escrow.v1beta2.TypesProto.FractionalPayment, com.akash.escrow.v1beta2.TypesProto.FractionalPayment.Builder, com.akash.escrow.v1beta2.TypesProto.FractionalPaymentOrBuilder>(
+                  getEscrowPayment(),
+                  getParentForChildren(),
+                  isClean());
+          escrowPayment_ = null;
+        }
+        return escrowPaymentBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:akash.market.v1beta2.QueryLeaseResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:akash.market.v1beta2.QueryLeaseResponse)
+    private static final com.akash.market.v1beta2.QueryProto.QueryLeaseResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.akash.market.v1beta2.QueryProto.QueryLeaseResponse();
+    }
+
+    public static com.akash.market.v1beta2.QueryProto.QueryLeaseResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryLeaseResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryLeaseResponse>() {
+      @java.lang.Override
+      public QueryLeaseResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryLeaseResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryLeaseResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.akash.market.v1beta2.QueryProto.QueryLeaseResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_market_v1beta2_QueryOrdersRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_market_v1beta2_QueryOrdersRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_market_v1beta2_QueryOrdersResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_market_v1beta2_QueryOrdersResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_market_v1beta2_QueryOrderRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_market_v1beta2_QueryOrderRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_market_v1beta2_QueryOrderResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_market_v1beta2_QueryOrderResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_market_v1beta2_QueryBidsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_market_v1beta2_QueryBidsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_market_v1beta2_QueryBidsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_market_v1beta2_QueryBidsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_market_v1beta2_QueryBidRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_market_v1beta2_QueryBidRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_market_v1beta2_QueryBidResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_market_v1beta2_QueryBidResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_market_v1beta2_QueryLeasesRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_market_v1beta2_QueryLeasesRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_market_v1beta2_QueryLeasesResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_market_v1beta2_QueryLeasesResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_market_v1beta2_QueryLeaseRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_market_v1beta2_QueryLeaseRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_akash_market_v1beta2_QueryLeaseResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_akash_market_v1beta2_QueryLeaseResponse_fieldAccessorTable;
 
@@ -150,13 +9560,13 @@ public final class QueryProto {
       "1beta2/leases/list\022\205\001\n\005Lease\022\'.akash.mar" +
       "ket.v1beta2.QueryLeaseRequest\032(.akash.ma" +
       "rket.v1beta2.QueryLeaseResponse\")\202\323\344\223\002#\022" +
-      "!/akash/market/v1beta2/leases/infoB\323\001\n\030c" +
-      "om.akash.market.v1beta2B\nQueryProtoP\001Z9g" +
-      "ithub.com/akash-network/akash-api/go/nod" +
-      "e/market/v1beta2\242\002\003AMX\252\002\024Akash.Market.V1" +
-      "beta2\312\002\024Akash\\Market\\V1beta2\342\002 Akash\\Mar" +
-      "ket\\V1beta2\\GPBMetadata\352\002\026Akash::Market:" +
-      ":V1beta2b\006proto3"
+      "!/akash/market/v1beta2/leases/infoB\321\001\n\030c" +
+      "om.akash.market.v1beta2B\nQueryProtoZ9git" +
+      "hub.com/akash-network/akash-api/go/node/" +
+      "market/v1beta2\242\002\003AMX\252\002\024Akash.Market.V1be" +
+      "ta2\312\002\024Akash\\Market\\V1beta2\342\002 Akash\\Marke" +
+      "t\\V1beta2\\GPBMetadata\352\002\026Akash::Market::V" +
+      "1beta2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

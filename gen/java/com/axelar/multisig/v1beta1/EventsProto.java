@@ -14,69 +14,9164 @@ public final class EventsProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface KeygenStartedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.multisig.v1beta1.KeygenStarted)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The module.
+     */
+    java.lang.String getModule();
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The bytes for module.
+     */
+    com.google.protobuf.ByteString
+        getModuleBytes();
+
+    /**
+     * <code>string key_id = 2 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+     * @return The keyId.
+     */
+    java.lang.String getKeyId();
+    /**
+     * <code>string key_id = 2 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+     * @return The bytes for keyId.
+     */
+    com.google.protobuf.ByteString
+        getKeyIdBytes();
+
+    /**
+     * <code>repeated bytes participants = 3 [json_name = "participants", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
+     * @return A list containing the participants.
+     */
+    java.util.List<com.google.protobuf.ByteString> getParticipantsList();
+    /**
+     * <code>repeated bytes participants = 3 [json_name = "participants", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
+     * @return The count of participants.
+     */
+    int getParticipantsCount();
+    /**
+     * <code>repeated bytes participants = 3 [json_name = "participants", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
+     * @param index The index of the element to return.
+     * @return The participants at the given index.
+     */
+    com.google.protobuf.ByteString getParticipants(int index);
+  }
+  /**
+   * Protobuf type {@code axelar.multisig.v1beta1.KeygenStarted}
+   */
+  public static final class KeygenStarted extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.multisig.v1beta1.KeygenStarted)
+      KeygenStartedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use KeygenStarted.newBuilder() to construct.
+    private KeygenStarted(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private KeygenStarted() {
+      module_ = "";
+      keyId_ = "";
+      participants_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new KeygenStarted();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_KeygenStarted_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_KeygenStarted_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.multisig.v1beta1.EventsProto.KeygenStarted.class, com.axelar.multisig.v1beta1.EventsProto.KeygenStarted.Builder.class);
+    }
+
+    public static final int MODULE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object module_ = "";
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The module.
+     */
+    @java.lang.Override
+    public java.lang.String getModule() {
+      java.lang.Object ref = module_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        module_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The bytes for module.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getModuleBytes() {
+      java.lang.Object ref = module_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        module_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int KEY_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object keyId_ = "";
+    /**
+     * <code>string key_id = 2 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+     * @return The keyId.
+     */
+    @java.lang.Override
+    public java.lang.String getKeyId() {
+      java.lang.Object ref = keyId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        keyId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string key_id = 2 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+     * @return The bytes for keyId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getKeyIdBytes() {
+      java.lang.Object ref = keyId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        keyId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PARTICIPANTS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.google.protobuf.ByteString> participants_;
+    /**
+     * <code>repeated bytes participants = 3 [json_name = "participants", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
+     * @return A list containing the participants.
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.ByteString>
+        getParticipantsList() {
+      return participants_;
+    }
+    /**
+     * <code>repeated bytes participants = 3 [json_name = "participants", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
+     * @return The count of participants.
+     */
+    public int getParticipantsCount() {
+      return participants_.size();
+    }
+    /**
+     * <code>repeated bytes participants = 3 [json_name = "participants", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
+     * @param index The index of the element to return.
+     * @return The participants at the given index.
+     */
+    public com.google.protobuf.ByteString getParticipants(int index) {
+      return participants_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(module_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, module_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, keyId_);
+      }
+      for (int i = 0; i < participants_.size(); i++) {
+        output.writeBytes(3, participants_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(module_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, module_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, keyId_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < participants_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeBytesSizeNoTag(participants_.get(i));
+        }
+        size += dataSize;
+        size += 1 * getParticipantsList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.multisig.v1beta1.EventsProto.KeygenStarted)) {
+        return super.equals(obj);
+      }
+      com.axelar.multisig.v1beta1.EventsProto.KeygenStarted other = (com.axelar.multisig.v1beta1.EventsProto.KeygenStarted) obj;
+
+      if (!getModule()
+          .equals(other.getModule())) return false;
+      if (!getKeyId()
+          .equals(other.getKeyId())) return false;
+      if (!getParticipantsList()
+          .equals(other.getParticipantsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MODULE_FIELD_NUMBER;
+      hash = (53 * hash) + getModule().hashCode();
+      hash = (37 * hash) + KEY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getKeyId().hashCode();
+      if (getParticipantsCount() > 0) {
+        hash = (37 * hash) + PARTICIPANTS_FIELD_NUMBER;
+        hash = (53 * hash) + getParticipantsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenStarted parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenStarted parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenStarted parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenStarted parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenStarted parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenStarted parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenStarted parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenStarted parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenStarted parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenStarted parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenStarted parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenStarted parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.multisig.v1beta1.EventsProto.KeygenStarted prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.multisig.v1beta1.KeygenStarted}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.multisig.v1beta1.KeygenStarted)
+        com.axelar.multisig.v1beta1.EventsProto.KeygenStartedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_KeygenStarted_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_KeygenStarted_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.multisig.v1beta1.EventsProto.KeygenStarted.class, com.axelar.multisig.v1beta1.EventsProto.KeygenStarted.Builder.class);
+      }
+
+      // Construct using com.axelar.multisig.v1beta1.EventsProto.KeygenStarted.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        module_ = "";
+        keyId_ = "";
+        participants_ = java.util.Collections.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_KeygenStarted_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.multisig.v1beta1.EventsProto.KeygenStarted getDefaultInstanceForType() {
+        return com.axelar.multisig.v1beta1.EventsProto.KeygenStarted.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.multisig.v1beta1.EventsProto.KeygenStarted build() {
+        com.axelar.multisig.v1beta1.EventsProto.KeygenStarted result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.multisig.v1beta1.EventsProto.KeygenStarted buildPartial() {
+        com.axelar.multisig.v1beta1.EventsProto.KeygenStarted result = new com.axelar.multisig.v1beta1.EventsProto.KeygenStarted(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.axelar.multisig.v1beta1.EventsProto.KeygenStarted result) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          participants_ = java.util.Collections.unmodifiableList(participants_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.participants_ = participants_;
+      }
+
+      private void buildPartial0(com.axelar.multisig.v1beta1.EventsProto.KeygenStarted result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.module_ = module_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.keyId_ = keyId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.multisig.v1beta1.EventsProto.KeygenStarted) {
+          return mergeFrom((com.axelar.multisig.v1beta1.EventsProto.KeygenStarted)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.multisig.v1beta1.EventsProto.KeygenStarted other) {
+        if (other == com.axelar.multisig.v1beta1.EventsProto.KeygenStarted.getDefaultInstance()) return this;
+        if (!other.getModule().isEmpty()) {
+          module_ = other.module_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getKeyId().isEmpty()) {
+          keyId_ = other.keyId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.participants_.isEmpty()) {
+          if (participants_.isEmpty()) {
+            participants_ = other.participants_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureParticipantsIsMutable();
+            participants_.addAll(other.participants_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                module_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                keyId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                com.google.protobuf.ByteString v = input.readBytes();
+                ensureParticipantsIsMutable();
+                participants_.add(v);
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object module_ = "";
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @return The module.
+       */
+      public java.lang.String getModule() {
+        java.lang.Object ref = module_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          module_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @return The bytes for module.
+       */
+      public com.google.protobuf.ByteString
+          getModuleBytes() {
+        java.lang.Object ref = module_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          module_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @param value The module to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModule(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        module_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModule() {
+        module_ = getDefaultInstance().getModule();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @param value The bytes for module to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModuleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        module_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object keyId_ = "";
+      /**
+       * <code>string key_id = 2 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+       * @return The keyId.
+       */
+      public java.lang.String getKeyId() {
+        java.lang.Object ref = keyId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          keyId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string key_id = 2 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+       * @return The bytes for keyId.
+       */
+      public com.google.protobuf.ByteString
+          getKeyIdBytes() {
+        java.lang.Object ref = keyId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          keyId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string key_id = 2 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+       * @param value The keyId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        keyId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key_id = 2 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKeyId() {
+        keyId_ = getDefaultInstance().getKeyId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key_id = 2 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+       * @param value The bytes for keyId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        keyId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.google.protobuf.ByteString> participants_ = java.util.Collections.emptyList();
+      private void ensureParticipantsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          participants_ = new java.util.ArrayList<com.google.protobuf.ByteString>(participants_);
+          bitField0_ |= 0x00000004;
+        }
+      }
+      /**
+       * <code>repeated bytes participants = 3 [json_name = "participants", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
+       * @return A list containing the participants.
+       */
+      public java.util.List<com.google.protobuf.ByteString>
+          getParticipantsList() {
+        return ((bitField0_ & 0x00000004) != 0) ?
+                 java.util.Collections.unmodifiableList(participants_) : participants_;
+      }
+      /**
+       * <code>repeated bytes participants = 3 [json_name = "participants", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
+       * @return The count of participants.
+       */
+      public int getParticipantsCount() {
+        return participants_.size();
+      }
+      /**
+       * <code>repeated bytes participants = 3 [json_name = "participants", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
+       * @param index The index of the element to return.
+       * @return The participants at the given index.
+       */
+      public com.google.protobuf.ByteString getParticipants(int index) {
+        return participants_.get(index);
+      }
+      /**
+       * <code>repeated bytes participants = 3 [json_name = "participants", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
+       * @param index The index to set the value at.
+       * @param value The participants to set.
+       * @return This builder for chaining.
+       */
+      public Builder setParticipants(
+          int index, com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureParticipantsIsMutable();
+        participants_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated bytes participants = 3 [json_name = "participants", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
+       * @param value The participants to add.
+       * @return This builder for chaining.
+       */
+      public Builder addParticipants(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureParticipantsIsMutable();
+        participants_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated bytes participants = 3 [json_name = "participants", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
+       * @param values The participants to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllParticipants(
+          java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
+        ensureParticipantsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, participants_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated bytes participants = 3 [json_name = "participants", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearParticipants() {
+        participants_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.multisig.v1beta1.KeygenStarted)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.multisig.v1beta1.KeygenStarted)
+    private static final com.axelar.multisig.v1beta1.EventsProto.KeygenStarted DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.multisig.v1beta1.EventsProto.KeygenStarted();
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenStarted getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<KeygenStarted>
+        PARSER = new com.google.protobuf.AbstractParser<KeygenStarted>() {
+      @java.lang.Override
+      public KeygenStarted parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<KeygenStarted> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<KeygenStarted> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.multisig.v1beta1.EventsProto.KeygenStarted getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface KeygenCompletedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.multisig.v1beta1.KeygenCompleted)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The module.
+     */
+    java.lang.String getModule();
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The bytes for module.
+     */
+    com.google.protobuf.ByteString
+        getModuleBytes();
+
+    /**
+     * <code>string key_id = 2 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+     * @return The keyId.
+     */
+    java.lang.String getKeyId();
+    /**
+     * <code>string key_id = 2 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+     * @return The bytes for keyId.
+     */
+    com.google.protobuf.ByteString
+        getKeyIdBytes();
+  }
+  /**
+   * Protobuf type {@code axelar.multisig.v1beta1.KeygenCompleted}
+   */
+  public static final class KeygenCompleted extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.multisig.v1beta1.KeygenCompleted)
+      KeygenCompletedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use KeygenCompleted.newBuilder() to construct.
+    private KeygenCompleted(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private KeygenCompleted() {
+      module_ = "";
+      keyId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new KeygenCompleted();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_KeygenCompleted_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_KeygenCompleted_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.multisig.v1beta1.EventsProto.KeygenCompleted.class, com.axelar.multisig.v1beta1.EventsProto.KeygenCompleted.Builder.class);
+    }
+
+    public static final int MODULE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object module_ = "";
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The module.
+     */
+    @java.lang.Override
+    public java.lang.String getModule() {
+      java.lang.Object ref = module_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        module_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The bytes for module.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getModuleBytes() {
+      java.lang.Object ref = module_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        module_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int KEY_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object keyId_ = "";
+    /**
+     * <code>string key_id = 2 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+     * @return The keyId.
+     */
+    @java.lang.Override
+    public java.lang.String getKeyId() {
+      java.lang.Object ref = keyId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        keyId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string key_id = 2 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+     * @return The bytes for keyId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getKeyIdBytes() {
+      java.lang.Object ref = keyId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        keyId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(module_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, module_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, keyId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(module_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, module_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, keyId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.multisig.v1beta1.EventsProto.KeygenCompleted)) {
+        return super.equals(obj);
+      }
+      com.axelar.multisig.v1beta1.EventsProto.KeygenCompleted other = (com.axelar.multisig.v1beta1.EventsProto.KeygenCompleted) obj;
+
+      if (!getModule()
+          .equals(other.getModule())) return false;
+      if (!getKeyId()
+          .equals(other.getKeyId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MODULE_FIELD_NUMBER;
+      hash = (53 * hash) + getModule().hashCode();
+      hash = (37 * hash) + KEY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getKeyId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenCompleted parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenCompleted parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenCompleted parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenCompleted parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenCompleted parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenCompleted parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenCompleted parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenCompleted parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenCompleted parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenCompleted parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenCompleted parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenCompleted parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.multisig.v1beta1.EventsProto.KeygenCompleted prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.multisig.v1beta1.KeygenCompleted}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.multisig.v1beta1.KeygenCompleted)
+        com.axelar.multisig.v1beta1.EventsProto.KeygenCompletedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_KeygenCompleted_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_KeygenCompleted_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.multisig.v1beta1.EventsProto.KeygenCompleted.class, com.axelar.multisig.v1beta1.EventsProto.KeygenCompleted.Builder.class);
+      }
+
+      // Construct using com.axelar.multisig.v1beta1.EventsProto.KeygenCompleted.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        module_ = "";
+        keyId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_KeygenCompleted_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.multisig.v1beta1.EventsProto.KeygenCompleted getDefaultInstanceForType() {
+        return com.axelar.multisig.v1beta1.EventsProto.KeygenCompleted.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.multisig.v1beta1.EventsProto.KeygenCompleted build() {
+        com.axelar.multisig.v1beta1.EventsProto.KeygenCompleted result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.multisig.v1beta1.EventsProto.KeygenCompleted buildPartial() {
+        com.axelar.multisig.v1beta1.EventsProto.KeygenCompleted result = new com.axelar.multisig.v1beta1.EventsProto.KeygenCompleted(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.multisig.v1beta1.EventsProto.KeygenCompleted result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.module_ = module_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.keyId_ = keyId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.multisig.v1beta1.EventsProto.KeygenCompleted) {
+          return mergeFrom((com.axelar.multisig.v1beta1.EventsProto.KeygenCompleted)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.multisig.v1beta1.EventsProto.KeygenCompleted other) {
+        if (other == com.axelar.multisig.v1beta1.EventsProto.KeygenCompleted.getDefaultInstance()) return this;
+        if (!other.getModule().isEmpty()) {
+          module_ = other.module_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getKeyId().isEmpty()) {
+          keyId_ = other.keyId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                module_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                keyId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object module_ = "";
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @return The module.
+       */
+      public java.lang.String getModule() {
+        java.lang.Object ref = module_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          module_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @return The bytes for module.
+       */
+      public com.google.protobuf.ByteString
+          getModuleBytes() {
+        java.lang.Object ref = module_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          module_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @param value The module to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModule(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        module_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModule() {
+        module_ = getDefaultInstance().getModule();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @param value The bytes for module to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModuleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        module_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object keyId_ = "";
+      /**
+       * <code>string key_id = 2 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+       * @return The keyId.
+       */
+      public java.lang.String getKeyId() {
+        java.lang.Object ref = keyId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          keyId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string key_id = 2 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+       * @return The bytes for keyId.
+       */
+      public com.google.protobuf.ByteString
+          getKeyIdBytes() {
+        java.lang.Object ref = keyId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          keyId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string key_id = 2 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+       * @param value The keyId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        keyId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key_id = 2 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKeyId() {
+        keyId_ = getDefaultInstance().getKeyId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key_id = 2 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+       * @param value The bytes for keyId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        keyId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.multisig.v1beta1.KeygenCompleted)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.multisig.v1beta1.KeygenCompleted)
+    private static final com.axelar.multisig.v1beta1.EventsProto.KeygenCompleted DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.multisig.v1beta1.EventsProto.KeygenCompleted();
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenCompleted getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<KeygenCompleted>
+        PARSER = new com.google.protobuf.AbstractParser<KeygenCompleted>() {
+      @java.lang.Override
+      public KeygenCompleted parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<KeygenCompleted> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<KeygenCompleted> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.multisig.v1beta1.EventsProto.KeygenCompleted getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface KeygenExpiredOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.multisig.v1beta1.KeygenExpired)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The module.
+     */
+    java.lang.String getModule();
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The bytes for module.
+     */
+    com.google.protobuf.ByteString
+        getModuleBytes();
+
+    /**
+     * <code>string key_id = 2 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+     * @return The keyId.
+     */
+    java.lang.String getKeyId();
+    /**
+     * <code>string key_id = 2 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+     * @return The bytes for keyId.
+     */
+    com.google.protobuf.ByteString
+        getKeyIdBytes();
+  }
+  /**
+   * Protobuf type {@code axelar.multisig.v1beta1.KeygenExpired}
+   */
+  public static final class KeygenExpired extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.multisig.v1beta1.KeygenExpired)
+      KeygenExpiredOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use KeygenExpired.newBuilder() to construct.
+    private KeygenExpired(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private KeygenExpired() {
+      module_ = "";
+      keyId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new KeygenExpired();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_KeygenExpired_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_KeygenExpired_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.multisig.v1beta1.EventsProto.KeygenExpired.class, com.axelar.multisig.v1beta1.EventsProto.KeygenExpired.Builder.class);
+    }
+
+    public static final int MODULE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object module_ = "";
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The module.
+     */
+    @java.lang.Override
+    public java.lang.String getModule() {
+      java.lang.Object ref = module_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        module_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The bytes for module.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getModuleBytes() {
+      java.lang.Object ref = module_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        module_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int KEY_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object keyId_ = "";
+    /**
+     * <code>string key_id = 2 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+     * @return The keyId.
+     */
+    @java.lang.Override
+    public java.lang.String getKeyId() {
+      java.lang.Object ref = keyId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        keyId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string key_id = 2 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+     * @return The bytes for keyId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getKeyIdBytes() {
+      java.lang.Object ref = keyId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        keyId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(module_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, module_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, keyId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(module_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, module_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, keyId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.multisig.v1beta1.EventsProto.KeygenExpired)) {
+        return super.equals(obj);
+      }
+      com.axelar.multisig.v1beta1.EventsProto.KeygenExpired other = (com.axelar.multisig.v1beta1.EventsProto.KeygenExpired) obj;
+
+      if (!getModule()
+          .equals(other.getModule())) return false;
+      if (!getKeyId()
+          .equals(other.getKeyId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MODULE_FIELD_NUMBER;
+      hash = (53 * hash) + getModule().hashCode();
+      hash = (37 * hash) + KEY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getKeyId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenExpired parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenExpired parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenExpired parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenExpired parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenExpired parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenExpired parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenExpired parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenExpired parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenExpired parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenExpired parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenExpired parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenExpired parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.multisig.v1beta1.EventsProto.KeygenExpired prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.multisig.v1beta1.KeygenExpired}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.multisig.v1beta1.KeygenExpired)
+        com.axelar.multisig.v1beta1.EventsProto.KeygenExpiredOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_KeygenExpired_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_KeygenExpired_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.multisig.v1beta1.EventsProto.KeygenExpired.class, com.axelar.multisig.v1beta1.EventsProto.KeygenExpired.Builder.class);
+      }
+
+      // Construct using com.axelar.multisig.v1beta1.EventsProto.KeygenExpired.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        module_ = "";
+        keyId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_KeygenExpired_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.multisig.v1beta1.EventsProto.KeygenExpired getDefaultInstanceForType() {
+        return com.axelar.multisig.v1beta1.EventsProto.KeygenExpired.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.multisig.v1beta1.EventsProto.KeygenExpired build() {
+        com.axelar.multisig.v1beta1.EventsProto.KeygenExpired result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.multisig.v1beta1.EventsProto.KeygenExpired buildPartial() {
+        com.axelar.multisig.v1beta1.EventsProto.KeygenExpired result = new com.axelar.multisig.v1beta1.EventsProto.KeygenExpired(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.multisig.v1beta1.EventsProto.KeygenExpired result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.module_ = module_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.keyId_ = keyId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.multisig.v1beta1.EventsProto.KeygenExpired) {
+          return mergeFrom((com.axelar.multisig.v1beta1.EventsProto.KeygenExpired)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.multisig.v1beta1.EventsProto.KeygenExpired other) {
+        if (other == com.axelar.multisig.v1beta1.EventsProto.KeygenExpired.getDefaultInstance()) return this;
+        if (!other.getModule().isEmpty()) {
+          module_ = other.module_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getKeyId().isEmpty()) {
+          keyId_ = other.keyId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                module_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                keyId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object module_ = "";
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @return The module.
+       */
+      public java.lang.String getModule() {
+        java.lang.Object ref = module_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          module_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @return The bytes for module.
+       */
+      public com.google.protobuf.ByteString
+          getModuleBytes() {
+        java.lang.Object ref = module_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          module_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @param value The module to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModule(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        module_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModule() {
+        module_ = getDefaultInstance().getModule();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @param value The bytes for module to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModuleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        module_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object keyId_ = "";
+      /**
+       * <code>string key_id = 2 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+       * @return The keyId.
+       */
+      public java.lang.String getKeyId() {
+        java.lang.Object ref = keyId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          keyId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string key_id = 2 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+       * @return The bytes for keyId.
+       */
+      public com.google.protobuf.ByteString
+          getKeyIdBytes() {
+        java.lang.Object ref = keyId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          keyId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string key_id = 2 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+       * @param value The keyId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        keyId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key_id = 2 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKeyId() {
+        keyId_ = getDefaultInstance().getKeyId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key_id = 2 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+       * @param value The bytes for keyId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        keyId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.multisig.v1beta1.KeygenExpired)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.multisig.v1beta1.KeygenExpired)
+    private static final com.axelar.multisig.v1beta1.EventsProto.KeygenExpired DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.multisig.v1beta1.EventsProto.KeygenExpired();
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenExpired getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<KeygenExpired>
+        PARSER = new com.google.protobuf.AbstractParser<KeygenExpired>() {
+      @java.lang.Override
+      public KeygenExpired parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<KeygenExpired> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<KeygenExpired> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.multisig.v1beta1.EventsProto.KeygenExpired getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PubKeySubmittedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.multisig.v1beta1.PubKeySubmitted)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The module.
+     */
+    java.lang.String getModule();
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The bytes for module.
+     */
+    com.google.protobuf.ByteString
+        getModuleBytes();
+
+    /**
+     * <code>string key_id = 2 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+     * @return The keyId.
+     */
+    java.lang.String getKeyId();
+    /**
+     * <code>string key_id = 2 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+     * @return The bytes for keyId.
+     */
+    com.google.protobuf.ByteString
+        getKeyIdBytes();
+
+    /**
+     * <code>bytes participant = 3 [json_name = "participant", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
+     * @return The participant.
+     */
+    com.google.protobuf.ByteString getParticipant();
+
+    /**
+     * <code>bytes pub_key = 4 [json_name = "pubKey", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.PublicKey"];</code>
+     * @return The pubKey.
+     */
+    com.google.protobuf.ByteString getPubKey();
+  }
+  /**
+   * Protobuf type {@code axelar.multisig.v1beta1.PubKeySubmitted}
+   */
+  public static final class PubKeySubmitted extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.multisig.v1beta1.PubKeySubmitted)
+      PubKeySubmittedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PubKeySubmitted.newBuilder() to construct.
+    private PubKeySubmitted(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PubKeySubmitted() {
+      module_ = "";
+      keyId_ = "";
+      participant_ = com.google.protobuf.ByteString.EMPTY;
+      pubKey_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PubKeySubmitted();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_PubKeySubmitted_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_PubKeySubmitted_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.multisig.v1beta1.EventsProto.PubKeySubmitted.class, com.axelar.multisig.v1beta1.EventsProto.PubKeySubmitted.Builder.class);
+    }
+
+    public static final int MODULE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object module_ = "";
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The module.
+     */
+    @java.lang.Override
+    public java.lang.String getModule() {
+      java.lang.Object ref = module_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        module_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The bytes for module.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getModuleBytes() {
+      java.lang.Object ref = module_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        module_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int KEY_ID_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object keyId_ = "";
+    /**
+     * <code>string key_id = 2 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+     * @return The keyId.
+     */
+    @java.lang.Override
+    public java.lang.String getKeyId() {
+      java.lang.Object ref = keyId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        keyId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string key_id = 2 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+     * @return The bytes for keyId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getKeyIdBytes() {
+      java.lang.Object ref = keyId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        keyId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PARTICIPANT_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString participant_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes participant = 3 [json_name = "participant", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
+     * @return The participant.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getParticipant() {
+      return participant_;
+    }
+
+    public static final int PUB_KEY_FIELD_NUMBER = 4;
+    private com.google.protobuf.ByteString pubKey_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes pub_key = 4 [json_name = "pubKey", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.PublicKey"];</code>
+     * @return The pubKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getPubKey() {
+      return pubKey_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(module_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, module_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, keyId_);
+      }
+      if (!participant_.isEmpty()) {
+        output.writeBytes(3, participant_);
+      }
+      if (!pubKey_.isEmpty()) {
+        output.writeBytes(4, pubKey_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(module_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, module_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, keyId_);
+      }
+      if (!participant_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, participant_);
+      }
+      if (!pubKey_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, pubKey_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.multisig.v1beta1.EventsProto.PubKeySubmitted)) {
+        return super.equals(obj);
+      }
+      com.axelar.multisig.v1beta1.EventsProto.PubKeySubmitted other = (com.axelar.multisig.v1beta1.EventsProto.PubKeySubmitted) obj;
+
+      if (!getModule()
+          .equals(other.getModule())) return false;
+      if (!getKeyId()
+          .equals(other.getKeyId())) return false;
+      if (!getParticipant()
+          .equals(other.getParticipant())) return false;
+      if (!getPubKey()
+          .equals(other.getPubKey())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MODULE_FIELD_NUMBER;
+      hash = (53 * hash) + getModule().hashCode();
+      hash = (37 * hash) + KEY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getKeyId().hashCode();
+      hash = (37 * hash) + PARTICIPANT_FIELD_NUMBER;
+      hash = (53 * hash) + getParticipant().hashCode();
+      hash = (37 * hash) + PUB_KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getPubKey().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.PubKeySubmitted parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.PubKeySubmitted parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.PubKeySubmitted parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.PubKeySubmitted parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.PubKeySubmitted parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.PubKeySubmitted parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.PubKeySubmitted parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.PubKeySubmitted parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.PubKeySubmitted parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.PubKeySubmitted parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.PubKeySubmitted parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.PubKeySubmitted parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.multisig.v1beta1.EventsProto.PubKeySubmitted prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.multisig.v1beta1.PubKeySubmitted}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.multisig.v1beta1.PubKeySubmitted)
+        com.axelar.multisig.v1beta1.EventsProto.PubKeySubmittedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_PubKeySubmitted_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_PubKeySubmitted_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.multisig.v1beta1.EventsProto.PubKeySubmitted.class, com.axelar.multisig.v1beta1.EventsProto.PubKeySubmitted.Builder.class);
+      }
+
+      // Construct using com.axelar.multisig.v1beta1.EventsProto.PubKeySubmitted.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        module_ = "";
+        keyId_ = "";
+        participant_ = com.google.protobuf.ByteString.EMPTY;
+        pubKey_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_PubKeySubmitted_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.multisig.v1beta1.EventsProto.PubKeySubmitted getDefaultInstanceForType() {
+        return com.axelar.multisig.v1beta1.EventsProto.PubKeySubmitted.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.multisig.v1beta1.EventsProto.PubKeySubmitted build() {
+        com.axelar.multisig.v1beta1.EventsProto.PubKeySubmitted result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.multisig.v1beta1.EventsProto.PubKeySubmitted buildPartial() {
+        com.axelar.multisig.v1beta1.EventsProto.PubKeySubmitted result = new com.axelar.multisig.v1beta1.EventsProto.PubKeySubmitted(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.multisig.v1beta1.EventsProto.PubKeySubmitted result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.module_ = module_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.keyId_ = keyId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.participant_ = participant_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.pubKey_ = pubKey_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.multisig.v1beta1.EventsProto.PubKeySubmitted) {
+          return mergeFrom((com.axelar.multisig.v1beta1.EventsProto.PubKeySubmitted)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.multisig.v1beta1.EventsProto.PubKeySubmitted other) {
+        if (other == com.axelar.multisig.v1beta1.EventsProto.PubKeySubmitted.getDefaultInstance()) return this;
+        if (!other.getModule().isEmpty()) {
+          module_ = other.module_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getKeyId().isEmpty()) {
+          keyId_ = other.keyId_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getParticipant() != com.google.protobuf.ByteString.EMPTY) {
+          setParticipant(other.getParticipant());
+        }
+        if (other.getPubKey() != com.google.protobuf.ByteString.EMPTY) {
+          setPubKey(other.getPubKey());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                module_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                keyId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                participant_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                pubKey_ = input.readBytes();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object module_ = "";
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @return The module.
+       */
+      public java.lang.String getModule() {
+        java.lang.Object ref = module_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          module_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @return The bytes for module.
+       */
+      public com.google.protobuf.ByteString
+          getModuleBytes() {
+        java.lang.Object ref = module_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          module_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @param value The module to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModule(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        module_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModule() {
+        module_ = getDefaultInstance().getModule();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @param value The bytes for module to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModuleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        module_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object keyId_ = "";
+      /**
+       * <code>string key_id = 2 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+       * @return The keyId.
+       */
+      public java.lang.String getKeyId() {
+        java.lang.Object ref = keyId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          keyId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string key_id = 2 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+       * @return The bytes for keyId.
+       */
+      public com.google.protobuf.ByteString
+          getKeyIdBytes() {
+        java.lang.Object ref = keyId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          keyId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string key_id = 2 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+       * @param value The keyId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        keyId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key_id = 2 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKeyId() {
+        keyId_ = getDefaultInstance().getKeyId();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key_id = 2 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+       * @param value The bytes for keyId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        keyId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString participant_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes participant = 3 [json_name = "participant", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
+       * @return The participant.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getParticipant() {
+        return participant_;
+      }
+      /**
+       * <code>bytes participant = 3 [json_name = "participant", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
+       * @param value The participant to set.
+       * @return This builder for chaining.
+       */
+      public Builder setParticipant(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        participant_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes participant = 3 [json_name = "participant", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearParticipant() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        participant_ = getDefaultInstance().getParticipant();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString pubKey_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes pub_key = 4 [json_name = "pubKey", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.PublicKey"];</code>
+       * @return The pubKey.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getPubKey() {
+        return pubKey_;
+      }
+      /**
+       * <code>bytes pub_key = 4 [json_name = "pubKey", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.PublicKey"];</code>
+       * @param value The pubKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPubKey(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        pubKey_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes pub_key = 4 [json_name = "pubKey", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.PublicKey"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPubKey() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        pubKey_ = getDefaultInstance().getPubKey();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.multisig.v1beta1.PubKeySubmitted)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.multisig.v1beta1.PubKeySubmitted)
+    private static final com.axelar.multisig.v1beta1.EventsProto.PubKeySubmitted DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.multisig.v1beta1.EventsProto.PubKeySubmitted();
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.PubKeySubmitted getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PubKeySubmitted>
+        PARSER = new com.google.protobuf.AbstractParser<PubKeySubmitted>() {
+      @java.lang.Override
+      public PubKeySubmitted parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PubKeySubmitted> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PubKeySubmitted> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.multisig.v1beta1.EventsProto.PubKeySubmitted getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SigningStartedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.multisig.v1beta1.SigningStarted)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The module.
+     */
+    java.lang.String getModule();
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The bytes for module.
+     */
+    com.google.protobuf.ByteString
+        getModuleBytes();
+
+    /**
+     * <code>uint64 sig_id = 2 [json_name = "sigId", (.gogoproto.customname) = "SigID"];</code>
+     * @return The sigId.
+     */
+    long getSigId();
+
+    /**
+     * <code>string key_id = 3 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+     * @return The keyId.
+     */
+    java.lang.String getKeyId();
+    /**
+     * <code>string key_id = 3 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+     * @return The bytes for keyId.
+     */
+    com.google.protobuf.ByteString
+        getKeyIdBytes();
+
+    /**
+     * <code>map&lt;string, bytes&gt; pub_keys = 4 [json_name = "pubKeys", (.gogoproto.castvalue) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.PublicKey"];</code>
+     */
+    int getPubKeysCount();
+    /**
+     * <code>map&lt;string, bytes&gt; pub_keys = 4 [json_name = "pubKeys", (.gogoproto.castvalue) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.PublicKey"];</code>
+     */
+    boolean containsPubKeys(
+        java.lang.String key);
+    /**
+     * Use {@link #getPubKeysMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, com.google.protobuf.ByteString>
+    getPubKeys();
+    /**
+     * <code>map&lt;string, bytes&gt; pub_keys = 4 [json_name = "pubKeys", (.gogoproto.castvalue) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.PublicKey"];</code>
+     */
+    java.util.Map<java.lang.String, com.google.protobuf.ByteString>
+    getPubKeysMap();
+    /**
+     * <code>map&lt;string, bytes&gt; pub_keys = 4 [json_name = "pubKeys", (.gogoproto.castvalue) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.PublicKey"];</code>
+     */
+    /* nullable */
+com.google.protobuf.ByteString getPubKeysOrDefault(
+        java.lang.String key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue);
+    /**
+     * <code>map&lt;string, bytes&gt; pub_keys = 4 [json_name = "pubKeys", (.gogoproto.castvalue) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.PublicKey"];</code>
+     */
+    com.google.protobuf.ByteString getPubKeysOrThrow(
+        java.lang.String key);
+
+    /**
+     * <code>bytes payload_hash = 5 [json_name = "payloadHash", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.Hash"];</code>
+     * @return The payloadHash.
+     */
+    com.google.protobuf.ByteString getPayloadHash();
+
+    /**
+     * <code>string requesting_module = 6 [json_name = "requestingModule"];</code>
+     * @return The requestingModule.
+     */
+    java.lang.String getRequestingModule();
+    /**
+     * <code>string requesting_module = 6 [json_name = "requestingModule"];</code>
+     * @return The bytes for requestingModule.
+     */
+    com.google.protobuf.ByteString
+        getRequestingModuleBytes();
+  }
+  /**
+   * Protobuf type {@code axelar.multisig.v1beta1.SigningStarted}
+   */
+  public static final class SigningStarted extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.multisig.v1beta1.SigningStarted)
+      SigningStartedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SigningStarted.newBuilder() to construct.
+    private SigningStarted(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SigningStarted() {
+      module_ = "";
+      keyId_ = "";
+      payloadHash_ = com.google.protobuf.ByteString.EMPTY;
+      requestingModule_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SigningStarted();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_SigningStarted_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 4:
+          return internalGetPubKeys();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_SigningStarted_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.multisig.v1beta1.EventsProto.SigningStarted.class, com.axelar.multisig.v1beta1.EventsProto.SigningStarted.Builder.class);
+    }
+
+    public static final int MODULE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object module_ = "";
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The module.
+     */
+    @java.lang.Override
+    public java.lang.String getModule() {
+      java.lang.Object ref = module_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        module_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The bytes for module.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getModuleBytes() {
+      java.lang.Object ref = module_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        module_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SIG_ID_FIELD_NUMBER = 2;
+    private long sigId_ = 0L;
+    /**
+     * <code>uint64 sig_id = 2 [json_name = "sigId", (.gogoproto.customname) = "SigID"];</code>
+     * @return The sigId.
+     */
+    @java.lang.Override
+    public long getSigId() {
+      return sigId_;
+    }
+
+    public static final int KEY_ID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object keyId_ = "";
+    /**
+     * <code>string key_id = 3 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+     * @return The keyId.
+     */
+    @java.lang.Override
+    public java.lang.String getKeyId() {
+      java.lang.Object ref = keyId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        keyId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string key_id = 3 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+     * @return The bytes for keyId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getKeyIdBytes() {
+      java.lang.Object ref = keyId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        keyId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PUB_KEYS_FIELD_NUMBER = 4;
+    private static final class PubKeysDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, com.google.protobuf.ByteString> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, com.google.protobuf.ByteString>newDefaultInstance(
+                  com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_SigningStarted_PubKeysEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.BYTES,
+                  com.google.protobuf.ByteString.EMPTY);
+    }
+    @SuppressWarnings("serial")
+    private com.google.protobuf.MapField<
+        java.lang.String, com.google.protobuf.ByteString> pubKeys_;
+    private com.google.protobuf.MapField<java.lang.String, com.google.protobuf.ByteString>
+    internalGetPubKeys() {
+      if (pubKeys_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            PubKeysDefaultEntryHolder.defaultEntry);
+      }
+      return pubKeys_;
+    }
+    public int getPubKeysCount() {
+      return internalGetPubKeys().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, bytes&gt; pub_keys = 4 [json_name = "pubKeys", (.gogoproto.castvalue) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.PublicKey"];</code>
+     */
+    @java.lang.Override
+    public boolean containsPubKeys(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetPubKeys().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getPubKeysMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, com.google.protobuf.ByteString> getPubKeys() {
+      return getPubKeysMap();
+    }
+    /**
+     * <code>map&lt;string, bytes&gt; pub_keys = 4 [json_name = "pubKeys", (.gogoproto.castvalue) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.PublicKey"];</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.String, com.google.protobuf.ByteString> getPubKeysMap() {
+      return internalGetPubKeys().getMap();
+    }
+    /**
+     * <code>map&lt;string, bytes&gt; pub_keys = 4 [json_name = "pubKeys", (.gogoproto.castvalue) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.PublicKey"];</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+com.google.protobuf.ByteString getPubKeysOrDefault(
+        java.lang.String key,
+        /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, com.google.protobuf.ByteString> map =
+          internalGetPubKeys().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, bytes&gt; pub_keys = 4 [json_name = "pubKeys", (.gogoproto.castvalue) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.PublicKey"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getPubKeysOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, com.google.protobuf.ByteString> map =
+          internalGetPubKeys().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int PAYLOAD_HASH_FIELD_NUMBER = 5;
+    private com.google.protobuf.ByteString payloadHash_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes payload_hash = 5 [json_name = "payloadHash", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.Hash"];</code>
+     * @return The payloadHash.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getPayloadHash() {
+      return payloadHash_;
+    }
+
+    public static final int REQUESTING_MODULE_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object requestingModule_ = "";
+    /**
+     * <code>string requesting_module = 6 [json_name = "requestingModule"];</code>
+     * @return The requestingModule.
+     */
+    @java.lang.Override
+    public java.lang.String getRequestingModule() {
+      java.lang.Object ref = requestingModule_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        requestingModule_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string requesting_module = 6 [json_name = "requestingModule"];</code>
+     * @return The bytes for requestingModule.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRequestingModuleBytes() {
+      java.lang.Object ref = requestingModule_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        requestingModule_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(module_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, module_);
+      }
+      if (sigId_ != 0L) {
+        output.writeUInt64(2, sigId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, keyId_);
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetPubKeys(),
+          PubKeysDefaultEntryHolder.defaultEntry,
+          4);
+      if (!payloadHash_.isEmpty()) {
+        output.writeBytes(5, payloadHash_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestingModule_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, requestingModule_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(module_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, module_);
+      }
+      if (sigId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, sigId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, keyId_);
+      }
+      for (java.util.Map.Entry<java.lang.String, com.google.protobuf.ByteString> entry
+           : internalGetPubKeys().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, com.google.protobuf.ByteString>
+        pubKeys__ = PubKeysDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, pubKeys__);
+      }
+      if (!payloadHash_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, payloadHash_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestingModule_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, requestingModule_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.multisig.v1beta1.EventsProto.SigningStarted)) {
+        return super.equals(obj);
+      }
+      com.axelar.multisig.v1beta1.EventsProto.SigningStarted other = (com.axelar.multisig.v1beta1.EventsProto.SigningStarted) obj;
+
+      if (!getModule()
+          .equals(other.getModule())) return false;
+      if (getSigId()
+          != other.getSigId()) return false;
+      if (!getKeyId()
+          .equals(other.getKeyId())) return false;
+      if (!internalGetPubKeys().equals(
+          other.internalGetPubKeys())) return false;
+      if (!getPayloadHash()
+          .equals(other.getPayloadHash())) return false;
+      if (!getRequestingModule()
+          .equals(other.getRequestingModule())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MODULE_FIELD_NUMBER;
+      hash = (53 * hash) + getModule().hashCode();
+      hash = (37 * hash) + SIG_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSigId());
+      hash = (37 * hash) + KEY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getKeyId().hashCode();
+      if (!internalGetPubKeys().getMap().isEmpty()) {
+        hash = (37 * hash) + PUB_KEYS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetPubKeys().hashCode();
+      }
+      hash = (37 * hash) + PAYLOAD_HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getPayloadHash().hashCode();
+      hash = (37 * hash) + REQUESTING_MODULE_FIELD_NUMBER;
+      hash = (53 * hash) + getRequestingModule().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningStarted parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningStarted parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningStarted parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningStarted parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningStarted parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningStarted parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningStarted parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningStarted parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningStarted parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningStarted parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningStarted parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningStarted parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.multisig.v1beta1.EventsProto.SigningStarted prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.multisig.v1beta1.SigningStarted}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.multisig.v1beta1.SigningStarted)
+        com.axelar.multisig.v1beta1.EventsProto.SigningStartedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_SigningStarted_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 4:
+            return internalGetPubKeys();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 4:
+            return internalGetMutablePubKeys();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_SigningStarted_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.multisig.v1beta1.EventsProto.SigningStarted.class, com.axelar.multisig.v1beta1.EventsProto.SigningStarted.Builder.class);
+      }
+
+      // Construct using com.axelar.multisig.v1beta1.EventsProto.SigningStarted.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        module_ = "";
+        sigId_ = 0L;
+        keyId_ = "";
+        internalGetMutablePubKeys().clear();
+        payloadHash_ = com.google.protobuf.ByteString.EMPTY;
+        requestingModule_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_SigningStarted_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.multisig.v1beta1.EventsProto.SigningStarted getDefaultInstanceForType() {
+        return com.axelar.multisig.v1beta1.EventsProto.SigningStarted.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.multisig.v1beta1.EventsProto.SigningStarted build() {
+        com.axelar.multisig.v1beta1.EventsProto.SigningStarted result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.multisig.v1beta1.EventsProto.SigningStarted buildPartial() {
+        com.axelar.multisig.v1beta1.EventsProto.SigningStarted result = new com.axelar.multisig.v1beta1.EventsProto.SigningStarted(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.multisig.v1beta1.EventsProto.SigningStarted result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.module_ = module_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.sigId_ = sigId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.keyId_ = keyId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.pubKeys_ = internalGetPubKeys();
+          result.pubKeys_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.payloadHash_ = payloadHash_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.requestingModule_ = requestingModule_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.multisig.v1beta1.EventsProto.SigningStarted) {
+          return mergeFrom((com.axelar.multisig.v1beta1.EventsProto.SigningStarted)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.multisig.v1beta1.EventsProto.SigningStarted other) {
+        if (other == com.axelar.multisig.v1beta1.EventsProto.SigningStarted.getDefaultInstance()) return this;
+        if (!other.getModule().isEmpty()) {
+          module_ = other.module_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getSigId() != 0L) {
+          setSigId(other.getSigId());
+        }
+        if (!other.getKeyId().isEmpty()) {
+          keyId_ = other.keyId_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        internalGetMutablePubKeys().mergeFrom(
+            other.internalGetPubKeys());
+        bitField0_ |= 0x00000008;
+        if (other.getPayloadHash() != com.google.protobuf.ByteString.EMPTY) {
+          setPayloadHash(other.getPayloadHash());
+        }
+        if (!other.getRequestingModule().isEmpty()) {
+          requestingModule_ = other.requestingModule_;
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                module_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                sigId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                keyId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                com.google.protobuf.MapEntry<java.lang.String, com.google.protobuf.ByteString>
+                pubKeys__ = input.readMessage(
+                    PubKeysDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+                internalGetMutablePubKeys().getMutableMap().put(
+                    pubKeys__.getKey(), pubKeys__.getValue());
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                payloadHash_ = input.readBytes();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                requestingModule_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object module_ = "";
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @return The module.
+       */
+      public java.lang.String getModule() {
+        java.lang.Object ref = module_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          module_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @return The bytes for module.
+       */
+      public com.google.protobuf.ByteString
+          getModuleBytes() {
+        java.lang.Object ref = module_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          module_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @param value The module to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModule(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        module_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModule() {
+        module_ = getDefaultInstance().getModule();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @param value The bytes for module to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModuleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        module_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long sigId_ ;
+      /**
+       * <code>uint64 sig_id = 2 [json_name = "sigId", (.gogoproto.customname) = "SigID"];</code>
+       * @return The sigId.
+       */
+      @java.lang.Override
+      public long getSigId() {
+        return sigId_;
+      }
+      /**
+       * <code>uint64 sig_id = 2 [json_name = "sigId", (.gogoproto.customname) = "SigID"];</code>
+       * @param value The sigId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSigId(long value) {
+
+        sigId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 sig_id = 2 [json_name = "sigId", (.gogoproto.customname) = "SigID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSigId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        sigId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object keyId_ = "";
+      /**
+       * <code>string key_id = 3 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+       * @return The keyId.
+       */
+      public java.lang.String getKeyId() {
+        java.lang.Object ref = keyId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          keyId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string key_id = 3 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+       * @return The bytes for keyId.
+       */
+      public com.google.protobuf.ByteString
+          getKeyIdBytes() {
+        java.lang.Object ref = keyId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          keyId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string key_id = 3 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+       * @param value The keyId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        keyId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key_id = 3 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKeyId() {
+        keyId_ = getDefaultInstance().getKeyId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key_id = 3 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+       * @param value The bytes for keyId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        keyId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, com.google.protobuf.ByteString> pubKeys_;
+      private com.google.protobuf.MapField<java.lang.String, com.google.protobuf.ByteString>
+          internalGetPubKeys() {
+        if (pubKeys_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              PubKeysDefaultEntryHolder.defaultEntry);
+        }
+        return pubKeys_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, com.google.protobuf.ByteString>
+          internalGetMutablePubKeys() {
+        if (pubKeys_ == null) {
+          pubKeys_ = com.google.protobuf.MapField.newMapField(
+              PubKeysDefaultEntryHolder.defaultEntry);
+        }
+        if (!pubKeys_.isMutable()) {
+          pubKeys_ = pubKeys_.copy();
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return pubKeys_;
+      }
+      public int getPubKeysCount() {
+        return internalGetPubKeys().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, bytes&gt; pub_keys = 4 [json_name = "pubKeys", (.gogoproto.castvalue) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.PublicKey"];</code>
+       */
+      @java.lang.Override
+      public boolean containsPubKeys(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetPubKeys().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getPubKeysMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.google.protobuf.ByteString> getPubKeys() {
+        return getPubKeysMap();
+      }
+      /**
+       * <code>map&lt;string, bytes&gt; pub_keys = 4 [json_name = "pubKeys", (.gogoproto.castvalue) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.PublicKey"];</code>
+       */
+      @java.lang.Override
+      public java.util.Map<java.lang.String, com.google.protobuf.ByteString> getPubKeysMap() {
+        return internalGetPubKeys().getMap();
+      }
+      /**
+       * <code>map&lt;string, bytes&gt; pub_keys = 4 [json_name = "pubKeys", (.gogoproto.castvalue) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.PublicKey"];</code>
+       */
+      @java.lang.Override
+      public /* nullable */
+com.google.protobuf.ByteString getPubKeysOrDefault(
+          java.lang.String key,
+          /* nullable */
+com.google.protobuf.ByteString defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, com.google.protobuf.ByteString> map =
+            internalGetPubKeys().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, bytes&gt; pub_keys = 4 [json_name = "pubKeys", (.gogoproto.castvalue) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.PublicKey"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getPubKeysOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, com.google.protobuf.ByteString> map =
+            internalGetPubKeys().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+      public Builder clearPubKeys() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        internalGetMutablePubKeys().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, bytes&gt; pub_keys = 4 [json_name = "pubKeys", (.gogoproto.castvalue) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.PublicKey"];</code>
+       */
+      public Builder removePubKeys(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutablePubKeys().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, com.google.protobuf.ByteString>
+          getMutablePubKeys() {
+        bitField0_ |= 0x00000008;
+        return internalGetMutablePubKeys().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, bytes&gt; pub_keys = 4 [json_name = "pubKeys", (.gogoproto.castvalue) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.PublicKey"];</code>
+       */
+      public Builder putPubKeys(
+          java.lang.String key,
+          com.google.protobuf.ByteString value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) { throw new NullPointerException("map value"); }
+        internalGetMutablePubKeys().getMutableMap()
+            .put(key, value);
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>map&lt;string, bytes&gt; pub_keys = 4 [json_name = "pubKeys", (.gogoproto.castvalue) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.PublicKey"];</code>
+       */
+      public Builder putAllPubKeys(
+          java.util.Map<java.lang.String, com.google.protobuf.ByteString> values) {
+        internalGetMutablePubKeys().getMutableMap()
+            .putAll(values);
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+
+      private com.google.protobuf.ByteString payloadHash_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes payload_hash = 5 [json_name = "payloadHash", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.Hash"];</code>
+       * @return The payloadHash.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getPayloadHash() {
+        return payloadHash_;
+      }
+      /**
+       * <code>bytes payload_hash = 5 [json_name = "payloadHash", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.Hash"];</code>
+       * @param value The payloadHash to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPayloadHash(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        payloadHash_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes payload_hash = 5 [json_name = "payloadHash", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.Hash"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPayloadHash() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        payloadHash_ = getDefaultInstance().getPayloadHash();
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object requestingModule_ = "";
+      /**
+       * <code>string requesting_module = 6 [json_name = "requestingModule"];</code>
+       * @return The requestingModule.
+       */
+      public java.lang.String getRequestingModule() {
+        java.lang.Object ref = requestingModule_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          requestingModule_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string requesting_module = 6 [json_name = "requestingModule"];</code>
+       * @return The bytes for requestingModule.
+       */
+      public com.google.protobuf.ByteString
+          getRequestingModuleBytes() {
+        java.lang.Object ref = requestingModule_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          requestingModule_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string requesting_module = 6 [json_name = "requestingModule"];</code>
+       * @param value The requestingModule to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestingModule(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        requestingModule_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string requesting_module = 6 [json_name = "requestingModule"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRequestingModule() {
+        requestingModule_ = getDefaultInstance().getRequestingModule();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string requesting_module = 6 [json_name = "requestingModule"];</code>
+       * @param value The bytes for requestingModule to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestingModuleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        requestingModule_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.multisig.v1beta1.SigningStarted)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.multisig.v1beta1.SigningStarted)
+    private static final com.axelar.multisig.v1beta1.EventsProto.SigningStarted DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.multisig.v1beta1.EventsProto.SigningStarted();
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningStarted getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SigningStarted>
+        PARSER = new com.google.protobuf.AbstractParser<SigningStarted>() {
+      @java.lang.Override
+      public SigningStarted parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SigningStarted> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SigningStarted> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.multisig.v1beta1.EventsProto.SigningStarted getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SigningCompletedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.multisig.v1beta1.SigningCompleted)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The module.
+     */
+    java.lang.String getModule();
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The bytes for module.
+     */
+    com.google.protobuf.ByteString
+        getModuleBytes();
+
+    /**
+     * <code>uint64 sig_id = 2 [json_name = "sigId", (.gogoproto.customname) = "SigID"];</code>
+     * @return The sigId.
+     */
+    long getSigId();
+  }
+  /**
+   * Protobuf type {@code axelar.multisig.v1beta1.SigningCompleted}
+   */
+  public static final class SigningCompleted extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.multisig.v1beta1.SigningCompleted)
+      SigningCompletedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SigningCompleted.newBuilder() to construct.
+    private SigningCompleted(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SigningCompleted() {
+      module_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SigningCompleted();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_SigningCompleted_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_SigningCompleted_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.multisig.v1beta1.EventsProto.SigningCompleted.class, com.axelar.multisig.v1beta1.EventsProto.SigningCompleted.Builder.class);
+    }
+
+    public static final int MODULE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object module_ = "";
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The module.
+     */
+    @java.lang.Override
+    public java.lang.String getModule() {
+      java.lang.Object ref = module_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        module_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The bytes for module.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getModuleBytes() {
+      java.lang.Object ref = module_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        module_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SIG_ID_FIELD_NUMBER = 2;
+    private long sigId_ = 0L;
+    /**
+     * <code>uint64 sig_id = 2 [json_name = "sigId", (.gogoproto.customname) = "SigID"];</code>
+     * @return The sigId.
+     */
+    @java.lang.Override
+    public long getSigId() {
+      return sigId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(module_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, module_);
+      }
+      if (sigId_ != 0L) {
+        output.writeUInt64(2, sigId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(module_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, module_);
+      }
+      if (sigId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, sigId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.multisig.v1beta1.EventsProto.SigningCompleted)) {
+        return super.equals(obj);
+      }
+      com.axelar.multisig.v1beta1.EventsProto.SigningCompleted other = (com.axelar.multisig.v1beta1.EventsProto.SigningCompleted) obj;
+
+      if (!getModule()
+          .equals(other.getModule())) return false;
+      if (getSigId()
+          != other.getSigId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MODULE_FIELD_NUMBER;
+      hash = (53 * hash) + getModule().hashCode();
+      hash = (37 * hash) + SIG_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSigId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningCompleted parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningCompleted parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningCompleted parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningCompleted parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningCompleted parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningCompleted parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningCompleted parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningCompleted parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningCompleted parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningCompleted parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningCompleted parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningCompleted parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.multisig.v1beta1.EventsProto.SigningCompleted prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.multisig.v1beta1.SigningCompleted}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.multisig.v1beta1.SigningCompleted)
+        com.axelar.multisig.v1beta1.EventsProto.SigningCompletedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_SigningCompleted_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_SigningCompleted_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.multisig.v1beta1.EventsProto.SigningCompleted.class, com.axelar.multisig.v1beta1.EventsProto.SigningCompleted.Builder.class);
+      }
+
+      // Construct using com.axelar.multisig.v1beta1.EventsProto.SigningCompleted.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        module_ = "";
+        sigId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_SigningCompleted_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.multisig.v1beta1.EventsProto.SigningCompleted getDefaultInstanceForType() {
+        return com.axelar.multisig.v1beta1.EventsProto.SigningCompleted.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.multisig.v1beta1.EventsProto.SigningCompleted build() {
+        com.axelar.multisig.v1beta1.EventsProto.SigningCompleted result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.multisig.v1beta1.EventsProto.SigningCompleted buildPartial() {
+        com.axelar.multisig.v1beta1.EventsProto.SigningCompleted result = new com.axelar.multisig.v1beta1.EventsProto.SigningCompleted(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.multisig.v1beta1.EventsProto.SigningCompleted result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.module_ = module_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.sigId_ = sigId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.multisig.v1beta1.EventsProto.SigningCompleted) {
+          return mergeFrom((com.axelar.multisig.v1beta1.EventsProto.SigningCompleted)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.multisig.v1beta1.EventsProto.SigningCompleted other) {
+        if (other == com.axelar.multisig.v1beta1.EventsProto.SigningCompleted.getDefaultInstance()) return this;
+        if (!other.getModule().isEmpty()) {
+          module_ = other.module_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getSigId() != 0L) {
+          setSigId(other.getSigId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                module_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                sigId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object module_ = "";
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @return The module.
+       */
+      public java.lang.String getModule() {
+        java.lang.Object ref = module_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          module_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @return The bytes for module.
+       */
+      public com.google.protobuf.ByteString
+          getModuleBytes() {
+        java.lang.Object ref = module_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          module_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @param value The module to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModule(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        module_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModule() {
+        module_ = getDefaultInstance().getModule();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @param value The bytes for module to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModuleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        module_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long sigId_ ;
+      /**
+       * <code>uint64 sig_id = 2 [json_name = "sigId", (.gogoproto.customname) = "SigID"];</code>
+       * @return The sigId.
+       */
+      @java.lang.Override
+      public long getSigId() {
+        return sigId_;
+      }
+      /**
+       * <code>uint64 sig_id = 2 [json_name = "sigId", (.gogoproto.customname) = "SigID"];</code>
+       * @param value The sigId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSigId(long value) {
+
+        sigId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 sig_id = 2 [json_name = "sigId", (.gogoproto.customname) = "SigID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSigId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        sigId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.multisig.v1beta1.SigningCompleted)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.multisig.v1beta1.SigningCompleted)
+    private static final com.axelar.multisig.v1beta1.EventsProto.SigningCompleted DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.multisig.v1beta1.EventsProto.SigningCompleted();
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningCompleted getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SigningCompleted>
+        PARSER = new com.google.protobuf.AbstractParser<SigningCompleted>() {
+      @java.lang.Override
+      public SigningCompleted parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SigningCompleted> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SigningCompleted> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.multisig.v1beta1.EventsProto.SigningCompleted getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SigningExpiredOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.multisig.v1beta1.SigningExpired)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The module.
+     */
+    java.lang.String getModule();
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The bytes for module.
+     */
+    com.google.protobuf.ByteString
+        getModuleBytes();
+
+    /**
+     * <code>uint64 sig_id = 2 [json_name = "sigId", (.gogoproto.customname) = "SigID"];</code>
+     * @return The sigId.
+     */
+    long getSigId();
+  }
+  /**
+   * Protobuf type {@code axelar.multisig.v1beta1.SigningExpired}
+   */
+  public static final class SigningExpired extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.multisig.v1beta1.SigningExpired)
+      SigningExpiredOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SigningExpired.newBuilder() to construct.
+    private SigningExpired(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SigningExpired() {
+      module_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SigningExpired();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_SigningExpired_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_SigningExpired_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.multisig.v1beta1.EventsProto.SigningExpired.class, com.axelar.multisig.v1beta1.EventsProto.SigningExpired.Builder.class);
+    }
+
+    public static final int MODULE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object module_ = "";
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The module.
+     */
+    @java.lang.Override
+    public java.lang.String getModule() {
+      java.lang.Object ref = module_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        module_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The bytes for module.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getModuleBytes() {
+      java.lang.Object ref = module_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        module_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SIG_ID_FIELD_NUMBER = 2;
+    private long sigId_ = 0L;
+    /**
+     * <code>uint64 sig_id = 2 [json_name = "sigId", (.gogoproto.customname) = "SigID"];</code>
+     * @return The sigId.
+     */
+    @java.lang.Override
+    public long getSigId() {
+      return sigId_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(module_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, module_);
+      }
+      if (sigId_ != 0L) {
+        output.writeUInt64(2, sigId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(module_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, module_);
+      }
+      if (sigId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, sigId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.multisig.v1beta1.EventsProto.SigningExpired)) {
+        return super.equals(obj);
+      }
+      com.axelar.multisig.v1beta1.EventsProto.SigningExpired other = (com.axelar.multisig.v1beta1.EventsProto.SigningExpired) obj;
+
+      if (!getModule()
+          .equals(other.getModule())) return false;
+      if (getSigId()
+          != other.getSigId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MODULE_FIELD_NUMBER;
+      hash = (53 * hash) + getModule().hashCode();
+      hash = (37 * hash) + SIG_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSigId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningExpired parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningExpired parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningExpired parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningExpired parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningExpired parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningExpired parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningExpired parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningExpired parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningExpired parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningExpired parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningExpired parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningExpired parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.multisig.v1beta1.EventsProto.SigningExpired prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.multisig.v1beta1.SigningExpired}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.multisig.v1beta1.SigningExpired)
+        com.axelar.multisig.v1beta1.EventsProto.SigningExpiredOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_SigningExpired_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_SigningExpired_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.multisig.v1beta1.EventsProto.SigningExpired.class, com.axelar.multisig.v1beta1.EventsProto.SigningExpired.Builder.class);
+      }
+
+      // Construct using com.axelar.multisig.v1beta1.EventsProto.SigningExpired.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        module_ = "";
+        sigId_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_SigningExpired_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.multisig.v1beta1.EventsProto.SigningExpired getDefaultInstanceForType() {
+        return com.axelar.multisig.v1beta1.EventsProto.SigningExpired.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.multisig.v1beta1.EventsProto.SigningExpired build() {
+        com.axelar.multisig.v1beta1.EventsProto.SigningExpired result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.multisig.v1beta1.EventsProto.SigningExpired buildPartial() {
+        com.axelar.multisig.v1beta1.EventsProto.SigningExpired result = new com.axelar.multisig.v1beta1.EventsProto.SigningExpired(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.multisig.v1beta1.EventsProto.SigningExpired result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.module_ = module_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.sigId_ = sigId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.multisig.v1beta1.EventsProto.SigningExpired) {
+          return mergeFrom((com.axelar.multisig.v1beta1.EventsProto.SigningExpired)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.multisig.v1beta1.EventsProto.SigningExpired other) {
+        if (other == com.axelar.multisig.v1beta1.EventsProto.SigningExpired.getDefaultInstance()) return this;
+        if (!other.getModule().isEmpty()) {
+          module_ = other.module_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getSigId() != 0L) {
+          setSigId(other.getSigId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                module_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                sigId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object module_ = "";
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @return The module.
+       */
+      public java.lang.String getModule() {
+        java.lang.Object ref = module_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          module_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @return The bytes for module.
+       */
+      public com.google.protobuf.ByteString
+          getModuleBytes() {
+        java.lang.Object ref = module_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          module_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @param value The module to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModule(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        module_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModule() {
+        module_ = getDefaultInstance().getModule();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @param value The bytes for module to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModuleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        module_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long sigId_ ;
+      /**
+       * <code>uint64 sig_id = 2 [json_name = "sigId", (.gogoproto.customname) = "SigID"];</code>
+       * @return The sigId.
+       */
+      @java.lang.Override
+      public long getSigId() {
+        return sigId_;
+      }
+      /**
+       * <code>uint64 sig_id = 2 [json_name = "sigId", (.gogoproto.customname) = "SigID"];</code>
+       * @param value The sigId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSigId(long value) {
+
+        sigId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 sig_id = 2 [json_name = "sigId", (.gogoproto.customname) = "SigID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSigId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        sigId_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.multisig.v1beta1.SigningExpired)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.multisig.v1beta1.SigningExpired)
+    private static final com.axelar.multisig.v1beta1.EventsProto.SigningExpired DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.multisig.v1beta1.EventsProto.SigningExpired();
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.SigningExpired getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SigningExpired>
+        PARSER = new com.google.protobuf.AbstractParser<SigningExpired>() {
+      @java.lang.Override
+      public SigningExpired parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SigningExpired> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SigningExpired> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.multisig.v1beta1.EventsProto.SigningExpired getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SignatureSubmittedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.multisig.v1beta1.SignatureSubmitted)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The module.
+     */
+    java.lang.String getModule();
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The bytes for module.
+     */
+    com.google.protobuf.ByteString
+        getModuleBytes();
+
+    /**
+     * <code>uint64 sig_id = 2 [json_name = "sigId", (.gogoproto.customname) = "SigID"];</code>
+     * @return The sigId.
+     */
+    long getSigId();
+
+    /**
+     * <code>bytes participant = 3 [json_name = "participant", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
+     * @return The participant.
+     */
+    com.google.protobuf.ByteString getParticipant();
+
+    /**
+     * <code>bytes signature = 4 [json_name = "signature", (.gogoproto.casttype) = "Signature"];</code>
+     * @return The signature.
+     */
+    com.google.protobuf.ByteString getSignature();
+  }
+  /**
+   * Protobuf type {@code axelar.multisig.v1beta1.SignatureSubmitted}
+   */
+  public static final class SignatureSubmitted extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.multisig.v1beta1.SignatureSubmitted)
+      SignatureSubmittedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SignatureSubmitted.newBuilder() to construct.
+    private SignatureSubmitted(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SignatureSubmitted() {
+      module_ = "";
+      participant_ = com.google.protobuf.ByteString.EMPTY;
+      signature_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SignatureSubmitted();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_SignatureSubmitted_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_SignatureSubmitted_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.multisig.v1beta1.EventsProto.SignatureSubmitted.class, com.axelar.multisig.v1beta1.EventsProto.SignatureSubmitted.Builder.class);
+    }
+
+    public static final int MODULE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object module_ = "";
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The module.
+     */
+    @java.lang.Override
+    public java.lang.String getModule() {
+      java.lang.Object ref = module_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        module_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The bytes for module.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getModuleBytes() {
+      java.lang.Object ref = module_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        module_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SIG_ID_FIELD_NUMBER = 2;
+    private long sigId_ = 0L;
+    /**
+     * <code>uint64 sig_id = 2 [json_name = "sigId", (.gogoproto.customname) = "SigID"];</code>
+     * @return The sigId.
+     */
+    @java.lang.Override
+    public long getSigId() {
+      return sigId_;
+    }
+
+    public static final int PARTICIPANT_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString participant_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes participant = 3 [json_name = "participant", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
+     * @return The participant.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getParticipant() {
+      return participant_;
+    }
+
+    public static final int SIGNATURE_FIELD_NUMBER = 4;
+    private com.google.protobuf.ByteString signature_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes signature = 4 [json_name = "signature", (.gogoproto.casttype) = "Signature"];</code>
+     * @return The signature.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getSignature() {
+      return signature_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(module_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, module_);
+      }
+      if (sigId_ != 0L) {
+        output.writeUInt64(2, sigId_);
+      }
+      if (!participant_.isEmpty()) {
+        output.writeBytes(3, participant_);
+      }
+      if (!signature_.isEmpty()) {
+        output.writeBytes(4, signature_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(module_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, module_);
+      }
+      if (sigId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, sigId_);
+      }
+      if (!participant_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, participant_);
+      }
+      if (!signature_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, signature_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.multisig.v1beta1.EventsProto.SignatureSubmitted)) {
+        return super.equals(obj);
+      }
+      com.axelar.multisig.v1beta1.EventsProto.SignatureSubmitted other = (com.axelar.multisig.v1beta1.EventsProto.SignatureSubmitted) obj;
+
+      if (!getModule()
+          .equals(other.getModule())) return false;
+      if (getSigId()
+          != other.getSigId()) return false;
+      if (!getParticipant()
+          .equals(other.getParticipant())) return false;
+      if (!getSignature()
+          .equals(other.getSignature())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MODULE_FIELD_NUMBER;
+      hash = (53 * hash) + getModule().hashCode();
+      hash = (37 * hash) + SIG_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSigId());
+      hash = (37 * hash) + PARTICIPANT_FIELD_NUMBER;
+      hash = (53 * hash) + getParticipant().hashCode();
+      hash = (37 * hash) + SIGNATURE_FIELD_NUMBER;
+      hash = (53 * hash) + getSignature().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.SignatureSubmitted parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.SignatureSubmitted parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.SignatureSubmitted parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.SignatureSubmitted parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.SignatureSubmitted parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.SignatureSubmitted parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.SignatureSubmitted parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.SignatureSubmitted parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.SignatureSubmitted parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.SignatureSubmitted parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.SignatureSubmitted parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.SignatureSubmitted parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.multisig.v1beta1.EventsProto.SignatureSubmitted prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.multisig.v1beta1.SignatureSubmitted}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.multisig.v1beta1.SignatureSubmitted)
+        com.axelar.multisig.v1beta1.EventsProto.SignatureSubmittedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_SignatureSubmitted_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_SignatureSubmitted_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.multisig.v1beta1.EventsProto.SignatureSubmitted.class, com.axelar.multisig.v1beta1.EventsProto.SignatureSubmitted.Builder.class);
+      }
+
+      // Construct using com.axelar.multisig.v1beta1.EventsProto.SignatureSubmitted.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        module_ = "";
+        sigId_ = 0L;
+        participant_ = com.google.protobuf.ByteString.EMPTY;
+        signature_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_SignatureSubmitted_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.multisig.v1beta1.EventsProto.SignatureSubmitted getDefaultInstanceForType() {
+        return com.axelar.multisig.v1beta1.EventsProto.SignatureSubmitted.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.multisig.v1beta1.EventsProto.SignatureSubmitted build() {
+        com.axelar.multisig.v1beta1.EventsProto.SignatureSubmitted result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.multisig.v1beta1.EventsProto.SignatureSubmitted buildPartial() {
+        com.axelar.multisig.v1beta1.EventsProto.SignatureSubmitted result = new com.axelar.multisig.v1beta1.EventsProto.SignatureSubmitted(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.multisig.v1beta1.EventsProto.SignatureSubmitted result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.module_ = module_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.sigId_ = sigId_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.participant_ = participant_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.signature_ = signature_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.multisig.v1beta1.EventsProto.SignatureSubmitted) {
+          return mergeFrom((com.axelar.multisig.v1beta1.EventsProto.SignatureSubmitted)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.multisig.v1beta1.EventsProto.SignatureSubmitted other) {
+        if (other == com.axelar.multisig.v1beta1.EventsProto.SignatureSubmitted.getDefaultInstance()) return this;
+        if (!other.getModule().isEmpty()) {
+          module_ = other.module_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getSigId() != 0L) {
+          setSigId(other.getSigId());
+        }
+        if (other.getParticipant() != com.google.protobuf.ByteString.EMPTY) {
+          setParticipant(other.getParticipant());
+        }
+        if (other.getSignature() != com.google.protobuf.ByteString.EMPTY) {
+          setSignature(other.getSignature());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                module_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                sigId_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                participant_ = input.readBytes();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                signature_ = input.readBytes();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object module_ = "";
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @return The module.
+       */
+      public java.lang.String getModule() {
+        java.lang.Object ref = module_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          module_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @return The bytes for module.
+       */
+      public com.google.protobuf.ByteString
+          getModuleBytes() {
+        java.lang.Object ref = module_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          module_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @param value The module to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModule(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        module_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModule() {
+        module_ = getDefaultInstance().getModule();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @param value The bytes for module to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModuleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        module_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long sigId_ ;
+      /**
+       * <code>uint64 sig_id = 2 [json_name = "sigId", (.gogoproto.customname) = "SigID"];</code>
+       * @return The sigId.
+       */
+      @java.lang.Override
+      public long getSigId() {
+        return sigId_;
+      }
+      /**
+       * <code>uint64 sig_id = 2 [json_name = "sigId", (.gogoproto.customname) = "SigID"];</code>
+       * @param value The sigId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSigId(long value) {
+
+        sigId_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 sig_id = 2 [json_name = "sigId", (.gogoproto.customname) = "SigID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSigId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        sigId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString participant_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes participant = 3 [json_name = "participant", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
+       * @return The participant.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getParticipant() {
+        return participant_;
+      }
+      /**
+       * <code>bytes participant = 3 [json_name = "participant", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
+       * @param value The participant to set.
+       * @return This builder for chaining.
+       */
+      public Builder setParticipant(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        participant_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes participant = 3 [json_name = "participant", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.ValAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearParticipant() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        participant_ = getDefaultInstance().getParticipant();
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString signature_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes signature = 4 [json_name = "signature", (.gogoproto.casttype) = "Signature"];</code>
+       * @return The signature.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getSignature() {
+        return signature_;
+      }
+      /**
+       * <code>bytes signature = 4 [json_name = "signature", (.gogoproto.casttype) = "Signature"];</code>
+       * @param value The signature to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSignature(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        signature_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes signature = 4 [json_name = "signature", (.gogoproto.casttype) = "Signature"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSignature() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        signature_ = getDefaultInstance().getSignature();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.multisig.v1beta1.SignatureSubmitted)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.multisig.v1beta1.SignatureSubmitted)
+    private static final com.axelar.multisig.v1beta1.EventsProto.SignatureSubmitted DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.multisig.v1beta1.EventsProto.SignatureSubmitted();
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.SignatureSubmitted getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SignatureSubmitted>
+        PARSER = new com.google.protobuf.AbstractParser<SignatureSubmitted>() {
+      @java.lang.Override
+      public SignatureSubmitted parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SignatureSubmitted> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SignatureSubmitted> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.multisig.v1beta1.EventsProto.SignatureSubmitted getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface KeyAssignedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.multisig.v1beta1.KeyAssigned)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The module.
+     */
+    java.lang.String getModule();
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The bytes for module.
+     */
+    com.google.protobuf.ByteString
+        getModuleBytes();
+
+    /**
+     * <code>string chain = 2 [json_name = "chain", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @return The chain.
+     */
+    java.lang.String getChain();
+    /**
+     * <code>string chain = 2 [json_name = "chain", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @return The bytes for chain.
+     */
+    com.google.protobuf.ByteString
+        getChainBytes();
+
+    /**
+     * <code>string key_id = 3 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+     * @return The keyId.
+     */
+    java.lang.String getKeyId();
+    /**
+     * <code>string key_id = 3 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+     * @return The bytes for keyId.
+     */
+    com.google.protobuf.ByteString
+        getKeyIdBytes();
+  }
+  /**
+   * Protobuf type {@code axelar.multisig.v1beta1.KeyAssigned}
+   */
+  public static final class KeyAssigned extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.multisig.v1beta1.KeyAssigned)
+      KeyAssignedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use KeyAssigned.newBuilder() to construct.
+    private KeyAssigned(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private KeyAssigned() {
+      module_ = "";
+      chain_ = "";
+      keyId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new KeyAssigned();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_KeyAssigned_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_KeyAssigned_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.multisig.v1beta1.EventsProto.KeyAssigned.class, com.axelar.multisig.v1beta1.EventsProto.KeyAssigned.Builder.class);
+    }
+
+    public static final int MODULE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object module_ = "";
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The module.
+     */
+    @java.lang.Override
+    public java.lang.String getModule() {
+      java.lang.Object ref = module_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        module_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The bytes for module.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getModuleBytes() {
+      java.lang.Object ref = module_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        module_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CHAIN_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object chain_ = "";
+    /**
+     * <code>string chain = 2 [json_name = "chain", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @return The chain.
+     */
+    @java.lang.Override
+    public java.lang.String getChain() {
+      java.lang.Object ref = chain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        chain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string chain = 2 [json_name = "chain", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @return The bytes for chain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getChainBytes() {
+      java.lang.Object ref = chain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        chain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int KEY_ID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object keyId_ = "";
+    /**
+     * <code>string key_id = 3 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+     * @return The keyId.
+     */
+    @java.lang.Override
+    public java.lang.String getKeyId() {
+      java.lang.Object ref = keyId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        keyId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string key_id = 3 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+     * @return The bytes for keyId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getKeyIdBytes() {
+      java.lang.Object ref = keyId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        keyId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(module_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, module_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, chain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, keyId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(module_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, module_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, chain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, keyId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.multisig.v1beta1.EventsProto.KeyAssigned)) {
+        return super.equals(obj);
+      }
+      com.axelar.multisig.v1beta1.EventsProto.KeyAssigned other = (com.axelar.multisig.v1beta1.EventsProto.KeyAssigned) obj;
+
+      if (!getModule()
+          .equals(other.getModule())) return false;
+      if (!getChain()
+          .equals(other.getChain())) return false;
+      if (!getKeyId()
+          .equals(other.getKeyId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MODULE_FIELD_NUMBER;
+      hash = (53 * hash) + getModule().hashCode();
+      hash = (37 * hash) + CHAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getChain().hashCode();
+      hash = (37 * hash) + KEY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getKeyId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.KeyAssigned parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeyAssigned parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeyAssigned parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeyAssigned parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeyAssigned parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeyAssigned parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeyAssigned parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeyAssigned parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.KeyAssigned parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.KeyAssigned parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeyAssigned parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeyAssigned parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.multisig.v1beta1.EventsProto.KeyAssigned prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.multisig.v1beta1.KeyAssigned}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.multisig.v1beta1.KeyAssigned)
+        com.axelar.multisig.v1beta1.EventsProto.KeyAssignedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_KeyAssigned_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_KeyAssigned_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.multisig.v1beta1.EventsProto.KeyAssigned.class, com.axelar.multisig.v1beta1.EventsProto.KeyAssigned.Builder.class);
+      }
+
+      // Construct using com.axelar.multisig.v1beta1.EventsProto.KeyAssigned.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        module_ = "";
+        chain_ = "";
+        keyId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_KeyAssigned_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.multisig.v1beta1.EventsProto.KeyAssigned getDefaultInstanceForType() {
+        return com.axelar.multisig.v1beta1.EventsProto.KeyAssigned.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.multisig.v1beta1.EventsProto.KeyAssigned build() {
+        com.axelar.multisig.v1beta1.EventsProto.KeyAssigned result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.multisig.v1beta1.EventsProto.KeyAssigned buildPartial() {
+        com.axelar.multisig.v1beta1.EventsProto.KeyAssigned result = new com.axelar.multisig.v1beta1.EventsProto.KeyAssigned(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.multisig.v1beta1.EventsProto.KeyAssigned result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.module_ = module_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.chain_ = chain_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.keyId_ = keyId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.multisig.v1beta1.EventsProto.KeyAssigned) {
+          return mergeFrom((com.axelar.multisig.v1beta1.EventsProto.KeyAssigned)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.multisig.v1beta1.EventsProto.KeyAssigned other) {
+        if (other == com.axelar.multisig.v1beta1.EventsProto.KeyAssigned.getDefaultInstance()) return this;
+        if (!other.getModule().isEmpty()) {
+          module_ = other.module_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getChain().isEmpty()) {
+          chain_ = other.chain_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getKeyId().isEmpty()) {
+          keyId_ = other.keyId_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                module_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                chain_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                keyId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object module_ = "";
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @return The module.
+       */
+      public java.lang.String getModule() {
+        java.lang.Object ref = module_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          module_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @return The bytes for module.
+       */
+      public com.google.protobuf.ByteString
+          getModuleBytes() {
+        java.lang.Object ref = module_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          module_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @param value The module to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModule(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        module_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModule() {
+        module_ = getDefaultInstance().getModule();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @param value The bytes for module to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModuleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        module_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object chain_ = "";
+      /**
+       * <code>string chain = 2 [json_name = "chain", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @return The chain.
+       */
+      public java.lang.String getChain() {
+        java.lang.Object ref = chain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          chain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string chain = 2 [json_name = "chain", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @return The bytes for chain.
+       */
+      public com.google.protobuf.ByteString
+          getChainBytes() {
+        java.lang.Object ref = chain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          chain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string chain = 2 [json_name = "chain", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @param value The chain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChain(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        chain_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain = 2 [json_name = "chain", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChain() {
+        chain_ = getDefaultInstance().getChain();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain = 2 [json_name = "chain", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @param value The bytes for chain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        chain_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object keyId_ = "";
+      /**
+       * <code>string key_id = 3 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+       * @return The keyId.
+       */
+      public java.lang.String getKeyId() {
+        java.lang.Object ref = keyId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          keyId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string key_id = 3 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+       * @return The bytes for keyId.
+       */
+      public com.google.protobuf.ByteString
+          getKeyIdBytes() {
+        java.lang.Object ref = keyId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          keyId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string key_id = 3 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+       * @param value The keyId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        keyId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key_id = 3 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKeyId() {
+        keyId_ = getDefaultInstance().getKeyId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key_id = 3 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+       * @param value The bytes for keyId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        keyId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.multisig.v1beta1.KeyAssigned)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.multisig.v1beta1.KeyAssigned)
+    private static final com.axelar.multisig.v1beta1.EventsProto.KeyAssigned DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.multisig.v1beta1.EventsProto.KeyAssigned();
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.KeyAssigned getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<KeyAssigned>
+        PARSER = new com.google.protobuf.AbstractParser<KeyAssigned>() {
+      @java.lang.Override
+      public KeyAssigned parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<KeyAssigned> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<KeyAssigned> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.multisig.v1beta1.EventsProto.KeyAssigned getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface KeyRotatedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.multisig.v1beta1.KeyRotated)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The module.
+     */
+    java.lang.String getModule();
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The bytes for module.
+     */
+    com.google.protobuf.ByteString
+        getModuleBytes();
+
+    /**
+     * <code>string chain = 2 [json_name = "chain", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @return The chain.
+     */
+    java.lang.String getChain();
+    /**
+     * <code>string chain = 2 [json_name = "chain", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @return The bytes for chain.
+     */
+    com.google.protobuf.ByteString
+        getChainBytes();
+
+    /**
+     * <code>string key_id = 3 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+     * @return The keyId.
+     */
+    java.lang.String getKeyId();
+    /**
+     * <code>string key_id = 3 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+     * @return The bytes for keyId.
+     */
+    com.google.protobuf.ByteString
+        getKeyIdBytes();
+  }
+  /**
+   * Protobuf type {@code axelar.multisig.v1beta1.KeyRotated}
+   */
+  public static final class KeyRotated extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.multisig.v1beta1.KeyRotated)
+      KeyRotatedOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use KeyRotated.newBuilder() to construct.
+    private KeyRotated(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private KeyRotated() {
+      module_ = "";
+      chain_ = "";
+      keyId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new KeyRotated();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_KeyRotated_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_KeyRotated_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.multisig.v1beta1.EventsProto.KeyRotated.class, com.axelar.multisig.v1beta1.EventsProto.KeyRotated.Builder.class);
+    }
+
+    public static final int MODULE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object module_ = "";
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The module.
+     */
+    @java.lang.Override
+    public java.lang.String getModule() {
+      java.lang.Object ref = module_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        module_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string module = 1 [json_name = "module"];</code>
+     * @return The bytes for module.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getModuleBytes() {
+      java.lang.Object ref = module_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        module_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CHAIN_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object chain_ = "";
+    /**
+     * <code>string chain = 2 [json_name = "chain", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @return The chain.
+     */
+    @java.lang.Override
+    public java.lang.String getChain() {
+      java.lang.Object ref = chain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        chain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string chain = 2 [json_name = "chain", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+     * @return The bytes for chain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getChainBytes() {
+      java.lang.Object ref = chain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        chain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int KEY_ID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object keyId_ = "";
+    /**
+     * <code>string key_id = 3 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+     * @return The keyId.
+     */
+    @java.lang.Override
+    public java.lang.String getKeyId() {
+      java.lang.Object ref = keyId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        keyId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string key_id = 3 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+     * @return The bytes for keyId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getKeyIdBytes() {
+      java.lang.Object ref = keyId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        keyId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(module_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, module_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, chain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, keyId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(module_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, module_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(chain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, chain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, keyId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.multisig.v1beta1.EventsProto.KeyRotated)) {
+        return super.equals(obj);
+      }
+      com.axelar.multisig.v1beta1.EventsProto.KeyRotated other = (com.axelar.multisig.v1beta1.EventsProto.KeyRotated) obj;
+
+      if (!getModule()
+          .equals(other.getModule())) return false;
+      if (!getChain()
+          .equals(other.getChain())) return false;
+      if (!getKeyId()
+          .equals(other.getKeyId())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MODULE_FIELD_NUMBER;
+      hash = (53 * hash) + getModule().hashCode();
+      hash = (37 * hash) + CHAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getChain().hashCode();
+      hash = (37 * hash) + KEY_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getKeyId().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.KeyRotated parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeyRotated parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeyRotated parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeyRotated parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeyRotated parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeyRotated parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeyRotated parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeyRotated parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.KeyRotated parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.KeyRotated parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeyRotated parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeyRotated parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.multisig.v1beta1.EventsProto.KeyRotated prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.multisig.v1beta1.KeyRotated}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.multisig.v1beta1.KeyRotated)
+        com.axelar.multisig.v1beta1.EventsProto.KeyRotatedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_KeyRotated_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_KeyRotated_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.multisig.v1beta1.EventsProto.KeyRotated.class, com.axelar.multisig.v1beta1.EventsProto.KeyRotated.Builder.class);
+      }
+
+      // Construct using com.axelar.multisig.v1beta1.EventsProto.KeyRotated.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        module_ = "";
+        chain_ = "";
+        keyId_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_KeyRotated_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.multisig.v1beta1.EventsProto.KeyRotated getDefaultInstanceForType() {
+        return com.axelar.multisig.v1beta1.EventsProto.KeyRotated.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.multisig.v1beta1.EventsProto.KeyRotated build() {
+        com.axelar.multisig.v1beta1.EventsProto.KeyRotated result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.multisig.v1beta1.EventsProto.KeyRotated buildPartial() {
+        com.axelar.multisig.v1beta1.EventsProto.KeyRotated result = new com.axelar.multisig.v1beta1.EventsProto.KeyRotated(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.multisig.v1beta1.EventsProto.KeyRotated result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.module_ = module_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.chain_ = chain_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.keyId_ = keyId_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.multisig.v1beta1.EventsProto.KeyRotated) {
+          return mergeFrom((com.axelar.multisig.v1beta1.EventsProto.KeyRotated)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.multisig.v1beta1.EventsProto.KeyRotated other) {
+        if (other == com.axelar.multisig.v1beta1.EventsProto.KeyRotated.getDefaultInstance()) return this;
+        if (!other.getModule().isEmpty()) {
+          module_ = other.module_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getChain().isEmpty()) {
+          chain_ = other.chain_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getKeyId().isEmpty()) {
+          keyId_ = other.keyId_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                module_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                chain_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                keyId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object module_ = "";
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @return The module.
+       */
+      public java.lang.String getModule() {
+        java.lang.Object ref = module_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          module_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @return The bytes for module.
+       */
+      public com.google.protobuf.ByteString
+          getModuleBytes() {
+        java.lang.Object ref = module_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          module_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @param value The module to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModule(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        module_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModule() {
+        module_ = getDefaultInstance().getModule();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string module = 1 [json_name = "module"];</code>
+       * @param value The bytes for module to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModuleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        module_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object chain_ = "";
+      /**
+       * <code>string chain = 2 [json_name = "chain", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @return The chain.
+       */
+      public java.lang.String getChain() {
+        java.lang.Object ref = chain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          chain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string chain = 2 [json_name = "chain", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @return The bytes for chain.
+       */
+      public com.google.protobuf.ByteString
+          getChainBytes() {
+        java.lang.Object ref = chain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          chain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string chain = 2 [json_name = "chain", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @param value The chain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChain(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        chain_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain = 2 [json_name = "chain", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearChain() {
+        chain_ = getDefaultInstance().getChain();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string chain = 2 [json_name = "chain", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/nexus/exported.ChainName"];</code>
+       * @param value The bytes for chain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setChainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        chain_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object keyId_ = "";
+      /**
+       * <code>string key_id = 3 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+       * @return The keyId.
+       */
+      public java.lang.String getKeyId() {
+        java.lang.Object ref = keyId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          keyId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string key_id = 3 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+       * @return The bytes for keyId.
+       */
+      public com.google.protobuf.ByteString
+          getKeyIdBytes() {
+        java.lang.Object ref = keyId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          keyId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string key_id = 3 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+       * @param value The keyId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        keyId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key_id = 3 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKeyId() {
+        keyId_ = getDefaultInstance().getKeyId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string key_id = 3 [json_name = "keyId", (.gogoproto.customname) = "KeyID", (.gogoproto.casttype) = "github.com/axelarnetwork/axelar-core/x/multisig/exported.KeyID"];</code>
+       * @param value The bytes for keyId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeyIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        keyId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.multisig.v1beta1.KeyRotated)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.multisig.v1beta1.KeyRotated)
+    private static final com.axelar.multisig.v1beta1.EventsProto.KeyRotated DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.multisig.v1beta1.EventsProto.KeyRotated();
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.KeyRotated getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<KeyRotated>
+        PARSER = new com.google.protobuf.AbstractParser<KeyRotated>() {
+      @java.lang.Override
+      public KeyRotated parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<KeyRotated> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<KeyRotated> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.multisig.v1beta1.EventsProto.KeyRotated getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface KeygenOptOutOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.multisig.v1beta1.KeygenOptOut)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes participant = 1 [json_name = "participant", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The participant.
+     */
+    com.google.protobuf.ByteString getParticipant();
+  }
+  /**
+   * Protobuf type {@code axelar.multisig.v1beta1.KeygenOptOut}
+   */
+  public static final class KeygenOptOut extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.multisig.v1beta1.KeygenOptOut)
+      KeygenOptOutOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use KeygenOptOut.newBuilder() to construct.
+    private KeygenOptOut(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private KeygenOptOut() {
+      participant_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new KeygenOptOut();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_KeygenOptOut_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_KeygenOptOut_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.multisig.v1beta1.EventsProto.KeygenOptOut.class, com.axelar.multisig.v1beta1.EventsProto.KeygenOptOut.Builder.class);
+    }
+
+    public static final int PARTICIPANT_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString participant_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes participant = 1 [json_name = "participant", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The participant.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getParticipant() {
+      return participant_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!participant_.isEmpty()) {
+        output.writeBytes(1, participant_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!participant_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, participant_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.multisig.v1beta1.EventsProto.KeygenOptOut)) {
+        return super.equals(obj);
+      }
+      com.axelar.multisig.v1beta1.EventsProto.KeygenOptOut other = (com.axelar.multisig.v1beta1.EventsProto.KeygenOptOut) obj;
+
+      if (!getParticipant()
+          .equals(other.getParticipant())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PARTICIPANT_FIELD_NUMBER;
+      hash = (53 * hash) + getParticipant().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenOptOut parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenOptOut parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenOptOut parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenOptOut parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenOptOut parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenOptOut parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenOptOut parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenOptOut parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenOptOut parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenOptOut parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenOptOut parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenOptOut parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.multisig.v1beta1.EventsProto.KeygenOptOut prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.multisig.v1beta1.KeygenOptOut}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.multisig.v1beta1.KeygenOptOut)
+        com.axelar.multisig.v1beta1.EventsProto.KeygenOptOutOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_KeygenOptOut_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_KeygenOptOut_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.multisig.v1beta1.EventsProto.KeygenOptOut.class, com.axelar.multisig.v1beta1.EventsProto.KeygenOptOut.Builder.class);
+      }
+
+      // Construct using com.axelar.multisig.v1beta1.EventsProto.KeygenOptOut.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        participant_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_KeygenOptOut_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.multisig.v1beta1.EventsProto.KeygenOptOut getDefaultInstanceForType() {
+        return com.axelar.multisig.v1beta1.EventsProto.KeygenOptOut.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.multisig.v1beta1.EventsProto.KeygenOptOut build() {
+        com.axelar.multisig.v1beta1.EventsProto.KeygenOptOut result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.multisig.v1beta1.EventsProto.KeygenOptOut buildPartial() {
+        com.axelar.multisig.v1beta1.EventsProto.KeygenOptOut result = new com.axelar.multisig.v1beta1.EventsProto.KeygenOptOut(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.multisig.v1beta1.EventsProto.KeygenOptOut result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.participant_ = participant_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.multisig.v1beta1.EventsProto.KeygenOptOut) {
+          return mergeFrom((com.axelar.multisig.v1beta1.EventsProto.KeygenOptOut)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.multisig.v1beta1.EventsProto.KeygenOptOut other) {
+        if (other == com.axelar.multisig.v1beta1.EventsProto.KeygenOptOut.getDefaultInstance()) return this;
+        if (other.getParticipant() != com.google.protobuf.ByteString.EMPTY) {
+          setParticipant(other.getParticipant());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                participant_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString participant_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes participant = 1 [json_name = "participant", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return The participant.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getParticipant() {
+        return participant_;
+      }
+      /**
+       * <code>bytes participant = 1 [json_name = "participant", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @param value The participant to set.
+       * @return This builder for chaining.
+       */
+      public Builder setParticipant(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        participant_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes participant = 1 [json_name = "participant", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearParticipant() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        participant_ = getDefaultInstance().getParticipant();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.multisig.v1beta1.KeygenOptOut)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.multisig.v1beta1.KeygenOptOut)
+    private static final com.axelar.multisig.v1beta1.EventsProto.KeygenOptOut DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.multisig.v1beta1.EventsProto.KeygenOptOut();
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenOptOut getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<KeygenOptOut>
+        PARSER = new com.google.protobuf.AbstractParser<KeygenOptOut>() {
+      @java.lang.Override
+      public KeygenOptOut parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<KeygenOptOut> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<KeygenOptOut> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.multisig.v1beta1.EventsProto.KeygenOptOut getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface KeygenOptInOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:axelar.multisig.v1beta1.KeygenOptIn)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bytes participant = 1 [json_name = "participant", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The participant.
+     */
+    com.google.protobuf.ByteString getParticipant();
+  }
+  /**
+   * Protobuf type {@code axelar.multisig.v1beta1.KeygenOptIn}
+   */
+  public static final class KeygenOptIn extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:axelar.multisig.v1beta1.KeygenOptIn)
+      KeygenOptInOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use KeygenOptIn.newBuilder() to construct.
+    private KeygenOptIn(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private KeygenOptIn() {
+      participant_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new KeygenOptIn();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_KeygenOptIn_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_KeygenOptIn_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.axelar.multisig.v1beta1.EventsProto.KeygenOptIn.class, com.axelar.multisig.v1beta1.EventsProto.KeygenOptIn.Builder.class);
+    }
+
+    public static final int PARTICIPANT_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString participant_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <code>bytes participant = 1 [json_name = "participant", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+     * @return The participant.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getParticipant() {
+      return participant_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!participant_.isEmpty()) {
+        output.writeBytes(1, participant_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!participant_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, participant_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.axelar.multisig.v1beta1.EventsProto.KeygenOptIn)) {
+        return super.equals(obj);
+      }
+      com.axelar.multisig.v1beta1.EventsProto.KeygenOptIn other = (com.axelar.multisig.v1beta1.EventsProto.KeygenOptIn) obj;
+
+      if (!getParticipant()
+          .equals(other.getParticipant())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PARTICIPANT_FIELD_NUMBER;
+      hash = (53 * hash) + getParticipant().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenOptIn parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenOptIn parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenOptIn parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenOptIn parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenOptIn parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenOptIn parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenOptIn parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenOptIn parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenOptIn parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenOptIn parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenOptIn parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenOptIn parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.axelar.multisig.v1beta1.EventsProto.KeygenOptIn prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code axelar.multisig.v1beta1.KeygenOptIn}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:axelar.multisig.v1beta1.KeygenOptIn)
+        com.axelar.multisig.v1beta1.EventsProto.KeygenOptInOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_KeygenOptIn_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_KeygenOptIn_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.axelar.multisig.v1beta1.EventsProto.KeygenOptIn.class, com.axelar.multisig.v1beta1.EventsProto.KeygenOptIn.Builder.class);
+      }
+
+      // Construct using com.axelar.multisig.v1beta1.EventsProto.KeygenOptIn.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        participant_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.axelar.multisig.v1beta1.EventsProto.internal_static_axelar_multisig_v1beta1_KeygenOptIn_descriptor;
+      }
+
+      @java.lang.Override
+      public com.axelar.multisig.v1beta1.EventsProto.KeygenOptIn getDefaultInstanceForType() {
+        return com.axelar.multisig.v1beta1.EventsProto.KeygenOptIn.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.axelar.multisig.v1beta1.EventsProto.KeygenOptIn build() {
+        com.axelar.multisig.v1beta1.EventsProto.KeygenOptIn result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.axelar.multisig.v1beta1.EventsProto.KeygenOptIn buildPartial() {
+        com.axelar.multisig.v1beta1.EventsProto.KeygenOptIn result = new com.axelar.multisig.v1beta1.EventsProto.KeygenOptIn(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.axelar.multisig.v1beta1.EventsProto.KeygenOptIn result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.participant_ = participant_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.axelar.multisig.v1beta1.EventsProto.KeygenOptIn) {
+          return mergeFrom((com.axelar.multisig.v1beta1.EventsProto.KeygenOptIn)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.axelar.multisig.v1beta1.EventsProto.KeygenOptIn other) {
+        if (other == com.axelar.multisig.v1beta1.EventsProto.KeygenOptIn.getDefaultInstance()) return this;
+        if (other.getParticipant() != com.google.protobuf.ByteString.EMPTY) {
+          setParticipant(other.getParticipant());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                participant_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString participant_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes participant = 1 [json_name = "participant", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return The participant.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getParticipant() {
+        return participant_;
+      }
+      /**
+       * <code>bytes participant = 1 [json_name = "participant", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @param value The participant to set.
+       * @return This builder for chaining.
+       */
+      public Builder setParticipant(com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        participant_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes participant = 1 [json_name = "participant", (.gogoproto.casttype) = "github.com/cosmos/cosmos-sdk/types.AccAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearParticipant() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        participant_ = getDefaultInstance().getParticipant();
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:axelar.multisig.v1beta1.KeygenOptIn)
+    }
+
+    // @@protoc_insertion_point(class_scope:axelar.multisig.v1beta1.KeygenOptIn)
+    private static final com.axelar.multisig.v1beta1.EventsProto.KeygenOptIn DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.axelar.multisig.v1beta1.EventsProto.KeygenOptIn();
+    }
+
+    public static com.axelar.multisig.v1beta1.EventsProto.KeygenOptIn getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<KeygenOptIn>
+        PARSER = new com.google.protobuf.AbstractParser<KeygenOptIn>() {
+      @java.lang.Override
+      public KeygenOptIn parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<KeygenOptIn> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<KeygenOptIn> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.axelar.multisig.v1beta1.EventsProto.KeygenOptIn getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_multisig_v1beta1_KeygenStarted_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_multisig_v1beta1_KeygenStarted_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_multisig_v1beta1_KeygenCompleted_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_multisig_v1beta1_KeygenCompleted_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_multisig_v1beta1_KeygenExpired_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_multisig_v1beta1_KeygenExpired_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_multisig_v1beta1_PubKeySubmitted_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_multisig_v1beta1_PubKeySubmitted_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_multisig_v1beta1_SigningStarted_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_multisig_v1beta1_SigningStarted_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_multisig_v1beta1_SigningStarted_PubKeysEntry_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_multisig_v1beta1_SigningStarted_PubKeysEntry_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_multisig_v1beta1_SigningCompleted_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_multisig_v1beta1_SigningCompleted_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_multisig_v1beta1_SigningExpired_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_multisig_v1beta1_SigningExpired_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_multisig_v1beta1_SignatureSubmitted_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_multisig_v1beta1_SignatureSubmitted_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_multisig_v1beta1_KeyAssigned_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_multisig_v1beta1_KeyAssigned_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_multisig_v1beta1_KeyRotated_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_multisig_v1beta1_KeyRotated_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_multisig_v1beta1_KeygenOptOut_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_multisig_v1beta1_KeygenOptOut_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_axelar_multisig_v1beta1_KeygenOptIn_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_axelar_multisig_v1beta1_KeygenOptIn_fieldAccessorTable;
 
@@ -150,13 +9245,13 @@ public final class EventsProto {
       "m/cosmos/cosmos-sdk/types.AccAddressR\013pa" +
       "rticipant\"b\n\013KeygenOptIn\022S\n\013participant\030" +
       "\001 \001(\014B1\372\336\037-github.com/cosmos/cosmos-sdk/" +
-      "types.AccAddressR\013participantB\337\001\n\033com.ax" +
-      "elar.multisig.v1beta1B\013EventsProtoP\001Z5gi" +
-      "thub.com/axelarnetwork/axelar-core/x/mul" +
-      "tisig/types\242\002\003AMX\252\002\027Axelar.Multisig.V1be" +
-      "ta1\312\002\027Axelar\\Multisig\\V1beta1\342\002#Axelar\\M" +
-      "ultisig\\V1beta1\\GPBMetadata\352\002\031Axelar::Mu" +
-      "ltisig::V1beta1b\006proto3"
+      "types.AccAddressR\013participantB\335\001\n\033com.ax" +
+      "elar.multisig.v1beta1B\013EventsProtoZ5gith" +
+      "ub.com/axelarnetwork/axelar-core/x/multi" +
+      "sig/types\242\002\003AMX\252\002\027Axelar.Multisig.V1beta" +
+      "1\312\002\027Axelar\\Multisig\\V1beta1\342\002#Axelar\\Mul" +
+      "tisig\\V1beta1\\GPBMetadata\352\002\031Axelar::Mult" +
+      "isig::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

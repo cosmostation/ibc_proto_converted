@@ -14,9 +14,609 @@ public final class MappableProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MappableOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:assetmantle.modules.orders.mappable.Mappable)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.assetmantle.schema.documents.base.Document order = 1 [json_name = "order"];</code>
+     * @return Whether the order field is set.
+     */
+    boolean hasOrder();
+    /**
+     * <code>.assetmantle.schema.documents.base.Document order = 1 [json_name = "order"];</code>
+     * @return The order.
+     */
+    com.assetmantle.schema.documents.base.DocumentProto.Document getOrder();
+    /**
+     * <code>.assetmantle.schema.documents.base.Document order = 1 [json_name = "order"];</code>
+     */
+    com.assetmantle.schema.documents.base.DocumentProto.DocumentOrBuilder getOrderOrBuilder();
+  }
+  /**
+   * Protobuf type {@code assetmantle.modules.orders.mappable.Mappable}
+   */
+  public static final class Mappable extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:assetmantle.modules.orders.mappable.Mappable)
+      MappableOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Mappable.newBuilder() to construct.
+    private Mappable(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Mappable() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Mappable();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.assetmantle.modules.orders.mappable.MappableProto.internal_static_assetmantle_modules_orders_mappable_Mappable_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.assetmantle.modules.orders.mappable.MappableProto.internal_static_assetmantle_modules_orders_mappable_Mappable_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.assetmantle.modules.orders.mappable.MappableProto.Mappable.class, com.assetmantle.modules.orders.mappable.MappableProto.Mappable.Builder.class);
+    }
+
+    public static final int ORDER_FIELD_NUMBER = 1;
+    private com.assetmantle.schema.documents.base.DocumentProto.Document order_;
+    /**
+     * <code>.assetmantle.schema.documents.base.Document order = 1 [json_name = "order"];</code>
+     * @return Whether the order field is set.
+     */
+    @java.lang.Override
+    public boolean hasOrder() {
+      return order_ != null;
+    }
+    /**
+     * <code>.assetmantle.schema.documents.base.Document order = 1 [json_name = "order"];</code>
+     * @return The order.
+     */
+    @java.lang.Override
+    public com.assetmantle.schema.documents.base.DocumentProto.Document getOrder() {
+      return order_ == null ? com.assetmantle.schema.documents.base.DocumentProto.Document.getDefaultInstance() : order_;
+    }
+    /**
+     * <code>.assetmantle.schema.documents.base.Document order = 1 [json_name = "order"];</code>
+     */
+    @java.lang.Override
+    public com.assetmantle.schema.documents.base.DocumentProto.DocumentOrBuilder getOrderOrBuilder() {
+      return order_ == null ? com.assetmantle.schema.documents.base.DocumentProto.Document.getDefaultInstance() : order_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (order_ != null) {
+        output.writeMessage(1, getOrder());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (order_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getOrder());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.assetmantle.modules.orders.mappable.MappableProto.Mappable)) {
+        return super.equals(obj);
+      }
+      com.assetmantle.modules.orders.mappable.MappableProto.Mappable other = (com.assetmantle.modules.orders.mappable.MappableProto.Mappable) obj;
+
+      if (hasOrder() != other.hasOrder()) return false;
+      if (hasOrder()) {
+        if (!getOrder()
+            .equals(other.getOrder())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasOrder()) {
+        hash = (37 * hash) + ORDER_FIELD_NUMBER;
+        hash = (53 * hash) + getOrder().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.assetmantle.modules.orders.mappable.MappableProto.Mappable parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.assetmantle.modules.orders.mappable.MappableProto.Mappable parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.assetmantle.modules.orders.mappable.MappableProto.Mappable parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.assetmantle.modules.orders.mappable.MappableProto.Mappable parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.assetmantle.modules.orders.mappable.MappableProto.Mappable parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.assetmantle.modules.orders.mappable.MappableProto.Mappable parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.assetmantle.modules.orders.mappable.MappableProto.Mappable parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.assetmantle.modules.orders.mappable.MappableProto.Mappable parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.assetmantle.modules.orders.mappable.MappableProto.Mappable parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.assetmantle.modules.orders.mappable.MappableProto.Mappable parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.assetmantle.modules.orders.mappable.MappableProto.Mappable parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.assetmantle.modules.orders.mappable.MappableProto.Mappable parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.assetmantle.modules.orders.mappable.MappableProto.Mappable prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code assetmantle.modules.orders.mappable.Mappable}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:assetmantle.modules.orders.mappable.Mappable)
+        com.assetmantle.modules.orders.mappable.MappableProto.MappableOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.assetmantle.modules.orders.mappable.MappableProto.internal_static_assetmantle_modules_orders_mappable_Mappable_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.assetmantle.modules.orders.mappable.MappableProto.internal_static_assetmantle_modules_orders_mappable_Mappable_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.assetmantle.modules.orders.mappable.MappableProto.Mappable.class, com.assetmantle.modules.orders.mappable.MappableProto.Mappable.Builder.class);
+      }
+
+      // Construct using com.assetmantle.modules.orders.mappable.MappableProto.Mappable.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        order_ = null;
+        if (orderBuilder_ != null) {
+          orderBuilder_.dispose();
+          orderBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.assetmantle.modules.orders.mappable.MappableProto.internal_static_assetmantle_modules_orders_mappable_Mappable_descriptor;
+      }
+
+      @java.lang.Override
+      public com.assetmantle.modules.orders.mappable.MappableProto.Mappable getDefaultInstanceForType() {
+        return com.assetmantle.modules.orders.mappable.MappableProto.Mappable.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.assetmantle.modules.orders.mappable.MappableProto.Mappable build() {
+        com.assetmantle.modules.orders.mappable.MappableProto.Mappable result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.assetmantle.modules.orders.mappable.MappableProto.Mappable buildPartial() {
+        com.assetmantle.modules.orders.mappable.MappableProto.Mappable result = new com.assetmantle.modules.orders.mappable.MappableProto.Mappable(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.assetmantle.modules.orders.mappable.MappableProto.Mappable result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.order_ = orderBuilder_ == null
+              ? order_
+              : orderBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.assetmantle.modules.orders.mappable.MappableProto.Mappable) {
+          return mergeFrom((com.assetmantle.modules.orders.mappable.MappableProto.Mappable)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.assetmantle.modules.orders.mappable.MappableProto.Mappable other) {
+        if (other == com.assetmantle.modules.orders.mappable.MappableProto.Mappable.getDefaultInstance()) return this;
+        if (other.hasOrder()) {
+          mergeOrder(other.getOrder());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getOrderFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.assetmantle.schema.documents.base.DocumentProto.Document order_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.assetmantle.schema.documents.base.DocumentProto.Document, com.assetmantle.schema.documents.base.DocumentProto.Document.Builder, com.assetmantle.schema.documents.base.DocumentProto.DocumentOrBuilder> orderBuilder_;
+      /**
+       * <code>.assetmantle.schema.documents.base.Document order = 1 [json_name = "order"];</code>
+       * @return Whether the order field is set.
+       */
+      public boolean hasOrder() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.assetmantle.schema.documents.base.Document order = 1 [json_name = "order"];</code>
+       * @return The order.
+       */
+      public com.assetmantle.schema.documents.base.DocumentProto.Document getOrder() {
+        if (orderBuilder_ == null) {
+          return order_ == null ? com.assetmantle.schema.documents.base.DocumentProto.Document.getDefaultInstance() : order_;
+        } else {
+          return orderBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.assetmantle.schema.documents.base.Document order = 1 [json_name = "order"];</code>
+       */
+      public Builder setOrder(com.assetmantle.schema.documents.base.DocumentProto.Document value) {
+        if (orderBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          order_ = value;
+        } else {
+          orderBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.assetmantle.schema.documents.base.Document order = 1 [json_name = "order"];</code>
+       */
+      public Builder setOrder(
+          com.assetmantle.schema.documents.base.DocumentProto.Document.Builder builderForValue) {
+        if (orderBuilder_ == null) {
+          order_ = builderForValue.build();
+        } else {
+          orderBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.assetmantle.schema.documents.base.Document order = 1 [json_name = "order"];</code>
+       */
+      public Builder mergeOrder(com.assetmantle.schema.documents.base.DocumentProto.Document value) {
+        if (orderBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            order_ != null &&
+            order_ != com.assetmantle.schema.documents.base.DocumentProto.Document.getDefaultInstance()) {
+            getOrderBuilder().mergeFrom(value);
+          } else {
+            order_ = value;
+          }
+        } else {
+          orderBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.assetmantle.schema.documents.base.Document order = 1 [json_name = "order"];</code>
+       */
+      public Builder clearOrder() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        order_ = null;
+        if (orderBuilder_ != null) {
+          orderBuilder_.dispose();
+          orderBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.assetmantle.schema.documents.base.Document order = 1 [json_name = "order"];</code>
+       */
+      public com.assetmantle.schema.documents.base.DocumentProto.Document.Builder getOrderBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getOrderFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.assetmantle.schema.documents.base.Document order = 1 [json_name = "order"];</code>
+       */
+      public com.assetmantle.schema.documents.base.DocumentProto.DocumentOrBuilder getOrderOrBuilder() {
+        if (orderBuilder_ != null) {
+          return orderBuilder_.getMessageOrBuilder();
+        } else {
+          return order_ == null ?
+              com.assetmantle.schema.documents.base.DocumentProto.Document.getDefaultInstance() : order_;
+        }
+      }
+      /**
+       * <code>.assetmantle.schema.documents.base.Document order = 1 [json_name = "order"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.assetmantle.schema.documents.base.DocumentProto.Document, com.assetmantle.schema.documents.base.DocumentProto.Document.Builder, com.assetmantle.schema.documents.base.DocumentProto.DocumentOrBuilder> 
+          getOrderFieldBuilder() {
+        if (orderBuilder_ == null) {
+          orderBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.assetmantle.schema.documents.base.DocumentProto.Document, com.assetmantle.schema.documents.base.DocumentProto.Document.Builder, com.assetmantle.schema.documents.base.DocumentProto.DocumentOrBuilder>(
+                  getOrder(),
+                  getParentForChildren(),
+                  isClean());
+          order_ = null;
+        }
+        return orderBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:assetmantle.modules.orders.mappable.Mappable)
+    }
+
+    // @@protoc_insertion_point(class_scope:assetmantle.modules.orders.mappable.Mappable)
+    private static final com.assetmantle.modules.orders.mappable.MappableProto.Mappable DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.assetmantle.modules.orders.mappable.MappableProto.Mappable();
+    }
+
+    public static com.assetmantle.modules.orders.mappable.MappableProto.Mappable getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Mappable>
+        PARSER = new com.google.protobuf.AbstractParser<Mappable>() {
+      @java.lang.Override
+      public Mappable parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Mappable> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Mappable> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.assetmantle.modules.orders.mappable.MappableProto.Mappable getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_assetmantle_modules_orders_mappable_Mappable_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_assetmantle_modules_orders_mappable_Mappable_fieldAccessorTable;
 
@@ -33,13 +633,13 @@ public final class MappableProto {
       "e\032)assetmantle/documents/base/document.p" +
       "roto\"M\n\010Mappable\022A\n\005order\030\001 \001(\0132+.assetm" +
       "antle.schema.documents.base.DocumentR\005or" +
-      "derB\350\001\n\'com.assetmantle.modules.orders.m" +
-      "appableB\rMappableProtoP\001\242\002\004AMOM\252\002#Assetm" +
-      "antle.Modules.Orders.Mappable\312\002#Assetman" +
-      "tle\\Modules\\Orders\\Mappable\342\002/Assetmantl" +
-      "e\\Modules\\Orders\\Mappable\\GPBMetadata\352\002&" +
-      "Assetmantle::Modules::Orders::Mappableb\006" +
-      "proto3"
+      "derB\346\001\n\'com.assetmantle.modules.orders.m" +
+      "appableB\rMappableProto\242\002\004AMOM\252\002#Assetman" +
+      "tle.Modules.Orders.Mappable\312\002#Assetmantl" +
+      "e\\Modules\\Orders\\Mappable\342\002/Assetmantle\\" +
+      "Modules\\Orders\\Mappable\\GPBMetadata\352\002&As" +
+      "setmantle::Modules::Orders::Mappableb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

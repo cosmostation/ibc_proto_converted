@@ -14,34 +14,7088 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.rvalidator.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.stafihub.stafihub.rvalidator.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.stafihub.stafihub.rvalidator.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.stafihub.stafihub.rvalidator.ParamsProto.Params getParams();
+    /**
+     * <code>.stafihub.stafihub.rvalidator.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.stafihub.stafihub.rvalidator.ParamsProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.RValidator selectedRValidatorList = 2 [json_name = "selectedRValidatorList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.rvalidator.GenesisProto.RValidator> 
+        getSelectedRValidatorListList();
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.RValidator selectedRValidatorList = 2 [json_name = "selectedRValidatorList"];</code>
+     */
+    com.stafihub.stafihub.rvalidator.GenesisProto.RValidator getSelectedRValidatorList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.RValidator selectedRValidatorList = 2 [json_name = "selectedRValidatorList"];</code>
+     */
+    int getSelectedRValidatorListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.RValidator selectedRValidatorList = 2 [json_name = "selectedRValidatorList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.rvalidator.GenesisProto.RValidatorOrBuilder> 
+        getSelectedRValidatorListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.RValidator selectedRValidatorList = 2 [json_name = "selectedRValidatorList"];</code>
+     */
+    com.stafihub.stafihub.rvalidator.GenesisProto.RValidatorOrBuilder getSelectedRValidatorListOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestVotedCycleList = 3 [json_name = "latestVotedCycleList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.rvalidator.GenesisProto.Cycle> 
+        getLatestVotedCycleListList();
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestVotedCycleList = 3 [json_name = "latestVotedCycleList"];</code>
+     */
+    com.stafihub.stafihub.rvalidator.GenesisProto.Cycle getLatestVotedCycleList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestVotedCycleList = 3 [json_name = "latestVotedCycleList"];</code>
+     */
+    int getLatestVotedCycleListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestVotedCycleList = 3 [json_name = "latestVotedCycleList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.rvalidator.GenesisProto.CycleOrBuilder> 
+        getLatestVotedCycleListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestVotedCycleList = 3 [json_name = "latestVotedCycleList"];</code>
+     */
+    com.stafihub.stafihub.rvalidator.GenesisProto.CycleOrBuilder getLatestVotedCycleListOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestDealedCycleList = 4 [json_name = "latestDealedCycleList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.rvalidator.GenesisProto.Cycle> 
+        getLatestDealedCycleListList();
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestDealedCycleList = 4 [json_name = "latestDealedCycleList"];</code>
+     */
+    com.stafihub.stafihub.rvalidator.GenesisProto.Cycle getLatestDealedCycleList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestDealedCycleList = 4 [json_name = "latestDealedCycleList"];</code>
+     */
+    int getLatestDealedCycleListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestDealedCycleList = 4 [json_name = "latestDealedCycleList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.rvalidator.GenesisProto.CycleOrBuilder> 
+        getLatestDealedCycleListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestDealedCycleList = 4 [json_name = "latestDealedCycleList"];</code>
+     */
+    com.stafihub.stafihub.rvalidator.GenesisProto.CycleOrBuilder getLatestDealedCycleListOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.CycleSeconds cycleSecondsList = 5 [json_name = "cycleSecondsList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds> 
+        getCycleSecondsListList();
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.CycleSeconds cycleSecondsList = 5 [json_name = "cycleSecondsList"];</code>
+     */
+    com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds getCycleSecondsList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.CycleSeconds cycleSecondsList = 5 [json_name = "cycleSecondsList"];</code>
+     */
+    int getCycleSecondsListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.CycleSeconds cycleSecondsList = 5 [json_name = "cycleSecondsList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.rvalidator.GenesisProto.CycleSecondsOrBuilder> 
+        getCycleSecondsListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.CycleSeconds cycleSecondsList = 5 [json_name = "cycleSecondsList"];</code>
+     */
+    com.stafihub.stafihub.rvalidator.GenesisProto.CycleSecondsOrBuilder getCycleSecondsListOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.ShuffleSeconds shuffleSecondsList = 6 [json_name = "shuffleSecondsList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds> 
+        getShuffleSecondsListList();
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.ShuffleSeconds shuffleSecondsList = 6 [json_name = "shuffleSecondsList"];</code>
+     */
+    com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds getShuffleSecondsList(int index);
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.ShuffleSeconds shuffleSecondsList = 6 [json_name = "shuffleSecondsList"];</code>
+     */
+    int getShuffleSecondsListCount();
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.ShuffleSeconds shuffleSecondsList = 6 [json_name = "shuffleSecondsList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSecondsOrBuilder> 
+        getShuffleSecondsListOrBuilderList();
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.ShuffleSeconds shuffleSecondsList = 6 [json_name = "shuffleSecondsList"];</code>
+     */
+    com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSecondsOrBuilder getShuffleSecondsListOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.rvalidator.DealingRValidator dealingRValidatorList = 7 [json_name = "dealingRValidatorList"];</code>
+     */
+    java.util.List<com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator> 
+        getDealingRValidatorListList();
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.rvalidator.DealingRValidator dealingRValidatorList = 7 [json_name = "dealingRValidatorList"];</code>
+     */
+    com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator getDealingRValidatorList(int index);
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.rvalidator.DealingRValidator dealingRValidatorList = 7 [json_name = "dealingRValidatorList"];</code>
+     */
+    int getDealingRValidatorListCount();
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.rvalidator.DealingRValidator dealingRValidatorList = 7 [json_name = "dealingRValidatorList"];</code>
+     */
+    java.util.List<? extends com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidatorOrBuilder> 
+        getDealingRValidatorListOrBuilderList();
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.rvalidator.DealingRValidator dealingRValidatorList = 7 [json_name = "dealingRValidatorList"];</code>
+     */
+    com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidatorOrBuilder getDealingRValidatorListOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * GenesisState defines the rvalidator module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code stafihub.stafihub.rvalidator.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.rvalidator.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+      selectedRValidatorList_ = java.util.Collections.emptyList();
+      latestVotedCycleList_ = java.util.Collections.emptyList();
+      latestDealedCycleList_ = java.util.Collections.emptyList();
+      cycleSecondsList_ = java.util.Collections.emptyList();
+      shuffleSecondsList_ = java.util.Collections.emptyList();
+      dealingRValidatorList_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.rvalidator.GenesisProto.internal_static_stafihub_stafihub_rvalidator_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.rvalidator.GenesisProto.internal_static_stafihub_stafihub_rvalidator_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState.class, com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.stafihub.stafihub.rvalidator.ParamsProto.Params params_;
+    /**
+     * <code>.stafihub.stafihub.rvalidator.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.stafihub.stafihub.rvalidator.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.rvalidator.ParamsProto.Params getParams() {
+      return params_ == null ? com.stafihub.stafihub.rvalidator.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.stafihub.stafihub.rvalidator.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.rvalidator.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.stafihub.stafihub.rvalidator.ParamsProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int SELECTEDRVALIDATORLIST_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.rvalidator.GenesisProto.RValidator> selectedRValidatorList_;
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.RValidator selectedRValidatorList = 2 [json_name = "selectedRValidatorList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.rvalidator.GenesisProto.RValidator> getSelectedRValidatorListList() {
+      return selectedRValidatorList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.RValidator selectedRValidatorList = 2 [json_name = "selectedRValidatorList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.rvalidator.GenesisProto.RValidatorOrBuilder> 
+        getSelectedRValidatorListOrBuilderList() {
+      return selectedRValidatorList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.RValidator selectedRValidatorList = 2 [json_name = "selectedRValidatorList"];</code>
+     */
+    @java.lang.Override
+    public int getSelectedRValidatorListCount() {
+      return selectedRValidatorList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.RValidator selectedRValidatorList = 2 [json_name = "selectedRValidatorList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.rvalidator.GenesisProto.RValidator getSelectedRValidatorList(int index) {
+      return selectedRValidatorList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.RValidator selectedRValidatorList = 2 [json_name = "selectedRValidatorList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.rvalidator.GenesisProto.RValidatorOrBuilder getSelectedRValidatorListOrBuilder(
+        int index) {
+      return selectedRValidatorList_.get(index);
+    }
+
+    public static final int LATESTVOTEDCYCLELIST_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.rvalidator.GenesisProto.Cycle> latestVotedCycleList_;
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestVotedCycleList = 3 [json_name = "latestVotedCycleList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.rvalidator.GenesisProto.Cycle> getLatestVotedCycleListList() {
+      return latestVotedCycleList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestVotedCycleList = 3 [json_name = "latestVotedCycleList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.rvalidator.GenesisProto.CycleOrBuilder> 
+        getLatestVotedCycleListOrBuilderList() {
+      return latestVotedCycleList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestVotedCycleList = 3 [json_name = "latestVotedCycleList"];</code>
+     */
+    @java.lang.Override
+    public int getLatestVotedCycleListCount() {
+      return latestVotedCycleList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestVotedCycleList = 3 [json_name = "latestVotedCycleList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.rvalidator.GenesisProto.Cycle getLatestVotedCycleList(int index) {
+      return latestVotedCycleList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestVotedCycleList = 3 [json_name = "latestVotedCycleList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.rvalidator.GenesisProto.CycleOrBuilder getLatestVotedCycleListOrBuilder(
+        int index) {
+      return latestVotedCycleList_.get(index);
+    }
+
+    public static final int LATESTDEALEDCYCLELIST_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.rvalidator.GenesisProto.Cycle> latestDealedCycleList_;
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestDealedCycleList = 4 [json_name = "latestDealedCycleList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.rvalidator.GenesisProto.Cycle> getLatestDealedCycleListList() {
+      return latestDealedCycleList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestDealedCycleList = 4 [json_name = "latestDealedCycleList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.rvalidator.GenesisProto.CycleOrBuilder> 
+        getLatestDealedCycleListOrBuilderList() {
+      return latestDealedCycleList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestDealedCycleList = 4 [json_name = "latestDealedCycleList"];</code>
+     */
+    @java.lang.Override
+    public int getLatestDealedCycleListCount() {
+      return latestDealedCycleList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestDealedCycleList = 4 [json_name = "latestDealedCycleList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.rvalidator.GenesisProto.Cycle getLatestDealedCycleList(int index) {
+      return latestDealedCycleList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestDealedCycleList = 4 [json_name = "latestDealedCycleList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.rvalidator.GenesisProto.CycleOrBuilder getLatestDealedCycleListOrBuilder(
+        int index) {
+      return latestDealedCycleList_.get(index);
+    }
+
+    public static final int CYCLESECONDSLIST_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds> cycleSecondsList_;
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.CycleSeconds cycleSecondsList = 5 [json_name = "cycleSecondsList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds> getCycleSecondsListList() {
+      return cycleSecondsList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.CycleSeconds cycleSecondsList = 5 [json_name = "cycleSecondsList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.rvalidator.GenesisProto.CycleSecondsOrBuilder> 
+        getCycleSecondsListOrBuilderList() {
+      return cycleSecondsList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.CycleSeconds cycleSecondsList = 5 [json_name = "cycleSecondsList"];</code>
+     */
+    @java.lang.Override
+    public int getCycleSecondsListCount() {
+      return cycleSecondsList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.CycleSeconds cycleSecondsList = 5 [json_name = "cycleSecondsList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds getCycleSecondsList(int index) {
+      return cycleSecondsList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.CycleSeconds cycleSecondsList = 5 [json_name = "cycleSecondsList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.rvalidator.GenesisProto.CycleSecondsOrBuilder getCycleSecondsListOrBuilder(
+        int index) {
+      return cycleSecondsList_.get(index);
+    }
+
+    public static final int SHUFFLESECONDSLIST_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds> shuffleSecondsList_;
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.ShuffleSeconds shuffleSecondsList = 6 [json_name = "shuffleSecondsList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds> getShuffleSecondsListList() {
+      return shuffleSecondsList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.ShuffleSeconds shuffleSecondsList = 6 [json_name = "shuffleSecondsList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSecondsOrBuilder> 
+        getShuffleSecondsListOrBuilderList() {
+      return shuffleSecondsList_;
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.ShuffleSeconds shuffleSecondsList = 6 [json_name = "shuffleSecondsList"];</code>
+     */
+    @java.lang.Override
+    public int getShuffleSecondsListCount() {
+      return shuffleSecondsList_.size();
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.ShuffleSeconds shuffleSecondsList = 6 [json_name = "shuffleSecondsList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds getShuffleSecondsList(int index) {
+      return shuffleSecondsList_.get(index);
+    }
+    /**
+     * <code>repeated .stafihub.stafihub.rvalidator.ShuffleSeconds shuffleSecondsList = 6 [json_name = "shuffleSecondsList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSecondsOrBuilder getShuffleSecondsListOrBuilder(
+        int index) {
+      return shuffleSecondsList_.get(index);
+    }
+
+    public static final int DEALINGRVALIDATORLIST_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
+    private java.util.List<com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator> dealingRValidatorList_;
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.rvalidator.DealingRValidator dealingRValidatorList = 7 [json_name = "dealingRValidatorList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator> getDealingRValidatorListList() {
+      return dealingRValidatorList_;
+    }
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.rvalidator.DealingRValidator dealingRValidatorList = 7 [json_name = "dealingRValidatorList"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidatorOrBuilder> 
+        getDealingRValidatorListOrBuilderList() {
+      return dealingRValidatorList_;
+    }
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.rvalidator.DealingRValidator dealingRValidatorList = 7 [json_name = "dealingRValidatorList"];</code>
+     */
+    @java.lang.Override
+    public int getDealingRValidatorListCount() {
+      return dealingRValidatorList_.size();
+    }
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.rvalidator.DealingRValidator dealingRValidatorList = 7 [json_name = "dealingRValidatorList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator getDealingRValidatorList(int index) {
+      return dealingRValidatorList_.get(index);
+    }
+    /**
+     * <pre>
+     * this line is used by starport scaffolding # genesis/proto/state
+     * </pre>
+     *
+     * <code>repeated .stafihub.stafihub.rvalidator.DealingRValidator dealingRValidatorList = 7 [json_name = "dealingRValidatorList"];</code>
+     */
+    @java.lang.Override
+    public com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidatorOrBuilder getDealingRValidatorListOrBuilder(
+        int index) {
+      return dealingRValidatorList_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      for (int i = 0; i < selectedRValidatorList_.size(); i++) {
+        output.writeMessage(2, selectedRValidatorList_.get(i));
+      }
+      for (int i = 0; i < latestVotedCycleList_.size(); i++) {
+        output.writeMessage(3, latestVotedCycleList_.get(i));
+      }
+      for (int i = 0; i < latestDealedCycleList_.size(); i++) {
+        output.writeMessage(4, latestDealedCycleList_.get(i));
+      }
+      for (int i = 0; i < cycleSecondsList_.size(); i++) {
+        output.writeMessage(5, cycleSecondsList_.get(i));
+      }
+      for (int i = 0; i < shuffleSecondsList_.size(); i++) {
+        output.writeMessage(6, shuffleSecondsList_.get(i));
+      }
+      for (int i = 0; i < dealingRValidatorList_.size(); i++) {
+        output.writeMessage(7, dealingRValidatorList_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      for (int i = 0; i < selectedRValidatorList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, selectedRValidatorList_.get(i));
+      }
+      for (int i = 0; i < latestVotedCycleList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, latestVotedCycleList_.get(i));
+      }
+      for (int i = 0; i < latestDealedCycleList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, latestDealedCycleList_.get(i));
+      }
+      for (int i = 0; i < cycleSecondsList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, cycleSecondsList_.get(i));
+      }
+      for (int i = 0; i < shuffleSecondsList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, shuffleSecondsList_.get(i));
+      }
+      for (int i = 0; i < dealingRValidatorList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, dealingRValidatorList_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState other = (com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getSelectedRValidatorListList()
+          .equals(other.getSelectedRValidatorListList())) return false;
+      if (!getLatestVotedCycleListList()
+          .equals(other.getLatestVotedCycleListList())) return false;
+      if (!getLatestDealedCycleListList()
+          .equals(other.getLatestDealedCycleListList())) return false;
+      if (!getCycleSecondsListList()
+          .equals(other.getCycleSecondsListList())) return false;
+      if (!getShuffleSecondsListList()
+          .equals(other.getShuffleSecondsListList())) return false;
+      if (!getDealingRValidatorListList()
+          .equals(other.getDealingRValidatorListList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (getSelectedRValidatorListCount() > 0) {
+        hash = (37 * hash) + SELECTEDRVALIDATORLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getSelectedRValidatorListList().hashCode();
+      }
+      if (getLatestVotedCycleListCount() > 0) {
+        hash = (37 * hash) + LATESTVOTEDCYCLELIST_FIELD_NUMBER;
+        hash = (53 * hash) + getLatestVotedCycleListList().hashCode();
+      }
+      if (getLatestDealedCycleListCount() > 0) {
+        hash = (37 * hash) + LATESTDEALEDCYCLELIST_FIELD_NUMBER;
+        hash = (53 * hash) + getLatestDealedCycleListList().hashCode();
+      }
+      if (getCycleSecondsListCount() > 0) {
+        hash = (37 * hash) + CYCLESECONDSLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getCycleSecondsListList().hashCode();
+      }
+      if (getShuffleSecondsListCount() > 0) {
+        hash = (37 * hash) + SHUFFLESECONDSLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getShuffleSecondsListList().hashCode();
+      }
+      if (getDealingRValidatorListCount() > 0) {
+        hash = (37 * hash) + DEALINGRVALIDATORLIST_FIELD_NUMBER;
+        hash = (53 * hash) + getDealingRValidatorListList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the rvalidator module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code stafihub.stafihub.rvalidator.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.rvalidator.GenesisState)
+        com.stafihub.stafihub.rvalidator.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.rvalidator.GenesisProto.internal_static_stafihub_stafihub_rvalidator_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.rvalidator.GenesisProto.internal_static_stafihub_stafihub_rvalidator_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState.class, com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        if (selectedRValidatorListBuilder_ == null) {
+          selectedRValidatorList_ = java.util.Collections.emptyList();
+        } else {
+          selectedRValidatorList_ = null;
+          selectedRValidatorListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (latestVotedCycleListBuilder_ == null) {
+          latestVotedCycleList_ = java.util.Collections.emptyList();
+        } else {
+          latestVotedCycleList_ = null;
+          latestVotedCycleListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (latestDealedCycleListBuilder_ == null) {
+          latestDealedCycleList_ = java.util.Collections.emptyList();
+        } else {
+          latestDealedCycleList_ = null;
+          latestDealedCycleListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (cycleSecondsListBuilder_ == null) {
+          cycleSecondsList_ = java.util.Collections.emptyList();
+        } else {
+          cycleSecondsList_ = null;
+          cycleSecondsListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        if (shuffleSecondsListBuilder_ == null) {
+          shuffleSecondsList_ = java.util.Collections.emptyList();
+        } else {
+          shuffleSecondsList_ = null;
+          shuffleSecondsListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        if (dealingRValidatorListBuilder_ == null) {
+          dealingRValidatorList_ = java.util.Collections.emptyList();
+        } else {
+          dealingRValidatorList_ = null;
+          dealingRValidatorListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.rvalidator.GenesisProto.internal_static_stafihub_stafihub_rvalidator_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState build() {
+        com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState buildPartial() {
+        com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState result = new com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState result) {
+        if (selectedRValidatorListBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            selectedRValidatorList_ = java.util.Collections.unmodifiableList(selectedRValidatorList_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.selectedRValidatorList_ = selectedRValidatorList_;
+        } else {
+          result.selectedRValidatorList_ = selectedRValidatorListBuilder_.build();
+        }
+        if (latestVotedCycleListBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            latestVotedCycleList_ = java.util.Collections.unmodifiableList(latestVotedCycleList_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.latestVotedCycleList_ = latestVotedCycleList_;
+        } else {
+          result.latestVotedCycleList_ = latestVotedCycleListBuilder_.build();
+        }
+        if (latestDealedCycleListBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            latestDealedCycleList_ = java.util.Collections.unmodifiableList(latestDealedCycleList_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.latestDealedCycleList_ = latestDealedCycleList_;
+        } else {
+          result.latestDealedCycleList_ = latestDealedCycleListBuilder_.build();
+        }
+        if (cycleSecondsListBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            cycleSecondsList_ = java.util.Collections.unmodifiableList(cycleSecondsList_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.cycleSecondsList_ = cycleSecondsList_;
+        } else {
+          result.cycleSecondsList_ = cycleSecondsListBuilder_.build();
+        }
+        if (shuffleSecondsListBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0)) {
+            shuffleSecondsList_ = java.util.Collections.unmodifiableList(shuffleSecondsList_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.shuffleSecondsList_ = shuffleSecondsList_;
+        } else {
+          result.shuffleSecondsList_ = shuffleSecondsListBuilder_.build();
+        }
+        if (dealingRValidatorListBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) != 0)) {
+            dealingRValidatorList_ = java.util.Collections.unmodifiableList(dealingRValidatorList_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.dealingRValidatorList_ = dealingRValidatorList_;
+        } else {
+          result.dealingRValidatorList_ = dealingRValidatorListBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState) {
+          return mergeFrom((com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState other) {
+        if (other == com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (selectedRValidatorListBuilder_ == null) {
+          if (!other.selectedRValidatorList_.isEmpty()) {
+            if (selectedRValidatorList_.isEmpty()) {
+              selectedRValidatorList_ = other.selectedRValidatorList_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureSelectedRValidatorListIsMutable();
+              selectedRValidatorList_.addAll(other.selectedRValidatorList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.selectedRValidatorList_.isEmpty()) {
+            if (selectedRValidatorListBuilder_.isEmpty()) {
+              selectedRValidatorListBuilder_.dispose();
+              selectedRValidatorListBuilder_ = null;
+              selectedRValidatorList_ = other.selectedRValidatorList_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              selectedRValidatorListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSelectedRValidatorListFieldBuilder() : null;
+            } else {
+              selectedRValidatorListBuilder_.addAllMessages(other.selectedRValidatorList_);
+            }
+          }
+        }
+        if (latestVotedCycleListBuilder_ == null) {
+          if (!other.latestVotedCycleList_.isEmpty()) {
+            if (latestVotedCycleList_.isEmpty()) {
+              latestVotedCycleList_ = other.latestVotedCycleList_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureLatestVotedCycleListIsMutable();
+              latestVotedCycleList_.addAll(other.latestVotedCycleList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.latestVotedCycleList_.isEmpty()) {
+            if (latestVotedCycleListBuilder_.isEmpty()) {
+              latestVotedCycleListBuilder_.dispose();
+              latestVotedCycleListBuilder_ = null;
+              latestVotedCycleList_ = other.latestVotedCycleList_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              latestVotedCycleListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getLatestVotedCycleListFieldBuilder() : null;
+            } else {
+              latestVotedCycleListBuilder_.addAllMessages(other.latestVotedCycleList_);
+            }
+          }
+        }
+        if (latestDealedCycleListBuilder_ == null) {
+          if (!other.latestDealedCycleList_.isEmpty()) {
+            if (latestDealedCycleList_.isEmpty()) {
+              latestDealedCycleList_ = other.latestDealedCycleList_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureLatestDealedCycleListIsMutable();
+              latestDealedCycleList_.addAll(other.latestDealedCycleList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.latestDealedCycleList_.isEmpty()) {
+            if (latestDealedCycleListBuilder_.isEmpty()) {
+              latestDealedCycleListBuilder_.dispose();
+              latestDealedCycleListBuilder_ = null;
+              latestDealedCycleList_ = other.latestDealedCycleList_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              latestDealedCycleListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getLatestDealedCycleListFieldBuilder() : null;
+            } else {
+              latestDealedCycleListBuilder_.addAllMessages(other.latestDealedCycleList_);
+            }
+          }
+        }
+        if (cycleSecondsListBuilder_ == null) {
+          if (!other.cycleSecondsList_.isEmpty()) {
+            if (cycleSecondsList_.isEmpty()) {
+              cycleSecondsList_ = other.cycleSecondsList_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureCycleSecondsListIsMutable();
+              cycleSecondsList_.addAll(other.cycleSecondsList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.cycleSecondsList_.isEmpty()) {
+            if (cycleSecondsListBuilder_.isEmpty()) {
+              cycleSecondsListBuilder_.dispose();
+              cycleSecondsListBuilder_ = null;
+              cycleSecondsList_ = other.cycleSecondsList_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              cycleSecondsListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCycleSecondsListFieldBuilder() : null;
+            } else {
+              cycleSecondsListBuilder_.addAllMessages(other.cycleSecondsList_);
+            }
+          }
+        }
+        if (shuffleSecondsListBuilder_ == null) {
+          if (!other.shuffleSecondsList_.isEmpty()) {
+            if (shuffleSecondsList_.isEmpty()) {
+              shuffleSecondsList_ = other.shuffleSecondsList_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureShuffleSecondsListIsMutable();
+              shuffleSecondsList_.addAll(other.shuffleSecondsList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.shuffleSecondsList_.isEmpty()) {
+            if (shuffleSecondsListBuilder_.isEmpty()) {
+              shuffleSecondsListBuilder_.dispose();
+              shuffleSecondsListBuilder_ = null;
+              shuffleSecondsList_ = other.shuffleSecondsList_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              shuffleSecondsListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getShuffleSecondsListFieldBuilder() : null;
+            } else {
+              shuffleSecondsListBuilder_.addAllMessages(other.shuffleSecondsList_);
+            }
+          }
+        }
+        if (dealingRValidatorListBuilder_ == null) {
+          if (!other.dealingRValidatorList_.isEmpty()) {
+            if (dealingRValidatorList_.isEmpty()) {
+              dealingRValidatorList_ = other.dealingRValidatorList_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensureDealingRValidatorListIsMutable();
+              dealingRValidatorList_.addAll(other.dealingRValidatorList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.dealingRValidatorList_.isEmpty()) {
+            if (dealingRValidatorListBuilder_.isEmpty()) {
+              dealingRValidatorListBuilder_.dispose();
+              dealingRValidatorListBuilder_ = null;
+              dealingRValidatorList_ = other.dealingRValidatorList_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              dealingRValidatorListBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDealingRValidatorListFieldBuilder() : null;
+            } else {
+              dealingRValidatorListBuilder_.addAllMessages(other.dealingRValidatorList_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                com.stafihub.stafihub.rvalidator.GenesisProto.RValidator m =
+                    input.readMessage(
+                        com.stafihub.stafihub.rvalidator.GenesisProto.RValidator.parser(),
+                        extensionRegistry);
+                if (selectedRValidatorListBuilder_ == null) {
+                  ensureSelectedRValidatorListIsMutable();
+                  selectedRValidatorList_.add(m);
+                } else {
+                  selectedRValidatorListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                com.stafihub.stafihub.rvalidator.GenesisProto.Cycle m =
+                    input.readMessage(
+                        com.stafihub.stafihub.rvalidator.GenesisProto.Cycle.parser(),
+                        extensionRegistry);
+                if (latestVotedCycleListBuilder_ == null) {
+                  ensureLatestVotedCycleListIsMutable();
+                  latestVotedCycleList_.add(m);
+                } else {
+                  latestVotedCycleListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              case 34: {
+                com.stafihub.stafihub.rvalidator.GenesisProto.Cycle m =
+                    input.readMessage(
+                        com.stafihub.stafihub.rvalidator.GenesisProto.Cycle.parser(),
+                        extensionRegistry);
+                if (latestDealedCycleListBuilder_ == null) {
+                  ensureLatestDealedCycleListIsMutable();
+                  latestDealedCycleList_.add(m);
+                } else {
+                  latestDealedCycleListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds m =
+                    input.readMessage(
+                        com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds.parser(),
+                        extensionRegistry);
+                if (cycleSecondsListBuilder_ == null) {
+                  ensureCycleSecondsListIsMutable();
+                  cycleSecondsList_.add(m);
+                } else {
+                  cycleSecondsListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 50: {
+                com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds m =
+                    input.readMessage(
+                        com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds.parser(),
+                        extensionRegistry);
+                if (shuffleSecondsListBuilder_ == null) {
+                  ensureShuffleSecondsListIsMutable();
+                  shuffleSecondsList_.add(m);
+                } else {
+                  shuffleSecondsListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 50
+              case 58: {
+                com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator m =
+                    input.readMessage(
+                        com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator.parser(),
+                        extensionRegistry);
+                if (dealingRValidatorListBuilder_ == null) {
+                  ensureDealingRValidatorListIsMutable();
+                  dealingRValidatorList_.add(m);
+                } else {
+                  dealingRValidatorListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 58
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.stafihub.stafihub.rvalidator.ParamsProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.stafihub.stafihub.rvalidator.ParamsProto.Params, com.stafihub.stafihub.rvalidator.ParamsProto.Params.Builder, com.stafihub.stafihub.rvalidator.ParamsProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.stafihub.stafihub.rvalidator.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.stafihub.stafihub.rvalidator.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.stafihub.stafihub.rvalidator.ParamsProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.stafihub.stafihub.rvalidator.ParamsProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.stafihub.stafihub.rvalidator.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.stafihub.stafihub.rvalidator.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.rvalidator.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.stafihub.stafihub.rvalidator.ParamsProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.rvalidator.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.stafihub.stafihub.rvalidator.ParamsProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.stafihub.stafihub.rvalidator.ParamsProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.rvalidator.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.stafihub.stafihub.rvalidator.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.stafihub.stafihub.rvalidator.ParamsProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.stafihub.stafihub.rvalidator.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.stafihub.stafihub.rvalidator.ParamsProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.stafihub.stafihub.rvalidator.ParamsProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.stafihub.stafihub.rvalidator.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.stafihub.stafihub.rvalidator.ParamsProto.Params, com.stafihub.stafihub.rvalidator.ParamsProto.Params.Builder, com.stafihub.stafihub.rvalidator.ParamsProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.stafihub.stafihub.rvalidator.ParamsProto.Params, com.stafihub.stafihub.rvalidator.ParamsProto.Params.Builder, com.stafihub.stafihub.rvalidator.ParamsProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private java.util.List<com.stafihub.stafihub.rvalidator.GenesisProto.RValidator> selectedRValidatorList_ =
+        java.util.Collections.emptyList();
+      private void ensureSelectedRValidatorListIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          selectedRValidatorList_ = new java.util.ArrayList<com.stafihub.stafihub.rvalidator.GenesisProto.RValidator>(selectedRValidatorList_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.rvalidator.GenesisProto.RValidator, com.stafihub.stafihub.rvalidator.GenesisProto.RValidator.Builder, com.stafihub.stafihub.rvalidator.GenesisProto.RValidatorOrBuilder> selectedRValidatorListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.RValidator selectedRValidatorList = 2 [json_name = "selectedRValidatorList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.rvalidator.GenesisProto.RValidator> getSelectedRValidatorListList() {
+        if (selectedRValidatorListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(selectedRValidatorList_);
+        } else {
+          return selectedRValidatorListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.RValidator selectedRValidatorList = 2 [json_name = "selectedRValidatorList"];</code>
+       */
+      public int getSelectedRValidatorListCount() {
+        if (selectedRValidatorListBuilder_ == null) {
+          return selectedRValidatorList_.size();
+        } else {
+          return selectedRValidatorListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.RValidator selectedRValidatorList = 2 [json_name = "selectedRValidatorList"];</code>
+       */
+      public com.stafihub.stafihub.rvalidator.GenesisProto.RValidator getSelectedRValidatorList(int index) {
+        if (selectedRValidatorListBuilder_ == null) {
+          return selectedRValidatorList_.get(index);
+        } else {
+          return selectedRValidatorListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.RValidator selectedRValidatorList = 2 [json_name = "selectedRValidatorList"];</code>
+       */
+      public Builder setSelectedRValidatorList(
+          int index, com.stafihub.stafihub.rvalidator.GenesisProto.RValidator value) {
+        if (selectedRValidatorListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSelectedRValidatorListIsMutable();
+          selectedRValidatorList_.set(index, value);
+          onChanged();
+        } else {
+          selectedRValidatorListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.RValidator selectedRValidatorList = 2 [json_name = "selectedRValidatorList"];</code>
+       */
+      public Builder setSelectedRValidatorList(
+          int index, com.stafihub.stafihub.rvalidator.GenesisProto.RValidator.Builder builderForValue) {
+        if (selectedRValidatorListBuilder_ == null) {
+          ensureSelectedRValidatorListIsMutable();
+          selectedRValidatorList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          selectedRValidatorListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.RValidator selectedRValidatorList = 2 [json_name = "selectedRValidatorList"];</code>
+       */
+      public Builder addSelectedRValidatorList(com.stafihub.stafihub.rvalidator.GenesisProto.RValidator value) {
+        if (selectedRValidatorListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSelectedRValidatorListIsMutable();
+          selectedRValidatorList_.add(value);
+          onChanged();
+        } else {
+          selectedRValidatorListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.RValidator selectedRValidatorList = 2 [json_name = "selectedRValidatorList"];</code>
+       */
+      public Builder addSelectedRValidatorList(
+          int index, com.stafihub.stafihub.rvalidator.GenesisProto.RValidator value) {
+        if (selectedRValidatorListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSelectedRValidatorListIsMutable();
+          selectedRValidatorList_.add(index, value);
+          onChanged();
+        } else {
+          selectedRValidatorListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.RValidator selectedRValidatorList = 2 [json_name = "selectedRValidatorList"];</code>
+       */
+      public Builder addSelectedRValidatorList(
+          com.stafihub.stafihub.rvalidator.GenesisProto.RValidator.Builder builderForValue) {
+        if (selectedRValidatorListBuilder_ == null) {
+          ensureSelectedRValidatorListIsMutable();
+          selectedRValidatorList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          selectedRValidatorListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.RValidator selectedRValidatorList = 2 [json_name = "selectedRValidatorList"];</code>
+       */
+      public Builder addSelectedRValidatorList(
+          int index, com.stafihub.stafihub.rvalidator.GenesisProto.RValidator.Builder builderForValue) {
+        if (selectedRValidatorListBuilder_ == null) {
+          ensureSelectedRValidatorListIsMutable();
+          selectedRValidatorList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          selectedRValidatorListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.RValidator selectedRValidatorList = 2 [json_name = "selectedRValidatorList"];</code>
+       */
+      public Builder addAllSelectedRValidatorList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.rvalidator.GenesisProto.RValidator> values) {
+        if (selectedRValidatorListBuilder_ == null) {
+          ensureSelectedRValidatorListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, selectedRValidatorList_);
+          onChanged();
+        } else {
+          selectedRValidatorListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.RValidator selectedRValidatorList = 2 [json_name = "selectedRValidatorList"];</code>
+       */
+      public Builder clearSelectedRValidatorList() {
+        if (selectedRValidatorListBuilder_ == null) {
+          selectedRValidatorList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          selectedRValidatorListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.RValidator selectedRValidatorList = 2 [json_name = "selectedRValidatorList"];</code>
+       */
+      public Builder removeSelectedRValidatorList(int index) {
+        if (selectedRValidatorListBuilder_ == null) {
+          ensureSelectedRValidatorListIsMutable();
+          selectedRValidatorList_.remove(index);
+          onChanged();
+        } else {
+          selectedRValidatorListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.RValidator selectedRValidatorList = 2 [json_name = "selectedRValidatorList"];</code>
+       */
+      public com.stafihub.stafihub.rvalidator.GenesisProto.RValidator.Builder getSelectedRValidatorListBuilder(
+          int index) {
+        return getSelectedRValidatorListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.RValidator selectedRValidatorList = 2 [json_name = "selectedRValidatorList"];</code>
+       */
+      public com.stafihub.stafihub.rvalidator.GenesisProto.RValidatorOrBuilder getSelectedRValidatorListOrBuilder(
+          int index) {
+        if (selectedRValidatorListBuilder_ == null) {
+          return selectedRValidatorList_.get(index);  } else {
+          return selectedRValidatorListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.RValidator selectedRValidatorList = 2 [json_name = "selectedRValidatorList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.rvalidator.GenesisProto.RValidatorOrBuilder> 
+           getSelectedRValidatorListOrBuilderList() {
+        if (selectedRValidatorListBuilder_ != null) {
+          return selectedRValidatorListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(selectedRValidatorList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.RValidator selectedRValidatorList = 2 [json_name = "selectedRValidatorList"];</code>
+       */
+      public com.stafihub.stafihub.rvalidator.GenesisProto.RValidator.Builder addSelectedRValidatorListBuilder() {
+        return getSelectedRValidatorListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.rvalidator.GenesisProto.RValidator.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.RValidator selectedRValidatorList = 2 [json_name = "selectedRValidatorList"];</code>
+       */
+      public com.stafihub.stafihub.rvalidator.GenesisProto.RValidator.Builder addSelectedRValidatorListBuilder(
+          int index) {
+        return getSelectedRValidatorListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.rvalidator.GenesisProto.RValidator.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.RValidator selectedRValidatorList = 2 [json_name = "selectedRValidatorList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.rvalidator.GenesisProto.RValidator.Builder> 
+           getSelectedRValidatorListBuilderList() {
+        return getSelectedRValidatorListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.rvalidator.GenesisProto.RValidator, com.stafihub.stafihub.rvalidator.GenesisProto.RValidator.Builder, com.stafihub.stafihub.rvalidator.GenesisProto.RValidatorOrBuilder> 
+          getSelectedRValidatorListFieldBuilder() {
+        if (selectedRValidatorListBuilder_ == null) {
+          selectedRValidatorListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.rvalidator.GenesisProto.RValidator, com.stafihub.stafihub.rvalidator.GenesisProto.RValidator.Builder, com.stafihub.stafihub.rvalidator.GenesisProto.RValidatorOrBuilder>(
+                  selectedRValidatorList_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          selectedRValidatorList_ = null;
+        }
+        return selectedRValidatorListBuilder_;
+      }
+
+      private java.util.List<com.stafihub.stafihub.rvalidator.GenesisProto.Cycle> latestVotedCycleList_ =
+        java.util.Collections.emptyList();
+      private void ensureLatestVotedCycleListIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          latestVotedCycleList_ = new java.util.ArrayList<com.stafihub.stafihub.rvalidator.GenesisProto.Cycle>(latestVotedCycleList_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.rvalidator.GenesisProto.Cycle, com.stafihub.stafihub.rvalidator.GenesisProto.Cycle.Builder, com.stafihub.stafihub.rvalidator.GenesisProto.CycleOrBuilder> latestVotedCycleListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestVotedCycleList = 3 [json_name = "latestVotedCycleList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.rvalidator.GenesisProto.Cycle> getLatestVotedCycleListList() {
+        if (latestVotedCycleListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(latestVotedCycleList_);
+        } else {
+          return latestVotedCycleListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestVotedCycleList = 3 [json_name = "latestVotedCycleList"];</code>
+       */
+      public int getLatestVotedCycleListCount() {
+        if (latestVotedCycleListBuilder_ == null) {
+          return latestVotedCycleList_.size();
+        } else {
+          return latestVotedCycleListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestVotedCycleList = 3 [json_name = "latestVotedCycleList"];</code>
+       */
+      public com.stafihub.stafihub.rvalidator.GenesisProto.Cycle getLatestVotedCycleList(int index) {
+        if (latestVotedCycleListBuilder_ == null) {
+          return latestVotedCycleList_.get(index);
+        } else {
+          return latestVotedCycleListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestVotedCycleList = 3 [json_name = "latestVotedCycleList"];</code>
+       */
+      public Builder setLatestVotedCycleList(
+          int index, com.stafihub.stafihub.rvalidator.GenesisProto.Cycle value) {
+        if (latestVotedCycleListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLatestVotedCycleListIsMutable();
+          latestVotedCycleList_.set(index, value);
+          onChanged();
+        } else {
+          latestVotedCycleListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestVotedCycleList = 3 [json_name = "latestVotedCycleList"];</code>
+       */
+      public Builder setLatestVotedCycleList(
+          int index, com.stafihub.stafihub.rvalidator.GenesisProto.Cycle.Builder builderForValue) {
+        if (latestVotedCycleListBuilder_ == null) {
+          ensureLatestVotedCycleListIsMutable();
+          latestVotedCycleList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          latestVotedCycleListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestVotedCycleList = 3 [json_name = "latestVotedCycleList"];</code>
+       */
+      public Builder addLatestVotedCycleList(com.stafihub.stafihub.rvalidator.GenesisProto.Cycle value) {
+        if (latestVotedCycleListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLatestVotedCycleListIsMutable();
+          latestVotedCycleList_.add(value);
+          onChanged();
+        } else {
+          latestVotedCycleListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestVotedCycleList = 3 [json_name = "latestVotedCycleList"];</code>
+       */
+      public Builder addLatestVotedCycleList(
+          int index, com.stafihub.stafihub.rvalidator.GenesisProto.Cycle value) {
+        if (latestVotedCycleListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLatestVotedCycleListIsMutable();
+          latestVotedCycleList_.add(index, value);
+          onChanged();
+        } else {
+          latestVotedCycleListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestVotedCycleList = 3 [json_name = "latestVotedCycleList"];</code>
+       */
+      public Builder addLatestVotedCycleList(
+          com.stafihub.stafihub.rvalidator.GenesisProto.Cycle.Builder builderForValue) {
+        if (latestVotedCycleListBuilder_ == null) {
+          ensureLatestVotedCycleListIsMutable();
+          latestVotedCycleList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          latestVotedCycleListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestVotedCycleList = 3 [json_name = "latestVotedCycleList"];</code>
+       */
+      public Builder addLatestVotedCycleList(
+          int index, com.stafihub.stafihub.rvalidator.GenesisProto.Cycle.Builder builderForValue) {
+        if (latestVotedCycleListBuilder_ == null) {
+          ensureLatestVotedCycleListIsMutable();
+          latestVotedCycleList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          latestVotedCycleListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestVotedCycleList = 3 [json_name = "latestVotedCycleList"];</code>
+       */
+      public Builder addAllLatestVotedCycleList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.rvalidator.GenesisProto.Cycle> values) {
+        if (latestVotedCycleListBuilder_ == null) {
+          ensureLatestVotedCycleListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, latestVotedCycleList_);
+          onChanged();
+        } else {
+          latestVotedCycleListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestVotedCycleList = 3 [json_name = "latestVotedCycleList"];</code>
+       */
+      public Builder clearLatestVotedCycleList() {
+        if (latestVotedCycleListBuilder_ == null) {
+          latestVotedCycleList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          latestVotedCycleListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestVotedCycleList = 3 [json_name = "latestVotedCycleList"];</code>
+       */
+      public Builder removeLatestVotedCycleList(int index) {
+        if (latestVotedCycleListBuilder_ == null) {
+          ensureLatestVotedCycleListIsMutable();
+          latestVotedCycleList_.remove(index);
+          onChanged();
+        } else {
+          latestVotedCycleListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestVotedCycleList = 3 [json_name = "latestVotedCycleList"];</code>
+       */
+      public com.stafihub.stafihub.rvalidator.GenesisProto.Cycle.Builder getLatestVotedCycleListBuilder(
+          int index) {
+        return getLatestVotedCycleListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestVotedCycleList = 3 [json_name = "latestVotedCycleList"];</code>
+       */
+      public com.stafihub.stafihub.rvalidator.GenesisProto.CycleOrBuilder getLatestVotedCycleListOrBuilder(
+          int index) {
+        if (latestVotedCycleListBuilder_ == null) {
+          return latestVotedCycleList_.get(index);  } else {
+          return latestVotedCycleListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestVotedCycleList = 3 [json_name = "latestVotedCycleList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.rvalidator.GenesisProto.CycleOrBuilder> 
+           getLatestVotedCycleListOrBuilderList() {
+        if (latestVotedCycleListBuilder_ != null) {
+          return latestVotedCycleListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(latestVotedCycleList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestVotedCycleList = 3 [json_name = "latestVotedCycleList"];</code>
+       */
+      public com.stafihub.stafihub.rvalidator.GenesisProto.Cycle.Builder addLatestVotedCycleListBuilder() {
+        return getLatestVotedCycleListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.rvalidator.GenesisProto.Cycle.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestVotedCycleList = 3 [json_name = "latestVotedCycleList"];</code>
+       */
+      public com.stafihub.stafihub.rvalidator.GenesisProto.Cycle.Builder addLatestVotedCycleListBuilder(
+          int index) {
+        return getLatestVotedCycleListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.rvalidator.GenesisProto.Cycle.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestVotedCycleList = 3 [json_name = "latestVotedCycleList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.rvalidator.GenesisProto.Cycle.Builder> 
+           getLatestVotedCycleListBuilderList() {
+        return getLatestVotedCycleListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.rvalidator.GenesisProto.Cycle, com.stafihub.stafihub.rvalidator.GenesisProto.Cycle.Builder, com.stafihub.stafihub.rvalidator.GenesisProto.CycleOrBuilder> 
+          getLatestVotedCycleListFieldBuilder() {
+        if (latestVotedCycleListBuilder_ == null) {
+          latestVotedCycleListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.rvalidator.GenesisProto.Cycle, com.stafihub.stafihub.rvalidator.GenesisProto.Cycle.Builder, com.stafihub.stafihub.rvalidator.GenesisProto.CycleOrBuilder>(
+                  latestVotedCycleList_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          latestVotedCycleList_ = null;
+        }
+        return latestVotedCycleListBuilder_;
+      }
+
+      private java.util.List<com.stafihub.stafihub.rvalidator.GenesisProto.Cycle> latestDealedCycleList_ =
+        java.util.Collections.emptyList();
+      private void ensureLatestDealedCycleListIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          latestDealedCycleList_ = new java.util.ArrayList<com.stafihub.stafihub.rvalidator.GenesisProto.Cycle>(latestDealedCycleList_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.rvalidator.GenesisProto.Cycle, com.stafihub.stafihub.rvalidator.GenesisProto.Cycle.Builder, com.stafihub.stafihub.rvalidator.GenesisProto.CycleOrBuilder> latestDealedCycleListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestDealedCycleList = 4 [json_name = "latestDealedCycleList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.rvalidator.GenesisProto.Cycle> getLatestDealedCycleListList() {
+        if (latestDealedCycleListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(latestDealedCycleList_);
+        } else {
+          return latestDealedCycleListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestDealedCycleList = 4 [json_name = "latestDealedCycleList"];</code>
+       */
+      public int getLatestDealedCycleListCount() {
+        if (latestDealedCycleListBuilder_ == null) {
+          return latestDealedCycleList_.size();
+        } else {
+          return latestDealedCycleListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestDealedCycleList = 4 [json_name = "latestDealedCycleList"];</code>
+       */
+      public com.stafihub.stafihub.rvalidator.GenesisProto.Cycle getLatestDealedCycleList(int index) {
+        if (latestDealedCycleListBuilder_ == null) {
+          return latestDealedCycleList_.get(index);
+        } else {
+          return latestDealedCycleListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestDealedCycleList = 4 [json_name = "latestDealedCycleList"];</code>
+       */
+      public Builder setLatestDealedCycleList(
+          int index, com.stafihub.stafihub.rvalidator.GenesisProto.Cycle value) {
+        if (latestDealedCycleListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLatestDealedCycleListIsMutable();
+          latestDealedCycleList_.set(index, value);
+          onChanged();
+        } else {
+          latestDealedCycleListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestDealedCycleList = 4 [json_name = "latestDealedCycleList"];</code>
+       */
+      public Builder setLatestDealedCycleList(
+          int index, com.stafihub.stafihub.rvalidator.GenesisProto.Cycle.Builder builderForValue) {
+        if (latestDealedCycleListBuilder_ == null) {
+          ensureLatestDealedCycleListIsMutable();
+          latestDealedCycleList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          latestDealedCycleListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestDealedCycleList = 4 [json_name = "latestDealedCycleList"];</code>
+       */
+      public Builder addLatestDealedCycleList(com.stafihub.stafihub.rvalidator.GenesisProto.Cycle value) {
+        if (latestDealedCycleListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLatestDealedCycleListIsMutable();
+          latestDealedCycleList_.add(value);
+          onChanged();
+        } else {
+          latestDealedCycleListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestDealedCycleList = 4 [json_name = "latestDealedCycleList"];</code>
+       */
+      public Builder addLatestDealedCycleList(
+          int index, com.stafihub.stafihub.rvalidator.GenesisProto.Cycle value) {
+        if (latestDealedCycleListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLatestDealedCycleListIsMutable();
+          latestDealedCycleList_.add(index, value);
+          onChanged();
+        } else {
+          latestDealedCycleListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestDealedCycleList = 4 [json_name = "latestDealedCycleList"];</code>
+       */
+      public Builder addLatestDealedCycleList(
+          com.stafihub.stafihub.rvalidator.GenesisProto.Cycle.Builder builderForValue) {
+        if (latestDealedCycleListBuilder_ == null) {
+          ensureLatestDealedCycleListIsMutable();
+          latestDealedCycleList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          latestDealedCycleListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestDealedCycleList = 4 [json_name = "latestDealedCycleList"];</code>
+       */
+      public Builder addLatestDealedCycleList(
+          int index, com.stafihub.stafihub.rvalidator.GenesisProto.Cycle.Builder builderForValue) {
+        if (latestDealedCycleListBuilder_ == null) {
+          ensureLatestDealedCycleListIsMutable();
+          latestDealedCycleList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          latestDealedCycleListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestDealedCycleList = 4 [json_name = "latestDealedCycleList"];</code>
+       */
+      public Builder addAllLatestDealedCycleList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.rvalidator.GenesisProto.Cycle> values) {
+        if (latestDealedCycleListBuilder_ == null) {
+          ensureLatestDealedCycleListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, latestDealedCycleList_);
+          onChanged();
+        } else {
+          latestDealedCycleListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestDealedCycleList = 4 [json_name = "latestDealedCycleList"];</code>
+       */
+      public Builder clearLatestDealedCycleList() {
+        if (latestDealedCycleListBuilder_ == null) {
+          latestDealedCycleList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          latestDealedCycleListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestDealedCycleList = 4 [json_name = "latestDealedCycleList"];</code>
+       */
+      public Builder removeLatestDealedCycleList(int index) {
+        if (latestDealedCycleListBuilder_ == null) {
+          ensureLatestDealedCycleListIsMutable();
+          latestDealedCycleList_.remove(index);
+          onChanged();
+        } else {
+          latestDealedCycleListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestDealedCycleList = 4 [json_name = "latestDealedCycleList"];</code>
+       */
+      public com.stafihub.stafihub.rvalidator.GenesisProto.Cycle.Builder getLatestDealedCycleListBuilder(
+          int index) {
+        return getLatestDealedCycleListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestDealedCycleList = 4 [json_name = "latestDealedCycleList"];</code>
+       */
+      public com.stafihub.stafihub.rvalidator.GenesisProto.CycleOrBuilder getLatestDealedCycleListOrBuilder(
+          int index) {
+        if (latestDealedCycleListBuilder_ == null) {
+          return latestDealedCycleList_.get(index);  } else {
+          return latestDealedCycleListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestDealedCycleList = 4 [json_name = "latestDealedCycleList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.rvalidator.GenesisProto.CycleOrBuilder> 
+           getLatestDealedCycleListOrBuilderList() {
+        if (latestDealedCycleListBuilder_ != null) {
+          return latestDealedCycleListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(latestDealedCycleList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestDealedCycleList = 4 [json_name = "latestDealedCycleList"];</code>
+       */
+      public com.stafihub.stafihub.rvalidator.GenesisProto.Cycle.Builder addLatestDealedCycleListBuilder() {
+        return getLatestDealedCycleListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.rvalidator.GenesisProto.Cycle.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestDealedCycleList = 4 [json_name = "latestDealedCycleList"];</code>
+       */
+      public com.stafihub.stafihub.rvalidator.GenesisProto.Cycle.Builder addLatestDealedCycleListBuilder(
+          int index) {
+        return getLatestDealedCycleListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.rvalidator.GenesisProto.Cycle.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.Cycle latestDealedCycleList = 4 [json_name = "latestDealedCycleList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.rvalidator.GenesisProto.Cycle.Builder> 
+           getLatestDealedCycleListBuilderList() {
+        return getLatestDealedCycleListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.rvalidator.GenesisProto.Cycle, com.stafihub.stafihub.rvalidator.GenesisProto.Cycle.Builder, com.stafihub.stafihub.rvalidator.GenesisProto.CycleOrBuilder> 
+          getLatestDealedCycleListFieldBuilder() {
+        if (latestDealedCycleListBuilder_ == null) {
+          latestDealedCycleListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.rvalidator.GenesisProto.Cycle, com.stafihub.stafihub.rvalidator.GenesisProto.Cycle.Builder, com.stafihub.stafihub.rvalidator.GenesisProto.CycleOrBuilder>(
+                  latestDealedCycleList_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          latestDealedCycleList_ = null;
+        }
+        return latestDealedCycleListBuilder_;
+      }
+
+      private java.util.List<com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds> cycleSecondsList_ =
+        java.util.Collections.emptyList();
+      private void ensureCycleSecondsListIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          cycleSecondsList_ = new java.util.ArrayList<com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds>(cycleSecondsList_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds, com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds.Builder, com.stafihub.stafihub.rvalidator.GenesisProto.CycleSecondsOrBuilder> cycleSecondsListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.CycleSeconds cycleSecondsList = 5 [json_name = "cycleSecondsList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds> getCycleSecondsListList() {
+        if (cycleSecondsListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(cycleSecondsList_);
+        } else {
+          return cycleSecondsListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.CycleSeconds cycleSecondsList = 5 [json_name = "cycleSecondsList"];</code>
+       */
+      public int getCycleSecondsListCount() {
+        if (cycleSecondsListBuilder_ == null) {
+          return cycleSecondsList_.size();
+        } else {
+          return cycleSecondsListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.CycleSeconds cycleSecondsList = 5 [json_name = "cycleSecondsList"];</code>
+       */
+      public com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds getCycleSecondsList(int index) {
+        if (cycleSecondsListBuilder_ == null) {
+          return cycleSecondsList_.get(index);
+        } else {
+          return cycleSecondsListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.CycleSeconds cycleSecondsList = 5 [json_name = "cycleSecondsList"];</code>
+       */
+      public Builder setCycleSecondsList(
+          int index, com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds value) {
+        if (cycleSecondsListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCycleSecondsListIsMutable();
+          cycleSecondsList_.set(index, value);
+          onChanged();
+        } else {
+          cycleSecondsListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.CycleSeconds cycleSecondsList = 5 [json_name = "cycleSecondsList"];</code>
+       */
+      public Builder setCycleSecondsList(
+          int index, com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds.Builder builderForValue) {
+        if (cycleSecondsListBuilder_ == null) {
+          ensureCycleSecondsListIsMutable();
+          cycleSecondsList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          cycleSecondsListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.CycleSeconds cycleSecondsList = 5 [json_name = "cycleSecondsList"];</code>
+       */
+      public Builder addCycleSecondsList(com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds value) {
+        if (cycleSecondsListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCycleSecondsListIsMutable();
+          cycleSecondsList_.add(value);
+          onChanged();
+        } else {
+          cycleSecondsListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.CycleSeconds cycleSecondsList = 5 [json_name = "cycleSecondsList"];</code>
+       */
+      public Builder addCycleSecondsList(
+          int index, com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds value) {
+        if (cycleSecondsListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCycleSecondsListIsMutable();
+          cycleSecondsList_.add(index, value);
+          onChanged();
+        } else {
+          cycleSecondsListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.CycleSeconds cycleSecondsList = 5 [json_name = "cycleSecondsList"];</code>
+       */
+      public Builder addCycleSecondsList(
+          com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds.Builder builderForValue) {
+        if (cycleSecondsListBuilder_ == null) {
+          ensureCycleSecondsListIsMutable();
+          cycleSecondsList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          cycleSecondsListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.CycleSeconds cycleSecondsList = 5 [json_name = "cycleSecondsList"];</code>
+       */
+      public Builder addCycleSecondsList(
+          int index, com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds.Builder builderForValue) {
+        if (cycleSecondsListBuilder_ == null) {
+          ensureCycleSecondsListIsMutable();
+          cycleSecondsList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          cycleSecondsListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.CycleSeconds cycleSecondsList = 5 [json_name = "cycleSecondsList"];</code>
+       */
+      public Builder addAllCycleSecondsList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds> values) {
+        if (cycleSecondsListBuilder_ == null) {
+          ensureCycleSecondsListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, cycleSecondsList_);
+          onChanged();
+        } else {
+          cycleSecondsListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.CycleSeconds cycleSecondsList = 5 [json_name = "cycleSecondsList"];</code>
+       */
+      public Builder clearCycleSecondsList() {
+        if (cycleSecondsListBuilder_ == null) {
+          cycleSecondsList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          cycleSecondsListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.CycleSeconds cycleSecondsList = 5 [json_name = "cycleSecondsList"];</code>
+       */
+      public Builder removeCycleSecondsList(int index) {
+        if (cycleSecondsListBuilder_ == null) {
+          ensureCycleSecondsListIsMutable();
+          cycleSecondsList_.remove(index);
+          onChanged();
+        } else {
+          cycleSecondsListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.CycleSeconds cycleSecondsList = 5 [json_name = "cycleSecondsList"];</code>
+       */
+      public com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds.Builder getCycleSecondsListBuilder(
+          int index) {
+        return getCycleSecondsListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.CycleSeconds cycleSecondsList = 5 [json_name = "cycleSecondsList"];</code>
+       */
+      public com.stafihub.stafihub.rvalidator.GenesisProto.CycleSecondsOrBuilder getCycleSecondsListOrBuilder(
+          int index) {
+        if (cycleSecondsListBuilder_ == null) {
+          return cycleSecondsList_.get(index);  } else {
+          return cycleSecondsListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.CycleSeconds cycleSecondsList = 5 [json_name = "cycleSecondsList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.rvalidator.GenesisProto.CycleSecondsOrBuilder> 
+           getCycleSecondsListOrBuilderList() {
+        if (cycleSecondsListBuilder_ != null) {
+          return cycleSecondsListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(cycleSecondsList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.CycleSeconds cycleSecondsList = 5 [json_name = "cycleSecondsList"];</code>
+       */
+      public com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds.Builder addCycleSecondsListBuilder() {
+        return getCycleSecondsListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.CycleSeconds cycleSecondsList = 5 [json_name = "cycleSecondsList"];</code>
+       */
+      public com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds.Builder addCycleSecondsListBuilder(
+          int index) {
+        return getCycleSecondsListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.CycleSeconds cycleSecondsList = 5 [json_name = "cycleSecondsList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds.Builder> 
+           getCycleSecondsListBuilderList() {
+        return getCycleSecondsListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds, com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds.Builder, com.stafihub.stafihub.rvalidator.GenesisProto.CycleSecondsOrBuilder> 
+          getCycleSecondsListFieldBuilder() {
+        if (cycleSecondsListBuilder_ == null) {
+          cycleSecondsListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds, com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds.Builder, com.stafihub.stafihub.rvalidator.GenesisProto.CycleSecondsOrBuilder>(
+                  cycleSecondsList_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          cycleSecondsList_ = null;
+        }
+        return cycleSecondsListBuilder_;
+      }
+
+      private java.util.List<com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds> shuffleSecondsList_ =
+        java.util.Collections.emptyList();
+      private void ensureShuffleSecondsListIsMutable() {
+        if (!((bitField0_ & 0x00000020) != 0)) {
+          shuffleSecondsList_ = new java.util.ArrayList<com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds>(shuffleSecondsList_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds, com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds.Builder, com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSecondsOrBuilder> shuffleSecondsListBuilder_;
+
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.ShuffleSeconds shuffleSecondsList = 6 [json_name = "shuffleSecondsList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds> getShuffleSecondsListList() {
+        if (shuffleSecondsListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(shuffleSecondsList_);
+        } else {
+          return shuffleSecondsListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.ShuffleSeconds shuffleSecondsList = 6 [json_name = "shuffleSecondsList"];</code>
+       */
+      public int getShuffleSecondsListCount() {
+        if (shuffleSecondsListBuilder_ == null) {
+          return shuffleSecondsList_.size();
+        } else {
+          return shuffleSecondsListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.ShuffleSeconds shuffleSecondsList = 6 [json_name = "shuffleSecondsList"];</code>
+       */
+      public com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds getShuffleSecondsList(int index) {
+        if (shuffleSecondsListBuilder_ == null) {
+          return shuffleSecondsList_.get(index);
+        } else {
+          return shuffleSecondsListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.ShuffleSeconds shuffleSecondsList = 6 [json_name = "shuffleSecondsList"];</code>
+       */
+      public Builder setShuffleSecondsList(
+          int index, com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds value) {
+        if (shuffleSecondsListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureShuffleSecondsListIsMutable();
+          shuffleSecondsList_.set(index, value);
+          onChanged();
+        } else {
+          shuffleSecondsListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.ShuffleSeconds shuffleSecondsList = 6 [json_name = "shuffleSecondsList"];</code>
+       */
+      public Builder setShuffleSecondsList(
+          int index, com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds.Builder builderForValue) {
+        if (shuffleSecondsListBuilder_ == null) {
+          ensureShuffleSecondsListIsMutable();
+          shuffleSecondsList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          shuffleSecondsListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.ShuffleSeconds shuffleSecondsList = 6 [json_name = "shuffleSecondsList"];</code>
+       */
+      public Builder addShuffleSecondsList(com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds value) {
+        if (shuffleSecondsListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureShuffleSecondsListIsMutable();
+          shuffleSecondsList_.add(value);
+          onChanged();
+        } else {
+          shuffleSecondsListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.ShuffleSeconds shuffleSecondsList = 6 [json_name = "shuffleSecondsList"];</code>
+       */
+      public Builder addShuffleSecondsList(
+          int index, com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds value) {
+        if (shuffleSecondsListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureShuffleSecondsListIsMutable();
+          shuffleSecondsList_.add(index, value);
+          onChanged();
+        } else {
+          shuffleSecondsListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.ShuffleSeconds shuffleSecondsList = 6 [json_name = "shuffleSecondsList"];</code>
+       */
+      public Builder addShuffleSecondsList(
+          com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds.Builder builderForValue) {
+        if (shuffleSecondsListBuilder_ == null) {
+          ensureShuffleSecondsListIsMutable();
+          shuffleSecondsList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          shuffleSecondsListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.ShuffleSeconds shuffleSecondsList = 6 [json_name = "shuffleSecondsList"];</code>
+       */
+      public Builder addShuffleSecondsList(
+          int index, com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds.Builder builderForValue) {
+        if (shuffleSecondsListBuilder_ == null) {
+          ensureShuffleSecondsListIsMutable();
+          shuffleSecondsList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          shuffleSecondsListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.ShuffleSeconds shuffleSecondsList = 6 [json_name = "shuffleSecondsList"];</code>
+       */
+      public Builder addAllShuffleSecondsList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds> values) {
+        if (shuffleSecondsListBuilder_ == null) {
+          ensureShuffleSecondsListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, shuffleSecondsList_);
+          onChanged();
+        } else {
+          shuffleSecondsListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.ShuffleSeconds shuffleSecondsList = 6 [json_name = "shuffleSecondsList"];</code>
+       */
+      public Builder clearShuffleSecondsList() {
+        if (shuffleSecondsListBuilder_ == null) {
+          shuffleSecondsList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          shuffleSecondsListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.ShuffleSeconds shuffleSecondsList = 6 [json_name = "shuffleSecondsList"];</code>
+       */
+      public Builder removeShuffleSecondsList(int index) {
+        if (shuffleSecondsListBuilder_ == null) {
+          ensureShuffleSecondsListIsMutable();
+          shuffleSecondsList_.remove(index);
+          onChanged();
+        } else {
+          shuffleSecondsListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.ShuffleSeconds shuffleSecondsList = 6 [json_name = "shuffleSecondsList"];</code>
+       */
+      public com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds.Builder getShuffleSecondsListBuilder(
+          int index) {
+        return getShuffleSecondsListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.ShuffleSeconds shuffleSecondsList = 6 [json_name = "shuffleSecondsList"];</code>
+       */
+      public com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSecondsOrBuilder getShuffleSecondsListOrBuilder(
+          int index) {
+        if (shuffleSecondsListBuilder_ == null) {
+          return shuffleSecondsList_.get(index);  } else {
+          return shuffleSecondsListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.ShuffleSeconds shuffleSecondsList = 6 [json_name = "shuffleSecondsList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSecondsOrBuilder> 
+           getShuffleSecondsListOrBuilderList() {
+        if (shuffleSecondsListBuilder_ != null) {
+          return shuffleSecondsListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(shuffleSecondsList_);
+        }
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.ShuffleSeconds shuffleSecondsList = 6 [json_name = "shuffleSecondsList"];</code>
+       */
+      public com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds.Builder addShuffleSecondsListBuilder() {
+        return getShuffleSecondsListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.ShuffleSeconds shuffleSecondsList = 6 [json_name = "shuffleSecondsList"];</code>
+       */
+      public com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds.Builder addShuffleSecondsListBuilder(
+          int index) {
+        return getShuffleSecondsListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .stafihub.stafihub.rvalidator.ShuffleSeconds shuffleSecondsList = 6 [json_name = "shuffleSecondsList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds.Builder> 
+           getShuffleSecondsListBuilderList() {
+        return getShuffleSecondsListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds, com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds.Builder, com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSecondsOrBuilder> 
+          getShuffleSecondsListFieldBuilder() {
+        if (shuffleSecondsListBuilder_ == null) {
+          shuffleSecondsListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds, com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds.Builder, com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSecondsOrBuilder>(
+                  shuffleSecondsList_,
+                  ((bitField0_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          shuffleSecondsList_ = null;
+        }
+        return shuffleSecondsListBuilder_;
+      }
+
+      private java.util.List<com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator> dealingRValidatorList_ =
+        java.util.Collections.emptyList();
+      private void ensureDealingRValidatorListIsMutable() {
+        if (!((bitField0_ & 0x00000040) != 0)) {
+          dealingRValidatorList_ = new java.util.ArrayList<com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator>(dealingRValidatorList_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator, com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator.Builder, com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidatorOrBuilder> dealingRValidatorListBuilder_;
+
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.rvalidator.DealingRValidator dealingRValidatorList = 7 [json_name = "dealingRValidatorList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator> getDealingRValidatorListList() {
+        if (dealingRValidatorListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(dealingRValidatorList_);
+        } else {
+          return dealingRValidatorListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.rvalidator.DealingRValidator dealingRValidatorList = 7 [json_name = "dealingRValidatorList"];</code>
+       */
+      public int getDealingRValidatorListCount() {
+        if (dealingRValidatorListBuilder_ == null) {
+          return dealingRValidatorList_.size();
+        } else {
+          return dealingRValidatorListBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.rvalidator.DealingRValidator dealingRValidatorList = 7 [json_name = "dealingRValidatorList"];</code>
+       */
+      public com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator getDealingRValidatorList(int index) {
+        if (dealingRValidatorListBuilder_ == null) {
+          return dealingRValidatorList_.get(index);
+        } else {
+          return dealingRValidatorListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.rvalidator.DealingRValidator dealingRValidatorList = 7 [json_name = "dealingRValidatorList"];</code>
+       */
+      public Builder setDealingRValidatorList(
+          int index, com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator value) {
+        if (dealingRValidatorListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDealingRValidatorListIsMutable();
+          dealingRValidatorList_.set(index, value);
+          onChanged();
+        } else {
+          dealingRValidatorListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.rvalidator.DealingRValidator dealingRValidatorList = 7 [json_name = "dealingRValidatorList"];</code>
+       */
+      public Builder setDealingRValidatorList(
+          int index, com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator.Builder builderForValue) {
+        if (dealingRValidatorListBuilder_ == null) {
+          ensureDealingRValidatorListIsMutable();
+          dealingRValidatorList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          dealingRValidatorListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.rvalidator.DealingRValidator dealingRValidatorList = 7 [json_name = "dealingRValidatorList"];</code>
+       */
+      public Builder addDealingRValidatorList(com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator value) {
+        if (dealingRValidatorListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDealingRValidatorListIsMutable();
+          dealingRValidatorList_.add(value);
+          onChanged();
+        } else {
+          dealingRValidatorListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.rvalidator.DealingRValidator dealingRValidatorList = 7 [json_name = "dealingRValidatorList"];</code>
+       */
+      public Builder addDealingRValidatorList(
+          int index, com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator value) {
+        if (dealingRValidatorListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDealingRValidatorListIsMutable();
+          dealingRValidatorList_.add(index, value);
+          onChanged();
+        } else {
+          dealingRValidatorListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.rvalidator.DealingRValidator dealingRValidatorList = 7 [json_name = "dealingRValidatorList"];</code>
+       */
+      public Builder addDealingRValidatorList(
+          com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator.Builder builderForValue) {
+        if (dealingRValidatorListBuilder_ == null) {
+          ensureDealingRValidatorListIsMutable();
+          dealingRValidatorList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          dealingRValidatorListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.rvalidator.DealingRValidator dealingRValidatorList = 7 [json_name = "dealingRValidatorList"];</code>
+       */
+      public Builder addDealingRValidatorList(
+          int index, com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator.Builder builderForValue) {
+        if (dealingRValidatorListBuilder_ == null) {
+          ensureDealingRValidatorListIsMutable();
+          dealingRValidatorList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          dealingRValidatorListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.rvalidator.DealingRValidator dealingRValidatorList = 7 [json_name = "dealingRValidatorList"];</code>
+       */
+      public Builder addAllDealingRValidatorList(
+          java.lang.Iterable<? extends com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator> values) {
+        if (dealingRValidatorListBuilder_ == null) {
+          ensureDealingRValidatorListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, dealingRValidatorList_);
+          onChanged();
+        } else {
+          dealingRValidatorListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.rvalidator.DealingRValidator dealingRValidatorList = 7 [json_name = "dealingRValidatorList"];</code>
+       */
+      public Builder clearDealingRValidatorList() {
+        if (dealingRValidatorListBuilder_ == null) {
+          dealingRValidatorList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          dealingRValidatorListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.rvalidator.DealingRValidator dealingRValidatorList = 7 [json_name = "dealingRValidatorList"];</code>
+       */
+      public Builder removeDealingRValidatorList(int index) {
+        if (dealingRValidatorListBuilder_ == null) {
+          ensureDealingRValidatorListIsMutable();
+          dealingRValidatorList_.remove(index);
+          onChanged();
+        } else {
+          dealingRValidatorListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.rvalidator.DealingRValidator dealingRValidatorList = 7 [json_name = "dealingRValidatorList"];</code>
+       */
+      public com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator.Builder getDealingRValidatorListBuilder(
+          int index) {
+        return getDealingRValidatorListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.rvalidator.DealingRValidator dealingRValidatorList = 7 [json_name = "dealingRValidatorList"];</code>
+       */
+      public com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidatorOrBuilder getDealingRValidatorListOrBuilder(
+          int index) {
+        if (dealingRValidatorListBuilder_ == null) {
+          return dealingRValidatorList_.get(index);  } else {
+          return dealingRValidatorListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.rvalidator.DealingRValidator dealingRValidatorList = 7 [json_name = "dealingRValidatorList"];</code>
+       */
+      public java.util.List<? extends com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidatorOrBuilder> 
+           getDealingRValidatorListOrBuilderList() {
+        if (dealingRValidatorListBuilder_ != null) {
+          return dealingRValidatorListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(dealingRValidatorList_);
+        }
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.rvalidator.DealingRValidator dealingRValidatorList = 7 [json_name = "dealingRValidatorList"];</code>
+       */
+      public com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator.Builder addDealingRValidatorListBuilder() {
+        return getDealingRValidatorListFieldBuilder().addBuilder(
+            com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.rvalidator.DealingRValidator dealingRValidatorList = 7 [json_name = "dealingRValidatorList"];</code>
+       */
+      public com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator.Builder addDealingRValidatorListBuilder(
+          int index) {
+        return getDealingRValidatorListFieldBuilder().addBuilder(
+            index, com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * this line is used by starport scaffolding # genesis/proto/state
+       * </pre>
+       *
+       * <code>repeated .stafihub.stafihub.rvalidator.DealingRValidator dealingRValidatorList = 7 [json_name = "dealingRValidatorList"];</code>
+       */
+      public java.util.List<com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator.Builder> 
+           getDealingRValidatorListBuilderList() {
+        return getDealingRValidatorListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator, com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator.Builder, com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidatorOrBuilder> 
+          getDealingRValidatorListFieldBuilder() {
+        if (dealingRValidatorListBuilder_ == null) {
+          dealingRValidatorListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator, com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator.Builder, com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidatorOrBuilder>(
+                  dealingRValidatorList_,
+                  ((bitField0_ & 0x00000040) != 0),
+                  getParentForChildren(),
+                  isClean());
+          dealingRValidatorList_ = null;
+        }
+        return dealingRValidatorListBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.rvalidator.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.rvalidator.GenesisState)
+    private static final com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState();
+    }
+
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.rvalidator.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RValidatorOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.rvalidator.RValidator)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <code>string poolAddress = 2 [json_name = "poolAddress"];</code>
+     * @return The poolAddress.
+     */
+    java.lang.String getPoolAddress();
+    /**
+     * <code>string poolAddress = 2 [json_name = "poolAddress"];</code>
+     * @return The bytes for poolAddress.
+     */
+    com.google.protobuf.ByteString
+        getPoolAddressBytes();
+
+    /**
+     * <code>string valAddress = 3 [json_name = "valAddress"];</code>
+     * @return The valAddress.
+     */
+    java.lang.String getValAddress();
+    /**
+     * <code>string valAddress = 3 [json_name = "valAddress"];</code>
+     * @return The bytes for valAddress.
+     */
+    com.google.protobuf.ByteString
+        getValAddressBytes();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.rvalidator.RValidator}
+   */
+  public static final class RValidator extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.rvalidator.RValidator)
+      RValidatorOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RValidator.newBuilder() to construct.
+    private RValidator(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RValidator() {
+      denom_ = "";
+      poolAddress_ = "";
+      valAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RValidator();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.rvalidator.GenesisProto.internal_static_stafihub_stafihub_rvalidator_RValidator_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.rvalidator.GenesisProto.internal_static_stafihub_stafihub_rvalidator_RValidator_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.rvalidator.GenesisProto.RValidator.class, com.stafihub.stafihub.rvalidator.GenesisProto.RValidator.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int POOLADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object poolAddress_ = "";
+    /**
+     * <code>string poolAddress = 2 [json_name = "poolAddress"];</code>
+     * @return The poolAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getPoolAddress() {
+      java.lang.Object ref = poolAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        poolAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string poolAddress = 2 [json_name = "poolAddress"];</code>
+     * @return The bytes for poolAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPoolAddressBytes() {
+      java.lang.Object ref = poolAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        poolAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VALADDRESS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object valAddress_ = "";
+    /**
+     * <code>string valAddress = 3 [json_name = "valAddress"];</code>
+     * @return The valAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getValAddress() {
+      java.lang.Object ref = valAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        valAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string valAddress = 3 [json_name = "valAddress"];</code>
+     * @return The bytes for valAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValAddressBytes() {
+      java.lang.Object ref = valAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        valAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(poolAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, poolAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(valAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, valAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(poolAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, poolAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(valAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, valAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.rvalidator.GenesisProto.RValidator)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.rvalidator.GenesisProto.RValidator other = (com.stafihub.stafihub.rvalidator.GenesisProto.RValidator) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (!getPoolAddress()
+          .equals(other.getPoolAddress())) return false;
+      if (!getValAddress()
+          .equals(other.getValAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (37 * hash) + POOLADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getPoolAddress().hashCode();
+      hash = (37 * hash) + VALADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getValAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.RValidator parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.RValidator parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.RValidator parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.RValidator parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.RValidator parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.RValidator parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.RValidator parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.RValidator parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.RValidator parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.RValidator parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.RValidator parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.RValidator parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.rvalidator.GenesisProto.RValidator prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.rvalidator.RValidator}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.rvalidator.RValidator)
+        com.stafihub.stafihub.rvalidator.GenesisProto.RValidatorOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.rvalidator.GenesisProto.internal_static_stafihub_stafihub_rvalidator_RValidator_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.rvalidator.GenesisProto.internal_static_stafihub_stafihub_rvalidator_RValidator_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.rvalidator.GenesisProto.RValidator.class, com.stafihub.stafihub.rvalidator.GenesisProto.RValidator.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.rvalidator.GenesisProto.RValidator.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        poolAddress_ = "";
+        valAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.rvalidator.GenesisProto.internal_static_stafihub_stafihub_rvalidator_RValidator_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rvalidator.GenesisProto.RValidator getDefaultInstanceForType() {
+        return com.stafihub.stafihub.rvalidator.GenesisProto.RValidator.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rvalidator.GenesisProto.RValidator build() {
+        com.stafihub.stafihub.rvalidator.GenesisProto.RValidator result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rvalidator.GenesisProto.RValidator buildPartial() {
+        com.stafihub.stafihub.rvalidator.GenesisProto.RValidator result = new com.stafihub.stafihub.rvalidator.GenesisProto.RValidator(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.rvalidator.GenesisProto.RValidator result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.poolAddress_ = poolAddress_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.valAddress_ = valAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.rvalidator.GenesisProto.RValidator) {
+          return mergeFrom((com.stafihub.stafihub.rvalidator.GenesisProto.RValidator)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.rvalidator.GenesisProto.RValidator other) {
+        if (other == com.stafihub.stafihub.rvalidator.GenesisProto.RValidator.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getPoolAddress().isEmpty()) {
+          poolAddress_ = other.poolAddress_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getValAddress().isEmpty()) {
+          valAddress_ = other.valAddress_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                poolAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                valAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object poolAddress_ = "";
+      /**
+       * <code>string poolAddress = 2 [json_name = "poolAddress"];</code>
+       * @return The poolAddress.
+       */
+      public java.lang.String getPoolAddress() {
+        java.lang.Object ref = poolAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          poolAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string poolAddress = 2 [json_name = "poolAddress"];</code>
+       * @return The bytes for poolAddress.
+       */
+      public com.google.protobuf.ByteString
+          getPoolAddressBytes() {
+        java.lang.Object ref = poolAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          poolAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string poolAddress = 2 [json_name = "poolAddress"];</code>
+       * @param value The poolAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        poolAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string poolAddress = 2 [json_name = "poolAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolAddress() {
+        poolAddress_ = getDefaultInstance().getPoolAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string poolAddress = 2 [json_name = "poolAddress"];</code>
+       * @param value The bytes for poolAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        poolAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object valAddress_ = "";
+      /**
+       * <code>string valAddress = 3 [json_name = "valAddress"];</code>
+       * @return The valAddress.
+       */
+      public java.lang.String getValAddress() {
+        java.lang.Object ref = valAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          valAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string valAddress = 3 [json_name = "valAddress"];</code>
+       * @return The bytes for valAddress.
+       */
+      public com.google.protobuf.ByteString
+          getValAddressBytes() {
+        java.lang.Object ref = valAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          valAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string valAddress = 3 [json_name = "valAddress"];</code>
+       * @param value The valAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        valAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string valAddress = 3 [json_name = "valAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValAddress() {
+        valAddress_ = getDefaultInstance().getValAddress();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string valAddress = 3 [json_name = "valAddress"];</code>
+       * @param value The bytes for valAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        valAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.rvalidator.RValidator)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.rvalidator.RValidator)
+    private static final com.stafihub.stafihub.rvalidator.GenesisProto.RValidator DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.rvalidator.GenesisProto.RValidator();
+    }
+
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.RValidator getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RValidator>
+        PARSER = new com.google.protobuf.AbstractParser<RValidator>() {
+      @java.lang.Override
+      public RValidator parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RValidator> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RValidator> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.rvalidator.GenesisProto.RValidator getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DealingRValidatorOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.rvalidator.DealingRValidator)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <code>string poolAddress = 2 [json_name = "poolAddress"];</code>
+     * @return The poolAddress.
+     */
+    java.lang.String getPoolAddress();
+    /**
+     * <code>string poolAddress = 2 [json_name = "poolAddress"];</code>
+     * @return The bytes for poolAddress.
+     */
+    com.google.protobuf.ByteString
+        getPoolAddressBytes();
+
+    /**
+     * <code>string oldValAddress = 3 [json_name = "oldValAddress"];</code>
+     * @return The oldValAddress.
+     */
+    java.lang.String getOldValAddress();
+    /**
+     * <code>string oldValAddress = 3 [json_name = "oldValAddress"];</code>
+     * @return The bytes for oldValAddress.
+     */
+    com.google.protobuf.ByteString
+        getOldValAddressBytes();
+
+    /**
+     * <code>string newValAddress = 4 [json_name = "newValAddress"];</code>
+     * @return The newValAddress.
+     */
+    java.lang.String getNewValAddress();
+    /**
+     * <code>string newValAddress = 4 [json_name = "newValAddress"];</code>
+     * @return The bytes for newValAddress.
+     */
+    com.google.protobuf.ByteString
+        getNewValAddressBytes();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.rvalidator.DealingRValidator}
+   */
+  public static final class DealingRValidator extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.rvalidator.DealingRValidator)
+      DealingRValidatorOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DealingRValidator.newBuilder() to construct.
+    private DealingRValidator(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DealingRValidator() {
+      denom_ = "";
+      poolAddress_ = "";
+      oldValAddress_ = "";
+      newValAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DealingRValidator();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.rvalidator.GenesisProto.internal_static_stafihub_stafihub_rvalidator_DealingRValidator_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.rvalidator.GenesisProto.internal_static_stafihub_stafihub_rvalidator_DealingRValidator_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator.class, com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int POOLADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object poolAddress_ = "";
+    /**
+     * <code>string poolAddress = 2 [json_name = "poolAddress"];</code>
+     * @return The poolAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getPoolAddress() {
+      java.lang.Object ref = poolAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        poolAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string poolAddress = 2 [json_name = "poolAddress"];</code>
+     * @return The bytes for poolAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPoolAddressBytes() {
+      java.lang.Object ref = poolAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        poolAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OLDVALADDRESS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object oldValAddress_ = "";
+    /**
+     * <code>string oldValAddress = 3 [json_name = "oldValAddress"];</code>
+     * @return The oldValAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getOldValAddress() {
+      java.lang.Object ref = oldValAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        oldValAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string oldValAddress = 3 [json_name = "oldValAddress"];</code>
+     * @return The bytes for oldValAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOldValAddressBytes() {
+      java.lang.Object ref = oldValAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        oldValAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NEWVALADDRESS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object newValAddress_ = "";
+    /**
+     * <code>string newValAddress = 4 [json_name = "newValAddress"];</code>
+     * @return The newValAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getNewValAddress() {
+      java.lang.Object ref = newValAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        newValAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string newValAddress = 4 [json_name = "newValAddress"];</code>
+     * @return The bytes for newValAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNewValAddressBytes() {
+      java.lang.Object ref = newValAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        newValAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(poolAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, poolAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(oldValAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, oldValAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newValAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, newValAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(poolAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, poolAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(oldValAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, oldValAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newValAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, newValAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator other = (com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (!getPoolAddress()
+          .equals(other.getPoolAddress())) return false;
+      if (!getOldValAddress()
+          .equals(other.getOldValAddress())) return false;
+      if (!getNewValAddress()
+          .equals(other.getNewValAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (37 * hash) + POOLADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getPoolAddress().hashCode();
+      hash = (37 * hash) + OLDVALADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getOldValAddress().hashCode();
+      hash = (37 * hash) + NEWVALADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getNewValAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.rvalidator.DealingRValidator}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.rvalidator.DealingRValidator)
+        com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidatorOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.rvalidator.GenesisProto.internal_static_stafihub_stafihub_rvalidator_DealingRValidator_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.rvalidator.GenesisProto.internal_static_stafihub_stafihub_rvalidator_DealingRValidator_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator.class, com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        poolAddress_ = "";
+        oldValAddress_ = "";
+        newValAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.rvalidator.GenesisProto.internal_static_stafihub_stafihub_rvalidator_DealingRValidator_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator getDefaultInstanceForType() {
+        return com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator build() {
+        com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator buildPartial() {
+        com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator result = new com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.poolAddress_ = poolAddress_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.oldValAddress_ = oldValAddress_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.newValAddress_ = newValAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator) {
+          return mergeFrom((com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator other) {
+        if (other == com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getPoolAddress().isEmpty()) {
+          poolAddress_ = other.poolAddress_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getOldValAddress().isEmpty()) {
+          oldValAddress_ = other.oldValAddress_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getNewValAddress().isEmpty()) {
+          newValAddress_ = other.newValAddress_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                poolAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                oldValAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                newValAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object poolAddress_ = "";
+      /**
+       * <code>string poolAddress = 2 [json_name = "poolAddress"];</code>
+       * @return The poolAddress.
+       */
+      public java.lang.String getPoolAddress() {
+        java.lang.Object ref = poolAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          poolAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string poolAddress = 2 [json_name = "poolAddress"];</code>
+       * @return The bytes for poolAddress.
+       */
+      public com.google.protobuf.ByteString
+          getPoolAddressBytes() {
+        java.lang.Object ref = poolAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          poolAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string poolAddress = 2 [json_name = "poolAddress"];</code>
+       * @param value The poolAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        poolAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string poolAddress = 2 [json_name = "poolAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolAddress() {
+        poolAddress_ = getDefaultInstance().getPoolAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string poolAddress = 2 [json_name = "poolAddress"];</code>
+       * @param value The bytes for poolAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        poolAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object oldValAddress_ = "";
+      /**
+       * <code>string oldValAddress = 3 [json_name = "oldValAddress"];</code>
+       * @return The oldValAddress.
+       */
+      public java.lang.String getOldValAddress() {
+        java.lang.Object ref = oldValAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          oldValAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string oldValAddress = 3 [json_name = "oldValAddress"];</code>
+       * @return The bytes for oldValAddress.
+       */
+      public com.google.protobuf.ByteString
+          getOldValAddressBytes() {
+        java.lang.Object ref = oldValAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          oldValAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string oldValAddress = 3 [json_name = "oldValAddress"];</code>
+       * @param value The oldValAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOldValAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        oldValAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string oldValAddress = 3 [json_name = "oldValAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOldValAddress() {
+        oldValAddress_ = getDefaultInstance().getOldValAddress();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string oldValAddress = 3 [json_name = "oldValAddress"];</code>
+       * @param value The bytes for oldValAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOldValAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        oldValAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object newValAddress_ = "";
+      /**
+       * <code>string newValAddress = 4 [json_name = "newValAddress"];</code>
+       * @return The newValAddress.
+       */
+      public java.lang.String getNewValAddress() {
+        java.lang.Object ref = newValAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          newValAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string newValAddress = 4 [json_name = "newValAddress"];</code>
+       * @return The bytes for newValAddress.
+       */
+      public com.google.protobuf.ByteString
+          getNewValAddressBytes() {
+        java.lang.Object ref = newValAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          newValAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string newValAddress = 4 [json_name = "newValAddress"];</code>
+       * @param value The newValAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewValAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        newValAddress_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string newValAddress = 4 [json_name = "newValAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNewValAddress() {
+        newValAddress_ = getDefaultInstance().getNewValAddress();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string newValAddress = 4 [json_name = "newValAddress"];</code>
+       * @param value The bytes for newValAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewValAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        newValAddress_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.rvalidator.DealingRValidator)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.rvalidator.DealingRValidator)
+    private static final com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator();
+    }
+
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DealingRValidator>
+        PARSER = new com.google.protobuf.AbstractParser<DealingRValidator>() {
+      @java.lang.Override
+      public DealingRValidator parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DealingRValidator> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DealingRValidator> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.rvalidator.GenesisProto.DealingRValidator getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CycleOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.rvalidator.Cycle)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <code>string poolAddress = 2 [json_name = "poolAddress"];</code>
+     * @return The poolAddress.
+     */
+    java.lang.String getPoolAddress();
+    /**
+     * <code>string poolAddress = 2 [json_name = "poolAddress"];</code>
+     * @return The bytes for poolAddress.
+     */
+    com.google.protobuf.ByteString
+        getPoolAddressBytes();
+
+    /**
+     * <code>uint64 version = 3 [json_name = "version"];</code>
+     * @return The version.
+     */
+    long getVersion();
+
+    /**
+     * <code>uint64 number = 4 [json_name = "number"];</code>
+     * @return The number.
+     */
+    long getNumber();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.rvalidator.Cycle}
+   */
+  public static final class Cycle extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.rvalidator.Cycle)
+      CycleOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Cycle.newBuilder() to construct.
+    private Cycle(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Cycle() {
+      denom_ = "";
+      poolAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Cycle();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.rvalidator.GenesisProto.internal_static_stafihub_stafihub_rvalidator_Cycle_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.rvalidator.GenesisProto.internal_static_stafihub_stafihub_rvalidator_Cycle_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.rvalidator.GenesisProto.Cycle.class, com.stafihub.stafihub.rvalidator.GenesisProto.Cycle.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int POOLADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object poolAddress_ = "";
+    /**
+     * <code>string poolAddress = 2 [json_name = "poolAddress"];</code>
+     * @return The poolAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getPoolAddress() {
+      java.lang.Object ref = poolAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        poolAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string poolAddress = 2 [json_name = "poolAddress"];</code>
+     * @return The bytes for poolAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPoolAddressBytes() {
+      java.lang.Object ref = poolAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        poolAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VERSION_FIELD_NUMBER = 3;
+    private long version_ = 0L;
+    /**
+     * <code>uint64 version = 3 [json_name = "version"];</code>
+     * @return The version.
+     */
+    @java.lang.Override
+    public long getVersion() {
+      return version_;
+    }
+
+    public static final int NUMBER_FIELD_NUMBER = 4;
+    private long number_ = 0L;
+    /**
+     * <code>uint64 number = 4 [json_name = "number"];</code>
+     * @return The number.
+     */
+    @java.lang.Override
+    public long getNumber() {
+      return number_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(poolAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, poolAddress_);
+      }
+      if (version_ != 0L) {
+        output.writeUInt64(3, version_);
+      }
+      if (number_ != 0L) {
+        output.writeUInt64(4, number_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(poolAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, poolAddress_);
+      }
+      if (version_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, version_);
+      }
+      if (number_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, number_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.rvalidator.GenesisProto.Cycle)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.rvalidator.GenesisProto.Cycle other = (com.stafihub.stafihub.rvalidator.GenesisProto.Cycle) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (!getPoolAddress()
+          .equals(other.getPoolAddress())) return false;
+      if (getVersion()
+          != other.getVersion()) return false;
+      if (getNumber()
+          != other.getNumber()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (37 * hash) + POOLADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getPoolAddress().hashCode();
+      hash = (37 * hash) + VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getVersion());
+      hash = (37 * hash) + NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getNumber());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.Cycle parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.Cycle parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.Cycle parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.Cycle parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.Cycle parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.Cycle parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.Cycle parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.Cycle parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.Cycle parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.Cycle parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.Cycle parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.Cycle parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.rvalidator.GenesisProto.Cycle prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.rvalidator.Cycle}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.rvalidator.Cycle)
+        com.stafihub.stafihub.rvalidator.GenesisProto.CycleOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.rvalidator.GenesisProto.internal_static_stafihub_stafihub_rvalidator_Cycle_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.rvalidator.GenesisProto.internal_static_stafihub_stafihub_rvalidator_Cycle_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.rvalidator.GenesisProto.Cycle.class, com.stafihub.stafihub.rvalidator.GenesisProto.Cycle.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.rvalidator.GenesisProto.Cycle.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        poolAddress_ = "";
+        version_ = 0L;
+        number_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.rvalidator.GenesisProto.internal_static_stafihub_stafihub_rvalidator_Cycle_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rvalidator.GenesisProto.Cycle getDefaultInstanceForType() {
+        return com.stafihub.stafihub.rvalidator.GenesisProto.Cycle.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rvalidator.GenesisProto.Cycle build() {
+        com.stafihub.stafihub.rvalidator.GenesisProto.Cycle result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rvalidator.GenesisProto.Cycle buildPartial() {
+        com.stafihub.stafihub.rvalidator.GenesisProto.Cycle result = new com.stafihub.stafihub.rvalidator.GenesisProto.Cycle(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.rvalidator.GenesisProto.Cycle result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.poolAddress_ = poolAddress_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.version_ = version_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.number_ = number_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.rvalidator.GenesisProto.Cycle) {
+          return mergeFrom((com.stafihub.stafihub.rvalidator.GenesisProto.Cycle)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.rvalidator.GenesisProto.Cycle other) {
+        if (other == com.stafihub.stafihub.rvalidator.GenesisProto.Cycle.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getPoolAddress().isEmpty()) {
+          poolAddress_ = other.poolAddress_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getVersion() != 0L) {
+          setVersion(other.getVersion());
+        }
+        if (other.getNumber() != 0L) {
+          setNumber(other.getNumber());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                poolAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                version_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                number_ = input.readUInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object poolAddress_ = "";
+      /**
+       * <code>string poolAddress = 2 [json_name = "poolAddress"];</code>
+       * @return The poolAddress.
+       */
+      public java.lang.String getPoolAddress() {
+        java.lang.Object ref = poolAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          poolAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string poolAddress = 2 [json_name = "poolAddress"];</code>
+       * @return The bytes for poolAddress.
+       */
+      public com.google.protobuf.ByteString
+          getPoolAddressBytes() {
+        java.lang.Object ref = poolAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          poolAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string poolAddress = 2 [json_name = "poolAddress"];</code>
+       * @param value The poolAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        poolAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string poolAddress = 2 [json_name = "poolAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPoolAddress() {
+        poolAddress_ = getDefaultInstance().getPoolAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string poolAddress = 2 [json_name = "poolAddress"];</code>
+       * @param value The bytes for poolAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPoolAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        poolAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private long version_ ;
+      /**
+       * <code>uint64 version = 3 [json_name = "version"];</code>
+       * @return The version.
+       */
+      @java.lang.Override
+      public long getVersion() {
+        return version_;
+      }
+      /**
+       * <code>uint64 version = 3 [json_name = "version"];</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersion(long value) {
+
+        version_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 version = 3 [json_name = "version"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVersion() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        version_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long number_ ;
+      /**
+       * <code>uint64 number = 4 [json_name = "number"];</code>
+       * @return The number.
+       */
+      @java.lang.Override
+      public long getNumber() {
+        return number_;
+      }
+      /**
+       * <code>uint64 number = 4 [json_name = "number"];</code>
+       * @param value The number to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumber(long value) {
+
+        number_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 number = 4 [json_name = "number"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNumber() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        number_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.rvalidator.Cycle)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.rvalidator.Cycle)
+    private static final com.stafihub.stafihub.rvalidator.GenesisProto.Cycle DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.rvalidator.GenesisProto.Cycle();
+    }
+
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.Cycle getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Cycle>
+        PARSER = new com.google.protobuf.AbstractParser<Cycle>() {
+      @java.lang.Override
+      public Cycle parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Cycle> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Cycle> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.rvalidator.GenesisProto.Cycle getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CycleSecondsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.rvalidator.CycleSeconds)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <code>uint64 version = 2 [json_name = "version"];</code>
+     * @return The version.
+     */
+    long getVersion();
+
+    /**
+     * <code>uint64 seconds = 3 [json_name = "seconds"];</code>
+     * @return The seconds.
+     */
+    long getSeconds();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.rvalidator.CycleSeconds}
+   */
+  public static final class CycleSeconds extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.rvalidator.CycleSeconds)
+      CycleSecondsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CycleSeconds.newBuilder() to construct.
+    private CycleSeconds(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CycleSeconds() {
+      denom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CycleSeconds();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.rvalidator.GenesisProto.internal_static_stafihub_stafihub_rvalidator_CycleSeconds_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.rvalidator.GenesisProto.internal_static_stafihub_stafihub_rvalidator_CycleSeconds_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds.class, com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VERSION_FIELD_NUMBER = 2;
+    private long version_ = 0L;
+    /**
+     * <code>uint64 version = 2 [json_name = "version"];</code>
+     * @return The version.
+     */
+    @java.lang.Override
+    public long getVersion() {
+      return version_;
+    }
+
+    public static final int SECONDS_FIELD_NUMBER = 3;
+    private long seconds_ = 0L;
+    /**
+     * <code>uint64 seconds = 3 [json_name = "seconds"];</code>
+     * @return The seconds.
+     */
+    @java.lang.Override
+    public long getSeconds() {
+      return seconds_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      if (version_ != 0L) {
+        output.writeUInt64(2, version_);
+      }
+      if (seconds_ != 0L) {
+        output.writeUInt64(3, seconds_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      if (version_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, version_);
+      }
+      if (seconds_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, seconds_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds other = (com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (getVersion()
+          != other.getVersion()) return false;
+      if (getSeconds()
+          != other.getSeconds()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (37 * hash) + VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getVersion());
+      hash = (37 * hash) + SECONDS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSeconds());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.rvalidator.CycleSeconds}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.rvalidator.CycleSeconds)
+        com.stafihub.stafihub.rvalidator.GenesisProto.CycleSecondsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.rvalidator.GenesisProto.internal_static_stafihub_stafihub_rvalidator_CycleSeconds_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.rvalidator.GenesisProto.internal_static_stafihub_stafihub_rvalidator_CycleSeconds_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds.class, com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        version_ = 0L;
+        seconds_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.rvalidator.GenesisProto.internal_static_stafihub_stafihub_rvalidator_CycleSeconds_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds getDefaultInstanceForType() {
+        return com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds build() {
+        com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds buildPartial() {
+        com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds result = new com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.version_ = version_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.seconds_ = seconds_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds) {
+          return mergeFrom((com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds other) {
+        if (other == com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getVersion() != 0L) {
+          setVersion(other.getVersion());
+        }
+        if (other.getSeconds() != 0L) {
+          setSeconds(other.getSeconds());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                version_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                seconds_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long version_ ;
+      /**
+       * <code>uint64 version = 2 [json_name = "version"];</code>
+       * @return The version.
+       */
+      @java.lang.Override
+      public long getVersion() {
+        return version_;
+      }
+      /**
+       * <code>uint64 version = 2 [json_name = "version"];</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersion(long value) {
+
+        version_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 version = 2 [json_name = "version"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVersion() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        version_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long seconds_ ;
+      /**
+       * <code>uint64 seconds = 3 [json_name = "seconds"];</code>
+       * @return The seconds.
+       */
+      @java.lang.Override
+      public long getSeconds() {
+        return seconds_;
+      }
+      /**
+       * <code>uint64 seconds = 3 [json_name = "seconds"];</code>
+       * @param value The seconds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSeconds(long value) {
+
+        seconds_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 seconds = 3 [json_name = "seconds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSeconds() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        seconds_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.rvalidator.CycleSeconds)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.rvalidator.CycleSeconds)
+    private static final com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds();
+    }
+
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CycleSeconds>
+        PARSER = new com.google.protobuf.AbstractParser<CycleSeconds>() {
+      @java.lang.Override
+      public CycleSeconds parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CycleSeconds> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CycleSeconds> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.rvalidator.GenesisProto.CycleSeconds getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ShuffleSecondsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:stafihub.stafihub.rvalidator.ShuffleSeconds)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    java.lang.String getDenom();
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    com.google.protobuf.ByteString
+        getDenomBytes();
+
+    /**
+     * <code>uint64 version = 2 [json_name = "version"];</code>
+     * @return The version.
+     */
+    long getVersion();
+
+    /**
+     * <code>uint64 seconds = 3 [json_name = "seconds"];</code>
+     * @return The seconds.
+     */
+    long getSeconds();
+  }
+  /**
+   * Protobuf type {@code stafihub.stafihub.rvalidator.ShuffleSeconds}
+   */
+  public static final class ShuffleSeconds extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:stafihub.stafihub.rvalidator.ShuffleSeconds)
+      ShuffleSecondsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ShuffleSeconds.newBuilder() to construct.
+    private ShuffleSeconds(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ShuffleSeconds() {
+      denom_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ShuffleSeconds();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.stafihub.stafihub.rvalidator.GenesisProto.internal_static_stafihub_stafihub_rvalidator_ShuffleSeconds_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.stafihub.stafihub.rvalidator.GenesisProto.internal_static_stafihub_stafihub_rvalidator_ShuffleSeconds_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds.class, com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds.Builder.class);
+    }
+
+    public static final int DENOM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object denom_ = "";
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The denom.
+     */
+    @java.lang.Override
+    public java.lang.String getDenom() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        denom_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string denom = 1 [json_name = "denom"];</code>
+     * @return The bytes for denom.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDenomBytes() {
+      java.lang.Object ref = denom_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        denom_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VERSION_FIELD_NUMBER = 2;
+    private long version_ = 0L;
+    /**
+     * <code>uint64 version = 2 [json_name = "version"];</code>
+     * @return The version.
+     */
+    @java.lang.Override
+    public long getVersion() {
+      return version_;
+    }
+
+    public static final int SECONDS_FIELD_NUMBER = 3;
+    private long seconds_ = 0L;
+    /**
+     * <code>uint64 seconds = 3 [json_name = "seconds"];</code>
+     * @return The seconds.
+     */
+    @java.lang.Override
+    public long getSeconds() {
+      return seconds_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, denom_);
+      }
+      if (version_ != 0L) {
+        output.writeUInt64(2, version_);
+      }
+      if (seconds_ != 0L) {
+        output.writeUInt64(3, seconds_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(denom_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, denom_);
+      }
+      if (version_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, version_);
+      }
+      if (seconds_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, seconds_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds)) {
+        return super.equals(obj);
+      }
+      com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds other = (com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds) obj;
+
+      if (!getDenom()
+          .equals(other.getDenom())) return false;
+      if (getVersion()
+          != other.getVersion()) return false;
+      if (getSeconds()
+          != other.getSeconds()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DENOM_FIELD_NUMBER;
+      hash = (53 * hash) + getDenom().hashCode();
+      hash = (37 * hash) + VERSION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getVersion());
+      hash = (37 * hash) + SECONDS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSeconds());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code stafihub.stafihub.rvalidator.ShuffleSeconds}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:stafihub.stafihub.rvalidator.ShuffleSeconds)
+        com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSecondsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.stafihub.stafihub.rvalidator.GenesisProto.internal_static_stafihub_stafihub_rvalidator_ShuffleSeconds_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.stafihub.stafihub.rvalidator.GenesisProto.internal_static_stafihub_stafihub_rvalidator_ShuffleSeconds_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds.class, com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds.Builder.class);
+      }
+
+      // Construct using com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        denom_ = "";
+        version_ = 0L;
+        seconds_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.stafihub.stafihub.rvalidator.GenesisProto.internal_static_stafihub_stafihub_rvalidator_ShuffleSeconds_descriptor;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds getDefaultInstanceForType() {
+        return com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds build() {
+        com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds buildPartial() {
+        com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds result = new com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.denom_ = denom_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.version_ = version_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.seconds_ = seconds_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds) {
+          return mergeFrom((com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds other) {
+        if (other == com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds.getDefaultInstance()) return this;
+        if (!other.getDenom().isEmpty()) {
+          denom_ = other.denom_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.getVersion() != 0L) {
+          setVersion(other.getVersion());
+        }
+        if (other.getSeconds() != 0L) {
+          setSeconds(other.getSeconds());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                denom_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                version_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                seconds_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object denom_ = "";
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The denom.
+       */
+      public java.lang.String getDenom() {
+        java.lang.Object ref = denom_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          denom_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return The bytes for denom.
+       */
+      public com.google.protobuf.ByteString
+          getDenomBytes() {
+        java.lang.Object ref = denom_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          denom_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenom(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDenom() {
+        denom_ = getDefaultInstance().getDenom();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string denom = 1 [json_name = "denom"];</code>
+       * @param value The bytes for denom to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDenomBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        denom_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private long version_ ;
+      /**
+       * <code>uint64 version = 2 [json_name = "version"];</code>
+       * @return The version.
+       */
+      @java.lang.Override
+      public long getVersion() {
+        return version_;
+      }
+      /**
+       * <code>uint64 version = 2 [json_name = "version"];</code>
+       * @param value The version to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVersion(long value) {
+
+        version_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 version = 2 [json_name = "version"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVersion() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        version_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long seconds_ ;
+      /**
+       * <code>uint64 seconds = 3 [json_name = "seconds"];</code>
+       * @return The seconds.
+       */
+      @java.lang.Override
+      public long getSeconds() {
+        return seconds_;
+      }
+      /**
+       * <code>uint64 seconds = 3 [json_name = "seconds"];</code>
+       * @param value The seconds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSeconds(long value) {
+
+        seconds_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 seconds = 3 [json_name = "seconds"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSeconds() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        seconds_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:stafihub.stafihub.rvalidator.ShuffleSeconds)
+    }
+
+    // @@protoc_insertion_point(class_scope:stafihub.stafihub.rvalidator.ShuffleSeconds)
+    private static final com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds();
+    }
+
+    public static com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ShuffleSeconds>
+        PARSER = new com.google.protobuf.AbstractParser<ShuffleSeconds>() {
+      @java.lang.Override
+      public ShuffleSeconds parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ShuffleSeconds> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ShuffleSeconds> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.stafihub.stafihub.rvalidator.GenesisProto.ShuffleSeconds getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_rvalidator_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_rvalidator_GenesisState_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_rvalidator_RValidator_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_rvalidator_RValidator_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_rvalidator_DealingRValidator_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_rvalidator_DealingRValidator_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_rvalidator_Cycle_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_rvalidator_Cycle_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_rvalidator_CycleSeconds_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_rvalidator_CycleSeconds_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_stafihub_stafihub_rvalidator_ShuffleSeconds_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_stafihub_stafihub_rvalidator_ShuffleSeconds_fieldAccessorTable;
 
@@ -86,13 +7140,13 @@ public final class GenesisProto {
       "sion\022\030\n\007seconds\030\003 \001(\004R\007seconds\"Z\n\016Shuffl" +
       "eSeconds\022\024\n\005denom\030\001 \001(\tR\005denom\022\030\n\007versio" +
       "n\030\002 \001(\004R\007version\022\030\n\007seconds\030\003 \001(\004R\007secon" +
-      "dsB\363\001\n com.stafihub.stafihub.rvalidatorB" +
-      "\014GenesisProtoP\001Z/github.com/stafihub/sta" +
-      "fihub/x/rvalidator/types\242\002\003SSR\252\002\034Stafihu" +
-      "b.Stafihub.Rvalidator\312\002\034Stafihub\\Stafihu" +
-      "b\\Rvalidator\342\002(Stafihub\\Stafihub\\Rvalida" +
-      "tor\\GPBMetadata\352\002\036Stafihub::Stafihub::Rv" +
-      "alidatorb\006proto3"
+      "dsB\361\001\n com.stafihub.stafihub.rvalidatorB" +
+      "\014GenesisProtoZ/github.com/stafihub/stafi" +
+      "hub/x/rvalidator/types\242\002\003SSR\252\002\034Stafihub." +
+      "Stafihub.Rvalidator\312\002\034Stafihub\\Stafihub\\" +
+      "Rvalidator\342\002(Stafihub\\Stafihub\\Rvalidato" +
+      "r\\GPBMetadata\352\002\036Stafihub::Stafihub::Rval" +
+      "idatorb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

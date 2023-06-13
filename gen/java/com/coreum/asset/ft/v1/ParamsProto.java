@@ -14,9 +14,677 @@ public final class ParamsProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface ParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:coreum.asset.ft.v1.Params)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * issue_fee is the fee burnt each time new token is issued
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin issue_fee = 1 [json_name = "issueFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_fee&#92;""];</code>
+     * @return Whether the issueFee field is set.
+     */
+    boolean hasIssueFee();
+    /**
+     * <pre>
+     * issue_fee is the fee burnt each time new token is issued
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin issue_fee = 1 [json_name = "issueFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_fee&#92;""];</code>
+     * @return The issueFee.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getIssueFee();
+    /**
+     * <pre>
+     * issue_fee is the fee burnt each time new token is issued
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin issue_fee = 1 [json_name = "issueFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_fee&#92;""];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getIssueFeeOrBuilder();
+  }
+  /**
+   * <pre>
+   * Params store gov manageable parameters.
+   * </pre>
+   *
+   * Protobuf type {@code coreum.asset.ft.v1.Params}
+   */
+  public static final class Params extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:coreum.asset.ft.v1.Params)
+      ParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Params.newBuilder() to construct.
+    private Params(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Params() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Params();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.coreum.asset.ft.v1.ParamsProto.internal_static_coreum_asset_ft_v1_Params_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.coreum.asset.ft.v1.ParamsProto.internal_static_coreum_asset_ft_v1_Params_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.coreum.asset.ft.v1.ParamsProto.Params.class, com.coreum.asset.ft.v1.ParamsProto.Params.Builder.class);
+    }
+
+    public static final int ISSUE_FEE_FIELD_NUMBER = 1;
+    private com.cosmos.base.v1beta1.CoinProto.Coin issueFee_;
+    /**
+     * <pre>
+     * issue_fee is the fee burnt each time new token is issued
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin issue_fee = 1 [json_name = "issueFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_fee&#92;""];</code>
+     * @return Whether the issueFee field is set.
+     */
+    @java.lang.Override
+    public boolean hasIssueFee() {
+      return issueFee_ != null;
+    }
+    /**
+     * <pre>
+     * issue_fee is the fee burnt each time new token is issued
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin issue_fee = 1 [json_name = "issueFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_fee&#92;""];</code>
+     * @return The issueFee.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getIssueFee() {
+      return issueFee_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : issueFee_;
+    }
+    /**
+     * <pre>
+     * issue_fee is the fee burnt each time new token is issued
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin issue_fee = 1 [json_name = "issueFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_fee&#92;""];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getIssueFeeOrBuilder() {
+      return issueFee_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : issueFee_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (issueFee_ != null) {
+        output.writeMessage(1, getIssueFee());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (issueFee_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getIssueFee());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.coreum.asset.ft.v1.ParamsProto.Params)) {
+        return super.equals(obj);
+      }
+      com.coreum.asset.ft.v1.ParamsProto.Params other = (com.coreum.asset.ft.v1.ParamsProto.Params) obj;
+
+      if (hasIssueFee() != other.hasIssueFee()) return false;
+      if (hasIssueFee()) {
+        if (!getIssueFee()
+            .equals(other.getIssueFee())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasIssueFee()) {
+        hash = (37 * hash) + ISSUE_FEE_FIELD_NUMBER;
+        hash = (53 * hash) + getIssueFee().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.coreum.asset.ft.v1.ParamsProto.Params parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.ParamsProto.Params parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.ParamsProto.Params parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.ParamsProto.Params parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.ParamsProto.Params parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.coreum.asset.ft.v1.ParamsProto.Params parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.ParamsProto.Params parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.ft.v1.ParamsProto.Params parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.coreum.asset.ft.v1.ParamsProto.Params parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.coreum.asset.ft.v1.ParamsProto.Params parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.coreum.asset.ft.v1.ParamsProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.coreum.asset.ft.v1.ParamsProto.Params parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.coreum.asset.ft.v1.ParamsProto.Params prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Params store gov manageable parameters.
+     * </pre>
+     *
+     * Protobuf type {@code coreum.asset.ft.v1.Params}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:coreum.asset.ft.v1.Params)
+        com.coreum.asset.ft.v1.ParamsProto.ParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.coreum.asset.ft.v1.ParamsProto.internal_static_coreum_asset_ft_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.coreum.asset.ft.v1.ParamsProto.internal_static_coreum_asset_ft_v1_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.coreum.asset.ft.v1.ParamsProto.Params.class, com.coreum.asset.ft.v1.ParamsProto.Params.Builder.class);
+      }
+
+      // Construct using com.coreum.asset.ft.v1.ParamsProto.Params.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        issueFee_ = null;
+        if (issueFeeBuilder_ != null) {
+          issueFeeBuilder_.dispose();
+          issueFeeBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.coreum.asset.ft.v1.ParamsProto.internal_static_coreum_asset_ft_v1_Params_descriptor;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.ParamsProto.Params getDefaultInstanceForType() {
+        return com.coreum.asset.ft.v1.ParamsProto.Params.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.ParamsProto.Params build() {
+        com.coreum.asset.ft.v1.ParamsProto.Params result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.coreum.asset.ft.v1.ParamsProto.Params buildPartial() {
+        com.coreum.asset.ft.v1.ParamsProto.Params result = new com.coreum.asset.ft.v1.ParamsProto.Params(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.coreum.asset.ft.v1.ParamsProto.Params result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.issueFee_ = issueFeeBuilder_ == null
+              ? issueFee_
+              : issueFeeBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.coreum.asset.ft.v1.ParamsProto.Params) {
+          return mergeFrom((com.coreum.asset.ft.v1.ParamsProto.Params)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.coreum.asset.ft.v1.ParamsProto.Params other) {
+        if (other == com.coreum.asset.ft.v1.ParamsProto.Params.getDefaultInstance()) return this;
+        if (other.hasIssueFee()) {
+          mergeIssueFee(other.getIssueFee());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getIssueFeeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin issueFee_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> issueFeeBuilder_;
+      /**
+       * <pre>
+       * issue_fee is the fee burnt each time new token is issued
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin issue_fee = 1 [json_name = "issueFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_fee&#92;""];</code>
+       * @return Whether the issueFee field is set.
+       */
+      public boolean hasIssueFee() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * issue_fee is the fee burnt each time new token is issued
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin issue_fee = 1 [json_name = "issueFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_fee&#92;""];</code>
+       * @return The issueFee.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getIssueFee() {
+        if (issueFeeBuilder_ == null) {
+          return issueFee_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : issueFee_;
+        } else {
+          return issueFeeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * issue_fee is the fee burnt each time new token is issued
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin issue_fee = 1 [json_name = "issueFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_fee&#92;""];</code>
+       */
+      public Builder setIssueFee(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (issueFeeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          issueFee_ = value;
+        } else {
+          issueFeeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * issue_fee is the fee burnt each time new token is issued
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin issue_fee = 1 [json_name = "issueFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_fee&#92;""];</code>
+       */
+      public Builder setIssueFee(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (issueFeeBuilder_ == null) {
+          issueFee_ = builderForValue.build();
+        } else {
+          issueFeeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * issue_fee is the fee burnt each time new token is issued
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin issue_fee = 1 [json_name = "issueFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_fee&#92;""];</code>
+       */
+      public Builder mergeIssueFee(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (issueFeeBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            issueFee_ != null &&
+            issueFee_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getIssueFeeBuilder().mergeFrom(value);
+          } else {
+            issueFee_ = value;
+          }
+        } else {
+          issueFeeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * issue_fee is the fee burnt each time new token is issued
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin issue_fee = 1 [json_name = "issueFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_fee&#92;""];</code>
+       */
+      public Builder clearIssueFee() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        issueFee_ = null;
+        if (issueFeeBuilder_ != null) {
+          issueFeeBuilder_.dispose();
+          issueFeeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * issue_fee is the fee burnt each time new token is issued
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin issue_fee = 1 [json_name = "issueFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_fee&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getIssueFeeBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getIssueFeeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * issue_fee is the fee burnt each time new token is issued
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin issue_fee = 1 [json_name = "issueFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_fee&#92;""];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getIssueFeeOrBuilder() {
+        if (issueFeeBuilder_ != null) {
+          return issueFeeBuilder_.getMessageOrBuilder();
+        } else {
+          return issueFee_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : issueFee_;
+        }
+      }
+      /**
+       * <pre>
+       * issue_fee is the fee burnt each time new token is issued
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin issue_fee = 1 [json_name = "issueFee", (.gogoproto.nullable) = false, (.gogoproto.moretags) = "yaml:&#92;"issue_fee&#92;""];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getIssueFeeFieldBuilder() {
+        if (issueFeeBuilder_ == null) {
+          issueFeeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getIssueFee(),
+                  getParentForChildren(),
+                  isClean());
+          issueFee_ = null;
+        }
+        return issueFeeBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:coreum.asset.ft.v1.Params)
+    }
+
+    // @@protoc_insertion_point(class_scope:coreum.asset.ft.v1.Params)
+    private static final com.coreum.asset.ft.v1.ParamsProto.Params DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.coreum.asset.ft.v1.ParamsProto.Params();
+    }
+
+    public static com.coreum.asset.ft.v1.ParamsProto.Params getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Params>
+        PARSER = new com.google.protobuf.AbstractParser<Params>() {
+      @java.lang.Override
+      public Params parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Params> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Params> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.coreum.asset.ft.v1.ParamsProto.Params getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_coreum_asset_ft_v1_Params_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_coreum_asset_ft_v1_Params_fieldAccessorTable;
 
@@ -33,12 +701,12 @@ public final class ParamsProto {
       "mos/base/v1beta1/coin.proto\"Z\n\006Params\022P\n" +
       "\tissue_fee\030\001 \001(\0132\031.cosmos.base.v1beta1.C" +
       "oinB\030\310\336\037\000\362\336\037\020yaml:\"issue_fee\"R\010issueFeeB" +
-      "\305\001\n\026com.coreum.asset.ft.v1B\013ParamsProtoP" +
-      "\001Z3github.com/CoreumFoundation/coreum/x/" +
-      "asset/ft/types\242\002\003CAF\252\002\022Coreum.Asset.Ft.V" +
-      "1\312\002\022Coreum\\Asset\\Ft\\V1\342\002\036Coreum\\Asset\\Ft" +
-      "\\V1\\GPBMetadata\352\002\025Coreum::Asset::Ft::V1b" +
-      "\006proto3"
+      "\303\001\n\026com.coreum.asset.ft.v1B\013ParamsProtoZ" +
+      "3github.com/CoreumFoundation/coreum/x/as" +
+      "set/ft/types\242\002\003CAF\252\002\022Coreum.Asset.Ft.V1\312" +
+      "\002\022Coreum\\Asset\\Ft\\V1\342\002\036Coreum\\Asset\\Ft\\V" +
+      "1\\GPBMetadata\352\002\025Coreum::Asset::Ft::V1b\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

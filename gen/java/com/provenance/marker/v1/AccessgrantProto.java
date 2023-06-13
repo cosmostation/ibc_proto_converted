@@ -14,9 +14,1096 @@ public final class AccessgrantProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  /**
+   * <pre>
+   * Access defines the different types of permissions that a marker supports granting to an address.
+   * </pre>
+   *
+   * Protobuf enum {@code provenance.marker.v1.Access}
+   */
+  public enum Access
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * ACCESS_UNSPECIFIED defines a no-op vote option.
+     * </pre>
+     *
+     * <code>ACCESS_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "Unknown"];</code>
+     */
+    ACCESS_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * ACCESS_MINT is the ability to increase the supply of a marker
+     * </pre>
+     *
+     * <code>ACCESS_MINT = 1 [(.gogoproto.enumvalue_customname) = "Mint"];</code>
+     */
+    ACCESS_MINT(1),
+    /**
+     * <pre>
+     * ACCESS_BURN is the ability to decrease the supply of the marker using coin held by the marker.
+     * </pre>
+     *
+     * <code>ACCESS_BURN = 2 [(.gogoproto.enumvalue_customname) = "Burn"];</code>
+     */
+    ACCESS_BURN(2),
+    /**
+     * <pre>
+     * ACCESS_DEPOSIT is the ability to set a marker reference to this marker in the metadata/scopes module
+     * </pre>
+     *
+     * <code>ACCESS_DEPOSIT = 3 [(.gogoproto.enumvalue_customname) = "Deposit"];</code>
+     */
+    ACCESS_DEPOSIT(3),
+    /**
+     * <pre>
+     * ACCESS_WITHDRAW is the ability to remove marker references to this marker in from metadata/scopes or
+     * transfer coin from this marker account to another account.
+     * </pre>
+     *
+     * <code>ACCESS_WITHDRAW = 4 [(.gogoproto.enumvalue_customname) = "Withdraw"];</code>
+     */
+    ACCESS_WITHDRAW(4),
+    /**
+     * <pre>
+     * ACCESS_DELETE is the ability to move a proposed, finalized or active marker into the cancelled state. This
+     * access also allows cancelled markers to be marked for deletion
+     * </pre>
+     *
+     * <code>ACCESS_DELETE = 5 [(.gogoproto.enumvalue_customname) = "Delete"];</code>
+     */
+    ACCESS_DELETE(5),
+    /**
+     * <pre>
+     * ACCESS_ADMIN is the ability to add access grants for accounts to the list of marker permissions.
+     * </pre>
+     *
+     * <code>ACCESS_ADMIN = 6 [(.gogoproto.enumvalue_customname) = "Admin"];</code>
+     */
+    ACCESS_ADMIN(6),
+    /**
+     * <pre>
+     * ACCESS_TRANSFER is the ability to invoke a send operation using the marker module to facilitate exchange.
+     * This access right is only supported on RESTRICTED markers.
+     * </pre>
+     *
+     * <code>ACCESS_TRANSFER = 7 [(.gogoproto.enumvalue_customname) = "Transfer"];</code>
+     */
+    ACCESS_TRANSFER(7),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * ACCESS_UNSPECIFIED defines a no-op vote option.
+     * </pre>
+     *
+     * <code>ACCESS_UNSPECIFIED = 0 [(.gogoproto.enumvalue_customname) = "Unknown"];</code>
+     */
+    public static final int ACCESS_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * ACCESS_MINT is the ability to increase the supply of a marker
+     * </pre>
+     *
+     * <code>ACCESS_MINT = 1 [(.gogoproto.enumvalue_customname) = "Mint"];</code>
+     */
+    public static final int ACCESS_MINT_VALUE = 1;
+    /**
+     * <pre>
+     * ACCESS_BURN is the ability to decrease the supply of the marker using coin held by the marker.
+     * </pre>
+     *
+     * <code>ACCESS_BURN = 2 [(.gogoproto.enumvalue_customname) = "Burn"];</code>
+     */
+    public static final int ACCESS_BURN_VALUE = 2;
+    /**
+     * <pre>
+     * ACCESS_DEPOSIT is the ability to set a marker reference to this marker in the metadata/scopes module
+     * </pre>
+     *
+     * <code>ACCESS_DEPOSIT = 3 [(.gogoproto.enumvalue_customname) = "Deposit"];</code>
+     */
+    public static final int ACCESS_DEPOSIT_VALUE = 3;
+    /**
+     * <pre>
+     * ACCESS_WITHDRAW is the ability to remove marker references to this marker in from metadata/scopes or
+     * transfer coin from this marker account to another account.
+     * </pre>
+     *
+     * <code>ACCESS_WITHDRAW = 4 [(.gogoproto.enumvalue_customname) = "Withdraw"];</code>
+     */
+    public static final int ACCESS_WITHDRAW_VALUE = 4;
+    /**
+     * <pre>
+     * ACCESS_DELETE is the ability to move a proposed, finalized or active marker into the cancelled state. This
+     * access also allows cancelled markers to be marked for deletion
+     * </pre>
+     *
+     * <code>ACCESS_DELETE = 5 [(.gogoproto.enumvalue_customname) = "Delete"];</code>
+     */
+    public static final int ACCESS_DELETE_VALUE = 5;
+    /**
+     * <pre>
+     * ACCESS_ADMIN is the ability to add access grants for accounts to the list of marker permissions.
+     * </pre>
+     *
+     * <code>ACCESS_ADMIN = 6 [(.gogoproto.enumvalue_customname) = "Admin"];</code>
+     */
+    public static final int ACCESS_ADMIN_VALUE = 6;
+    /**
+     * <pre>
+     * ACCESS_TRANSFER is the ability to invoke a send operation using the marker module to facilitate exchange.
+     * This access right is only supported on RESTRICTED markers.
+     * </pre>
+     *
+     * <code>ACCESS_TRANSFER = 7 [(.gogoproto.enumvalue_customname) = "Transfer"];</code>
+     */
+    public static final int ACCESS_TRANSFER_VALUE = 7;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static Access valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static Access forNumber(int value) {
+      switch (value) {
+        case 0: return ACCESS_UNSPECIFIED;
+        case 1: return ACCESS_MINT;
+        case 2: return ACCESS_BURN;
+        case 3: return ACCESS_DEPOSIT;
+        case 4: return ACCESS_WITHDRAW;
+        case 5: return ACCESS_DELETE;
+        case 6: return ACCESS_ADMIN;
+        case 7: return ACCESS_TRANSFER;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<Access>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        Access> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<Access>() {
+            public Access findValueByNumber(int number) {
+              return Access.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.provenance.marker.v1.AccessgrantProto.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final Access[] VALUES = values();
+
+    public static Access valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private Access(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:provenance.marker.v1.Access)
+  }
+
+  public interface AccessGrantOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.marker.v1.AccessGrant)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    java.lang.String getAddress();
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    com.google.protobuf.ByteString
+        getAddressBytes();
+
+    /**
+     * <code>repeated .provenance.marker.v1.Access permissions = 2 [json_name = "permissions", (.gogoproto.castrepeated) = "AccessList"];</code>
+     * @return A list containing the permissions.
+     */
+    java.util.List<com.provenance.marker.v1.AccessgrantProto.Access> getPermissionsList();
+    /**
+     * <code>repeated .provenance.marker.v1.Access permissions = 2 [json_name = "permissions", (.gogoproto.castrepeated) = "AccessList"];</code>
+     * @return The count of permissions.
+     */
+    int getPermissionsCount();
+    /**
+     * <code>repeated .provenance.marker.v1.Access permissions = 2 [json_name = "permissions", (.gogoproto.castrepeated) = "AccessList"];</code>
+     * @param index The index of the element to return.
+     * @return The permissions at the given index.
+     */
+    com.provenance.marker.v1.AccessgrantProto.Access getPermissions(int index);
+    /**
+     * <code>repeated .provenance.marker.v1.Access permissions = 2 [json_name = "permissions", (.gogoproto.castrepeated) = "AccessList"];</code>
+     * @return A list containing the enum numeric values on the wire for permissions.
+     */
+    java.util.List<java.lang.Integer>
+    getPermissionsValueList();
+    /**
+     * <code>repeated .provenance.marker.v1.Access permissions = 2 [json_name = "permissions", (.gogoproto.castrepeated) = "AccessList"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of permissions at the given index.
+     */
+    int getPermissionsValue(int index);
+  }
+  /**
+   * <pre>
+   * AccessGrant associates a collection of permissions with an address for delegated marker account control.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.marker.v1.AccessGrant}
+   */
+  public static final class AccessGrant extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.marker.v1.AccessGrant)
+      AccessGrantOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AccessGrant.newBuilder() to construct.
+    private AccessGrant(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AccessGrant() {
+      address_ = "";
+      permissions_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AccessGrant();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.marker.v1.AccessgrantProto.internal_static_provenance_marker_v1_AccessGrant_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.marker.v1.AccessgrantProto.internal_static_provenance_marker_v1_AccessGrant_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.marker.v1.AccessgrantProto.AccessGrant.class, com.provenance.marker.v1.AccessgrantProto.AccessGrant.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object address_ = "";
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The address.
+     */
+    @java.lang.Override
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        address_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string address = 1 [json_name = "address"];</code>
+     * @return The bytes for address.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PERMISSIONS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<java.lang.Integer> permissions_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, com.provenance.marker.v1.AccessgrantProto.Access> permissions_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, com.provenance.marker.v1.AccessgrantProto.Access>() {
+              public com.provenance.marker.v1.AccessgrantProto.Access convert(java.lang.Integer from) {
+                com.provenance.marker.v1.AccessgrantProto.Access result = com.provenance.marker.v1.AccessgrantProto.Access.forNumber(from);
+                return result == null ? com.provenance.marker.v1.AccessgrantProto.Access.UNRECOGNIZED : result;
+              }
+            };
+    /**
+     * <code>repeated .provenance.marker.v1.Access permissions = 2 [json_name = "permissions", (.gogoproto.castrepeated) = "AccessList"];</code>
+     * @return A list containing the permissions.
+     */
+    @java.lang.Override
+    public java.util.List<com.provenance.marker.v1.AccessgrantProto.Access> getPermissionsList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, com.provenance.marker.v1.AccessgrantProto.Access>(permissions_, permissions_converter_);
+    }
+    /**
+     * <code>repeated .provenance.marker.v1.Access permissions = 2 [json_name = "permissions", (.gogoproto.castrepeated) = "AccessList"];</code>
+     * @return The count of permissions.
+     */
+    @java.lang.Override
+    public int getPermissionsCount() {
+      return permissions_.size();
+    }
+    /**
+     * <code>repeated .provenance.marker.v1.Access permissions = 2 [json_name = "permissions", (.gogoproto.castrepeated) = "AccessList"];</code>
+     * @param index The index of the element to return.
+     * @return The permissions at the given index.
+     */
+    @java.lang.Override
+    public com.provenance.marker.v1.AccessgrantProto.Access getPermissions(int index) {
+      return permissions_converter_.convert(permissions_.get(index));
+    }
+    /**
+     * <code>repeated .provenance.marker.v1.Access permissions = 2 [json_name = "permissions", (.gogoproto.castrepeated) = "AccessList"];</code>
+     * @return A list containing the enum numeric values on the wire for permissions.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+    getPermissionsValueList() {
+      return permissions_;
+    }
+    /**
+     * <code>repeated .provenance.marker.v1.Access permissions = 2 [json_name = "permissions", (.gogoproto.castrepeated) = "AccessList"];</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of permissions at the given index.
+     */
+    @java.lang.Override
+    public int getPermissionsValue(int index) {
+      return permissions_.get(index);
+    }
+    private int permissionsMemoizedSerializedSize;
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, address_);
+      }
+      if (getPermissionsList().size() > 0) {
+        output.writeUInt32NoTag(18);
+        output.writeUInt32NoTag(permissionsMemoizedSerializedSize);
+      }
+      for (int i = 0; i < permissions_.size(); i++) {
+        output.writeEnumNoTag(permissions_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, address_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < permissions_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(permissions_.get(i));
+        }
+        size += dataSize;
+        if (!getPermissionsList().isEmpty()) {  size += 1;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }permissionsMemoizedSerializedSize = dataSize;
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.marker.v1.AccessgrantProto.AccessGrant)) {
+        return super.equals(obj);
+      }
+      com.provenance.marker.v1.AccessgrantProto.AccessGrant other = (com.provenance.marker.v1.AccessgrantProto.AccessGrant) obj;
+
+      if (!getAddress()
+          .equals(other.getAddress())) return false;
+      if (!permissions_.equals(other.permissions_)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAddress().hashCode();
+      if (getPermissionsCount() > 0) {
+        hash = (37 * hash) + PERMISSIONS_FIELD_NUMBER;
+        hash = (53 * hash) + permissions_.hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.marker.v1.AccessgrantProto.AccessGrant parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.marker.v1.AccessgrantProto.AccessGrant parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.marker.v1.AccessgrantProto.AccessGrant parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.marker.v1.AccessgrantProto.AccessGrant parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.marker.v1.AccessgrantProto.AccessGrant parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.marker.v1.AccessgrantProto.AccessGrant parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.marker.v1.AccessgrantProto.AccessGrant parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.marker.v1.AccessgrantProto.AccessGrant parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.marker.v1.AccessgrantProto.AccessGrant parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.marker.v1.AccessgrantProto.AccessGrant parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.marker.v1.AccessgrantProto.AccessGrant parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.marker.v1.AccessgrantProto.AccessGrant parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.marker.v1.AccessgrantProto.AccessGrant prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * AccessGrant associates a collection of permissions with an address for delegated marker account control.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.marker.v1.AccessGrant}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.marker.v1.AccessGrant)
+        com.provenance.marker.v1.AccessgrantProto.AccessGrantOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.marker.v1.AccessgrantProto.internal_static_provenance_marker_v1_AccessGrant_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.marker.v1.AccessgrantProto.internal_static_provenance_marker_v1_AccessGrant_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.marker.v1.AccessgrantProto.AccessGrant.class, com.provenance.marker.v1.AccessgrantProto.AccessGrant.Builder.class);
+      }
+
+      // Construct using com.provenance.marker.v1.AccessgrantProto.AccessGrant.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        address_ = "";
+        permissions_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.marker.v1.AccessgrantProto.internal_static_provenance_marker_v1_AccessGrant_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.marker.v1.AccessgrantProto.AccessGrant getDefaultInstanceForType() {
+        return com.provenance.marker.v1.AccessgrantProto.AccessGrant.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.marker.v1.AccessgrantProto.AccessGrant build() {
+        com.provenance.marker.v1.AccessgrantProto.AccessGrant result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.marker.v1.AccessgrantProto.AccessGrant buildPartial() {
+        com.provenance.marker.v1.AccessgrantProto.AccessGrant result = new com.provenance.marker.v1.AccessgrantProto.AccessGrant(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.provenance.marker.v1.AccessgrantProto.AccessGrant result) {
+        if (((bitField0_ & 0x00000002) != 0)) {
+          permissions_ = java.util.Collections.unmodifiableList(permissions_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.permissions_ = permissions_;
+      }
+
+      private void buildPartial0(com.provenance.marker.v1.AccessgrantProto.AccessGrant result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.address_ = address_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.marker.v1.AccessgrantProto.AccessGrant) {
+          return mergeFrom((com.provenance.marker.v1.AccessgrantProto.AccessGrant)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.marker.v1.AccessgrantProto.AccessGrant other) {
+        if (other == com.provenance.marker.v1.AccessgrantProto.AccessGrant.getDefaultInstance()) return this;
+        if (!other.getAddress().isEmpty()) {
+          address_ = other.address_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.permissions_.isEmpty()) {
+          if (permissions_.isEmpty()) {
+            permissions_ = other.permissions_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensurePermissionsIsMutable();
+            permissions_.addAll(other.permissions_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                address_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 16: {
+                int tmpRaw = input.readEnum();
+                ensurePermissionsIsMutable();
+                permissions_.add(tmpRaw);
+                break;
+              } // case 16
+              case 18: {
+                int length = input.readRawVarint32();
+                int oldLimit = input.pushLimit(length);
+                while(input.getBytesUntilLimit() > 0) {
+                  int tmpRaw = input.readEnum();
+                  ensurePermissionsIsMutable();
+                  permissions_.add(tmpRaw);
+                }
+                input.popLimit(oldLimit);
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object address_ = "";
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The address.
+       */
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return The bytes for address.
+       */
+      public com.google.protobuf.ByteString
+          getAddressBytes() {
+        java.lang.Object ref = address_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          address_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAddress() {
+        address_ = getDefaultInstance().getAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string address = 1 [json_name = "address"];</code>
+       * @param value The bytes for address to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        address_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<java.lang.Integer> permissions_ =
+        java.util.Collections.emptyList();
+      private void ensurePermissionsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          permissions_ = new java.util.ArrayList<java.lang.Integer>(permissions_);
+          bitField0_ |= 0x00000002;
+        }
+      }
+      /**
+       * <code>repeated .provenance.marker.v1.Access permissions = 2 [json_name = "permissions", (.gogoproto.castrepeated) = "AccessList"];</code>
+       * @return A list containing the permissions.
+       */
+      public java.util.List<com.provenance.marker.v1.AccessgrantProto.Access> getPermissionsList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, com.provenance.marker.v1.AccessgrantProto.Access>(permissions_, permissions_converter_);
+      }
+      /**
+       * <code>repeated .provenance.marker.v1.Access permissions = 2 [json_name = "permissions", (.gogoproto.castrepeated) = "AccessList"];</code>
+       * @return The count of permissions.
+       */
+      public int getPermissionsCount() {
+        return permissions_.size();
+      }
+      /**
+       * <code>repeated .provenance.marker.v1.Access permissions = 2 [json_name = "permissions", (.gogoproto.castrepeated) = "AccessList"];</code>
+       * @param index The index of the element to return.
+       * @return The permissions at the given index.
+       */
+      public com.provenance.marker.v1.AccessgrantProto.Access getPermissions(int index) {
+        return permissions_converter_.convert(permissions_.get(index));
+      }
+      /**
+       * <code>repeated .provenance.marker.v1.Access permissions = 2 [json_name = "permissions", (.gogoproto.castrepeated) = "AccessList"];</code>
+       * @param index The index to set the value at.
+       * @param value The permissions to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPermissions(
+          int index, com.provenance.marker.v1.AccessgrantProto.Access value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePermissionsIsMutable();
+        permissions_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.marker.v1.Access permissions = 2 [json_name = "permissions", (.gogoproto.castrepeated) = "AccessList"];</code>
+       * @param value The permissions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPermissions(com.provenance.marker.v1.AccessgrantProto.Access value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePermissionsIsMutable();
+        permissions_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.marker.v1.Access permissions = 2 [json_name = "permissions", (.gogoproto.castrepeated) = "AccessList"];</code>
+       * @param values The permissions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPermissions(
+          java.lang.Iterable<? extends com.provenance.marker.v1.AccessgrantProto.Access> values) {
+        ensurePermissionsIsMutable();
+        for (com.provenance.marker.v1.AccessgrantProto.Access value : values) {
+          permissions_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.marker.v1.Access permissions = 2 [json_name = "permissions", (.gogoproto.castrepeated) = "AccessList"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPermissions() {
+        permissions_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.marker.v1.Access permissions = 2 [json_name = "permissions", (.gogoproto.castrepeated) = "AccessList"];</code>
+       * @return A list containing the enum numeric values on the wire for permissions.
+       */
+      public java.util.List<java.lang.Integer>
+      getPermissionsValueList() {
+        return java.util.Collections.unmodifiableList(permissions_);
+      }
+      /**
+       * <code>repeated .provenance.marker.v1.Access permissions = 2 [json_name = "permissions", (.gogoproto.castrepeated) = "AccessList"];</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of permissions at the given index.
+       */
+      public int getPermissionsValue(int index) {
+        return permissions_.get(index);
+      }
+      /**
+       * <code>repeated .provenance.marker.v1.Access permissions = 2 [json_name = "permissions", (.gogoproto.castrepeated) = "AccessList"];</code>
+       * @param index The index to set the value at.
+       * @param value The enum numeric value on the wire for permissions to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPermissionsValue(
+          int index, int value) {
+        ensurePermissionsIsMutable();
+        permissions_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.marker.v1.Access permissions = 2 [json_name = "permissions", (.gogoproto.castrepeated) = "AccessList"];</code>
+       * @param value The enum numeric value on the wire for permissions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addPermissionsValue(int value) {
+        ensurePermissionsIsMutable();
+        permissions_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated .provenance.marker.v1.Access permissions = 2 [json_name = "permissions", (.gogoproto.castrepeated) = "AccessList"];</code>
+       * @param values The enum numeric values on the wire for permissions to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllPermissionsValue(
+          java.lang.Iterable<java.lang.Integer> values) {
+        ensurePermissionsIsMutable();
+        for (int value : values) {
+          permissions_.add(value);
+        }
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.marker.v1.AccessGrant)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.marker.v1.AccessGrant)
+    private static final com.provenance.marker.v1.AccessgrantProto.AccessGrant DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.marker.v1.AccessgrantProto.AccessGrant();
+    }
+
+    public static com.provenance.marker.v1.AccessgrantProto.AccessGrant getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AccessGrant>
+        PARSER = new com.google.protobuf.AbstractParser<AccessGrant>() {
+      @java.lang.Override
+      public AccessGrant parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AccessGrant> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AccessGrant> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.marker.v1.AccessgrantProto.AccessGrant getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_marker_v1_AccessGrant_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_marker_v1_AccessGrant_fieldAccessorTable;
 
@@ -42,7 +1129,7 @@ public final class AccessgrantProto {
       "ESS_DELETE\020\005\032\n\212\235 \006Delete\022\033\n\014ACCESS_ADMIN" +
       "\020\006\032\t\212\235 \005Admin\022!\n\017ACCESS_TRANSFER\020\007\032\014\212\235 \010" +
       "TransferB\322\001\n\030com.provenance.marker.v1B\020A" +
-      "ccessgrantProtoP\001Z2github.com/provenance" +
+      "ccessgrantProtoP\000Z2github.com/provenance" +
       "-io/provenance/x/marker/types\242\002\003PMX\252\002\024Pr" +
       "ovenance.Marker.V1\312\002\024Provenance\\Marker\\V" +
       "1\342\002 Provenance\\Marker\\V1\\GPBMetadata\352\002\026P" +

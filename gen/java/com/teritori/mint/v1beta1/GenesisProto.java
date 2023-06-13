@@ -14,9 +14,1282 @@ public final class GenesisProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface GenesisStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:teritori.mint.v1beta1.GenesisState)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * minter is a space for holding current rewards information.
+     * </pre>
+     *
+     * <code>.teritori.mint.v1beta1.Minter minter = 1 [json_name = "minter", (.gogoproto.nullable) = false];</code>
+     * @return Whether the minter field is set.
+     */
+    boolean hasMinter();
+    /**
+     * <pre>
+     * minter is a space for holding current rewards information.
+     * </pre>
+     *
+     * <code>.teritori.mint.v1beta1.Minter minter = 1 [json_name = "minter", (.gogoproto.nullable) = false];</code>
+     * @return The minter.
+     */
+    com.teritori.mint.v1beta1.MintProto.Minter getMinter();
+    /**
+     * <pre>
+     * minter is a space for holding current rewards information.
+     * </pre>
+     *
+     * <code>.teritori.mint.v1beta1.Minter minter = 1 [json_name = "minter", (.gogoproto.nullable) = false];</code>
+     */
+    com.teritori.mint.v1beta1.MintProto.MinterOrBuilder getMinterOrBuilder();
+
+    /**
+     * <pre>
+     * params defines all the paramaters of the module.
+     * </pre>
+     *
+     * <code>.teritori.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * params defines all the paramaters of the module.
+     * </pre>
+     *
+     * <code>.teritori.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.teritori.mint.v1beta1.MintProto.Params getParams();
+    /**
+     * <pre>
+     * params defines all the paramaters of the module.
+     * </pre>
+     *
+     * <code>.teritori.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.teritori.mint.v1beta1.MintProto.ParamsOrBuilder getParamsOrBuilder();
+
+    /**
+     * <pre>
+     * required values for team rewards
+     * </pre>
+     *
+     * <code>.teritori.mint.v1beta1.TeamVestingMonthInfo month_info = 3 [json_name = "monthInfo", (.gogoproto.nullable) = false];</code>
+     * @return Whether the monthInfo field is set.
+     */
+    boolean hasMonthInfo();
+    /**
+     * <pre>
+     * required values for team rewards
+     * </pre>
+     *
+     * <code>.teritori.mint.v1beta1.TeamVestingMonthInfo month_info = 3 [json_name = "monthInfo", (.gogoproto.nullable) = false];</code>
+     * @return The monthInfo.
+     */
+    com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo getMonthInfo();
+    /**
+     * <pre>
+     * required values for team rewards
+     * </pre>
+     *
+     * <code>.teritori.mint.v1beta1.TeamVestingMonthInfo month_info = 3 [json_name = "monthInfo", (.gogoproto.nullable) = false];</code>
+     */
+    com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfoOrBuilder getMonthInfoOrBuilder();
+
+    /**
+     * <pre>
+     * current reduction period start block
+     * </pre>
+     *
+     * <code>int64 reduction_started_block = 4 [json_name = "reductionStartedBlock"];</code>
+     * @return The reductionStartedBlock.
+     */
+    long getReductionStartedBlock();
+  }
+  /**
+   * <pre>
+   * GenesisState defines the mint module's genesis state.
+   * </pre>
+   *
+   * Protobuf type {@code teritori.mint.v1beta1.GenesisState}
+   */
+  public static final class GenesisState extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:teritori.mint.v1beta1.GenesisState)
+      GenesisStateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GenesisState.newBuilder() to construct.
+    private GenesisState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GenesisState() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GenesisState();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.teritori.mint.v1beta1.GenesisProto.internal_static_teritori_mint_v1beta1_GenesisState_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.teritori.mint.v1beta1.GenesisProto.internal_static_teritori_mint_v1beta1_GenesisState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.teritori.mint.v1beta1.GenesisProto.GenesisState.class, com.teritori.mint.v1beta1.GenesisProto.GenesisState.Builder.class);
+    }
+
+    public static final int MINTER_FIELD_NUMBER = 1;
+    private com.teritori.mint.v1beta1.MintProto.Minter minter_;
+    /**
+     * <pre>
+     * minter is a space for holding current rewards information.
+     * </pre>
+     *
+     * <code>.teritori.mint.v1beta1.Minter minter = 1 [json_name = "minter", (.gogoproto.nullable) = false];</code>
+     * @return Whether the minter field is set.
+     */
+    @java.lang.Override
+    public boolean hasMinter() {
+      return minter_ != null;
+    }
+    /**
+     * <pre>
+     * minter is a space for holding current rewards information.
+     * </pre>
+     *
+     * <code>.teritori.mint.v1beta1.Minter minter = 1 [json_name = "minter", (.gogoproto.nullable) = false];</code>
+     * @return The minter.
+     */
+    @java.lang.Override
+    public com.teritori.mint.v1beta1.MintProto.Minter getMinter() {
+      return minter_ == null ? com.teritori.mint.v1beta1.MintProto.Minter.getDefaultInstance() : minter_;
+    }
+    /**
+     * <pre>
+     * minter is a space for holding current rewards information.
+     * </pre>
+     *
+     * <code>.teritori.mint.v1beta1.Minter minter = 1 [json_name = "minter", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.teritori.mint.v1beta1.MintProto.MinterOrBuilder getMinterOrBuilder() {
+      return minter_ == null ? com.teritori.mint.v1beta1.MintProto.Minter.getDefaultInstance() : minter_;
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 2;
+    private com.teritori.mint.v1beta1.MintProto.Params params_;
+    /**
+     * <pre>
+     * params defines all the paramaters of the module.
+     * </pre>
+     *
+     * <code>.teritori.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * params defines all the paramaters of the module.
+     * </pre>
+     *
+     * <code>.teritori.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.teritori.mint.v1beta1.MintProto.Params getParams() {
+      return params_ == null ? com.teritori.mint.v1beta1.MintProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * params defines all the paramaters of the module.
+     * </pre>
+     *
+     * <code>.teritori.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.teritori.mint.v1beta1.MintProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.teritori.mint.v1beta1.MintProto.Params.getDefaultInstance() : params_;
+    }
+
+    public static final int MONTH_INFO_FIELD_NUMBER = 3;
+    private com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo monthInfo_;
+    /**
+     * <pre>
+     * required values for team rewards
+     * </pre>
+     *
+     * <code>.teritori.mint.v1beta1.TeamVestingMonthInfo month_info = 3 [json_name = "monthInfo", (.gogoproto.nullable) = false];</code>
+     * @return Whether the monthInfo field is set.
+     */
+    @java.lang.Override
+    public boolean hasMonthInfo() {
+      return monthInfo_ != null;
+    }
+    /**
+     * <pre>
+     * required values for team rewards
+     * </pre>
+     *
+     * <code>.teritori.mint.v1beta1.TeamVestingMonthInfo month_info = 3 [json_name = "monthInfo", (.gogoproto.nullable) = false];</code>
+     * @return The monthInfo.
+     */
+    @java.lang.Override
+    public com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo getMonthInfo() {
+      return monthInfo_ == null ? com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo.getDefaultInstance() : monthInfo_;
+    }
+    /**
+     * <pre>
+     * required values for team rewards
+     * </pre>
+     *
+     * <code>.teritori.mint.v1beta1.TeamVestingMonthInfo month_info = 3 [json_name = "monthInfo", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfoOrBuilder getMonthInfoOrBuilder() {
+      return monthInfo_ == null ? com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo.getDefaultInstance() : monthInfo_;
+    }
+
+    public static final int REDUCTION_STARTED_BLOCK_FIELD_NUMBER = 4;
+    private long reductionStartedBlock_ = 0L;
+    /**
+     * <pre>
+     * current reduction period start block
+     * </pre>
+     *
+     * <code>int64 reduction_started_block = 4 [json_name = "reductionStartedBlock"];</code>
+     * @return The reductionStartedBlock.
+     */
+    @java.lang.Override
+    public long getReductionStartedBlock() {
+      return reductionStartedBlock_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (minter_ != null) {
+        output.writeMessage(1, getMinter());
+      }
+      if (params_ != null) {
+        output.writeMessage(2, getParams());
+      }
+      if (monthInfo_ != null) {
+        output.writeMessage(3, getMonthInfo());
+      }
+      if (reductionStartedBlock_ != 0L) {
+        output.writeInt64(4, reductionStartedBlock_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (minter_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMinter());
+      }
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getParams());
+      }
+      if (monthInfo_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getMonthInfo());
+      }
+      if (reductionStartedBlock_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, reductionStartedBlock_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.teritori.mint.v1beta1.GenesisProto.GenesisState)) {
+        return super.equals(obj);
+      }
+      com.teritori.mint.v1beta1.GenesisProto.GenesisState other = (com.teritori.mint.v1beta1.GenesisProto.GenesisState) obj;
+
+      if (hasMinter() != other.hasMinter()) return false;
+      if (hasMinter()) {
+        if (!getMinter()
+            .equals(other.getMinter())) return false;
+      }
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (hasMonthInfo() != other.hasMonthInfo()) return false;
+      if (hasMonthInfo()) {
+        if (!getMonthInfo()
+            .equals(other.getMonthInfo())) return false;
+      }
+      if (getReductionStartedBlock()
+          != other.getReductionStartedBlock()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMinter()) {
+        hash = (37 * hash) + MINTER_FIELD_NUMBER;
+        hash = (53 * hash) + getMinter().hashCode();
+      }
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      if (hasMonthInfo()) {
+        hash = (37 * hash) + MONTH_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getMonthInfo().hashCode();
+      }
+      hash = (37 * hash) + REDUCTION_STARTED_BLOCK_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getReductionStartedBlock());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.teritori.mint.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.mint.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.mint.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.mint.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.mint.v1beta1.GenesisProto.GenesisState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.teritori.mint.v1beta1.GenesisProto.GenesisState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.teritori.mint.v1beta1.GenesisProto.GenesisState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teritori.mint.v1beta1.GenesisProto.GenesisState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.teritori.mint.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.teritori.mint.v1beta1.GenesisProto.GenesisState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.teritori.mint.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.teritori.mint.v1beta1.GenesisProto.GenesisState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.teritori.mint.v1beta1.GenesisProto.GenesisState prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * GenesisState defines the mint module's genesis state.
+     * </pre>
+     *
+     * Protobuf type {@code teritori.mint.v1beta1.GenesisState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:teritori.mint.v1beta1.GenesisState)
+        com.teritori.mint.v1beta1.GenesisProto.GenesisStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.teritori.mint.v1beta1.GenesisProto.internal_static_teritori_mint_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.teritori.mint.v1beta1.GenesisProto.internal_static_teritori_mint_v1beta1_GenesisState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.teritori.mint.v1beta1.GenesisProto.GenesisState.class, com.teritori.mint.v1beta1.GenesisProto.GenesisState.Builder.class);
+      }
+
+      // Construct using com.teritori.mint.v1beta1.GenesisProto.GenesisState.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        minter_ = null;
+        if (minterBuilder_ != null) {
+          minterBuilder_.dispose();
+          minterBuilder_ = null;
+        }
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        monthInfo_ = null;
+        if (monthInfoBuilder_ != null) {
+          monthInfoBuilder_.dispose();
+          monthInfoBuilder_ = null;
+        }
+        reductionStartedBlock_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.teritori.mint.v1beta1.GenesisProto.internal_static_teritori_mint_v1beta1_GenesisState_descriptor;
+      }
+
+      @java.lang.Override
+      public com.teritori.mint.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+        return com.teritori.mint.v1beta1.GenesisProto.GenesisState.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.teritori.mint.v1beta1.GenesisProto.GenesisState build() {
+        com.teritori.mint.v1beta1.GenesisProto.GenesisState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.teritori.mint.v1beta1.GenesisProto.GenesisState buildPartial() {
+        com.teritori.mint.v1beta1.GenesisProto.GenesisState result = new com.teritori.mint.v1beta1.GenesisProto.GenesisState(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.teritori.mint.v1beta1.GenesisProto.GenesisState result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.minter_ = minterBuilder_ == null
+              ? minter_
+              : minterBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.monthInfo_ = monthInfoBuilder_ == null
+              ? monthInfo_
+              : monthInfoBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.reductionStartedBlock_ = reductionStartedBlock_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.teritori.mint.v1beta1.GenesisProto.GenesisState) {
+          return mergeFrom((com.teritori.mint.v1beta1.GenesisProto.GenesisState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.teritori.mint.v1beta1.GenesisProto.GenesisState other) {
+        if (other == com.teritori.mint.v1beta1.GenesisProto.GenesisState.getDefaultInstance()) return this;
+        if (other.hasMinter()) {
+          mergeMinter(other.getMinter());
+        }
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        if (other.hasMonthInfo()) {
+          mergeMonthInfo(other.getMonthInfo());
+        }
+        if (other.getReductionStartedBlock() != 0L) {
+          setReductionStartedBlock(other.getReductionStartedBlock());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getMinterFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getMonthInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 32: {
+                reductionStartedBlock_ = input.readInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.teritori.mint.v1beta1.MintProto.Minter minter_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.teritori.mint.v1beta1.MintProto.Minter, com.teritori.mint.v1beta1.MintProto.Minter.Builder, com.teritori.mint.v1beta1.MintProto.MinterOrBuilder> minterBuilder_;
+      /**
+       * <pre>
+       * minter is a space for holding current rewards information.
+       * </pre>
+       *
+       * <code>.teritori.mint.v1beta1.Minter minter = 1 [json_name = "minter", (.gogoproto.nullable) = false];</code>
+       * @return Whether the minter field is set.
+       */
+      public boolean hasMinter() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * minter is a space for holding current rewards information.
+       * </pre>
+       *
+       * <code>.teritori.mint.v1beta1.Minter minter = 1 [json_name = "minter", (.gogoproto.nullable) = false];</code>
+       * @return The minter.
+       */
+      public com.teritori.mint.v1beta1.MintProto.Minter getMinter() {
+        if (minterBuilder_ == null) {
+          return minter_ == null ? com.teritori.mint.v1beta1.MintProto.Minter.getDefaultInstance() : minter_;
+        } else {
+          return minterBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * minter is a space for holding current rewards information.
+       * </pre>
+       *
+       * <code>.teritori.mint.v1beta1.Minter minter = 1 [json_name = "minter", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMinter(com.teritori.mint.v1beta1.MintProto.Minter value) {
+        if (minterBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          minter_ = value;
+        } else {
+          minterBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * minter is a space for holding current rewards information.
+       * </pre>
+       *
+       * <code>.teritori.mint.v1beta1.Minter minter = 1 [json_name = "minter", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMinter(
+          com.teritori.mint.v1beta1.MintProto.Minter.Builder builderForValue) {
+        if (minterBuilder_ == null) {
+          minter_ = builderForValue.build();
+        } else {
+          minterBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * minter is a space for holding current rewards information.
+       * </pre>
+       *
+       * <code>.teritori.mint.v1beta1.Minter minter = 1 [json_name = "minter", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeMinter(com.teritori.mint.v1beta1.MintProto.Minter value) {
+        if (minterBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            minter_ != null &&
+            minter_ != com.teritori.mint.v1beta1.MintProto.Minter.getDefaultInstance()) {
+            getMinterBuilder().mergeFrom(value);
+          } else {
+            minter_ = value;
+          }
+        } else {
+          minterBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * minter is a space for holding current rewards information.
+       * </pre>
+       *
+       * <code>.teritori.mint.v1beta1.Minter minter = 1 [json_name = "minter", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMinter() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        minter_ = null;
+        if (minterBuilder_ != null) {
+          minterBuilder_.dispose();
+          minterBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * minter is a space for holding current rewards information.
+       * </pre>
+       *
+       * <code>.teritori.mint.v1beta1.Minter minter = 1 [json_name = "minter", (.gogoproto.nullable) = false];</code>
+       */
+      public com.teritori.mint.v1beta1.MintProto.Minter.Builder getMinterBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getMinterFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * minter is a space for holding current rewards information.
+       * </pre>
+       *
+       * <code>.teritori.mint.v1beta1.Minter minter = 1 [json_name = "minter", (.gogoproto.nullable) = false];</code>
+       */
+      public com.teritori.mint.v1beta1.MintProto.MinterOrBuilder getMinterOrBuilder() {
+        if (minterBuilder_ != null) {
+          return minterBuilder_.getMessageOrBuilder();
+        } else {
+          return minter_ == null ?
+              com.teritori.mint.v1beta1.MintProto.Minter.getDefaultInstance() : minter_;
+        }
+      }
+      /**
+       * <pre>
+       * minter is a space for holding current rewards information.
+       * </pre>
+       *
+       * <code>.teritori.mint.v1beta1.Minter minter = 1 [json_name = "minter", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.teritori.mint.v1beta1.MintProto.Minter, com.teritori.mint.v1beta1.MintProto.Minter.Builder, com.teritori.mint.v1beta1.MintProto.MinterOrBuilder> 
+          getMinterFieldBuilder() {
+        if (minterBuilder_ == null) {
+          minterBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.teritori.mint.v1beta1.MintProto.Minter, com.teritori.mint.v1beta1.MintProto.Minter.Builder, com.teritori.mint.v1beta1.MintProto.MinterOrBuilder>(
+                  getMinter(),
+                  getParentForChildren(),
+                  isClean());
+          minter_ = null;
+        }
+        return minterBuilder_;
+      }
+
+      private com.teritori.mint.v1beta1.MintProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.teritori.mint.v1beta1.MintProto.Params, com.teritori.mint.v1beta1.MintProto.Params.Builder, com.teritori.mint.v1beta1.MintProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * params defines all the paramaters of the module.
+       * </pre>
+       *
+       * <code>.teritori.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * params defines all the paramaters of the module.
+       * </pre>
+       *
+       * <code>.teritori.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.teritori.mint.v1beta1.MintProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.teritori.mint.v1beta1.MintProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the paramaters of the module.
+       * </pre>
+       *
+       * <code>.teritori.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.teritori.mint.v1beta1.MintProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the paramaters of the module.
+       * </pre>
+       *
+       * <code>.teritori.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.teritori.mint.v1beta1.MintProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the paramaters of the module.
+       * </pre>
+       *
+       * <code>.teritori.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.teritori.mint.v1beta1.MintProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            params_ != null &&
+            params_ != com.teritori.mint.v1beta1.MintProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the paramaters of the module.
+       * </pre>
+       *
+       * <code>.teritori.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * params defines all the paramaters of the module.
+       * </pre>
+       *
+       * <code>.teritori.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.teritori.mint.v1beta1.MintProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * params defines all the paramaters of the module.
+       * </pre>
+       *
+       * <code>.teritori.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.teritori.mint.v1beta1.MintProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.teritori.mint.v1beta1.MintProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * params defines all the paramaters of the module.
+       * </pre>
+       *
+       * <code>.teritori.mint.v1beta1.Params params = 2 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.teritori.mint.v1beta1.MintProto.Params, com.teritori.mint.v1beta1.MintProto.Params.Builder, com.teritori.mint.v1beta1.MintProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.teritori.mint.v1beta1.MintProto.Params, com.teritori.mint.v1beta1.MintProto.Params.Builder, com.teritori.mint.v1beta1.MintProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+
+      private com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo monthInfo_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo, com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo.Builder, com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfoOrBuilder> monthInfoBuilder_;
+      /**
+       * <pre>
+       * required values for team rewards
+       * </pre>
+       *
+       * <code>.teritori.mint.v1beta1.TeamVestingMonthInfo month_info = 3 [json_name = "monthInfo", (.gogoproto.nullable) = false];</code>
+       * @return Whether the monthInfo field is set.
+       */
+      public boolean hasMonthInfo() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * required values for team rewards
+       * </pre>
+       *
+       * <code>.teritori.mint.v1beta1.TeamVestingMonthInfo month_info = 3 [json_name = "monthInfo", (.gogoproto.nullable) = false];</code>
+       * @return The monthInfo.
+       */
+      public com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo getMonthInfo() {
+        if (monthInfoBuilder_ == null) {
+          return monthInfo_ == null ? com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo.getDefaultInstance() : monthInfo_;
+        } else {
+          return monthInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * required values for team rewards
+       * </pre>
+       *
+       * <code>.teritori.mint.v1beta1.TeamVestingMonthInfo month_info = 3 [json_name = "monthInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMonthInfo(com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo value) {
+        if (monthInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          monthInfo_ = value;
+        } else {
+          monthInfoBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * required values for team rewards
+       * </pre>
+       *
+       * <code>.teritori.mint.v1beta1.TeamVestingMonthInfo month_info = 3 [json_name = "monthInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMonthInfo(
+          com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo.Builder builderForValue) {
+        if (monthInfoBuilder_ == null) {
+          monthInfo_ = builderForValue.build();
+        } else {
+          monthInfoBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * required values for team rewards
+       * </pre>
+       *
+       * <code>.teritori.mint.v1beta1.TeamVestingMonthInfo month_info = 3 [json_name = "monthInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeMonthInfo(com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo value) {
+        if (monthInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            monthInfo_ != null &&
+            monthInfo_ != com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo.getDefaultInstance()) {
+            getMonthInfoBuilder().mergeFrom(value);
+          } else {
+            monthInfo_ = value;
+          }
+        } else {
+          monthInfoBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * required values for team rewards
+       * </pre>
+       *
+       * <code>.teritori.mint.v1beta1.TeamVestingMonthInfo month_info = 3 [json_name = "monthInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMonthInfo() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        monthInfo_ = null;
+        if (monthInfoBuilder_ != null) {
+          monthInfoBuilder_.dispose();
+          monthInfoBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * required values for team rewards
+       * </pre>
+       *
+       * <code>.teritori.mint.v1beta1.TeamVestingMonthInfo month_info = 3 [json_name = "monthInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo.Builder getMonthInfoBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getMonthInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * required values for team rewards
+       * </pre>
+       *
+       * <code>.teritori.mint.v1beta1.TeamVestingMonthInfo month_info = 3 [json_name = "monthInfo", (.gogoproto.nullable) = false];</code>
+       */
+      public com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfoOrBuilder getMonthInfoOrBuilder() {
+        if (monthInfoBuilder_ != null) {
+          return monthInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return monthInfo_ == null ?
+              com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo.getDefaultInstance() : monthInfo_;
+        }
+      }
+      /**
+       * <pre>
+       * required values for team rewards
+       * </pre>
+       *
+       * <code>.teritori.mint.v1beta1.TeamVestingMonthInfo month_info = 3 [json_name = "monthInfo", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo, com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo.Builder, com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfoOrBuilder> 
+          getMonthInfoFieldBuilder() {
+        if (monthInfoBuilder_ == null) {
+          monthInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo, com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfo.Builder, com.teritori.mint.v1beta1.MintProto.TeamVestingMonthInfoOrBuilder>(
+                  getMonthInfo(),
+                  getParentForChildren(),
+                  isClean());
+          monthInfo_ = null;
+        }
+        return monthInfoBuilder_;
+      }
+
+      private long reductionStartedBlock_ ;
+      /**
+       * <pre>
+       * current reduction period start block
+       * </pre>
+       *
+       * <code>int64 reduction_started_block = 4 [json_name = "reductionStartedBlock"];</code>
+       * @return The reductionStartedBlock.
+       */
+      @java.lang.Override
+      public long getReductionStartedBlock() {
+        return reductionStartedBlock_;
+      }
+      /**
+       * <pre>
+       * current reduction period start block
+       * </pre>
+       *
+       * <code>int64 reduction_started_block = 4 [json_name = "reductionStartedBlock"];</code>
+       * @param value The reductionStartedBlock to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReductionStartedBlock(long value) {
+
+        reductionStartedBlock_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * current reduction period start block
+       * </pre>
+       *
+       * <code>int64 reduction_started_block = 4 [json_name = "reductionStartedBlock"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReductionStartedBlock() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        reductionStartedBlock_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:teritori.mint.v1beta1.GenesisState)
+    }
+
+    // @@protoc_insertion_point(class_scope:teritori.mint.v1beta1.GenesisState)
+    private static final com.teritori.mint.v1beta1.GenesisProto.GenesisState DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.teritori.mint.v1beta1.GenesisProto.GenesisState();
+    }
+
+    public static com.teritori.mint.v1beta1.GenesisProto.GenesisState getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GenesisState>
+        PARSER = new com.google.protobuf.AbstractParser<GenesisState>() {
+      @java.lang.Override
+      public GenesisState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<GenesisState> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GenesisState> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.teritori.mint.v1beta1.GenesisProto.GenesisState getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_teritori_mint_v1beta1_GenesisState_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_teritori_mint_v1beta1_GenesisState_fieldAccessorTable;
 
@@ -37,13 +1310,13 @@ public final class GenesisProto {
       "sB\004\310\336\037\000R\006params\022P\n\nmonth_info\030\003 \001(\0132+.te" +
       "ritori.mint.v1beta1.TeamVestingMonthInfo" +
       "B\004\310\336\037\000R\tmonthInfo\0226\n\027reduction_started_b" +
-      "lock\030\004 \001(\003R\025reductionStartedBlockB\320\001\n\031co" +
-      "m.teritori.mint.v1beta1B\014GenesisProtoP\001Z" +
-      "/github.com/TERITORI/teritori-chain/x/mi" +
-      "nt/types\242\002\003TMX\252\002\025Teritori.Mint.V1beta1\312\002" +
-      "\025Teritori\\Mint\\V1beta1\342\002!Teritori\\Mint\\V" +
-      "1beta1\\GPBMetadata\352\002\027Teritori::Mint::V1b" +
-      "eta1b\006proto3"
+      "lock\030\004 \001(\003R\025reductionStartedBlockB\316\001\n\031co" +
+      "m.teritori.mint.v1beta1B\014GenesisProtoZ/g" +
+      "ithub.com/TERITORI/teritori-chain/x/mint" +
+      "/types\242\002\003TMX\252\002\025Teritori.Mint.V1beta1\312\002\025T" +
+      "eritori\\Mint\\V1beta1\342\002!Teritori\\Mint\\V1b" +
+      "eta1\\GPBMetadata\352\002\027Teritori::Mint::V1bet" +
+      "a1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

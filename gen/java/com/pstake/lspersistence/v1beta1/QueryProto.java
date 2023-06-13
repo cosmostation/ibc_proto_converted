@@ -14,34 +14,3255 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryParamsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.lspersistence.v1beta1.QueryParamsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryParamsRequest is the request type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code pstake.lspersistence.v1beta1.QueryParamsRequest}
+   */
+  public static final class QueryParamsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.lspersistence.v1beta1.QueryParamsRequest)
+      QueryParamsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsRequest.newBuilder() to construct.
+    private QueryParamsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.lspersistence.v1beta1.QueryProto.internal_static_pstake_lspersistence_v1beta1_QueryParamsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.lspersistence.v1beta1.QueryProto.internal_static_pstake_lspersistence_v1beta1_QueryParamsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsRequest.class, com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsRequest)) {
+        return super.equals(obj);
+      }
+      com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsRequest other = (com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsRequest is the request type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code pstake.lspersistence.v1beta1.QueryParamsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.lspersistence.v1beta1.QueryParamsRequest)
+        com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.lspersistence.v1beta1.QueryProto.internal_static_pstake_lspersistence_v1beta1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.lspersistence.v1beta1.QueryProto.internal_static_pstake_lspersistence_v1beta1_QueryParamsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsRequest.class, com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsRequest.Builder.class);
+      }
+
+      // Construct using com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.lspersistence.v1beta1.QueryProto.internal_static_pstake_lspersistence_v1beta1_QueryParamsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+        return com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsRequest build() {
+        com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsRequest buildPartial() {
+        com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsRequest result = new com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsRequest) {
+          return mergeFrom((com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsRequest other) {
+        if (other == com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.lspersistence.v1beta1.QueryParamsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.lspersistence.v1beta1.QueryParamsRequest)
+    private static final com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsRequest();
+    }
+
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsRequest>() {
+      @java.lang.Override
+      public QueryParamsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryParamsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.lspersistence.v1beta1.QueryParamsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.pstake.lspersistence.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <code>.pstake.lspersistence.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    com.pstake.lspersistence.v1beta1.LiquidstakingProto.Params getParams();
+    /**
+     * <code>.pstake.lspersistence.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    com.pstake.lspersistence.v1beta1.LiquidstakingProto.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryParamsResponse is the response type for the Query/Params RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code pstake.lspersistence.v1beta1.QueryParamsResponse}
+   */
+  public static final class QueryParamsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.lspersistence.v1beta1.QueryParamsResponse)
+      QueryParamsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryParamsResponse.newBuilder() to construct.
+    private QueryParamsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryParamsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryParamsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.lspersistence.v1beta1.QueryProto.internal_static_pstake_lspersistence_v1beta1_QueryParamsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.lspersistence.v1beta1.QueryProto.internal_static_pstake_lspersistence_v1beta1_QueryParamsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsResponse.class, com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private com.pstake.lspersistence.v1beta1.LiquidstakingProto.Params params_;
+    /**
+     * <code>.pstake.lspersistence.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>.pstake.lspersistence.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public com.pstake.lspersistence.v1beta1.LiquidstakingProto.Params getParams() {
+      return params_ == null ? com.pstake.lspersistence.v1beta1.LiquidstakingProto.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>.pstake.lspersistence.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.pstake.lspersistence.v1beta1.LiquidstakingProto.ParamsOrBuilder getParamsOrBuilder() {
+      return params_ == null ? com.pstake.lspersistence.v1beta1.LiquidstakingProto.Params.getDefaultInstance() : params_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (params_ != null) {
+        output.writeMessage(1, getParams());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getParams());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsResponse)) {
+        return super.equals(obj);
+      }
+      com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsResponse other = (com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsResponse) obj;
+
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryParamsResponse is the response type for the Query/Params RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code pstake.lspersistence.v1beta1.QueryParamsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.lspersistence.v1beta1.QueryParamsResponse)
+        com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.lspersistence.v1beta1.QueryProto.internal_static_pstake_lspersistence_v1beta1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.lspersistence.v1beta1.QueryProto.internal_static_pstake_lspersistence_v1beta1_QueryParamsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsResponse.class, com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsResponse.Builder.class);
+      }
+
+      // Construct using com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.lspersistence.v1beta1.QueryProto.internal_static_pstake_lspersistence_v1beta1_QueryParamsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+        return com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsResponse build() {
+        com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsResponse buildPartial() {
+        com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsResponse result = new com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.params_ = paramsBuilder_ == null
+              ? params_
+              : paramsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsResponse) {
+          return mergeFrom((com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsResponse other) {
+        if (other == com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsResponse.getDefaultInstance()) return this;
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getParamsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.pstake.lspersistence.v1beta1.LiquidstakingProto.Params params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.pstake.lspersistence.v1beta1.LiquidstakingProto.Params, com.pstake.lspersistence.v1beta1.LiquidstakingProto.Params.Builder, com.pstake.lspersistence.v1beta1.LiquidstakingProto.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>.pstake.lspersistence.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.pstake.lspersistence.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       * @return The params.
+       */
+      public com.pstake.lspersistence.v1beta1.LiquidstakingProto.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.pstake.lspersistence.v1beta1.LiquidstakingProto.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.pstake.lspersistence.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(com.pstake.lspersistence.v1beta1.LiquidstakingProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lspersistence.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setParams(
+          com.pstake.lspersistence.v1beta1.LiquidstakingProto.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lspersistence.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeParams(com.pstake.lspersistence.v1beta1.LiquidstakingProto.Params value) {
+        if (paramsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            params_ != null &&
+            params_ != com.pstake.lspersistence.v1beta1.LiquidstakingProto.Params.getDefaultInstance()) {
+            getParamsBuilder().mergeFrom(value);
+          } else {
+            params_ = value;
+          }
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lspersistence.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearParams() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        params_ = null;
+        if (paramsBuilder_ != null) {
+          paramsBuilder_.dispose();
+          paramsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lspersistence.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lspersistence.v1beta1.LiquidstakingProto.Params.Builder getParamsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.pstake.lspersistence.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lspersistence.v1beta1.LiquidstakingProto.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.pstake.lspersistence.v1beta1.LiquidstakingProto.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>.pstake.lspersistence.v1beta1.Params params = 1 [json_name = "params", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.pstake.lspersistence.v1beta1.LiquidstakingProto.Params, com.pstake.lspersistence.v1beta1.LiquidstakingProto.Params.Builder, com.pstake.lspersistence.v1beta1.LiquidstakingProto.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.pstake.lspersistence.v1beta1.LiquidstakingProto.Params, com.pstake.lspersistence.v1beta1.LiquidstakingProto.Params.Builder, com.pstake.lspersistence.v1beta1.LiquidstakingProto.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.lspersistence.v1beta1.QueryParamsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.lspersistence.v1beta1.QueryParamsResponse)
+    private static final com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsResponse();
+    }
+
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryParamsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryParamsResponse>() {
+      @java.lang.Override
+      public QueryParamsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryParamsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryParamsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.lspersistence.v1beta1.QueryProto.QueryParamsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryLiquidValidatorsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.lspersistence.v1beta1.QueryLiquidValidatorsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryLiquidValidatorsRequest is the request type for the Query/LiquidValidators RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code pstake.lspersistence.v1beta1.QueryLiquidValidatorsRequest}
+   */
+  public static final class QueryLiquidValidatorsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.lspersistence.v1beta1.QueryLiquidValidatorsRequest)
+      QueryLiquidValidatorsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryLiquidValidatorsRequest.newBuilder() to construct.
+    private QueryLiquidValidatorsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryLiquidValidatorsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryLiquidValidatorsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.lspersistence.v1beta1.QueryProto.internal_static_pstake_lspersistence_v1beta1_QueryLiquidValidatorsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.lspersistence.v1beta1.QueryProto.internal_static_pstake_lspersistence_v1beta1_QueryLiquidValidatorsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsRequest.class, com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsRequest)) {
+        return super.equals(obj);
+      }
+      com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsRequest other = (com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryLiquidValidatorsRequest is the request type for the Query/LiquidValidators RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code pstake.lspersistence.v1beta1.QueryLiquidValidatorsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.lspersistence.v1beta1.QueryLiquidValidatorsRequest)
+        com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.lspersistence.v1beta1.QueryProto.internal_static_pstake_lspersistence_v1beta1_QueryLiquidValidatorsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.lspersistence.v1beta1.QueryProto.internal_static_pstake_lspersistence_v1beta1_QueryLiquidValidatorsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsRequest.class, com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsRequest.Builder.class);
+      }
+
+      // Construct using com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.lspersistence.v1beta1.QueryProto.internal_static_pstake_lspersistence_v1beta1_QueryLiquidValidatorsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsRequest getDefaultInstanceForType() {
+        return com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsRequest build() {
+        com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsRequest buildPartial() {
+        com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsRequest result = new com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsRequest) {
+          return mergeFrom((com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsRequest other) {
+        if (other == com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.lspersistence.v1beta1.QueryLiquidValidatorsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.lspersistence.v1beta1.QueryLiquidValidatorsRequest)
+    private static final com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsRequest();
+    }
+
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryLiquidValidatorsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryLiquidValidatorsRequest>() {
+      @java.lang.Override
+      public QueryLiquidValidatorsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryLiquidValidatorsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryLiquidValidatorsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryLiquidValidatorsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.lspersistence.v1beta1.QueryLiquidValidatorsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .pstake.lspersistence.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorState> 
+        getLiquidValidatorsList();
+    /**
+     * <code>repeated .pstake.lspersistence.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+     */
+    com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorState getLiquidValidators(int index);
+    /**
+     * <code>repeated .pstake.lspersistence.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+     */
+    int getLiquidValidatorsCount();
+    /**
+     * <code>repeated .pstake.lspersistence.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorStateOrBuilder> 
+        getLiquidValidatorsOrBuilderList();
+    /**
+     * <code>repeated .pstake.lspersistence.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+     */
+    com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorStateOrBuilder getLiquidValidatorsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * QueryLiquidValidatorsResponse is the response type for the Query/LiquidValidators RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code pstake.lspersistence.v1beta1.QueryLiquidValidatorsResponse}
+   */
+  public static final class QueryLiquidValidatorsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.lspersistence.v1beta1.QueryLiquidValidatorsResponse)
+      QueryLiquidValidatorsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryLiquidValidatorsResponse.newBuilder() to construct.
+    private QueryLiquidValidatorsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryLiquidValidatorsResponse() {
+      liquidValidators_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryLiquidValidatorsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.lspersistence.v1beta1.QueryProto.internal_static_pstake_lspersistence_v1beta1_QueryLiquidValidatorsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.lspersistence.v1beta1.QueryProto.internal_static_pstake_lspersistence_v1beta1_QueryLiquidValidatorsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponse.class, com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponse.Builder.class);
+    }
+
+    public static final int LIQUID_VALIDATORS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorState> liquidValidators_;
+    /**
+     * <code>repeated .pstake.lspersistence.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorState> getLiquidValidatorsList() {
+      return liquidValidators_;
+    }
+    /**
+     * <code>repeated .pstake.lspersistence.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorStateOrBuilder> 
+        getLiquidValidatorsOrBuilderList() {
+      return liquidValidators_;
+    }
+    /**
+     * <code>repeated .pstake.lspersistence.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getLiquidValidatorsCount() {
+      return liquidValidators_.size();
+    }
+    /**
+     * <code>repeated .pstake.lspersistence.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorState getLiquidValidators(int index) {
+      return liquidValidators_.get(index);
+    }
+    /**
+     * <code>repeated .pstake.lspersistence.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorStateOrBuilder getLiquidValidatorsOrBuilder(
+        int index) {
+      return liquidValidators_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < liquidValidators_.size(); i++) {
+        output.writeMessage(1, liquidValidators_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < liquidValidators_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, liquidValidators_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponse)) {
+        return super.equals(obj);
+      }
+      com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponse other = (com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponse) obj;
+
+      if (!getLiquidValidatorsList()
+          .equals(other.getLiquidValidatorsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getLiquidValidatorsCount() > 0) {
+        hash = (37 * hash) + LIQUID_VALIDATORS_FIELD_NUMBER;
+        hash = (53 * hash) + getLiquidValidatorsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryLiquidValidatorsResponse is the response type for the Query/LiquidValidators RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code pstake.lspersistence.v1beta1.QueryLiquidValidatorsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.lspersistence.v1beta1.QueryLiquidValidatorsResponse)
+        com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.lspersistence.v1beta1.QueryProto.internal_static_pstake_lspersistence_v1beta1_QueryLiquidValidatorsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.lspersistence.v1beta1.QueryProto.internal_static_pstake_lspersistence_v1beta1_QueryLiquidValidatorsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponse.class, com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponse.Builder.class);
+      }
+
+      // Construct using com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (liquidValidatorsBuilder_ == null) {
+          liquidValidators_ = java.util.Collections.emptyList();
+        } else {
+          liquidValidators_ = null;
+          liquidValidatorsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.lspersistence.v1beta1.QueryProto.internal_static_pstake_lspersistence_v1beta1_QueryLiquidValidatorsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponse getDefaultInstanceForType() {
+        return com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponse build() {
+        com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponse buildPartial() {
+        com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponse result = new com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponse result) {
+        if (liquidValidatorsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            liquidValidators_ = java.util.Collections.unmodifiableList(liquidValidators_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.liquidValidators_ = liquidValidators_;
+        } else {
+          result.liquidValidators_ = liquidValidatorsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponse) {
+          return mergeFrom((com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponse other) {
+        if (other == com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponse.getDefaultInstance()) return this;
+        if (liquidValidatorsBuilder_ == null) {
+          if (!other.liquidValidators_.isEmpty()) {
+            if (liquidValidators_.isEmpty()) {
+              liquidValidators_ = other.liquidValidators_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureLiquidValidatorsIsMutable();
+              liquidValidators_.addAll(other.liquidValidators_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.liquidValidators_.isEmpty()) {
+            if (liquidValidatorsBuilder_.isEmpty()) {
+              liquidValidatorsBuilder_.dispose();
+              liquidValidatorsBuilder_ = null;
+              liquidValidators_ = other.liquidValidators_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              liquidValidatorsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getLiquidValidatorsFieldBuilder() : null;
+            } else {
+              liquidValidatorsBuilder_.addAllMessages(other.liquidValidators_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorState m =
+                    input.readMessage(
+                        com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorState.parser(),
+                        extensionRegistry);
+                if (liquidValidatorsBuilder_ == null) {
+                  ensureLiquidValidatorsIsMutable();
+                  liquidValidators_.add(m);
+                } else {
+                  liquidValidatorsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorState> liquidValidators_ =
+        java.util.Collections.emptyList();
+      private void ensureLiquidValidatorsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          liquidValidators_ = new java.util.ArrayList<com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorState>(liquidValidators_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorState, com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorState.Builder, com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorStateOrBuilder> liquidValidatorsBuilder_;
+
+      /**
+       * <code>repeated .pstake.lspersistence.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorState> getLiquidValidatorsList() {
+        if (liquidValidatorsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(liquidValidators_);
+        } else {
+          return liquidValidatorsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .pstake.lspersistence.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public int getLiquidValidatorsCount() {
+        if (liquidValidatorsBuilder_ == null) {
+          return liquidValidators_.size();
+        } else {
+          return liquidValidatorsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .pstake.lspersistence.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorState getLiquidValidators(int index) {
+        if (liquidValidatorsBuilder_ == null) {
+          return liquidValidators_.get(index);
+        } else {
+          return liquidValidatorsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .pstake.lspersistence.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setLiquidValidators(
+          int index, com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorState value) {
+        if (liquidValidatorsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLiquidValidatorsIsMutable();
+          liquidValidators_.set(index, value);
+          onChanged();
+        } else {
+          liquidValidatorsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lspersistence.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setLiquidValidators(
+          int index, com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorState.Builder builderForValue) {
+        if (liquidValidatorsBuilder_ == null) {
+          ensureLiquidValidatorsIsMutable();
+          liquidValidators_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          liquidValidatorsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lspersistence.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addLiquidValidators(com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorState value) {
+        if (liquidValidatorsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLiquidValidatorsIsMutable();
+          liquidValidators_.add(value);
+          onChanged();
+        } else {
+          liquidValidatorsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lspersistence.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addLiquidValidators(
+          int index, com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorState value) {
+        if (liquidValidatorsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLiquidValidatorsIsMutable();
+          liquidValidators_.add(index, value);
+          onChanged();
+        } else {
+          liquidValidatorsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lspersistence.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addLiquidValidators(
+          com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorState.Builder builderForValue) {
+        if (liquidValidatorsBuilder_ == null) {
+          ensureLiquidValidatorsIsMutable();
+          liquidValidators_.add(builderForValue.build());
+          onChanged();
+        } else {
+          liquidValidatorsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lspersistence.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addLiquidValidators(
+          int index, com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorState.Builder builderForValue) {
+        if (liquidValidatorsBuilder_ == null) {
+          ensureLiquidValidatorsIsMutable();
+          liquidValidators_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          liquidValidatorsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lspersistence.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllLiquidValidators(
+          java.lang.Iterable<? extends com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorState> values) {
+        if (liquidValidatorsBuilder_ == null) {
+          ensureLiquidValidatorsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, liquidValidators_);
+          onChanged();
+        } else {
+          liquidValidatorsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lspersistence.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearLiquidValidators() {
+        if (liquidValidatorsBuilder_ == null) {
+          liquidValidators_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          liquidValidatorsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lspersistence.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeLiquidValidators(int index) {
+        if (liquidValidatorsBuilder_ == null) {
+          ensureLiquidValidatorsIsMutable();
+          liquidValidators_.remove(index);
+          onChanged();
+        } else {
+          liquidValidatorsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .pstake.lspersistence.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorState.Builder getLiquidValidatorsBuilder(
+          int index) {
+        return getLiquidValidatorsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .pstake.lspersistence.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorStateOrBuilder getLiquidValidatorsOrBuilder(
+          int index) {
+        if (liquidValidatorsBuilder_ == null) {
+          return liquidValidators_.get(index);  } else {
+          return liquidValidatorsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .pstake.lspersistence.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorStateOrBuilder> 
+           getLiquidValidatorsOrBuilderList() {
+        if (liquidValidatorsBuilder_ != null) {
+          return liquidValidatorsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(liquidValidators_);
+        }
+      }
+      /**
+       * <code>repeated .pstake.lspersistence.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorState.Builder addLiquidValidatorsBuilder() {
+        return getLiquidValidatorsFieldBuilder().addBuilder(
+            com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorState.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .pstake.lspersistence.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorState.Builder addLiquidValidatorsBuilder(
+          int index) {
+        return getLiquidValidatorsFieldBuilder().addBuilder(
+            index, com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorState.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .pstake.lspersistence.v1beta1.LiquidValidatorState liquid_validators = 1 [json_name = "liquidValidators", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorState.Builder> 
+           getLiquidValidatorsBuilderList() {
+        return getLiquidValidatorsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorState, com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorState.Builder, com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorStateOrBuilder> 
+          getLiquidValidatorsFieldBuilder() {
+        if (liquidValidatorsBuilder_ == null) {
+          liquidValidatorsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorState, com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorState.Builder, com.pstake.lspersistence.v1beta1.LiquidstakingProto.LiquidValidatorStateOrBuilder>(
+                  liquidValidators_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          liquidValidators_ = null;
+        }
+        return liquidValidatorsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.lspersistence.v1beta1.QueryLiquidValidatorsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.lspersistence.v1beta1.QueryLiquidValidatorsResponse)
+    private static final com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponse();
+    }
+
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryLiquidValidatorsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryLiquidValidatorsResponse>() {
+      @java.lang.Override
+      public QueryLiquidValidatorsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryLiquidValidatorsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryLiquidValidatorsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.lspersistence.v1beta1.QueryProto.QueryLiquidValidatorsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryStatesRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.lspersistence.v1beta1.QueryStatesRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryStatesRequest is the request type for the Query/States RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code pstake.lspersistence.v1beta1.QueryStatesRequest}
+   */
+  public static final class QueryStatesRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.lspersistence.v1beta1.QueryStatesRequest)
+      QueryStatesRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryStatesRequest.newBuilder() to construct.
+    private QueryStatesRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryStatesRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryStatesRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.lspersistence.v1beta1.QueryProto.internal_static_pstake_lspersistence_v1beta1_QueryStatesRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.lspersistence.v1beta1.QueryProto.internal_static_pstake_lspersistence_v1beta1_QueryStatesRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesRequest.class, com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesRequest)) {
+        return super.equals(obj);
+      }
+      com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesRequest other = (com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryStatesRequest is the request type for the Query/States RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code pstake.lspersistence.v1beta1.QueryStatesRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.lspersistence.v1beta1.QueryStatesRequest)
+        com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.lspersistence.v1beta1.QueryProto.internal_static_pstake_lspersistence_v1beta1_QueryStatesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.lspersistence.v1beta1.QueryProto.internal_static_pstake_lspersistence_v1beta1_QueryStatesRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesRequest.class, com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesRequest.Builder.class);
+      }
+
+      // Construct using com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.lspersistence.v1beta1.QueryProto.internal_static_pstake_lspersistence_v1beta1_QueryStatesRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesRequest getDefaultInstanceForType() {
+        return com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesRequest build() {
+        com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesRequest buildPartial() {
+        com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesRequest result = new com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesRequest) {
+          return mergeFrom((com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesRequest other) {
+        if (other == com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.lspersistence.v1beta1.QueryStatesRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.lspersistence.v1beta1.QueryStatesRequest)
+    private static final com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesRequest();
+    }
+
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryStatesRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryStatesRequest>() {
+      @java.lang.Override
+      public QueryStatesRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryStatesRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryStatesRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryStatesResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:pstake.lspersistence.v1beta1.QueryStatesResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.pstake.lspersistence.v1beta1.NetAmountState net_amount_state = 1 [json_name = "netAmountState", (.gogoproto.nullable) = false];</code>
+     * @return Whether the netAmountState field is set.
+     */
+    boolean hasNetAmountState();
+    /**
+     * <code>.pstake.lspersistence.v1beta1.NetAmountState net_amount_state = 1 [json_name = "netAmountState", (.gogoproto.nullable) = false];</code>
+     * @return The netAmountState.
+     */
+    com.pstake.lspersistence.v1beta1.LiquidstakingProto.NetAmountState getNetAmountState();
+    /**
+     * <code>.pstake.lspersistence.v1beta1.NetAmountState net_amount_state = 1 [json_name = "netAmountState", (.gogoproto.nullable) = false];</code>
+     */
+    com.pstake.lspersistence.v1beta1.LiquidstakingProto.NetAmountStateOrBuilder getNetAmountStateOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryStatesResponse is the response type for the Query/States RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code pstake.lspersistence.v1beta1.QueryStatesResponse}
+   */
+  public static final class QueryStatesResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:pstake.lspersistence.v1beta1.QueryStatesResponse)
+      QueryStatesResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryStatesResponse.newBuilder() to construct.
+    private QueryStatesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryStatesResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryStatesResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.pstake.lspersistence.v1beta1.QueryProto.internal_static_pstake_lspersistence_v1beta1_QueryStatesResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.pstake.lspersistence.v1beta1.QueryProto.internal_static_pstake_lspersistence_v1beta1_QueryStatesResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesResponse.class, com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesResponse.Builder.class);
+    }
+
+    public static final int NET_AMOUNT_STATE_FIELD_NUMBER = 1;
+    private com.pstake.lspersistence.v1beta1.LiquidstakingProto.NetAmountState netAmountState_;
+    /**
+     * <code>.pstake.lspersistence.v1beta1.NetAmountState net_amount_state = 1 [json_name = "netAmountState", (.gogoproto.nullable) = false];</code>
+     * @return Whether the netAmountState field is set.
+     */
+    @java.lang.Override
+    public boolean hasNetAmountState() {
+      return netAmountState_ != null;
+    }
+    /**
+     * <code>.pstake.lspersistence.v1beta1.NetAmountState net_amount_state = 1 [json_name = "netAmountState", (.gogoproto.nullable) = false];</code>
+     * @return The netAmountState.
+     */
+    @java.lang.Override
+    public com.pstake.lspersistence.v1beta1.LiquidstakingProto.NetAmountState getNetAmountState() {
+      return netAmountState_ == null ? com.pstake.lspersistence.v1beta1.LiquidstakingProto.NetAmountState.getDefaultInstance() : netAmountState_;
+    }
+    /**
+     * <code>.pstake.lspersistence.v1beta1.NetAmountState net_amount_state = 1 [json_name = "netAmountState", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.pstake.lspersistence.v1beta1.LiquidstakingProto.NetAmountStateOrBuilder getNetAmountStateOrBuilder() {
+      return netAmountState_ == null ? com.pstake.lspersistence.v1beta1.LiquidstakingProto.NetAmountState.getDefaultInstance() : netAmountState_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (netAmountState_ != null) {
+        output.writeMessage(1, getNetAmountState());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (netAmountState_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getNetAmountState());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesResponse)) {
+        return super.equals(obj);
+      }
+      com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesResponse other = (com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesResponse) obj;
+
+      if (hasNetAmountState() != other.hasNetAmountState()) return false;
+      if (hasNetAmountState()) {
+        if (!getNetAmountState()
+            .equals(other.getNetAmountState())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasNetAmountState()) {
+        hash = (37 * hash) + NET_AMOUNT_STATE_FIELD_NUMBER;
+        hash = (53 * hash) + getNetAmountState().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryStatesResponse is the response type for the Query/States RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code pstake.lspersistence.v1beta1.QueryStatesResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:pstake.lspersistence.v1beta1.QueryStatesResponse)
+        com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.pstake.lspersistence.v1beta1.QueryProto.internal_static_pstake_lspersistence_v1beta1_QueryStatesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.pstake.lspersistence.v1beta1.QueryProto.internal_static_pstake_lspersistence_v1beta1_QueryStatesResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesResponse.class, com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesResponse.Builder.class);
+      }
+
+      // Construct using com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        netAmountState_ = null;
+        if (netAmountStateBuilder_ != null) {
+          netAmountStateBuilder_.dispose();
+          netAmountStateBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.pstake.lspersistence.v1beta1.QueryProto.internal_static_pstake_lspersistence_v1beta1_QueryStatesResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesResponse getDefaultInstanceForType() {
+        return com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesResponse build() {
+        com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesResponse buildPartial() {
+        com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesResponse result = new com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.netAmountState_ = netAmountStateBuilder_ == null
+              ? netAmountState_
+              : netAmountStateBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesResponse) {
+          return mergeFrom((com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesResponse other) {
+        if (other == com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesResponse.getDefaultInstance()) return this;
+        if (other.hasNetAmountState()) {
+          mergeNetAmountState(other.getNetAmountState());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getNetAmountStateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.pstake.lspersistence.v1beta1.LiquidstakingProto.NetAmountState netAmountState_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.pstake.lspersistence.v1beta1.LiquidstakingProto.NetAmountState, com.pstake.lspersistence.v1beta1.LiquidstakingProto.NetAmountState.Builder, com.pstake.lspersistence.v1beta1.LiquidstakingProto.NetAmountStateOrBuilder> netAmountStateBuilder_;
+      /**
+       * <code>.pstake.lspersistence.v1beta1.NetAmountState net_amount_state = 1 [json_name = "netAmountState", (.gogoproto.nullable) = false];</code>
+       * @return Whether the netAmountState field is set.
+       */
+      public boolean hasNetAmountState() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.pstake.lspersistence.v1beta1.NetAmountState net_amount_state = 1 [json_name = "netAmountState", (.gogoproto.nullable) = false];</code>
+       * @return The netAmountState.
+       */
+      public com.pstake.lspersistence.v1beta1.LiquidstakingProto.NetAmountState getNetAmountState() {
+        if (netAmountStateBuilder_ == null) {
+          return netAmountState_ == null ? com.pstake.lspersistence.v1beta1.LiquidstakingProto.NetAmountState.getDefaultInstance() : netAmountState_;
+        } else {
+          return netAmountStateBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.pstake.lspersistence.v1beta1.NetAmountState net_amount_state = 1 [json_name = "netAmountState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setNetAmountState(com.pstake.lspersistence.v1beta1.LiquidstakingProto.NetAmountState value) {
+        if (netAmountStateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          netAmountState_ = value;
+        } else {
+          netAmountStateBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lspersistence.v1beta1.NetAmountState net_amount_state = 1 [json_name = "netAmountState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setNetAmountState(
+          com.pstake.lspersistence.v1beta1.LiquidstakingProto.NetAmountState.Builder builderForValue) {
+        if (netAmountStateBuilder_ == null) {
+          netAmountState_ = builderForValue.build();
+        } else {
+          netAmountStateBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lspersistence.v1beta1.NetAmountState net_amount_state = 1 [json_name = "netAmountState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeNetAmountState(com.pstake.lspersistence.v1beta1.LiquidstakingProto.NetAmountState value) {
+        if (netAmountStateBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            netAmountState_ != null &&
+            netAmountState_ != com.pstake.lspersistence.v1beta1.LiquidstakingProto.NetAmountState.getDefaultInstance()) {
+            getNetAmountStateBuilder().mergeFrom(value);
+          } else {
+            netAmountState_ = value;
+          }
+        } else {
+          netAmountStateBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lspersistence.v1beta1.NetAmountState net_amount_state = 1 [json_name = "netAmountState", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearNetAmountState() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        netAmountState_ = null;
+        if (netAmountStateBuilder_ != null) {
+          netAmountStateBuilder_.dispose();
+          netAmountStateBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.pstake.lspersistence.v1beta1.NetAmountState net_amount_state = 1 [json_name = "netAmountState", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lspersistence.v1beta1.LiquidstakingProto.NetAmountState.Builder getNetAmountStateBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getNetAmountStateFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.pstake.lspersistence.v1beta1.NetAmountState net_amount_state = 1 [json_name = "netAmountState", (.gogoproto.nullable) = false];</code>
+       */
+      public com.pstake.lspersistence.v1beta1.LiquidstakingProto.NetAmountStateOrBuilder getNetAmountStateOrBuilder() {
+        if (netAmountStateBuilder_ != null) {
+          return netAmountStateBuilder_.getMessageOrBuilder();
+        } else {
+          return netAmountState_ == null ?
+              com.pstake.lspersistence.v1beta1.LiquidstakingProto.NetAmountState.getDefaultInstance() : netAmountState_;
+        }
+      }
+      /**
+       * <code>.pstake.lspersistence.v1beta1.NetAmountState net_amount_state = 1 [json_name = "netAmountState", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.pstake.lspersistence.v1beta1.LiquidstakingProto.NetAmountState, com.pstake.lspersistence.v1beta1.LiquidstakingProto.NetAmountState.Builder, com.pstake.lspersistence.v1beta1.LiquidstakingProto.NetAmountStateOrBuilder> 
+          getNetAmountStateFieldBuilder() {
+        if (netAmountStateBuilder_ == null) {
+          netAmountStateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.pstake.lspersistence.v1beta1.LiquidstakingProto.NetAmountState, com.pstake.lspersistence.v1beta1.LiquidstakingProto.NetAmountState.Builder, com.pstake.lspersistence.v1beta1.LiquidstakingProto.NetAmountStateOrBuilder>(
+                  getNetAmountState(),
+                  getParentForChildren(),
+                  isClean());
+          netAmountState_ = null;
+        }
+        return netAmountStateBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:pstake.lspersistence.v1beta1.QueryStatesResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:pstake.lspersistence.v1beta1.QueryStatesResponse)
+    private static final com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesResponse();
+    }
+
+    public static com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryStatesResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryStatesResponse>() {
+      @java.lang.Override
+      public QueryStatesResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryStatesResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryStatesResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.pstake.lspersistence.v1beta1.QueryProto.QueryStatesResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_lspersistence_v1beta1_QueryParamsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_lspersistence_v1beta1_QueryParamsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_lspersistence_v1beta1_QueryParamsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_lspersistence_v1beta1_QueryParamsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_lspersistence_v1beta1_QueryLiquidValidatorsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_lspersistence_v1beta1_QueryLiquidValidatorsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_lspersistence_v1beta1_QueryLiquidValidatorsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_lspersistence_v1beta1_QueryLiquidValidatorsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_lspersistence_v1beta1_QueryStatesRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_lspersistence_v1beta1_QueryStatesRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_pstake_lspersistence_v1beta1_QueryStatesResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_pstake_lspersistence_v1beta1_QueryStatesResponse_fieldAccessorTable;
 
@@ -80,14 +3301,14 @@ public final class QueryProto {
       "States\0220.pstake.lspersistence.v1beta1.Qu" +
       "eryStatesRequest\0321.pstake.lspersistence." +
       "v1beta1.QueryStatesResponse\",\202\323\344\223\002&\022$/ps" +
-      "take/lspersistence/v1beta1/statesB\202\002\n co" +
+      "take/lspersistence/v1beta1/statesB\200\002\n co" +
       "m.pstake.lspersistence.v1beta1B\nQueryPro" +
-      "toP\001Z@github.com/persistenceOne/pstake-n" +
-      "ative/v2/x/lspersistence/types\242\002\003PLX\252\002\034P" +
-      "stake.Lspersistence.V1beta1\312\002\034Pstake\\Lsp" +
-      "ersistence\\V1beta1\342\002(Pstake\\Lspersistenc" +
-      "e\\V1beta1\\GPBMetadata\352\002\036Pstake::Lspersis" +
-      "tence::V1beta1b\006proto3"
+      "toZ@github.com/persistenceOne/pstake-nat" +
+      "ive/v2/x/lspersistence/types\242\002\003PLX\252\002\034Pst" +
+      "ake.Lspersistence.V1beta1\312\002\034Pstake\\Lsper" +
+      "sistence\\V1beta1\342\002(Pstake\\Lspersistence\\" +
+      "V1beta1\\GPBMetadata\352\002\036Pstake::Lspersiste" +
+      "nce::V1beta1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

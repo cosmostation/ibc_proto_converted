@@ -14,14 +14,1134 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryListPrivilegedRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:publicawesome.stargaze.cron.v1.QueryListPrivilegedRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryListPrivilegedRequest is request type for the Query/ListPrivileged RPC
+   * method.
+   * </pre>
+   *
+   * Protobuf type {@code publicawesome.stargaze.cron.v1.QueryListPrivilegedRequest}
+   */
+  public static final class QueryListPrivilegedRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:publicawesome.stargaze.cron.v1.QueryListPrivilegedRequest)
+      QueryListPrivilegedRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryListPrivilegedRequest.newBuilder() to construct.
+    private QueryListPrivilegedRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryListPrivilegedRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryListPrivilegedRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.publicawesome.stargaze.cron.v1.QueryProto.internal_static_publicawesome_stargaze_cron_v1_QueryListPrivilegedRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.publicawesome.stargaze.cron.v1.QueryProto.internal_static_publicawesome_stargaze_cron_v1_QueryListPrivilegedRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedRequest.class, com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedRequest)) {
+        return super.equals(obj);
+      }
+      com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedRequest other = (com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryListPrivilegedRequest is request type for the Query/ListPrivileged RPC
+     * method.
+     * </pre>
+     *
+     * Protobuf type {@code publicawesome.stargaze.cron.v1.QueryListPrivilegedRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:publicawesome.stargaze.cron.v1.QueryListPrivilegedRequest)
+        com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.publicawesome.stargaze.cron.v1.QueryProto.internal_static_publicawesome_stargaze_cron_v1_QueryListPrivilegedRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.publicawesome.stargaze.cron.v1.QueryProto.internal_static_publicawesome_stargaze_cron_v1_QueryListPrivilegedRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedRequest.class, com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedRequest.Builder.class);
+      }
+
+      // Construct using com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.publicawesome.stargaze.cron.v1.QueryProto.internal_static_publicawesome_stargaze_cron_v1_QueryListPrivilegedRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedRequest getDefaultInstanceForType() {
+        return com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedRequest build() {
+        com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedRequest buildPartial() {
+        com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedRequest result = new com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedRequest) {
+          return mergeFrom((com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedRequest other) {
+        if (other == com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:publicawesome.stargaze.cron.v1.QueryListPrivilegedRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:publicawesome.stargaze.cron.v1.QueryListPrivilegedRequest)
+    private static final com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedRequest();
+    }
+
+    public static com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryListPrivilegedRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryListPrivilegedRequest>() {
+      @java.lang.Override
+      public QueryListPrivilegedRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryListPrivilegedRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryListPrivilegedRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryListPrivilegedResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:publicawesome.stargaze.cron.v1.QueryListPrivilegedResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * contract_addresses holds all the smart contract addresses which have
+     * privilege status.
+     * </pre>
+     *
+     * <code>repeated string contract_addresses = 1 [json_name = "contractAddresses", (.gogoproto.jsontag) = "privileged_contract_addresses,omitempty"];</code>
+     * @return A list containing the contractAddresses.
+     */
+    java.util.List<java.lang.String>
+        getContractAddressesList();
+    /**
+     * <pre>
+     * contract_addresses holds all the smart contract addresses which have
+     * privilege status.
+     * </pre>
+     *
+     * <code>repeated string contract_addresses = 1 [json_name = "contractAddresses", (.gogoproto.jsontag) = "privileged_contract_addresses,omitempty"];</code>
+     * @return The count of contractAddresses.
+     */
+    int getContractAddressesCount();
+    /**
+     * <pre>
+     * contract_addresses holds all the smart contract addresses which have
+     * privilege status.
+     * </pre>
+     *
+     * <code>repeated string contract_addresses = 1 [json_name = "contractAddresses", (.gogoproto.jsontag) = "privileged_contract_addresses,omitempty"];</code>
+     * @param index The index of the element to return.
+     * @return The contractAddresses at the given index.
+     */
+    java.lang.String getContractAddresses(int index);
+    /**
+     * <pre>
+     * contract_addresses holds all the smart contract addresses which have
+     * privilege status.
+     * </pre>
+     *
+     * <code>repeated string contract_addresses = 1 [json_name = "contractAddresses", (.gogoproto.jsontag) = "privileged_contract_addresses,omitempty"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the contractAddresses at the given index.
+     */
+    com.google.protobuf.ByteString
+        getContractAddressesBytes(int index);
+  }
+  /**
+   * <pre>
+   * QueryListPrivilegedResponse is response type for the Query/ListPrivileged RPC
+   * method.
+   * </pre>
+   *
+   * Protobuf type {@code publicawesome.stargaze.cron.v1.QueryListPrivilegedResponse}
+   */
+  public static final class QueryListPrivilegedResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:publicawesome.stargaze.cron.v1.QueryListPrivilegedResponse)
+      QueryListPrivilegedResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryListPrivilegedResponse.newBuilder() to construct.
+    private QueryListPrivilegedResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryListPrivilegedResponse() {
+      contractAddresses_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryListPrivilegedResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.publicawesome.stargaze.cron.v1.QueryProto.internal_static_publicawesome_stargaze_cron_v1_QueryListPrivilegedResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.publicawesome.stargaze.cron.v1.QueryProto.internal_static_publicawesome_stargaze_cron_v1_QueryListPrivilegedResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedResponse.class, com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedResponse.Builder.class);
+    }
+
+    public static final int CONTRACT_ADDRESSES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList contractAddresses_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * contract_addresses holds all the smart contract addresses which have
+     * privilege status.
+     * </pre>
+     *
+     * <code>repeated string contract_addresses = 1 [json_name = "contractAddresses", (.gogoproto.jsontag) = "privileged_contract_addresses,omitempty"];</code>
+     * @return A list containing the contractAddresses.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getContractAddressesList() {
+      return contractAddresses_;
+    }
+    /**
+     * <pre>
+     * contract_addresses holds all the smart contract addresses which have
+     * privilege status.
+     * </pre>
+     *
+     * <code>repeated string contract_addresses = 1 [json_name = "contractAddresses", (.gogoproto.jsontag) = "privileged_contract_addresses,omitempty"];</code>
+     * @return The count of contractAddresses.
+     */
+    public int getContractAddressesCount() {
+      return contractAddresses_.size();
+    }
+    /**
+     * <pre>
+     * contract_addresses holds all the smart contract addresses which have
+     * privilege status.
+     * </pre>
+     *
+     * <code>repeated string contract_addresses = 1 [json_name = "contractAddresses", (.gogoproto.jsontag) = "privileged_contract_addresses,omitempty"];</code>
+     * @param index The index of the element to return.
+     * @return The contractAddresses at the given index.
+     */
+    public java.lang.String getContractAddresses(int index) {
+      return contractAddresses_.get(index);
+    }
+    /**
+     * <pre>
+     * contract_addresses holds all the smart contract addresses which have
+     * privilege status.
+     * </pre>
+     *
+     * <code>repeated string contract_addresses = 1 [json_name = "contractAddresses", (.gogoproto.jsontag) = "privileged_contract_addresses,omitempty"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the contractAddresses at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getContractAddressesBytes(int index) {
+      return contractAddresses_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < contractAddresses_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, contractAddresses_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < contractAddresses_.size(); i++) {
+          dataSize += computeStringSizeNoTag(contractAddresses_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getContractAddressesList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedResponse)) {
+        return super.equals(obj);
+      }
+      com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedResponse other = (com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedResponse) obj;
+
+      if (!getContractAddressesList()
+          .equals(other.getContractAddressesList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getContractAddressesCount() > 0) {
+        hash = (37 * hash) + CONTRACT_ADDRESSES_FIELD_NUMBER;
+        hash = (53 * hash) + getContractAddressesList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryListPrivilegedResponse is response type for the Query/ListPrivileged RPC
+     * method.
+     * </pre>
+     *
+     * Protobuf type {@code publicawesome.stargaze.cron.v1.QueryListPrivilegedResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:publicawesome.stargaze.cron.v1.QueryListPrivilegedResponse)
+        com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.publicawesome.stargaze.cron.v1.QueryProto.internal_static_publicawesome_stargaze_cron_v1_QueryListPrivilegedResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.publicawesome.stargaze.cron.v1.QueryProto.internal_static_publicawesome_stargaze_cron_v1_QueryListPrivilegedResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedResponse.class, com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedResponse.Builder.class);
+      }
+
+      // Construct using com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        contractAddresses_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.publicawesome.stargaze.cron.v1.QueryProto.internal_static_publicawesome_stargaze_cron_v1_QueryListPrivilegedResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedResponse getDefaultInstanceForType() {
+        return com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedResponse build() {
+        com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedResponse buildPartial() {
+        com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedResponse result = new com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          contractAddresses_.makeImmutable();
+          result.contractAddresses_ = contractAddresses_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedResponse) {
+          return mergeFrom((com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedResponse other) {
+        if (other == com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedResponse.getDefaultInstance()) return this;
+        if (!other.contractAddresses_.isEmpty()) {
+          if (contractAddresses_.isEmpty()) {
+            contractAddresses_ = other.contractAddresses_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureContractAddressesIsMutable();
+            contractAddresses_.addAll(other.contractAddresses_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureContractAddressesIsMutable();
+                contractAddresses_.add(s);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList contractAddresses_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureContractAddressesIsMutable() {
+        if (!contractAddresses_.isModifiable()) {
+          contractAddresses_ = new com.google.protobuf.LazyStringArrayList(contractAddresses_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <pre>
+       * contract_addresses holds all the smart contract addresses which have
+       * privilege status.
+       * </pre>
+       *
+       * <code>repeated string contract_addresses = 1 [json_name = "contractAddresses", (.gogoproto.jsontag) = "privileged_contract_addresses,omitempty"];</code>
+       * @return A list containing the contractAddresses.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getContractAddressesList() {
+        contractAddresses_.makeImmutable();
+        return contractAddresses_;
+      }
+      /**
+       * <pre>
+       * contract_addresses holds all the smart contract addresses which have
+       * privilege status.
+       * </pre>
+       *
+       * <code>repeated string contract_addresses = 1 [json_name = "contractAddresses", (.gogoproto.jsontag) = "privileged_contract_addresses,omitempty"];</code>
+       * @return The count of contractAddresses.
+       */
+      public int getContractAddressesCount() {
+        return contractAddresses_.size();
+      }
+      /**
+       * <pre>
+       * contract_addresses holds all the smart contract addresses which have
+       * privilege status.
+       * </pre>
+       *
+       * <code>repeated string contract_addresses = 1 [json_name = "contractAddresses", (.gogoproto.jsontag) = "privileged_contract_addresses,omitempty"];</code>
+       * @param index The index of the element to return.
+       * @return The contractAddresses at the given index.
+       */
+      public java.lang.String getContractAddresses(int index) {
+        return contractAddresses_.get(index);
+      }
+      /**
+       * <pre>
+       * contract_addresses holds all the smart contract addresses which have
+       * privilege status.
+       * </pre>
+       *
+       * <code>repeated string contract_addresses = 1 [json_name = "contractAddresses", (.gogoproto.jsontag) = "privileged_contract_addresses,omitempty"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the contractAddresses at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getContractAddressesBytes(int index) {
+        return contractAddresses_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * contract_addresses holds all the smart contract addresses which have
+       * privilege status.
+       * </pre>
+       *
+       * <code>repeated string contract_addresses = 1 [json_name = "contractAddresses", (.gogoproto.jsontag) = "privileged_contract_addresses,omitempty"];</code>
+       * @param index The index to set the value at.
+       * @param value The contractAddresses to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContractAddresses(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureContractAddressesIsMutable();
+        contractAddresses_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_addresses holds all the smart contract addresses which have
+       * privilege status.
+       * </pre>
+       *
+       * <code>repeated string contract_addresses = 1 [json_name = "contractAddresses", (.gogoproto.jsontag) = "privileged_contract_addresses,omitempty"];</code>
+       * @param value The contractAddresses to add.
+       * @return This builder for chaining.
+       */
+      public Builder addContractAddresses(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureContractAddressesIsMutable();
+        contractAddresses_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_addresses holds all the smart contract addresses which have
+       * privilege status.
+       * </pre>
+       *
+       * <code>repeated string contract_addresses = 1 [json_name = "contractAddresses", (.gogoproto.jsontag) = "privileged_contract_addresses,omitempty"];</code>
+       * @param values The contractAddresses to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllContractAddresses(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureContractAddressesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, contractAddresses_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_addresses holds all the smart contract addresses which have
+       * privilege status.
+       * </pre>
+       *
+       * <code>repeated string contract_addresses = 1 [json_name = "contractAddresses", (.gogoproto.jsontag) = "privileged_contract_addresses,omitempty"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContractAddresses() {
+        contractAddresses_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * contract_addresses holds all the smart contract addresses which have
+       * privilege status.
+       * </pre>
+       *
+       * <code>repeated string contract_addresses = 1 [json_name = "contractAddresses", (.gogoproto.jsontag) = "privileged_contract_addresses,omitempty"];</code>
+       * @param value The bytes of the contractAddresses to add.
+       * @return This builder for chaining.
+       */
+      public Builder addContractAddressesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureContractAddressesIsMutable();
+        contractAddresses_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:publicawesome.stargaze.cron.v1.QueryListPrivilegedResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:publicawesome.stargaze.cron.v1.QueryListPrivilegedResponse)
+    private static final com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedResponse();
+    }
+
+    public static com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryListPrivilegedResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryListPrivilegedResponse>() {
+      @java.lang.Override
+      public QueryListPrivilegedResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryListPrivilegedResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryListPrivilegedResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.publicawesome.stargaze.cron.v1.QueryProto.QueryListPrivilegedResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_publicawesome_stargaze_cron_v1_QueryListPrivilegedRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_publicawesome_stargaze_cron_v1_QueryListPrivilegedRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_publicawesome_stargaze_cron_v1_QueryListPrivilegedResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_publicawesome_stargaze_cron_v1_QueryListPrivilegedResponse_fieldAccessorTable;
 
@@ -44,14 +1164,14 @@ public final class QueryProto {
       "e.cron.v1.QueryListPrivilegedRequest\032;.p" +
       "ublicawesome.stargaze.cron.v1.QueryListP" +
       "rivilegedResponse\")\202\323\344\223\002#\022!/stargaze/cro" +
-      "n/v1/list-privilegedB\200\002\n\"com.publicaweso" +
-      "me.stargaze.cron.v1B\nQueryProtoP\001Z3githu" +
-      "b.com/public-awesome/stargaze/v11/x/cron" +
-      "/types\242\002\003PSC\252\002\036Publicawesome.Stargaze.Cr" +
-      "on.V1\312\002\036Publicawesome\\Stargaze\\Cron\\V1\342\002" +
-      "*Publicawesome\\Stargaze\\Cron\\V1\\GPBMetad" +
-      "ata\352\002!Publicawesome::Stargaze::Cron::V1b" +
-      "\006proto3"
+      "n/v1/list-privilegedB\376\001\n\"com.publicaweso" +
+      "me.stargaze.cron.v1B\nQueryProtoZ3github." +
+      "com/public-awesome/stargaze/v11/x/cron/t" +
+      "ypes\242\002\003PSC\252\002\036Publicawesome.Stargaze.Cron" +
+      ".V1\312\002\036Publicawesome\\Stargaze\\Cron\\V1\342\002*P" +
+      "ublicawesome\\Stargaze\\Cron\\V1\\GPBMetadat" +
+      "a\352\002!Publicawesome::Stargaze::Cron::V1b\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

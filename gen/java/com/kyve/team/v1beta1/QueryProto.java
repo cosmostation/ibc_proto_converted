@@ -14,64 +14,10946 @@ public final class QueryProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface QueryTeamInfoRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.team.v1beta1.QueryTeamInfoRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryAccountsRequest is request type for the Query/TeamInfo RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code kyve.team.v1beta1.QueryTeamInfoRequest}
+   */
+  public static final class QueryTeamInfoRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.team.v1beta1.QueryTeamInfoRequest)
+      QueryTeamInfoRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTeamInfoRequest.newBuilder() to construct.
+    private QueryTeamInfoRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTeamInfoRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTeamInfoRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamInfoRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamInfoRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.team.v1beta1.QueryProto.QueryTeamInfoRequest.class, com.kyve.team.v1beta1.QueryProto.QueryTeamInfoRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.team.v1beta1.QueryProto.QueryTeamInfoRequest)) {
+        return super.equals(obj);
+      }
+      com.kyve.team.v1beta1.QueryProto.QueryTeamInfoRequest other = (com.kyve.team.v1beta1.QueryProto.QueryTeamInfoRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamInfoRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamInfoRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamInfoRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamInfoRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamInfoRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamInfoRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamInfoRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamInfoRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamInfoRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamInfoRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamInfoRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamInfoRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.team.v1beta1.QueryProto.QueryTeamInfoRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryAccountsRequest is request type for the Query/TeamInfo RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code kyve.team.v1beta1.QueryTeamInfoRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.team.v1beta1.QueryTeamInfoRequest)
+        com.kyve.team.v1beta1.QueryProto.QueryTeamInfoRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamInfoRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamInfoRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.team.v1beta1.QueryProto.QueryTeamInfoRequest.class, com.kyve.team.v1beta1.QueryProto.QueryTeamInfoRequest.Builder.class);
+      }
+
+      // Construct using com.kyve.team.v1beta1.QueryProto.QueryTeamInfoRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamInfoRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.QueryProto.QueryTeamInfoRequest getDefaultInstanceForType() {
+        return com.kyve.team.v1beta1.QueryProto.QueryTeamInfoRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.QueryProto.QueryTeamInfoRequest build() {
+        com.kyve.team.v1beta1.QueryProto.QueryTeamInfoRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.QueryProto.QueryTeamInfoRequest buildPartial() {
+        com.kyve.team.v1beta1.QueryProto.QueryTeamInfoRequest result = new com.kyve.team.v1beta1.QueryProto.QueryTeamInfoRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.team.v1beta1.QueryProto.QueryTeamInfoRequest) {
+          return mergeFrom((com.kyve.team.v1beta1.QueryProto.QueryTeamInfoRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.team.v1beta1.QueryProto.QueryTeamInfoRequest other) {
+        if (other == com.kyve.team.v1beta1.QueryProto.QueryTeamInfoRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.team.v1beta1.QueryTeamInfoRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.team.v1beta1.QueryTeamInfoRequest)
+    private static final com.kyve.team.v1beta1.QueryProto.QueryTeamInfoRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.team.v1beta1.QueryProto.QueryTeamInfoRequest();
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamInfoRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTeamInfoRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTeamInfoRequest>() {
+      @java.lang.Override
+      public QueryTeamInfoRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTeamInfoRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTeamInfoRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.team.v1beta1.QueryProto.QueryTeamInfoRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryTeamInfoResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.team.v1beta1.QueryTeamInfoResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * foundation is the authority foundation address
+     * </pre>
+     *
+     * <code>string foundation_authority = 1 [json_name = "foundationAuthority"];</code>
+     * @return The foundationAuthority.
+     */
+    java.lang.String getFoundationAuthority();
+    /**
+     * <pre>
+     * foundation is the authority foundation address
+     * </pre>
+     *
+     * <code>string foundation_authority = 1 [json_name = "foundationAuthority"];</code>
+     * @return The bytes for foundationAuthority.
+     */
+    com.google.protobuf.ByteString
+        getFoundationAuthorityBytes();
+
+    /**
+     * <pre>
+     * bcp is the authority bcp address
+     * </pre>
+     *
+     * <code>string bcp_authority = 2 [json_name = "bcpAuthority"];</code>
+     * @return The bcpAuthority.
+     */
+    java.lang.String getBcpAuthority();
+    /**
+     * <pre>
+     * bcp is the authority bcp address
+     * </pre>
+     *
+     * <code>string bcp_authority = 2 [json_name = "bcpAuthority"];</code>
+     * @return The bytes for bcpAuthority.
+     */
+    com.google.protobuf.ByteString
+        getBcpAuthorityBytes();
+
+    /**
+     * <pre>
+     * total_team_allocation is the total allocation in $KYVE the team module has in order to reward team members
+     * </pre>
+     *
+     * <code>uint64 total_team_allocation = 3 [json_name = "totalTeamAllocation"];</code>
+     * @return The totalTeamAllocation.
+     */
+    long getTotalTeamAllocation();
+
+    /**
+     * <pre>
+     * issued_team_allocation is the amount in $KYVE tied to team vesting accounts and which are not available anymore
+     * </pre>
+     *
+     * <code>uint64 issued_team_allocation = 4 [json_name = "issuedTeamAllocation"];</code>
+     * @return The issuedTeamAllocation.
+     */
+    long getIssuedTeamAllocation();
+
+    /**
+     * <pre>
+     * available_team_allocation is the amount in $KYVE with which further team vesting accounts can be created.
+     * if the available amount is zero no new vesting accounts can be created
+     * </pre>
+     *
+     * <code>uint64 available_team_allocation = 5 [json_name = "availableTeamAllocation"];</code>
+     * @return The availableTeamAllocation.
+     */
+    long getAvailableTeamAllocation();
+
+    /**
+     * <pre>
+     * total_authority_rewards is the amount in $KYVE the authority has earned in total with inflation rewards.
+     * Those rewards can be payed out for different purposes
+     * </pre>
+     *
+     * <code>uint64 total_authority_rewards = 6 [json_name = "totalAuthorityRewards"];</code>
+     * @return The totalAuthorityRewards.
+     */
+    long getTotalAuthorityRewards();
+
+    /**
+     * <pre>
+     * claimed_authority_rewards is the amount in $KYVE of how much the authority already claimed
+     * </pre>
+     *
+     * <code>uint64 claimed_authority_rewards = 7 [json_name = "claimedAuthorityRewards"];</code>
+     * @return The claimedAuthorityRewards.
+     */
+    long getClaimedAuthorityRewards();
+
+    /**
+     * <pre>
+     * available_authority_rewards is the amount in $KYVE of how much rewards the authority can claim right now
+     * </pre>
+     *
+     * <code>uint64 available_authority_rewards = 8 [json_name = "availableAuthorityRewards"];</code>
+     * @return The availableAuthorityRewards.
+     */
+    long getAvailableAuthorityRewards();
+
+    /**
+     * <pre>
+     * total_account_rewards is the amount in $KYVE all team vesting accounts have ever received
+     * </pre>
+     *
+     * <code>uint64 total_account_rewards = 9 [json_name = "totalAccountRewards"];</code>
+     * @return The totalAccountRewards.
+     */
+    long getTotalAccountRewards();
+
+    /**
+     * <pre>
+     * claimed_account_rewards is the amount in $KYVE all team vesting accounts have ever claimed
+     * </pre>
+     *
+     * <code>uint64 claimed_account_rewards = 10 [json_name = "claimedAccountRewards"];</code>
+     * @return The claimedAccountRewards.
+     */
+    long getClaimedAccountRewards();
+
+    /**
+     * <pre>
+     * available_account_rewards is the total amount of $KYVE all team vesting accounts can currently claim
+     * </pre>
+     *
+     * <code>uint64 available_account_rewards = 11 [json_name = "availableAccountRewards"];</code>
+     * @return The availableAccountRewards.
+     */
+    long getAvailableAccountRewards();
+
+    /**
+     * <pre>
+     * required_module_balance is the balance the team module should have. If this is less than the module balance
+     * something went wrong
+     * </pre>
+     *
+     * <code>uint64 required_module_balance = 12 [json_name = "requiredModuleBalance"];</code>
+     * @return The requiredModuleBalance.
+     */
+    long getRequiredModuleBalance();
+
+    /**
+     * <pre>
+     * team_module_balance is the team module balance in $KYVE
+     * </pre>
+     *
+     * <code>uint64 team_module_balance = 13 [json_name = "teamModuleBalance"];</code>
+     * @return The teamModuleBalance.
+     */
+    long getTeamModuleBalance();
+  }
+  /**
+   * <pre>
+   * QueryAccountsResponse is response type for the Query/TeamInfo RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code kyve.team.v1beta1.QueryTeamInfoResponse}
+   */
+  public static final class QueryTeamInfoResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.team.v1beta1.QueryTeamInfoResponse)
+      QueryTeamInfoResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTeamInfoResponse.newBuilder() to construct.
+    private QueryTeamInfoResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTeamInfoResponse() {
+      foundationAuthority_ = "";
+      bcpAuthority_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTeamInfoResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamInfoResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamInfoResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.team.v1beta1.QueryProto.QueryTeamInfoResponse.class, com.kyve.team.v1beta1.QueryProto.QueryTeamInfoResponse.Builder.class);
+    }
+
+    public static final int FOUNDATION_AUTHORITY_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object foundationAuthority_ = "";
+    /**
+     * <pre>
+     * foundation is the authority foundation address
+     * </pre>
+     *
+     * <code>string foundation_authority = 1 [json_name = "foundationAuthority"];</code>
+     * @return The foundationAuthority.
+     */
+    @java.lang.Override
+    public java.lang.String getFoundationAuthority() {
+      java.lang.Object ref = foundationAuthority_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        foundationAuthority_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * foundation is the authority foundation address
+     * </pre>
+     *
+     * <code>string foundation_authority = 1 [json_name = "foundationAuthority"];</code>
+     * @return The bytes for foundationAuthority.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFoundationAuthorityBytes() {
+      java.lang.Object ref = foundationAuthority_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        foundationAuthority_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int BCP_AUTHORITY_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object bcpAuthority_ = "";
+    /**
+     * <pre>
+     * bcp is the authority bcp address
+     * </pre>
+     *
+     * <code>string bcp_authority = 2 [json_name = "bcpAuthority"];</code>
+     * @return The bcpAuthority.
+     */
+    @java.lang.Override
+    public java.lang.String getBcpAuthority() {
+      java.lang.Object ref = bcpAuthority_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bcpAuthority_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * bcp is the authority bcp address
+     * </pre>
+     *
+     * <code>string bcp_authority = 2 [json_name = "bcpAuthority"];</code>
+     * @return The bytes for bcpAuthority.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBcpAuthorityBytes() {
+      java.lang.Object ref = bcpAuthority_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bcpAuthority_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOTAL_TEAM_ALLOCATION_FIELD_NUMBER = 3;
+    private long totalTeamAllocation_ = 0L;
+    /**
+     * <pre>
+     * total_team_allocation is the total allocation in $KYVE the team module has in order to reward team members
+     * </pre>
+     *
+     * <code>uint64 total_team_allocation = 3 [json_name = "totalTeamAllocation"];</code>
+     * @return The totalTeamAllocation.
+     */
+    @java.lang.Override
+    public long getTotalTeamAllocation() {
+      return totalTeamAllocation_;
+    }
+
+    public static final int ISSUED_TEAM_ALLOCATION_FIELD_NUMBER = 4;
+    private long issuedTeamAllocation_ = 0L;
+    /**
+     * <pre>
+     * issued_team_allocation is the amount in $KYVE tied to team vesting accounts and which are not available anymore
+     * </pre>
+     *
+     * <code>uint64 issued_team_allocation = 4 [json_name = "issuedTeamAllocation"];</code>
+     * @return The issuedTeamAllocation.
+     */
+    @java.lang.Override
+    public long getIssuedTeamAllocation() {
+      return issuedTeamAllocation_;
+    }
+
+    public static final int AVAILABLE_TEAM_ALLOCATION_FIELD_NUMBER = 5;
+    private long availableTeamAllocation_ = 0L;
+    /**
+     * <pre>
+     * available_team_allocation is the amount in $KYVE with which further team vesting accounts can be created.
+     * if the available amount is zero no new vesting accounts can be created
+     * </pre>
+     *
+     * <code>uint64 available_team_allocation = 5 [json_name = "availableTeamAllocation"];</code>
+     * @return The availableTeamAllocation.
+     */
+    @java.lang.Override
+    public long getAvailableTeamAllocation() {
+      return availableTeamAllocation_;
+    }
+
+    public static final int TOTAL_AUTHORITY_REWARDS_FIELD_NUMBER = 6;
+    private long totalAuthorityRewards_ = 0L;
+    /**
+     * <pre>
+     * total_authority_rewards is the amount in $KYVE the authority has earned in total with inflation rewards.
+     * Those rewards can be payed out for different purposes
+     * </pre>
+     *
+     * <code>uint64 total_authority_rewards = 6 [json_name = "totalAuthorityRewards"];</code>
+     * @return The totalAuthorityRewards.
+     */
+    @java.lang.Override
+    public long getTotalAuthorityRewards() {
+      return totalAuthorityRewards_;
+    }
+
+    public static final int CLAIMED_AUTHORITY_REWARDS_FIELD_NUMBER = 7;
+    private long claimedAuthorityRewards_ = 0L;
+    /**
+     * <pre>
+     * claimed_authority_rewards is the amount in $KYVE of how much the authority already claimed
+     * </pre>
+     *
+     * <code>uint64 claimed_authority_rewards = 7 [json_name = "claimedAuthorityRewards"];</code>
+     * @return The claimedAuthorityRewards.
+     */
+    @java.lang.Override
+    public long getClaimedAuthorityRewards() {
+      return claimedAuthorityRewards_;
+    }
+
+    public static final int AVAILABLE_AUTHORITY_REWARDS_FIELD_NUMBER = 8;
+    private long availableAuthorityRewards_ = 0L;
+    /**
+     * <pre>
+     * available_authority_rewards is the amount in $KYVE of how much rewards the authority can claim right now
+     * </pre>
+     *
+     * <code>uint64 available_authority_rewards = 8 [json_name = "availableAuthorityRewards"];</code>
+     * @return The availableAuthorityRewards.
+     */
+    @java.lang.Override
+    public long getAvailableAuthorityRewards() {
+      return availableAuthorityRewards_;
+    }
+
+    public static final int TOTAL_ACCOUNT_REWARDS_FIELD_NUMBER = 9;
+    private long totalAccountRewards_ = 0L;
+    /**
+     * <pre>
+     * total_account_rewards is the amount in $KYVE all team vesting accounts have ever received
+     * </pre>
+     *
+     * <code>uint64 total_account_rewards = 9 [json_name = "totalAccountRewards"];</code>
+     * @return The totalAccountRewards.
+     */
+    @java.lang.Override
+    public long getTotalAccountRewards() {
+      return totalAccountRewards_;
+    }
+
+    public static final int CLAIMED_ACCOUNT_REWARDS_FIELD_NUMBER = 10;
+    private long claimedAccountRewards_ = 0L;
+    /**
+     * <pre>
+     * claimed_account_rewards is the amount in $KYVE all team vesting accounts have ever claimed
+     * </pre>
+     *
+     * <code>uint64 claimed_account_rewards = 10 [json_name = "claimedAccountRewards"];</code>
+     * @return The claimedAccountRewards.
+     */
+    @java.lang.Override
+    public long getClaimedAccountRewards() {
+      return claimedAccountRewards_;
+    }
+
+    public static final int AVAILABLE_ACCOUNT_REWARDS_FIELD_NUMBER = 11;
+    private long availableAccountRewards_ = 0L;
+    /**
+     * <pre>
+     * available_account_rewards is the total amount of $KYVE all team vesting accounts can currently claim
+     * </pre>
+     *
+     * <code>uint64 available_account_rewards = 11 [json_name = "availableAccountRewards"];</code>
+     * @return The availableAccountRewards.
+     */
+    @java.lang.Override
+    public long getAvailableAccountRewards() {
+      return availableAccountRewards_;
+    }
+
+    public static final int REQUIRED_MODULE_BALANCE_FIELD_NUMBER = 12;
+    private long requiredModuleBalance_ = 0L;
+    /**
+     * <pre>
+     * required_module_balance is the balance the team module should have. If this is less than the module balance
+     * something went wrong
+     * </pre>
+     *
+     * <code>uint64 required_module_balance = 12 [json_name = "requiredModuleBalance"];</code>
+     * @return The requiredModuleBalance.
+     */
+    @java.lang.Override
+    public long getRequiredModuleBalance() {
+      return requiredModuleBalance_;
+    }
+
+    public static final int TEAM_MODULE_BALANCE_FIELD_NUMBER = 13;
+    private long teamModuleBalance_ = 0L;
+    /**
+     * <pre>
+     * team_module_balance is the team module balance in $KYVE
+     * </pre>
+     *
+     * <code>uint64 team_module_balance = 13 [json_name = "teamModuleBalance"];</code>
+     * @return The teamModuleBalance.
+     */
+    @java.lang.Override
+    public long getTeamModuleBalance() {
+      return teamModuleBalance_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(foundationAuthority_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, foundationAuthority_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bcpAuthority_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, bcpAuthority_);
+      }
+      if (totalTeamAllocation_ != 0L) {
+        output.writeUInt64(3, totalTeamAllocation_);
+      }
+      if (issuedTeamAllocation_ != 0L) {
+        output.writeUInt64(4, issuedTeamAllocation_);
+      }
+      if (availableTeamAllocation_ != 0L) {
+        output.writeUInt64(5, availableTeamAllocation_);
+      }
+      if (totalAuthorityRewards_ != 0L) {
+        output.writeUInt64(6, totalAuthorityRewards_);
+      }
+      if (claimedAuthorityRewards_ != 0L) {
+        output.writeUInt64(7, claimedAuthorityRewards_);
+      }
+      if (availableAuthorityRewards_ != 0L) {
+        output.writeUInt64(8, availableAuthorityRewards_);
+      }
+      if (totalAccountRewards_ != 0L) {
+        output.writeUInt64(9, totalAccountRewards_);
+      }
+      if (claimedAccountRewards_ != 0L) {
+        output.writeUInt64(10, claimedAccountRewards_);
+      }
+      if (availableAccountRewards_ != 0L) {
+        output.writeUInt64(11, availableAccountRewards_);
+      }
+      if (requiredModuleBalance_ != 0L) {
+        output.writeUInt64(12, requiredModuleBalance_);
+      }
+      if (teamModuleBalance_ != 0L) {
+        output.writeUInt64(13, teamModuleBalance_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(foundationAuthority_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, foundationAuthority_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bcpAuthority_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, bcpAuthority_);
+      }
+      if (totalTeamAllocation_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, totalTeamAllocation_);
+      }
+      if (issuedTeamAllocation_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, issuedTeamAllocation_);
+      }
+      if (availableTeamAllocation_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(5, availableTeamAllocation_);
+      }
+      if (totalAuthorityRewards_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(6, totalAuthorityRewards_);
+      }
+      if (claimedAuthorityRewards_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(7, claimedAuthorityRewards_);
+      }
+      if (availableAuthorityRewards_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(8, availableAuthorityRewards_);
+      }
+      if (totalAccountRewards_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(9, totalAccountRewards_);
+      }
+      if (claimedAccountRewards_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(10, claimedAccountRewards_);
+      }
+      if (availableAccountRewards_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(11, availableAccountRewards_);
+      }
+      if (requiredModuleBalance_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(12, requiredModuleBalance_);
+      }
+      if (teamModuleBalance_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(13, teamModuleBalance_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.team.v1beta1.QueryProto.QueryTeamInfoResponse)) {
+        return super.equals(obj);
+      }
+      com.kyve.team.v1beta1.QueryProto.QueryTeamInfoResponse other = (com.kyve.team.v1beta1.QueryProto.QueryTeamInfoResponse) obj;
+
+      if (!getFoundationAuthority()
+          .equals(other.getFoundationAuthority())) return false;
+      if (!getBcpAuthority()
+          .equals(other.getBcpAuthority())) return false;
+      if (getTotalTeamAllocation()
+          != other.getTotalTeamAllocation()) return false;
+      if (getIssuedTeamAllocation()
+          != other.getIssuedTeamAllocation()) return false;
+      if (getAvailableTeamAllocation()
+          != other.getAvailableTeamAllocation()) return false;
+      if (getTotalAuthorityRewards()
+          != other.getTotalAuthorityRewards()) return false;
+      if (getClaimedAuthorityRewards()
+          != other.getClaimedAuthorityRewards()) return false;
+      if (getAvailableAuthorityRewards()
+          != other.getAvailableAuthorityRewards()) return false;
+      if (getTotalAccountRewards()
+          != other.getTotalAccountRewards()) return false;
+      if (getClaimedAccountRewards()
+          != other.getClaimedAccountRewards()) return false;
+      if (getAvailableAccountRewards()
+          != other.getAvailableAccountRewards()) return false;
+      if (getRequiredModuleBalance()
+          != other.getRequiredModuleBalance()) return false;
+      if (getTeamModuleBalance()
+          != other.getTeamModuleBalance()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FOUNDATION_AUTHORITY_FIELD_NUMBER;
+      hash = (53 * hash) + getFoundationAuthority().hashCode();
+      hash = (37 * hash) + BCP_AUTHORITY_FIELD_NUMBER;
+      hash = (53 * hash) + getBcpAuthority().hashCode();
+      hash = (37 * hash) + TOTAL_TEAM_ALLOCATION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTotalTeamAllocation());
+      hash = (37 * hash) + ISSUED_TEAM_ALLOCATION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getIssuedTeamAllocation());
+      hash = (37 * hash) + AVAILABLE_TEAM_ALLOCATION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAvailableTeamAllocation());
+      hash = (37 * hash) + TOTAL_AUTHORITY_REWARDS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTotalAuthorityRewards());
+      hash = (37 * hash) + CLAIMED_AUTHORITY_REWARDS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getClaimedAuthorityRewards());
+      hash = (37 * hash) + AVAILABLE_AUTHORITY_REWARDS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAvailableAuthorityRewards());
+      hash = (37 * hash) + TOTAL_ACCOUNT_REWARDS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTotalAccountRewards());
+      hash = (37 * hash) + CLAIMED_ACCOUNT_REWARDS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getClaimedAccountRewards());
+      hash = (37 * hash) + AVAILABLE_ACCOUNT_REWARDS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAvailableAccountRewards());
+      hash = (37 * hash) + REQUIRED_MODULE_BALANCE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRequiredModuleBalance());
+      hash = (37 * hash) + TEAM_MODULE_BALANCE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTeamModuleBalance());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamInfoResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamInfoResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamInfoResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamInfoResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamInfoResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamInfoResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamInfoResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamInfoResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamInfoResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamInfoResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamInfoResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamInfoResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.team.v1beta1.QueryProto.QueryTeamInfoResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryAccountsResponse is response type for the Query/TeamInfo RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code kyve.team.v1beta1.QueryTeamInfoResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.team.v1beta1.QueryTeamInfoResponse)
+        com.kyve.team.v1beta1.QueryProto.QueryTeamInfoResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamInfoResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamInfoResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.team.v1beta1.QueryProto.QueryTeamInfoResponse.class, com.kyve.team.v1beta1.QueryProto.QueryTeamInfoResponse.Builder.class);
+      }
+
+      // Construct using com.kyve.team.v1beta1.QueryProto.QueryTeamInfoResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        foundationAuthority_ = "";
+        bcpAuthority_ = "";
+        totalTeamAllocation_ = 0L;
+        issuedTeamAllocation_ = 0L;
+        availableTeamAllocation_ = 0L;
+        totalAuthorityRewards_ = 0L;
+        claimedAuthorityRewards_ = 0L;
+        availableAuthorityRewards_ = 0L;
+        totalAccountRewards_ = 0L;
+        claimedAccountRewards_ = 0L;
+        availableAccountRewards_ = 0L;
+        requiredModuleBalance_ = 0L;
+        teamModuleBalance_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamInfoResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.QueryProto.QueryTeamInfoResponse getDefaultInstanceForType() {
+        return com.kyve.team.v1beta1.QueryProto.QueryTeamInfoResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.QueryProto.QueryTeamInfoResponse build() {
+        com.kyve.team.v1beta1.QueryProto.QueryTeamInfoResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.QueryProto.QueryTeamInfoResponse buildPartial() {
+        com.kyve.team.v1beta1.QueryProto.QueryTeamInfoResponse result = new com.kyve.team.v1beta1.QueryProto.QueryTeamInfoResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.team.v1beta1.QueryProto.QueryTeamInfoResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.foundationAuthority_ = foundationAuthority_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.bcpAuthority_ = bcpAuthority_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.totalTeamAllocation_ = totalTeamAllocation_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.issuedTeamAllocation_ = issuedTeamAllocation_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.availableTeamAllocation_ = availableTeamAllocation_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.totalAuthorityRewards_ = totalAuthorityRewards_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.claimedAuthorityRewards_ = claimedAuthorityRewards_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.availableAuthorityRewards_ = availableAuthorityRewards_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.totalAccountRewards_ = totalAccountRewards_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.claimedAccountRewards_ = claimedAccountRewards_;
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.availableAccountRewards_ = availableAccountRewards_;
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.requiredModuleBalance_ = requiredModuleBalance_;
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.teamModuleBalance_ = teamModuleBalance_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.team.v1beta1.QueryProto.QueryTeamInfoResponse) {
+          return mergeFrom((com.kyve.team.v1beta1.QueryProto.QueryTeamInfoResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.team.v1beta1.QueryProto.QueryTeamInfoResponse other) {
+        if (other == com.kyve.team.v1beta1.QueryProto.QueryTeamInfoResponse.getDefaultInstance()) return this;
+        if (!other.getFoundationAuthority().isEmpty()) {
+          foundationAuthority_ = other.foundationAuthority_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getBcpAuthority().isEmpty()) {
+          bcpAuthority_ = other.bcpAuthority_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.getTotalTeamAllocation() != 0L) {
+          setTotalTeamAllocation(other.getTotalTeamAllocation());
+        }
+        if (other.getIssuedTeamAllocation() != 0L) {
+          setIssuedTeamAllocation(other.getIssuedTeamAllocation());
+        }
+        if (other.getAvailableTeamAllocation() != 0L) {
+          setAvailableTeamAllocation(other.getAvailableTeamAllocation());
+        }
+        if (other.getTotalAuthorityRewards() != 0L) {
+          setTotalAuthorityRewards(other.getTotalAuthorityRewards());
+        }
+        if (other.getClaimedAuthorityRewards() != 0L) {
+          setClaimedAuthorityRewards(other.getClaimedAuthorityRewards());
+        }
+        if (other.getAvailableAuthorityRewards() != 0L) {
+          setAvailableAuthorityRewards(other.getAvailableAuthorityRewards());
+        }
+        if (other.getTotalAccountRewards() != 0L) {
+          setTotalAccountRewards(other.getTotalAccountRewards());
+        }
+        if (other.getClaimedAccountRewards() != 0L) {
+          setClaimedAccountRewards(other.getClaimedAccountRewards());
+        }
+        if (other.getAvailableAccountRewards() != 0L) {
+          setAvailableAccountRewards(other.getAvailableAccountRewards());
+        }
+        if (other.getRequiredModuleBalance() != 0L) {
+          setRequiredModuleBalance(other.getRequiredModuleBalance());
+        }
+        if (other.getTeamModuleBalance() != 0L) {
+          setTeamModuleBalance(other.getTeamModuleBalance());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                foundationAuthority_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                bcpAuthority_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 24: {
+                totalTeamAllocation_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                issuedTeamAllocation_ = input.readUInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 40: {
+                availableTeamAllocation_ = input.readUInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 48: {
+                totalAuthorityRewards_ = input.readUInt64();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              case 56: {
+                claimedAuthorityRewards_ = input.readUInt64();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              case 64: {
+                availableAuthorityRewards_ = input.readUInt64();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
+              case 72: {
+                totalAccountRewards_ = input.readUInt64();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 72
+              case 80: {
+                claimedAccountRewards_ = input.readUInt64();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 80
+              case 88: {
+                availableAccountRewards_ = input.readUInt64();
+                bitField0_ |= 0x00000400;
+                break;
+              } // case 88
+              case 96: {
+                requiredModuleBalance_ = input.readUInt64();
+                bitField0_ |= 0x00000800;
+                break;
+              } // case 96
+              case 104: {
+                teamModuleBalance_ = input.readUInt64();
+                bitField0_ |= 0x00001000;
+                break;
+              } // case 104
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object foundationAuthority_ = "";
+      /**
+       * <pre>
+       * foundation is the authority foundation address
+       * </pre>
+       *
+       * <code>string foundation_authority = 1 [json_name = "foundationAuthority"];</code>
+       * @return The foundationAuthority.
+       */
+      public java.lang.String getFoundationAuthority() {
+        java.lang.Object ref = foundationAuthority_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          foundationAuthority_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * foundation is the authority foundation address
+       * </pre>
+       *
+       * <code>string foundation_authority = 1 [json_name = "foundationAuthority"];</code>
+       * @return The bytes for foundationAuthority.
+       */
+      public com.google.protobuf.ByteString
+          getFoundationAuthorityBytes() {
+        java.lang.Object ref = foundationAuthority_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          foundationAuthority_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * foundation is the authority foundation address
+       * </pre>
+       *
+       * <code>string foundation_authority = 1 [json_name = "foundationAuthority"];</code>
+       * @param value The foundationAuthority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFoundationAuthority(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        foundationAuthority_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * foundation is the authority foundation address
+       * </pre>
+       *
+       * <code>string foundation_authority = 1 [json_name = "foundationAuthority"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFoundationAuthority() {
+        foundationAuthority_ = getDefaultInstance().getFoundationAuthority();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * foundation is the authority foundation address
+       * </pre>
+       *
+       * <code>string foundation_authority = 1 [json_name = "foundationAuthority"];</code>
+       * @param value The bytes for foundationAuthority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFoundationAuthorityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        foundationAuthority_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object bcpAuthority_ = "";
+      /**
+       * <pre>
+       * bcp is the authority bcp address
+       * </pre>
+       *
+       * <code>string bcp_authority = 2 [json_name = "bcpAuthority"];</code>
+       * @return The bcpAuthority.
+       */
+      public java.lang.String getBcpAuthority() {
+        java.lang.Object ref = bcpAuthority_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bcpAuthority_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * bcp is the authority bcp address
+       * </pre>
+       *
+       * <code>string bcp_authority = 2 [json_name = "bcpAuthority"];</code>
+       * @return The bytes for bcpAuthority.
+       */
+      public com.google.protobuf.ByteString
+          getBcpAuthorityBytes() {
+        java.lang.Object ref = bcpAuthority_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bcpAuthority_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * bcp is the authority bcp address
+       * </pre>
+       *
+       * <code>string bcp_authority = 2 [json_name = "bcpAuthority"];</code>
+       * @param value The bcpAuthority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBcpAuthority(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        bcpAuthority_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * bcp is the authority bcp address
+       * </pre>
+       *
+       * <code>string bcp_authority = 2 [json_name = "bcpAuthority"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBcpAuthority() {
+        bcpAuthority_ = getDefaultInstance().getBcpAuthority();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * bcp is the authority bcp address
+       * </pre>
+       *
+       * <code>string bcp_authority = 2 [json_name = "bcpAuthority"];</code>
+       * @param value The bytes for bcpAuthority to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBcpAuthorityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        bcpAuthority_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private long totalTeamAllocation_ ;
+      /**
+       * <pre>
+       * total_team_allocation is the total allocation in $KYVE the team module has in order to reward team members
+       * </pre>
+       *
+       * <code>uint64 total_team_allocation = 3 [json_name = "totalTeamAllocation"];</code>
+       * @return The totalTeamAllocation.
+       */
+      @java.lang.Override
+      public long getTotalTeamAllocation() {
+        return totalTeamAllocation_;
+      }
+      /**
+       * <pre>
+       * total_team_allocation is the total allocation in $KYVE the team module has in order to reward team members
+       * </pre>
+       *
+       * <code>uint64 total_team_allocation = 3 [json_name = "totalTeamAllocation"];</code>
+       * @param value The totalTeamAllocation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalTeamAllocation(long value) {
+
+        totalTeamAllocation_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total_team_allocation is the total allocation in $KYVE the team module has in order to reward team members
+       * </pre>
+       *
+       * <code>uint64 total_team_allocation = 3 [json_name = "totalTeamAllocation"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalTeamAllocation() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        totalTeamAllocation_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long issuedTeamAllocation_ ;
+      /**
+       * <pre>
+       * issued_team_allocation is the amount in $KYVE tied to team vesting accounts and which are not available anymore
+       * </pre>
+       *
+       * <code>uint64 issued_team_allocation = 4 [json_name = "issuedTeamAllocation"];</code>
+       * @return The issuedTeamAllocation.
+       */
+      @java.lang.Override
+      public long getIssuedTeamAllocation() {
+        return issuedTeamAllocation_;
+      }
+      /**
+       * <pre>
+       * issued_team_allocation is the amount in $KYVE tied to team vesting accounts and which are not available anymore
+       * </pre>
+       *
+       * <code>uint64 issued_team_allocation = 4 [json_name = "issuedTeamAllocation"];</code>
+       * @param value The issuedTeamAllocation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIssuedTeamAllocation(long value) {
+
+        issuedTeamAllocation_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * issued_team_allocation is the amount in $KYVE tied to team vesting accounts and which are not available anymore
+       * </pre>
+       *
+       * <code>uint64 issued_team_allocation = 4 [json_name = "issuedTeamAllocation"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIssuedTeamAllocation() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        issuedTeamAllocation_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long availableTeamAllocation_ ;
+      /**
+       * <pre>
+       * available_team_allocation is the amount in $KYVE with which further team vesting accounts can be created.
+       * if the available amount is zero no new vesting accounts can be created
+       * </pre>
+       *
+       * <code>uint64 available_team_allocation = 5 [json_name = "availableTeamAllocation"];</code>
+       * @return The availableTeamAllocation.
+       */
+      @java.lang.Override
+      public long getAvailableTeamAllocation() {
+        return availableTeamAllocation_;
+      }
+      /**
+       * <pre>
+       * available_team_allocation is the amount in $KYVE with which further team vesting accounts can be created.
+       * if the available amount is zero no new vesting accounts can be created
+       * </pre>
+       *
+       * <code>uint64 available_team_allocation = 5 [json_name = "availableTeamAllocation"];</code>
+       * @param value The availableTeamAllocation to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAvailableTeamAllocation(long value) {
+
+        availableTeamAllocation_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * available_team_allocation is the amount in $KYVE with which further team vesting accounts can be created.
+       * if the available amount is zero no new vesting accounts can be created
+       * </pre>
+       *
+       * <code>uint64 available_team_allocation = 5 [json_name = "availableTeamAllocation"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAvailableTeamAllocation() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        availableTeamAllocation_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long totalAuthorityRewards_ ;
+      /**
+       * <pre>
+       * total_authority_rewards is the amount in $KYVE the authority has earned in total with inflation rewards.
+       * Those rewards can be payed out for different purposes
+       * </pre>
+       *
+       * <code>uint64 total_authority_rewards = 6 [json_name = "totalAuthorityRewards"];</code>
+       * @return The totalAuthorityRewards.
+       */
+      @java.lang.Override
+      public long getTotalAuthorityRewards() {
+        return totalAuthorityRewards_;
+      }
+      /**
+       * <pre>
+       * total_authority_rewards is the amount in $KYVE the authority has earned in total with inflation rewards.
+       * Those rewards can be payed out for different purposes
+       * </pre>
+       *
+       * <code>uint64 total_authority_rewards = 6 [json_name = "totalAuthorityRewards"];</code>
+       * @param value The totalAuthorityRewards to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalAuthorityRewards(long value) {
+
+        totalAuthorityRewards_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total_authority_rewards is the amount in $KYVE the authority has earned in total with inflation rewards.
+       * Those rewards can be payed out for different purposes
+       * </pre>
+       *
+       * <code>uint64 total_authority_rewards = 6 [json_name = "totalAuthorityRewards"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalAuthorityRewards() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        totalAuthorityRewards_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long claimedAuthorityRewards_ ;
+      /**
+       * <pre>
+       * claimed_authority_rewards is the amount in $KYVE of how much the authority already claimed
+       * </pre>
+       *
+       * <code>uint64 claimed_authority_rewards = 7 [json_name = "claimedAuthorityRewards"];</code>
+       * @return The claimedAuthorityRewards.
+       */
+      @java.lang.Override
+      public long getClaimedAuthorityRewards() {
+        return claimedAuthorityRewards_;
+      }
+      /**
+       * <pre>
+       * claimed_authority_rewards is the amount in $KYVE of how much the authority already claimed
+       * </pre>
+       *
+       * <code>uint64 claimed_authority_rewards = 7 [json_name = "claimedAuthorityRewards"];</code>
+       * @param value The claimedAuthorityRewards to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimedAuthorityRewards(long value) {
+
+        claimedAuthorityRewards_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * claimed_authority_rewards is the amount in $KYVE of how much the authority already claimed
+       * </pre>
+       *
+       * <code>uint64 claimed_authority_rewards = 7 [json_name = "claimedAuthorityRewards"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClaimedAuthorityRewards() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        claimedAuthorityRewards_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long availableAuthorityRewards_ ;
+      /**
+       * <pre>
+       * available_authority_rewards is the amount in $KYVE of how much rewards the authority can claim right now
+       * </pre>
+       *
+       * <code>uint64 available_authority_rewards = 8 [json_name = "availableAuthorityRewards"];</code>
+       * @return The availableAuthorityRewards.
+       */
+      @java.lang.Override
+      public long getAvailableAuthorityRewards() {
+        return availableAuthorityRewards_;
+      }
+      /**
+       * <pre>
+       * available_authority_rewards is the amount in $KYVE of how much rewards the authority can claim right now
+       * </pre>
+       *
+       * <code>uint64 available_authority_rewards = 8 [json_name = "availableAuthorityRewards"];</code>
+       * @param value The availableAuthorityRewards to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAvailableAuthorityRewards(long value) {
+
+        availableAuthorityRewards_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * available_authority_rewards is the amount in $KYVE of how much rewards the authority can claim right now
+       * </pre>
+       *
+       * <code>uint64 available_authority_rewards = 8 [json_name = "availableAuthorityRewards"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAvailableAuthorityRewards() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        availableAuthorityRewards_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long totalAccountRewards_ ;
+      /**
+       * <pre>
+       * total_account_rewards is the amount in $KYVE all team vesting accounts have ever received
+       * </pre>
+       *
+       * <code>uint64 total_account_rewards = 9 [json_name = "totalAccountRewards"];</code>
+       * @return The totalAccountRewards.
+       */
+      @java.lang.Override
+      public long getTotalAccountRewards() {
+        return totalAccountRewards_;
+      }
+      /**
+       * <pre>
+       * total_account_rewards is the amount in $KYVE all team vesting accounts have ever received
+       * </pre>
+       *
+       * <code>uint64 total_account_rewards = 9 [json_name = "totalAccountRewards"];</code>
+       * @param value The totalAccountRewards to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalAccountRewards(long value) {
+
+        totalAccountRewards_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total_account_rewards is the amount in $KYVE all team vesting accounts have ever received
+       * </pre>
+       *
+       * <code>uint64 total_account_rewards = 9 [json_name = "totalAccountRewards"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalAccountRewards() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        totalAccountRewards_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long claimedAccountRewards_ ;
+      /**
+       * <pre>
+       * claimed_account_rewards is the amount in $KYVE all team vesting accounts have ever claimed
+       * </pre>
+       *
+       * <code>uint64 claimed_account_rewards = 10 [json_name = "claimedAccountRewards"];</code>
+       * @return The claimedAccountRewards.
+       */
+      @java.lang.Override
+      public long getClaimedAccountRewards() {
+        return claimedAccountRewards_;
+      }
+      /**
+       * <pre>
+       * claimed_account_rewards is the amount in $KYVE all team vesting accounts have ever claimed
+       * </pre>
+       *
+       * <code>uint64 claimed_account_rewards = 10 [json_name = "claimedAccountRewards"];</code>
+       * @param value The claimedAccountRewards to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimedAccountRewards(long value) {
+
+        claimedAccountRewards_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * claimed_account_rewards is the amount in $KYVE all team vesting accounts have ever claimed
+       * </pre>
+       *
+       * <code>uint64 claimed_account_rewards = 10 [json_name = "claimedAccountRewards"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClaimedAccountRewards() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        claimedAccountRewards_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long availableAccountRewards_ ;
+      /**
+       * <pre>
+       * available_account_rewards is the total amount of $KYVE all team vesting accounts can currently claim
+       * </pre>
+       *
+       * <code>uint64 available_account_rewards = 11 [json_name = "availableAccountRewards"];</code>
+       * @return The availableAccountRewards.
+       */
+      @java.lang.Override
+      public long getAvailableAccountRewards() {
+        return availableAccountRewards_;
+      }
+      /**
+       * <pre>
+       * available_account_rewards is the total amount of $KYVE all team vesting accounts can currently claim
+       * </pre>
+       *
+       * <code>uint64 available_account_rewards = 11 [json_name = "availableAccountRewards"];</code>
+       * @param value The availableAccountRewards to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAvailableAccountRewards(long value) {
+
+        availableAccountRewards_ = value;
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * available_account_rewards is the total amount of $KYVE all team vesting accounts can currently claim
+       * </pre>
+       *
+       * <code>uint64 available_account_rewards = 11 [json_name = "availableAccountRewards"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAvailableAccountRewards() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        availableAccountRewards_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long requiredModuleBalance_ ;
+      /**
+       * <pre>
+       * required_module_balance is the balance the team module should have. If this is less than the module balance
+       * something went wrong
+       * </pre>
+       *
+       * <code>uint64 required_module_balance = 12 [json_name = "requiredModuleBalance"];</code>
+       * @return The requiredModuleBalance.
+       */
+      @java.lang.Override
+      public long getRequiredModuleBalance() {
+        return requiredModuleBalance_;
+      }
+      /**
+       * <pre>
+       * required_module_balance is the balance the team module should have. If this is less than the module balance
+       * something went wrong
+       * </pre>
+       *
+       * <code>uint64 required_module_balance = 12 [json_name = "requiredModuleBalance"];</code>
+       * @param value The requiredModuleBalance to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequiredModuleBalance(long value) {
+
+        requiredModuleBalance_ = value;
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * required_module_balance is the balance the team module should have. If this is less than the module balance
+       * something went wrong
+       * </pre>
+       *
+       * <code>uint64 required_module_balance = 12 [json_name = "requiredModuleBalance"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRequiredModuleBalance() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        requiredModuleBalance_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long teamModuleBalance_ ;
+      /**
+       * <pre>
+       * team_module_balance is the team module balance in $KYVE
+       * </pre>
+       *
+       * <code>uint64 team_module_balance = 13 [json_name = "teamModuleBalance"];</code>
+       * @return The teamModuleBalance.
+       */
+      @java.lang.Override
+      public long getTeamModuleBalance() {
+        return teamModuleBalance_;
+      }
+      /**
+       * <pre>
+       * team_module_balance is the team module balance in $KYVE
+       * </pre>
+       *
+       * <code>uint64 team_module_balance = 13 [json_name = "teamModuleBalance"];</code>
+       * @param value The teamModuleBalance to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTeamModuleBalance(long value) {
+
+        teamModuleBalance_ = value;
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * team_module_balance is the team module balance in $KYVE
+       * </pre>
+       *
+       * <code>uint64 team_module_balance = 13 [json_name = "teamModuleBalance"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTeamModuleBalance() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        teamModuleBalance_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.team.v1beta1.QueryTeamInfoResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.team.v1beta1.QueryTeamInfoResponse)
+    private static final com.kyve.team.v1beta1.QueryProto.QueryTeamInfoResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.team.v1beta1.QueryProto.QueryTeamInfoResponse();
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamInfoResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTeamInfoResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTeamInfoResponse>() {
+      @java.lang.Override
+      public QueryTeamInfoResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTeamInfoResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTeamInfoResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.team.v1beta1.QueryProto.QueryTeamInfoResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryTeamVestingAccountsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.team.v1beta1.QueryTeamVestingAccountsRequest)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * QueryAccountsRequest is request type for the Query/TeamVestingAccounts RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code kyve.team.v1beta1.QueryTeamVestingAccountsRequest}
+   */
+  public static final class QueryTeamVestingAccountsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.team.v1beta1.QueryTeamVestingAccountsRequest)
+      QueryTeamVestingAccountsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTeamVestingAccountsRequest.newBuilder() to construct.
+    private QueryTeamVestingAccountsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTeamVestingAccountsRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTeamVestingAccountsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingAccountsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingAccountsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsRequest.class, com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsRequest.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsRequest)) {
+        return super.equals(obj);
+      }
+      com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsRequest other = (com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsRequest) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryAccountsRequest is request type for the Query/TeamVestingAccounts RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code kyve.team.v1beta1.QueryTeamVestingAccountsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.team.v1beta1.QueryTeamVestingAccountsRequest)
+        com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingAccountsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingAccountsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsRequest.class, com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsRequest.Builder.class);
+      }
+
+      // Construct using com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingAccountsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsRequest getDefaultInstanceForType() {
+        return com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsRequest build() {
+        com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsRequest buildPartial() {
+        com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsRequest result = new com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsRequest(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsRequest) {
+          return mergeFrom((com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsRequest other) {
+        if (other == com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsRequest.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.team.v1beta1.QueryTeamVestingAccountsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.team.v1beta1.QueryTeamVestingAccountsRequest)
+    private static final com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsRequest();
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTeamVestingAccountsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTeamVestingAccountsRequest>() {
+      @java.lang.Override
+      public QueryTeamVestingAccountsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTeamVestingAccountsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTeamVestingAccountsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryTeamVestingAccountsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.team.v1beta1.QueryTeamVestingAccountsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * accounts holds all the team vesting accounts of this module.
+     * </pre>
+     *
+     * <code>repeated .kyve.team.v1beta1.TeamVestingAccount accounts = 1 [json_name = "accounts", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.kyve.team.v1beta1.TeamProto.TeamVestingAccount> 
+        getAccountsList();
+    /**
+     * <pre>
+     * accounts holds all the team vesting accounts of this module.
+     * </pre>
+     *
+     * <code>repeated .kyve.team.v1beta1.TeamVestingAccount accounts = 1 [json_name = "accounts", (.gogoproto.nullable) = false];</code>
+     */
+    com.kyve.team.v1beta1.TeamProto.TeamVestingAccount getAccounts(int index);
+    /**
+     * <pre>
+     * accounts holds all the team vesting accounts of this module.
+     * </pre>
+     *
+     * <code>repeated .kyve.team.v1beta1.TeamVestingAccount accounts = 1 [json_name = "accounts", (.gogoproto.nullable) = false];</code>
+     */
+    int getAccountsCount();
+    /**
+     * <pre>
+     * accounts holds all the team vesting accounts of this module.
+     * </pre>
+     *
+     * <code>repeated .kyve.team.v1beta1.TeamVestingAccount accounts = 1 [json_name = "accounts", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.kyve.team.v1beta1.TeamProto.TeamVestingAccountOrBuilder> 
+        getAccountsOrBuilderList();
+    /**
+     * <pre>
+     * accounts holds all the team vesting accounts of this module.
+     * </pre>
+     *
+     * <code>repeated .kyve.team.v1beta1.TeamVestingAccount accounts = 1 [json_name = "accounts", (.gogoproto.nullable) = false];</code>
+     */
+    com.kyve.team.v1beta1.TeamProto.TeamVestingAccountOrBuilder getAccountsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * QueryAccountsResponse is response type for the Query/TeamVestingAccounts RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code kyve.team.v1beta1.QueryTeamVestingAccountsResponse}
+   */
+  public static final class QueryTeamVestingAccountsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.team.v1beta1.QueryTeamVestingAccountsResponse)
+      QueryTeamVestingAccountsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTeamVestingAccountsResponse.newBuilder() to construct.
+    private QueryTeamVestingAccountsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTeamVestingAccountsResponse() {
+      accounts_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTeamVestingAccountsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingAccountsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingAccountsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponse.class, com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponse.Builder.class);
+    }
+
+    public static final int ACCOUNTS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.kyve.team.v1beta1.TeamProto.TeamVestingAccount> accounts_;
+    /**
+     * <pre>
+     * accounts holds all the team vesting accounts of this module.
+     * </pre>
+     *
+     * <code>repeated .kyve.team.v1beta1.TeamVestingAccount accounts = 1 [json_name = "accounts", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.kyve.team.v1beta1.TeamProto.TeamVestingAccount> getAccountsList() {
+      return accounts_;
+    }
+    /**
+     * <pre>
+     * accounts holds all the team vesting accounts of this module.
+     * </pre>
+     *
+     * <code>repeated .kyve.team.v1beta1.TeamVestingAccount accounts = 1 [json_name = "accounts", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.kyve.team.v1beta1.TeamProto.TeamVestingAccountOrBuilder> 
+        getAccountsOrBuilderList() {
+      return accounts_;
+    }
+    /**
+     * <pre>
+     * accounts holds all the team vesting accounts of this module.
+     * </pre>
+     *
+     * <code>repeated .kyve.team.v1beta1.TeamVestingAccount accounts = 1 [json_name = "accounts", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getAccountsCount() {
+      return accounts_.size();
+    }
+    /**
+     * <pre>
+     * accounts holds all the team vesting accounts of this module.
+     * </pre>
+     *
+     * <code>repeated .kyve.team.v1beta1.TeamVestingAccount accounts = 1 [json_name = "accounts", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.kyve.team.v1beta1.TeamProto.TeamVestingAccount getAccounts(int index) {
+      return accounts_.get(index);
+    }
+    /**
+     * <pre>
+     * accounts holds all the team vesting accounts of this module.
+     * </pre>
+     *
+     * <code>repeated .kyve.team.v1beta1.TeamVestingAccount accounts = 1 [json_name = "accounts", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.kyve.team.v1beta1.TeamProto.TeamVestingAccountOrBuilder getAccountsOrBuilder(
+        int index) {
+      return accounts_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < accounts_.size(); i++) {
+        output.writeMessage(1, accounts_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < accounts_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, accounts_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponse)) {
+        return super.equals(obj);
+      }
+      com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponse other = (com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponse) obj;
+
+      if (!getAccountsList()
+          .equals(other.getAccountsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getAccountsCount() > 0) {
+        hash = (37 * hash) + ACCOUNTS_FIELD_NUMBER;
+        hash = (53 * hash) + getAccountsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryAccountsResponse is response type for the Query/TeamVestingAccounts RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code kyve.team.v1beta1.QueryTeamVestingAccountsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.team.v1beta1.QueryTeamVestingAccountsResponse)
+        com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingAccountsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingAccountsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponse.class, com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponse.Builder.class);
+      }
+
+      // Construct using com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (accountsBuilder_ == null) {
+          accounts_ = java.util.Collections.emptyList();
+        } else {
+          accounts_ = null;
+          accountsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingAccountsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponse getDefaultInstanceForType() {
+        return com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponse build() {
+        com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponse buildPartial() {
+        com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponse result = new com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponse result) {
+        if (accountsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            accounts_ = java.util.Collections.unmodifiableList(accounts_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.accounts_ = accounts_;
+        } else {
+          result.accounts_ = accountsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponse) {
+          return mergeFrom((com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponse other) {
+        if (other == com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponse.getDefaultInstance()) return this;
+        if (accountsBuilder_ == null) {
+          if (!other.accounts_.isEmpty()) {
+            if (accounts_.isEmpty()) {
+              accounts_ = other.accounts_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureAccountsIsMutable();
+              accounts_.addAll(other.accounts_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.accounts_.isEmpty()) {
+            if (accountsBuilder_.isEmpty()) {
+              accountsBuilder_.dispose();
+              accountsBuilder_ = null;
+              accounts_ = other.accounts_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              accountsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAccountsFieldBuilder() : null;
+            } else {
+              accountsBuilder_.addAllMessages(other.accounts_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.kyve.team.v1beta1.TeamProto.TeamVestingAccount m =
+                    input.readMessage(
+                        com.kyve.team.v1beta1.TeamProto.TeamVestingAccount.parser(),
+                        extensionRegistry);
+                if (accountsBuilder_ == null) {
+                  ensureAccountsIsMutable();
+                  accounts_.add(m);
+                } else {
+                  accountsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.kyve.team.v1beta1.TeamProto.TeamVestingAccount> accounts_ =
+        java.util.Collections.emptyList();
+      private void ensureAccountsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          accounts_ = new java.util.ArrayList<com.kyve.team.v1beta1.TeamProto.TeamVestingAccount>(accounts_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.kyve.team.v1beta1.TeamProto.TeamVestingAccount, com.kyve.team.v1beta1.TeamProto.TeamVestingAccount.Builder, com.kyve.team.v1beta1.TeamProto.TeamVestingAccountOrBuilder> accountsBuilder_;
+
+      /**
+       * <pre>
+       * accounts holds all the team vesting accounts of this module.
+       * </pre>
+       *
+       * <code>repeated .kyve.team.v1beta1.TeamVestingAccount accounts = 1 [json_name = "accounts", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.kyve.team.v1beta1.TeamProto.TeamVestingAccount> getAccountsList() {
+        if (accountsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(accounts_);
+        } else {
+          return accountsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * accounts holds all the team vesting accounts of this module.
+       * </pre>
+       *
+       * <code>repeated .kyve.team.v1beta1.TeamVestingAccount accounts = 1 [json_name = "accounts", (.gogoproto.nullable) = false];</code>
+       */
+      public int getAccountsCount() {
+        if (accountsBuilder_ == null) {
+          return accounts_.size();
+        } else {
+          return accountsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * accounts holds all the team vesting accounts of this module.
+       * </pre>
+       *
+       * <code>repeated .kyve.team.v1beta1.TeamVestingAccount accounts = 1 [json_name = "accounts", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.team.v1beta1.TeamProto.TeamVestingAccount getAccounts(int index) {
+        if (accountsBuilder_ == null) {
+          return accounts_.get(index);
+        } else {
+          return accountsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * accounts holds all the team vesting accounts of this module.
+       * </pre>
+       *
+       * <code>repeated .kyve.team.v1beta1.TeamVestingAccount accounts = 1 [json_name = "accounts", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAccounts(
+          int index, com.kyve.team.v1beta1.TeamProto.TeamVestingAccount value) {
+        if (accountsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAccountsIsMutable();
+          accounts_.set(index, value);
+          onChanged();
+        } else {
+          accountsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * accounts holds all the team vesting accounts of this module.
+       * </pre>
+       *
+       * <code>repeated .kyve.team.v1beta1.TeamVestingAccount accounts = 1 [json_name = "accounts", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAccounts(
+          int index, com.kyve.team.v1beta1.TeamProto.TeamVestingAccount.Builder builderForValue) {
+        if (accountsBuilder_ == null) {
+          ensureAccountsIsMutable();
+          accounts_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          accountsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * accounts holds all the team vesting accounts of this module.
+       * </pre>
+       *
+       * <code>repeated .kyve.team.v1beta1.TeamVestingAccount accounts = 1 [json_name = "accounts", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAccounts(com.kyve.team.v1beta1.TeamProto.TeamVestingAccount value) {
+        if (accountsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAccountsIsMutable();
+          accounts_.add(value);
+          onChanged();
+        } else {
+          accountsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * accounts holds all the team vesting accounts of this module.
+       * </pre>
+       *
+       * <code>repeated .kyve.team.v1beta1.TeamVestingAccount accounts = 1 [json_name = "accounts", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAccounts(
+          int index, com.kyve.team.v1beta1.TeamProto.TeamVestingAccount value) {
+        if (accountsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAccountsIsMutable();
+          accounts_.add(index, value);
+          onChanged();
+        } else {
+          accountsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * accounts holds all the team vesting accounts of this module.
+       * </pre>
+       *
+       * <code>repeated .kyve.team.v1beta1.TeamVestingAccount accounts = 1 [json_name = "accounts", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAccounts(
+          com.kyve.team.v1beta1.TeamProto.TeamVestingAccount.Builder builderForValue) {
+        if (accountsBuilder_ == null) {
+          ensureAccountsIsMutable();
+          accounts_.add(builderForValue.build());
+          onChanged();
+        } else {
+          accountsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * accounts holds all the team vesting accounts of this module.
+       * </pre>
+       *
+       * <code>repeated .kyve.team.v1beta1.TeamVestingAccount accounts = 1 [json_name = "accounts", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAccounts(
+          int index, com.kyve.team.v1beta1.TeamProto.TeamVestingAccount.Builder builderForValue) {
+        if (accountsBuilder_ == null) {
+          ensureAccountsIsMutable();
+          accounts_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          accountsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * accounts holds all the team vesting accounts of this module.
+       * </pre>
+       *
+       * <code>repeated .kyve.team.v1beta1.TeamVestingAccount accounts = 1 [json_name = "accounts", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllAccounts(
+          java.lang.Iterable<? extends com.kyve.team.v1beta1.TeamProto.TeamVestingAccount> values) {
+        if (accountsBuilder_ == null) {
+          ensureAccountsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, accounts_);
+          onChanged();
+        } else {
+          accountsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * accounts holds all the team vesting accounts of this module.
+       * </pre>
+       *
+       * <code>repeated .kyve.team.v1beta1.TeamVestingAccount accounts = 1 [json_name = "accounts", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearAccounts() {
+        if (accountsBuilder_ == null) {
+          accounts_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          accountsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * accounts holds all the team vesting accounts of this module.
+       * </pre>
+       *
+       * <code>repeated .kyve.team.v1beta1.TeamVestingAccount accounts = 1 [json_name = "accounts", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeAccounts(int index) {
+        if (accountsBuilder_ == null) {
+          ensureAccountsIsMutable();
+          accounts_.remove(index);
+          onChanged();
+        } else {
+          accountsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * accounts holds all the team vesting accounts of this module.
+       * </pre>
+       *
+       * <code>repeated .kyve.team.v1beta1.TeamVestingAccount accounts = 1 [json_name = "accounts", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.team.v1beta1.TeamProto.TeamVestingAccount.Builder getAccountsBuilder(
+          int index) {
+        return getAccountsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * accounts holds all the team vesting accounts of this module.
+       * </pre>
+       *
+       * <code>repeated .kyve.team.v1beta1.TeamVestingAccount accounts = 1 [json_name = "accounts", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.team.v1beta1.TeamProto.TeamVestingAccountOrBuilder getAccountsOrBuilder(
+          int index) {
+        if (accountsBuilder_ == null) {
+          return accounts_.get(index);  } else {
+          return accountsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * accounts holds all the team vesting accounts of this module.
+       * </pre>
+       *
+       * <code>repeated .kyve.team.v1beta1.TeamVestingAccount accounts = 1 [json_name = "accounts", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.kyve.team.v1beta1.TeamProto.TeamVestingAccountOrBuilder> 
+           getAccountsOrBuilderList() {
+        if (accountsBuilder_ != null) {
+          return accountsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(accounts_);
+        }
+      }
+      /**
+       * <pre>
+       * accounts holds all the team vesting accounts of this module.
+       * </pre>
+       *
+       * <code>repeated .kyve.team.v1beta1.TeamVestingAccount accounts = 1 [json_name = "accounts", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.team.v1beta1.TeamProto.TeamVestingAccount.Builder addAccountsBuilder() {
+        return getAccountsFieldBuilder().addBuilder(
+            com.kyve.team.v1beta1.TeamProto.TeamVestingAccount.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * accounts holds all the team vesting accounts of this module.
+       * </pre>
+       *
+       * <code>repeated .kyve.team.v1beta1.TeamVestingAccount accounts = 1 [json_name = "accounts", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.team.v1beta1.TeamProto.TeamVestingAccount.Builder addAccountsBuilder(
+          int index) {
+        return getAccountsFieldBuilder().addBuilder(
+            index, com.kyve.team.v1beta1.TeamProto.TeamVestingAccount.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * accounts holds all the team vesting accounts of this module.
+       * </pre>
+       *
+       * <code>repeated .kyve.team.v1beta1.TeamVestingAccount accounts = 1 [json_name = "accounts", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.kyve.team.v1beta1.TeamProto.TeamVestingAccount.Builder> 
+           getAccountsBuilderList() {
+        return getAccountsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.kyve.team.v1beta1.TeamProto.TeamVestingAccount, com.kyve.team.v1beta1.TeamProto.TeamVestingAccount.Builder, com.kyve.team.v1beta1.TeamProto.TeamVestingAccountOrBuilder> 
+          getAccountsFieldBuilder() {
+        if (accountsBuilder_ == null) {
+          accountsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.kyve.team.v1beta1.TeamProto.TeamVestingAccount, com.kyve.team.v1beta1.TeamProto.TeamVestingAccount.Builder, com.kyve.team.v1beta1.TeamProto.TeamVestingAccountOrBuilder>(
+                  accounts_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          accounts_ = null;
+        }
+        return accountsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.team.v1beta1.QueryTeamVestingAccountsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.team.v1beta1.QueryTeamVestingAccountsResponse)
+    private static final com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponse();
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTeamVestingAccountsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTeamVestingAccountsResponse>() {
+      @java.lang.Override
+      public QueryTeamVestingAccountsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTeamVestingAccountsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTeamVestingAccountsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryTeamVestingAccountRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.team.v1beta1.QueryTeamVestingAccountRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * id is a unique identify for each vesting account, tied to a single team member.
+     * </pre>
+     *
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+  }
+  /**
+   * <pre>
+   * QueryTeamVestingAccountRequest is request type for the Query/TeamVestingAccount RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code kyve.team.v1beta1.QueryTeamVestingAccountRequest}
+   */
+  public static final class QueryTeamVestingAccountRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.team.v1beta1.QueryTeamVestingAccountRequest)
+      QueryTeamVestingAccountRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTeamVestingAccountRequest.newBuilder() to construct.
+    private QueryTeamVestingAccountRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTeamVestingAccountRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTeamVestingAccountRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingAccountRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingAccountRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountRequest.class, com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountRequest.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_ = 0L;
+    /**
+     * <pre>
+     * id is a unique identify for each vesting account, tied to a single team member.
+     * </pre>
+     *
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeUInt64(1, id_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, id_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountRequest)) {
+        return super.equals(obj);
+      }
+      com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountRequest other = (com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountRequest) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryTeamVestingAccountRequest is request type for the Query/TeamVestingAccount RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code kyve.team.v1beta1.QueryTeamVestingAccountRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.team.v1beta1.QueryTeamVestingAccountRequest)
+        com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingAccountRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingAccountRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountRequest.class, com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountRequest.Builder.class);
+      }
+
+      // Construct using com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingAccountRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountRequest getDefaultInstanceForType() {
+        return com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountRequest build() {
+        com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountRequest buildPartial() {
+        com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountRequest result = new com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountRequest) {
+          return mergeFrom((com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountRequest other) {
+        if (other == com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountRequest.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long id_ ;
+      /**
+       * <pre>
+       * id is a unique identify for each vesting account, tied to a single team member.
+       * </pre>
+       *
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <pre>
+       * id is a unique identify for each vesting account, tied to a single team member.
+       * </pre>
+       *
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * id is a unique identify for each vesting account, tied to a single team member.
+       * </pre>
+       *
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.team.v1beta1.QueryTeamVestingAccountRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.team.v1beta1.QueryTeamVestingAccountRequest)
+    private static final com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountRequest();
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTeamVestingAccountRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTeamVestingAccountRequest>() {
+      @java.lang.Override
+      public QueryTeamVestingAccountRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTeamVestingAccountRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTeamVestingAccountRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryTeamVestingAccountResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.team.v1beta1.QueryTeamVestingAccountResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * account holds the requested team vesting account
+     * </pre>
+     *
+     * <code>.kyve.team.v1beta1.TeamVestingAccount account = 1 [json_name = "account", (.gogoproto.nullable) = false];</code>
+     * @return Whether the account field is set.
+     */
+    boolean hasAccount();
+    /**
+     * <pre>
+     * account holds the requested team vesting account
+     * </pre>
+     *
+     * <code>.kyve.team.v1beta1.TeamVestingAccount account = 1 [json_name = "account", (.gogoproto.nullable) = false];</code>
+     * @return The account.
+     */
+    com.kyve.team.v1beta1.TeamProto.TeamVestingAccount getAccount();
+    /**
+     * <pre>
+     * account holds the requested team vesting account
+     * </pre>
+     *
+     * <code>.kyve.team.v1beta1.TeamVestingAccount account = 1 [json_name = "account", (.gogoproto.nullable) = false];</code>
+     */
+    com.kyve.team.v1beta1.TeamProto.TeamVestingAccountOrBuilder getAccountOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryTeamVestingAccountResponse is the response type for the Query/TeamVestingAccount RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code kyve.team.v1beta1.QueryTeamVestingAccountResponse}
+   */
+  public static final class QueryTeamVestingAccountResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.team.v1beta1.QueryTeamVestingAccountResponse)
+      QueryTeamVestingAccountResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTeamVestingAccountResponse.newBuilder() to construct.
+    private QueryTeamVestingAccountResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTeamVestingAccountResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTeamVestingAccountResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingAccountResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingAccountResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse.class, com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse.Builder.class);
+    }
+
+    public static final int ACCOUNT_FIELD_NUMBER = 1;
+    private com.kyve.team.v1beta1.TeamProto.TeamVestingAccount account_;
+    /**
+     * <pre>
+     * account holds the requested team vesting account
+     * </pre>
+     *
+     * <code>.kyve.team.v1beta1.TeamVestingAccount account = 1 [json_name = "account", (.gogoproto.nullable) = false];</code>
+     * @return Whether the account field is set.
+     */
+    @java.lang.Override
+    public boolean hasAccount() {
+      return account_ != null;
+    }
+    /**
+     * <pre>
+     * account holds the requested team vesting account
+     * </pre>
+     *
+     * <code>.kyve.team.v1beta1.TeamVestingAccount account = 1 [json_name = "account", (.gogoproto.nullable) = false];</code>
+     * @return The account.
+     */
+    @java.lang.Override
+    public com.kyve.team.v1beta1.TeamProto.TeamVestingAccount getAccount() {
+      return account_ == null ? com.kyve.team.v1beta1.TeamProto.TeamVestingAccount.getDefaultInstance() : account_;
+    }
+    /**
+     * <pre>
+     * account holds the requested team vesting account
+     * </pre>
+     *
+     * <code>.kyve.team.v1beta1.TeamVestingAccount account = 1 [json_name = "account", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.kyve.team.v1beta1.TeamProto.TeamVestingAccountOrBuilder getAccountOrBuilder() {
+      return account_ == null ? com.kyve.team.v1beta1.TeamProto.TeamVestingAccount.getDefaultInstance() : account_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (account_ != null) {
+        output.writeMessage(1, getAccount());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (account_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getAccount());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse)) {
+        return super.equals(obj);
+      }
+      com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse other = (com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse) obj;
+
+      if (hasAccount() != other.hasAccount()) return false;
+      if (hasAccount()) {
+        if (!getAccount()
+            .equals(other.getAccount())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAccount()) {
+        hash = (37 * hash) + ACCOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + getAccount().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryTeamVestingAccountResponse is the response type for the Query/TeamVestingAccount RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code kyve.team.v1beta1.QueryTeamVestingAccountResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.team.v1beta1.QueryTeamVestingAccountResponse)
+        com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingAccountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingAccountResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse.class, com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse.Builder.class);
+      }
+
+      // Construct using com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        account_ = null;
+        if (accountBuilder_ != null) {
+          accountBuilder_.dispose();
+          accountBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingAccountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse getDefaultInstanceForType() {
+        return com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse build() {
+        com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse buildPartial() {
+        com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse result = new com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.account_ = accountBuilder_ == null
+              ? account_
+              : accountBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse) {
+          return mergeFrom((com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse other) {
+        if (other == com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse.getDefaultInstance()) return this;
+        if (other.hasAccount()) {
+          mergeAccount(other.getAccount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getAccountFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.kyve.team.v1beta1.TeamProto.TeamVestingAccount account_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.kyve.team.v1beta1.TeamProto.TeamVestingAccount, com.kyve.team.v1beta1.TeamProto.TeamVestingAccount.Builder, com.kyve.team.v1beta1.TeamProto.TeamVestingAccountOrBuilder> accountBuilder_;
+      /**
+       * <pre>
+       * account holds the requested team vesting account
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.TeamVestingAccount account = 1 [json_name = "account", (.gogoproto.nullable) = false];</code>
+       * @return Whether the account field is set.
+       */
+      public boolean hasAccount() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * account holds the requested team vesting account
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.TeamVestingAccount account = 1 [json_name = "account", (.gogoproto.nullable) = false];</code>
+       * @return The account.
+       */
+      public com.kyve.team.v1beta1.TeamProto.TeamVestingAccount getAccount() {
+        if (accountBuilder_ == null) {
+          return account_ == null ? com.kyve.team.v1beta1.TeamProto.TeamVestingAccount.getDefaultInstance() : account_;
+        } else {
+          return accountBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * account holds the requested team vesting account
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.TeamVestingAccount account = 1 [json_name = "account", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAccount(com.kyve.team.v1beta1.TeamProto.TeamVestingAccount value) {
+        if (accountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          account_ = value;
+        } else {
+          accountBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * account holds the requested team vesting account
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.TeamVestingAccount account = 1 [json_name = "account", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setAccount(
+          com.kyve.team.v1beta1.TeamProto.TeamVestingAccount.Builder builderForValue) {
+        if (accountBuilder_ == null) {
+          account_ = builderForValue.build();
+        } else {
+          accountBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * account holds the requested team vesting account
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.TeamVestingAccount account = 1 [json_name = "account", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeAccount(com.kyve.team.v1beta1.TeamProto.TeamVestingAccount value) {
+        if (accountBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            account_ != null &&
+            account_ != com.kyve.team.v1beta1.TeamProto.TeamVestingAccount.getDefaultInstance()) {
+            getAccountBuilder().mergeFrom(value);
+          } else {
+            account_ = value;
+          }
+        } else {
+          accountBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * account holds the requested team vesting account
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.TeamVestingAccount account = 1 [json_name = "account", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearAccount() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        account_ = null;
+        if (accountBuilder_ != null) {
+          accountBuilder_.dispose();
+          accountBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * account holds the requested team vesting account
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.TeamVestingAccount account = 1 [json_name = "account", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.team.v1beta1.TeamProto.TeamVestingAccount.Builder getAccountBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getAccountFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * account holds the requested team vesting account
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.TeamVestingAccount account = 1 [json_name = "account", (.gogoproto.nullable) = false];</code>
+       */
+      public com.kyve.team.v1beta1.TeamProto.TeamVestingAccountOrBuilder getAccountOrBuilder() {
+        if (accountBuilder_ != null) {
+          return accountBuilder_.getMessageOrBuilder();
+        } else {
+          return account_ == null ?
+              com.kyve.team.v1beta1.TeamProto.TeamVestingAccount.getDefaultInstance() : account_;
+        }
+      }
+      /**
+       * <pre>
+       * account holds the requested team vesting account
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.TeamVestingAccount account = 1 [json_name = "account", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.kyve.team.v1beta1.TeamProto.TeamVestingAccount, com.kyve.team.v1beta1.TeamProto.TeamVestingAccount.Builder, com.kyve.team.v1beta1.TeamProto.TeamVestingAccountOrBuilder> 
+          getAccountFieldBuilder() {
+        if (accountBuilder_ == null) {
+          accountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.kyve.team.v1beta1.TeamProto.TeamVestingAccount, com.kyve.team.v1beta1.TeamProto.TeamVestingAccount.Builder, com.kyve.team.v1beta1.TeamProto.TeamVestingAccountOrBuilder>(
+                  getAccount(),
+                  getParentForChildren(),
+                  isClean());
+          account_ = null;
+        }
+        return accountBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.team.v1beta1.QueryTeamVestingAccountResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.team.v1beta1.QueryTeamVestingAccountResponse)
+    private static final com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse();
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTeamVestingAccountResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTeamVestingAccountResponse>() {
+      @java.lang.Override
+      public QueryTeamVestingAccountResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTeamVestingAccountResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTeamVestingAccountResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.team.v1beta1.QueryProto.QueryTeamVestingAccountResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryTeamVestingStatusRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.team.v1beta1.QueryTeamVestingStatusRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * id is a unique identify for each vesting account, tied to a single team member.
+     * </pre>
+     *
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+  }
+  /**
+   * <pre>
+   * QueryTeamCurrentVestingStatusRequest is request type for the Query/TeamCurrentVestingStatus RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code kyve.team.v1beta1.QueryTeamVestingStatusRequest}
+   */
+  public static final class QueryTeamVestingStatusRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.team.v1beta1.QueryTeamVestingStatusRequest)
+      QueryTeamVestingStatusRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTeamVestingStatusRequest.newBuilder() to construct.
+    private QueryTeamVestingStatusRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTeamVestingStatusRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTeamVestingStatusRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingStatusRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingStatusRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusRequest.class, com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusRequest.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_ = 0L;
+    /**
+     * <pre>
+     * id is a unique identify for each vesting account, tied to a single team member.
+     * </pre>
+     *
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeUInt64(1, id_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, id_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusRequest)) {
+        return super.equals(obj);
+      }
+      com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusRequest other = (com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusRequest) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryTeamCurrentVestingStatusRequest is request type for the Query/TeamCurrentVestingStatus RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code kyve.team.v1beta1.QueryTeamVestingStatusRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.team.v1beta1.QueryTeamVestingStatusRequest)
+        com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingStatusRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingStatusRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusRequest.class, com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusRequest.Builder.class);
+      }
+
+      // Construct using com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingStatusRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusRequest getDefaultInstanceForType() {
+        return com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusRequest build() {
+        com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusRequest buildPartial() {
+        com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusRequest result = new com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusRequest) {
+          return mergeFrom((com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusRequest other) {
+        if (other == com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusRequest.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long id_ ;
+      /**
+       * <pre>
+       * id is a unique identify for each vesting account, tied to a single team member.
+       * </pre>
+       *
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <pre>
+       * id is a unique identify for each vesting account, tied to a single team member.
+       * </pre>
+       *
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * id is a unique identify for each vesting account, tied to a single team member.
+       * </pre>
+       *
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.team.v1beta1.QueryTeamVestingStatusRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.team.v1beta1.QueryTeamVestingStatusRequest)
+    private static final com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusRequest();
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTeamVestingStatusRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTeamVestingStatusRequest>() {
+      @java.lang.Override
+      public QueryTeamVestingStatusRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTeamVestingStatusRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTeamVestingStatusRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryTeamVestingStatusResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.team.v1beta1.QueryTeamVestingStatusResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * request_date ..
+     * </pre>
+     *
+     * <code>string request_date = 1 [json_name = "requestDate"];</code>
+     * @return The requestDate.
+     */
+    java.lang.String getRequestDate();
+    /**
+     * <pre>
+     * request_date ..
+     * </pre>
+     *
+     * <code>string request_date = 1 [json_name = "requestDate"];</code>
+     * @return The bytes for requestDate.
+     */
+    com.google.protobuf.ByteString
+        getRequestDateBytes();
+
+    /**
+     * <pre>
+     * plan ...
+     * </pre>
+     *
+     * <code>.kyve.team.v1beta1.QueryVestingPlan plan = 2 [json_name = "plan"];</code>
+     * @return Whether the plan field is set.
+     */
+    boolean hasPlan();
+    /**
+     * <pre>
+     * plan ...
+     * </pre>
+     *
+     * <code>.kyve.team.v1beta1.QueryVestingPlan plan = 2 [json_name = "plan"];</code>
+     * @return The plan.
+     */
+    com.kyve.team.v1beta1.QueryProto.QueryVestingPlan getPlan();
+    /**
+     * <pre>
+     * plan ...
+     * </pre>
+     *
+     * <code>.kyve.team.v1beta1.QueryVestingPlan plan = 2 [json_name = "plan"];</code>
+     */
+    com.kyve.team.v1beta1.QueryProto.QueryVestingPlanOrBuilder getPlanOrBuilder();
+
+    /**
+     * <pre>
+     * status ..
+     * </pre>
+     *
+     * <code>.kyve.team.v1beta1.QueryVestingStatus status = 3 [json_name = "status"];</code>
+     * @return Whether the status field is set.
+     */
+    boolean hasStatus();
+    /**
+     * <pre>
+     * status ..
+     * </pre>
+     *
+     * <code>.kyve.team.v1beta1.QueryVestingStatus status = 3 [json_name = "status"];</code>
+     * @return The status.
+     */
+    com.kyve.team.v1beta1.QueryProto.QueryVestingStatus getStatus();
+    /**
+     * <pre>
+     * status ..
+     * </pre>
+     *
+     * <code>.kyve.team.v1beta1.QueryVestingStatus status = 3 [json_name = "status"];</code>
+     */
+    com.kyve.team.v1beta1.QueryProto.QueryVestingStatusOrBuilder getStatusOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryTeamCurrentVestingStatusResponse is the response type for the Query/TeamCurrentVestingStatus RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code kyve.team.v1beta1.QueryTeamVestingStatusResponse}
+   */
+  public static final class QueryTeamVestingStatusResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.team.v1beta1.QueryTeamVestingStatusResponse)
+      QueryTeamVestingStatusResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTeamVestingStatusResponse.newBuilder() to construct.
+    private QueryTeamVestingStatusResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTeamVestingStatusResponse() {
+      requestDate_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTeamVestingStatusResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingStatusResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingStatusResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse.class, com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse.Builder.class);
+    }
+
+    public static final int REQUEST_DATE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object requestDate_ = "";
+    /**
+     * <pre>
+     * request_date ..
+     * </pre>
+     *
+     * <code>string request_date = 1 [json_name = "requestDate"];</code>
+     * @return The requestDate.
+     */
+    @java.lang.Override
+    public java.lang.String getRequestDate() {
+      java.lang.Object ref = requestDate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        requestDate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * request_date ..
+     * </pre>
+     *
+     * <code>string request_date = 1 [json_name = "requestDate"];</code>
+     * @return The bytes for requestDate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRequestDateBytes() {
+      java.lang.Object ref = requestDate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        requestDate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PLAN_FIELD_NUMBER = 2;
+    private com.kyve.team.v1beta1.QueryProto.QueryVestingPlan plan_;
+    /**
+     * <pre>
+     * plan ...
+     * </pre>
+     *
+     * <code>.kyve.team.v1beta1.QueryVestingPlan plan = 2 [json_name = "plan"];</code>
+     * @return Whether the plan field is set.
+     */
+    @java.lang.Override
+    public boolean hasPlan() {
+      return plan_ != null;
+    }
+    /**
+     * <pre>
+     * plan ...
+     * </pre>
+     *
+     * <code>.kyve.team.v1beta1.QueryVestingPlan plan = 2 [json_name = "plan"];</code>
+     * @return The plan.
+     */
+    @java.lang.Override
+    public com.kyve.team.v1beta1.QueryProto.QueryVestingPlan getPlan() {
+      return plan_ == null ? com.kyve.team.v1beta1.QueryProto.QueryVestingPlan.getDefaultInstance() : plan_;
+    }
+    /**
+     * <pre>
+     * plan ...
+     * </pre>
+     *
+     * <code>.kyve.team.v1beta1.QueryVestingPlan plan = 2 [json_name = "plan"];</code>
+     */
+    @java.lang.Override
+    public com.kyve.team.v1beta1.QueryProto.QueryVestingPlanOrBuilder getPlanOrBuilder() {
+      return plan_ == null ? com.kyve.team.v1beta1.QueryProto.QueryVestingPlan.getDefaultInstance() : plan_;
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 3;
+    private com.kyve.team.v1beta1.QueryProto.QueryVestingStatus status_;
+    /**
+     * <pre>
+     * status ..
+     * </pre>
+     *
+     * <code>.kyve.team.v1beta1.QueryVestingStatus status = 3 [json_name = "status"];</code>
+     * @return Whether the status field is set.
+     */
+    @java.lang.Override
+    public boolean hasStatus() {
+      return status_ != null;
+    }
+    /**
+     * <pre>
+     * status ..
+     * </pre>
+     *
+     * <code>.kyve.team.v1beta1.QueryVestingStatus status = 3 [json_name = "status"];</code>
+     * @return The status.
+     */
+    @java.lang.Override
+    public com.kyve.team.v1beta1.QueryProto.QueryVestingStatus getStatus() {
+      return status_ == null ? com.kyve.team.v1beta1.QueryProto.QueryVestingStatus.getDefaultInstance() : status_;
+    }
+    /**
+     * <pre>
+     * status ..
+     * </pre>
+     *
+     * <code>.kyve.team.v1beta1.QueryVestingStatus status = 3 [json_name = "status"];</code>
+     */
+    @java.lang.Override
+    public com.kyve.team.v1beta1.QueryProto.QueryVestingStatusOrBuilder getStatusOrBuilder() {
+      return status_ == null ? com.kyve.team.v1beta1.QueryProto.QueryVestingStatus.getDefaultInstance() : status_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestDate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, requestDate_);
+      }
+      if (plan_ != null) {
+        output.writeMessage(2, getPlan());
+      }
+      if (status_ != null) {
+        output.writeMessage(3, getStatus());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestDate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, requestDate_);
+      }
+      if (plan_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPlan());
+      }
+      if (status_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getStatus());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse)) {
+        return super.equals(obj);
+      }
+      com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse other = (com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse) obj;
+
+      if (!getRequestDate()
+          .equals(other.getRequestDate())) return false;
+      if (hasPlan() != other.hasPlan()) return false;
+      if (hasPlan()) {
+        if (!getPlan()
+            .equals(other.getPlan())) return false;
+      }
+      if (hasStatus() != other.hasStatus()) return false;
+      if (hasStatus()) {
+        if (!getStatus()
+            .equals(other.getStatus())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REQUEST_DATE_FIELD_NUMBER;
+      hash = (53 * hash) + getRequestDate().hashCode();
+      if (hasPlan()) {
+        hash = (37 * hash) + PLAN_FIELD_NUMBER;
+        hash = (53 * hash) + getPlan().hashCode();
+      }
+      if (hasStatus()) {
+        hash = (37 * hash) + STATUS_FIELD_NUMBER;
+        hash = (53 * hash) + getStatus().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryTeamCurrentVestingStatusResponse is the response type for the Query/TeamCurrentVestingStatus RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code kyve.team.v1beta1.QueryTeamVestingStatusResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.team.v1beta1.QueryTeamVestingStatusResponse)
+        com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingStatusResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingStatusResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse.class, com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse.Builder.class);
+      }
+
+      // Construct using com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        requestDate_ = "";
+        plan_ = null;
+        if (planBuilder_ != null) {
+          planBuilder_.dispose();
+          planBuilder_ = null;
+        }
+        status_ = null;
+        if (statusBuilder_ != null) {
+          statusBuilder_.dispose();
+          statusBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingStatusResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse getDefaultInstanceForType() {
+        return com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse build() {
+        com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse buildPartial() {
+        com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse result = new com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.requestDate_ = requestDate_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.plan_ = planBuilder_ == null
+              ? plan_
+              : planBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.status_ = statusBuilder_ == null
+              ? status_
+              : statusBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse) {
+          return mergeFrom((com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse other) {
+        if (other == com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse.getDefaultInstance()) return this;
+        if (!other.getRequestDate().isEmpty()) {
+          requestDate_ = other.requestDate_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasPlan()) {
+          mergePlan(other.getPlan());
+        }
+        if (other.hasStatus()) {
+          mergeStatus(other.getStatus());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                requestDate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPlanFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getStatusFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object requestDate_ = "";
+      /**
+       * <pre>
+       * request_date ..
+       * </pre>
+       *
+       * <code>string request_date = 1 [json_name = "requestDate"];</code>
+       * @return The requestDate.
+       */
+      public java.lang.String getRequestDate() {
+        java.lang.Object ref = requestDate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          requestDate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * request_date ..
+       * </pre>
+       *
+       * <code>string request_date = 1 [json_name = "requestDate"];</code>
+       * @return The bytes for requestDate.
+       */
+      public com.google.protobuf.ByteString
+          getRequestDateBytes() {
+        java.lang.Object ref = requestDate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          requestDate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * request_date ..
+       * </pre>
+       *
+       * <code>string request_date = 1 [json_name = "requestDate"];</code>
+       * @param value The requestDate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestDate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        requestDate_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * request_date ..
+       * </pre>
+       *
+       * <code>string request_date = 1 [json_name = "requestDate"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRequestDate() {
+        requestDate_ = getDefaultInstance().getRequestDate();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * request_date ..
+       * </pre>
+       *
+       * <code>string request_date = 1 [json_name = "requestDate"];</code>
+       * @param value The bytes for requestDate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestDateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        requestDate_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.kyve.team.v1beta1.QueryProto.QueryVestingPlan plan_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.kyve.team.v1beta1.QueryProto.QueryVestingPlan, com.kyve.team.v1beta1.QueryProto.QueryVestingPlan.Builder, com.kyve.team.v1beta1.QueryProto.QueryVestingPlanOrBuilder> planBuilder_;
+      /**
+       * <pre>
+       * plan ...
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.QueryVestingPlan plan = 2 [json_name = "plan"];</code>
+       * @return Whether the plan field is set.
+       */
+      public boolean hasPlan() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * plan ...
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.QueryVestingPlan plan = 2 [json_name = "plan"];</code>
+       * @return The plan.
+       */
+      public com.kyve.team.v1beta1.QueryProto.QueryVestingPlan getPlan() {
+        if (planBuilder_ == null) {
+          return plan_ == null ? com.kyve.team.v1beta1.QueryProto.QueryVestingPlan.getDefaultInstance() : plan_;
+        } else {
+          return planBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * plan ...
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.QueryVestingPlan plan = 2 [json_name = "plan"];</code>
+       */
+      public Builder setPlan(com.kyve.team.v1beta1.QueryProto.QueryVestingPlan value) {
+        if (planBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          plan_ = value;
+        } else {
+          planBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * plan ...
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.QueryVestingPlan plan = 2 [json_name = "plan"];</code>
+       */
+      public Builder setPlan(
+          com.kyve.team.v1beta1.QueryProto.QueryVestingPlan.Builder builderForValue) {
+        if (planBuilder_ == null) {
+          plan_ = builderForValue.build();
+        } else {
+          planBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * plan ...
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.QueryVestingPlan plan = 2 [json_name = "plan"];</code>
+       */
+      public Builder mergePlan(com.kyve.team.v1beta1.QueryProto.QueryVestingPlan value) {
+        if (planBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            plan_ != null &&
+            plan_ != com.kyve.team.v1beta1.QueryProto.QueryVestingPlan.getDefaultInstance()) {
+            getPlanBuilder().mergeFrom(value);
+          } else {
+            plan_ = value;
+          }
+        } else {
+          planBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * plan ...
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.QueryVestingPlan plan = 2 [json_name = "plan"];</code>
+       */
+      public Builder clearPlan() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        plan_ = null;
+        if (planBuilder_ != null) {
+          planBuilder_.dispose();
+          planBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * plan ...
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.QueryVestingPlan plan = 2 [json_name = "plan"];</code>
+       */
+      public com.kyve.team.v1beta1.QueryProto.QueryVestingPlan.Builder getPlanBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPlanFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * plan ...
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.QueryVestingPlan plan = 2 [json_name = "plan"];</code>
+       */
+      public com.kyve.team.v1beta1.QueryProto.QueryVestingPlanOrBuilder getPlanOrBuilder() {
+        if (planBuilder_ != null) {
+          return planBuilder_.getMessageOrBuilder();
+        } else {
+          return plan_ == null ?
+              com.kyve.team.v1beta1.QueryProto.QueryVestingPlan.getDefaultInstance() : plan_;
+        }
+      }
+      /**
+       * <pre>
+       * plan ...
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.QueryVestingPlan plan = 2 [json_name = "plan"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.kyve.team.v1beta1.QueryProto.QueryVestingPlan, com.kyve.team.v1beta1.QueryProto.QueryVestingPlan.Builder, com.kyve.team.v1beta1.QueryProto.QueryVestingPlanOrBuilder> 
+          getPlanFieldBuilder() {
+        if (planBuilder_ == null) {
+          planBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.kyve.team.v1beta1.QueryProto.QueryVestingPlan, com.kyve.team.v1beta1.QueryProto.QueryVestingPlan.Builder, com.kyve.team.v1beta1.QueryProto.QueryVestingPlanOrBuilder>(
+                  getPlan(),
+                  getParentForChildren(),
+                  isClean());
+          plan_ = null;
+        }
+        return planBuilder_;
+      }
+
+      private com.kyve.team.v1beta1.QueryProto.QueryVestingStatus status_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.kyve.team.v1beta1.QueryProto.QueryVestingStatus, com.kyve.team.v1beta1.QueryProto.QueryVestingStatus.Builder, com.kyve.team.v1beta1.QueryProto.QueryVestingStatusOrBuilder> statusBuilder_;
+      /**
+       * <pre>
+       * status ..
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.QueryVestingStatus status = 3 [json_name = "status"];</code>
+       * @return Whether the status field is set.
+       */
+      public boolean hasStatus() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * status ..
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.QueryVestingStatus status = 3 [json_name = "status"];</code>
+       * @return The status.
+       */
+      public com.kyve.team.v1beta1.QueryProto.QueryVestingStatus getStatus() {
+        if (statusBuilder_ == null) {
+          return status_ == null ? com.kyve.team.v1beta1.QueryProto.QueryVestingStatus.getDefaultInstance() : status_;
+        } else {
+          return statusBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * status ..
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.QueryVestingStatus status = 3 [json_name = "status"];</code>
+       */
+      public Builder setStatus(com.kyve.team.v1beta1.QueryProto.QueryVestingStatus value) {
+        if (statusBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          status_ = value;
+        } else {
+          statusBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * status ..
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.QueryVestingStatus status = 3 [json_name = "status"];</code>
+       */
+      public Builder setStatus(
+          com.kyve.team.v1beta1.QueryProto.QueryVestingStatus.Builder builderForValue) {
+        if (statusBuilder_ == null) {
+          status_ = builderForValue.build();
+        } else {
+          statusBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * status ..
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.QueryVestingStatus status = 3 [json_name = "status"];</code>
+       */
+      public Builder mergeStatus(com.kyve.team.v1beta1.QueryProto.QueryVestingStatus value) {
+        if (statusBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            status_ != null &&
+            status_ != com.kyve.team.v1beta1.QueryProto.QueryVestingStatus.getDefaultInstance()) {
+            getStatusBuilder().mergeFrom(value);
+          } else {
+            status_ = value;
+          }
+        } else {
+          statusBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * status ..
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.QueryVestingStatus status = 3 [json_name = "status"];</code>
+       */
+      public Builder clearStatus() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        status_ = null;
+        if (statusBuilder_ != null) {
+          statusBuilder_.dispose();
+          statusBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * status ..
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.QueryVestingStatus status = 3 [json_name = "status"];</code>
+       */
+      public com.kyve.team.v1beta1.QueryProto.QueryVestingStatus.Builder getStatusBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getStatusFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * status ..
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.QueryVestingStatus status = 3 [json_name = "status"];</code>
+       */
+      public com.kyve.team.v1beta1.QueryProto.QueryVestingStatusOrBuilder getStatusOrBuilder() {
+        if (statusBuilder_ != null) {
+          return statusBuilder_.getMessageOrBuilder();
+        } else {
+          return status_ == null ?
+              com.kyve.team.v1beta1.QueryProto.QueryVestingStatus.getDefaultInstance() : status_;
+        }
+      }
+      /**
+       * <pre>
+       * status ..
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.QueryVestingStatus status = 3 [json_name = "status"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.kyve.team.v1beta1.QueryProto.QueryVestingStatus, com.kyve.team.v1beta1.QueryProto.QueryVestingStatus.Builder, com.kyve.team.v1beta1.QueryProto.QueryVestingStatusOrBuilder> 
+          getStatusFieldBuilder() {
+        if (statusBuilder_ == null) {
+          statusBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.kyve.team.v1beta1.QueryProto.QueryVestingStatus, com.kyve.team.v1beta1.QueryProto.QueryVestingStatus.Builder, com.kyve.team.v1beta1.QueryProto.QueryVestingStatusOrBuilder>(
+                  getStatus(),
+                  getParentForChildren(),
+                  isClean());
+          status_ = null;
+        }
+        return statusBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.team.v1beta1.QueryTeamVestingStatusResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.team.v1beta1.QueryTeamVestingStatusResponse)
+    private static final com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse();
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTeamVestingStatusResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTeamVestingStatusResponse>() {
+      @java.lang.Override
+      public QueryTeamVestingStatusResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTeamVestingStatusResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTeamVestingStatusResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryTeamVestingStatusByTimeRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.team.v1beta1.QueryTeamVestingStatusByTimeRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * id is a unique identify for each vesting account, tied to a single team member.
+     * </pre>
+     *
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+
+    /**
+     * <pre>
+     * time is a unix timestamp of the time the vesting progress should be calculated
+     * </pre>
+     *
+     * <code>uint64 time = 2 [json_name = "time"];</code>
+     * @return The time.
+     */
+    long getTime();
+  }
+  /**
+   * <pre>
+   * QueryTeamVestingStatusByTimeRequest is request type for the Query/TeamCurrentVestingByTimeStatus RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code kyve.team.v1beta1.QueryTeamVestingStatusByTimeRequest}
+   */
+  public static final class QueryTeamVestingStatusByTimeRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.team.v1beta1.QueryTeamVestingStatusByTimeRequest)
+      QueryTeamVestingStatusByTimeRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTeamVestingStatusByTimeRequest.newBuilder() to construct.
+    private QueryTeamVestingStatusByTimeRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTeamVestingStatusByTimeRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTeamVestingStatusByTimeRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingStatusByTimeRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingStatusByTimeRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeRequest.class, com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeRequest.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_ = 0L;
+    /**
+     * <pre>
+     * id is a unique identify for each vesting account, tied to a single team member.
+     * </pre>
+     *
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    public static final int TIME_FIELD_NUMBER = 2;
+    private long time_ = 0L;
+    /**
+     * <pre>
+     * time is a unix timestamp of the time the vesting progress should be calculated
+     * </pre>
+     *
+     * <code>uint64 time = 2 [json_name = "time"];</code>
+     * @return The time.
+     */
+    @java.lang.Override
+    public long getTime() {
+      return time_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeUInt64(1, id_);
+      }
+      if (time_ != 0L) {
+        output.writeUInt64(2, time_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, id_);
+      }
+      if (time_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, time_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeRequest)) {
+        return super.equals(obj);
+      }
+      com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeRequest other = (com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeRequest) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (getTime()
+          != other.getTime()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (37 * hash) + TIME_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTime());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryTeamVestingStatusByTimeRequest is request type for the Query/TeamCurrentVestingByTimeStatus RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code kyve.team.v1beta1.QueryTeamVestingStatusByTimeRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.team.v1beta1.QueryTeamVestingStatusByTimeRequest)
+        com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingStatusByTimeRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingStatusByTimeRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeRequest.class, com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeRequest.Builder.class);
+      }
+
+      // Construct using com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = 0L;
+        time_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingStatusByTimeRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeRequest getDefaultInstanceForType() {
+        return com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeRequest build() {
+        com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeRequest buildPartial() {
+        com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeRequest result = new com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.time_ = time_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeRequest) {
+          return mergeFrom((com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeRequest other) {
+        if (other == com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeRequest.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        if (other.getTime() != 0L) {
+          setTime(other.getTime());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                time_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long id_ ;
+      /**
+       * <pre>
+       * id is a unique identify for each vesting account, tied to a single team member.
+       * </pre>
+       *
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <pre>
+       * id is a unique identify for each vesting account, tied to a single team member.
+       * </pre>
+       *
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * id is a unique identify for each vesting account, tied to a single team member.
+       * </pre>
+       *
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long time_ ;
+      /**
+       * <pre>
+       * time is a unix timestamp of the time the vesting progress should be calculated
+       * </pre>
+       *
+       * <code>uint64 time = 2 [json_name = "time"];</code>
+       * @return The time.
+       */
+      @java.lang.Override
+      public long getTime() {
+        return time_;
+      }
+      /**
+       * <pre>
+       * time is a unix timestamp of the time the vesting progress should be calculated
+       * </pre>
+       *
+       * <code>uint64 time = 2 [json_name = "time"];</code>
+       * @param value The time to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTime(long value) {
+
+        time_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * time is a unix timestamp of the time the vesting progress should be calculated
+       * </pre>
+       *
+       * <code>uint64 time = 2 [json_name = "time"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTime() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        time_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.team.v1beta1.QueryTeamVestingStatusByTimeRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.team.v1beta1.QueryTeamVestingStatusByTimeRequest)
+    private static final com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeRequest();
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTeamVestingStatusByTimeRequest>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTeamVestingStatusByTimeRequest>() {
+      @java.lang.Override
+      public QueryTeamVestingStatusByTimeRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTeamVestingStatusByTimeRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTeamVestingStatusByTimeRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryTeamVestingStatusByTimeResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.team.v1beta1.QueryTeamVestingStatusByTimeResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * request_date ..
+     * </pre>
+     *
+     * <code>string request_date = 1 [json_name = "requestDate"];</code>
+     * @return The requestDate.
+     */
+    java.lang.String getRequestDate();
+    /**
+     * <pre>
+     * request_date ..
+     * </pre>
+     *
+     * <code>string request_date = 1 [json_name = "requestDate"];</code>
+     * @return The bytes for requestDate.
+     */
+    com.google.protobuf.ByteString
+        getRequestDateBytes();
+
+    /**
+     * <pre>
+     * plan ...
+     * </pre>
+     *
+     * <code>.kyve.team.v1beta1.QueryVestingPlan plan = 2 [json_name = "plan"];</code>
+     * @return Whether the plan field is set.
+     */
+    boolean hasPlan();
+    /**
+     * <pre>
+     * plan ...
+     * </pre>
+     *
+     * <code>.kyve.team.v1beta1.QueryVestingPlan plan = 2 [json_name = "plan"];</code>
+     * @return The plan.
+     */
+    com.kyve.team.v1beta1.QueryProto.QueryVestingPlan getPlan();
+    /**
+     * <pre>
+     * plan ...
+     * </pre>
+     *
+     * <code>.kyve.team.v1beta1.QueryVestingPlan plan = 2 [json_name = "plan"];</code>
+     */
+    com.kyve.team.v1beta1.QueryProto.QueryVestingPlanOrBuilder getPlanOrBuilder();
+
+    /**
+     * <pre>
+     * status ..
+     * </pre>
+     *
+     * <code>.kyve.team.v1beta1.QueryVestingStatus status = 3 [json_name = "status"];</code>
+     * @return Whether the status field is set.
+     */
+    boolean hasStatus();
+    /**
+     * <pre>
+     * status ..
+     * </pre>
+     *
+     * <code>.kyve.team.v1beta1.QueryVestingStatus status = 3 [json_name = "status"];</code>
+     * @return The status.
+     */
+    com.kyve.team.v1beta1.QueryProto.QueryVestingStatus getStatus();
+    /**
+     * <pre>
+     * status ..
+     * </pre>
+     *
+     * <code>.kyve.team.v1beta1.QueryVestingStatus status = 3 [json_name = "status"];</code>
+     */
+    com.kyve.team.v1beta1.QueryProto.QueryVestingStatusOrBuilder getStatusOrBuilder();
+  }
+  /**
+   * <pre>
+   * QueryTeamVestingStatusByTimeResponse is the response type for the Query/TeamCurrentVestingByTimeStatus RPC method.
+   * </pre>
+   *
+   * Protobuf type {@code kyve.team.v1beta1.QueryTeamVestingStatusByTimeResponse}
+   */
+  public static final class QueryTeamVestingStatusByTimeResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.team.v1beta1.QueryTeamVestingStatusByTimeResponse)
+      QueryTeamVestingStatusByTimeResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryTeamVestingStatusByTimeResponse.newBuilder() to construct.
+    private QueryTeamVestingStatusByTimeResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryTeamVestingStatusByTimeResponse() {
+      requestDate_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryTeamVestingStatusByTimeResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingStatusByTimeResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingStatusByTimeResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse.class, com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse.Builder.class);
+    }
+
+    public static final int REQUEST_DATE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object requestDate_ = "";
+    /**
+     * <pre>
+     * request_date ..
+     * </pre>
+     *
+     * <code>string request_date = 1 [json_name = "requestDate"];</code>
+     * @return The requestDate.
+     */
+    @java.lang.Override
+    public java.lang.String getRequestDate() {
+      java.lang.Object ref = requestDate_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        requestDate_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * request_date ..
+     * </pre>
+     *
+     * <code>string request_date = 1 [json_name = "requestDate"];</code>
+     * @return The bytes for requestDate.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRequestDateBytes() {
+      java.lang.Object ref = requestDate_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        requestDate_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PLAN_FIELD_NUMBER = 2;
+    private com.kyve.team.v1beta1.QueryProto.QueryVestingPlan plan_;
+    /**
+     * <pre>
+     * plan ...
+     * </pre>
+     *
+     * <code>.kyve.team.v1beta1.QueryVestingPlan plan = 2 [json_name = "plan"];</code>
+     * @return Whether the plan field is set.
+     */
+    @java.lang.Override
+    public boolean hasPlan() {
+      return plan_ != null;
+    }
+    /**
+     * <pre>
+     * plan ...
+     * </pre>
+     *
+     * <code>.kyve.team.v1beta1.QueryVestingPlan plan = 2 [json_name = "plan"];</code>
+     * @return The plan.
+     */
+    @java.lang.Override
+    public com.kyve.team.v1beta1.QueryProto.QueryVestingPlan getPlan() {
+      return plan_ == null ? com.kyve.team.v1beta1.QueryProto.QueryVestingPlan.getDefaultInstance() : plan_;
+    }
+    /**
+     * <pre>
+     * plan ...
+     * </pre>
+     *
+     * <code>.kyve.team.v1beta1.QueryVestingPlan plan = 2 [json_name = "plan"];</code>
+     */
+    @java.lang.Override
+    public com.kyve.team.v1beta1.QueryProto.QueryVestingPlanOrBuilder getPlanOrBuilder() {
+      return plan_ == null ? com.kyve.team.v1beta1.QueryProto.QueryVestingPlan.getDefaultInstance() : plan_;
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 3;
+    private com.kyve.team.v1beta1.QueryProto.QueryVestingStatus status_;
+    /**
+     * <pre>
+     * status ..
+     * </pre>
+     *
+     * <code>.kyve.team.v1beta1.QueryVestingStatus status = 3 [json_name = "status"];</code>
+     * @return Whether the status field is set.
+     */
+    @java.lang.Override
+    public boolean hasStatus() {
+      return status_ != null;
+    }
+    /**
+     * <pre>
+     * status ..
+     * </pre>
+     *
+     * <code>.kyve.team.v1beta1.QueryVestingStatus status = 3 [json_name = "status"];</code>
+     * @return The status.
+     */
+    @java.lang.Override
+    public com.kyve.team.v1beta1.QueryProto.QueryVestingStatus getStatus() {
+      return status_ == null ? com.kyve.team.v1beta1.QueryProto.QueryVestingStatus.getDefaultInstance() : status_;
+    }
+    /**
+     * <pre>
+     * status ..
+     * </pre>
+     *
+     * <code>.kyve.team.v1beta1.QueryVestingStatus status = 3 [json_name = "status"];</code>
+     */
+    @java.lang.Override
+    public com.kyve.team.v1beta1.QueryProto.QueryVestingStatusOrBuilder getStatusOrBuilder() {
+      return status_ == null ? com.kyve.team.v1beta1.QueryProto.QueryVestingStatus.getDefaultInstance() : status_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestDate_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, requestDate_);
+      }
+      if (plan_ != null) {
+        output.writeMessage(2, getPlan());
+      }
+      if (status_ != null) {
+        output.writeMessage(3, getStatus());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(requestDate_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, requestDate_);
+      }
+      if (plan_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getPlan());
+      }
+      if (status_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getStatus());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse)) {
+        return super.equals(obj);
+      }
+      com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse other = (com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse) obj;
+
+      if (!getRequestDate()
+          .equals(other.getRequestDate())) return false;
+      if (hasPlan() != other.hasPlan()) return false;
+      if (hasPlan()) {
+        if (!getPlan()
+            .equals(other.getPlan())) return false;
+      }
+      if (hasStatus() != other.hasStatus()) return false;
+      if (hasStatus()) {
+        if (!getStatus()
+            .equals(other.getStatus())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REQUEST_DATE_FIELD_NUMBER;
+      hash = (53 * hash) + getRequestDate().hashCode();
+      if (hasPlan()) {
+        hash = (37 * hash) + PLAN_FIELD_NUMBER;
+        hash = (53 * hash) + getPlan().hashCode();
+      }
+      if (hasStatus()) {
+        hash = (37 * hash) + STATUS_FIELD_NUMBER;
+        hash = (53 * hash) + getStatus().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryTeamVestingStatusByTimeResponse is the response type for the Query/TeamCurrentVestingByTimeStatus RPC method.
+     * </pre>
+     *
+     * Protobuf type {@code kyve.team.v1beta1.QueryTeamVestingStatusByTimeResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.team.v1beta1.QueryTeamVestingStatusByTimeResponse)
+        com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingStatusByTimeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingStatusByTimeResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse.class, com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse.Builder.class);
+      }
+
+      // Construct using com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        requestDate_ = "";
+        plan_ = null;
+        if (planBuilder_ != null) {
+          planBuilder_.dispose();
+          planBuilder_ = null;
+        }
+        status_ = null;
+        if (statusBuilder_ != null) {
+          statusBuilder_.dispose();
+          statusBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryTeamVestingStatusByTimeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse getDefaultInstanceForType() {
+        return com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse build() {
+        com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse buildPartial() {
+        com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse result = new com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.requestDate_ = requestDate_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.plan_ = planBuilder_ == null
+              ? plan_
+              : planBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.status_ = statusBuilder_ == null
+              ? status_
+              : statusBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse) {
+          return mergeFrom((com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse other) {
+        if (other == com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse.getDefaultInstance()) return this;
+        if (!other.getRequestDate().isEmpty()) {
+          requestDate_ = other.requestDate_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (other.hasPlan()) {
+          mergePlan(other.getPlan());
+        }
+        if (other.hasStatus()) {
+          mergeStatus(other.getStatus());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                requestDate_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getPlanFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getStatusFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object requestDate_ = "";
+      /**
+       * <pre>
+       * request_date ..
+       * </pre>
+       *
+       * <code>string request_date = 1 [json_name = "requestDate"];</code>
+       * @return The requestDate.
+       */
+      public java.lang.String getRequestDate() {
+        java.lang.Object ref = requestDate_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          requestDate_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * request_date ..
+       * </pre>
+       *
+       * <code>string request_date = 1 [json_name = "requestDate"];</code>
+       * @return The bytes for requestDate.
+       */
+      public com.google.protobuf.ByteString
+          getRequestDateBytes() {
+        java.lang.Object ref = requestDate_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          requestDate_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * request_date ..
+       * </pre>
+       *
+       * <code>string request_date = 1 [json_name = "requestDate"];</code>
+       * @param value The requestDate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestDate(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        requestDate_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * request_date ..
+       * </pre>
+       *
+       * <code>string request_date = 1 [json_name = "requestDate"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRequestDate() {
+        requestDate_ = getDefaultInstance().getRequestDate();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * request_date ..
+       * </pre>
+       *
+       * <code>string request_date = 1 [json_name = "requestDate"];</code>
+       * @param value The bytes for requestDate to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRequestDateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        requestDate_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private com.kyve.team.v1beta1.QueryProto.QueryVestingPlan plan_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.kyve.team.v1beta1.QueryProto.QueryVestingPlan, com.kyve.team.v1beta1.QueryProto.QueryVestingPlan.Builder, com.kyve.team.v1beta1.QueryProto.QueryVestingPlanOrBuilder> planBuilder_;
+      /**
+       * <pre>
+       * plan ...
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.QueryVestingPlan plan = 2 [json_name = "plan"];</code>
+       * @return Whether the plan field is set.
+       */
+      public boolean hasPlan() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * plan ...
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.QueryVestingPlan plan = 2 [json_name = "plan"];</code>
+       * @return The plan.
+       */
+      public com.kyve.team.v1beta1.QueryProto.QueryVestingPlan getPlan() {
+        if (planBuilder_ == null) {
+          return plan_ == null ? com.kyve.team.v1beta1.QueryProto.QueryVestingPlan.getDefaultInstance() : plan_;
+        } else {
+          return planBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * plan ...
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.QueryVestingPlan plan = 2 [json_name = "plan"];</code>
+       */
+      public Builder setPlan(com.kyve.team.v1beta1.QueryProto.QueryVestingPlan value) {
+        if (planBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          plan_ = value;
+        } else {
+          planBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * plan ...
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.QueryVestingPlan plan = 2 [json_name = "plan"];</code>
+       */
+      public Builder setPlan(
+          com.kyve.team.v1beta1.QueryProto.QueryVestingPlan.Builder builderForValue) {
+        if (planBuilder_ == null) {
+          plan_ = builderForValue.build();
+        } else {
+          planBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * plan ...
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.QueryVestingPlan plan = 2 [json_name = "plan"];</code>
+       */
+      public Builder mergePlan(com.kyve.team.v1beta1.QueryProto.QueryVestingPlan value) {
+        if (planBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            plan_ != null &&
+            plan_ != com.kyve.team.v1beta1.QueryProto.QueryVestingPlan.getDefaultInstance()) {
+            getPlanBuilder().mergeFrom(value);
+          } else {
+            plan_ = value;
+          }
+        } else {
+          planBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * plan ...
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.QueryVestingPlan plan = 2 [json_name = "plan"];</code>
+       */
+      public Builder clearPlan() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        plan_ = null;
+        if (planBuilder_ != null) {
+          planBuilder_.dispose();
+          planBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * plan ...
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.QueryVestingPlan plan = 2 [json_name = "plan"];</code>
+       */
+      public com.kyve.team.v1beta1.QueryProto.QueryVestingPlan.Builder getPlanBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getPlanFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * plan ...
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.QueryVestingPlan plan = 2 [json_name = "plan"];</code>
+       */
+      public com.kyve.team.v1beta1.QueryProto.QueryVestingPlanOrBuilder getPlanOrBuilder() {
+        if (planBuilder_ != null) {
+          return planBuilder_.getMessageOrBuilder();
+        } else {
+          return plan_ == null ?
+              com.kyve.team.v1beta1.QueryProto.QueryVestingPlan.getDefaultInstance() : plan_;
+        }
+      }
+      /**
+       * <pre>
+       * plan ...
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.QueryVestingPlan plan = 2 [json_name = "plan"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.kyve.team.v1beta1.QueryProto.QueryVestingPlan, com.kyve.team.v1beta1.QueryProto.QueryVestingPlan.Builder, com.kyve.team.v1beta1.QueryProto.QueryVestingPlanOrBuilder> 
+          getPlanFieldBuilder() {
+        if (planBuilder_ == null) {
+          planBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.kyve.team.v1beta1.QueryProto.QueryVestingPlan, com.kyve.team.v1beta1.QueryProto.QueryVestingPlan.Builder, com.kyve.team.v1beta1.QueryProto.QueryVestingPlanOrBuilder>(
+                  getPlan(),
+                  getParentForChildren(),
+                  isClean());
+          plan_ = null;
+        }
+        return planBuilder_;
+      }
+
+      private com.kyve.team.v1beta1.QueryProto.QueryVestingStatus status_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.kyve.team.v1beta1.QueryProto.QueryVestingStatus, com.kyve.team.v1beta1.QueryProto.QueryVestingStatus.Builder, com.kyve.team.v1beta1.QueryProto.QueryVestingStatusOrBuilder> statusBuilder_;
+      /**
+       * <pre>
+       * status ..
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.QueryVestingStatus status = 3 [json_name = "status"];</code>
+       * @return Whether the status field is set.
+       */
+      public boolean hasStatus() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * status ..
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.QueryVestingStatus status = 3 [json_name = "status"];</code>
+       * @return The status.
+       */
+      public com.kyve.team.v1beta1.QueryProto.QueryVestingStatus getStatus() {
+        if (statusBuilder_ == null) {
+          return status_ == null ? com.kyve.team.v1beta1.QueryProto.QueryVestingStatus.getDefaultInstance() : status_;
+        } else {
+          return statusBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * status ..
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.QueryVestingStatus status = 3 [json_name = "status"];</code>
+       */
+      public Builder setStatus(com.kyve.team.v1beta1.QueryProto.QueryVestingStatus value) {
+        if (statusBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          status_ = value;
+        } else {
+          statusBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * status ..
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.QueryVestingStatus status = 3 [json_name = "status"];</code>
+       */
+      public Builder setStatus(
+          com.kyve.team.v1beta1.QueryProto.QueryVestingStatus.Builder builderForValue) {
+        if (statusBuilder_ == null) {
+          status_ = builderForValue.build();
+        } else {
+          statusBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * status ..
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.QueryVestingStatus status = 3 [json_name = "status"];</code>
+       */
+      public Builder mergeStatus(com.kyve.team.v1beta1.QueryProto.QueryVestingStatus value) {
+        if (statusBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            status_ != null &&
+            status_ != com.kyve.team.v1beta1.QueryProto.QueryVestingStatus.getDefaultInstance()) {
+            getStatusBuilder().mergeFrom(value);
+          } else {
+            status_ = value;
+          }
+        } else {
+          statusBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * status ..
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.QueryVestingStatus status = 3 [json_name = "status"];</code>
+       */
+      public Builder clearStatus() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        status_ = null;
+        if (statusBuilder_ != null) {
+          statusBuilder_.dispose();
+          statusBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * status ..
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.QueryVestingStatus status = 3 [json_name = "status"];</code>
+       */
+      public com.kyve.team.v1beta1.QueryProto.QueryVestingStatus.Builder getStatusBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getStatusFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * status ..
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.QueryVestingStatus status = 3 [json_name = "status"];</code>
+       */
+      public com.kyve.team.v1beta1.QueryProto.QueryVestingStatusOrBuilder getStatusOrBuilder() {
+        if (statusBuilder_ != null) {
+          return statusBuilder_.getMessageOrBuilder();
+        } else {
+          return status_ == null ?
+              com.kyve.team.v1beta1.QueryProto.QueryVestingStatus.getDefaultInstance() : status_;
+        }
+      }
+      /**
+       * <pre>
+       * status ..
+       * </pre>
+       *
+       * <code>.kyve.team.v1beta1.QueryVestingStatus status = 3 [json_name = "status"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.kyve.team.v1beta1.QueryProto.QueryVestingStatus, com.kyve.team.v1beta1.QueryProto.QueryVestingStatus.Builder, com.kyve.team.v1beta1.QueryProto.QueryVestingStatusOrBuilder> 
+          getStatusFieldBuilder() {
+        if (statusBuilder_ == null) {
+          statusBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.kyve.team.v1beta1.QueryProto.QueryVestingStatus, com.kyve.team.v1beta1.QueryProto.QueryVestingStatus.Builder, com.kyve.team.v1beta1.QueryProto.QueryVestingStatusOrBuilder>(
+                  getStatus(),
+                  getParentForChildren(),
+                  isClean());
+          status_ = null;
+        }
+        return statusBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.team.v1beta1.QueryTeamVestingStatusByTimeResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.team.v1beta1.QueryTeamVestingStatusByTimeResponse)
+    private static final com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse();
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryTeamVestingStatusByTimeResponse>
+        PARSER = new com.google.protobuf.AbstractParser<QueryTeamVestingStatusByTimeResponse>() {
+      @java.lang.Override
+      public QueryTeamVestingStatusByTimeResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryTeamVestingStatusByTimeResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryTeamVestingStatusByTimeResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.team.v1beta1.QueryProto.QueryTeamVestingStatusByTimeResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryVestingStatusOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.team.v1beta1.QueryVestingStatus)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * total_vested_amount ...
+     * </pre>
+     *
+     * <code>uint64 total_vested_amount = 1 [json_name = "totalVestedAmount"];</code>
+     * @return The totalVestedAmount.
+     */
+    long getTotalVestedAmount();
+
+    /**
+     * <pre>
+     * total_unlocked_amount ...
+     * </pre>
+     *
+     * <code>uint64 total_unlocked_amount = 2 [json_name = "totalUnlockedAmount"];</code>
+     * @return The totalUnlockedAmount.
+     */
+    long getTotalUnlockedAmount();
+
+    /**
+     * <pre>
+     * current_claimable_amount ...
+     * </pre>
+     *
+     * <code>uint64 current_claimable_amount = 3 [json_name = "currentClaimableAmount"];</code>
+     * @return The currentClaimableAmount.
+     */
+    long getCurrentClaimableAmount();
+
+    /**
+     * <pre>
+     * locked_vested_amount ...
+     * </pre>
+     *
+     * <code>uint64 locked_vested_amount = 4 [json_name = "lockedVestedAmount"];</code>
+     * @return The lockedVestedAmount.
+     */
+    long getLockedVestedAmount();
+
+    /**
+     * <pre>
+     * remaining_unvested_amount ...
+     * </pre>
+     *
+     * <code>uint64 remaining_unvested_amount = 5 [json_name = "remainingUnvestedAmount"];</code>
+     * @return The remainingUnvestedAmount.
+     */
+    long getRemainingUnvestedAmount();
+
+    /**
+     * <pre>
+     * claimed_amount ...
+     * </pre>
+     *
+     * <code>uint64 claimed_amount = 6 [json_name = "claimedAmount"];</code>
+     * @return The claimedAmount.
+     */
+    long getClaimedAmount();
+
+    /**
+     * <pre>
+     * total_rewards ...
+     * </pre>
+     *
+     * <code>uint64 total_rewards = 7 [json_name = "totalRewards"];</code>
+     * @return The totalRewards.
+     */
+    long getTotalRewards();
+
+    /**
+     * <pre>
+     * claimed_rewards ...
+     * </pre>
+     *
+     * <code>uint64 claimed_rewards = 8 [json_name = "claimedRewards"];</code>
+     * @return The claimedRewards.
+     */
+    long getClaimedRewards();
+
+    /**
+     * <pre>
+     * available_rewards ...
+     * </pre>
+     *
+     * <code>uint64 available_rewards = 9 [json_name = "availableRewards"];</code>
+     * @return The availableRewards.
+     */
+    long getAvailableRewards();
+  }
+  /**
+   * <pre>
+   * QueryVestingStatus is a type holding information about the account's vesting progress
+   * </pre>
+   *
+   * Protobuf type {@code kyve.team.v1beta1.QueryVestingStatus}
+   */
+  public static final class QueryVestingStatus extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.team.v1beta1.QueryVestingStatus)
+      QueryVestingStatusOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryVestingStatus.newBuilder() to construct.
+    private QueryVestingStatus(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryVestingStatus() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryVestingStatus();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryVestingStatus_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryVestingStatus_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.team.v1beta1.QueryProto.QueryVestingStatus.class, com.kyve.team.v1beta1.QueryProto.QueryVestingStatus.Builder.class);
+    }
+
+    public static final int TOTAL_VESTED_AMOUNT_FIELD_NUMBER = 1;
+    private long totalVestedAmount_ = 0L;
+    /**
+     * <pre>
+     * total_vested_amount ...
+     * </pre>
+     *
+     * <code>uint64 total_vested_amount = 1 [json_name = "totalVestedAmount"];</code>
+     * @return The totalVestedAmount.
+     */
+    @java.lang.Override
+    public long getTotalVestedAmount() {
+      return totalVestedAmount_;
+    }
+
+    public static final int TOTAL_UNLOCKED_AMOUNT_FIELD_NUMBER = 2;
+    private long totalUnlockedAmount_ = 0L;
+    /**
+     * <pre>
+     * total_unlocked_amount ...
+     * </pre>
+     *
+     * <code>uint64 total_unlocked_amount = 2 [json_name = "totalUnlockedAmount"];</code>
+     * @return The totalUnlockedAmount.
+     */
+    @java.lang.Override
+    public long getTotalUnlockedAmount() {
+      return totalUnlockedAmount_;
+    }
+
+    public static final int CURRENT_CLAIMABLE_AMOUNT_FIELD_NUMBER = 3;
+    private long currentClaimableAmount_ = 0L;
+    /**
+     * <pre>
+     * current_claimable_amount ...
+     * </pre>
+     *
+     * <code>uint64 current_claimable_amount = 3 [json_name = "currentClaimableAmount"];</code>
+     * @return The currentClaimableAmount.
+     */
+    @java.lang.Override
+    public long getCurrentClaimableAmount() {
+      return currentClaimableAmount_;
+    }
+
+    public static final int LOCKED_VESTED_AMOUNT_FIELD_NUMBER = 4;
+    private long lockedVestedAmount_ = 0L;
+    /**
+     * <pre>
+     * locked_vested_amount ...
+     * </pre>
+     *
+     * <code>uint64 locked_vested_amount = 4 [json_name = "lockedVestedAmount"];</code>
+     * @return The lockedVestedAmount.
+     */
+    @java.lang.Override
+    public long getLockedVestedAmount() {
+      return lockedVestedAmount_;
+    }
+
+    public static final int REMAINING_UNVESTED_AMOUNT_FIELD_NUMBER = 5;
+    private long remainingUnvestedAmount_ = 0L;
+    /**
+     * <pre>
+     * remaining_unvested_amount ...
+     * </pre>
+     *
+     * <code>uint64 remaining_unvested_amount = 5 [json_name = "remainingUnvestedAmount"];</code>
+     * @return The remainingUnvestedAmount.
+     */
+    @java.lang.Override
+    public long getRemainingUnvestedAmount() {
+      return remainingUnvestedAmount_;
+    }
+
+    public static final int CLAIMED_AMOUNT_FIELD_NUMBER = 6;
+    private long claimedAmount_ = 0L;
+    /**
+     * <pre>
+     * claimed_amount ...
+     * </pre>
+     *
+     * <code>uint64 claimed_amount = 6 [json_name = "claimedAmount"];</code>
+     * @return The claimedAmount.
+     */
+    @java.lang.Override
+    public long getClaimedAmount() {
+      return claimedAmount_;
+    }
+
+    public static final int TOTAL_REWARDS_FIELD_NUMBER = 7;
+    private long totalRewards_ = 0L;
+    /**
+     * <pre>
+     * total_rewards ...
+     * </pre>
+     *
+     * <code>uint64 total_rewards = 7 [json_name = "totalRewards"];</code>
+     * @return The totalRewards.
+     */
+    @java.lang.Override
+    public long getTotalRewards() {
+      return totalRewards_;
+    }
+
+    public static final int CLAIMED_REWARDS_FIELD_NUMBER = 8;
+    private long claimedRewards_ = 0L;
+    /**
+     * <pre>
+     * claimed_rewards ...
+     * </pre>
+     *
+     * <code>uint64 claimed_rewards = 8 [json_name = "claimedRewards"];</code>
+     * @return The claimedRewards.
+     */
+    @java.lang.Override
+    public long getClaimedRewards() {
+      return claimedRewards_;
+    }
+
+    public static final int AVAILABLE_REWARDS_FIELD_NUMBER = 9;
+    private long availableRewards_ = 0L;
+    /**
+     * <pre>
+     * available_rewards ...
+     * </pre>
+     *
+     * <code>uint64 available_rewards = 9 [json_name = "availableRewards"];</code>
+     * @return The availableRewards.
+     */
+    @java.lang.Override
+    public long getAvailableRewards() {
+      return availableRewards_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (totalVestedAmount_ != 0L) {
+        output.writeUInt64(1, totalVestedAmount_);
+      }
+      if (totalUnlockedAmount_ != 0L) {
+        output.writeUInt64(2, totalUnlockedAmount_);
+      }
+      if (currentClaimableAmount_ != 0L) {
+        output.writeUInt64(3, currentClaimableAmount_);
+      }
+      if (lockedVestedAmount_ != 0L) {
+        output.writeUInt64(4, lockedVestedAmount_);
+      }
+      if (remainingUnvestedAmount_ != 0L) {
+        output.writeUInt64(5, remainingUnvestedAmount_);
+      }
+      if (claimedAmount_ != 0L) {
+        output.writeUInt64(6, claimedAmount_);
+      }
+      if (totalRewards_ != 0L) {
+        output.writeUInt64(7, totalRewards_);
+      }
+      if (claimedRewards_ != 0L) {
+        output.writeUInt64(8, claimedRewards_);
+      }
+      if (availableRewards_ != 0L) {
+        output.writeUInt64(9, availableRewards_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (totalVestedAmount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, totalVestedAmount_);
+      }
+      if (totalUnlockedAmount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, totalUnlockedAmount_);
+      }
+      if (currentClaimableAmount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, currentClaimableAmount_);
+      }
+      if (lockedVestedAmount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(4, lockedVestedAmount_);
+      }
+      if (remainingUnvestedAmount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(5, remainingUnvestedAmount_);
+      }
+      if (claimedAmount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(6, claimedAmount_);
+      }
+      if (totalRewards_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(7, totalRewards_);
+      }
+      if (claimedRewards_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(8, claimedRewards_);
+      }
+      if (availableRewards_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(9, availableRewards_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.team.v1beta1.QueryProto.QueryVestingStatus)) {
+        return super.equals(obj);
+      }
+      com.kyve.team.v1beta1.QueryProto.QueryVestingStatus other = (com.kyve.team.v1beta1.QueryProto.QueryVestingStatus) obj;
+
+      if (getTotalVestedAmount()
+          != other.getTotalVestedAmount()) return false;
+      if (getTotalUnlockedAmount()
+          != other.getTotalUnlockedAmount()) return false;
+      if (getCurrentClaimableAmount()
+          != other.getCurrentClaimableAmount()) return false;
+      if (getLockedVestedAmount()
+          != other.getLockedVestedAmount()) return false;
+      if (getRemainingUnvestedAmount()
+          != other.getRemainingUnvestedAmount()) return false;
+      if (getClaimedAmount()
+          != other.getClaimedAmount()) return false;
+      if (getTotalRewards()
+          != other.getTotalRewards()) return false;
+      if (getClaimedRewards()
+          != other.getClaimedRewards()) return false;
+      if (getAvailableRewards()
+          != other.getAvailableRewards()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TOTAL_VESTED_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTotalVestedAmount());
+      hash = (37 * hash) + TOTAL_UNLOCKED_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTotalUnlockedAmount());
+      hash = (37 * hash) + CURRENT_CLAIMABLE_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCurrentClaimableAmount());
+      hash = (37 * hash) + LOCKED_VESTED_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLockedVestedAmount());
+      hash = (37 * hash) + REMAINING_UNVESTED_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRemainingUnvestedAmount());
+      hash = (37 * hash) + CLAIMED_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getClaimedAmount());
+      hash = (37 * hash) + TOTAL_REWARDS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTotalRewards());
+      hash = (37 * hash) + CLAIMED_REWARDS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getClaimedRewards());
+      hash = (37 * hash) + AVAILABLE_REWARDS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAvailableRewards());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryVestingStatus parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryVestingStatus parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryVestingStatus parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryVestingStatus parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryVestingStatus parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryVestingStatus parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryVestingStatus parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryVestingStatus parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryVestingStatus parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryVestingStatus parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryVestingStatus parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryVestingStatus parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.team.v1beta1.QueryProto.QueryVestingStatus prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryVestingStatus is a type holding information about the account's vesting progress
+     * </pre>
+     *
+     * Protobuf type {@code kyve.team.v1beta1.QueryVestingStatus}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.team.v1beta1.QueryVestingStatus)
+        com.kyve.team.v1beta1.QueryProto.QueryVestingStatusOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryVestingStatus_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryVestingStatus_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.team.v1beta1.QueryProto.QueryVestingStatus.class, com.kyve.team.v1beta1.QueryProto.QueryVestingStatus.Builder.class);
+      }
+
+      // Construct using com.kyve.team.v1beta1.QueryProto.QueryVestingStatus.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        totalVestedAmount_ = 0L;
+        totalUnlockedAmount_ = 0L;
+        currentClaimableAmount_ = 0L;
+        lockedVestedAmount_ = 0L;
+        remainingUnvestedAmount_ = 0L;
+        claimedAmount_ = 0L;
+        totalRewards_ = 0L;
+        claimedRewards_ = 0L;
+        availableRewards_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryVestingStatus_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.QueryProto.QueryVestingStatus getDefaultInstanceForType() {
+        return com.kyve.team.v1beta1.QueryProto.QueryVestingStatus.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.QueryProto.QueryVestingStatus build() {
+        com.kyve.team.v1beta1.QueryProto.QueryVestingStatus result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.QueryProto.QueryVestingStatus buildPartial() {
+        com.kyve.team.v1beta1.QueryProto.QueryVestingStatus result = new com.kyve.team.v1beta1.QueryProto.QueryVestingStatus(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.team.v1beta1.QueryProto.QueryVestingStatus result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.totalVestedAmount_ = totalVestedAmount_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.totalUnlockedAmount_ = totalUnlockedAmount_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.currentClaimableAmount_ = currentClaimableAmount_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.lockedVestedAmount_ = lockedVestedAmount_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.remainingUnvestedAmount_ = remainingUnvestedAmount_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.claimedAmount_ = claimedAmount_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.totalRewards_ = totalRewards_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.claimedRewards_ = claimedRewards_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.availableRewards_ = availableRewards_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.team.v1beta1.QueryProto.QueryVestingStatus) {
+          return mergeFrom((com.kyve.team.v1beta1.QueryProto.QueryVestingStatus)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.team.v1beta1.QueryProto.QueryVestingStatus other) {
+        if (other == com.kyve.team.v1beta1.QueryProto.QueryVestingStatus.getDefaultInstance()) return this;
+        if (other.getTotalVestedAmount() != 0L) {
+          setTotalVestedAmount(other.getTotalVestedAmount());
+        }
+        if (other.getTotalUnlockedAmount() != 0L) {
+          setTotalUnlockedAmount(other.getTotalUnlockedAmount());
+        }
+        if (other.getCurrentClaimableAmount() != 0L) {
+          setCurrentClaimableAmount(other.getCurrentClaimableAmount());
+        }
+        if (other.getLockedVestedAmount() != 0L) {
+          setLockedVestedAmount(other.getLockedVestedAmount());
+        }
+        if (other.getRemainingUnvestedAmount() != 0L) {
+          setRemainingUnvestedAmount(other.getRemainingUnvestedAmount());
+        }
+        if (other.getClaimedAmount() != 0L) {
+          setClaimedAmount(other.getClaimedAmount());
+        }
+        if (other.getTotalRewards() != 0L) {
+          setTotalRewards(other.getTotalRewards());
+        }
+        if (other.getClaimedRewards() != 0L) {
+          setClaimedRewards(other.getClaimedRewards());
+        }
+        if (other.getAvailableRewards() != 0L) {
+          setAvailableRewards(other.getAvailableRewards());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                totalVestedAmount_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                totalUnlockedAmount_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 24: {
+                currentClaimableAmount_ = input.readUInt64();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
+              case 32: {
+                lockedVestedAmount_ = input.readUInt64();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 40: {
+                remainingUnvestedAmount_ = input.readUInt64();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 48: {
+                claimedAmount_ = input.readUInt64();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              case 56: {
+                totalRewards_ = input.readUInt64();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              case 64: {
+                claimedRewards_ = input.readUInt64();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
+              case 72: {
+                availableRewards_ = input.readUInt64();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 72
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long totalVestedAmount_ ;
+      /**
+       * <pre>
+       * total_vested_amount ...
+       * </pre>
+       *
+       * <code>uint64 total_vested_amount = 1 [json_name = "totalVestedAmount"];</code>
+       * @return The totalVestedAmount.
+       */
+      @java.lang.Override
+      public long getTotalVestedAmount() {
+        return totalVestedAmount_;
+      }
+      /**
+       * <pre>
+       * total_vested_amount ...
+       * </pre>
+       *
+       * <code>uint64 total_vested_amount = 1 [json_name = "totalVestedAmount"];</code>
+       * @param value The totalVestedAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalVestedAmount(long value) {
+
+        totalVestedAmount_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total_vested_amount ...
+       * </pre>
+       *
+       * <code>uint64 total_vested_amount = 1 [json_name = "totalVestedAmount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalVestedAmount() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        totalVestedAmount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long totalUnlockedAmount_ ;
+      /**
+       * <pre>
+       * total_unlocked_amount ...
+       * </pre>
+       *
+       * <code>uint64 total_unlocked_amount = 2 [json_name = "totalUnlockedAmount"];</code>
+       * @return The totalUnlockedAmount.
+       */
+      @java.lang.Override
+      public long getTotalUnlockedAmount() {
+        return totalUnlockedAmount_;
+      }
+      /**
+       * <pre>
+       * total_unlocked_amount ...
+       * </pre>
+       *
+       * <code>uint64 total_unlocked_amount = 2 [json_name = "totalUnlockedAmount"];</code>
+       * @param value The totalUnlockedAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalUnlockedAmount(long value) {
+
+        totalUnlockedAmount_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total_unlocked_amount ...
+       * </pre>
+       *
+       * <code>uint64 total_unlocked_amount = 2 [json_name = "totalUnlockedAmount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalUnlockedAmount() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        totalUnlockedAmount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long currentClaimableAmount_ ;
+      /**
+       * <pre>
+       * current_claimable_amount ...
+       * </pre>
+       *
+       * <code>uint64 current_claimable_amount = 3 [json_name = "currentClaimableAmount"];</code>
+       * @return The currentClaimableAmount.
+       */
+      @java.lang.Override
+      public long getCurrentClaimableAmount() {
+        return currentClaimableAmount_;
+      }
+      /**
+       * <pre>
+       * current_claimable_amount ...
+       * </pre>
+       *
+       * <code>uint64 current_claimable_amount = 3 [json_name = "currentClaimableAmount"];</code>
+       * @param value The currentClaimableAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCurrentClaimableAmount(long value) {
+
+        currentClaimableAmount_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * current_claimable_amount ...
+       * </pre>
+       *
+       * <code>uint64 current_claimable_amount = 3 [json_name = "currentClaimableAmount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCurrentClaimableAmount() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        currentClaimableAmount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long lockedVestedAmount_ ;
+      /**
+       * <pre>
+       * locked_vested_amount ...
+       * </pre>
+       *
+       * <code>uint64 locked_vested_amount = 4 [json_name = "lockedVestedAmount"];</code>
+       * @return The lockedVestedAmount.
+       */
+      @java.lang.Override
+      public long getLockedVestedAmount() {
+        return lockedVestedAmount_;
+      }
+      /**
+       * <pre>
+       * locked_vested_amount ...
+       * </pre>
+       *
+       * <code>uint64 locked_vested_amount = 4 [json_name = "lockedVestedAmount"];</code>
+       * @param value The lockedVestedAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLockedVestedAmount(long value) {
+
+        lockedVestedAmount_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * locked_vested_amount ...
+       * </pre>
+       *
+       * <code>uint64 locked_vested_amount = 4 [json_name = "lockedVestedAmount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLockedVestedAmount() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        lockedVestedAmount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long remainingUnvestedAmount_ ;
+      /**
+       * <pre>
+       * remaining_unvested_amount ...
+       * </pre>
+       *
+       * <code>uint64 remaining_unvested_amount = 5 [json_name = "remainingUnvestedAmount"];</code>
+       * @return The remainingUnvestedAmount.
+       */
+      @java.lang.Override
+      public long getRemainingUnvestedAmount() {
+        return remainingUnvestedAmount_;
+      }
+      /**
+       * <pre>
+       * remaining_unvested_amount ...
+       * </pre>
+       *
+       * <code>uint64 remaining_unvested_amount = 5 [json_name = "remainingUnvestedAmount"];</code>
+       * @param value The remainingUnvestedAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRemainingUnvestedAmount(long value) {
+
+        remainingUnvestedAmount_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * remaining_unvested_amount ...
+       * </pre>
+       *
+       * <code>uint64 remaining_unvested_amount = 5 [json_name = "remainingUnvestedAmount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRemainingUnvestedAmount() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        remainingUnvestedAmount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long claimedAmount_ ;
+      /**
+       * <pre>
+       * claimed_amount ...
+       * </pre>
+       *
+       * <code>uint64 claimed_amount = 6 [json_name = "claimedAmount"];</code>
+       * @return The claimedAmount.
+       */
+      @java.lang.Override
+      public long getClaimedAmount() {
+        return claimedAmount_;
+      }
+      /**
+       * <pre>
+       * claimed_amount ...
+       * </pre>
+       *
+       * <code>uint64 claimed_amount = 6 [json_name = "claimedAmount"];</code>
+       * @param value The claimedAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimedAmount(long value) {
+
+        claimedAmount_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * claimed_amount ...
+       * </pre>
+       *
+       * <code>uint64 claimed_amount = 6 [json_name = "claimedAmount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClaimedAmount() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        claimedAmount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long totalRewards_ ;
+      /**
+       * <pre>
+       * total_rewards ...
+       * </pre>
+       *
+       * <code>uint64 total_rewards = 7 [json_name = "totalRewards"];</code>
+       * @return The totalRewards.
+       */
+      @java.lang.Override
+      public long getTotalRewards() {
+        return totalRewards_;
+      }
+      /**
+       * <pre>
+       * total_rewards ...
+       * </pre>
+       *
+       * <code>uint64 total_rewards = 7 [json_name = "totalRewards"];</code>
+       * @param value The totalRewards to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalRewards(long value) {
+
+        totalRewards_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total_rewards ...
+       * </pre>
+       *
+       * <code>uint64 total_rewards = 7 [json_name = "totalRewards"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalRewards() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        totalRewards_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long claimedRewards_ ;
+      /**
+       * <pre>
+       * claimed_rewards ...
+       * </pre>
+       *
+       * <code>uint64 claimed_rewards = 8 [json_name = "claimedRewards"];</code>
+       * @return The claimedRewards.
+       */
+      @java.lang.Override
+      public long getClaimedRewards() {
+        return claimedRewards_;
+      }
+      /**
+       * <pre>
+       * claimed_rewards ...
+       * </pre>
+       *
+       * <code>uint64 claimed_rewards = 8 [json_name = "claimedRewards"];</code>
+       * @param value The claimedRewards to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimedRewards(long value) {
+
+        claimedRewards_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * claimed_rewards ...
+       * </pre>
+       *
+       * <code>uint64 claimed_rewards = 8 [json_name = "claimedRewards"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClaimedRewards() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        claimedRewards_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long availableRewards_ ;
+      /**
+       * <pre>
+       * available_rewards ...
+       * </pre>
+       *
+       * <code>uint64 available_rewards = 9 [json_name = "availableRewards"];</code>
+       * @return The availableRewards.
+       */
+      @java.lang.Override
+      public long getAvailableRewards() {
+        return availableRewards_;
+      }
+      /**
+       * <pre>
+       * available_rewards ...
+       * </pre>
+       *
+       * <code>uint64 available_rewards = 9 [json_name = "availableRewards"];</code>
+       * @param value The availableRewards to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAvailableRewards(long value) {
+
+        availableRewards_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * available_rewards ...
+       * </pre>
+       *
+       * <code>uint64 available_rewards = 9 [json_name = "availableRewards"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAvailableRewards() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        availableRewards_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.team.v1beta1.QueryVestingStatus)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.team.v1beta1.QueryVestingStatus)
+    private static final com.kyve.team.v1beta1.QueryProto.QueryVestingStatus DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.team.v1beta1.QueryProto.QueryVestingStatus();
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryVestingStatus getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryVestingStatus>
+        PARSER = new com.google.protobuf.AbstractParser<QueryVestingStatus>() {
+      @java.lang.Override
+      public QueryVestingStatus parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryVestingStatus> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryVestingStatus> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.team.v1beta1.QueryProto.QueryVestingStatus getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface QueryVestingPlanOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:kyve.team.v1beta1.QueryVestingPlan)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * commencement ...
+     * </pre>
+     *
+     * <code>string commencement = 1 [json_name = "commencement"];</code>
+     * @return The commencement.
+     */
+    java.lang.String getCommencement();
+    /**
+     * <pre>
+     * commencement ...
+     * </pre>
+     *
+     * <code>string commencement = 1 [json_name = "commencement"];</code>
+     * @return The bytes for commencement.
+     */
+    com.google.protobuf.ByteString
+        getCommencementBytes();
+
+    /**
+     * <pre>
+     * token_vesting_start ...
+     * </pre>
+     *
+     * <code>string token_vesting_start = 2 [json_name = "tokenVestingStart"];</code>
+     * @return The tokenVestingStart.
+     */
+    java.lang.String getTokenVestingStart();
+    /**
+     * <pre>
+     * token_vesting_start ...
+     * </pre>
+     *
+     * <code>string token_vesting_start = 2 [json_name = "tokenVestingStart"];</code>
+     * @return The bytes for tokenVestingStart.
+     */
+    com.google.protobuf.ByteString
+        getTokenVestingStartBytes();
+
+    /**
+     * <pre>
+     * token_vesting_finished ...
+     * </pre>
+     *
+     * <code>string token_vesting_finished = 3 [json_name = "tokenVestingFinished"];</code>
+     * @return The tokenVestingFinished.
+     */
+    java.lang.String getTokenVestingFinished();
+    /**
+     * <pre>
+     * token_vesting_finished ...
+     * </pre>
+     *
+     * <code>string token_vesting_finished = 3 [json_name = "tokenVestingFinished"];</code>
+     * @return The bytes for tokenVestingFinished.
+     */
+    com.google.protobuf.ByteString
+        getTokenVestingFinishedBytes();
+
+    /**
+     * <pre>
+     * token_unlock_start ...
+     * </pre>
+     *
+     * <code>string token_unlock_start = 4 [json_name = "tokenUnlockStart"];</code>
+     * @return The tokenUnlockStart.
+     */
+    java.lang.String getTokenUnlockStart();
+    /**
+     * <pre>
+     * token_unlock_start ...
+     * </pre>
+     *
+     * <code>string token_unlock_start = 4 [json_name = "tokenUnlockStart"];</code>
+     * @return The bytes for tokenUnlockStart.
+     */
+    com.google.protobuf.ByteString
+        getTokenUnlockStartBytes();
+
+    /**
+     * <pre>
+     * token_unlock_finished ...
+     * </pre>
+     *
+     * <code>string token_unlock_finished = 5 [json_name = "tokenUnlockFinished"];</code>
+     * @return The tokenUnlockFinished.
+     */
+    java.lang.String getTokenUnlockFinished();
+    /**
+     * <pre>
+     * token_unlock_finished ...
+     * </pre>
+     *
+     * <code>string token_unlock_finished = 5 [json_name = "tokenUnlockFinished"];</code>
+     * @return The bytes for tokenUnlockFinished.
+     */
+    com.google.protobuf.ByteString
+        getTokenUnlockFinishedBytes();
+
+    /**
+     * <pre>
+     * clawback ...
+     * </pre>
+     *
+     * <code>uint64 clawback = 6 [json_name = "clawback"];</code>
+     * @return The clawback.
+     */
+    long getClawback();
+
+    /**
+     * <pre>
+     * clawback_amount ...
+     * </pre>
+     *
+     * <code>uint64 clawback_amount = 7 [json_name = "clawbackAmount"];</code>
+     * @return The clawbackAmount.
+     */
+    long getClawbackAmount();
+
+    /**
+     * <pre>
+     * maximum_vesting_amount ...
+     * </pre>
+     *
+     * <code>uint64 maximum_vesting_amount = 8 [json_name = "maximumVestingAmount"];</code>
+     * @return The maximumVestingAmount.
+     */
+    long getMaximumVestingAmount();
+  }
+  /**
+   * <pre>
+   * QueryVestingPlan is a type holding information about the account's vesting data which does not change
+   * </pre>
+   *
+   * Protobuf type {@code kyve.team.v1beta1.QueryVestingPlan}
+   */
+  public static final class QueryVestingPlan extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:kyve.team.v1beta1.QueryVestingPlan)
+      QueryVestingPlanOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use QueryVestingPlan.newBuilder() to construct.
+    private QueryVestingPlan(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private QueryVestingPlan() {
+      commencement_ = "";
+      tokenVestingStart_ = "";
+      tokenVestingFinished_ = "";
+      tokenUnlockStart_ = "";
+      tokenUnlockFinished_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new QueryVestingPlan();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryVestingPlan_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryVestingPlan_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.kyve.team.v1beta1.QueryProto.QueryVestingPlan.class, com.kyve.team.v1beta1.QueryProto.QueryVestingPlan.Builder.class);
+    }
+
+    public static final int COMMENCEMENT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object commencement_ = "";
+    /**
+     * <pre>
+     * commencement ...
+     * </pre>
+     *
+     * <code>string commencement = 1 [json_name = "commencement"];</code>
+     * @return The commencement.
+     */
+    @java.lang.Override
+    public java.lang.String getCommencement() {
+      java.lang.Object ref = commencement_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        commencement_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * commencement ...
+     * </pre>
+     *
+     * <code>string commencement = 1 [json_name = "commencement"];</code>
+     * @return The bytes for commencement.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCommencementBytes() {
+      java.lang.Object ref = commencement_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        commencement_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOKEN_VESTING_START_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object tokenVestingStart_ = "";
+    /**
+     * <pre>
+     * token_vesting_start ...
+     * </pre>
+     *
+     * <code>string token_vesting_start = 2 [json_name = "tokenVestingStart"];</code>
+     * @return The tokenVestingStart.
+     */
+    @java.lang.Override
+    public java.lang.String getTokenVestingStart() {
+      java.lang.Object ref = tokenVestingStart_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tokenVestingStart_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * token_vesting_start ...
+     * </pre>
+     *
+     * <code>string token_vesting_start = 2 [json_name = "tokenVestingStart"];</code>
+     * @return The bytes for tokenVestingStart.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTokenVestingStartBytes() {
+      java.lang.Object ref = tokenVestingStart_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tokenVestingStart_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOKEN_VESTING_FINISHED_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object tokenVestingFinished_ = "";
+    /**
+     * <pre>
+     * token_vesting_finished ...
+     * </pre>
+     *
+     * <code>string token_vesting_finished = 3 [json_name = "tokenVestingFinished"];</code>
+     * @return The tokenVestingFinished.
+     */
+    @java.lang.Override
+    public java.lang.String getTokenVestingFinished() {
+      java.lang.Object ref = tokenVestingFinished_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tokenVestingFinished_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * token_vesting_finished ...
+     * </pre>
+     *
+     * <code>string token_vesting_finished = 3 [json_name = "tokenVestingFinished"];</code>
+     * @return The bytes for tokenVestingFinished.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTokenVestingFinishedBytes() {
+      java.lang.Object ref = tokenVestingFinished_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tokenVestingFinished_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOKEN_UNLOCK_START_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object tokenUnlockStart_ = "";
+    /**
+     * <pre>
+     * token_unlock_start ...
+     * </pre>
+     *
+     * <code>string token_unlock_start = 4 [json_name = "tokenUnlockStart"];</code>
+     * @return The tokenUnlockStart.
+     */
+    @java.lang.Override
+    public java.lang.String getTokenUnlockStart() {
+      java.lang.Object ref = tokenUnlockStart_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tokenUnlockStart_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * token_unlock_start ...
+     * </pre>
+     *
+     * <code>string token_unlock_start = 4 [json_name = "tokenUnlockStart"];</code>
+     * @return The bytes for tokenUnlockStart.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTokenUnlockStartBytes() {
+      java.lang.Object ref = tokenUnlockStart_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tokenUnlockStart_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOKEN_UNLOCK_FINISHED_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object tokenUnlockFinished_ = "";
+    /**
+     * <pre>
+     * token_unlock_finished ...
+     * </pre>
+     *
+     * <code>string token_unlock_finished = 5 [json_name = "tokenUnlockFinished"];</code>
+     * @return The tokenUnlockFinished.
+     */
+    @java.lang.Override
+    public java.lang.String getTokenUnlockFinished() {
+      java.lang.Object ref = tokenUnlockFinished_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tokenUnlockFinished_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * token_unlock_finished ...
+     * </pre>
+     *
+     * <code>string token_unlock_finished = 5 [json_name = "tokenUnlockFinished"];</code>
+     * @return The bytes for tokenUnlockFinished.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTokenUnlockFinishedBytes() {
+      java.lang.Object ref = tokenUnlockFinished_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tokenUnlockFinished_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLAWBACK_FIELD_NUMBER = 6;
+    private long clawback_ = 0L;
+    /**
+     * <pre>
+     * clawback ...
+     * </pre>
+     *
+     * <code>uint64 clawback = 6 [json_name = "clawback"];</code>
+     * @return The clawback.
+     */
+    @java.lang.Override
+    public long getClawback() {
+      return clawback_;
+    }
+
+    public static final int CLAWBACK_AMOUNT_FIELD_NUMBER = 7;
+    private long clawbackAmount_ = 0L;
+    /**
+     * <pre>
+     * clawback_amount ...
+     * </pre>
+     *
+     * <code>uint64 clawback_amount = 7 [json_name = "clawbackAmount"];</code>
+     * @return The clawbackAmount.
+     */
+    @java.lang.Override
+    public long getClawbackAmount() {
+      return clawbackAmount_;
+    }
+
+    public static final int MAXIMUM_VESTING_AMOUNT_FIELD_NUMBER = 8;
+    private long maximumVestingAmount_ = 0L;
+    /**
+     * <pre>
+     * maximum_vesting_amount ...
+     * </pre>
+     *
+     * <code>uint64 maximum_vesting_amount = 8 [json_name = "maximumVestingAmount"];</code>
+     * @return The maximumVestingAmount.
+     */
+    @java.lang.Override
+    public long getMaximumVestingAmount() {
+      return maximumVestingAmount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(commencement_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, commencement_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenVestingStart_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, tokenVestingStart_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenVestingFinished_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, tokenVestingFinished_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenUnlockStart_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, tokenUnlockStart_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenUnlockFinished_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, tokenUnlockFinished_);
+      }
+      if (clawback_ != 0L) {
+        output.writeUInt64(6, clawback_);
+      }
+      if (clawbackAmount_ != 0L) {
+        output.writeUInt64(7, clawbackAmount_);
+      }
+      if (maximumVestingAmount_ != 0L) {
+        output.writeUInt64(8, maximumVestingAmount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(commencement_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, commencement_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenVestingStart_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, tokenVestingStart_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenVestingFinished_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, tokenVestingFinished_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenUnlockStart_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, tokenUnlockStart_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tokenUnlockFinished_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, tokenUnlockFinished_);
+      }
+      if (clawback_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(6, clawback_);
+      }
+      if (clawbackAmount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(7, clawbackAmount_);
+      }
+      if (maximumVestingAmount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(8, maximumVestingAmount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.kyve.team.v1beta1.QueryProto.QueryVestingPlan)) {
+        return super.equals(obj);
+      }
+      com.kyve.team.v1beta1.QueryProto.QueryVestingPlan other = (com.kyve.team.v1beta1.QueryProto.QueryVestingPlan) obj;
+
+      if (!getCommencement()
+          .equals(other.getCommencement())) return false;
+      if (!getTokenVestingStart()
+          .equals(other.getTokenVestingStart())) return false;
+      if (!getTokenVestingFinished()
+          .equals(other.getTokenVestingFinished())) return false;
+      if (!getTokenUnlockStart()
+          .equals(other.getTokenUnlockStart())) return false;
+      if (!getTokenUnlockFinished()
+          .equals(other.getTokenUnlockFinished())) return false;
+      if (getClawback()
+          != other.getClawback()) return false;
+      if (getClawbackAmount()
+          != other.getClawbackAmount()) return false;
+      if (getMaximumVestingAmount()
+          != other.getMaximumVestingAmount()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + COMMENCEMENT_FIELD_NUMBER;
+      hash = (53 * hash) + getCommencement().hashCode();
+      hash = (37 * hash) + TOKEN_VESTING_START_FIELD_NUMBER;
+      hash = (53 * hash) + getTokenVestingStart().hashCode();
+      hash = (37 * hash) + TOKEN_VESTING_FINISHED_FIELD_NUMBER;
+      hash = (53 * hash) + getTokenVestingFinished().hashCode();
+      hash = (37 * hash) + TOKEN_UNLOCK_START_FIELD_NUMBER;
+      hash = (53 * hash) + getTokenUnlockStart().hashCode();
+      hash = (37 * hash) + TOKEN_UNLOCK_FINISHED_FIELD_NUMBER;
+      hash = (53 * hash) + getTokenUnlockFinished().hashCode();
+      hash = (37 * hash) + CLAWBACK_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getClawback());
+      hash = (37 * hash) + CLAWBACK_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getClawbackAmount());
+      hash = (37 * hash) + MAXIMUM_VESTING_AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMaximumVestingAmount());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryVestingPlan parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryVestingPlan parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryVestingPlan parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryVestingPlan parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryVestingPlan parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryVestingPlan parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryVestingPlan parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryVestingPlan parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryVestingPlan parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryVestingPlan parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryVestingPlan parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.kyve.team.v1beta1.QueryProto.QueryVestingPlan parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.kyve.team.v1beta1.QueryProto.QueryVestingPlan prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * QueryVestingPlan is a type holding information about the account's vesting data which does not change
+     * </pre>
+     *
+     * Protobuf type {@code kyve.team.v1beta1.QueryVestingPlan}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:kyve.team.v1beta1.QueryVestingPlan)
+        com.kyve.team.v1beta1.QueryProto.QueryVestingPlanOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryVestingPlan_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryVestingPlan_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.kyve.team.v1beta1.QueryProto.QueryVestingPlan.class, com.kyve.team.v1beta1.QueryProto.QueryVestingPlan.Builder.class);
+      }
+
+      // Construct using com.kyve.team.v1beta1.QueryProto.QueryVestingPlan.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        commencement_ = "";
+        tokenVestingStart_ = "";
+        tokenVestingFinished_ = "";
+        tokenUnlockStart_ = "";
+        tokenUnlockFinished_ = "";
+        clawback_ = 0L;
+        clawbackAmount_ = 0L;
+        maximumVestingAmount_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.kyve.team.v1beta1.QueryProto.internal_static_kyve_team_v1beta1_QueryVestingPlan_descriptor;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.QueryProto.QueryVestingPlan getDefaultInstanceForType() {
+        return com.kyve.team.v1beta1.QueryProto.QueryVestingPlan.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.QueryProto.QueryVestingPlan build() {
+        com.kyve.team.v1beta1.QueryProto.QueryVestingPlan result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.kyve.team.v1beta1.QueryProto.QueryVestingPlan buildPartial() {
+        com.kyve.team.v1beta1.QueryProto.QueryVestingPlan result = new com.kyve.team.v1beta1.QueryProto.QueryVestingPlan(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.kyve.team.v1beta1.QueryProto.QueryVestingPlan result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.commencement_ = commencement_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.tokenVestingStart_ = tokenVestingStart_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.tokenVestingFinished_ = tokenVestingFinished_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.tokenUnlockStart_ = tokenUnlockStart_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.tokenUnlockFinished_ = tokenUnlockFinished_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.clawback_ = clawback_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.clawbackAmount_ = clawbackAmount_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.maximumVestingAmount_ = maximumVestingAmount_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.kyve.team.v1beta1.QueryProto.QueryVestingPlan) {
+          return mergeFrom((com.kyve.team.v1beta1.QueryProto.QueryVestingPlan)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.kyve.team.v1beta1.QueryProto.QueryVestingPlan other) {
+        if (other == com.kyve.team.v1beta1.QueryProto.QueryVestingPlan.getDefaultInstance()) return this;
+        if (!other.getCommencement().isEmpty()) {
+          commencement_ = other.commencement_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getTokenVestingStart().isEmpty()) {
+          tokenVestingStart_ = other.tokenVestingStart_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getTokenVestingFinished().isEmpty()) {
+          tokenVestingFinished_ = other.tokenVestingFinished_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getTokenUnlockStart().isEmpty()) {
+          tokenUnlockStart_ = other.tokenUnlockStart_;
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getTokenUnlockFinished().isEmpty()) {
+          tokenUnlockFinished_ = other.tokenUnlockFinished_;
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        if (other.getClawback() != 0L) {
+          setClawback(other.getClawback());
+        }
+        if (other.getClawbackAmount() != 0L) {
+          setClawbackAmount(other.getClawbackAmount());
+        }
+        if (other.getMaximumVestingAmount() != 0L) {
+          setMaximumVestingAmount(other.getMaximumVestingAmount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                commencement_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                tokenVestingStart_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                tokenVestingFinished_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                tokenUnlockStart_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                tokenUnlockFinished_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 48: {
+                clawback_ = input.readUInt64();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              case 56: {
+                clawbackAmount_ = input.readUInt64();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              case 64: {
+                maximumVestingAmount_ = input.readUInt64();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object commencement_ = "";
+      /**
+       * <pre>
+       * commencement ...
+       * </pre>
+       *
+       * <code>string commencement = 1 [json_name = "commencement"];</code>
+       * @return The commencement.
+       */
+      public java.lang.String getCommencement() {
+        java.lang.Object ref = commencement_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          commencement_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * commencement ...
+       * </pre>
+       *
+       * <code>string commencement = 1 [json_name = "commencement"];</code>
+       * @return The bytes for commencement.
+       */
+      public com.google.protobuf.ByteString
+          getCommencementBytes() {
+        java.lang.Object ref = commencement_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          commencement_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * commencement ...
+       * </pre>
+       *
+       * <code>string commencement = 1 [json_name = "commencement"];</code>
+       * @param value The commencement to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCommencement(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        commencement_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * commencement ...
+       * </pre>
+       *
+       * <code>string commencement = 1 [json_name = "commencement"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCommencement() {
+        commencement_ = getDefaultInstance().getCommencement();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * commencement ...
+       * </pre>
+       *
+       * <code>string commencement = 1 [json_name = "commencement"];</code>
+       * @param value The bytes for commencement to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCommencementBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        commencement_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object tokenVestingStart_ = "";
+      /**
+       * <pre>
+       * token_vesting_start ...
+       * </pre>
+       *
+       * <code>string token_vesting_start = 2 [json_name = "tokenVestingStart"];</code>
+       * @return The tokenVestingStart.
+       */
+      public java.lang.String getTokenVestingStart() {
+        java.lang.Object ref = tokenVestingStart_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tokenVestingStart_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * token_vesting_start ...
+       * </pre>
+       *
+       * <code>string token_vesting_start = 2 [json_name = "tokenVestingStart"];</code>
+       * @return The bytes for tokenVestingStart.
+       */
+      public com.google.protobuf.ByteString
+          getTokenVestingStartBytes() {
+        java.lang.Object ref = tokenVestingStart_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tokenVestingStart_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * token_vesting_start ...
+       * </pre>
+       *
+       * <code>string token_vesting_start = 2 [json_name = "tokenVestingStart"];</code>
+       * @param value The tokenVestingStart to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenVestingStart(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        tokenVestingStart_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * token_vesting_start ...
+       * </pre>
+       *
+       * <code>string token_vesting_start = 2 [json_name = "tokenVestingStart"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTokenVestingStart() {
+        tokenVestingStart_ = getDefaultInstance().getTokenVestingStart();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * token_vesting_start ...
+       * </pre>
+       *
+       * <code>string token_vesting_start = 2 [json_name = "tokenVestingStart"];</code>
+       * @param value The bytes for tokenVestingStart to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenVestingStartBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        tokenVestingStart_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object tokenVestingFinished_ = "";
+      /**
+       * <pre>
+       * token_vesting_finished ...
+       * </pre>
+       *
+       * <code>string token_vesting_finished = 3 [json_name = "tokenVestingFinished"];</code>
+       * @return The tokenVestingFinished.
+       */
+      public java.lang.String getTokenVestingFinished() {
+        java.lang.Object ref = tokenVestingFinished_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tokenVestingFinished_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * token_vesting_finished ...
+       * </pre>
+       *
+       * <code>string token_vesting_finished = 3 [json_name = "tokenVestingFinished"];</code>
+       * @return The bytes for tokenVestingFinished.
+       */
+      public com.google.protobuf.ByteString
+          getTokenVestingFinishedBytes() {
+        java.lang.Object ref = tokenVestingFinished_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tokenVestingFinished_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * token_vesting_finished ...
+       * </pre>
+       *
+       * <code>string token_vesting_finished = 3 [json_name = "tokenVestingFinished"];</code>
+       * @param value The tokenVestingFinished to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenVestingFinished(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        tokenVestingFinished_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * token_vesting_finished ...
+       * </pre>
+       *
+       * <code>string token_vesting_finished = 3 [json_name = "tokenVestingFinished"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTokenVestingFinished() {
+        tokenVestingFinished_ = getDefaultInstance().getTokenVestingFinished();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * token_vesting_finished ...
+       * </pre>
+       *
+       * <code>string token_vesting_finished = 3 [json_name = "tokenVestingFinished"];</code>
+       * @param value The bytes for tokenVestingFinished to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenVestingFinishedBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        tokenVestingFinished_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object tokenUnlockStart_ = "";
+      /**
+       * <pre>
+       * token_unlock_start ...
+       * </pre>
+       *
+       * <code>string token_unlock_start = 4 [json_name = "tokenUnlockStart"];</code>
+       * @return The tokenUnlockStart.
+       */
+      public java.lang.String getTokenUnlockStart() {
+        java.lang.Object ref = tokenUnlockStart_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tokenUnlockStart_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * token_unlock_start ...
+       * </pre>
+       *
+       * <code>string token_unlock_start = 4 [json_name = "tokenUnlockStart"];</code>
+       * @return The bytes for tokenUnlockStart.
+       */
+      public com.google.protobuf.ByteString
+          getTokenUnlockStartBytes() {
+        java.lang.Object ref = tokenUnlockStart_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tokenUnlockStart_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * token_unlock_start ...
+       * </pre>
+       *
+       * <code>string token_unlock_start = 4 [json_name = "tokenUnlockStart"];</code>
+       * @param value The tokenUnlockStart to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenUnlockStart(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        tokenUnlockStart_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * token_unlock_start ...
+       * </pre>
+       *
+       * <code>string token_unlock_start = 4 [json_name = "tokenUnlockStart"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTokenUnlockStart() {
+        tokenUnlockStart_ = getDefaultInstance().getTokenUnlockStart();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * token_unlock_start ...
+       * </pre>
+       *
+       * <code>string token_unlock_start = 4 [json_name = "tokenUnlockStart"];</code>
+       * @param value The bytes for tokenUnlockStart to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenUnlockStartBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        tokenUnlockStart_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object tokenUnlockFinished_ = "";
+      /**
+       * <pre>
+       * token_unlock_finished ...
+       * </pre>
+       *
+       * <code>string token_unlock_finished = 5 [json_name = "tokenUnlockFinished"];</code>
+       * @return The tokenUnlockFinished.
+       */
+      public java.lang.String getTokenUnlockFinished() {
+        java.lang.Object ref = tokenUnlockFinished_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tokenUnlockFinished_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * token_unlock_finished ...
+       * </pre>
+       *
+       * <code>string token_unlock_finished = 5 [json_name = "tokenUnlockFinished"];</code>
+       * @return The bytes for tokenUnlockFinished.
+       */
+      public com.google.protobuf.ByteString
+          getTokenUnlockFinishedBytes() {
+        java.lang.Object ref = tokenUnlockFinished_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tokenUnlockFinished_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * token_unlock_finished ...
+       * </pre>
+       *
+       * <code>string token_unlock_finished = 5 [json_name = "tokenUnlockFinished"];</code>
+       * @param value The tokenUnlockFinished to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenUnlockFinished(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        tokenUnlockFinished_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * token_unlock_finished ...
+       * </pre>
+       *
+       * <code>string token_unlock_finished = 5 [json_name = "tokenUnlockFinished"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTokenUnlockFinished() {
+        tokenUnlockFinished_ = getDefaultInstance().getTokenUnlockFinished();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * token_unlock_finished ...
+       * </pre>
+       *
+       * <code>string token_unlock_finished = 5 [json_name = "tokenUnlockFinished"];</code>
+       * @param value The bytes for tokenUnlockFinished to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTokenUnlockFinishedBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        tokenUnlockFinished_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private long clawback_ ;
+      /**
+       * <pre>
+       * clawback ...
+       * </pre>
+       *
+       * <code>uint64 clawback = 6 [json_name = "clawback"];</code>
+       * @return The clawback.
+       */
+      @java.lang.Override
+      public long getClawback() {
+        return clawback_;
+      }
+      /**
+       * <pre>
+       * clawback ...
+       * </pre>
+       *
+       * <code>uint64 clawback = 6 [json_name = "clawback"];</code>
+       * @param value The clawback to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClawback(long value) {
+
+        clawback_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * clawback ...
+       * </pre>
+       *
+       * <code>uint64 clawback = 6 [json_name = "clawback"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClawback() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        clawback_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long clawbackAmount_ ;
+      /**
+       * <pre>
+       * clawback_amount ...
+       * </pre>
+       *
+       * <code>uint64 clawback_amount = 7 [json_name = "clawbackAmount"];</code>
+       * @return The clawbackAmount.
+       */
+      @java.lang.Override
+      public long getClawbackAmount() {
+        return clawbackAmount_;
+      }
+      /**
+       * <pre>
+       * clawback_amount ...
+       * </pre>
+       *
+       * <code>uint64 clawback_amount = 7 [json_name = "clawbackAmount"];</code>
+       * @param value The clawbackAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClawbackAmount(long value) {
+
+        clawbackAmount_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * clawback_amount ...
+       * </pre>
+       *
+       * <code>uint64 clawback_amount = 7 [json_name = "clawbackAmount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClawbackAmount() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        clawbackAmount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long maximumVestingAmount_ ;
+      /**
+       * <pre>
+       * maximum_vesting_amount ...
+       * </pre>
+       *
+       * <code>uint64 maximum_vesting_amount = 8 [json_name = "maximumVestingAmount"];</code>
+       * @return The maximumVestingAmount.
+       */
+      @java.lang.Override
+      public long getMaximumVestingAmount() {
+        return maximumVestingAmount_;
+      }
+      /**
+       * <pre>
+       * maximum_vesting_amount ...
+       * </pre>
+       *
+       * <code>uint64 maximum_vesting_amount = 8 [json_name = "maximumVestingAmount"];</code>
+       * @param value The maximumVestingAmount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaximumVestingAmount(long value) {
+
+        maximumVestingAmount_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * maximum_vesting_amount ...
+       * </pre>
+       *
+       * <code>uint64 maximum_vesting_amount = 8 [json_name = "maximumVestingAmount"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaximumVestingAmount() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        maximumVestingAmount_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:kyve.team.v1beta1.QueryVestingPlan)
+    }
+
+    // @@protoc_insertion_point(class_scope:kyve.team.v1beta1.QueryVestingPlan)
+    private static final com.kyve.team.v1beta1.QueryProto.QueryVestingPlan DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.kyve.team.v1beta1.QueryProto.QueryVestingPlan();
+    }
+
+    public static com.kyve.team.v1beta1.QueryProto.QueryVestingPlan getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<QueryVestingPlan>
+        PARSER = new com.google.protobuf.AbstractParser<QueryVestingPlan>() {
+      @java.lang.Override
+      public QueryVestingPlan parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<QueryVestingPlan> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<QueryVestingPlan> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.kyve.team.v1beta1.QueryProto.QueryVestingPlan getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_team_v1beta1_QueryTeamInfoRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_team_v1beta1_QueryTeamInfoRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_team_v1beta1_QueryTeamInfoResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_team_v1beta1_QueryTeamInfoResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_team_v1beta1_QueryTeamVestingAccountsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_team_v1beta1_QueryTeamVestingAccountsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_team_v1beta1_QueryTeamVestingAccountsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_team_v1beta1_QueryTeamVestingAccountsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_team_v1beta1_QueryTeamVestingAccountRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_team_v1beta1_QueryTeamVestingAccountRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_team_v1beta1_QueryTeamVestingAccountResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_team_v1beta1_QueryTeamVestingAccountResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_team_v1beta1_QueryTeamVestingStatusRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_team_v1beta1_QueryTeamVestingStatusRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_team_v1beta1_QueryTeamVestingStatusResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_team_v1beta1_QueryTeamVestingStatusResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_team_v1beta1_QueryTeamVestingStatusByTimeRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_team_v1beta1_QueryTeamVestingStatusByTimeRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_team_v1beta1_QueryTeamVestingStatusByTimeResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_team_v1beta1_QueryTeamVestingStatusByTimeResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_team_v1beta1_QueryVestingStatus_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_team_v1beta1_QueryVestingStatus_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_kyve_team_v1beta1_QueryVestingPlan_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_kyve_team_v1beta1_QueryVestingPlan_fieldAccessorTable;
 
@@ -168,12 +11050,12 @@ public final class QueryProto {
       "sByTimeRequest\0327.kyve.team.v1beta1.Query" +
       "TeamVestingStatusByTimeResponse\"B\202\323\344\223\002<\022" +
       ":/kyve/team/v1beta1/team_vesting_status_" +
-      "by_time/{id}/{time}B\264\001\n\025com.kyve.team.v1" +
-      "beta1B\nQueryProtoP\001Z)github.com/KYVENetw" +
-      "ork/chain/x/team/types\242\002\003KTX\252\002\021Kyve.Team" +
-      ".V1beta1\312\002\021Kyve\\Team\\V1beta1\342\002\035Kyve\\Team" +
-      "\\V1beta1\\GPBMetadata\352\002\023Kyve::Team::V1bet" +
-      "a1b\006proto3"
+      "by_time/{id}/{time}B\262\001\n\025com.kyve.team.v1" +
+      "beta1B\nQueryProtoZ)github.com/KYVENetwor" +
+      "k/chain/x/team/types\242\002\003KTX\252\002\021Kyve.Team.V" +
+      "1beta1\312\002\021Kyve\\Team\\V1beta1\342\002\035Kyve\\Team\\V" +
+      "1beta1\\GPBMetadata\352\002\023Kyve::Team::V1beta1" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

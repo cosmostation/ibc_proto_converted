@@ -14,54 +14,9693 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgCreateRewardProgramRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.reward.v1.MsgCreateRewardProgramRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * title for the reward program.
+     * </pre>
+     *
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    java.lang.String getTitle();
+    /**
+     * <pre>
+     * title for the reward program.
+     * </pre>
+     *
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    com.google.protobuf.ByteString
+        getTitleBytes();
+
+    /**
+     * <pre>
+     * description for the reward program.
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * description for the reward program.
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <pre>
+     * provider address for the reward program funds and signer of message.
+     * </pre>
+     *
+     * <code>string distribute_from_address = 3 [json_name = "distributeFromAddress"];</code>
+     * @return The distributeFromAddress.
+     */
+    java.lang.String getDistributeFromAddress();
+    /**
+     * <pre>
+     * provider address for the reward program funds and signer of message.
+     * </pre>
+     *
+     * <code>string distribute_from_address = 3 [json_name = "distributeFromAddress"];</code>
+     * @return The bytes for distributeFromAddress.
+     */
+    com.google.protobuf.ByteString
+        getDistributeFromAddressBytes();
+
+    /**
+     * <pre>
+     * total reward pool for the reward program.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin total_reward_pool = 4 [json_name = "totalRewardPool", (.gogoproto.nullable) = false];</code>
+     * @return Whether the totalRewardPool field is set.
+     */
+    boolean hasTotalRewardPool();
+    /**
+     * <pre>
+     * total reward pool for the reward program.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin total_reward_pool = 4 [json_name = "totalRewardPool", (.gogoproto.nullable) = false];</code>
+     * @return The totalRewardPool.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getTotalRewardPool();
+    /**
+     * <pre>
+     * total reward pool for the reward program.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin total_reward_pool = 4 [json_name = "totalRewardPool", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTotalRewardPoolOrBuilder();
+
+    /**
+     * <pre>
+     * maximum amount of funds an address can be rewarded per claim period.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin max_reward_per_claim_address = 5 [json_name = "maxRewardPerClaimAddress", (.gogoproto.nullable) = false];</code>
+     * @return Whether the maxRewardPerClaimAddress field is set.
+     */
+    boolean hasMaxRewardPerClaimAddress();
+    /**
+     * <pre>
+     * maximum amount of funds an address can be rewarded per claim period.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin max_reward_per_claim_address = 5 [json_name = "maxRewardPerClaimAddress", (.gogoproto.nullable) = false];</code>
+     * @return The maxRewardPerClaimAddress.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getMaxRewardPerClaimAddress();
+    /**
+     * <pre>
+     * maximum amount of funds an address can be rewarded per claim period.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin max_reward_per_claim_address = 5 [json_name = "maxRewardPerClaimAddress", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getMaxRewardPerClaimAddressOrBuilder();
+
+    /**
+     * <pre>
+     * start time of the reward program.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp program_start_time = 6 [json_name = "programStartTime", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "program_start_time,omitempty", (.gogoproto.moretags) = "yaml:&#92;"program_start_time,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the programStartTime field is set.
+     */
+    boolean hasProgramStartTime();
+    /**
+     * <pre>
+     * start time of the reward program.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp program_start_time = 6 [json_name = "programStartTime", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "program_start_time,omitempty", (.gogoproto.moretags) = "yaml:&#92;"program_start_time,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The programStartTime.
+     */
+    com.google.protobuf.Timestamp getProgramStartTime();
+    /**
+     * <pre>
+     * start time of the reward program.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp program_start_time = 6 [json_name = "programStartTime", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "program_start_time,omitempty", (.gogoproto.moretags) = "yaml:&#92;"program_start_time,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getProgramStartTimeOrBuilder();
+
+    /**
+     * <pre>
+     * number of claim periods the reward program runs for.
+     * </pre>
+     *
+     * <code>uint64 claim_periods = 7 [json_name = "claimPeriods"];</code>
+     * @return The claimPeriods.
+     */
+    long getClaimPeriods();
+
+    /**
+     * <pre>
+     * number of days a claim period will exist.
+     * </pre>
+     *
+     * <code>uint64 claim_period_days = 8 [json_name = "claimPeriodDays"];</code>
+     * @return The claimPeriodDays.
+     */
+    long getClaimPeriodDays();
+
+    /**
+     * <pre>
+     * maximum number of claim periods a reward program can rollover.
+     * </pre>
+     *
+     * <code>uint64 max_rollover_claim_periods = 9 [json_name = "maxRolloverClaimPeriods"];</code>
+     * @return The maxRolloverClaimPeriods.
+     */
+    long getMaxRolloverClaimPeriods();
+
+    /**
+     * <pre>
+     * number of days before a reward program will expire after it has ended.
+     * </pre>
+     *
+     * <code>uint64 expire_days = 10 [json_name = "expireDays"];</code>
+     * @return The expireDays.
+     */
+    long getExpireDays();
+
+    /**
+     * <pre>
+     * actions that count towards the reward.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.QualifyingAction qualifying_actions = 11 [json_name = "qualifyingActions", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.provenance.reward.v1.RewardProto.QualifyingAction> 
+        getQualifyingActionsList();
+    /**
+     * <pre>
+     * actions that count towards the reward.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.QualifyingAction qualifying_actions = 11 [json_name = "qualifyingActions", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.reward.v1.RewardProto.QualifyingAction getQualifyingActions(int index);
+    /**
+     * <pre>
+     * actions that count towards the reward.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.QualifyingAction qualifying_actions = 11 [json_name = "qualifyingActions", (.gogoproto.nullable) = false];</code>
+     */
+    int getQualifyingActionsCount();
+    /**
+     * <pre>
+     * actions that count towards the reward.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.QualifyingAction qualifying_actions = 11 [json_name = "qualifyingActions", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.provenance.reward.v1.RewardProto.QualifyingActionOrBuilder> 
+        getQualifyingActionsOrBuilderList();
+    /**
+     * <pre>
+     * actions that count towards the reward.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.QualifyingAction qualifying_actions = 11 [json_name = "qualifyingActions", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.reward.v1.RewardProto.QualifyingActionOrBuilder getQualifyingActionsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * MsgCreateRewardProgramRequest is the request type for creating a reward program RPC
+   * </pre>
+   *
+   * Protobuf type {@code provenance.reward.v1.MsgCreateRewardProgramRequest}
+   */
+  public static final class MsgCreateRewardProgramRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.reward.v1.MsgCreateRewardProgramRequest)
+      MsgCreateRewardProgramRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateRewardProgramRequest.newBuilder() to construct.
+    private MsgCreateRewardProgramRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateRewardProgramRequest() {
+      title_ = "";
+      description_ = "";
+      distributeFromAddress_ = "";
+      qualifyingActions_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateRewardProgramRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgCreateRewardProgramRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgCreateRewardProgramRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest.class, com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest.Builder.class);
+    }
+
+    public static final int TITLE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object title_ = "";
+    /**
+     * <pre>
+     * title for the reward program.
+     * </pre>
+     *
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The title.
+     */
+    @java.lang.Override
+    public java.lang.String getTitle() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        title_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * title for the reward program.
+     * </pre>
+     *
+     * <code>string title = 1 [json_name = "title"];</code>
+     * @return The bytes for title.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTitleBytes() {
+      java.lang.Object ref = title_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        title_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
+    /**
+     * <pre>
+     * description for the reward program.
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * description for the reward program.
+     * </pre>
+     *
+     * <code>string description = 2 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DISTRIBUTE_FROM_ADDRESS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object distributeFromAddress_ = "";
+    /**
+     * <pre>
+     * provider address for the reward program funds and signer of message.
+     * </pre>
+     *
+     * <code>string distribute_from_address = 3 [json_name = "distributeFromAddress"];</code>
+     * @return The distributeFromAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getDistributeFromAddress() {
+      java.lang.Object ref = distributeFromAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        distributeFromAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * provider address for the reward program funds and signer of message.
+     * </pre>
+     *
+     * <code>string distribute_from_address = 3 [json_name = "distributeFromAddress"];</code>
+     * @return The bytes for distributeFromAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDistributeFromAddressBytes() {
+      java.lang.Object ref = distributeFromAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        distributeFromAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TOTAL_REWARD_POOL_FIELD_NUMBER = 4;
+    private com.cosmos.base.v1beta1.CoinProto.Coin totalRewardPool_;
+    /**
+     * <pre>
+     * total reward pool for the reward program.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin total_reward_pool = 4 [json_name = "totalRewardPool", (.gogoproto.nullable) = false];</code>
+     * @return Whether the totalRewardPool field is set.
+     */
+    @java.lang.Override
+    public boolean hasTotalRewardPool() {
+      return totalRewardPool_ != null;
+    }
+    /**
+     * <pre>
+     * total reward pool for the reward program.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin total_reward_pool = 4 [json_name = "totalRewardPool", (.gogoproto.nullable) = false];</code>
+     * @return The totalRewardPool.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getTotalRewardPool() {
+      return totalRewardPool_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : totalRewardPool_;
+    }
+    /**
+     * <pre>
+     * total reward pool for the reward program.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin total_reward_pool = 4 [json_name = "totalRewardPool", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTotalRewardPoolOrBuilder() {
+      return totalRewardPool_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : totalRewardPool_;
+    }
+
+    public static final int MAX_REWARD_PER_CLAIM_ADDRESS_FIELD_NUMBER = 5;
+    private com.cosmos.base.v1beta1.CoinProto.Coin maxRewardPerClaimAddress_;
+    /**
+     * <pre>
+     * maximum amount of funds an address can be rewarded per claim period.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin max_reward_per_claim_address = 5 [json_name = "maxRewardPerClaimAddress", (.gogoproto.nullable) = false];</code>
+     * @return Whether the maxRewardPerClaimAddress field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaxRewardPerClaimAddress() {
+      return maxRewardPerClaimAddress_ != null;
+    }
+    /**
+     * <pre>
+     * maximum amount of funds an address can be rewarded per claim period.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin max_reward_per_claim_address = 5 [json_name = "maxRewardPerClaimAddress", (.gogoproto.nullable) = false];</code>
+     * @return The maxRewardPerClaimAddress.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getMaxRewardPerClaimAddress() {
+      return maxRewardPerClaimAddress_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : maxRewardPerClaimAddress_;
+    }
+    /**
+     * <pre>
+     * maximum amount of funds an address can be rewarded per claim period.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin max_reward_per_claim_address = 5 [json_name = "maxRewardPerClaimAddress", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getMaxRewardPerClaimAddressOrBuilder() {
+      return maxRewardPerClaimAddress_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : maxRewardPerClaimAddress_;
+    }
+
+    public static final int PROGRAM_START_TIME_FIELD_NUMBER = 6;
+    private com.google.protobuf.Timestamp programStartTime_;
+    /**
+     * <pre>
+     * start time of the reward program.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp program_start_time = 6 [json_name = "programStartTime", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "program_start_time,omitempty", (.gogoproto.moretags) = "yaml:&#92;"program_start_time,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return Whether the programStartTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasProgramStartTime() {
+      return programStartTime_ != null;
+    }
+    /**
+     * <pre>
+     * start time of the reward program.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp program_start_time = 6 [json_name = "programStartTime", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "program_start_time,omitempty", (.gogoproto.moretags) = "yaml:&#92;"program_start_time,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+     * @return The programStartTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getProgramStartTime() {
+      return programStartTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : programStartTime_;
+    }
+    /**
+     * <pre>
+     * start time of the reward program.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp program_start_time = 6 [json_name = "programStartTime", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "program_start_time,omitempty", (.gogoproto.moretags) = "yaml:&#92;"program_start_time,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getProgramStartTimeOrBuilder() {
+      return programStartTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : programStartTime_;
+    }
+
+    public static final int CLAIM_PERIODS_FIELD_NUMBER = 7;
+    private long claimPeriods_ = 0L;
+    /**
+     * <pre>
+     * number of claim periods the reward program runs for.
+     * </pre>
+     *
+     * <code>uint64 claim_periods = 7 [json_name = "claimPeriods"];</code>
+     * @return The claimPeriods.
+     */
+    @java.lang.Override
+    public long getClaimPeriods() {
+      return claimPeriods_;
+    }
+
+    public static final int CLAIM_PERIOD_DAYS_FIELD_NUMBER = 8;
+    private long claimPeriodDays_ = 0L;
+    /**
+     * <pre>
+     * number of days a claim period will exist.
+     * </pre>
+     *
+     * <code>uint64 claim_period_days = 8 [json_name = "claimPeriodDays"];</code>
+     * @return The claimPeriodDays.
+     */
+    @java.lang.Override
+    public long getClaimPeriodDays() {
+      return claimPeriodDays_;
+    }
+
+    public static final int MAX_ROLLOVER_CLAIM_PERIODS_FIELD_NUMBER = 9;
+    private long maxRolloverClaimPeriods_ = 0L;
+    /**
+     * <pre>
+     * maximum number of claim periods a reward program can rollover.
+     * </pre>
+     *
+     * <code>uint64 max_rollover_claim_periods = 9 [json_name = "maxRolloverClaimPeriods"];</code>
+     * @return The maxRolloverClaimPeriods.
+     */
+    @java.lang.Override
+    public long getMaxRolloverClaimPeriods() {
+      return maxRolloverClaimPeriods_;
+    }
+
+    public static final int EXPIRE_DAYS_FIELD_NUMBER = 10;
+    private long expireDays_ = 0L;
+    /**
+     * <pre>
+     * number of days before a reward program will expire after it has ended.
+     * </pre>
+     *
+     * <code>uint64 expire_days = 10 [json_name = "expireDays"];</code>
+     * @return The expireDays.
+     */
+    @java.lang.Override
+    public long getExpireDays() {
+      return expireDays_;
+    }
+
+    public static final int QUALIFYING_ACTIONS_FIELD_NUMBER = 11;
+    @SuppressWarnings("serial")
+    private java.util.List<com.provenance.reward.v1.RewardProto.QualifyingAction> qualifyingActions_;
+    /**
+     * <pre>
+     * actions that count towards the reward.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.QualifyingAction qualifying_actions = 11 [json_name = "qualifyingActions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.provenance.reward.v1.RewardProto.QualifyingAction> getQualifyingActionsList() {
+      return qualifyingActions_;
+    }
+    /**
+     * <pre>
+     * actions that count towards the reward.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.QualifyingAction qualifying_actions = 11 [json_name = "qualifyingActions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.provenance.reward.v1.RewardProto.QualifyingActionOrBuilder> 
+        getQualifyingActionsOrBuilderList() {
+      return qualifyingActions_;
+    }
+    /**
+     * <pre>
+     * actions that count towards the reward.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.QualifyingAction qualifying_actions = 11 [json_name = "qualifyingActions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getQualifyingActionsCount() {
+      return qualifyingActions_.size();
+    }
+    /**
+     * <pre>
+     * actions that count towards the reward.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.QualifyingAction qualifying_actions = 11 [json_name = "qualifyingActions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.reward.v1.RewardProto.QualifyingAction getQualifyingActions(int index) {
+      return qualifyingActions_.get(index);
+    }
+    /**
+     * <pre>
+     * actions that count towards the reward.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.QualifyingAction qualifying_actions = 11 [json_name = "qualifyingActions", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.reward.v1.RewardProto.QualifyingActionOrBuilder getQualifyingActionsOrBuilder(
+        int index) {
+      return qualifyingActions_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(distributeFromAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, distributeFromAddress_);
+      }
+      if (totalRewardPool_ != null) {
+        output.writeMessage(4, getTotalRewardPool());
+      }
+      if (maxRewardPerClaimAddress_ != null) {
+        output.writeMessage(5, getMaxRewardPerClaimAddress());
+      }
+      if (programStartTime_ != null) {
+        output.writeMessage(6, getProgramStartTime());
+      }
+      if (claimPeriods_ != 0L) {
+        output.writeUInt64(7, claimPeriods_);
+      }
+      if (claimPeriodDays_ != 0L) {
+        output.writeUInt64(8, claimPeriodDays_);
+      }
+      if (maxRolloverClaimPeriods_ != 0L) {
+        output.writeUInt64(9, maxRolloverClaimPeriods_);
+      }
+      if (expireDays_ != 0L) {
+        output.writeUInt64(10, expireDays_);
+      }
+      for (int i = 0; i < qualifyingActions_.size(); i++) {
+        output.writeMessage(11, qualifyingActions_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(title_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, title_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(distributeFromAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, distributeFromAddress_);
+      }
+      if (totalRewardPool_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getTotalRewardPool());
+      }
+      if (maxRewardPerClaimAddress_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getMaxRewardPerClaimAddress());
+      }
+      if (programStartTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getProgramStartTime());
+      }
+      if (claimPeriods_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(7, claimPeriods_);
+      }
+      if (claimPeriodDays_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(8, claimPeriodDays_);
+      }
+      if (maxRolloverClaimPeriods_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(9, maxRolloverClaimPeriods_);
+      }
+      if (expireDays_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(10, expireDays_);
+      }
+      for (int i = 0; i < qualifyingActions_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, qualifyingActions_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest)) {
+        return super.equals(obj);
+      }
+      com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest other = (com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest) obj;
+
+      if (!getTitle()
+          .equals(other.getTitle())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!getDistributeFromAddress()
+          .equals(other.getDistributeFromAddress())) return false;
+      if (hasTotalRewardPool() != other.hasTotalRewardPool()) return false;
+      if (hasTotalRewardPool()) {
+        if (!getTotalRewardPool()
+            .equals(other.getTotalRewardPool())) return false;
+      }
+      if (hasMaxRewardPerClaimAddress() != other.hasMaxRewardPerClaimAddress()) return false;
+      if (hasMaxRewardPerClaimAddress()) {
+        if (!getMaxRewardPerClaimAddress()
+            .equals(other.getMaxRewardPerClaimAddress())) return false;
+      }
+      if (hasProgramStartTime() != other.hasProgramStartTime()) return false;
+      if (hasProgramStartTime()) {
+        if (!getProgramStartTime()
+            .equals(other.getProgramStartTime())) return false;
+      }
+      if (getClaimPeriods()
+          != other.getClaimPeriods()) return false;
+      if (getClaimPeriodDays()
+          != other.getClaimPeriodDays()) return false;
+      if (getMaxRolloverClaimPeriods()
+          != other.getMaxRolloverClaimPeriods()) return false;
+      if (getExpireDays()
+          != other.getExpireDays()) return false;
+      if (!getQualifyingActionsList()
+          .equals(other.getQualifyingActionsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TITLE_FIELD_NUMBER;
+      hash = (53 * hash) + getTitle().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + DISTRIBUTE_FROM_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getDistributeFromAddress().hashCode();
+      if (hasTotalRewardPool()) {
+        hash = (37 * hash) + TOTAL_REWARD_POOL_FIELD_NUMBER;
+        hash = (53 * hash) + getTotalRewardPool().hashCode();
+      }
+      if (hasMaxRewardPerClaimAddress()) {
+        hash = (37 * hash) + MAX_REWARD_PER_CLAIM_ADDRESS_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxRewardPerClaimAddress().hashCode();
+      }
+      if (hasProgramStartTime()) {
+        hash = (37 * hash) + PROGRAM_START_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getProgramStartTime().hashCode();
+      }
+      hash = (37 * hash) + CLAIM_PERIODS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getClaimPeriods());
+      hash = (37 * hash) + CLAIM_PERIOD_DAYS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getClaimPeriodDays());
+      hash = (37 * hash) + MAX_ROLLOVER_CLAIM_PERIODS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMaxRolloverClaimPeriods());
+      hash = (37 * hash) + EXPIRE_DAYS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getExpireDays());
+      if (getQualifyingActionsCount() > 0) {
+        hash = (37 * hash) + QUALIFYING_ACTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getQualifyingActionsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCreateRewardProgramRequest is the request type for creating a reward program RPC
+     * </pre>
+     *
+     * Protobuf type {@code provenance.reward.v1.MsgCreateRewardProgramRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.reward.v1.MsgCreateRewardProgramRequest)
+        com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgCreateRewardProgramRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgCreateRewardProgramRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest.class, com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest.Builder.class);
+      }
+
+      // Construct using com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        title_ = "";
+        description_ = "";
+        distributeFromAddress_ = "";
+        totalRewardPool_ = null;
+        if (totalRewardPoolBuilder_ != null) {
+          totalRewardPoolBuilder_.dispose();
+          totalRewardPoolBuilder_ = null;
+        }
+        maxRewardPerClaimAddress_ = null;
+        if (maxRewardPerClaimAddressBuilder_ != null) {
+          maxRewardPerClaimAddressBuilder_.dispose();
+          maxRewardPerClaimAddressBuilder_ = null;
+        }
+        programStartTime_ = null;
+        if (programStartTimeBuilder_ != null) {
+          programStartTimeBuilder_.dispose();
+          programStartTimeBuilder_ = null;
+        }
+        claimPeriods_ = 0L;
+        claimPeriodDays_ = 0L;
+        maxRolloverClaimPeriods_ = 0L;
+        expireDays_ = 0L;
+        if (qualifyingActionsBuilder_ == null) {
+          qualifyingActions_ = java.util.Collections.emptyList();
+        } else {
+          qualifyingActions_ = null;
+          qualifyingActionsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000400);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgCreateRewardProgramRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest getDefaultInstanceForType() {
+        return com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest build() {
+        com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest buildPartial() {
+        com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest result = new com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest result) {
+        if (qualifyingActionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000400) != 0)) {
+            qualifyingActions_ = java.util.Collections.unmodifiableList(qualifyingActions_);
+            bitField0_ = (bitField0_ & ~0x00000400);
+          }
+          result.qualifyingActions_ = qualifyingActions_;
+        } else {
+          result.qualifyingActions_ = qualifyingActionsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.title_ = title_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.distributeFromAddress_ = distributeFromAddress_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.totalRewardPool_ = totalRewardPoolBuilder_ == null
+              ? totalRewardPool_
+              : totalRewardPoolBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.maxRewardPerClaimAddress_ = maxRewardPerClaimAddressBuilder_ == null
+              ? maxRewardPerClaimAddress_
+              : maxRewardPerClaimAddressBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.programStartTime_ = programStartTimeBuilder_ == null
+              ? programStartTime_
+              : programStartTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.claimPeriods_ = claimPeriods_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.claimPeriodDays_ = claimPeriodDays_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.maxRolloverClaimPeriods_ = maxRolloverClaimPeriods_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.expireDays_ = expireDays_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest) {
+          return mergeFrom((com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest other) {
+        if (other == com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest.getDefaultInstance()) return this;
+        if (!other.getTitle().isEmpty()) {
+          title_ = other.title_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getDistributeFromAddress().isEmpty()) {
+          distributeFromAddress_ = other.distributeFromAddress_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        if (other.hasTotalRewardPool()) {
+          mergeTotalRewardPool(other.getTotalRewardPool());
+        }
+        if (other.hasMaxRewardPerClaimAddress()) {
+          mergeMaxRewardPerClaimAddress(other.getMaxRewardPerClaimAddress());
+        }
+        if (other.hasProgramStartTime()) {
+          mergeProgramStartTime(other.getProgramStartTime());
+        }
+        if (other.getClaimPeriods() != 0L) {
+          setClaimPeriods(other.getClaimPeriods());
+        }
+        if (other.getClaimPeriodDays() != 0L) {
+          setClaimPeriodDays(other.getClaimPeriodDays());
+        }
+        if (other.getMaxRolloverClaimPeriods() != 0L) {
+          setMaxRolloverClaimPeriods(other.getMaxRolloverClaimPeriods());
+        }
+        if (other.getExpireDays() != 0L) {
+          setExpireDays(other.getExpireDays());
+        }
+        if (qualifyingActionsBuilder_ == null) {
+          if (!other.qualifyingActions_.isEmpty()) {
+            if (qualifyingActions_.isEmpty()) {
+              qualifyingActions_ = other.qualifyingActions_;
+              bitField0_ = (bitField0_ & ~0x00000400);
+            } else {
+              ensureQualifyingActionsIsMutable();
+              qualifyingActions_.addAll(other.qualifyingActions_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.qualifyingActions_.isEmpty()) {
+            if (qualifyingActionsBuilder_.isEmpty()) {
+              qualifyingActionsBuilder_.dispose();
+              qualifyingActionsBuilder_ = null;
+              qualifyingActions_ = other.qualifyingActions_;
+              bitField0_ = (bitField0_ & ~0x00000400);
+              qualifyingActionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getQualifyingActionsFieldBuilder() : null;
+            } else {
+              qualifyingActionsBuilder_.addAllMessages(other.qualifyingActions_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                title_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                description_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                distributeFromAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getTotalRewardPoolFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getMaxRewardPerClaimAddressFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getProgramStartTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
+              case 56: {
+                claimPeriods_ = input.readUInt64();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
+              case 64: {
+                claimPeriodDays_ = input.readUInt64();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
+              case 72: {
+                maxRolloverClaimPeriods_ = input.readUInt64();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 72
+              case 80: {
+                expireDays_ = input.readUInt64();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 80
+              case 90: {
+                com.provenance.reward.v1.RewardProto.QualifyingAction m =
+                    input.readMessage(
+                        com.provenance.reward.v1.RewardProto.QualifyingAction.parser(),
+                        extensionRegistry);
+                if (qualifyingActionsBuilder_ == null) {
+                  ensureQualifyingActionsIsMutable();
+                  qualifyingActions_.add(m);
+                } else {
+                  qualifyingActionsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 90
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object title_ = "";
+      /**
+       * <pre>
+       * title for the reward program.
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The title.
+       */
+      public java.lang.String getTitle() {
+        java.lang.Object ref = title_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          title_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * title for the reward program.
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return The bytes for title.
+       */
+      public com.google.protobuf.ByteString
+          getTitleBytes() {
+        java.lang.Object ref = title_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          title_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * title for the reward program.
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitle(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * title for the reward program.
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTitle() {
+        title_ = getDefaultInstance().getTitle();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * title for the reward program.
+       * </pre>
+       *
+       * <code>string title = 1 [json_name = "title"];</code>
+       * @param value The bytes for title to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTitleBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        title_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * description for the reward program.
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * description for the reward program.
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * description for the reward program.
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * description for the reward program.
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * description for the reward program.
+       * </pre>
+       *
+       * <code>string description = 2 [json_name = "description"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        description_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object distributeFromAddress_ = "";
+      /**
+       * <pre>
+       * provider address for the reward program funds and signer of message.
+       * </pre>
+       *
+       * <code>string distribute_from_address = 3 [json_name = "distributeFromAddress"];</code>
+       * @return The distributeFromAddress.
+       */
+      public java.lang.String getDistributeFromAddress() {
+        java.lang.Object ref = distributeFromAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          distributeFromAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * provider address for the reward program funds and signer of message.
+       * </pre>
+       *
+       * <code>string distribute_from_address = 3 [json_name = "distributeFromAddress"];</code>
+       * @return The bytes for distributeFromAddress.
+       */
+      public com.google.protobuf.ByteString
+          getDistributeFromAddressBytes() {
+        java.lang.Object ref = distributeFromAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          distributeFromAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * provider address for the reward program funds and signer of message.
+       * </pre>
+       *
+       * <code>string distribute_from_address = 3 [json_name = "distributeFromAddress"];</code>
+       * @param value The distributeFromAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDistributeFromAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        distributeFromAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * provider address for the reward program funds and signer of message.
+       * </pre>
+       *
+       * <code>string distribute_from_address = 3 [json_name = "distributeFromAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDistributeFromAddress() {
+        distributeFromAddress_ = getDefaultInstance().getDistributeFromAddress();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * provider address for the reward program funds and signer of message.
+       * </pre>
+       *
+       * <code>string distribute_from_address = 3 [json_name = "distributeFromAddress"];</code>
+       * @param value The bytes for distributeFromAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDistributeFromAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        distributeFromAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin totalRewardPool_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> totalRewardPoolBuilder_;
+      /**
+       * <pre>
+       * total reward pool for the reward program.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_reward_pool = 4 [json_name = "totalRewardPool", (.gogoproto.nullable) = false];</code>
+       * @return Whether the totalRewardPool field is set.
+       */
+      public boolean hasTotalRewardPool() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <pre>
+       * total reward pool for the reward program.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_reward_pool = 4 [json_name = "totalRewardPool", (.gogoproto.nullable) = false];</code>
+       * @return The totalRewardPool.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getTotalRewardPool() {
+        if (totalRewardPoolBuilder_ == null) {
+          return totalRewardPool_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : totalRewardPool_;
+        } else {
+          return totalRewardPoolBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * total reward pool for the reward program.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_reward_pool = 4 [json_name = "totalRewardPool", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTotalRewardPool(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (totalRewardPoolBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          totalRewardPool_ = value;
+        } else {
+          totalRewardPoolBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total reward pool for the reward program.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_reward_pool = 4 [json_name = "totalRewardPool", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTotalRewardPool(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (totalRewardPoolBuilder_ == null) {
+          totalRewardPool_ = builderForValue.build();
+        } else {
+          totalRewardPoolBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total reward pool for the reward program.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_reward_pool = 4 [json_name = "totalRewardPool", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeTotalRewardPool(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (totalRewardPoolBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            totalRewardPool_ != null &&
+            totalRewardPool_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getTotalRewardPoolBuilder().mergeFrom(value);
+          } else {
+            totalRewardPool_ = value;
+          }
+        } else {
+          totalRewardPoolBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total reward pool for the reward program.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_reward_pool = 4 [json_name = "totalRewardPool", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearTotalRewardPool() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        totalRewardPool_ = null;
+        if (totalRewardPoolBuilder_ != null) {
+          totalRewardPoolBuilder_.dispose();
+          totalRewardPoolBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total reward pool for the reward program.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_reward_pool = 4 [json_name = "totalRewardPool", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getTotalRewardPoolBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getTotalRewardPoolFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * total reward pool for the reward program.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_reward_pool = 4 [json_name = "totalRewardPool", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTotalRewardPoolOrBuilder() {
+        if (totalRewardPoolBuilder_ != null) {
+          return totalRewardPoolBuilder_.getMessageOrBuilder();
+        } else {
+          return totalRewardPool_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : totalRewardPool_;
+        }
+      }
+      /**
+       * <pre>
+       * total reward pool for the reward program.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_reward_pool = 4 [json_name = "totalRewardPool", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getTotalRewardPoolFieldBuilder() {
+        if (totalRewardPoolBuilder_ == null) {
+          totalRewardPoolBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getTotalRewardPool(),
+                  getParentForChildren(),
+                  isClean());
+          totalRewardPool_ = null;
+        }
+        return totalRewardPoolBuilder_;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin maxRewardPerClaimAddress_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> maxRewardPerClaimAddressBuilder_;
+      /**
+       * <pre>
+       * maximum amount of funds an address can be rewarded per claim period.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin max_reward_per_claim_address = 5 [json_name = "maxRewardPerClaimAddress", (.gogoproto.nullable) = false];</code>
+       * @return Whether the maxRewardPerClaimAddress field is set.
+       */
+      public boolean hasMaxRewardPerClaimAddress() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <pre>
+       * maximum amount of funds an address can be rewarded per claim period.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin max_reward_per_claim_address = 5 [json_name = "maxRewardPerClaimAddress", (.gogoproto.nullable) = false];</code>
+       * @return The maxRewardPerClaimAddress.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getMaxRewardPerClaimAddress() {
+        if (maxRewardPerClaimAddressBuilder_ == null) {
+          return maxRewardPerClaimAddress_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : maxRewardPerClaimAddress_;
+        } else {
+          return maxRewardPerClaimAddressBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * maximum amount of funds an address can be rewarded per claim period.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin max_reward_per_claim_address = 5 [json_name = "maxRewardPerClaimAddress", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMaxRewardPerClaimAddress(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (maxRewardPerClaimAddressBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxRewardPerClaimAddress_ = value;
+        } else {
+          maxRewardPerClaimAddressBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * maximum amount of funds an address can be rewarded per claim period.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin max_reward_per_claim_address = 5 [json_name = "maxRewardPerClaimAddress", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setMaxRewardPerClaimAddress(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (maxRewardPerClaimAddressBuilder_ == null) {
+          maxRewardPerClaimAddress_ = builderForValue.build();
+        } else {
+          maxRewardPerClaimAddressBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * maximum amount of funds an address can be rewarded per claim period.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin max_reward_per_claim_address = 5 [json_name = "maxRewardPerClaimAddress", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeMaxRewardPerClaimAddress(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (maxRewardPerClaimAddressBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            maxRewardPerClaimAddress_ != null &&
+            maxRewardPerClaimAddress_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getMaxRewardPerClaimAddressBuilder().mergeFrom(value);
+          } else {
+            maxRewardPerClaimAddress_ = value;
+          }
+        } else {
+          maxRewardPerClaimAddressBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * maximum amount of funds an address can be rewarded per claim period.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin max_reward_per_claim_address = 5 [json_name = "maxRewardPerClaimAddress", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearMaxRewardPerClaimAddress() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        maxRewardPerClaimAddress_ = null;
+        if (maxRewardPerClaimAddressBuilder_ != null) {
+          maxRewardPerClaimAddressBuilder_.dispose();
+          maxRewardPerClaimAddressBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * maximum amount of funds an address can be rewarded per claim period.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin max_reward_per_claim_address = 5 [json_name = "maxRewardPerClaimAddress", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getMaxRewardPerClaimAddressBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getMaxRewardPerClaimAddressFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * maximum amount of funds an address can be rewarded per claim period.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin max_reward_per_claim_address = 5 [json_name = "maxRewardPerClaimAddress", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getMaxRewardPerClaimAddressOrBuilder() {
+        if (maxRewardPerClaimAddressBuilder_ != null) {
+          return maxRewardPerClaimAddressBuilder_.getMessageOrBuilder();
+        } else {
+          return maxRewardPerClaimAddress_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : maxRewardPerClaimAddress_;
+        }
+      }
+      /**
+       * <pre>
+       * maximum amount of funds an address can be rewarded per claim period.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin max_reward_per_claim_address = 5 [json_name = "maxRewardPerClaimAddress", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getMaxRewardPerClaimAddressFieldBuilder() {
+        if (maxRewardPerClaimAddressBuilder_ == null) {
+          maxRewardPerClaimAddressBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getMaxRewardPerClaimAddress(),
+                  getParentForChildren(),
+                  isClean());
+          maxRewardPerClaimAddress_ = null;
+        }
+        return maxRewardPerClaimAddressBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp programStartTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> programStartTimeBuilder_;
+      /**
+       * <pre>
+       * start time of the reward program.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp program_start_time = 6 [json_name = "programStartTime", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "program_start_time,omitempty", (.gogoproto.moretags) = "yaml:&#92;"program_start_time,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return Whether the programStartTime field is set.
+       */
+      public boolean hasProgramStartTime() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <pre>
+       * start time of the reward program.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp program_start_time = 6 [json_name = "programStartTime", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "program_start_time,omitempty", (.gogoproto.moretags) = "yaml:&#92;"program_start_time,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+       * @return The programStartTime.
+       */
+      public com.google.protobuf.Timestamp getProgramStartTime() {
+        if (programStartTimeBuilder_ == null) {
+          return programStartTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : programStartTime_;
+        } else {
+          return programStartTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * start time of the reward program.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp program_start_time = 6 [json_name = "programStartTime", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "program_start_time,omitempty", (.gogoproto.moretags) = "yaml:&#92;"program_start_time,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setProgramStartTime(com.google.protobuf.Timestamp value) {
+        if (programStartTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          programStartTime_ = value;
+        } else {
+          programStartTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start time of the reward program.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp program_start_time = 6 [json_name = "programStartTime", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "program_start_time,omitempty", (.gogoproto.moretags) = "yaml:&#92;"program_start_time,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setProgramStartTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (programStartTimeBuilder_ == null) {
+          programStartTime_ = builderForValue.build();
+        } else {
+          programStartTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start time of the reward program.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp program_start_time = 6 [json_name = "programStartTime", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "program_start_time,omitempty", (.gogoproto.moretags) = "yaml:&#92;"program_start_time,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeProgramStartTime(com.google.protobuf.Timestamp value) {
+        if (programStartTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            programStartTime_ != null &&
+            programStartTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getProgramStartTimeBuilder().mergeFrom(value);
+          } else {
+            programStartTime_ = value;
+          }
+        } else {
+          programStartTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start time of the reward program.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp program_start_time = 6 [json_name = "programStartTime", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "program_start_time,omitempty", (.gogoproto.moretags) = "yaml:&#92;"program_start_time,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearProgramStartTime() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        programStartTime_ = null;
+        if (programStartTimeBuilder_ != null) {
+          programStartTimeBuilder_.dispose();
+          programStartTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start time of the reward program.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp program_start_time = 6 [json_name = "programStartTime", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "program_start_time,omitempty", (.gogoproto.moretags) = "yaml:&#92;"program_start_time,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getProgramStartTimeBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getProgramStartTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * start time of the reward program.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp program_start_time = 6 [json_name = "programStartTime", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "program_start_time,omitempty", (.gogoproto.moretags) = "yaml:&#92;"program_start_time,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getProgramStartTimeOrBuilder() {
+        if (programStartTimeBuilder_ != null) {
+          return programStartTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return programStartTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : programStartTime_;
+        }
+      }
+      /**
+       * <pre>
+       * start time of the reward program.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp program_start_time = 6 [json_name = "programStartTime", (.gogoproto.nullable) = false, (.gogoproto.jsontag) = "program_start_time,omitempty", (.gogoproto.moretags) = "yaml:&#92;"program_start_time,omitempty&#92;"", (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getProgramStartTimeFieldBuilder() {
+        if (programStartTimeBuilder_ == null) {
+          programStartTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getProgramStartTime(),
+                  getParentForChildren(),
+                  isClean());
+          programStartTime_ = null;
+        }
+        return programStartTimeBuilder_;
+      }
+
+      private long claimPeriods_ ;
+      /**
+       * <pre>
+       * number of claim periods the reward program runs for.
+       * </pre>
+       *
+       * <code>uint64 claim_periods = 7 [json_name = "claimPeriods"];</code>
+       * @return The claimPeriods.
+       */
+      @java.lang.Override
+      public long getClaimPeriods() {
+        return claimPeriods_;
+      }
+      /**
+       * <pre>
+       * number of claim periods the reward program runs for.
+       * </pre>
+       *
+       * <code>uint64 claim_periods = 7 [json_name = "claimPeriods"];</code>
+       * @param value The claimPeriods to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimPeriods(long value) {
+
+        claimPeriods_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * number of claim periods the reward program runs for.
+       * </pre>
+       *
+       * <code>uint64 claim_periods = 7 [json_name = "claimPeriods"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClaimPeriods() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        claimPeriods_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long claimPeriodDays_ ;
+      /**
+       * <pre>
+       * number of days a claim period will exist.
+       * </pre>
+       *
+       * <code>uint64 claim_period_days = 8 [json_name = "claimPeriodDays"];</code>
+       * @return The claimPeriodDays.
+       */
+      @java.lang.Override
+      public long getClaimPeriodDays() {
+        return claimPeriodDays_;
+      }
+      /**
+       * <pre>
+       * number of days a claim period will exist.
+       * </pre>
+       *
+       * <code>uint64 claim_period_days = 8 [json_name = "claimPeriodDays"];</code>
+       * @param value The claimPeriodDays to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimPeriodDays(long value) {
+
+        claimPeriodDays_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * number of days a claim period will exist.
+       * </pre>
+       *
+       * <code>uint64 claim_period_days = 8 [json_name = "claimPeriodDays"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClaimPeriodDays() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        claimPeriodDays_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long maxRolloverClaimPeriods_ ;
+      /**
+       * <pre>
+       * maximum number of claim periods a reward program can rollover.
+       * </pre>
+       *
+       * <code>uint64 max_rollover_claim_periods = 9 [json_name = "maxRolloverClaimPeriods"];</code>
+       * @return The maxRolloverClaimPeriods.
+       */
+      @java.lang.Override
+      public long getMaxRolloverClaimPeriods() {
+        return maxRolloverClaimPeriods_;
+      }
+      /**
+       * <pre>
+       * maximum number of claim periods a reward program can rollover.
+       * </pre>
+       *
+       * <code>uint64 max_rollover_claim_periods = 9 [json_name = "maxRolloverClaimPeriods"];</code>
+       * @param value The maxRolloverClaimPeriods to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxRolloverClaimPeriods(long value) {
+
+        maxRolloverClaimPeriods_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * maximum number of claim periods a reward program can rollover.
+       * </pre>
+       *
+       * <code>uint64 max_rollover_claim_periods = 9 [json_name = "maxRolloverClaimPeriods"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxRolloverClaimPeriods() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        maxRolloverClaimPeriods_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long expireDays_ ;
+      /**
+       * <pre>
+       * number of days before a reward program will expire after it has ended.
+       * </pre>
+       *
+       * <code>uint64 expire_days = 10 [json_name = "expireDays"];</code>
+       * @return The expireDays.
+       */
+      @java.lang.Override
+      public long getExpireDays() {
+        return expireDays_;
+      }
+      /**
+       * <pre>
+       * number of days before a reward program will expire after it has ended.
+       * </pre>
+       *
+       * <code>uint64 expire_days = 10 [json_name = "expireDays"];</code>
+       * @param value The expireDays to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExpireDays(long value) {
+
+        expireDays_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * number of days before a reward program will expire after it has ended.
+       * </pre>
+       *
+       * <code>uint64 expire_days = 10 [json_name = "expireDays"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExpireDays() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        expireDays_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.provenance.reward.v1.RewardProto.QualifyingAction> qualifyingActions_ =
+        java.util.Collections.emptyList();
+      private void ensureQualifyingActionsIsMutable() {
+        if (!((bitField0_ & 0x00000400) != 0)) {
+          qualifyingActions_ = new java.util.ArrayList<com.provenance.reward.v1.RewardProto.QualifyingAction>(qualifyingActions_);
+          bitField0_ |= 0x00000400;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.reward.v1.RewardProto.QualifyingAction, com.provenance.reward.v1.RewardProto.QualifyingAction.Builder, com.provenance.reward.v1.RewardProto.QualifyingActionOrBuilder> qualifyingActionsBuilder_;
+
+      /**
+       * <pre>
+       * actions that count towards the reward.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.QualifyingAction qualifying_actions = 11 [json_name = "qualifyingActions", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.provenance.reward.v1.RewardProto.QualifyingAction> getQualifyingActionsList() {
+        if (qualifyingActionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(qualifyingActions_);
+        } else {
+          return qualifyingActionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * actions that count towards the reward.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.QualifyingAction qualifying_actions = 11 [json_name = "qualifyingActions", (.gogoproto.nullable) = false];</code>
+       */
+      public int getQualifyingActionsCount() {
+        if (qualifyingActionsBuilder_ == null) {
+          return qualifyingActions_.size();
+        } else {
+          return qualifyingActionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * actions that count towards the reward.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.QualifyingAction qualifying_actions = 11 [json_name = "qualifyingActions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.reward.v1.RewardProto.QualifyingAction getQualifyingActions(int index) {
+        if (qualifyingActionsBuilder_ == null) {
+          return qualifyingActions_.get(index);
+        } else {
+          return qualifyingActionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * actions that count towards the reward.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.QualifyingAction qualifying_actions = 11 [json_name = "qualifyingActions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setQualifyingActions(
+          int index, com.provenance.reward.v1.RewardProto.QualifyingAction value) {
+        if (qualifyingActionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQualifyingActionsIsMutable();
+          qualifyingActions_.set(index, value);
+          onChanged();
+        } else {
+          qualifyingActionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * actions that count towards the reward.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.QualifyingAction qualifying_actions = 11 [json_name = "qualifyingActions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setQualifyingActions(
+          int index, com.provenance.reward.v1.RewardProto.QualifyingAction.Builder builderForValue) {
+        if (qualifyingActionsBuilder_ == null) {
+          ensureQualifyingActionsIsMutable();
+          qualifyingActions_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          qualifyingActionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * actions that count towards the reward.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.QualifyingAction qualifying_actions = 11 [json_name = "qualifyingActions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addQualifyingActions(com.provenance.reward.v1.RewardProto.QualifyingAction value) {
+        if (qualifyingActionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQualifyingActionsIsMutable();
+          qualifyingActions_.add(value);
+          onChanged();
+        } else {
+          qualifyingActionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * actions that count towards the reward.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.QualifyingAction qualifying_actions = 11 [json_name = "qualifyingActions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addQualifyingActions(
+          int index, com.provenance.reward.v1.RewardProto.QualifyingAction value) {
+        if (qualifyingActionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQualifyingActionsIsMutable();
+          qualifyingActions_.add(index, value);
+          onChanged();
+        } else {
+          qualifyingActionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * actions that count towards the reward.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.QualifyingAction qualifying_actions = 11 [json_name = "qualifyingActions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addQualifyingActions(
+          com.provenance.reward.v1.RewardProto.QualifyingAction.Builder builderForValue) {
+        if (qualifyingActionsBuilder_ == null) {
+          ensureQualifyingActionsIsMutable();
+          qualifyingActions_.add(builderForValue.build());
+          onChanged();
+        } else {
+          qualifyingActionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * actions that count towards the reward.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.QualifyingAction qualifying_actions = 11 [json_name = "qualifyingActions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addQualifyingActions(
+          int index, com.provenance.reward.v1.RewardProto.QualifyingAction.Builder builderForValue) {
+        if (qualifyingActionsBuilder_ == null) {
+          ensureQualifyingActionsIsMutable();
+          qualifyingActions_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          qualifyingActionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * actions that count towards the reward.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.QualifyingAction qualifying_actions = 11 [json_name = "qualifyingActions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllQualifyingActions(
+          java.lang.Iterable<? extends com.provenance.reward.v1.RewardProto.QualifyingAction> values) {
+        if (qualifyingActionsBuilder_ == null) {
+          ensureQualifyingActionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, qualifyingActions_);
+          onChanged();
+        } else {
+          qualifyingActionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * actions that count towards the reward.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.QualifyingAction qualifying_actions = 11 [json_name = "qualifyingActions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearQualifyingActions() {
+        if (qualifyingActionsBuilder_ == null) {
+          qualifyingActions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000400);
+          onChanged();
+        } else {
+          qualifyingActionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * actions that count towards the reward.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.QualifyingAction qualifying_actions = 11 [json_name = "qualifyingActions", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeQualifyingActions(int index) {
+        if (qualifyingActionsBuilder_ == null) {
+          ensureQualifyingActionsIsMutable();
+          qualifyingActions_.remove(index);
+          onChanged();
+        } else {
+          qualifyingActionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * actions that count towards the reward.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.QualifyingAction qualifying_actions = 11 [json_name = "qualifyingActions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.reward.v1.RewardProto.QualifyingAction.Builder getQualifyingActionsBuilder(
+          int index) {
+        return getQualifyingActionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * actions that count towards the reward.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.QualifyingAction qualifying_actions = 11 [json_name = "qualifyingActions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.reward.v1.RewardProto.QualifyingActionOrBuilder getQualifyingActionsOrBuilder(
+          int index) {
+        if (qualifyingActionsBuilder_ == null) {
+          return qualifyingActions_.get(index);  } else {
+          return qualifyingActionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * actions that count towards the reward.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.QualifyingAction qualifying_actions = 11 [json_name = "qualifyingActions", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.provenance.reward.v1.RewardProto.QualifyingActionOrBuilder> 
+           getQualifyingActionsOrBuilderList() {
+        if (qualifyingActionsBuilder_ != null) {
+          return qualifyingActionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(qualifyingActions_);
+        }
+      }
+      /**
+       * <pre>
+       * actions that count towards the reward.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.QualifyingAction qualifying_actions = 11 [json_name = "qualifyingActions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.reward.v1.RewardProto.QualifyingAction.Builder addQualifyingActionsBuilder() {
+        return getQualifyingActionsFieldBuilder().addBuilder(
+            com.provenance.reward.v1.RewardProto.QualifyingAction.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * actions that count towards the reward.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.QualifyingAction qualifying_actions = 11 [json_name = "qualifyingActions", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.reward.v1.RewardProto.QualifyingAction.Builder addQualifyingActionsBuilder(
+          int index) {
+        return getQualifyingActionsFieldBuilder().addBuilder(
+            index, com.provenance.reward.v1.RewardProto.QualifyingAction.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * actions that count towards the reward.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.QualifyingAction qualifying_actions = 11 [json_name = "qualifyingActions", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.provenance.reward.v1.RewardProto.QualifyingAction.Builder> 
+           getQualifyingActionsBuilderList() {
+        return getQualifyingActionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.reward.v1.RewardProto.QualifyingAction, com.provenance.reward.v1.RewardProto.QualifyingAction.Builder, com.provenance.reward.v1.RewardProto.QualifyingActionOrBuilder> 
+          getQualifyingActionsFieldBuilder() {
+        if (qualifyingActionsBuilder_ == null) {
+          qualifyingActionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.provenance.reward.v1.RewardProto.QualifyingAction, com.provenance.reward.v1.RewardProto.QualifyingAction.Builder, com.provenance.reward.v1.RewardProto.QualifyingActionOrBuilder>(
+                  qualifyingActions_,
+                  ((bitField0_ & 0x00000400) != 0),
+                  getParentForChildren(),
+                  isClean());
+          qualifyingActions_ = null;
+        }
+        return qualifyingActionsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.reward.v1.MsgCreateRewardProgramRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.reward.v1.MsgCreateRewardProgramRequest)
+    private static final com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest();
+    }
+
+    public static com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateRewardProgramRequest>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateRewardProgramRequest>() {
+      @java.lang.Override
+      public MsgCreateRewardProgramRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateRewardProgramRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateRewardProgramRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.reward.v1.TxProto.MsgCreateRewardProgramRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCreateRewardProgramResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.reward.v1.MsgCreateRewardProgramResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * reward program id that is generated on creation.
+     * </pre>
+     *
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    long getId();
+  }
+  /**
+   * <pre>
+   * MsgCreateRewardProgramResponse is the response type for creating a reward program RPC
+   * </pre>
+   *
+   * Protobuf type {@code provenance.reward.v1.MsgCreateRewardProgramResponse}
+   */
+  public static final class MsgCreateRewardProgramResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.reward.v1.MsgCreateRewardProgramResponse)
+      MsgCreateRewardProgramResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateRewardProgramResponse.newBuilder() to construct.
+    private MsgCreateRewardProgramResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateRewardProgramResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateRewardProgramResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgCreateRewardProgramResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgCreateRewardProgramResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.reward.v1.TxProto.MsgCreateRewardProgramResponse.class, com.provenance.reward.v1.TxProto.MsgCreateRewardProgramResponse.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_ = 0L;
+    /**
+     * <pre>
+     * reward program id that is generated on creation.
+     * </pre>
+     *
+     * <code>uint64 id = 1 [json_name = "id"];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeUInt64(1, id_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, id_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.reward.v1.TxProto.MsgCreateRewardProgramResponse)) {
+        return super.equals(obj);
+      }
+      com.provenance.reward.v1.TxProto.MsgCreateRewardProgramResponse other = (com.provenance.reward.v1.TxProto.MsgCreateRewardProgramResponse) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.reward.v1.TxProto.MsgCreateRewardProgramResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgCreateRewardProgramResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgCreateRewardProgramResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgCreateRewardProgramResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgCreateRewardProgramResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgCreateRewardProgramResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgCreateRewardProgramResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgCreateRewardProgramResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.reward.v1.TxProto.MsgCreateRewardProgramResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.reward.v1.TxProto.MsgCreateRewardProgramResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgCreateRewardProgramResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgCreateRewardProgramResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.reward.v1.TxProto.MsgCreateRewardProgramResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCreateRewardProgramResponse is the response type for creating a reward program RPC
+     * </pre>
+     *
+     * Protobuf type {@code provenance.reward.v1.MsgCreateRewardProgramResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.reward.v1.MsgCreateRewardProgramResponse)
+        com.provenance.reward.v1.TxProto.MsgCreateRewardProgramResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgCreateRewardProgramResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgCreateRewardProgramResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.reward.v1.TxProto.MsgCreateRewardProgramResponse.class, com.provenance.reward.v1.TxProto.MsgCreateRewardProgramResponse.Builder.class);
+      }
+
+      // Construct using com.provenance.reward.v1.TxProto.MsgCreateRewardProgramResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgCreateRewardProgramResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.TxProto.MsgCreateRewardProgramResponse getDefaultInstanceForType() {
+        return com.provenance.reward.v1.TxProto.MsgCreateRewardProgramResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.TxProto.MsgCreateRewardProgramResponse build() {
+        com.provenance.reward.v1.TxProto.MsgCreateRewardProgramResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.TxProto.MsgCreateRewardProgramResponse buildPartial() {
+        com.provenance.reward.v1.TxProto.MsgCreateRewardProgramResponse result = new com.provenance.reward.v1.TxProto.MsgCreateRewardProgramResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.reward.v1.TxProto.MsgCreateRewardProgramResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.reward.v1.TxProto.MsgCreateRewardProgramResponse) {
+          return mergeFrom((com.provenance.reward.v1.TxProto.MsgCreateRewardProgramResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.reward.v1.TxProto.MsgCreateRewardProgramResponse other) {
+        if (other == com.provenance.reward.v1.TxProto.MsgCreateRewardProgramResponse.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long id_ ;
+      /**
+       * <pre>
+       * reward program id that is generated on creation.
+       * </pre>
+       *
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <pre>
+       * reward program id that is generated on creation.
+       * </pre>
+       *
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * reward program id that is generated on creation.
+       * </pre>
+       *
+       * <code>uint64 id = 1 [json_name = "id"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.reward.v1.MsgCreateRewardProgramResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.reward.v1.MsgCreateRewardProgramResponse)
+    private static final com.provenance.reward.v1.TxProto.MsgCreateRewardProgramResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.reward.v1.TxProto.MsgCreateRewardProgramResponse();
+    }
+
+    public static com.provenance.reward.v1.TxProto.MsgCreateRewardProgramResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateRewardProgramResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateRewardProgramResponse>() {
+      @java.lang.Override
+      public MsgCreateRewardProgramResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateRewardProgramResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateRewardProgramResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.reward.v1.TxProto.MsgCreateRewardProgramResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgEndRewardProgramRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.reward.v1.MsgEndRewardProgramRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * reward program id to end.
+     * </pre>
+     *
+     * <code>uint64 reward_program_id = 1 [json_name = "rewardProgramId"];</code>
+     * @return The rewardProgramId.
+     */
+    long getRewardProgramId();
+
+    /**
+     * <pre>
+     * owner of the reward program that funds were distributed from.
+     * </pre>
+     *
+     * <code>string program_owner_address = 2 [json_name = "programOwnerAddress"];</code>
+     * @return The programOwnerAddress.
+     */
+    java.lang.String getProgramOwnerAddress();
+    /**
+     * <pre>
+     * owner of the reward program that funds were distributed from.
+     * </pre>
+     *
+     * <code>string program_owner_address = 2 [json_name = "programOwnerAddress"];</code>
+     * @return The bytes for programOwnerAddress.
+     */
+    com.google.protobuf.ByteString
+        getProgramOwnerAddressBytes();
+  }
+  /**
+   * <pre>
+   * MsgEndRewardProgramRequest is the request type for ending a reward program RPC
+   * </pre>
+   *
+   * Protobuf type {@code provenance.reward.v1.MsgEndRewardProgramRequest}
+   */
+  public static final class MsgEndRewardProgramRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.reward.v1.MsgEndRewardProgramRequest)
+      MsgEndRewardProgramRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgEndRewardProgramRequest.newBuilder() to construct.
+    private MsgEndRewardProgramRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgEndRewardProgramRequest() {
+      programOwnerAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgEndRewardProgramRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgEndRewardProgramRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgEndRewardProgramRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.reward.v1.TxProto.MsgEndRewardProgramRequest.class, com.provenance.reward.v1.TxProto.MsgEndRewardProgramRequest.Builder.class);
+    }
+
+    public static final int REWARD_PROGRAM_ID_FIELD_NUMBER = 1;
+    private long rewardProgramId_ = 0L;
+    /**
+     * <pre>
+     * reward program id to end.
+     * </pre>
+     *
+     * <code>uint64 reward_program_id = 1 [json_name = "rewardProgramId"];</code>
+     * @return The rewardProgramId.
+     */
+    @java.lang.Override
+    public long getRewardProgramId() {
+      return rewardProgramId_;
+    }
+
+    public static final int PROGRAM_OWNER_ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object programOwnerAddress_ = "";
+    /**
+     * <pre>
+     * owner of the reward program that funds were distributed from.
+     * </pre>
+     *
+     * <code>string program_owner_address = 2 [json_name = "programOwnerAddress"];</code>
+     * @return The programOwnerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getProgramOwnerAddress() {
+      java.lang.Object ref = programOwnerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        programOwnerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * owner of the reward program that funds were distributed from.
+     * </pre>
+     *
+     * <code>string program_owner_address = 2 [json_name = "programOwnerAddress"];</code>
+     * @return The bytes for programOwnerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProgramOwnerAddressBytes() {
+      java.lang.Object ref = programOwnerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        programOwnerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (rewardProgramId_ != 0L) {
+        output.writeUInt64(1, rewardProgramId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(programOwnerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, programOwnerAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (rewardProgramId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, rewardProgramId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(programOwnerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, programOwnerAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.reward.v1.TxProto.MsgEndRewardProgramRequest)) {
+        return super.equals(obj);
+      }
+      com.provenance.reward.v1.TxProto.MsgEndRewardProgramRequest other = (com.provenance.reward.v1.TxProto.MsgEndRewardProgramRequest) obj;
+
+      if (getRewardProgramId()
+          != other.getRewardProgramId()) return false;
+      if (!getProgramOwnerAddress()
+          .equals(other.getProgramOwnerAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REWARD_PROGRAM_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRewardProgramId());
+      hash = (37 * hash) + PROGRAM_OWNER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getProgramOwnerAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.reward.v1.TxProto.MsgEndRewardProgramRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgEndRewardProgramRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgEndRewardProgramRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgEndRewardProgramRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgEndRewardProgramRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgEndRewardProgramRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgEndRewardProgramRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgEndRewardProgramRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.reward.v1.TxProto.MsgEndRewardProgramRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.reward.v1.TxProto.MsgEndRewardProgramRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgEndRewardProgramRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgEndRewardProgramRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.reward.v1.TxProto.MsgEndRewardProgramRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgEndRewardProgramRequest is the request type for ending a reward program RPC
+     * </pre>
+     *
+     * Protobuf type {@code provenance.reward.v1.MsgEndRewardProgramRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.reward.v1.MsgEndRewardProgramRequest)
+        com.provenance.reward.v1.TxProto.MsgEndRewardProgramRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgEndRewardProgramRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgEndRewardProgramRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.reward.v1.TxProto.MsgEndRewardProgramRequest.class, com.provenance.reward.v1.TxProto.MsgEndRewardProgramRequest.Builder.class);
+      }
+
+      // Construct using com.provenance.reward.v1.TxProto.MsgEndRewardProgramRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        rewardProgramId_ = 0L;
+        programOwnerAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgEndRewardProgramRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.TxProto.MsgEndRewardProgramRequest getDefaultInstanceForType() {
+        return com.provenance.reward.v1.TxProto.MsgEndRewardProgramRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.TxProto.MsgEndRewardProgramRequest build() {
+        com.provenance.reward.v1.TxProto.MsgEndRewardProgramRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.TxProto.MsgEndRewardProgramRequest buildPartial() {
+        com.provenance.reward.v1.TxProto.MsgEndRewardProgramRequest result = new com.provenance.reward.v1.TxProto.MsgEndRewardProgramRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.reward.v1.TxProto.MsgEndRewardProgramRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.rewardProgramId_ = rewardProgramId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.programOwnerAddress_ = programOwnerAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.reward.v1.TxProto.MsgEndRewardProgramRequest) {
+          return mergeFrom((com.provenance.reward.v1.TxProto.MsgEndRewardProgramRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.reward.v1.TxProto.MsgEndRewardProgramRequest other) {
+        if (other == com.provenance.reward.v1.TxProto.MsgEndRewardProgramRequest.getDefaultInstance()) return this;
+        if (other.getRewardProgramId() != 0L) {
+          setRewardProgramId(other.getRewardProgramId());
+        }
+        if (!other.getProgramOwnerAddress().isEmpty()) {
+          programOwnerAddress_ = other.programOwnerAddress_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                rewardProgramId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                programOwnerAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long rewardProgramId_ ;
+      /**
+       * <pre>
+       * reward program id to end.
+       * </pre>
+       *
+       * <code>uint64 reward_program_id = 1 [json_name = "rewardProgramId"];</code>
+       * @return The rewardProgramId.
+       */
+      @java.lang.Override
+      public long getRewardProgramId() {
+        return rewardProgramId_;
+      }
+      /**
+       * <pre>
+       * reward program id to end.
+       * </pre>
+       *
+       * <code>uint64 reward_program_id = 1 [json_name = "rewardProgramId"];</code>
+       * @param value The rewardProgramId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardProgramId(long value) {
+
+        rewardProgramId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * reward program id to end.
+       * </pre>
+       *
+       * <code>uint64 reward_program_id = 1 [json_name = "rewardProgramId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRewardProgramId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        rewardProgramId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object programOwnerAddress_ = "";
+      /**
+       * <pre>
+       * owner of the reward program that funds were distributed from.
+       * </pre>
+       *
+       * <code>string program_owner_address = 2 [json_name = "programOwnerAddress"];</code>
+       * @return The programOwnerAddress.
+       */
+      public java.lang.String getProgramOwnerAddress() {
+        java.lang.Object ref = programOwnerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          programOwnerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * owner of the reward program that funds were distributed from.
+       * </pre>
+       *
+       * <code>string program_owner_address = 2 [json_name = "programOwnerAddress"];</code>
+       * @return The bytes for programOwnerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getProgramOwnerAddressBytes() {
+        java.lang.Object ref = programOwnerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          programOwnerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * owner of the reward program that funds were distributed from.
+       * </pre>
+       *
+       * <code>string program_owner_address = 2 [json_name = "programOwnerAddress"];</code>
+       * @param value The programOwnerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProgramOwnerAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        programOwnerAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * owner of the reward program that funds were distributed from.
+       * </pre>
+       *
+       * <code>string program_owner_address = 2 [json_name = "programOwnerAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProgramOwnerAddress() {
+        programOwnerAddress_ = getDefaultInstance().getProgramOwnerAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * owner of the reward program that funds were distributed from.
+       * </pre>
+       *
+       * <code>string program_owner_address = 2 [json_name = "programOwnerAddress"];</code>
+       * @param value The bytes for programOwnerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProgramOwnerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        programOwnerAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.reward.v1.MsgEndRewardProgramRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.reward.v1.MsgEndRewardProgramRequest)
+    private static final com.provenance.reward.v1.TxProto.MsgEndRewardProgramRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.reward.v1.TxProto.MsgEndRewardProgramRequest();
+    }
+
+    public static com.provenance.reward.v1.TxProto.MsgEndRewardProgramRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgEndRewardProgramRequest>
+        PARSER = new com.google.protobuf.AbstractParser<MsgEndRewardProgramRequest>() {
+      @java.lang.Override
+      public MsgEndRewardProgramRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgEndRewardProgramRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgEndRewardProgramRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.reward.v1.TxProto.MsgEndRewardProgramRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgEndRewardProgramResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.reward.v1.MsgEndRewardProgramResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgEndRewardProgramResponse is the response type for ending a reward program RPC
+   * </pre>
+   *
+   * Protobuf type {@code provenance.reward.v1.MsgEndRewardProgramResponse}
+   */
+  public static final class MsgEndRewardProgramResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.reward.v1.MsgEndRewardProgramResponse)
+      MsgEndRewardProgramResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgEndRewardProgramResponse.newBuilder() to construct.
+    private MsgEndRewardProgramResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgEndRewardProgramResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgEndRewardProgramResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgEndRewardProgramResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgEndRewardProgramResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.reward.v1.TxProto.MsgEndRewardProgramResponse.class, com.provenance.reward.v1.TxProto.MsgEndRewardProgramResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.reward.v1.TxProto.MsgEndRewardProgramResponse)) {
+        return super.equals(obj);
+      }
+      com.provenance.reward.v1.TxProto.MsgEndRewardProgramResponse other = (com.provenance.reward.v1.TxProto.MsgEndRewardProgramResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.reward.v1.TxProto.MsgEndRewardProgramResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgEndRewardProgramResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgEndRewardProgramResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgEndRewardProgramResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgEndRewardProgramResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgEndRewardProgramResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgEndRewardProgramResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgEndRewardProgramResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.reward.v1.TxProto.MsgEndRewardProgramResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.reward.v1.TxProto.MsgEndRewardProgramResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgEndRewardProgramResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgEndRewardProgramResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.reward.v1.TxProto.MsgEndRewardProgramResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgEndRewardProgramResponse is the response type for ending a reward program RPC
+     * </pre>
+     *
+     * Protobuf type {@code provenance.reward.v1.MsgEndRewardProgramResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.reward.v1.MsgEndRewardProgramResponse)
+        com.provenance.reward.v1.TxProto.MsgEndRewardProgramResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgEndRewardProgramResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgEndRewardProgramResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.reward.v1.TxProto.MsgEndRewardProgramResponse.class, com.provenance.reward.v1.TxProto.MsgEndRewardProgramResponse.Builder.class);
+      }
+
+      // Construct using com.provenance.reward.v1.TxProto.MsgEndRewardProgramResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgEndRewardProgramResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.TxProto.MsgEndRewardProgramResponse getDefaultInstanceForType() {
+        return com.provenance.reward.v1.TxProto.MsgEndRewardProgramResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.TxProto.MsgEndRewardProgramResponse build() {
+        com.provenance.reward.v1.TxProto.MsgEndRewardProgramResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.TxProto.MsgEndRewardProgramResponse buildPartial() {
+        com.provenance.reward.v1.TxProto.MsgEndRewardProgramResponse result = new com.provenance.reward.v1.TxProto.MsgEndRewardProgramResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.reward.v1.TxProto.MsgEndRewardProgramResponse) {
+          return mergeFrom((com.provenance.reward.v1.TxProto.MsgEndRewardProgramResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.reward.v1.TxProto.MsgEndRewardProgramResponse other) {
+        if (other == com.provenance.reward.v1.TxProto.MsgEndRewardProgramResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.reward.v1.MsgEndRewardProgramResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.reward.v1.MsgEndRewardProgramResponse)
+    private static final com.provenance.reward.v1.TxProto.MsgEndRewardProgramResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.reward.v1.TxProto.MsgEndRewardProgramResponse();
+    }
+
+    public static com.provenance.reward.v1.TxProto.MsgEndRewardProgramResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgEndRewardProgramResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgEndRewardProgramResponse>() {
+      @java.lang.Override
+      public MsgEndRewardProgramResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgEndRewardProgramResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgEndRewardProgramResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.reward.v1.TxProto.MsgEndRewardProgramResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgClaimRewardsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.reward.v1.MsgClaimRewardsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * reward program id to claim rewards.
+     * </pre>
+     *
+     * <code>uint64 reward_program_id = 1 [json_name = "rewardProgramId"];</code>
+     * @return The rewardProgramId.
+     */
+    long getRewardProgramId();
+
+    /**
+     * <pre>
+     * reward address and signer of msg to send claimed rewards to.
+     * </pre>
+     *
+     * <code>string reward_address = 2 [json_name = "rewardAddress"];</code>
+     * @return The rewardAddress.
+     */
+    java.lang.String getRewardAddress();
+    /**
+     * <pre>
+     * reward address and signer of msg to send claimed rewards to.
+     * </pre>
+     *
+     * <code>string reward_address = 2 [json_name = "rewardAddress"];</code>
+     * @return The bytes for rewardAddress.
+     */
+    com.google.protobuf.ByteString
+        getRewardAddressBytes();
+  }
+  /**
+   * <pre>
+   * MsgClaimRewardsRequest is the request type for claiming reward from reward program RPC
+   * </pre>
+   *
+   * Protobuf type {@code provenance.reward.v1.MsgClaimRewardsRequest}
+   */
+  public static final class MsgClaimRewardsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.reward.v1.MsgClaimRewardsRequest)
+      MsgClaimRewardsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgClaimRewardsRequest.newBuilder() to construct.
+    private MsgClaimRewardsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgClaimRewardsRequest() {
+      rewardAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgClaimRewardsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgClaimRewardsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgClaimRewardsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.reward.v1.TxProto.MsgClaimRewardsRequest.class, com.provenance.reward.v1.TxProto.MsgClaimRewardsRequest.Builder.class);
+    }
+
+    public static final int REWARD_PROGRAM_ID_FIELD_NUMBER = 1;
+    private long rewardProgramId_ = 0L;
+    /**
+     * <pre>
+     * reward program id to claim rewards.
+     * </pre>
+     *
+     * <code>uint64 reward_program_id = 1 [json_name = "rewardProgramId"];</code>
+     * @return The rewardProgramId.
+     */
+    @java.lang.Override
+    public long getRewardProgramId() {
+      return rewardProgramId_;
+    }
+
+    public static final int REWARD_ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object rewardAddress_ = "";
+    /**
+     * <pre>
+     * reward address and signer of msg to send claimed rewards to.
+     * </pre>
+     *
+     * <code>string reward_address = 2 [json_name = "rewardAddress"];</code>
+     * @return The rewardAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getRewardAddress() {
+      java.lang.Object ref = rewardAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        rewardAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * reward address and signer of msg to send claimed rewards to.
+     * </pre>
+     *
+     * <code>string reward_address = 2 [json_name = "rewardAddress"];</code>
+     * @return The bytes for rewardAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRewardAddressBytes() {
+      java.lang.Object ref = rewardAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        rewardAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (rewardProgramId_ != 0L) {
+        output.writeUInt64(1, rewardProgramId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rewardAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, rewardAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (rewardProgramId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, rewardProgramId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rewardAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, rewardAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.reward.v1.TxProto.MsgClaimRewardsRequest)) {
+        return super.equals(obj);
+      }
+      com.provenance.reward.v1.TxProto.MsgClaimRewardsRequest other = (com.provenance.reward.v1.TxProto.MsgClaimRewardsRequest) obj;
+
+      if (getRewardProgramId()
+          != other.getRewardProgramId()) return false;
+      if (!getRewardAddress()
+          .equals(other.getRewardAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REWARD_PROGRAM_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRewardProgramId());
+      hash = (37 * hash) + REWARD_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getRewardAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.reward.v1.TxProto.MsgClaimRewardsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgClaimRewardsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgClaimRewardsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgClaimRewardsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgClaimRewardsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgClaimRewardsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgClaimRewardsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgClaimRewardsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.reward.v1.TxProto.MsgClaimRewardsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.reward.v1.TxProto.MsgClaimRewardsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgClaimRewardsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgClaimRewardsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.reward.v1.TxProto.MsgClaimRewardsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgClaimRewardsRequest is the request type for claiming reward from reward program RPC
+     * </pre>
+     *
+     * Protobuf type {@code provenance.reward.v1.MsgClaimRewardsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.reward.v1.MsgClaimRewardsRequest)
+        com.provenance.reward.v1.TxProto.MsgClaimRewardsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgClaimRewardsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgClaimRewardsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.reward.v1.TxProto.MsgClaimRewardsRequest.class, com.provenance.reward.v1.TxProto.MsgClaimRewardsRequest.Builder.class);
+      }
+
+      // Construct using com.provenance.reward.v1.TxProto.MsgClaimRewardsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        rewardProgramId_ = 0L;
+        rewardAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgClaimRewardsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.TxProto.MsgClaimRewardsRequest getDefaultInstanceForType() {
+        return com.provenance.reward.v1.TxProto.MsgClaimRewardsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.TxProto.MsgClaimRewardsRequest build() {
+        com.provenance.reward.v1.TxProto.MsgClaimRewardsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.TxProto.MsgClaimRewardsRequest buildPartial() {
+        com.provenance.reward.v1.TxProto.MsgClaimRewardsRequest result = new com.provenance.reward.v1.TxProto.MsgClaimRewardsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.reward.v1.TxProto.MsgClaimRewardsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.rewardProgramId_ = rewardProgramId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.rewardAddress_ = rewardAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.reward.v1.TxProto.MsgClaimRewardsRequest) {
+          return mergeFrom((com.provenance.reward.v1.TxProto.MsgClaimRewardsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.reward.v1.TxProto.MsgClaimRewardsRequest other) {
+        if (other == com.provenance.reward.v1.TxProto.MsgClaimRewardsRequest.getDefaultInstance()) return this;
+        if (other.getRewardProgramId() != 0L) {
+          setRewardProgramId(other.getRewardProgramId());
+        }
+        if (!other.getRewardAddress().isEmpty()) {
+          rewardAddress_ = other.rewardAddress_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                rewardProgramId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                rewardAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long rewardProgramId_ ;
+      /**
+       * <pre>
+       * reward program id to claim rewards.
+       * </pre>
+       *
+       * <code>uint64 reward_program_id = 1 [json_name = "rewardProgramId"];</code>
+       * @return The rewardProgramId.
+       */
+      @java.lang.Override
+      public long getRewardProgramId() {
+        return rewardProgramId_;
+      }
+      /**
+       * <pre>
+       * reward program id to claim rewards.
+       * </pre>
+       *
+       * <code>uint64 reward_program_id = 1 [json_name = "rewardProgramId"];</code>
+       * @param value The rewardProgramId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardProgramId(long value) {
+
+        rewardProgramId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * reward program id to claim rewards.
+       * </pre>
+       *
+       * <code>uint64 reward_program_id = 1 [json_name = "rewardProgramId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRewardProgramId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        rewardProgramId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object rewardAddress_ = "";
+      /**
+       * <pre>
+       * reward address and signer of msg to send claimed rewards to.
+       * </pre>
+       *
+       * <code>string reward_address = 2 [json_name = "rewardAddress"];</code>
+       * @return The rewardAddress.
+       */
+      public java.lang.String getRewardAddress() {
+        java.lang.Object ref = rewardAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          rewardAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * reward address and signer of msg to send claimed rewards to.
+       * </pre>
+       *
+       * <code>string reward_address = 2 [json_name = "rewardAddress"];</code>
+       * @return The bytes for rewardAddress.
+       */
+      public com.google.protobuf.ByteString
+          getRewardAddressBytes() {
+        java.lang.Object ref = rewardAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          rewardAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * reward address and signer of msg to send claimed rewards to.
+       * </pre>
+       *
+       * <code>string reward_address = 2 [json_name = "rewardAddress"];</code>
+       * @param value The rewardAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        rewardAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * reward address and signer of msg to send claimed rewards to.
+       * </pre>
+       *
+       * <code>string reward_address = 2 [json_name = "rewardAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRewardAddress() {
+        rewardAddress_ = getDefaultInstance().getRewardAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * reward address and signer of msg to send claimed rewards to.
+       * </pre>
+       *
+       * <code>string reward_address = 2 [json_name = "rewardAddress"];</code>
+       * @param value The bytes for rewardAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        rewardAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.reward.v1.MsgClaimRewardsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.reward.v1.MsgClaimRewardsRequest)
+    private static final com.provenance.reward.v1.TxProto.MsgClaimRewardsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.reward.v1.TxProto.MsgClaimRewardsRequest();
+    }
+
+    public static com.provenance.reward.v1.TxProto.MsgClaimRewardsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgClaimRewardsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<MsgClaimRewardsRequest>() {
+      @java.lang.Override
+      public MsgClaimRewardsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgClaimRewardsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgClaimRewardsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.reward.v1.TxProto.MsgClaimRewardsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgClaimRewardsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.reward.v1.MsgClaimRewardsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * details about acquired rewards from reward program.
+     * </pre>
+     *
+     * <code>.provenance.reward.v1.RewardProgramClaimDetail claim_details = 1 [json_name = "claimDetails", (.gogoproto.nullable) = false];</code>
+     * @return Whether the claimDetails field is set.
+     */
+    boolean hasClaimDetails();
+    /**
+     * <pre>
+     * details about acquired rewards from reward program.
+     * </pre>
+     *
+     * <code>.provenance.reward.v1.RewardProgramClaimDetail claim_details = 1 [json_name = "claimDetails", (.gogoproto.nullable) = false];</code>
+     * @return The claimDetails.
+     */
+    com.provenance.reward.v1.TxProto.RewardProgramClaimDetail getClaimDetails();
+    /**
+     * <pre>
+     * details about acquired rewards from reward program.
+     * </pre>
+     *
+     * <code>.provenance.reward.v1.RewardProgramClaimDetail claim_details = 1 [json_name = "claimDetails", (.gogoproto.nullable) = false];</code>
+     */
+    com.provenance.reward.v1.TxProto.RewardProgramClaimDetailOrBuilder getClaimDetailsOrBuilder();
+  }
+  /**
+   * <pre>
+   * MsgClaimRewardsResponse is the response type for claiming reward from reward program RPC
+   * </pre>
+   *
+   * Protobuf type {@code provenance.reward.v1.MsgClaimRewardsResponse}
+   */
+  public static final class MsgClaimRewardsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.reward.v1.MsgClaimRewardsResponse)
+      MsgClaimRewardsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgClaimRewardsResponse.newBuilder() to construct.
+    private MsgClaimRewardsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgClaimRewardsResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgClaimRewardsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgClaimRewardsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgClaimRewardsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse.class, com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse.Builder.class);
+    }
+
+    public static final int CLAIM_DETAILS_FIELD_NUMBER = 1;
+    private com.provenance.reward.v1.TxProto.RewardProgramClaimDetail claimDetails_;
+    /**
+     * <pre>
+     * details about acquired rewards from reward program.
+     * </pre>
+     *
+     * <code>.provenance.reward.v1.RewardProgramClaimDetail claim_details = 1 [json_name = "claimDetails", (.gogoproto.nullable) = false];</code>
+     * @return Whether the claimDetails field is set.
+     */
+    @java.lang.Override
+    public boolean hasClaimDetails() {
+      return claimDetails_ != null;
+    }
+    /**
+     * <pre>
+     * details about acquired rewards from reward program.
+     * </pre>
+     *
+     * <code>.provenance.reward.v1.RewardProgramClaimDetail claim_details = 1 [json_name = "claimDetails", (.gogoproto.nullable) = false];</code>
+     * @return The claimDetails.
+     */
+    @java.lang.Override
+    public com.provenance.reward.v1.TxProto.RewardProgramClaimDetail getClaimDetails() {
+      return claimDetails_ == null ? com.provenance.reward.v1.TxProto.RewardProgramClaimDetail.getDefaultInstance() : claimDetails_;
+    }
+    /**
+     * <pre>
+     * details about acquired rewards from reward program.
+     * </pre>
+     *
+     * <code>.provenance.reward.v1.RewardProgramClaimDetail claim_details = 1 [json_name = "claimDetails", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.provenance.reward.v1.TxProto.RewardProgramClaimDetailOrBuilder getClaimDetailsOrBuilder() {
+      return claimDetails_ == null ? com.provenance.reward.v1.TxProto.RewardProgramClaimDetail.getDefaultInstance() : claimDetails_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (claimDetails_ != null) {
+        output.writeMessage(1, getClaimDetails());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (claimDetails_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getClaimDetails());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse)) {
+        return super.equals(obj);
+      }
+      com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse other = (com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse) obj;
+
+      if (hasClaimDetails() != other.hasClaimDetails()) return false;
+      if (hasClaimDetails()) {
+        if (!getClaimDetails()
+            .equals(other.getClaimDetails())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasClaimDetails()) {
+        hash = (37 * hash) + CLAIM_DETAILS_FIELD_NUMBER;
+        hash = (53 * hash) + getClaimDetails().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgClaimRewardsResponse is the response type for claiming reward from reward program RPC
+     * </pre>
+     *
+     * Protobuf type {@code provenance.reward.v1.MsgClaimRewardsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.reward.v1.MsgClaimRewardsResponse)
+        com.provenance.reward.v1.TxProto.MsgClaimRewardsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgClaimRewardsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgClaimRewardsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse.class, com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse.Builder.class);
+      }
+
+      // Construct using com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        claimDetails_ = null;
+        if (claimDetailsBuilder_ != null) {
+          claimDetailsBuilder_.dispose();
+          claimDetailsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgClaimRewardsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse getDefaultInstanceForType() {
+        return com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse build() {
+        com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse buildPartial() {
+        com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse result = new com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.claimDetails_ = claimDetailsBuilder_ == null
+              ? claimDetails_
+              : claimDetailsBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse) {
+          return mergeFrom((com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse other) {
+        if (other == com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse.getDefaultInstance()) return this;
+        if (other.hasClaimDetails()) {
+          mergeClaimDetails(other.getClaimDetails());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getClaimDetailsFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.provenance.reward.v1.TxProto.RewardProgramClaimDetail claimDetails_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.reward.v1.TxProto.RewardProgramClaimDetail, com.provenance.reward.v1.TxProto.RewardProgramClaimDetail.Builder, com.provenance.reward.v1.TxProto.RewardProgramClaimDetailOrBuilder> claimDetailsBuilder_;
+      /**
+       * <pre>
+       * details about acquired rewards from reward program.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.RewardProgramClaimDetail claim_details = 1 [json_name = "claimDetails", (.gogoproto.nullable) = false];</code>
+       * @return Whether the claimDetails field is set.
+       */
+      public boolean hasClaimDetails() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * details about acquired rewards from reward program.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.RewardProgramClaimDetail claim_details = 1 [json_name = "claimDetails", (.gogoproto.nullable) = false];</code>
+       * @return The claimDetails.
+       */
+      public com.provenance.reward.v1.TxProto.RewardProgramClaimDetail getClaimDetails() {
+        if (claimDetailsBuilder_ == null) {
+          return claimDetails_ == null ? com.provenance.reward.v1.TxProto.RewardProgramClaimDetail.getDefaultInstance() : claimDetails_;
+        } else {
+          return claimDetailsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * details about acquired rewards from reward program.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.RewardProgramClaimDetail claim_details = 1 [json_name = "claimDetails", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setClaimDetails(com.provenance.reward.v1.TxProto.RewardProgramClaimDetail value) {
+        if (claimDetailsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          claimDetails_ = value;
+        } else {
+          claimDetailsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * details about acquired rewards from reward program.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.RewardProgramClaimDetail claim_details = 1 [json_name = "claimDetails", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setClaimDetails(
+          com.provenance.reward.v1.TxProto.RewardProgramClaimDetail.Builder builderForValue) {
+        if (claimDetailsBuilder_ == null) {
+          claimDetails_ = builderForValue.build();
+        } else {
+          claimDetailsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * details about acquired rewards from reward program.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.RewardProgramClaimDetail claim_details = 1 [json_name = "claimDetails", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeClaimDetails(com.provenance.reward.v1.TxProto.RewardProgramClaimDetail value) {
+        if (claimDetailsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            claimDetails_ != null &&
+            claimDetails_ != com.provenance.reward.v1.TxProto.RewardProgramClaimDetail.getDefaultInstance()) {
+            getClaimDetailsBuilder().mergeFrom(value);
+          } else {
+            claimDetails_ = value;
+          }
+        } else {
+          claimDetailsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * details about acquired rewards from reward program.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.RewardProgramClaimDetail claim_details = 1 [json_name = "claimDetails", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearClaimDetails() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        claimDetails_ = null;
+        if (claimDetailsBuilder_ != null) {
+          claimDetailsBuilder_.dispose();
+          claimDetailsBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * details about acquired rewards from reward program.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.RewardProgramClaimDetail claim_details = 1 [json_name = "claimDetails", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.reward.v1.TxProto.RewardProgramClaimDetail.Builder getClaimDetailsBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getClaimDetailsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * details about acquired rewards from reward program.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.RewardProgramClaimDetail claim_details = 1 [json_name = "claimDetails", (.gogoproto.nullable) = false];</code>
+       */
+      public com.provenance.reward.v1.TxProto.RewardProgramClaimDetailOrBuilder getClaimDetailsOrBuilder() {
+        if (claimDetailsBuilder_ != null) {
+          return claimDetailsBuilder_.getMessageOrBuilder();
+        } else {
+          return claimDetails_ == null ?
+              com.provenance.reward.v1.TxProto.RewardProgramClaimDetail.getDefaultInstance() : claimDetails_;
+        }
+      }
+      /**
+       * <pre>
+       * details about acquired rewards from reward program.
+       * </pre>
+       *
+       * <code>.provenance.reward.v1.RewardProgramClaimDetail claim_details = 1 [json_name = "claimDetails", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.provenance.reward.v1.TxProto.RewardProgramClaimDetail, com.provenance.reward.v1.TxProto.RewardProgramClaimDetail.Builder, com.provenance.reward.v1.TxProto.RewardProgramClaimDetailOrBuilder> 
+          getClaimDetailsFieldBuilder() {
+        if (claimDetailsBuilder_ == null) {
+          claimDetailsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.provenance.reward.v1.TxProto.RewardProgramClaimDetail, com.provenance.reward.v1.TxProto.RewardProgramClaimDetail.Builder, com.provenance.reward.v1.TxProto.RewardProgramClaimDetailOrBuilder>(
+                  getClaimDetails(),
+                  getParentForChildren(),
+                  isClean());
+          claimDetails_ = null;
+        }
+        return claimDetailsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.reward.v1.MsgClaimRewardsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.reward.v1.MsgClaimRewardsResponse)
+    private static final com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse();
+    }
+
+    public static com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgClaimRewardsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgClaimRewardsResponse>() {
+      @java.lang.Override
+      public MsgClaimRewardsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgClaimRewardsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgClaimRewardsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.reward.v1.TxProto.MsgClaimRewardsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgClaimAllRewardsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.reward.v1.MsgClaimAllRewardsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * reward address and signer of msg to send claimed rewards to.
+     * </pre>
+     *
+     * <code>string reward_address = 1 [json_name = "rewardAddress"];</code>
+     * @return The rewardAddress.
+     */
+    java.lang.String getRewardAddress();
+    /**
+     * <pre>
+     * reward address and signer of msg to send claimed rewards to.
+     * </pre>
+     *
+     * <code>string reward_address = 1 [json_name = "rewardAddress"];</code>
+     * @return The bytes for rewardAddress.
+     */
+    com.google.protobuf.ByteString
+        getRewardAddressBytes();
+  }
+  /**
+   * <pre>
+   * MsgClaimRewardsResponse is the request type for claiming rewards from all reward programs RPC
+   * </pre>
+   *
+   * Protobuf type {@code provenance.reward.v1.MsgClaimAllRewardsRequest}
+   */
+  public static final class MsgClaimAllRewardsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.reward.v1.MsgClaimAllRewardsRequest)
+      MsgClaimAllRewardsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgClaimAllRewardsRequest.newBuilder() to construct.
+    private MsgClaimAllRewardsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgClaimAllRewardsRequest() {
+      rewardAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgClaimAllRewardsRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgClaimAllRewardsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgClaimAllRewardsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.reward.v1.TxProto.MsgClaimAllRewardsRequest.class, com.provenance.reward.v1.TxProto.MsgClaimAllRewardsRequest.Builder.class);
+    }
+
+    public static final int REWARD_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object rewardAddress_ = "";
+    /**
+     * <pre>
+     * reward address and signer of msg to send claimed rewards to.
+     * </pre>
+     *
+     * <code>string reward_address = 1 [json_name = "rewardAddress"];</code>
+     * @return The rewardAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getRewardAddress() {
+      java.lang.Object ref = rewardAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        rewardAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * reward address and signer of msg to send claimed rewards to.
+     * </pre>
+     *
+     * <code>string reward_address = 1 [json_name = "rewardAddress"];</code>
+     * @return The bytes for rewardAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRewardAddressBytes() {
+      java.lang.Object ref = rewardAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        rewardAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rewardAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, rewardAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rewardAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, rewardAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.reward.v1.TxProto.MsgClaimAllRewardsRequest)) {
+        return super.equals(obj);
+      }
+      com.provenance.reward.v1.TxProto.MsgClaimAllRewardsRequest other = (com.provenance.reward.v1.TxProto.MsgClaimAllRewardsRequest) obj;
+
+      if (!getRewardAddress()
+          .equals(other.getRewardAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REWARD_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getRewardAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.reward.v1.TxProto.MsgClaimAllRewardsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgClaimAllRewardsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgClaimAllRewardsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgClaimAllRewardsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgClaimAllRewardsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgClaimAllRewardsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgClaimAllRewardsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgClaimAllRewardsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.reward.v1.TxProto.MsgClaimAllRewardsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.reward.v1.TxProto.MsgClaimAllRewardsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgClaimAllRewardsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgClaimAllRewardsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.reward.v1.TxProto.MsgClaimAllRewardsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgClaimRewardsResponse is the request type for claiming rewards from all reward programs RPC
+     * </pre>
+     *
+     * Protobuf type {@code provenance.reward.v1.MsgClaimAllRewardsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.reward.v1.MsgClaimAllRewardsRequest)
+        com.provenance.reward.v1.TxProto.MsgClaimAllRewardsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgClaimAllRewardsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgClaimAllRewardsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.reward.v1.TxProto.MsgClaimAllRewardsRequest.class, com.provenance.reward.v1.TxProto.MsgClaimAllRewardsRequest.Builder.class);
+      }
+
+      // Construct using com.provenance.reward.v1.TxProto.MsgClaimAllRewardsRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        rewardAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgClaimAllRewardsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.TxProto.MsgClaimAllRewardsRequest getDefaultInstanceForType() {
+        return com.provenance.reward.v1.TxProto.MsgClaimAllRewardsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.TxProto.MsgClaimAllRewardsRequest build() {
+        com.provenance.reward.v1.TxProto.MsgClaimAllRewardsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.TxProto.MsgClaimAllRewardsRequest buildPartial() {
+        com.provenance.reward.v1.TxProto.MsgClaimAllRewardsRequest result = new com.provenance.reward.v1.TxProto.MsgClaimAllRewardsRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.reward.v1.TxProto.MsgClaimAllRewardsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.rewardAddress_ = rewardAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.reward.v1.TxProto.MsgClaimAllRewardsRequest) {
+          return mergeFrom((com.provenance.reward.v1.TxProto.MsgClaimAllRewardsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.reward.v1.TxProto.MsgClaimAllRewardsRequest other) {
+        if (other == com.provenance.reward.v1.TxProto.MsgClaimAllRewardsRequest.getDefaultInstance()) return this;
+        if (!other.getRewardAddress().isEmpty()) {
+          rewardAddress_ = other.rewardAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                rewardAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object rewardAddress_ = "";
+      /**
+       * <pre>
+       * reward address and signer of msg to send claimed rewards to.
+       * </pre>
+       *
+       * <code>string reward_address = 1 [json_name = "rewardAddress"];</code>
+       * @return The rewardAddress.
+       */
+      public java.lang.String getRewardAddress() {
+        java.lang.Object ref = rewardAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          rewardAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * reward address and signer of msg to send claimed rewards to.
+       * </pre>
+       *
+       * <code>string reward_address = 1 [json_name = "rewardAddress"];</code>
+       * @return The bytes for rewardAddress.
+       */
+      public com.google.protobuf.ByteString
+          getRewardAddressBytes() {
+        java.lang.Object ref = rewardAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          rewardAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * reward address and signer of msg to send claimed rewards to.
+       * </pre>
+       *
+       * <code>string reward_address = 1 [json_name = "rewardAddress"];</code>
+       * @param value The rewardAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        rewardAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * reward address and signer of msg to send claimed rewards to.
+       * </pre>
+       *
+       * <code>string reward_address = 1 [json_name = "rewardAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRewardAddress() {
+        rewardAddress_ = getDefaultInstance().getRewardAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * reward address and signer of msg to send claimed rewards to.
+       * </pre>
+       *
+       * <code>string reward_address = 1 [json_name = "rewardAddress"];</code>
+       * @param value The bytes for rewardAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        rewardAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.reward.v1.MsgClaimAllRewardsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.reward.v1.MsgClaimAllRewardsRequest)
+    private static final com.provenance.reward.v1.TxProto.MsgClaimAllRewardsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.reward.v1.TxProto.MsgClaimAllRewardsRequest();
+    }
+
+    public static com.provenance.reward.v1.TxProto.MsgClaimAllRewardsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgClaimAllRewardsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<MsgClaimAllRewardsRequest>() {
+      @java.lang.Override
+      public MsgClaimAllRewardsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgClaimAllRewardsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgClaimAllRewardsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.reward.v1.TxProto.MsgClaimAllRewardsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgClaimAllRewardsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.reward.v1.MsgClaimAllRewardsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * total rewards claimed for all eligible claim periods in all programs.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin total_reward_claim = 1 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> 
+        getTotalRewardClaimList();
+    /**
+     * <pre>
+     * total rewards claimed for all eligible claim periods in all programs.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin total_reward_claim = 1 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getTotalRewardClaim(int index);
+    /**
+     * <pre>
+     * total rewards claimed for all eligible claim periods in all programs.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin total_reward_claim = 1 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+     */
+    int getTotalRewardClaimCount();
+    /**
+     * <pre>
+     * total rewards claimed for all eligible claim periods in all programs.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin total_reward_claim = 1 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+     */
+    java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getTotalRewardClaimOrBuilderList();
+    /**
+     * <pre>
+     * total rewards claimed for all eligible claim periods in all programs.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin total_reward_claim = 1 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTotalRewardClaimOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * details about acquired rewards from a reward program.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.RewardProgramClaimDetail claim_details = 2 [json_name = "claimDetails"];</code>
+     */
+    java.util.List<com.provenance.reward.v1.TxProto.RewardProgramClaimDetail> 
+        getClaimDetailsList();
+    /**
+     * <pre>
+     * details about acquired rewards from a reward program.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.RewardProgramClaimDetail claim_details = 2 [json_name = "claimDetails"];</code>
+     */
+    com.provenance.reward.v1.TxProto.RewardProgramClaimDetail getClaimDetails(int index);
+    /**
+     * <pre>
+     * details about acquired rewards from a reward program.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.RewardProgramClaimDetail claim_details = 2 [json_name = "claimDetails"];</code>
+     */
+    int getClaimDetailsCount();
+    /**
+     * <pre>
+     * details about acquired rewards from a reward program.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.RewardProgramClaimDetail claim_details = 2 [json_name = "claimDetails"];</code>
+     */
+    java.util.List<? extends com.provenance.reward.v1.TxProto.RewardProgramClaimDetailOrBuilder> 
+        getClaimDetailsOrBuilderList();
+    /**
+     * <pre>
+     * details about acquired rewards from a reward program.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.RewardProgramClaimDetail claim_details = 2 [json_name = "claimDetails"];</code>
+     */
+    com.provenance.reward.v1.TxProto.RewardProgramClaimDetailOrBuilder getClaimDetailsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * MsgClaimRewardsResponse is the response type for claiming rewards from all reward programs RPC
+   * </pre>
+   *
+   * Protobuf type {@code provenance.reward.v1.MsgClaimAllRewardsResponse}
+   */
+  public static final class MsgClaimAllRewardsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.reward.v1.MsgClaimAllRewardsResponse)
+      MsgClaimAllRewardsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgClaimAllRewardsResponse.newBuilder() to construct.
+    private MsgClaimAllRewardsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgClaimAllRewardsResponse() {
+      totalRewardClaim_ = java.util.Collections.emptyList();
+      claimDetails_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgClaimAllRewardsResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgClaimAllRewardsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgClaimAllRewardsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponse.class, com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponse.Builder.class);
+    }
+
+    public static final int TOTAL_REWARD_CLAIM_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> totalRewardClaim_;
+    /**
+     * <pre>
+     * total rewards claimed for all eligible claim periods in all programs.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin total_reward_claim = 1 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getTotalRewardClaimList() {
+      return totalRewardClaim_;
+    }
+    /**
+     * <pre>
+     * total rewards claimed for all eligible claim periods in all programs.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin total_reward_claim = 1 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+        getTotalRewardClaimOrBuilderList() {
+      return totalRewardClaim_;
+    }
+    /**
+     * <pre>
+     * total rewards claimed for all eligible claim periods in all programs.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin total_reward_claim = 1 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public int getTotalRewardClaimCount() {
+      return totalRewardClaim_.size();
+    }
+    /**
+     * <pre>
+     * total rewards claimed for all eligible claim periods in all programs.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin total_reward_claim = 1 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getTotalRewardClaim(int index) {
+      return totalRewardClaim_.get(index);
+    }
+    /**
+     * <pre>
+     * total rewards claimed for all eligible claim periods in all programs.
+     * </pre>
+     *
+     * <code>repeated .cosmos.base.v1beta1.Coin total_reward_claim = 1 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTotalRewardClaimOrBuilder(
+        int index) {
+      return totalRewardClaim_.get(index);
+    }
+
+    public static final int CLAIM_DETAILS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<com.provenance.reward.v1.TxProto.RewardProgramClaimDetail> claimDetails_;
+    /**
+     * <pre>
+     * details about acquired rewards from a reward program.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.RewardProgramClaimDetail claim_details = 2 [json_name = "claimDetails"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.provenance.reward.v1.TxProto.RewardProgramClaimDetail> getClaimDetailsList() {
+      return claimDetails_;
+    }
+    /**
+     * <pre>
+     * details about acquired rewards from a reward program.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.RewardProgramClaimDetail claim_details = 2 [json_name = "claimDetails"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.provenance.reward.v1.TxProto.RewardProgramClaimDetailOrBuilder> 
+        getClaimDetailsOrBuilderList() {
+      return claimDetails_;
+    }
+    /**
+     * <pre>
+     * details about acquired rewards from a reward program.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.RewardProgramClaimDetail claim_details = 2 [json_name = "claimDetails"];</code>
+     */
+    @java.lang.Override
+    public int getClaimDetailsCount() {
+      return claimDetails_.size();
+    }
+    /**
+     * <pre>
+     * details about acquired rewards from a reward program.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.RewardProgramClaimDetail claim_details = 2 [json_name = "claimDetails"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.reward.v1.TxProto.RewardProgramClaimDetail getClaimDetails(int index) {
+      return claimDetails_.get(index);
+    }
+    /**
+     * <pre>
+     * details about acquired rewards from a reward program.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.RewardProgramClaimDetail claim_details = 2 [json_name = "claimDetails"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.reward.v1.TxProto.RewardProgramClaimDetailOrBuilder getClaimDetailsOrBuilder(
+        int index) {
+      return claimDetails_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < totalRewardClaim_.size(); i++) {
+        output.writeMessage(1, totalRewardClaim_.get(i));
+      }
+      for (int i = 0; i < claimDetails_.size(); i++) {
+        output.writeMessage(2, claimDetails_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < totalRewardClaim_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, totalRewardClaim_.get(i));
+      }
+      for (int i = 0; i < claimDetails_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, claimDetails_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponse)) {
+        return super.equals(obj);
+      }
+      com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponse other = (com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponse) obj;
+
+      if (!getTotalRewardClaimList()
+          .equals(other.getTotalRewardClaimList())) return false;
+      if (!getClaimDetailsList()
+          .equals(other.getClaimDetailsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getTotalRewardClaimCount() > 0) {
+        hash = (37 * hash) + TOTAL_REWARD_CLAIM_FIELD_NUMBER;
+        hash = (53 * hash) + getTotalRewardClaimList().hashCode();
+      }
+      if (getClaimDetailsCount() > 0) {
+        hash = (37 * hash) + CLAIM_DETAILS_FIELD_NUMBER;
+        hash = (53 * hash) + getClaimDetailsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgClaimRewardsResponse is the response type for claiming rewards from all reward programs RPC
+     * </pre>
+     *
+     * Protobuf type {@code provenance.reward.v1.MsgClaimAllRewardsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.reward.v1.MsgClaimAllRewardsResponse)
+        com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgClaimAllRewardsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgClaimAllRewardsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponse.class, com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponse.Builder.class);
+      }
+
+      // Construct using com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (totalRewardClaimBuilder_ == null) {
+          totalRewardClaim_ = java.util.Collections.emptyList();
+        } else {
+          totalRewardClaim_ = null;
+          totalRewardClaimBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (claimDetailsBuilder_ == null) {
+          claimDetails_ = java.util.Collections.emptyList();
+        } else {
+          claimDetails_ = null;
+          claimDetailsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_MsgClaimAllRewardsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponse getDefaultInstanceForType() {
+        return com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponse build() {
+        com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponse buildPartial() {
+        com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponse result = new com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponse result) {
+        if (totalRewardClaimBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            totalRewardClaim_ = java.util.Collections.unmodifiableList(totalRewardClaim_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.totalRewardClaim_ = totalRewardClaim_;
+        } else {
+          result.totalRewardClaim_ = totalRewardClaimBuilder_.build();
+        }
+        if (claimDetailsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            claimDetails_ = java.util.Collections.unmodifiableList(claimDetails_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.claimDetails_ = claimDetails_;
+        } else {
+          result.claimDetails_ = claimDetailsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponse) {
+          return mergeFrom((com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponse other) {
+        if (other == com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponse.getDefaultInstance()) return this;
+        if (totalRewardClaimBuilder_ == null) {
+          if (!other.totalRewardClaim_.isEmpty()) {
+            if (totalRewardClaim_.isEmpty()) {
+              totalRewardClaim_ = other.totalRewardClaim_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureTotalRewardClaimIsMutable();
+              totalRewardClaim_.addAll(other.totalRewardClaim_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.totalRewardClaim_.isEmpty()) {
+            if (totalRewardClaimBuilder_.isEmpty()) {
+              totalRewardClaimBuilder_.dispose();
+              totalRewardClaimBuilder_ = null;
+              totalRewardClaim_ = other.totalRewardClaim_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              totalRewardClaimBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTotalRewardClaimFieldBuilder() : null;
+            } else {
+              totalRewardClaimBuilder_.addAllMessages(other.totalRewardClaim_);
+            }
+          }
+        }
+        if (claimDetailsBuilder_ == null) {
+          if (!other.claimDetails_.isEmpty()) {
+            if (claimDetails_.isEmpty()) {
+              claimDetails_ = other.claimDetails_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureClaimDetailsIsMutable();
+              claimDetails_.addAll(other.claimDetails_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.claimDetails_.isEmpty()) {
+            if (claimDetailsBuilder_.isEmpty()) {
+              claimDetailsBuilder_.dispose();
+              claimDetailsBuilder_ = null;
+              claimDetails_ = other.claimDetails_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              claimDetailsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getClaimDetailsFieldBuilder() : null;
+            } else {
+              claimDetailsBuilder_.addAllMessages(other.claimDetails_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                com.cosmos.base.v1beta1.CoinProto.Coin m =
+                    input.readMessage(
+                        com.cosmos.base.v1beta1.CoinProto.Coin.parser(),
+                        extensionRegistry);
+                if (totalRewardClaimBuilder_ == null) {
+                  ensureTotalRewardClaimIsMutable();
+                  totalRewardClaim_.add(m);
+                } else {
+                  totalRewardClaimBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              case 18: {
+                com.provenance.reward.v1.TxProto.RewardProgramClaimDetail m =
+                    input.readMessage(
+                        com.provenance.reward.v1.TxProto.RewardProgramClaimDetail.parser(),
+                        extensionRegistry);
+                if (claimDetailsBuilder_ == null) {
+                  ensureClaimDetailsIsMutable();
+                  claimDetails_.add(m);
+                } else {
+                  claimDetailsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> totalRewardClaim_ =
+        java.util.Collections.emptyList();
+      private void ensureTotalRewardClaimIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          totalRewardClaim_ = new java.util.ArrayList<com.cosmos.base.v1beta1.CoinProto.Coin>(totalRewardClaim_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> totalRewardClaimBuilder_;
+
+      /**
+       * <pre>
+       * total rewards claimed for all eligible claim periods in all programs.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin total_reward_claim = 1 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin> getTotalRewardClaimList() {
+        if (totalRewardClaimBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(totalRewardClaim_);
+        } else {
+          return totalRewardClaimBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * total rewards claimed for all eligible claim periods in all programs.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin total_reward_claim = 1 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+       */
+      public int getTotalRewardClaimCount() {
+        if (totalRewardClaimBuilder_ == null) {
+          return totalRewardClaim_.size();
+        } else {
+          return totalRewardClaimBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * total rewards claimed for all eligible claim periods in all programs.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin total_reward_claim = 1 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getTotalRewardClaim(int index) {
+        if (totalRewardClaimBuilder_ == null) {
+          return totalRewardClaim_.get(index);
+        } else {
+          return totalRewardClaimBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * total rewards claimed for all eligible claim periods in all programs.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin total_reward_claim = 1 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTotalRewardClaim(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (totalRewardClaimBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTotalRewardClaimIsMutable();
+          totalRewardClaim_.set(index, value);
+          onChanged();
+        } else {
+          totalRewardClaimBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * total rewards claimed for all eligible claim periods in all programs.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin total_reward_claim = 1 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTotalRewardClaim(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (totalRewardClaimBuilder_ == null) {
+          ensureTotalRewardClaimIsMutable();
+          totalRewardClaim_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          totalRewardClaimBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * total rewards claimed for all eligible claim periods in all programs.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin total_reward_claim = 1 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTotalRewardClaim(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (totalRewardClaimBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTotalRewardClaimIsMutable();
+          totalRewardClaim_.add(value);
+          onChanged();
+        } else {
+          totalRewardClaimBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * total rewards claimed for all eligible claim periods in all programs.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin total_reward_claim = 1 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTotalRewardClaim(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (totalRewardClaimBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTotalRewardClaimIsMutable();
+          totalRewardClaim_.add(index, value);
+          onChanged();
+        } else {
+          totalRewardClaimBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * total rewards claimed for all eligible claim periods in all programs.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin total_reward_claim = 1 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTotalRewardClaim(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (totalRewardClaimBuilder_ == null) {
+          ensureTotalRewardClaimIsMutable();
+          totalRewardClaim_.add(builderForValue.build());
+          onChanged();
+        } else {
+          totalRewardClaimBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * total rewards claimed for all eligible claim periods in all programs.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin total_reward_claim = 1 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addTotalRewardClaim(
+          int index, com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (totalRewardClaimBuilder_ == null) {
+          ensureTotalRewardClaimIsMutable();
+          totalRewardClaim_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          totalRewardClaimBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * total rewards claimed for all eligible claim periods in all programs.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin total_reward_claim = 1 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder addAllTotalRewardClaim(
+          java.lang.Iterable<? extends com.cosmos.base.v1beta1.CoinProto.Coin> values) {
+        if (totalRewardClaimBuilder_ == null) {
+          ensureTotalRewardClaimIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, totalRewardClaim_);
+          onChanged();
+        } else {
+          totalRewardClaimBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * total rewards claimed for all eligible claim periods in all programs.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin total_reward_claim = 1 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearTotalRewardClaim() {
+        if (totalRewardClaimBuilder_ == null) {
+          totalRewardClaim_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          totalRewardClaimBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * total rewards claimed for all eligible claim periods in all programs.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin total_reward_claim = 1 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder removeTotalRewardClaim(int index) {
+        if (totalRewardClaimBuilder_ == null) {
+          ensureTotalRewardClaimIsMutable();
+          totalRewardClaim_.remove(index);
+          onChanged();
+        } else {
+          totalRewardClaimBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * total rewards claimed for all eligible claim periods in all programs.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin total_reward_claim = 1 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getTotalRewardClaimBuilder(
+          int index) {
+        return getTotalRewardClaimFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * total rewards claimed for all eligible claim periods in all programs.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin total_reward_claim = 1 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTotalRewardClaimOrBuilder(
+          int index) {
+        if (totalRewardClaimBuilder_ == null) {
+          return totalRewardClaim_.get(index);  } else {
+          return totalRewardClaimBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * total rewards claimed for all eligible claim periods in all programs.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin total_reward_claim = 1 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<? extends com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+           getTotalRewardClaimOrBuilderList() {
+        if (totalRewardClaimBuilder_ != null) {
+          return totalRewardClaimBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(totalRewardClaim_);
+        }
+      }
+      /**
+       * <pre>
+       * total rewards claimed for all eligible claim periods in all programs.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin total_reward_claim = 1 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addTotalRewardClaimBuilder() {
+        return getTotalRewardClaimFieldBuilder().addBuilder(
+            com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * total rewards claimed for all eligible claim periods in all programs.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin total_reward_claim = 1 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder addTotalRewardClaimBuilder(
+          int index) {
+        return getTotalRewardClaimFieldBuilder().addBuilder(
+            index, com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * total rewards claimed for all eligible claim periods in all programs.
+       * </pre>
+       *
+       * <code>repeated .cosmos.base.v1beta1.Coin total_reward_claim = 1 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+       */
+      public java.util.List<com.cosmos.base.v1beta1.CoinProto.Coin.Builder> 
+           getTotalRewardClaimBuilderList() {
+        return getTotalRewardClaimFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getTotalRewardClaimFieldBuilder() {
+        if (totalRewardClaimBuilder_ == null) {
+          totalRewardClaimBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  totalRewardClaim_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          totalRewardClaim_ = null;
+        }
+        return totalRewardClaimBuilder_;
+      }
+
+      private java.util.List<com.provenance.reward.v1.TxProto.RewardProgramClaimDetail> claimDetails_ =
+        java.util.Collections.emptyList();
+      private void ensureClaimDetailsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          claimDetails_ = new java.util.ArrayList<com.provenance.reward.v1.TxProto.RewardProgramClaimDetail>(claimDetails_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.reward.v1.TxProto.RewardProgramClaimDetail, com.provenance.reward.v1.TxProto.RewardProgramClaimDetail.Builder, com.provenance.reward.v1.TxProto.RewardProgramClaimDetailOrBuilder> claimDetailsBuilder_;
+
+      /**
+       * <pre>
+       * details about acquired rewards from a reward program.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardProgramClaimDetail claim_details = 2 [json_name = "claimDetails"];</code>
+       */
+      public java.util.List<com.provenance.reward.v1.TxProto.RewardProgramClaimDetail> getClaimDetailsList() {
+        if (claimDetailsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(claimDetails_);
+        } else {
+          return claimDetailsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * details about acquired rewards from a reward program.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardProgramClaimDetail claim_details = 2 [json_name = "claimDetails"];</code>
+       */
+      public int getClaimDetailsCount() {
+        if (claimDetailsBuilder_ == null) {
+          return claimDetails_.size();
+        } else {
+          return claimDetailsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * details about acquired rewards from a reward program.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardProgramClaimDetail claim_details = 2 [json_name = "claimDetails"];</code>
+       */
+      public com.provenance.reward.v1.TxProto.RewardProgramClaimDetail getClaimDetails(int index) {
+        if (claimDetailsBuilder_ == null) {
+          return claimDetails_.get(index);
+        } else {
+          return claimDetailsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * details about acquired rewards from a reward program.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardProgramClaimDetail claim_details = 2 [json_name = "claimDetails"];</code>
+       */
+      public Builder setClaimDetails(
+          int index, com.provenance.reward.v1.TxProto.RewardProgramClaimDetail value) {
+        if (claimDetailsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClaimDetailsIsMutable();
+          claimDetails_.set(index, value);
+          onChanged();
+        } else {
+          claimDetailsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * details about acquired rewards from a reward program.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardProgramClaimDetail claim_details = 2 [json_name = "claimDetails"];</code>
+       */
+      public Builder setClaimDetails(
+          int index, com.provenance.reward.v1.TxProto.RewardProgramClaimDetail.Builder builderForValue) {
+        if (claimDetailsBuilder_ == null) {
+          ensureClaimDetailsIsMutable();
+          claimDetails_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          claimDetailsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * details about acquired rewards from a reward program.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardProgramClaimDetail claim_details = 2 [json_name = "claimDetails"];</code>
+       */
+      public Builder addClaimDetails(com.provenance.reward.v1.TxProto.RewardProgramClaimDetail value) {
+        if (claimDetailsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClaimDetailsIsMutable();
+          claimDetails_.add(value);
+          onChanged();
+        } else {
+          claimDetailsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * details about acquired rewards from a reward program.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardProgramClaimDetail claim_details = 2 [json_name = "claimDetails"];</code>
+       */
+      public Builder addClaimDetails(
+          int index, com.provenance.reward.v1.TxProto.RewardProgramClaimDetail value) {
+        if (claimDetailsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClaimDetailsIsMutable();
+          claimDetails_.add(index, value);
+          onChanged();
+        } else {
+          claimDetailsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * details about acquired rewards from a reward program.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardProgramClaimDetail claim_details = 2 [json_name = "claimDetails"];</code>
+       */
+      public Builder addClaimDetails(
+          com.provenance.reward.v1.TxProto.RewardProgramClaimDetail.Builder builderForValue) {
+        if (claimDetailsBuilder_ == null) {
+          ensureClaimDetailsIsMutable();
+          claimDetails_.add(builderForValue.build());
+          onChanged();
+        } else {
+          claimDetailsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * details about acquired rewards from a reward program.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardProgramClaimDetail claim_details = 2 [json_name = "claimDetails"];</code>
+       */
+      public Builder addClaimDetails(
+          int index, com.provenance.reward.v1.TxProto.RewardProgramClaimDetail.Builder builderForValue) {
+        if (claimDetailsBuilder_ == null) {
+          ensureClaimDetailsIsMutable();
+          claimDetails_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          claimDetailsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * details about acquired rewards from a reward program.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardProgramClaimDetail claim_details = 2 [json_name = "claimDetails"];</code>
+       */
+      public Builder addAllClaimDetails(
+          java.lang.Iterable<? extends com.provenance.reward.v1.TxProto.RewardProgramClaimDetail> values) {
+        if (claimDetailsBuilder_ == null) {
+          ensureClaimDetailsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, claimDetails_);
+          onChanged();
+        } else {
+          claimDetailsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * details about acquired rewards from a reward program.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardProgramClaimDetail claim_details = 2 [json_name = "claimDetails"];</code>
+       */
+      public Builder clearClaimDetails() {
+        if (claimDetailsBuilder_ == null) {
+          claimDetails_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          claimDetailsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * details about acquired rewards from a reward program.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardProgramClaimDetail claim_details = 2 [json_name = "claimDetails"];</code>
+       */
+      public Builder removeClaimDetails(int index) {
+        if (claimDetailsBuilder_ == null) {
+          ensureClaimDetailsIsMutable();
+          claimDetails_.remove(index);
+          onChanged();
+        } else {
+          claimDetailsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * details about acquired rewards from a reward program.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardProgramClaimDetail claim_details = 2 [json_name = "claimDetails"];</code>
+       */
+      public com.provenance.reward.v1.TxProto.RewardProgramClaimDetail.Builder getClaimDetailsBuilder(
+          int index) {
+        return getClaimDetailsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * details about acquired rewards from a reward program.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardProgramClaimDetail claim_details = 2 [json_name = "claimDetails"];</code>
+       */
+      public com.provenance.reward.v1.TxProto.RewardProgramClaimDetailOrBuilder getClaimDetailsOrBuilder(
+          int index) {
+        if (claimDetailsBuilder_ == null) {
+          return claimDetails_.get(index);  } else {
+          return claimDetailsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * details about acquired rewards from a reward program.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardProgramClaimDetail claim_details = 2 [json_name = "claimDetails"];</code>
+       */
+      public java.util.List<? extends com.provenance.reward.v1.TxProto.RewardProgramClaimDetailOrBuilder> 
+           getClaimDetailsOrBuilderList() {
+        if (claimDetailsBuilder_ != null) {
+          return claimDetailsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(claimDetails_);
+        }
+      }
+      /**
+       * <pre>
+       * details about acquired rewards from a reward program.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardProgramClaimDetail claim_details = 2 [json_name = "claimDetails"];</code>
+       */
+      public com.provenance.reward.v1.TxProto.RewardProgramClaimDetail.Builder addClaimDetailsBuilder() {
+        return getClaimDetailsFieldBuilder().addBuilder(
+            com.provenance.reward.v1.TxProto.RewardProgramClaimDetail.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * details about acquired rewards from a reward program.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardProgramClaimDetail claim_details = 2 [json_name = "claimDetails"];</code>
+       */
+      public com.provenance.reward.v1.TxProto.RewardProgramClaimDetail.Builder addClaimDetailsBuilder(
+          int index) {
+        return getClaimDetailsFieldBuilder().addBuilder(
+            index, com.provenance.reward.v1.TxProto.RewardProgramClaimDetail.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * details about acquired rewards from a reward program.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.RewardProgramClaimDetail claim_details = 2 [json_name = "claimDetails"];</code>
+       */
+      public java.util.List<com.provenance.reward.v1.TxProto.RewardProgramClaimDetail.Builder> 
+           getClaimDetailsBuilderList() {
+        return getClaimDetailsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.reward.v1.TxProto.RewardProgramClaimDetail, com.provenance.reward.v1.TxProto.RewardProgramClaimDetail.Builder, com.provenance.reward.v1.TxProto.RewardProgramClaimDetailOrBuilder> 
+          getClaimDetailsFieldBuilder() {
+        if (claimDetailsBuilder_ == null) {
+          claimDetailsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.provenance.reward.v1.TxProto.RewardProgramClaimDetail, com.provenance.reward.v1.TxProto.RewardProgramClaimDetail.Builder, com.provenance.reward.v1.TxProto.RewardProgramClaimDetailOrBuilder>(
+                  claimDetails_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          claimDetails_ = null;
+        }
+        return claimDetailsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.reward.v1.MsgClaimAllRewardsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.reward.v1.MsgClaimAllRewardsResponse)
+    private static final com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponse();
+    }
+
+    public static com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgClaimAllRewardsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgClaimAllRewardsResponse>() {
+      @java.lang.Override
+      public MsgClaimAllRewardsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgClaimAllRewardsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgClaimAllRewardsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.reward.v1.TxProto.MsgClaimAllRewardsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ClaimedRewardPeriodDetailOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.reward.v1.ClaimedRewardPeriodDetail)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * claim period id
+     * </pre>
+     *
+     * <code>uint64 claim_period_id = 1 [json_name = "claimPeriodId"];</code>
+     * @return The claimPeriodId.
+     */
+    long getClaimPeriodId();
+
+    /**
+     * <pre>
+     * total shares accumulated for claim period
+     * </pre>
+     *
+     * <code>uint64 total_shares = 2 [json_name = "totalShares"];</code>
+     * @return The totalShares.
+     */
+    long getTotalShares();
+
+    /**
+     * <pre>
+     * total rewards for claim period
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin claim_period_reward = 3 [json_name = "claimPeriodReward", (.gogoproto.nullable) = false];</code>
+     * @return Whether the claimPeriodReward field is set.
+     */
+    boolean hasClaimPeriodReward();
+    /**
+     * <pre>
+     * total rewards for claim period
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin claim_period_reward = 3 [json_name = "claimPeriodReward", (.gogoproto.nullable) = false];</code>
+     * @return The claimPeriodReward.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getClaimPeriodReward();
+    /**
+     * <pre>
+     * total rewards for claim period
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin claim_period_reward = 3 [json_name = "claimPeriodReward", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getClaimPeriodRewardOrBuilder();
+  }
+  /**
+   * <pre>
+   * ClaimedRewardPeriodDetail is information regarding an addresses' shares and reward for a claim period.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.reward.v1.ClaimedRewardPeriodDetail}
+   */
+  public static final class ClaimedRewardPeriodDetail extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.reward.v1.ClaimedRewardPeriodDetail)
+      ClaimedRewardPeriodDetailOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ClaimedRewardPeriodDetail.newBuilder() to construct.
+    private ClaimedRewardPeriodDetail(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ClaimedRewardPeriodDetail() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ClaimedRewardPeriodDetail();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_ClaimedRewardPeriodDetail_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_ClaimedRewardPeriodDetail_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail.class, com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail.Builder.class);
+    }
+
+    public static final int CLAIM_PERIOD_ID_FIELD_NUMBER = 1;
+    private long claimPeriodId_ = 0L;
+    /**
+     * <pre>
+     * claim period id
+     * </pre>
+     *
+     * <code>uint64 claim_period_id = 1 [json_name = "claimPeriodId"];</code>
+     * @return The claimPeriodId.
+     */
+    @java.lang.Override
+    public long getClaimPeriodId() {
+      return claimPeriodId_;
+    }
+
+    public static final int TOTAL_SHARES_FIELD_NUMBER = 2;
+    private long totalShares_ = 0L;
+    /**
+     * <pre>
+     * total shares accumulated for claim period
+     * </pre>
+     *
+     * <code>uint64 total_shares = 2 [json_name = "totalShares"];</code>
+     * @return The totalShares.
+     */
+    @java.lang.Override
+    public long getTotalShares() {
+      return totalShares_;
+    }
+
+    public static final int CLAIM_PERIOD_REWARD_FIELD_NUMBER = 3;
+    private com.cosmos.base.v1beta1.CoinProto.Coin claimPeriodReward_;
+    /**
+     * <pre>
+     * total rewards for claim period
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin claim_period_reward = 3 [json_name = "claimPeriodReward", (.gogoproto.nullable) = false];</code>
+     * @return Whether the claimPeriodReward field is set.
+     */
+    @java.lang.Override
+    public boolean hasClaimPeriodReward() {
+      return claimPeriodReward_ != null;
+    }
+    /**
+     * <pre>
+     * total rewards for claim period
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin claim_period_reward = 3 [json_name = "claimPeriodReward", (.gogoproto.nullable) = false];</code>
+     * @return The claimPeriodReward.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getClaimPeriodReward() {
+      return claimPeriodReward_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : claimPeriodReward_;
+    }
+    /**
+     * <pre>
+     * total rewards for claim period
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin claim_period_reward = 3 [json_name = "claimPeriodReward", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getClaimPeriodRewardOrBuilder() {
+      return claimPeriodReward_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : claimPeriodReward_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (claimPeriodId_ != 0L) {
+        output.writeUInt64(1, claimPeriodId_);
+      }
+      if (totalShares_ != 0L) {
+        output.writeUInt64(2, totalShares_);
+      }
+      if (claimPeriodReward_ != null) {
+        output.writeMessage(3, getClaimPeriodReward());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (claimPeriodId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, claimPeriodId_);
+      }
+      if (totalShares_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, totalShares_);
+      }
+      if (claimPeriodReward_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getClaimPeriodReward());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail)) {
+        return super.equals(obj);
+      }
+      com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail other = (com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail) obj;
+
+      if (getClaimPeriodId()
+          != other.getClaimPeriodId()) return false;
+      if (getTotalShares()
+          != other.getTotalShares()) return false;
+      if (hasClaimPeriodReward() != other.hasClaimPeriodReward()) return false;
+      if (hasClaimPeriodReward()) {
+        if (!getClaimPeriodReward()
+            .equals(other.getClaimPeriodReward())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLAIM_PERIOD_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getClaimPeriodId());
+      hash = (37 * hash) + TOTAL_SHARES_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTotalShares());
+      if (hasClaimPeriodReward()) {
+        hash = (37 * hash) + CLAIM_PERIOD_REWARD_FIELD_NUMBER;
+        hash = (53 * hash) + getClaimPeriodReward().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * ClaimedRewardPeriodDetail is information regarding an addresses' shares and reward for a claim period.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.reward.v1.ClaimedRewardPeriodDetail}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.reward.v1.ClaimedRewardPeriodDetail)
+        com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetailOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_ClaimedRewardPeriodDetail_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_ClaimedRewardPeriodDetail_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail.class, com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail.Builder.class);
+      }
+
+      // Construct using com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        claimPeriodId_ = 0L;
+        totalShares_ = 0L;
+        claimPeriodReward_ = null;
+        if (claimPeriodRewardBuilder_ != null) {
+          claimPeriodRewardBuilder_.dispose();
+          claimPeriodRewardBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_ClaimedRewardPeriodDetail_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail getDefaultInstanceForType() {
+        return com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail build() {
+        com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail buildPartial() {
+        com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail result = new com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.claimPeriodId_ = claimPeriodId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.totalShares_ = totalShares_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.claimPeriodReward_ = claimPeriodRewardBuilder_ == null
+              ? claimPeriodReward_
+              : claimPeriodRewardBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail) {
+          return mergeFrom((com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail other) {
+        if (other == com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail.getDefaultInstance()) return this;
+        if (other.getClaimPeriodId() != 0L) {
+          setClaimPeriodId(other.getClaimPeriodId());
+        }
+        if (other.getTotalShares() != 0L) {
+          setTotalShares(other.getTotalShares());
+        }
+        if (other.hasClaimPeriodReward()) {
+          mergeClaimPeriodReward(other.getClaimPeriodReward());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                claimPeriodId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 16: {
+                totalShares_ = input.readUInt64();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                input.readMessage(
+                    getClaimPeriodRewardFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long claimPeriodId_ ;
+      /**
+       * <pre>
+       * claim period id
+       * </pre>
+       *
+       * <code>uint64 claim_period_id = 1 [json_name = "claimPeriodId"];</code>
+       * @return The claimPeriodId.
+       */
+      @java.lang.Override
+      public long getClaimPeriodId() {
+        return claimPeriodId_;
+      }
+      /**
+       * <pre>
+       * claim period id
+       * </pre>
+       *
+       * <code>uint64 claim_period_id = 1 [json_name = "claimPeriodId"];</code>
+       * @param value The claimPeriodId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClaimPeriodId(long value) {
+
+        claimPeriodId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * claim period id
+       * </pre>
+       *
+       * <code>uint64 claim_period_id = 1 [json_name = "claimPeriodId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClaimPeriodId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        claimPeriodId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long totalShares_ ;
+      /**
+       * <pre>
+       * total shares accumulated for claim period
+       * </pre>
+       *
+       * <code>uint64 total_shares = 2 [json_name = "totalShares"];</code>
+       * @return The totalShares.
+       */
+      @java.lang.Override
+      public long getTotalShares() {
+        return totalShares_;
+      }
+      /**
+       * <pre>
+       * total shares accumulated for claim period
+       * </pre>
+       *
+       * <code>uint64 total_shares = 2 [json_name = "totalShares"];</code>
+       * @param value The totalShares to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalShares(long value) {
+
+        totalShares_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total shares accumulated for claim period
+       * </pre>
+       *
+       * <code>uint64 total_shares = 2 [json_name = "totalShares"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalShares() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        totalShares_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin claimPeriodReward_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> claimPeriodRewardBuilder_;
+      /**
+       * <pre>
+       * total rewards for claim period
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin claim_period_reward = 3 [json_name = "claimPeriodReward", (.gogoproto.nullable) = false];</code>
+       * @return Whether the claimPeriodReward field is set.
+       */
+      public boolean hasClaimPeriodReward() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * total rewards for claim period
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin claim_period_reward = 3 [json_name = "claimPeriodReward", (.gogoproto.nullable) = false];</code>
+       * @return The claimPeriodReward.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getClaimPeriodReward() {
+        if (claimPeriodRewardBuilder_ == null) {
+          return claimPeriodReward_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : claimPeriodReward_;
+        } else {
+          return claimPeriodRewardBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * total rewards for claim period
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin claim_period_reward = 3 [json_name = "claimPeriodReward", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setClaimPeriodReward(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (claimPeriodRewardBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          claimPeriodReward_ = value;
+        } else {
+          claimPeriodRewardBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total rewards for claim period
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin claim_period_reward = 3 [json_name = "claimPeriodReward", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setClaimPeriodReward(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (claimPeriodRewardBuilder_ == null) {
+          claimPeriodReward_ = builderForValue.build();
+        } else {
+          claimPeriodRewardBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total rewards for claim period
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin claim_period_reward = 3 [json_name = "claimPeriodReward", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeClaimPeriodReward(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (claimPeriodRewardBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            claimPeriodReward_ != null &&
+            claimPeriodReward_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getClaimPeriodRewardBuilder().mergeFrom(value);
+          } else {
+            claimPeriodReward_ = value;
+          }
+        } else {
+          claimPeriodRewardBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total rewards for claim period
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin claim_period_reward = 3 [json_name = "claimPeriodReward", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearClaimPeriodReward() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        claimPeriodReward_ = null;
+        if (claimPeriodRewardBuilder_ != null) {
+          claimPeriodRewardBuilder_.dispose();
+          claimPeriodRewardBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total rewards for claim period
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin claim_period_reward = 3 [json_name = "claimPeriodReward", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getClaimPeriodRewardBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getClaimPeriodRewardFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * total rewards for claim period
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin claim_period_reward = 3 [json_name = "claimPeriodReward", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getClaimPeriodRewardOrBuilder() {
+        if (claimPeriodRewardBuilder_ != null) {
+          return claimPeriodRewardBuilder_.getMessageOrBuilder();
+        } else {
+          return claimPeriodReward_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : claimPeriodReward_;
+        }
+      }
+      /**
+       * <pre>
+       * total rewards for claim period
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin claim_period_reward = 3 [json_name = "claimPeriodReward", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getClaimPeriodRewardFieldBuilder() {
+        if (claimPeriodRewardBuilder_ == null) {
+          claimPeriodRewardBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getClaimPeriodReward(),
+                  getParentForChildren(),
+                  isClean());
+          claimPeriodReward_ = null;
+        }
+        return claimPeriodRewardBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.reward.v1.ClaimedRewardPeriodDetail)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.reward.v1.ClaimedRewardPeriodDetail)
+    private static final com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail();
+    }
+
+    public static com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ClaimedRewardPeriodDetail>
+        PARSER = new com.google.protobuf.AbstractParser<ClaimedRewardPeriodDetail>() {
+      @java.lang.Override
+      public ClaimedRewardPeriodDetail parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ClaimedRewardPeriodDetail> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ClaimedRewardPeriodDetail> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RewardProgramClaimDetailOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:provenance.reward.v1.RewardProgramClaimDetail)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * reward program id.
+     * </pre>
+     *
+     * <code>uint64 reward_program_id = 1 [json_name = "rewardProgramId"];</code>
+     * @return The rewardProgramId.
+     */
+    long getRewardProgramId();
+
+    /**
+     * <pre>
+     * total rewards claimed for all eligible claim periods in program.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin total_reward_claim = 2 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+     * @return Whether the totalRewardClaim field is set.
+     */
+    boolean hasTotalRewardClaim();
+    /**
+     * <pre>
+     * total rewards claimed for all eligible claim periods in program.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin total_reward_claim = 2 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+     * @return The totalRewardClaim.
+     */
+    com.cosmos.base.v1beta1.CoinProto.Coin getTotalRewardClaim();
+    /**
+     * <pre>
+     * total rewards claimed for all eligible claim periods in program.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin total_reward_claim = 2 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+     */
+    com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTotalRewardClaimOrBuilder();
+
+    /**
+     * <pre>
+     * claim period details.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.ClaimedRewardPeriodDetail claimed_reward_period_details = 3 [json_name = "claimedRewardPeriodDetails"];</code>
+     */
+    java.util.List<com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail> 
+        getClaimedRewardPeriodDetailsList();
+    /**
+     * <pre>
+     * claim period details.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.ClaimedRewardPeriodDetail claimed_reward_period_details = 3 [json_name = "claimedRewardPeriodDetails"];</code>
+     */
+    com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail getClaimedRewardPeriodDetails(int index);
+    /**
+     * <pre>
+     * claim period details.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.ClaimedRewardPeriodDetail claimed_reward_period_details = 3 [json_name = "claimedRewardPeriodDetails"];</code>
+     */
+    int getClaimedRewardPeriodDetailsCount();
+    /**
+     * <pre>
+     * claim period details.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.ClaimedRewardPeriodDetail claimed_reward_period_details = 3 [json_name = "claimedRewardPeriodDetails"];</code>
+     */
+    java.util.List<? extends com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetailOrBuilder> 
+        getClaimedRewardPeriodDetailsOrBuilderList();
+    /**
+     * <pre>
+     * claim period details.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.ClaimedRewardPeriodDetail claimed_reward_period_details = 3 [json_name = "claimedRewardPeriodDetails"];</code>
+     */
+    com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetailOrBuilder getClaimedRewardPeriodDetailsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * RewardProgramClaimDetail is the response object regarding an address's shares and reward for a reward program.
+   * </pre>
+   *
+   * Protobuf type {@code provenance.reward.v1.RewardProgramClaimDetail}
+   */
+  public static final class RewardProgramClaimDetail extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:provenance.reward.v1.RewardProgramClaimDetail)
+      RewardProgramClaimDetailOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RewardProgramClaimDetail.newBuilder() to construct.
+    private RewardProgramClaimDetail(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RewardProgramClaimDetail() {
+      claimedRewardPeriodDetails_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RewardProgramClaimDetail();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_RewardProgramClaimDetail_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_RewardProgramClaimDetail_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.provenance.reward.v1.TxProto.RewardProgramClaimDetail.class, com.provenance.reward.v1.TxProto.RewardProgramClaimDetail.Builder.class);
+    }
+
+    public static final int REWARD_PROGRAM_ID_FIELD_NUMBER = 1;
+    private long rewardProgramId_ = 0L;
+    /**
+     * <pre>
+     * reward program id.
+     * </pre>
+     *
+     * <code>uint64 reward_program_id = 1 [json_name = "rewardProgramId"];</code>
+     * @return The rewardProgramId.
+     */
+    @java.lang.Override
+    public long getRewardProgramId() {
+      return rewardProgramId_;
+    }
+
+    public static final int TOTAL_REWARD_CLAIM_FIELD_NUMBER = 2;
+    private com.cosmos.base.v1beta1.CoinProto.Coin totalRewardClaim_;
+    /**
+     * <pre>
+     * total rewards claimed for all eligible claim periods in program.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin total_reward_claim = 2 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+     * @return Whether the totalRewardClaim field is set.
+     */
+    @java.lang.Override
+    public boolean hasTotalRewardClaim() {
+      return totalRewardClaim_ != null;
+    }
+    /**
+     * <pre>
+     * total rewards claimed for all eligible claim periods in program.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin total_reward_claim = 2 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+     * @return The totalRewardClaim.
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.Coin getTotalRewardClaim() {
+      return totalRewardClaim_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : totalRewardClaim_;
+    }
+    /**
+     * <pre>
+     * total rewards claimed for all eligible claim periods in program.
+     * </pre>
+     *
+     * <code>.cosmos.base.v1beta1.Coin total_reward_claim = 2 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTotalRewardClaimOrBuilder() {
+      return totalRewardClaim_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : totalRewardClaim_;
+    }
+
+    public static final int CLAIMED_REWARD_PERIOD_DETAILS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail> claimedRewardPeriodDetails_;
+    /**
+     * <pre>
+     * claim period details.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.ClaimedRewardPeriodDetail claimed_reward_period_details = 3 [json_name = "claimedRewardPeriodDetails"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail> getClaimedRewardPeriodDetailsList() {
+      return claimedRewardPeriodDetails_;
+    }
+    /**
+     * <pre>
+     * claim period details.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.ClaimedRewardPeriodDetail claimed_reward_period_details = 3 [json_name = "claimedRewardPeriodDetails"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetailOrBuilder> 
+        getClaimedRewardPeriodDetailsOrBuilderList() {
+      return claimedRewardPeriodDetails_;
+    }
+    /**
+     * <pre>
+     * claim period details.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.ClaimedRewardPeriodDetail claimed_reward_period_details = 3 [json_name = "claimedRewardPeriodDetails"];</code>
+     */
+    @java.lang.Override
+    public int getClaimedRewardPeriodDetailsCount() {
+      return claimedRewardPeriodDetails_.size();
+    }
+    /**
+     * <pre>
+     * claim period details.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.ClaimedRewardPeriodDetail claimed_reward_period_details = 3 [json_name = "claimedRewardPeriodDetails"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail getClaimedRewardPeriodDetails(int index) {
+      return claimedRewardPeriodDetails_.get(index);
+    }
+    /**
+     * <pre>
+     * claim period details.
+     * </pre>
+     *
+     * <code>repeated .provenance.reward.v1.ClaimedRewardPeriodDetail claimed_reward_period_details = 3 [json_name = "claimedRewardPeriodDetails"];</code>
+     */
+    @java.lang.Override
+    public com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetailOrBuilder getClaimedRewardPeriodDetailsOrBuilder(
+        int index) {
+      return claimedRewardPeriodDetails_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (rewardProgramId_ != 0L) {
+        output.writeUInt64(1, rewardProgramId_);
+      }
+      if (totalRewardClaim_ != null) {
+        output.writeMessage(2, getTotalRewardClaim());
+      }
+      for (int i = 0; i < claimedRewardPeriodDetails_.size(); i++) {
+        output.writeMessage(3, claimedRewardPeriodDetails_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (rewardProgramId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, rewardProgramId_);
+      }
+      if (totalRewardClaim_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getTotalRewardClaim());
+      }
+      for (int i = 0; i < claimedRewardPeriodDetails_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, claimedRewardPeriodDetails_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.provenance.reward.v1.TxProto.RewardProgramClaimDetail)) {
+        return super.equals(obj);
+      }
+      com.provenance.reward.v1.TxProto.RewardProgramClaimDetail other = (com.provenance.reward.v1.TxProto.RewardProgramClaimDetail) obj;
+
+      if (getRewardProgramId()
+          != other.getRewardProgramId()) return false;
+      if (hasTotalRewardClaim() != other.hasTotalRewardClaim()) return false;
+      if (hasTotalRewardClaim()) {
+        if (!getTotalRewardClaim()
+            .equals(other.getTotalRewardClaim())) return false;
+      }
+      if (!getClaimedRewardPeriodDetailsList()
+          .equals(other.getClaimedRewardPeriodDetailsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + REWARD_PROGRAM_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRewardProgramId());
+      if (hasTotalRewardClaim()) {
+        hash = (37 * hash) + TOTAL_REWARD_CLAIM_FIELD_NUMBER;
+        hash = (53 * hash) + getTotalRewardClaim().hashCode();
+      }
+      if (getClaimedRewardPeriodDetailsCount() > 0) {
+        hash = (37 * hash) + CLAIMED_REWARD_PERIOD_DETAILS_FIELD_NUMBER;
+        hash = (53 * hash) + getClaimedRewardPeriodDetailsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.provenance.reward.v1.TxProto.RewardProgramClaimDetail parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.TxProto.RewardProgramClaimDetail parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.RewardProgramClaimDetail parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.TxProto.RewardProgramClaimDetail parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.RewardProgramClaimDetail parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.provenance.reward.v1.TxProto.RewardProgramClaimDetail parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.RewardProgramClaimDetail parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.TxProto.RewardProgramClaimDetail parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.provenance.reward.v1.TxProto.RewardProgramClaimDetail parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.provenance.reward.v1.TxProto.RewardProgramClaimDetail parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.provenance.reward.v1.TxProto.RewardProgramClaimDetail parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.provenance.reward.v1.TxProto.RewardProgramClaimDetail parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.provenance.reward.v1.TxProto.RewardProgramClaimDetail prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * RewardProgramClaimDetail is the response object regarding an address's shares and reward for a reward program.
+     * </pre>
+     *
+     * Protobuf type {@code provenance.reward.v1.RewardProgramClaimDetail}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:provenance.reward.v1.RewardProgramClaimDetail)
+        com.provenance.reward.v1.TxProto.RewardProgramClaimDetailOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_RewardProgramClaimDetail_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_RewardProgramClaimDetail_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.provenance.reward.v1.TxProto.RewardProgramClaimDetail.class, com.provenance.reward.v1.TxProto.RewardProgramClaimDetail.Builder.class);
+      }
+
+      // Construct using com.provenance.reward.v1.TxProto.RewardProgramClaimDetail.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        rewardProgramId_ = 0L;
+        totalRewardClaim_ = null;
+        if (totalRewardClaimBuilder_ != null) {
+          totalRewardClaimBuilder_.dispose();
+          totalRewardClaimBuilder_ = null;
+        }
+        if (claimedRewardPeriodDetailsBuilder_ == null) {
+          claimedRewardPeriodDetails_ = java.util.Collections.emptyList();
+        } else {
+          claimedRewardPeriodDetails_ = null;
+          claimedRewardPeriodDetailsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.provenance.reward.v1.TxProto.internal_static_provenance_reward_v1_RewardProgramClaimDetail_descriptor;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.TxProto.RewardProgramClaimDetail getDefaultInstanceForType() {
+        return com.provenance.reward.v1.TxProto.RewardProgramClaimDetail.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.TxProto.RewardProgramClaimDetail build() {
+        com.provenance.reward.v1.TxProto.RewardProgramClaimDetail result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.provenance.reward.v1.TxProto.RewardProgramClaimDetail buildPartial() {
+        com.provenance.reward.v1.TxProto.RewardProgramClaimDetail result = new com.provenance.reward.v1.TxProto.RewardProgramClaimDetail(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.provenance.reward.v1.TxProto.RewardProgramClaimDetail result) {
+        if (claimedRewardPeriodDetailsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            claimedRewardPeriodDetails_ = java.util.Collections.unmodifiableList(claimedRewardPeriodDetails_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.claimedRewardPeriodDetails_ = claimedRewardPeriodDetails_;
+        } else {
+          result.claimedRewardPeriodDetails_ = claimedRewardPeriodDetailsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.provenance.reward.v1.TxProto.RewardProgramClaimDetail result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.rewardProgramId_ = rewardProgramId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.totalRewardClaim_ = totalRewardClaimBuilder_ == null
+              ? totalRewardClaim_
+              : totalRewardClaimBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.provenance.reward.v1.TxProto.RewardProgramClaimDetail) {
+          return mergeFrom((com.provenance.reward.v1.TxProto.RewardProgramClaimDetail)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.provenance.reward.v1.TxProto.RewardProgramClaimDetail other) {
+        if (other == com.provenance.reward.v1.TxProto.RewardProgramClaimDetail.getDefaultInstance()) return this;
+        if (other.getRewardProgramId() != 0L) {
+          setRewardProgramId(other.getRewardProgramId());
+        }
+        if (other.hasTotalRewardClaim()) {
+          mergeTotalRewardClaim(other.getTotalRewardClaim());
+        }
+        if (claimedRewardPeriodDetailsBuilder_ == null) {
+          if (!other.claimedRewardPeriodDetails_.isEmpty()) {
+            if (claimedRewardPeriodDetails_.isEmpty()) {
+              claimedRewardPeriodDetails_ = other.claimedRewardPeriodDetails_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureClaimedRewardPeriodDetailsIsMutable();
+              claimedRewardPeriodDetails_.addAll(other.claimedRewardPeriodDetails_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.claimedRewardPeriodDetails_.isEmpty()) {
+            if (claimedRewardPeriodDetailsBuilder_.isEmpty()) {
+              claimedRewardPeriodDetailsBuilder_.dispose();
+              claimedRewardPeriodDetailsBuilder_ = null;
+              claimedRewardPeriodDetails_ = other.claimedRewardPeriodDetails_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              claimedRewardPeriodDetailsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getClaimedRewardPeriodDetailsFieldBuilder() : null;
+            } else {
+              claimedRewardPeriodDetailsBuilder_.addAllMessages(other.claimedRewardPeriodDetails_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                rewardProgramId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getTotalRewardClaimFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail m =
+                    input.readMessage(
+                        com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail.parser(),
+                        extensionRegistry);
+                if (claimedRewardPeriodDetailsBuilder_ == null) {
+                  ensureClaimedRewardPeriodDetailsIsMutable();
+                  claimedRewardPeriodDetails_.add(m);
+                } else {
+                  claimedRewardPeriodDetailsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long rewardProgramId_ ;
+      /**
+       * <pre>
+       * reward program id.
+       * </pre>
+       *
+       * <code>uint64 reward_program_id = 1 [json_name = "rewardProgramId"];</code>
+       * @return The rewardProgramId.
+       */
+      @java.lang.Override
+      public long getRewardProgramId() {
+        return rewardProgramId_;
+      }
+      /**
+       * <pre>
+       * reward program id.
+       * </pre>
+       *
+       * <code>uint64 reward_program_id = 1 [json_name = "rewardProgramId"];</code>
+       * @param value The rewardProgramId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRewardProgramId(long value) {
+
+        rewardProgramId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * reward program id.
+       * </pre>
+       *
+       * <code>uint64 reward_program_id = 1 [json_name = "rewardProgramId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRewardProgramId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        rewardProgramId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.cosmos.base.v1beta1.CoinProto.Coin totalRewardClaim_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> totalRewardClaimBuilder_;
+      /**
+       * <pre>
+       * total rewards claimed for all eligible claim periods in program.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_reward_claim = 2 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+       * @return Whether the totalRewardClaim field is set.
+       */
+      public boolean hasTotalRewardClaim() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <pre>
+       * total rewards claimed for all eligible claim periods in program.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_reward_claim = 2 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+       * @return The totalRewardClaim.
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin getTotalRewardClaim() {
+        if (totalRewardClaimBuilder_ == null) {
+          return totalRewardClaim_ == null ? com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : totalRewardClaim_;
+        } else {
+          return totalRewardClaimBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * total rewards claimed for all eligible claim periods in program.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_reward_claim = 2 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTotalRewardClaim(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (totalRewardClaimBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          totalRewardClaim_ = value;
+        } else {
+          totalRewardClaimBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total rewards claimed for all eligible claim periods in program.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_reward_claim = 2 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder setTotalRewardClaim(
+          com.cosmos.base.v1beta1.CoinProto.Coin.Builder builderForValue) {
+        if (totalRewardClaimBuilder_ == null) {
+          totalRewardClaim_ = builderForValue.build();
+        } else {
+          totalRewardClaimBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total rewards claimed for all eligible claim periods in program.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_reward_claim = 2 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder mergeTotalRewardClaim(com.cosmos.base.v1beta1.CoinProto.Coin value) {
+        if (totalRewardClaimBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            totalRewardClaim_ != null &&
+            totalRewardClaim_ != com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance()) {
+            getTotalRewardClaimBuilder().mergeFrom(value);
+          } else {
+            totalRewardClaim_ = value;
+          }
+        } else {
+          totalRewardClaimBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total rewards claimed for all eligible claim periods in program.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_reward_claim = 2 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+       */
+      public Builder clearTotalRewardClaim() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        totalRewardClaim_ = null;
+        if (totalRewardClaimBuilder_ != null) {
+          totalRewardClaimBuilder_.dispose();
+          totalRewardClaimBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * total rewards claimed for all eligible claim periods in program.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_reward_claim = 2 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.Coin.Builder getTotalRewardClaimBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getTotalRewardClaimFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * total rewards claimed for all eligible claim periods in program.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_reward_claim = 2 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+       */
+      public com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder getTotalRewardClaimOrBuilder() {
+        if (totalRewardClaimBuilder_ != null) {
+          return totalRewardClaimBuilder_.getMessageOrBuilder();
+        } else {
+          return totalRewardClaim_ == null ?
+              com.cosmos.base.v1beta1.CoinProto.Coin.getDefaultInstance() : totalRewardClaim_;
+        }
+      }
+      /**
+       * <pre>
+       * total rewards claimed for all eligible claim periods in program.
+       * </pre>
+       *
+       * <code>.cosmos.base.v1beta1.Coin total_reward_claim = 2 [json_name = "totalRewardClaim", (.gogoproto.nullable) = false];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder> 
+          getTotalRewardClaimFieldBuilder() {
+        if (totalRewardClaimBuilder_ == null) {
+          totalRewardClaimBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.cosmos.base.v1beta1.CoinProto.Coin, com.cosmos.base.v1beta1.CoinProto.Coin.Builder, com.cosmos.base.v1beta1.CoinProto.CoinOrBuilder>(
+                  getTotalRewardClaim(),
+                  getParentForChildren(),
+                  isClean());
+          totalRewardClaim_ = null;
+        }
+        return totalRewardClaimBuilder_;
+      }
+
+      private java.util.List<com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail> claimedRewardPeriodDetails_ =
+        java.util.Collections.emptyList();
+      private void ensureClaimedRewardPeriodDetailsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          claimedRewardPeriodDetails_ = new java.util.ArrayList<com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail>(claimedRewardPeriodDetails_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail, com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail.Builder, com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetailOrBuilder> claimedRewardPeriodDetailsBuilder_;
+
+      /**
+       * <pre>
+       * claim period details.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.ClaimedRewardPeriodDetail claimed_reward_period_details = 3 [json_name = "claimedRewardPeriodDetails"];</code>
+       */
+      public java.util.List<com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail> getClaimedRewardPeriodDetailsList() {
+        if (claimedRewardPeriodDetailsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(claimedRewardPeriodDetails_);
+        } else {
+          return claimedRewardPeriodDetailsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * claim period details.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.ClaimedRewardPeriodDetail claimed_reward_period_details = 3 [json_name = "claimedRewardPeriodDetails"];</code>
+       */
+      public int getClaimedRewardPeriodDetailsCount() {
+        if (claimedRewardPeriodDetailsBuilder_ == null) {
+          return claimedRewardPeriodDetails_.size();
+        } else {
+          return claimedRewardPeriodDetailsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * claim period details.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.ClaimedRewardPeriodDetail claimed_reward_period_details = 3 [json_name = "claimedRewardPeriodDetails"];</code>
+       */
+      public com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail getClaimedRewardPeriodDetails(int index) {
+        if (claimedRewardPeriodDetailsBuilder_ == null) {
+          return claimedRewardPeriodDetails_.get(index);
+        } else {
+          return claimedRewardPeriodDetailsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * claim period details.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.ClaimedRewardPeriodDetail claimed_reward_period_details = 3 [json_name = "claimedRewardPeriodDetails"];</code>
+       */
+      public Builder setClaimedRewardPeriodDetails(
+          int index, com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail value) {
+        if (claimedRewardPeriodDetailsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClaimedRewardPeriodDetailsIsMutable();
+          claimedRewardPeriodDetails_.set(index, value);
+          onChanged();
+        } else {
+          claimedRewardPeriodDetailsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claim period details.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.ClaimedRewardPeriodDetail claimed_reward_period_details = 3 [json_name = "claimedRewardPeriodDetails"];</code>
+       */
+      public Builder setClaimedRewardPeriodDetails(
+          int index, com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail.Builder builderForValue) {
+        if (claimedRewardPeriodDetailsBuilder_ == null) {
+          ensureClaimedRewardPeriodDetailsIsMutable();
+          claimedRewardPeriodDetails_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          claimedRewardPeriodDetailsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claim period details.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.ClaimedRewardPeriodDetail claimed_reward_period_details = 3 [json_name = "claimedRewardPeriodDetails"];</code>
+       */
+      public Builder addClaimedRewardPeriodDetails(com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail value) {
+        if (claimedRewardPeriodDetailsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClaimedRewardPeriodDetailsIsMutable();
+          claimedRewardPeriodDetails_.add(value);
+          onChanged();
+        } else {
+          claimedRewardPeriodDetailsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claim period details.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.ClaimedRewardPeriodDetail claimed_reward_period_details = 3 [json_name = "claimedRewardPeriodDetails"];</code>
+       */
+      public Builder addClaimedRewardPeriodDetails(
+          int index, com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail value) {
+        if (claimedRewardPeriodDetailsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClaimedRewardPeriodDetailsIsMutable();
+          claimedRewardPeriodDetails_.add(index, value);
+          onChanged();
+        } else {
+          claimedRewardPeriodDetailsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claim period details.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.ClaimedRewardPeriodDetail claimed_reward_period_details = 3 [json_name = "claimedRewardPeriodDetails"];</code>
+       */
+      public Builder addClaimedRewardPeriodDetails(
+          com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail.Builder builderForValue) {
+        if (claimedRewardPeriodDetailsBuilder_ == null) {
+          ensureClaimedRewardPeriodDetailsIsMutable();
+          claimedRewardPeriodDetails_.add(builderForValue.build());
+          onChanged();
+        } else {
+          claimedRewardPeriodDetailsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claim period details.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.ClaimedRewardPeriodDetail claimed_reward_period_details = 3 [json_name = "claimedRewardPeriodDetails"];</code>
+       */
+      public Builder addClaimedRewardPeriodDetails(
+          int index, com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail.Builder builderForValue) {
+        if (claimedRewardPeriodDetailsBuilder_ == null) {
+          ensureClaimedRewardPeriodDetailsIsMutable();
+          claimedRewardPeriodDetails_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          claimedRewardPeriodDetailsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claim period details.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.ClaimedRewardPeriodDetail claimed_reward_period_details = 3 [json_name = "claimedRewardPeriodDetails"];</code>
+       */
+      public Builder addAllClaimedRewardPeriodDetails(
+          java.lang.Iterable<? extends com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail> values) {
+        if (claimedRewardPeriodDetailsBuilder_ == null) {
+          ensureClaimedRewardPeriodDetailsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, claimedRewardPeriodDetails_);
+          onChanged();
+        } else {
+          claimedRewardPeriodDetailsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claim period details.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.ClaimedRewardPeriodDetail claimed_reward_period_details = 3 [json_name = "claimedRewardPeriodDetails"];</code>
+       */
+      public Builder clearClaimedRewardPeriodDetails() {
+        if (claimedRewardPeriodDetailsBuilder_ == null) {
+          claimedRewardPeriodDetails_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          claimedRewardPeriodDetailsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claim period details.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.ClaimedRewardPeriodDetail claimed_reward_period_details = 3 [json_name = "claimedRewardPeriodDetails"];</code>
+       */
+      public Builder removeClaimedRewardPeriodDetails(int index) {
+        if (claimedRewardPeriodDetailsBuilder_ == null) {
+          ensureClaimedRewardPeriodDetailsIsMutable();
+          claimedRewardPeriodDetails_.remove(index);
+          onChanged();
+        } else {
+          claimedRewardPeriodDetailsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * claim period details.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.ClaimedRewardPeriodDetail claimed_reward_period_details = 3 [json_name = "claimedRewardPeriodDetails"];</code>
+       */
+      public com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail.Builder getClaimedRewardPeriodDetailsBuilder(
+          int index) {
+        return getClaimedRewardPeriodDetailsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * claim period details.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.ClaimedRewardPeriodDetail claimed_reward_period_details = 3 [json_name = "claimedRewardPeriodDetails"];</code>
+       */
+      public com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetailOrBuilder getClaimedRewardPeriodDetailsOrBuilder(
+          int index) {
+        if (claimedRewardPeriodDetailsBuilder_ == null) {
+          return claimedRewardPeriodDetails_.get(index);  } else {
+          return claimedRewardPeriodDetailsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * claim period details.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.ClaimedRewardPeriodDetail claimed_reward_period_details = 3 [json_name = "claimedRewardPeriodDetails"];</code>
+       */
+      public java.util.List<? extends com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetailOrBuilder> 
+           getClaimedRewardPeriodDetailsOrBuilderList() {
+        if (claimedRewardPeriodDetailsBuilder_ != null) {
+          return claimedRewardPeriodDetailsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(claimedRewardPeriodDetails_);
+        }
+      }
+      /**
+       * <pre>
+       * claim period details.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.ClaimedRewardPeriodDetail claimed_reward_period_details = 3 [json_name = "claimedRewardPeriodDetails"];</code>
+       */
+      public com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail.Builder addClaimedRewardPeriodDetailsBuilder() {
+        return getClaimedRewardPeriodDetailsFieldBuilder().addBuilder(
+            com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * claim period details.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.ClaimedRewardPeriodDetail claimed_reward_period_details = 3 [json_name = "claimedRewardPeriodDetails"];</code>
+       */
+      public com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail.Builder addClaimedRewardPeriodDetailsBuilder(
+          int index) {
+        return getClaimedRewardPeriodDetailsFieldBuilder().addBuilder(
+            index, com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * claim period details.
+       * </pre>
+       *
+       * <code>repeated .provenance.reward.v1.ClaimedRewardPeriodDetail claimed_reward_period_details = 3 [json_name = "claimedRewardPeriodDetails"];</code>
+       */
+      public java.util.List<com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail.Builder> 
+           getClaimedRewardPeriodDetailsBuilderList() {
+        return getClaimedRewardPeriodDetailsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail, com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail.Builder, com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetailOrBuilder> 
+          getClaimedRewardPeriodDetailsFieldBuilder() {
+        if (claimedRewardPeriodDetailsBuilder_ == null) {
+          claimedRewardPeriodDetailsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail, com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetail.Builder, com.provenance.reward.v1.TxProto.ClaimedRewardPeriodDetailOrBuilder>(
+                  claimedRewardPeriodDetails_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          claimedRewardPeriodDetails_ = null;
+        }
+        return claimedRewardPeriodDetailsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:provenance.reward.v1.RewardProgramClaimDetail)
+    }
+
+    // @@protoc_insertion_point(class_scope:provenance.reward.v1.RewardProgramClaimDetail)
+    private static final com.provenance.reward.v1.TxProto.RewardProgramClaimDetail DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.provenance.reward.v1.TxProto.RewardProgramClaimDetail();
+    }
+
+    public static com.provenance.reward.v1.TxProto.RewardProgramClaimDetail getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RewardProgramClaimDetail>
+        PARSER = new com.google.protobuf.AbstractParser<RewardProgramClaimDetail>() {
+      @java.lang.Override
+      public RewardProgramClaimDetail parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RewardProgramClaimDetail> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RewardProgramClaimDetail> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.provenance.reward.v1.TxProto.RewardProgramClaimDetail getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_reward_v1_MsgCreateRewardProgramRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_reward_v1_MsgCreateRewardProgramRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_reward_v1_MsgCreateRewardProgramResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_reward_v1_MsgCreateRewardProgramResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_reward_v1_MsgEndRewardProgramRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_reward_v1_MsgEndRewardProgramRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_reward_v1_MsgEndRewardProgramResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_reward_v1_MsgEndRewardProgramResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_reward_v1_MsgClaimRewardsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_reward_v1_MsgClaimRewardsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_reward_v1_MsgClaimRewardsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_reward_v1_MsgClaimRewardsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_reward_v1_MsgClaimAllRewardsRequest_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_reward_v1_MsgClaimAllRewardsRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_reward_v1_MsgClaimAllRewardsResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_reward_v1_MsgClaimAllRewardsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_reward_v1_ClaimedRewardPeriodDetail_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_reward_v1_ClaimedRewardPeriodDetail_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_provenance_reward_v1_RewardProgramClaimDetail_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_provenance_reward_v1_RewardProgramClaimDetail_fieldAccessorTable;
 
@@ -139,7 +9778,7 @@ public final class TxProto {
       "ard.v1.MsgClaimAllRewardsRequest\0320.prove" +
       "nance.reward.v1.MsgClaimAllRewardsRespon" +
       "seB\311\001\n\030com.provenance.reward.v1B\007TxProto" +
-      "P\001Z2github.com/provenance-io/provenance/" +
+      "P\000Z2github.com/provenance-io/provenance/" +
       "x/reward/types\242\002\003PRX\252\002\024Provenance.Reward" +
       ".V1\312\002\024Provenance\\Reward\\V1\342\002 Provenance\\" +
       "Reward\\V1\\GPBMetadata\352\002\026Provenance::Rewa" +

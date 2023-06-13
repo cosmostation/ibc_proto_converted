@@ -24,13 +24,13 @@ public final class TxProto {
   static {
     java.lang.String[] descriptorData = {
       "\n!lum-network/icacallbacks/tx.proto\022\030lum" +
-      ".network.icacallbacks2\005\n\003MsgB\334\001\n\034com.lum" +
-      ".network.icacallbacksB\007TxProtoP\001Z1github" +
-      ".com/lum-network/chain/x/icacallbacks/ty" +
-      "pes\242\002\003LNI\252\002\030Lum.Network.Icacallbacks\312\002\030L" +
-      "um\\Network\\Icacallbacks\342\002$Lum\\Network\\Ic" +
-      "acallbacks\\GPBMetadata\352\002\032Lum::Network::I" +
-      "cacallbacksb\006proto3"
+      ".network.icacallbacks2\005\n\003MsgB\332\001\n\034com.lum" +
+      ".network.icacallbacksB\007TxProtoZ1github.c" +
+      "om/lum-network/chain/x/icacallbacks/type" +
+      "s\242\002\003LNI\252\002\030Lum.Network.Icacallbacks\312\002\030Lum" +
+      "\\Network\\Icacallbacks\342\002$Lum\\Network\\Icac" +
+      "allbacks\\GPBMetadata\352\002\032Lum::Network::Ica" +
+      "callbacksb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

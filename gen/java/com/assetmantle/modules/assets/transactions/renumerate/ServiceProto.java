@@ -34,15 +34,15 @@ public final class ServiceProto {
       "s.transactions.renumerate.Message\032G.asse" +
       "tmantle.modules.assets.transactions.renu" +
       "merate.TransactionResponse\"!\202\323\344\223\002\033\"\031/man" +
-      "tle/assets/renumerateB\264\002\n6com.assetmantl" +
+      "tle/assets/renumerateB\262\002\n6com.assetmantl" +
       "e.modules.assets.transactions.renumerate" +
-      "B\014ServiceProtoP\001\242\002\005AMATR\252\0022Assetmantle.M" +
-      "odules.Assets.Transactions.Renumerate\312\0022" +
-      "Assetmantle\\Modules\\Assets\\Transactions\\" +
-      "Renumerate\342\002>Assetmantle\\Modules\\Assets\\" +
-      "Transactions\\Renumerate\\GPBMetadata\352\0026As" +
-      "setmantle::Modules::Assets::Transactions" +
-      "::Renumerateb\006proto3"
+      "B\014ServiceProto\242\002\005AMATR\252\0022Assetmantle.Mod" +
+      "ules.Assets.Transactions.Renumerate\312\0022As" +
+      "setmantle\\Modules\\Assets\\Transactions\\Re" +
+      "numerate\342\002>Assetmantle\\Modules\\Assets\\Tr" +
+      "ansactions\\Renumerate\\GPBMetadata\352\0026Asse" +
+      "tmantle::Modules::Assets::Transactions::" +
+      "Renumerateb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

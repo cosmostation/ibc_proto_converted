@@ -14,44 +14,6359 @@ public final class TxProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface MsgCreateClawbackVestingAccountOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.vesting.v1.MsgCreateClawbackVestingAccount)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * from_address specifies the account to provide the funds and sign the
+     * clawback request
+     * </pre>
+     *
+     * <code>string from_address = 1 [json_name = "fromAddress"];</code>
+     * @return The fromAddress.
+     */
+    java.lang.String getFromAddress();
+    /**
+     * <pre>
+     * from_address specifies the account to provide the funds and sign the
+     * clawback request
+     * </pre>
+     *
+     * <code>string from_address = 1 [json_name = "fromAddress"];</code>
+     * @return The bytes for fromAddress.
+     */
+    com.google.protobuf.ByteString
+        getFromAddressBytes();
+
+    /**
+     * <pre>
+     * to_address specifies the account to receive the funds
+     * </pre>
+     *
+     * <code>string to_address = 2 [json_name = "toAddress"];</code>
+     * @return The toAddress.
+     */
+    java.lang.String getToAddress();
+    /**
+     * <pre>
+     * to_address specifies the account to receive the funds
+     * </pre>
+     *
+     * <code>string to_address = 2 [json_name = "toAddress"];</code>
+     * @return The bytes for toAddress.
+     */
+    com.google.protobuf.ByteString
+        getToAddressBytes();
+
+    /**
+     * <pre>
+     * start_time defines the time at which the vesting period begins
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return Whether the startTime field is set.
+     */
+    boolean hasStartTime();
+    /**
+     * <pre>
+     * start_time defines the time at which the vesting period begins
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return The startTime.
+     */
+    com.google.protobuf.Timestamp getStartTime();
+    /**
+     * <pre>
+     * start_time defines the time at which the vesting period begins
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder();
+
+    /**
+     * <pre>
+     * lockup_periods defines the unlocking schedule relative to the start_time
+     * </pre>
+     *
+     * <code>repeated .cosmos.vesting.v1beta1.Period lockup_periods = 4 [json_name = "lockupPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+     */
+    java.util.List<com.cosmos.vesting.v1beta1.VestingProto.Period> 
+        getLockupPeriodsList();
+    /**
+     * <pre>
+     * lockup_periods defines the unlocking schedule relative to the start_time
+     * </pre>
+     *
+     * <code>repeated .cosmos.vesting.v1beta1.Period lockup_periods = 4 [json_name = "lockupPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+     */
+    com.cosmos.vesting.v1beta1.VestingProto.Period getLockupPeriods(int index);
+    /**
+     * <pre>
+     * lockup_periods defines the unlocking schedule relative to the start_time
+     * </pre>
+     *
+     * <code>repeated .cosmos.vesting.v1beta1.Period lockup_periods = 4 [json_name = "lockupPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+     */
+    int getLockupPeriodsCount();
+    /**
+     * <pre>
+     * lockup_periods defines the unlocking schedule relative to the start_time
+     * </pre>
+     *
+     * <code>repeated .cosmos.vesting.v1beta1.Period lockup_periods = 4 [json_name = "lockupPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+     */
+    java.util.List<? extends com.cosmos.vesting.v1beta1.VestingProto.PeriodOrBuilder> 
+        getLockupPeriodsOrBuilderList();
+    /**
+     * <pre>
+     * lockup_periods defines the unlocking schedule relative to the start_time
+     * </pre>
+     *
+     * <code>repeated .cosmos.vesting.v1beta1.Period lockup_periods = 4 [json_name = "lockupPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+     */
+    com.cosmos.vesting.v1beta1.VestingProto.PeriodOrBuilder getLockupPeriodsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * vesting_periods defines the vesting schedule relative to the start_time
+     * </pre>
+     *
+     * <code>repeated .cosmos.vesting.v1beta1.Period vesting_periods = 5 [json_name = "vestingPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+     */
+    java.util.List<com.cosmos.vesting.v1beta1.VestingProto.Period> 
+        getVestingPeriodsList();
+    /**
+     * <pre>
+     * vesting_periods defines the vesting schedule relative to the start_time
+     * </pre>
+     *
+     * <code>repeated .cosmos.vesting.v1beta1.Period vesting_periods = 5 [json_name = "vestingPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+     */
+    com.cosmos.vesting.v1beta1.VestingProto.Period getVestingPeriods(int index);
+    /**
+     * <pre>
+     * vesting_periods defines the vesting schedule relative to the start_time
+     * </pre>
+     *
+     * <code>repeated .cosmos.vesting.v1beta1.Period vesting_periods = 5 [json_name = "vestingPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+     */
+    int getVestingPeriodsCount();
+    /**
+     * <pre>
+     * vesting_periods defines the vesting schedule relative to the start_time
+     * </pre>
+     *
+     * <code>repeated .cosmos.vesting.v1beta1.Period vesting_periods = 5 [json_name = "vestingPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+     */
+    java.util.List<? extends com.cosmos.vesting.v1beta1.VestingProto.PeriodOrBuilder> 
+        getVestingPeriodsOrBuilderList();
+    /**
+     * <pre>
+     * vesting_periods defines the vesting schedule relative to the start_time
+     * </pre>
+     *
+     * <code>repeated .cosmos.vesting.v1beta1.Period vesting_periods = 5 [json_name = "vestingPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+     */
+    com.cosmos.vesting.v1beta1.VestingProto.PeriodOrBuilder getVestingPeriodsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * merge specifies a the creation mechanism for existing
+     * ClawbackVestingAccounts. If true, merge this new grant into an existing
+     * ClawbackVestingAccount, or create it if it does not exist. If false,
+     * creates a new account. New grants to an existing account must be from the
+     * same from_address.
+     * </pre>
+     *
+     * <code>bool merge = 6 [json_name = "merge"];</code>
+     * @return The merge.
+     */
+    boolean getMerge();
+  }
+  /**
+   * <pre>
+   * MsgCreateClawbackVestingAccount defines a message that enables creating a
+   * ClawbackVestingAccount.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.vesting.v1.MsgCreateClawbackVestingAccount}
+   */
+  public static final class MsgCreateClawbackVestingAccount extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.vesting.v1.MsgCreateClawbackVestingAccount)
+      MsgCreateClawbackVestingAccountOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateClawbackVestingAccount.newBuilder() to construct.
+    private MsgCreateClawbackVestingAccount(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateClawbackVestingAccount() {
+      fromAddress_ = "";
+      toAddress_ = "";
+      lockupPeriods_ = java.util.Collections.emptyList();
+      vestingPeriods_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateClawbackVestingAccount();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgCreateClawbackVestingAccount_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgCreateClawbackVestingAccount_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccount.class, com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccount.Builder.class);
+    }
+
+    public static final int FROM_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object fromAddress_ = "";
+    /**
+     * <pre>
+     * from_address specifies the account to provide the funds and sign the
+     * clawback request
+     * </pre>
+     *
+     * <code>string from_address = 1 [json_name = "fromAddress"];</code>
+     * @return The fromAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getFromAddress() {
+      java.lang.Object ref = fromAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        fromAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * from_address specifies the account to provide the funds and sign the
+     * clawback request
+     * </pre>
+     *
+     * <code>string from_address = 1 [json_name = "fromAddress"];</code>
+     * @return The bytes for fromAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFromAddressBytes() {
+      java.lang.Object ref = fromAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fromAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TO_ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object toAddress_ = "";
+    /**
+     * <pre>
+     * to_address specifies the account to receive the funds
+     * </pre>
+     *
+     * <code>string to_address = 2 [json_name = "toAddress"];</code>
+     * @return The toAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getToAddress() {
+      java.lang.Object ref = toAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        toAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * to_address specifies the account to receive the funds
+     * </pre>
+     *
+     * <code>string to_address = 2 [json_name = "toAddress"];</code>
+     * @return The bytes for toAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getToAddressBytes() {
+      java.lang.Object ref = toAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        toAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int START_TIME_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp startTime_;
+    /**
+     * <pre>
+     * start_time defines the time at which the vesting period begins
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return Whether the startTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasStartTime() {
+      return startTime_ != null;
+    }
+    /**
+     * <pre>
+     * start_time defines the time at which the vesting period begins
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     * @return The startTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getStartTime() {
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    }
+    /**
+     * <pre>
+     * start_time defines the time at which the vesting period begins
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    }
+
+    public static final int LOCKUP_PERIODS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.vesting.v1beta1.VestingProto.Period> lockupPeriods_;
+    /**
+     * <pre>
+     * lockup_periods defines the unlocking schedule relative to the start_time
+     * </pre>
+     *
+     * <code>repeated .cosmos.vesting.v1beta1.Period lockup_periods = 4 [json_name = "lockupPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.vesting.v1beta1.VestingProto.Period> getLockupPeriodsList() {
+      return lockupPeriods_;
+    }
+    /**
+     * <pre>
+     * lockup_periods defines the unlocking schedule relative to the start_time
+     * </pre>
+     *
+     * <code>repeated .cosmos.vesting.v1beta1.Period lockup_periods = 4 [json_name = "lockupPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.vesting.v1beta1.VestingProto.PeriodOrBuilder> 
+        getLockupPeriodsOrBuilderList() {
+      return lockupPeriods_;
+    }
+    /**
+     * <pre>
+     * lockup_periods defines the unlocking schedule relative to the start_time
+     * </pre>
+     *
+     * <code>repeated .cosmos.vesting.v1beta1.Period lockup_periods = 4 [json_name = "lockupPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+     */
+    @java.lang.Override
+    public int getLockupPeriodsCount() {
+      return lockupPeriods_.size();
+    }
+    /**
+     * <pre>
+     * lockup_periods defines the unlocking schedule relative to the start_time
+     * </pre>
+     *
+     * <code>repeated .cosmos.vesting.v1beta1.Period lockup_periods = 4 [json_name = "lockupPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.vesting.v1beta1.VestingProto.Period getLockupPeriods(int index) {
+      return lockupPeriods_.get(index);
+    }
+    /**
+     * <pre>
+     * lockup_periods defines the unlocking schedule relative to the start_time
+     * </pre>
+     *
+     * <code>repeated .cosmos.vesting.v1beta1.Period lockup_periods = 4 [json_name = "lockupPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.vesting.v1beta1.VestingProto.PeriodOrBuilder getLockupPeriodsOrBuilder(
+        int index) {
+      return lockupPeriods_.get(index);
+    }
+
+    public static final int VESTING_PERIODS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
+    private java.util.List<com.cosmos.vesting.v1beta1.VestingProto.Period> vestingPeriods_;
+    /**
+     * <pre>
+     * vesting_periods defines the vesting schedule relative to the start_time
+     * </pre>
+     *
+     * <code>repeated .cosmos.vesting.v1beta1.Period vesting_periods = 5 [json_name = "vestingPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.cosmos.vesting.v1beta1.VestingProto.Period> getVestingPeriodsList() {
+      return vestingPeriods_;
+    }
+    /**
+     * <pre>
+     * vesting_periods defines the vesting schedule relative to the start_time
+     * </pre>
+     *
+     * <code>repeated .cosmos.vesting.v1beta1.Period vesting_periods = 5 [json_name = "vestingPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.cosmos.vesting.v1beta1.VestingProto.PeriodOrBuilder> 
+        getVestingPeriodsOrBuilderList() {
+      return vestingPeriods_;
+    }
+    /**
+     * <pre>
+     * vesting_periods defines the vesting schedule relative to the start_time
+     * </pre>
+     *
+     * <code>repeated .cosmos.vesting.v1beta1.Period vesting_periods = 5 [json_name = "vestingPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+     */
+    @java.lang.Override
+    public int getVestingPeriodsCount() {
+      return vestingPeriods_.size();
+    }
+    /**
+     * <pre>
+     * vesting_periods defines the vesting schedule relative to the start_time
+     * </pre>
+     *
+     * <code>repeated .cosmos.vesting.v1beta1.Period vesting_periods = 5 [json_name = "vestingPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.vesting.v1beta1.VestingProto.Period getVestingPeriods(int index) {
+      return vestingPeriods_.get(index);
+    }
+    /**
+     * <pre>
+     * vesting_periods defines the vesting schedule relative to the start_time
+     * </pre>
+     *
+     * <code>repeated .cosmos.vesting.v1beta1.Period vesting_periods = 5 [json_name = "vestingPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+     */
+    @java.lang.Override
+    public com.cosmos.vesting.v1beta1.VestingProto.PeriodOrBuilder getVestingPeriodsOrBuilder(
+        int index) {
+      return vestingPeriods_.get(index);
+    }
+
+    public static final int MERGE_FIELD_NUMBER = 6;
+    private boolean merge_ = false;
+    /**
+     * <pre>
+     * merge specifies a the creation mechanism for existing
+     * ClawbackVestingAccounts. If true, merge this new grant into an existing
+     * ClawbackVestingAccount, or create it if it does not exist. If false,
+     * creates a new account. New grants to an existing account must be from the
+     * same from_address.
+     * </pre>
+     *
+     * <code>bool merge = 6 [json_name = "merge"];</code>
+     * @return The merge.
+     */
+    @java.lang.Override
+    public boolean getMerge() {
+      return merge_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fromAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, fromAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(toAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, toAddress_);
+      }
+      if (startTime_ != null) {
+        output.writeMessage(3, getStartTime());
+      }
+      for (int i = 0; i < lockupPeriods_.size(); i++) {
+        output.writeMessage(4, lockupPeriods_.get(i));
+      }
+      for (int i = 0; i < vestingPeriods_.size(); i++) {
+        output.writeMessage(5, vestingPeriods_.get(i));
+      }
+      if (merge_ != false) {
+        output.writeBool(6, merge_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fromAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, fromAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(toAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, toAddress_);
+      }
+      if (startTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getStartTime());
+      }
+      for (int i = 0; i < lockupPeriods_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, lockupPeriods_.get(i));
+      }
+      for (int i = 0; i < vestingPeriods_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, vestingPeriods_.get(i));
+      }
+      if (merge_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, merge_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccount)) {
+        return super.equals(obj);
+      }
+      com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccount other = (com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccount) obj;
+
+      if (!getFromAddress()
+          .equals(other.getFromAddress())) return false;
+      if (!getToAddress()
+          .equals(other.getToAddress())) return false;
+      if (hasStartTime() != other.hasStartTime()) return false;
+      if (hasStartTime()) {
+        if (!getStartTime()
+            .equals(other.getStartTime())) return false;
+      }
+      if (!getLockupPeriodsList()
+          .equals(other.getLockupPeriodsList())) return false;
+      if (!getVestingPeriodsList()
+          .equals(other.getVestingPeriodsList())) return false;
+      if (getMerge()
+          != other.getMerge()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FROM_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getFromAddress().hashCode();
+      hash = (37 * hash) + TO_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getToAddress().hashCode();
+      if (hasStartTime()) {
+        hash = (37 * hash) + START_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getStartTime().hashCode();
+      }
+      if (getLockupPeriodsCount() > 0) {
+        hash = (37 * hash) + LOCKUP_PERIODS_FIELD_NUMBER;
+        hash = (53 * hash) + getLockupPeriodsList().hashCode();
+      }
+      if (getVestingPeriodsCount() > 0) {
+        hash = (37 * hash) + VESTING_PERIODS_FIELD_NUMBER;
+        hash = (53 * hash) + getVestingPeriodsList().hashCode();
+      }
+      hash = (37 * hash) + MERGE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getMerge());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccount parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccount parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccount parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccount parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccount parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccount parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccount parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccount parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccount parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccount parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccount parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccount parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccount prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCreateClawbackVestingAccount defines a message that enables creating a
+     * ClawbackVestingAccount.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.vesting.v1.MsgCreateClawbackVestingAccount}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.vesting.v1.MsgCreateClawbackVestingAccount)
+        com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccountOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgCreateClawbackVestingAccount_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgCreateClawbackVestingAccount_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccount.class, com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccount.Builder.class);
+      }
+
+      // Construct using com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccount.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        fromAddress_ = "";
+        toAddress_ = "";
+        startTime_ = null;
+        if (startTimeBuilder_ != null) {
+          startTimeBuilder_.dispose();
+          startTimeBuilder_ = null;
+        }
+        if (lockupPeriodsBuilder_ == null) {
+          lockupPeriods_ = java.util.Collections.emptyList();
+        } else {
+          lockupPeriods_ = null;
+          lockupPeriodsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (vestingPeriodsBuilder_ == null) {
+          vestingPeriods_ = java.util.Collections.emptyList();
+        } else {
+          vestingPeriods_ = null;
+          vestingPeriodsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        merge_ = false;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgCreateClawbackVestingAccount_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccount getDefaultInstanceForType() {
+        return com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccount.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccount build() {
+        com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccount result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccount buildPartial() {
+        com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccount result = new com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccount(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccount result) {
+        if (lockupPeriodsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0)) {
+            lockupPeriods_ = java.util.Collections.unmodifiableList(lockupPeriods_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.lockupPeriods_ = lockupPeriods_;
+        } else {
+          result.lockupPeriods_ = lockupPeriodsBuilder_.build();
+        }
+        if (vestingPeriodsBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0)) {
+            vestingPeriods_ = java.util.Collections.unmodifiableList(vestingPeriods_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.vestingPeriods_ = vestingPeriods_;
+        } else {
+          result.vestingPeriods_ = vestingPeriodsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccount result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.fromAddress_ = fromAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.toAddress_ = toAddress_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.startTime_ = startTimeBuilder_ == null
+              ? startTime_
+              : startTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.merge_ = merge_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccount) {
+          return mergeFrom((com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccount)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccount other) {
+        if (other == com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccount.getDefaultInstance()) return this;
+        if (!other.getFromAddress().isEmpty()) {
+          fromAddress_ = other.fromAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getToAddress().isEmpty()) {
+          toAddress_ = other.toAddress_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (other.hasStartTime()) {
+          mergeStartTime(other.getStartTime());
+        }
+        if (lockupPeriodsBuilder_ == null) {
+          if (!other.lockupPeriods_.isEmpty()) {
+            if (lockupPeriods_.isEmpty()) {
+              lockupPeriods_ = other.lockupPeriods_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureLockupPeriodsIsMutable();
+              lockupPeriods_.addAll(other.lockupPeriods_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.lockupPeriods_.isEmpty()) {
+            if (lockupPeriodsBuilder_.isEmpty()) {
+              lockupPeriodsBuilder_.dispose();
+              lockupPeriodsBuilder_ = null;
+              lockupPeriods_ = other.lockupPeriods_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              lockupPeriodsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getLockupPeriodsFieldBuilder() : null;
+            } else {
+              lockupPeriodsBuilder_.addAllMessages(other.lockupPeriods_);
+            }
+          }
+        }
+        if (vestingPeriodsBuilder_ == null) {
+          if (!other.vestingPeriods_.isEmpty()) {
+            if (vestingPeriods_.isEmpty()) {
+              vestingPeriods_ = other.vestingPeriods_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureVestingPeriodsIsMutable();
+              vestingPeriods_.addAll(other.vestingPeriods_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.vestingPeriods_.isEmpty()) {
+            if (vestingPeriodsBuilder_.isEmpty()) {
+              vestingPeriodsBuilder_.dispose();
+              vestingPeriodsBuilder_ = null;
+              vestingPeriods_ = other.vestingPeriods_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              vestingPeriodsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getVestingPeriodsFieldBuilder() : null;
+            } else {
+              vestingPeriodsBuilder_.addAllMessages(other.vestingPeriods_);
+            }
+          }
+        }
+        if (other.getMerge() != false) {
+          setMerge(other.getMerge());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                fromAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                toAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getStartTimeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                com.cosmos.vesting.v1beta1.VestingProto.Period m =
+                    input.readMessage(
+                        com.cosmos.vesting.v1beta1.VestingProto.Period.parser(),
+                        extensionRegistry);
+                if (lockupPeriodsBuilder_ == null) {
+                  ensureLockupPeriodsIsMutable();
+                  lockupPeriods_.add(m);
+                } else {
+                  lockupPeriodsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 34
+              case 42: {
+                com.cosmos.vesting.v1beta1.VestingProto.Period m =
+                    input.readMessage(
+                        com.cosmos.vesting.v1beta1.VestingProto.Period.parser(),
+                        extensionRegistry);
+                if (vestingPeriodsBuilder_ == null) {
+                  ensureVestingPeriodsIsMutable();
+                  vestingPeriods_.add(m);
+                } else {
+                  vestingPeriodsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 42
+              case 48: {
+                merge_ = input.readBool();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object fromAddress_ = "";
+      /**
+       * <pre>
+       * from_address specifies the account to provide the funds and sign the
+       * clawback request
+       * </pre>
+       *
+       * <code>string from_address = 1 [json_name = "fromAddress"];</code>
+       * @return The fromAddress.
+       */
+      public java.lang.String getFromAddress() {
+        java.lang.Object ref = fromAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          fromAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * from_address specifies the account to provide the funds and sign the
+       * clawback request
+       * </pre>
+       *
+       * <code>string from_address = 1 [json_name = "fromAddress"];</code>
+       * @return The bytes for fromAddress.
+       */
+      public com.google.protobuf.ByteString
+          getFromAddressBytes() {
+        java.lang.Object ref = fromAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fromAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * from_address specifies the account to provide the funds and sign the
+       * clawback request
+       * </pre>
+       *
+       * <code>string from_address = 1 [json_name = "fromAddress"];</code>
+       * @param value The fromAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFromAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        fromAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * from_address specifies the account to provide the funds and sign the
+       * clawback request
+       * </pre>
+       *
+       * <code>string from_address = 1 [json_name = "fromAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFromAddress() {
+        fromAddress_ = getDefaultInstance().getFromAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * from_address specifies the account to provide the funds and sign the
+       * clawback request
+       * </pre>
+       *
+       * <code>string from_address = 1 [json_name = "fromAddress"];</code>
+       * @param value The bytes for fromAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFromAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        fromAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object toAddress_ = "";
+      /**
+       * <pre>
+       * to_address specifies the account to receive the funds
+       * </pre>
+       *
+       * <code>string to_address = 2 [json_name = "toAddress"];</code>
+       * @return The toAddress.
+       */
+      public java.lang.String getToAddress() {
+        java.lang.Object ref = toAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          toAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * to_address specifies the account to receive the funds
+       * </pre>
+       *
+       * <code>string to_address = 2 [json_name = "toAddress"];</code>
+       * @return The bytes for toAddress.
+       */
+      public com.google.protobuf.ByteString
+          getToAddressBytes() {
+        java.lang.Object ref = toAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          toAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * to_address specifies the account to receive the funds
+       * </pre>
+       *
+       * <code>string to_address = 2 [json_name = "toAddress"];</code>
+       * @param value The toAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setToAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        toAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * to_address specifies the account to receive the funds
+       * </pre>
+       *
+       * <code>string to_address = 2 [json_name = "toAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearToAddress() {
+        toAddress_ = getDefaultInstance().getToAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * to_address specifies the account to receive the funds
+       * </pre>
+       *
+       * <code>string to_address = 2 [json_name = "toAddress"];</code>
+       * @param value The bytes for toAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setToAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        toAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp startTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTimeBuilder_;
+      /**
+       * <pre>
+       * start_time defines the time at which the vesting period begins
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       * @return Whether the startTime field is set.
+       */
+      public boolean hasStartTime() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <pre>
+       * start_time defines the time at which the vesting period begins
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       * @return The startTime.
+       */
+      public com.google.protobuf.Timestamp getStartTime() {
+        if (startTimeBuilder_ == null) {
+          return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+        } else {
+          return startTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * start_time defines the time at which the vesting period begins
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setStartTime(com.google.protobuf.Timestamp value) {
+        if (startTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          startTime_ = value;
+        } else {
+          startTimeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time defines the time at which the vesting period begins
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder setStartTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (startTimeBuilder_ == null) {
+          startTime_ = builderForValue.build();
+        } else {
+          startTimeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time defines the time at which the vesting period begins
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
+        if (startTimeBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            startTime_ != null &&
+            startTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getStartTimeBuilder().mergeFrom(value);
+          } else {
+            startTime_ = value;
+          }
+        } else {
+          startTimeBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time defines the time at which the vesting period begins
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public Builder clearStartTime() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        startTime_ = null;
+        if (startTimeBuilder_ != null) {
+          startTimeBuilder_.dispose();
+          startTimeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * start_time defines the time at which the vesting period begins
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getStartTimeBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getStartTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * start_time defines the time at which the vesting period begins
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+        if (startTimeBuilder_ != null) {
+          return startTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return startTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+        }
+      }
+      /**
+       * <pre>
+       * start_time defines the time at which the vesting period begins
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp start_time = 3 [json_name = "startTime", (.gogoproto.nullable) = false, (.gogoproto.stdtime) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getStartTimeFieldBuilder() {
+        if (startTimeBuilder_ == null) {
+          startTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getStartTime(),
+                  getParentForChildren(),
+                  isClean());
+          startTime_ = null;
+        }
+        return startTimeBuilder_;
+      }
+
+      private java.util.List<com.cosmos.vesting.v1beta1.VestingProto.Period> lockupPeriods_ =
+        java.util.Collections.emptyList();
+      private void ensureLockupPeriodsIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          lockupPeriods_ = new java.util.ArrayList<com.cosmos.vesting.v1beta1.VestingProto.Period>(lockupPeriods_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.vesting.v1beta1.VestingProto.Period, com.cosmos.vesting.v1beta1.VestingProto.Period.Builder, com.cosmos.vesting.v1beta1.VestingProto.PeriodOrBuilder> lockupPeriodsBuilder_;
+
+      /**
+       * <pre>
+       * lockup_periods defines the unlocking schedule relative to the start_time
+       * </pre>
+       *
+       * <code>repeated .cosmos.vesting.v1beta1.Period lockup_periods = 4 [json_name = "lockupPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+       */
+      public java.util.List<com.cosmos.vesting.v1beta1.VestingProto.Period> getLockupPeriodsList() {
+        if (lockupPeriodsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(lockupPeriods_);
+        } else {
+          return lockupPeriodsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * lockup_periods defines the unlocking schedule relative to the start_time
+       * </pre>
+       *
+       * <code>repeated .cosmos.vesting.v1beta1.Period lockup_periods = 4 [json_name = "lockupPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+       */
+      public int getLockupPeriodsCount() {
+        if (lockupPeriodsBuilder_ == null) {
+          return lockupPeriods_.size();
+        } else {
+          return lockupPeriodsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * lockup_periods defines the unlocking schedule relative to the start_time
+       * </pre>
+       *
+       * <code>repeated .cosmos.vesting.v1beta1.Period lockup_periods = 4 [json_name = "lockupPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+       */
+      public com.cosmos.vesting.v1beta1.VestingProto.Period getLockupPeriods(int index) {
+        if (lockupPeriodsBuilder_ == null) {
+          return lockupPeriods_.get(index);
+        } else {
+          return lockupPeriodsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * lockup_periods defines the unlocking schedule relative to the start_time
+       * </pre>
+       *
+       * <code>repeated .cosmos.vesting.v1beta1.Period lockup_periods = 4 [json_name = "lockupPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+       */
+      public Builder setLockupPeriods(
+          int index, com.cosmos.vesting.v1beta1.VestingProto.Period value) {
+        if (lockupPeriodsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLockupPeriodsIsMutable();
+          lockupPeriods_.set(index, value);
+          onChanged();
+        } else {
+          lockupPeriodsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * lockup_periods defines the unlocking schedule relative to the start_time
+       * </pre>
+       *
+       * <code>repeated .cosmos.vesting.v1beta1.Period lockup_periods = 4 [json_name = "lockupPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+       */
+      public Builder setLockupPeriods(
+          int index, com.cosmos.vesting.v1beta1.VestingProto.Period.Builder builderForValue) {
+        if (lockupPeriodsBuilder_ == null) {
+          ensureLockupPeriodsIsMutable();
+          lockupPeriods_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          lockupPeriodsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * lockup_periods defines the unlocking schedule relative to the start_time
+       * </pre>
+       *
+       * <code>repeated .cosmos.vesting.v1beta1.Period lockup_periods = 4 [json_name = "lockupPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+       */
+      public Builder addLockupPeriods(com.cosmos.vesting.v1beta1.VestingProto.Period value) {
+        if (lockupPeriodsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLockupPeriodsIsMutable();
+          lockupPeriods_.add(value);
+          onChanged();
+        } else {
+          lockupPeriodsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * lockup_periods defines the unlocking schedule relative to the start_time
+       * </pre>
+       *
+       * <code>repeated .cosmos.vesting.v1beta1.Period lockup_periods = 4 [json_name = "lockupPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+       */
+      public Builder addLockupPeriods(
+          int index, com.cosmos.vesting.v1beta1.VestingProto.Period value) {
+        if (lockupPeriodsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLockupPeriodsIsMutable();
+          lockupPeriods_.add(index, value);
+          onChanged();
+        } else {
+          lockupPeriodsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * lockup_periods defines the unlocking schedule relative to the start_time
+       * </pre>
+       *
+       * <code>repeated .cosmos.vesting.v1beta1.Period lockup_periods = 4 [json_name = "lockupPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+       */
+      public Builder addLockupPeriods(
+          com.cosmos.vesting.v1beta1.VestingProto.Period.Builder builderForValue) {
+        if (lockupPeriodsBuilder_ == null) {
+          ensureLockupPeriodsIsMutable();
+          lockupPeriods_.add(builderForValue.build());
+          onChanged();
+        } else {
+          lockupPeriodsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * lockup_periods defines the unlocking schedule relative to the start_time
+       * </pre>
+       *
+       * <code>repeated .cosmos.vesting.v1beta1.Period lockup_periods = 4 [json_name = "lockupPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+       */
+      public Builder addLockupPeriods(
+          int index, com.cosmos.vesting.v1beta1.VestingProto.Period.Builder builderForValue) {
+        if (lockupPeriodsBuilder_ == null) {
+          ensureLockupPeriodsIsMutable();
+          lockupPeriods_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          lockupPeriodsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * lockup_periods defines the unlocking schedule relative to the start_time
+       * </pre>
+       *
+       * <code>repeated .cosmos.vesting.v1beta1.Period lockup_periods = 4 [json_name = "lockupPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+       */
+      public Builder addAllLockupPeriods(
+          java.lang.Iterable<? extends com.cosmos.vesting.v1beta1.VestingProto.Period> values) {
+        if (lockupPeriodsBuilder_ == null) {
+          ensureLockupPeriodsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, lockupPeriods_);
+          onChanged();
+        } else {
+          lockupPeriodsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * lockup_periods defines the unlocking schedule relative to the start_time
+       * </pre>
+       *
+       * <code>repeated .cosmos.vesting.v1beta1.Period lockup_periods = 4 [json_name = "lockupPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+       */
+      public Builder clearLockupPeriods() {
+        if (lockupPeriodsBuilder_ == null) {
+          lockupPeriods_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          lockupPeriodsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * lockup_periods defines the unlocking schedule relative to the start_time
+       * </pre>
+       *
+       * <code>repeated .cosmos.vesting.v1beta1.Period lockup_periods = 4 [json_name = "lockupPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+       */
+      public Builder removeLockupPeriods(int index) {
+        if (lockupPeriodsBuilder_ == null) {
+          ensureLockupPeriodsIsMutable();
+          lockupPeriods_.remove(index);
+          onChanged();
+        } else {
+          lockupPeriodsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * lockup_periods defines the unlocking schedule relative to the start_time
+       * </pre>
+       *
+       * <code>repeated .cosmos.vesting.v1beta1.Period lockup_periods = 4 [json_name = "lockupPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+       */
+      public com.cosmos.vesting.v1beta1.VestingProto.Period.Builder getLockupPeriodsBuilder(
+          int index) {
+        return getLockupPeriodsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * lockup_periods defines the unlocking schedule relative to the start_time
+       * </pre>
+       *
+       * <code>repeated .cosmos.vesting.v1beta1.Period lockup_periods = 4 [json_name = "lockupPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+       */
+      public com.cosmos.vesting.v1beta1.VestingProto.PeriodOrBuilder getLockupPeriodsOrBuilder(
+          int index) {
+        if (lockupPeriodsBuilder_ == null) {
+          return lockupPeriods_.get(index);  } else {
+          return lockupPeriodsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * lockup_periods defines the unlocking schedule relative to the start_time
+       * </pre>
+       *
+       * <code>repeated .cosmos.vesting.v1beta1.Period lockup_periods = 4 [json_name = "lockupPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+       */
+      public java.util.List<? extends com.cosmos.vesting.v1beta1.VestingProto.PeriodOrBuilder> 
+           getLockupPeriodsOrBuilderList() {
+        if (lockupPeriodsBuilder_ != null) {
+          return lockupPeriodsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(lockupPeriods_);
+        }
+      }
+      /**
+       * <pre>
+       * lockup_periods defines the unlocking schedule relative to the start_time
+       * </pre>
+       *
+       * <code>repeated .cosmos.vesting.v1beta1.Period lockup_periods = 4 [json_name = "lockupPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+       */
+      public com.cosmos.vesting.v1beta1.VestingProto.Period.Builder addLockupPeriodsBuilder() {
+        return getLockupPeriodsFieldBuilder().addBuilder(
+            com.cosmos.vesting.v1beta1.VestingProto.Period.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * lockup_periods defines the unlocking schedule relative to the start_time
+       * </pre>
+       *
+       * <code>repeated .cosmos.vesting.v1beta1.Period lockup_periods = 4 [json_name = "lockupPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+       */
+      public com.cosmos.vesting.v1beta1.VestingProto.Period.Builder addLockupPeriodsBuilder(
+          int index) {
+        return getLockupPeriodsFieldBuilder().addBuilder(
+            index, com.cosmos.vesting.v1beta1.VestingProto.Period.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * lockup_periods defines the unlocking schedule relative to the start_time
+       * </pre>
+       *
+       * <code>repeated .cosmos.vesting.v1beta1.Period lockup_periods = 4 [json_name = "lockupPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+       */
+      public java.util.List<com.cosmos.vesting.v1beta1.VestingProto.Period.Builder> 
+           getLockupPeriodsBuilderList() {
+        return getLockupPeriodsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.vesting.v1beta1.VestingProto.Period, com.cosmos.vesting.v1beta1.VestingProto.Period.Builder, com.cosmos.vesting.v1beta1.VestingProto.PeriodOrBuilder> 
+          getLockupPeriodsFieldBuilder() {
+        if (lockupPeriodsBuilder_ == null) {
+          lockupPeriodsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.vesting.v1beta1.VestingProto.Period, com.cosmos.vesting.v1beta1.VestingProto.Period.Builder, com.cosmos.vesting.v1beta1.VestingProto.PeriodOrBuilder>(
+                  lockupPeriods_,
+                  ((bitField0_ & 0x00000008) != 0),
+                  getParentForChildren(),
+                  isClean());
+          lockupPeriods_ = null;
+        }
+        return lockupPeriodsBuilder_;
+      }
+
+      private java.util.List<com.cosmos.vesting.v1beta1.VestingProto.Period> vestingPeriods_ =
+        java.util.Collections.emptyList();
+      private void ensureVestingPeriodsIsMutable() {
+        if (!((bitField0_ & 0x00000010) != 0)) {
+          vestingPeriods_ = new java.util.ArrayList<com.cosmos.vesting.v1beta1.VestingProto.Period>(vestingPeriods_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.vesting.v1beta1.VestingProto.Period, com.cosmos.vesting.v1beta1.VestingProto.Period.Builder, com.cosmos.vesting.v1beta1.VestingProto.PeriodOrBuilder> vestingPeriodsBuilder_;
+
+      /**
+       * <pre>
+       * vesting_periods defines the vesting schedule relative to the start_time
+       * </pre>
+       *
+       * <code>repeated .cosmos.vesting.v1beta1.Period vesting_periods = 5 [json_name = "vestingPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+       */
+      public java.util.List<com.cosmos.vesting.v1beta1.VestingProto.Period> getVestingPeriodsList() {
+        if (vestingPeriodsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(vestingPeriods_);
+        } else {
+          return vestingPeriodsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * vesting_periods defines the vesting schedule relative to the start_time
+       * </pre>
+       *
+       * <code>repeated .cosmos.vesting.v1beta1.Period vesting_periods = 5 [json_name = "vestingPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+       */
+      public int getVestingPeriodsCount() {
+        if (vestingPeriodsBuilder_ == null) {
+          return vestingPeriods_.size();
+        } else {
+          return vestingPeriodsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * vesting_periods defines the vesting schedule relative to the start_time
+       * </pre>
+       *
+       * <code>repeated .cosmos.vesting.v1beta1.Period vesting_periods = 5 [json_name = "vestingPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+       */
+      public com.cosmos.vesting.v1beta1.VestingProto.Period getVestingPeriods(int index) {
+        if (vestingPeriodsBuilder_ == null) {
+          return vestingPeriods_.get(index);
+        } else {
+          return vestingPeriodsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * vesting_periods defines the vesting schedule relative to the start_time
+       * </pre>
+       *
+       * <code>repeated .cosmos.vesting.v1beta1.Period vesting_periods = 5 [json_name = "vestingPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+       */
+      public Builder setVestingPeriods(
+          int index, com.cosmos.vesting.v1beta1.VestingProto.Period value) {
+        if (vestingPeriodsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVestingPeriodsIsMutable();
+          vestingPeriods_.set(index, value);
+          onChanged();
+        } else {
+          vestingPeriodsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * vesting_periods defines the vesting schedule relative to the start_time
+       * </pre>
+       *
+       * <code>repeated .cosmos.vesting.v1beta1.Period vesting_periods = 5 [json_name = "vestingPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+       */
+      public Builder setVestingPeriods(
+          int index, com.cosmos.vesting.v1beta1.VestingProto.Period.Builder builderForValue) {
+        if (vestingPeriodsBuilder_ == null) {
+          ensureVestingPeriodsIsMutable();
+          vestingPeriods_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          vestingPeriodsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * vesting_periods defines the vesting schedule relative to the start_time
+       * </pre>
+       *
+       * <code>repeated .cosmos.vesting.v1beta1.Period vesting_periods = 5 [json_name = "vestingPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+       */
+      public Builder addVestingPeriods(com.cosmos.vesting.v1beta1.VestingProto.Period value) {
+        if (vestingPeriodsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVestingPeriodsIsMutable();
+          vestingPeriods_.add(value);
+          onChanged();
+        } else {
+          vestingPeriodsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * vesting_periods defines the vesting schedule relative to the start_time
+       * </pre>
+       *
+       * <code>repeated .cosmos.vesting.v1beta1.Period vesting_periods = 5 [json_name = "vestingPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+       */
+      public Builder addVestingPeriods(
+          int index, com.cosmos.vesting.v1beta1.VestingProto.Period value) {
+        if (vestingPeriodsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVestingPeriodsIsMutable();
+          vestingPeriods_.add(index, value);
+          onChanged();
+        } else {
+          vestingPeriodsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * vesting_periods defines the vesting schedule relative to the start_time
+       * </pre>
+       *
+       * <code>repeated .cosmos.vesting.v1beta1.Period vesting_periods = 5 [json_name = "vestingPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+       */
+      public Builder addVestingPeriods(
+          com.cosmos.vesting.v1beta1.VestingProto.Period.Builder builderForValue) {
+        if (vestingPeriodsBuilder_ == null) {
+          ensureVestingPeriodsIsMutable();
+          vestingPeriods_.add(builderForValue.build());
+          onChanged();
+        } else {
+          vestingPeriodsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * vesting_periods defines the vesting schedule relative to the start_time
+       * </pre>
+       *
+       * <code>repeated .cosmos.vesting.v1beta1.Period vesting_periods = 5 [json_name = "vestingPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+       */
+      public Builder addVestingPeriods(
+          int index, com.cosmos.vesting.v1beta1.VestingProto.Period.Builder builderForValue) {
+        if (vestingPeriodsBuilder_ == null) {
+          ensureVestingPeriodsIsMutable();
+          vestingPeriods_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          vestingPeriodsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * vesting_periods defines the vesting schedule relative to the start_time
+       * </pre>
+       *
+       * <code>repeated .cosmos.vesting.v1beta1.Period vesting_periods = 5 [json_name = "vestingPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+       */
+      public Builder addAllVestingPeriods(
+          java.lang.Iterable<? extends com.cosmos.vesting.v1beta1.VestingProto.Period> values) {
+        if (vestingPeriodsBuilder_ == null) {
+          ensureVestingPeriodsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, vestingPeriods_);
+          onChanged();
+        } else {
+          vestingPeriodsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * vesting_periods defines the vesting schedule relative to the start_time
+       * </pre>
+       *
+       * <code>repeated .cosmos.vesting.v1beta1.Period vesting_periods = 5 [json_name = "vestingPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+       */
+      public Builder clearVestingPeriods() {
+        if (vestingPeriodsBuilder_ == null) {
+          vestingPeriods_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          vestingPeriodsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * vesting_periods defines the vesting schedule relative to the start_time
+       * </pre>
+       *
+       * <code>repeated .cosmos.vesting.v1beta1.Period vesting_periods = 5 [json_name = "vestingPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+       */
+      public Builder removeVestingPeriods(int index) {
+        if (vestingPeriodsBuilder_ == null) {
+          ensureVestingPeriodsIsMutable();
+          vestingPeriods_.remove(index);
+          onChanged();
+        } else {
+          vestingPeriodsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * vesting_periods defines the vesting schedule relative to the start_time
+       * </pre>
+       *
+       * <code>repeated .cosmos.vesting.v1beta1.Period vesting_periods = 5 [json_name = "vestingPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+       */
+      public com.cosmos.vesting.v1beta1.VestingProto.Period.Builder getVestingPeriodsBuilder(
+          int index) {
+        return getVestingPeriodsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * vesting_periods defines the vesting schedule relative to the start_time
+       * </pre>
+       *
+       * <code>repeated .cosmos.vesting.v1beta1.Period vesting_periods = 5 [json_name = "vestingPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+       */
+      public com.cosmos.vesting.v1beta1.VestingProto.PeriodOrBuilder getVestingPeriodsOrBuilder(
+          int index) {
+        if (vestingPeriodsBuilder_ == null) {
+          return vestingPeriods_.get(index);  } else {
+          return vestingPeriodsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * vesting_periods defines the vesting schedule relative to the start_time
+       * </pre>
+       *
+       * <code>repeated .cosmos.vesting.v1beta1.Period vesting_periods = 5 [json_name = "vestingPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+       */
+      public java.util.List<? extends com.cosmos.vesting.v1beta1.VestingProto.PeriodOrBuilder> 
+           getVestingPeriodsOrBuilderList() {
+        if (vestingPeriodsBuilder_ != null) {
+          return vestingPeriodsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(vestingPeriods_);
+        }
+      }
+      /**
+       * <pre>
+       * vesting_periods defines the vesting schedule relative to the start_time
+       * </pre>
+       *
+       * <code>repeated .cosmos.vesting.v1beta1.Period vesting_periods = 5 [json_name = "vestingPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+       */
+      public com.cosmos.vesting.v1beta1.VestingProto.Period.Builder addVestingPeriodsBuilder() {
+        return getVestingPeriodsFieldBuilder().addBuilder(
+            com.cosmos.vesting.v1beta1.VestingProto.Period.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * vesting_periods defines the vesting schedule relative to the start_time
+       * </pre>
+       *
+       * <code>repeated .cosmos.vesting.v1beta1.Period vesting_periods = 5 [json_name = "vestingPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+       */
+      public com.cosmos.vesting.v1beta1.VestingProto.Period.Builder addVestingPeriodsBuilder(
+          int index) {
+        return getVestingPeriodsFieldBuilder().addBuilder(
+            index, com.cosmos.vesting.v1beta1.VestingProto.Period.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * vesting_periods defines the vesting schedule relative to the start_time
+       * </pre>
+       *
+       * <code>repeated .cosmos.vesting.v1beta1.Period vesting_periods = 5 [json_name = "vestingPeriods", (.gogoproto.nullable) = false, (.gogoproto.castrepeated) = "github.com/cosmos/cosmos-sdk/x/auth/vesting/types.Periods"];</code>
+       */
+      public java.util.List<com.cosmos.vesting.v1beta1.VestingProto.Period.Builder> 
+           getVestingPeriodsBuilderList() {
+        return getVestingPeriodsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.cosmos.vesting.v1beta1.VestingProto.Period, com.cosmos.vesting.v1beta1.VestingProto.Period.Builder, com.cosmos.vesting.v1beta1.VestingProto.PeriodOrBuilder> 
+          getVestingPeriodsFieldBuilder() {
+        if (vestingPeriodsBuilder_ == null) {
+          vestingPeriodsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.cosmos.vesting.v1beta1.VestingProto.Period, com.cosmos.vesting.v1beta1.VestingProto.Period.Builder, com.cosmos.vesting.v1beta1.VestingProto.PeriodOrBuilder>(
+                  vestingPeriods_,
+                  ((bitField0_ & 0x00000010) != 0),
+                  getParentForChildren(),
+                  isClean());
+          vestingPeriods_ = null;
+        }
+        return vestingPeriodsBuilder_;
+      }
+
+      private boolean merge_ ;
+      /**
+       * <pre>
+       * merge specifies a the creation mechanism for existing
+       * ClawbackVestingAccounts. If true, merge this new grant into an existing
+       * ClawbackVestingAccount, or create it if it does not exist. If false,
+       * creates a new account. New grants to an existing account must be from the
+       * same from_address.
+       * </pre>
+       *
+       * <code>bool merge = 6 [json_name = "merge"];</code>
+       * @return The merge.
+       */
+      @java.lang.Override
+      public boolean getMerge() {
+        return merge_;
+      }
+      /**
+       * <pre>
+       * merge specifies a the creation mechanism for existing
+       * ClawbackVestingAccounts. If true, merge this new grant into an existing
+       * ClawbackVestingAccount, or create it if it does not exist. If false,
+       * creates a new account. New grants to an existing account must be from the
+       * same from_address.
+       * </pre>
+       *
+       * <code>bool merge = 6 [json_name = "merge"];</code>
+       * @param value The merge to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMerge(boolean value) {
+
+        merge_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * merge specifies a the creation mechanism for existing
+       * ClawbackVestingAccounts. If true, merge this new grant into an existing
+       * ClawbackVestingAccount, or create it if it does not exist. If false,
+       * creates a new account. New grants to an existing account must be from the
+       * same from_address.
+       * </pre>
+       *
+       * <code>bool merge = 6 [json_name = "merge"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMerge() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        merge_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.vesting.v1.MsgCreateClawbackVestingAccount)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.vesting.v1.MsgCreateClawbackVestingAccount)
+    private static final com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccount DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccount();
+    }
+
+    public static com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccount getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateClawbackVestingAccount>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateClawbackVestingAccount>() {
+      @java.lang.Override
+      public MsgCreateClawbackVestingAccount parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateClawbackVestingAccount> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateClawbackVestingAccount> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccount getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgCreateClawbackVestingAccountResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.vesting.v1.MsgCreateClawbackVestingAccountResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgCreateClawbackVestingAccountResponse defines the
+   * MsgCreateClawbackVestingAccount response type.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.vesting.v1.MsgCreateClawbackVestingAccountResponse}
+   */
+  public static final class MsgCreateClawbackVestingAccountResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.vesting.v1.MsgCreateClawbackVestingAccountResponse)
+      MsgCreateClawbackVestingAccountResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgCreateClawbackVestingAccountResponse.newBuilder() to construct.
+    private MsgCreateClawbackVestingAccountResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgCreateClawbackVestingAccountResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgCreateClawbackVestingAccountResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgCreateClawbackVestingAccountResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgCreateClawbackVestingAccountResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccountResponse.class, com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccountResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccountResponse)) {
+        return super.equals(obj);
+      }
+      com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccountResponse other = (com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccountResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccountResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccountResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccountResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccountResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccountResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccountResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccountResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccountResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccountResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccountResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccountResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgCreateClawbackVestingAccountResponse defines the
+     * MsgCreateClawbackVestingAccount response type.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.vesting.v1.MsgCreateClawbackVestingAccountResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.vesting.v1.MsgCreateClawbackVestingAccountResponse)
+        com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccountResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgCreateClawbackVestingAccountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgCreateClawbackVestingAccountResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccountResponse.class, com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccountResponse.Builder.class);
+      }
+
+      // Construct using com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccountResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgCreateClawbackVestingAccountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccountResponse getDefaultInstanceForType() {
+        return com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccountResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccountResponse build() {
+        com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccountResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccountResponse buildPartial() {
+        com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccountResponse result = new com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccountResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccountResponse) {
+          return mergeFrom((com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccountResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccountResponse other) {
+        if (other == com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccountResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.vesting.v1.MsgCreateClawbackVestingAccountResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.vesting.v1.MsgCreateClawbackVestingAccountResponse)
+    private static final com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccountResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccountResponse();
+    }
+
+    public static com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccountResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgCreateClawbackVestingAccountResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgCreateClawbackVestingAccountResponse>() {
+      @java.lang.Override
+      public MsgCreateClawbackVestingAccountResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgCreateClawbackVestingAccountResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgCreateClawbackVestingAccountResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.vesting.v1.TxProto.MsgCreateClawbackVestingAccountResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgClawbackOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.vesting.v1.MsgClawback)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * funder_address is the address which funded the account
+     * </pre>
+     *
+     * <code>string funder_address = 1 [json_name = "funderAddress"];</code>
+     * @return The funderAddress.
+     */
+    java.lang.String getFunderAddress();
+    /**
+     * <pre>
+     * funder_address is the address which funded the account
+     * </pre>
+     *
+     * <code>string funder_address = 1 [json_name = "funderAddress"];</code>
+     * @return The bytes for funderAddress.
+     */
+    com.google.protobuf.ByteString
+        getFunderAddressBytes();
+
+    /**
+     * <pre>
+     * account_address is the address of the ClawbackVestingAccount to claw back
+     * from.
+     * </pre>
+     *
+     * <code>string account_address = 2 [json_name = "accountAddress"];</code>
+     * @return The accountAddress.
+     */
+    java.lang.String getAccountAddress();
+    /**
+     * <pre>
+     * account_address is the address of the ClawbackVestingAccount to claw back
+     * from.
+     * </pre>
+     *
+     * <code>string account_address = 2 [json_name = "accountAddress"];</code>
+     * @return The bytes for accountAddress.
+     */
+    com.google.protobuf.ByteString
+        getAccountAddressBytes();
+
+    /**
+     * <pre>
+     * dest_address specifies where the clawed-back tokens should be transferred
+     * to. If empty, the tokens will be transferred back to the original funder of
+     * the account.
+     * </pre>
+     *
+     * <code>string dest_address = 3 [json_name = "destAddress"];</code>
+     * @return The destAddress.
+     */
+    java.lang.String getDestAddress();
+    /**
+     * <pre>
+     * dest_address specifies where the clawed-back tokens should be transferred
+     * to. If empty, the tokens will be transferred back to the original funder of
+     * the account.
+     * </pre>
+     *
+     * <code>string dest_address = 3 [json_name = "destAddress"];</code>
+     * @return The bytes for destAddress.
+     */
+    com.google.protobuf.ByteString
+        getDestAddressBytes();
+  }
+  /**
+   * <pre>
+   * MsgClawback defines a message that removes unvested tokens from a
+   * ClawbackVestingAccount.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.vesting.v1.MsgClawback}
+   */
+  public static final class MsgClawback extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.vesting.v1.MsgClawback)
+      MsgClawbackOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgClawback.newBuilder() to construct.
+    private MsgClawback(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgClawback() {
+      funderAddress_ = "";
+      accountAddress_ = "";
+      destAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgClawback();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgClawback_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgClawback_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.vesting.v1.TxProto.MsgClawback.class, com.evmos.vesting.v1.TxProto.MsgClawback.Builder.class);
+    }
+
+    public static final int FUNDER_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object funderAddress_ = "";
+    /**
+     * <pre>
+     * funder_address is the address which funded the account
+     * </pre>
+     *
+     * <code>string funder_address = 1 [json_name = "funderAddress"];</code>
+     * @return The funderAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getFunderAddress() {
+      java.lang.Object ref = funderAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        funderAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * funder_address is the address which funded the account
+     * </pre>
+     *
+     * <code>string funder_address = 1 [json_name = "funderAddress"];</code>
+     * @return The bytes for funderAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFunderAddressBytes() {
+      java.lang.Object ref = funderAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        funderAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ACCOUNT_ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object accountAddress_ = "";
+    /**
+     * <pre>
+     * account_address is the address of the ClawbackVestingAccount to claw back
+     * from.
+     * </pre>
+     *
+     * <code>string account_address = 2 [json_name = "accountAddress"];</code>
+     * @return The accountAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getAccountAddress() {
+      java.lang.Object ref = accountAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        accountAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * account_address is the address of the ClawbackVestingAccount to claw back
+     * from.
+     * </pre>
+     *
+     * <code>string account_address = 2 [json_name = "accountAddress"];</code>
+     * @return The bytes for accountAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccountAddressBytes() {
+      java.lang.Object ref = accountAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        accountAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEST_ADDRESS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object destAddress_ = "";
+    /**
+     * <pre>
+     * dest_address specifies where the clawed-back tokens should be transferred
+     * to. If empty, the tokens will be transferred back to the original funder of
+     * the account.
+     * </pre>
+     *
+     * <code>string dest_address = 3 [json_name = "destAddress"];</code>
+     * @return The destAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getDestAddress() {
+      java.lang.Object ref = destAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        destAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * dest_address specifies where the clawed-back tokens should be transferred
+     * to. If empty, the tokens will be transferred back to the original funder of
+     * the account.
+     * </pre>
+     *
+     * <code>string dest_address = 3 [json_name = "destAddress"];</code>
+     * @return The bytes for destAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDestAddressBytes() {
+      java.lang.Object ref = destAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        destAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(funderAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, funderAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accountAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, accountAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, destAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(funderAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, funderAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accountAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, accountAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, destAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.vesting.v1.TxProto.MsgClawback)) {
+        return super.equals(obj);
+      }
+      com.evmos.vesting.v1.TxProto.MsgClawback other = (com.evmos.vesting.v1.TxProto.MsgClawback) obj;
+
+      if (!getFunderAddress()
+          .equals(other.getFunderAddress())) return false;
+      if (!getAccountAddress()
+          .equals(other.getAccountAddress())) return false;
+      if (!getDestAddress()
+          .equals(other.getDestAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FUNDER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getFunderAddress().hashCode();
+      hash = (37 * hash) + ACCOUNT_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAccountAddress().hashCode();
+      hash = (37 * hash) + DEST_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getDestAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.vesting.v1.TxProto.MsgClawback parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgClawback parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgClawback parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgClawback parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgClawback parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgClawback parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgClawback parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgClawback parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.vesting.v1.TxProto.MsgClawback parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.vesting.v1.TxProto.MsgClawback parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgClawback parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgClawback parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.vesting.v1.TxProto.MsgClawback prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgClawback defines a message that removes unvested tokens from a
+     * ClawbackVestingAccount.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.vesting.v1.MsgClawback}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.vesting.v1.MsgClawback)
+        com.evmos.vesting.v1.TxProto.MsgClawbackOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgClawback_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgClawback_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.vesting.v1.TxProto.MsgClawback.class, com.evmos.vesting.v1.TxProto.MsgClawback.Builder.class);
+      }
+
+      // Construct using com.evmos.vesting.v1.TxProto.MsgClawback.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        funderAddress_ = "";
+        accountAddress_ = "";
+        destAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgClawback_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.TxProto.MsgClawback getDefaultInstanceForType() {
+        return com.evmos.vesting.v1.TxProto.MsgClawback.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.TxProto.MsgClawback build() {
+        com.evmos.vesting.v1.TxProto.MsgClawback result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.TxProto.MsgClawback buildPartial() {
+        com.evmos.vesting.v1.TxProto.MsgClawback result = new com.evmos.vesting.v1.TxProto.MsgClawback(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.evmos.vesting.v1.TxProto.MsgClawback result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.funderAddress_ = funderAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.accountAddress_ = accountAddress_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.destAddress_ = destAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.vesting.v1.TxProto.MsgClawback) {
+          return mergeFrom((com.evmos.vesting.v1.TxProto.MsgClawback)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.vesting.v1.TxProto.MsgClawback other) {
+        if (other == com.evmos.vesting.v1.TxProto.MsgClawback.getDefaultInstance()) return this;
+        if (!other.getFunderAddress().isEmpty()) {
+          funderAddress_ = other.funderAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getAccountAddress().isEmpty()) {
+          accountAddress_ = other.accountAddress_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getDestAddress().isEmpty()) {
+          destAddress_ = other.destAddress_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                funderAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                accountAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                destAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object funderAddress_ = "";
+      /**
+       * <pre>
+       * funder_address is the address which funded the account
+       * </pre>
+       *
+       * <code>string funder_address = 1 [json_name = "funderAddress"];</code>
+       * @return The funderAddress.
+       */
+      public java.lang.String getFunderAddress() {
+        java.lang.Object ref = funderAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          funderAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * funder_address is the address which funded the account
+       * </pre>
+       *
+       * <code>string funder_address = 1 [json_name = "funderAddress"];</code>
+       * @return The bytes for funderAddress.
+       */
+      public com.google.protobuf.ByteString
+          getFunderAddressBytes() {
+        java.lang.Object ref = funderAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          funderAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * funder_address is the address which funded the account
+       * </pre>
+       *
+       * <code>string funder_address = 1 [json_name = "funderAddress"];</code>
+       * @param value The funderAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFunderAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        funderAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * funder_address is the address which funded the account
+       * </pre>
+       *
+       * <code>string funder_address = 1 [json_name = "funderAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFunderAddress() {
+        funderAddress_ = getDefaultInstance().getFunderAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * funder_address is the address which funded the account
+       * </pre>
+       *
+       * <code>string funder_address = 1 [json_name = "funderAddress"];</code>
+       * @param value The bytes for funderAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFunderAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        funderAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object accountAddress_ = "";
+      /**
+       * <pre>
+       * account_address is the address of the ClawbackVestingAccount to claw back
+       * from.
+       * </pre>
+       *
+       * <code>string account_address = 2 [json_name = "accountAddress"];</code>
+       * @return The accountAddress.
+       */
+      public java.lang.String getAccountAddress() {
+        java.lang.Object ref = accountAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          accountAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * account_address is the address of the ClawbackVestingAccount to claw back
+       * from.
+       * </pre>
+       *
+       * <code>string account_address = 2 [json_name = "accountAddress"];</code>
+       * @return The bytes for accountAddress.
+       */
+      public com.google.protobuf.ByteString
+          getAccountAddressBytes() {
+        java.lang.Object ref = accountAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          accountAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * account_address is the address of the ClawbackVestingAccount to claw back
+       * from.
+       * </pre>
+       *
+       * <code>string account_address = 2 [json_name = "accountAddress"];</code>
+       * @param value The accountAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        accountAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * account_address is the address of the ClawbackVestingAccount to claw back
+       * from.
+       * </pre>
+       *
+       * <code>string account_address = 2 [json_name = "accountAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccountAddress() {
+        accountAddress_ = getDefaultInstance().getAccountAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * account_address is the address of the ClawbackVestingAccount to claw back
+       * from.
+       * </pre>
+       *
+       * <code>string account_address = 2 [json_name = "accountAddress"];</code>
+       * @param value The bytes for accountAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccountAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        accountAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object destAddress_ = "";
+      /**
+       * <pre>
+       * dest_address specifies where the clawed-back tokens should be transferred
+       * to. If empty, the tokens will be transferred back to the original funder of
+       * the account.
+       * </pre>
+       *
+       * <code>string dest_address = 3 [json_name = "destAddress"];</code>
+       * @return The destAddress.
+       */
+      public java.lang.String getDestAddress() {
+        java.lang.Object ref = destAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          destAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * dest_address specifies where the clawed-back tokens should be transferred
+       * to. If empty, the tokens will be transferred back to the original funder of
+       * the account.
+       * </pre>
+       *
+       * <code>string dest_address = 3 [json_name = "destAddress"];</code>
+       * @return The bytes for destAddress.
+       */
+      public com.google.protobuf.ByteString
+          getDestAddressBytes() {
+        java.lang.Object ref = destAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          destAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * dest_address specifies where the clawed-back tokens should be transferred
+       * to. If empty, the tokens will be transferred back to the original funder of
+       * the account.
+       * </pre>
+       *
+       * <code>string dest_address = 3 [json_name = "destAddress"];</code>
+       * @param value The destAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDestAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        destAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * dest_address specifies where the clawed-back tokens should be transferred
+       * to. If empty, the tokens will be transferred back to the original funder of
+       * the account.
+       * </pre>
+       *
+       * <code>string dest_address = 3 [json_name = "destAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDestAddress() {
+        destAddress_ = getDefaultInstance().getDestAddress();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * dest_address specifies where the clawed-back tokens should be transferred
+       * to. If empty, the tokens will be transferred back to the original funder of
+       * the account.
+       * </pre>
+       *
+       * <code>string dest_address = 3 [json_name = "destAddress"];</code>
+       * @param value The bytes for destAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDestAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        destAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.vesting.v1.MsgClawback)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.vesting.v1.MsgClawback)
+    private static final com.evmos.vesting.v1.TxProto.MsgClawback DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.vesting.v1.TxProto.MsgClawback();
+    }
+
+    public static com.evmos.vesting.v1.TxProto.MsgClawback getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgClawback>
+        PARSER = new com.google.protobuf.AbstractParser<MsgClawback>() {
+      @java.lang.Override
+      public MsgClawback parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgClawback> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgClawback> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.vesting.v1.TxProto.MsgClawback getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgClawbackResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.vesting.v1.MsgClawbackResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgClawbackResponse defines the MsgClawback response type.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.vesting.v1.MsgClawbackResponse}
+   */
+  public static final class MsgClawbackResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.vesting.v1.MsgClawbackResponse)
+      MsgClawbackResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgClawbackResponse.newBuilder() to construct.
+    private MsgClawbackResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgClawbackResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgClawbackResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgClawbackResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgClawbackResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.vesting.v1.TxProto.MsgClawbackResponse.class, com.evmos.vesting.v1.TxProto.MsgClawbackResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.vesting.v1.TxProto.MsgClawbackResponse)) {
+        return super.equals(obj);
+      }
+      com.evmos.vesting.v1.TxProto.MsgClawbackResponse other = (com.evmos.vesting.v1.TxProto.MsgClawbackResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.vesting.v1.TxProto.MsgClawbackResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgClawbackResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgClawbackResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgClawbackResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgClawbackResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgClawbackResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgClawbackResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgClawbackResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.vesting.v1.TxProto.MsgClawbackResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.vesting.v1.TxProto.MsgClawbackResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgClawbackResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgClawbackResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.vesting.v1.TxProto.MsgClawbackResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgClawbackResponse defines the MsgClawback response type.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.vesting.v1.MsgClawbackResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.vesting.v1.MsgClawbackResponse)
+        com.evmos.vesting.v1.TxProto.MsgClawbackResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgClawbackResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgClawbackResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.vesting.v1.TxProto.MsgClawbackResponse.class, com.evmos.vesting.v1.TxProto.MsgClawbackResponse.Builder.class);
+      }
+
+      // Construct using com.evmos.vesting.v1.TxProto.MsgClawbackResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgClawbackResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.TxProto.MsgClawbackResponse getDefaultInstanceForType() {
+        return com.evmos.vesting.v1.TxProto.MsgClawbackResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.TxProto.MsgClawbackResponse build() {
+        com.evmos.vesting.v1.TxProto.MsgClawbackResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.TxProto.MsgClawbackResponse buildPartial() {
+        com.evmos.vesting.v1.TxProto.MsgClawbackResponse result = new com.evmos.vesting.v1.TxProto.MsgClawbackResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.vesting.v1.TxProto.MsgClawbackResponse) {
+          return mergeFrom((com.evmos.vesting.v1.TxProto.MsgClawbackResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.vesting.v1.TxProto.MsgClawbackResponse other) {
+        if (other == com.evmos.vesting.v1.TxProto.MsgClawbackResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.vesting.v1.MsgClawbackResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.vesting.v1.MsgClawbackResponse)
+    private static final com.evmos.vesting.v1.TxProto.MsgClawbackResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.vesting.v1.TxProto.MsgClawbackResponse();
+    }
+
+    public static com.evmos.vesting.v1.TxProto.MsgClawbackResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgClawbackResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgClawbackResponse>() {
+      @java.lang.Override
+      public MsgClawbackResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgClawbackResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgClawbackResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.vesting.v1.TxProto.MsgClawbackResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUpdateVestingFunderOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.vesting.v1.MsgUpdateVestingFunder)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * funder_address is the current funder address of the ClawbackVestingAccount
+     * </pre>
+     *
+     * <code>string funder_address = 1 [json_name = "funderAddress"];</code>
+     * @return The funderAddress.
+     */
+    java.lang.String getFunderAddress();
+    /**
+     * <pre>
+     * funder_address is the current funder address of the ClawbackVestingAccount
+     * </pre>
+     *
+     * <code>string funder_address = 1 [json_name = "funderAddress"];</code>
+     * @return The bytes for funderAddress.
+     */
+    com.google.protobuf.ByteString
+        getFunderAddressBytes();
+
+    /**
+     * <pre>
+     * new_funder_address is the new address to replace the existing funder_address
+     * </pre>
+     *
+     * <code>string new_funder_address = 2 [json_name = "newFunderAddress"];</code>
+     * @return The newFunderAddress.
+     */
+    java.lang.String getNewFunderAddress();
+    /**
+     * <pre>
+     * new_funder_address is the new address to replace the existing funder_address
+     * </pre>
+     *
+     * <code>string new_funder_address = 2 [json_name = "newFunderAddress"];</code>
+     * @return The bytes for newFunderAddress.
+     */
+    com.google.protobuf.ByteString
+        getNewFunderAddressBytes();
+
+    /**
+     * <pre>
+     * vesting_address is the address of the ClawbackVestingAccount being updated
+     * </pre>
+     *
+     * <code>string vesting_address = 3 [json_name = "vestingAddress"];</code>
+     * @return The vestingAddress.
+     */
+    java.lang.String getVestingAddress();
+    /**
+     * <pre>
+     * vesting_address is the address of the ClawbackVestingAccount being updated
+     * </pre>
+     *
+     * <code>string vesting_address = 3 [json_name = "vestingAddress"];</code>
+     * @return The bytes for vestingAddress.
+     */
+    com.google.protobuf.ByteString
+        getVestingAddressBytes();
+  }
+  /**
+   * <pre>
+   * MsgUpdateVestingFunder defines a message that updates the funder account of a
+   * ClawbackVestingAccount.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.vesting.v1.MsgUpdateVestingFunder}
+   */
+  public static final class MsgUpdateVestingFunder extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.vesting.v1.MsgUpdateVestingFunder)
+      MsgUpdateVestingFunderOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUpdateVestingFunder.newBuilder() to construct.
+    private MsgUpdateVestingFunder(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUpdateVestingFunder() {
+      funderAddress_ = "";
+      newFunderAddress_ = "";
+      vestingAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUpdateVestingFunder();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgUpdateVestingFunder_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgUpdateVestingFunder_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunder.class, com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunder.Builder.class);
+    }
+
+    public static final int FUNDER_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object funderAddress_ = "";
+    /**
+     * <pre>
+     * funder_address is the current funder address of the ClawbackVestingAccount
+     * </pre>
+     *
+     * <code>string funder_address = 1 [json_name = "funderAddress"];</code>
+     * @return The funderAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getFunderAddress() {
+      java.lang.Object ref = funderAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        funderAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * funder_address is the current funder address of the ClawbackVestingAccount
+     * </pre>
+     *
+     * <code>string funder_address = 1 [json_name = "funderAddress"];</code>
+     * @return The bytes for funderAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFunderAddressBytes() {
+      java.lang.Object ref = funderAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        funderAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NEW_FUNDER_ADDRESS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object newFunderAddress_ = "";
+    /**
+     * <pre>
+     * new_funder_address is the new address to replace the existing funder_address
+     * </pre>
+     *
+     * <code>string new_funder_address = 2 [json_name = "newFunderAddress"];</code>
+     * @return The newFunderAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getNewFunderAddress() {
+      java.lang.Object ref = newFunderAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        newFunderAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * new_funder_address is the new address to replace the existing funder_address
+     * </pre>
+     *
+     * <code>string new_funder_address = 2 [json_name = "newFunderAddress"];</code>
+     * @return The bytes for newFunderAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNewFunderAddressBytes() {
+      java.lang.Object ref = newFunderAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        newFunderAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int VESTING_ADDRESS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object vestingAddress_ = "";
+    /**
+     * <pre>
+     * vesting_address is the address of the ClawbackVestingAccount being updated
+     * </pre>
+     *
+     * <code>string vesting_address = 3 [json_name = "vestingAddress"];</code>
+     * @return The vestingAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getVestingAddress() {
+      java.lang.Object ref = vestingAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        vestingAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * vesting_address is the address of the ClawbackVestingAccount being updated
+     * </pre>
+     *
+     * <code>string vesting_address = 3 [json_name = "vestingAddress"];</code>
+     * @return The bytes for vestingAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVestingAddressBytes() {
+      java.lang.Object ref = vestingAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        vestingAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(funderAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, funderAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newFunderAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, newFunderAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(vestingAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, vestingAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(funderAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, funderAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(newFunderAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, newFunderAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(vestingAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, vestingAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunder)) {
+        return super.equals(obj);
+      }
+      com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunder other = (com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunder) obj;
+
+      if (!getFunderAddress()
+          .equals(other.getFunderAddress())) return false;
+      if (!getNewFunderAddress()
+          .equals(other.getNewFunderAddress())) return false;
+      if (!getVestingAddress()
+          .equals(other.getVestingAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FUNDER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getFunderAddress().hashCode();
+      hash = (37 * hash) + NEW_FUNDER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getNewFunderAddress().hashCode();
+      hash = (37 * hash) + VESTING_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getVestingAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunder parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunder parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunder parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunder parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunder parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunder parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunder parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunder parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunder parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunder parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunder parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunder parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunder prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgUpdateVestingFunder defines a message that updates the funder account of a
+     * ClawbackVestingAccount.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.vesting.v1.MsgUpdateVestingFunder}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.vesting.v1.MsgUpdateVestingFunder)
+        com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunderOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgUpdateVestingFunder_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgUpdateVestingFunder_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunder.class, com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunder.Builder.class);
+      }
+
+      // Construct using com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunder.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        funderAddress_ = "";
+        newFunderAddress_ = "";
+        vestingAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgUpdateVestingFunder_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunder getDefaultInstanceForType() {
+        return com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunder.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunder build() {
+        com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunder result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunder buildPartial() {
+        com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunder result = new com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunder(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunder result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.funderAddress_ = funderAddress_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.newFunderAddress_ = newFunderAddress_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.vestingAddress_ = vestingAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunder) {
+          return mergeFrom((com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunder)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunder other) {
+        if (other == com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunder.getDefaultInstance()) return this;
+        if (!other.getFunderAddress().isEmpty()) {
+          funderAddress_ = other.funderAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getNewFunderAddress().isEmpty()) {
+          newFunderAddress_ = other.newFunderAddress_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getVestingAddress().isEmpty()) {
+          vestingAddress_ = other.vestingAddress_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                funderAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                newFunderAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                vestingAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object funderAddress_ = "";
+      /**
+       * <pre>
+       * funder_address is the current funder address of the ClawbackVestingAccount
+       * </pre>
+       *
+       * <code>string funder_address = 1 [json_name = "funderAddress"];</code>
+       * @return The funderAddress.
+       */
+      public java.lang.String getFunderAddress() {
+        java.lang.Object ref = funderAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          funderAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * funder_address is the current funder address of the ClawbackVestingAccount
+       * </pre>
+       *
+       * <code>string funder_address = 1 [json_name = "funderAddress"];</code>
+       * @return The bytes for funderAddress.
+       */
+      public com.google.protobuf.ByteString
+          getFunderAddressBytes() {
+        java.lang.Object ref = funderAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          funderAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * funder_address is the current funder address of the ClawbackVestingAccount
+       * </pre>
+       *
+       * <code>string funder_address = 1 [json_name = "funderAddress"];</code>
+       * @param value The funderAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFunderAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        funderAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * funder_address is the current funder address of the ClawbackVestingAccount
+       * </pre>
+       *
+       * <code>string funder_address = 1 [json_name = "funderAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFunderAddress() {
+        funderAddress_ = getDefaultInstance().getFunderAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * funder_address is the current funder address of the ClawbackVestingAccount
+       * </pre>
+       *
+       * <code>string funder_address = 1 [json_name = "funderAddress"];</code>
+       * @param value The bytes for funderAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFunderAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        funderAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object newFunderAddress_ = "";
+      /**
+       * <pre>
+       * new_funder_address is the new address to replace the existing funder_address
+       * </pre>
+       *
+       * <code>string new_funder_address = 2 [json_name = "newFunderAddress"];</code>
+       * @return The newFunderAddress.
+       */
+      public java.lang.String getNewFunderAddress() {
+        java.lang.Object ref = newFunderAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          newFunderAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * new_funder_address is the new address to replace the existing funder_address
+       * </pre>
+       *
+       * <code>string new_funder_address = 2 [json_name = "newFunderAddress"];</code>
+       * @return The bytes for newFunderAddress.
+       */
+      public com.google.protobuf.ByteString
+          getNewFunderAddressBytes() {
+        java.lang.Object ref = newFunderAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          newFunderAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * new_funder_address is the new address to replace the existing funder_address
+       * </pre>
+       *
+       * <code>string new_funder_address = 2 [json_name = "newFunderAddress"];</code>
+       * @param value The newFunderAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewFunderAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        newFunderAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * new_funder_address is the new address to replace the existing funder_address
+       * </pre>
+       *
+       * <code>string new_funder_address = 2 [json_name = "newFunderAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNewFunderAddress() {
+        newFunderAddress_ = getDefaultInstance().getNewFunderAddress();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * new_funder_address is the new address to replace the existing funder_address
+       * </pre>
+       *
+       * <code>string new_funder_address = 2 [json_name = "newFunderAddress"];</code>
+       * @param value The bytes for newFunderAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNewFunderAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        newFunderAddress_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object vestingAddress_ = "";
+      /**
+       * <pre>
+       * vesting_address is the address of the ClawbackVestingAccount being updated
+       * </pre>
+       *
+       * <code>string vesting_address = 3 [json_name = "vestingAddress"];</code>
+       * @return The vestingAddress.
+       */
+      public java.lang.String getVestingAddress() {
+        java.lang.Object ref = vestingAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          vestingAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * vesting_address is the address of the ClawbackVestingAccount being updated
+       * </pre>
+       *
+       * <code>string vesting_address = 3 [json_name = "vestingAddress"];</code>
+       * @return The bytes for vestingAddress.
+       */
+      public com.google.protobuf.ByteString
+          getVestingAddressBytes() {
+        java.lang.Object ref = vestingAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          vestingAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * vesting_address is the address of the ClawbackVestingAccount being updated
+       * </pre>
+       *
+       * <code>string vesting_address = 3 [json_name = "vestingAddress"];</code>
+       * @param value The vestingAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVestingAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        vestingAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * vesting_address is the address of the ClawbackVestingAccount being updated
+       * </pre>
+       *
+       * <code>string vesting_address = 3 [json_name = "vestingAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVestingAddress() {
+        vestingAddress_ = getDefaultInstance().getVestingAddress();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * vesting_address is the address of the ClawbackVestingAccount being updated
+       * </pre>
+       *
+       * <code>string vesting_address = 3 [json_name = "vestingAddress"];</code>
+       * @param value The bytes for vestingAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVestingAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        vestingAddress_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.vesting.v1.MsgUpdateVestingFunder)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.vesting.v1.MsgUpdateVestingFunder)
+    private static final com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunder DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunder();
+    }
+
+    public static com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunder getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUpdateVestingFunder>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUpdateVestingFunder>() {
+      @java.lang.Override
+      public MsgUpdateVestingFunder parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUpdateVestingFunder> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUpdateVestingFunder> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunder getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgUpdateVestingFunderResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.vesting.v1.MsgUpdateVestingFunderResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgUpdateVestingFunderResponse defines the MsgUpdateVestingFunder response
+   * type.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.vesting.v1.MsgUpdateVestingFunderResponse}
+   */
+  public static final class MsgUpdateVestingFunderResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.vesting.v1.MsgUpdateVestingFunderResponse)
+      MsgUpdateVestingFunderResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgUpdateVestingFunderResponse.newBuilder() to construct.
+    private MsgUpdateVestingFunderResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgUpdateVestingFunderResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgUpdateVestingFunderResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgUpdateVestingFunderResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgUpdateVestingFunderResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunderResponse.class, com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunderResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunderResponse)) {
+        return super.equals(obj);
+      }
+      com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunderResponse other = (com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunderResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunderResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunderResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunderResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunderResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunderResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunderResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunderResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunderResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunderResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunderResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunderResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunderResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunderResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgUpdateVestingFunderResponse defines the MsgUpdateVestingFunder response
+     * type.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.vesting.v1.MsgUpdateVestingFunderResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.vesting.v1.MsgUpdateVestingFunderResponse)
+        com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunderResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgUpdateVestingFunderResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgUpdateVestingFunderResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunderResponse.class, com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunderResponse.Builder.class);
+      }
+
+      // Construct using com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunderResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgUpdateVestingFunderResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunderResponse getDefaultInstanceForType() {
+        return com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunderResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunderResponse build() {
+        com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunderResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunderResponse buildPartial() {
+        com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunderResponse result = new com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunderResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunderResponse) {
+          return mergeFrom((com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunderResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunderResponse other) {
+        if (other == com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunderResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.vesting.v1.MsgUpdateVestingFunderResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.vesting.v1.MsgUpdateVestingFunderResponse)
+    private static final com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunderResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunderResponse();
+    }
+
+    public static com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunderResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgUpdateVestingFunderResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgUpdateVestingFunderResponse>() {
+      @java.lang.Override
+      public MsgUpdateVestingFunderResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgUpdateVestingFunderResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgUpdateVestingFunderResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.vesting.v1.TxProto.MsgUpdateVestingFunderResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgConvertVestingAccountOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.vesting.v1.MsgConvertVestingAccount)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * vesting_address is the address of the vesting account to convert
+     * </pre>
+     *
+     * <code>string vesting_address = 1 [json_name = "vestingAddress"];</code>
+     * @return The vestingAddress.
+     */
+    java.lang.String getVestingAddress();
+    /**
+     * <pre>
+     * vesting_address is the address of the vesting account to convert
+     * </pre>
+     *
+     * <code>string vesting_address = 1 [json_name = "vestingAddress"];</code>
+     * @return The bytes for vestingAddress.
+     */
+    com.google.protobuf.ByteString
+        getVestingAddressBytes();
+  }
+  /**
+   * <pre>
+   * MsgConvertVestingAccount defines a message that enables converting a vesting account to a eth account
+   * </pre>
+   *
+   * Protobuf type {@code evmos.vesting.v1.MsgConvertVestingAccount}
+   */
+  public static final class MsgConvertVestingAccount extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.vesting.v1.MsgConvertVestingAccount)
+      MsgConvertVestingAccountOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgConvertVestingAccount.newBuilder() to construct.
+    private MsgConvertVestingAccount(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgConvertVestingAccount() {
+      vestingAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgConvertVestingAccount();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgConvertVestingAccount_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgConvertVestingAccount_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.vesting.v1.TxProto.MsgConvertVestingAccount.class, com.evmos.vesting.v1.TxProto.MsgConvertVestingAccount.Builder.class);
+    }
+
+    public static final int VESTING_ADDRESS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object vestingAddress_ = "";
+    /**
+     * <pre>
+     * vesting_address is the address of the vesting account to convert
+     * </pre>
+     *
+     * <code>string vesting_address = 1 [json_name = "vestingAddress"];</code>
+     * @return The vestingAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getVestingAddress() {
+      java.lang.Object ref = vestingAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        vestingAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * vesting_address is the address of the vesting account to convert
+     * </pre>
+     *
+     * <code>string vesting_address = 1 [json_name = "vestingAddress"];</code>
+     * @return The bytes for vestingAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getVestingAddressBytes() {
+      java.lang.Object ref = vestingAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        vestingAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(vestingAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, vestingAddress_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(vestingAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, vestingAddress_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.vesting.v1.TxProto.MsgConvertVestingAccount)) {
+        return super.equals(obj);
+      }
+      com.evmos.vesting.v1.TxProto.MsgConvertVestingAccount other = (com.evmos.vesting.v1.TxProto.MsgConvertVestingAccount) obj;
+
+      if (!getVestingAddress()
+          .equals(other.getVestingAddress())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VESTING_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getVestingAddress().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.vesting.v1.TxProto.MsgConvertVestingAccount parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgConvertVestingAccount parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgConvertVestingAccount parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgConvertVestingAccount parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgConvertVestingAccount parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgConvertVestingAccount parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgConvertVestingAccount parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgConvertVestingAccount parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.vesting.v1.TxProto.MsgConvertVestingAccount parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.vesting.v1.TxProto.MsgConvertVestingAccount parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgConvertVestingAccount parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgConvertVestingAccount parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.vesting.v1.TxProto.MsgConvertVestingAccount prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgConvertVestingAccount defines a message that enables converting a vesting account to a eth account
+     * </pre>
+     *
+     * Protobuf type {@code evmos.vesting.v1.MsgConvertVestingAccount}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.vesting.v1.MsgConvertVestingAccount)
+        com.evmos.vesting.v1.TxProto.MsgConvertVestingAccountOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgConvertVestingAccount_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgConvertVestingAccount_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.vesting.v1.TxProto.MsgConvertVestingAccount.class, com.evmos.vesting.v1.TxProto.MsgConvertVestingAccount.Builder.class);
+      }
+
+      // Construct using com.evmos.vesting.v1.TxProto.MsgConvertVestingAccount.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        vestingAddress_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgConvertVestingAccount_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.TxProto.MsgConvertVestingAccount getDefaultInstanceForType() {
+        return com.evmos.vesting.v1.TxProto.MsgConvertVestingAccount.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.TxProto.MsgConvertVestingAccount build() {
+        com.evmos.vesting.v1.TxProto.MsgConvertVestingAccount result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.TxProto.MsgConvertVestingAccount buildPartial() {
+        com.evmos.vesting.v1.TxProto.MsgConvertVestingAccount result = new com.evmos.vesting.v1.TxProto.MsgConvertVestingAccount(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(com.evmos.vesting.v1.TxProto.MsgConvertVestingAccount result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.vestingAddress_ = vestingAddress_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.vesting.v1.TxProto.MsgConvertVestingAccount) {
+          return mergeFrom((com.evmos.vesting.v1.TxProto.MsgConvertVestingAccount)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.vesting.v1.TxProto.MsgConvertVestingAccount other) {
+        if (other == com.evmos.vesting.v1.TxProto.MsgConvertVestingAccount.getDefaultInstance()) return this;
+        if (!other.getVestingAddress().isEmpty()) {
+          vestingAddress_ = other.vestingAddress_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                vestingAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object vestingAddress_ = "";
+      /**
+       * <pre>
+       * vesting_address is the address of the vesting account to convert
+       * </pre>
+       *
+       * <code>string vesting_address = 1 [json_name = "vestingAddress"];</code>
+       * @return The vestingAddress.
+       */
+      public java.lang.String getVestingAddress() {
+        java.lang.Object ref = vestingAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          vestingAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * vesting_address is the address of the vesting account to convert
+       * </pre>
+       *
+       * <code>string vesting_address = 1 [json_name = "vestingAddress"];</code>
+       * @return The bytes for vestingAddress.
+       */
+      public com.google.protobuf.ByteString
+          getVestingAddressBytes() {
+        java.lang.Object ref = vestingAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          vestingAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * vesting_address is the address of the vesting account to convert
+       * </pre>
+       *
+       * <code>string vesting_address = 1 [json_name = "vestingAddress"];</code>
+       * @param value The vestingAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVestingAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        vestingAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * vesting_address is the address of the vesting account to convert
+       * </pre>
+       *
+       * <code>string vesting_address = 1 [json_name = "vestingAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVestingAddress() {
+        vestingAddress_ = getDefaultInstance().getVestingAddress();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * vesting_address is the address of the vesting account to convert
+       * </pre>
+       *
+       * <code>string vesting_address = 1 [json_name = "vestingAddress"];</code>
+       * @param value The bytes for vestingAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVestingAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        vestingAddress_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.vesting.v1.MsgConvertVestingAccount)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.vesting.v1.MsgConvertVestingAccount)
+    private static final com.evmos.vesting.v1.TxProto.MsgConvertVestingAccount DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.vesting.v1.TxProto.MsgConvertVestingAccount();
+    }
+
+    public static com.evmos.vesting.v1.TxProto.MsgConvertVestingAccount getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgConvertVestingAccount>
+        PARSER = new com.google.protobuf.AbstractParser<MsgConvertVestingAccount>() {
+      @java.lang.Override
+      public MsgConvertVestingAccount parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgConvertVestingAccount> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgConvertVestingAccount> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.vesting.v1.TxProto.MsgConvertVestingAccount getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface MsgConvertVestingAccountResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:evmos.vesting.v1.MsgConvertVestingAccountResponse)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * MsgConvertVestingAccountResponse defines the MsgConvertVestingAccount response type.
+   * </pre>
+   *
+   * Protobuf type {@code evmos.vesting.v1.MsgConvertVestingAccountResponse}
+   */
+  public static final class MsgConvertVestingAccountResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:evmos.vesting.v1.MsgConvertVestingAccountResponse)
+      MsgConvertVestingAccountResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MsgConvertVestingAccountResponse.newBuilder() to construct.
+    private MsgConvertVestingAccountResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MsgConvertVestingAccountResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MsgConvertVestingAccountResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgConvertVestingAccountResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgConvertVestingAccountResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.evmos.vesting.v1.TxProto.MsgConvertVestingAccountResponse.class, com.evmos.vesting.v1.TxProto.MsgConvertVestingAccountResponse.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.evmos.vesting.v1.TxProto.MsgConvertVestingAccountResponse)) {
+        return super.equals(obj);
+      }
+      com.evmos.vesting.v1.TxProto.MsgConvertVestingAccountResponse other = (com.evmos.vesting.v1.TxProto.MsgConvertVestingAccountResponse) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.evmos.vesting.v1.TxProto.MsgConvertVestingAccountResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgConvertVestingAccountResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgConvertVestingAccountResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgConvertVestingAccountResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgConvertVestingAccountResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgConvertVestingAccountResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgConvertVestingAccountResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgConvertVestingAccountResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static com.evmos.vesting.v1.TxProto.MsgConvertVestingAccountResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static com.evmos.vesting.v1.TxProto.MsgConvertVestingAccountResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgConvertVestingAccountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.evmos.vesting.v1.TxProto.MsgConvertVestingAccountResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.evmos.vesting.v1.TxProto.MsgConvertVestingAccountResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * MsgConvertVestingAccountResponse defines the MsgConvertVestingAccount response type.
+     * </pre>
+     *
+     * Protobuf type {@code evmos.vesting.v1.MsgConvertVestingAccountResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:evmos.vesting.v1.MsgConvertVestingAccountResponse)
+        com.evmos.vesting.v1.TxProto.MsgConvertVestingAccountResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgConvertVestingAccountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgConvertVestingAccountResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.evmos.vesting.v1.TxProto.MsgConvertVestingAccountResponse.class, com.evmos.vesting.v1.TxProto.MsgConvertVestingAccountResponse.Builder.class);
+      }
+
+      // Construct using com.evmos.vesting.v1.TxProto.MsgConvertVestingAccountResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.evmos.vesting.v1.TxProto.internal_static_evmos_vesting_v1_MsgConvertVestingAccountResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.TxProto.MsgConvertVestingAccountResponse getDefaultInstanceForType() {
+        return com.evmos.vesting.v1.TxProto.MsgConvertVestingAccountResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.TxProto.MsgConvertVestingAccountResponse build() {
+        com.evmos.vesting.v1.TxProto.MsgConvertVestingAccountResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.evmos.vesting.v1.TxProto.MsgConvertVestingAccountResponse buildPartial() {
+        com.evmos.vesting.v1.TxProto.MsgConvertVestingAccountResponse result = new com.evmos.vesting.v1.TxProto.MsgConvertVestingAccountResponse(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.evmos.vesting.v1.TxProto.MsgConvertVestingAccountResponse) {
+          return mergeFrom((com.evmos.vesting.v1.TxProto.MsgConvertVestingAccountResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.evmos.vesting.v1.TxProto.MsgConvertVestingAccountResponse other) {
+        if (other == com.evmos.vesting.v1.TxProto.MsgConvertVestingAccountResponse.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:evmos.vesting.v1.MsgConvertVestingAccountResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:evmos.vesting.v1.MsgConvertVestingAccountResponse)
+    private static final com.evmos.vesting.v1.TxProto.MsgConvertVestingAccountResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.evmos.vesting.v1.TxProto.MsgConvertVestingAccountResponse();
+    }
+
+    public static com.evmos.vesting.v1.TxProto.MsgConvertVestingAccountResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MsgConvertVestingAccountResponse>
+        PARSER = new com.google.protobuf.AbstractParser<MsgConvertVestingAccountResponse>() {
+      @java.lang.Override
+      public MsgConvertVestingAccountResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MsgConvertVestingAccountResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MsgConvertVestingAccountResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.evmos.vesting.v1.TxProto.MsgConvertVestingAccountResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_vesting_v1_MsgCreateClawbackVestingAccount_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_vesting_v1_MsgCreateClawbackVestingAccount_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_vesting_v1_MsgCreateClawbackVestingAccountResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_vesting_v1_MsgCreateClawbackVestingAccountResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_vesting_v1_MsgClawback_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_vesting_v1_MsgClawback_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_vesting_v1_MsgClawbackResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_vesting_v1_MsgClawbackResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_vesting_v1_MsgUpdateVestingFunder_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_vesting_v1_MsgUpdateVestingFunder_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_vesting_v1_MsgUpdateVestingFunderResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_vesting_v1_MsgUpdateVestingFunderResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_vesting_v1_MsgConvertVestingAccount_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_vesting_v1_MsgConvertVestingAccount_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_evmos_vesting_v1_MsgConvertVestingAccountResponse_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_evmos_vesting_v1_MsgConvertVestingAccountResponse_fieldAccessorTable;
 
@@ -108,11 +6423,11 @@ public final class TxProto {
       ".v1.MsgConvertVestingAccount\0322.evmos.ves" +
       "ting.v1.MsgConvertVestingAccountResponse" +
       "\"4\202\323\344\223\002.\022,/evmos/vesting/v1/tx/convert_v" +
-      "esting_accountB\255\001\n\024com.evmos.vesting.v1B" +
-      "\007TxProtoP\001Z*github.com/evmos/evmos/v13/x" +
-      "/vesting/types\242\002\003EVX\252\002\020Evmos.Vesting.V1\312" +
-      "\002\020Evmos\\Vesting\\V1\342\002\034Evmos\\Vesting\\V1\\GP" +
-      "BMetadata\352\002\022Evmos::Vesting::V1b\006proto3"
+      "esting_accountB\253\001\n\024com.evmos.vesting.v1B" +
+      "\007TxProtoZ*github.com/evmos/evmos/v13/x/v" +
+      "esting/types\242\002\003EVX\252\002\020Evmos.Vesting.V1\312\002\020" +
+      "Evmos\\Vesting\\V1\342\002\034Evmos\\Vesting\\V1\\GPBM" +
+      "etadata\352\002\022Evmos::Vesting::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
